@@ -1,3 +1,4 @@
+import subprocess
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -268,43 +269,45 @@ function toggleTheme() {
   }
 })();
 
-const TICKERS = [
-  { nom: "DOW JONES", symbole: "^DJI" },
-  { nom: "S&P 500", symbole: "^GSPC" },
-  { nom: "NASDAQ", symbole: "^IXIC" },
-  { nom: "CAC 40", symbole: "^FCHI" },
-  { nom: "EUR/USD", symbole: "EURUSD=X" }
-];
-
-async function chargerIndices() {
-  const container = document.getElementById('tickerBar');
-  let html = "";
-  for (const t of TICKERS) {
+async function chargerIndicesLive() {
     try {
-      const url = `https://corsproxy.io/?url=${encodeURIComponent('https://query1.finance.yahoo.com/v8/finance/chart/' + t.symbole)}`;
-      const res = await fetch(url);
-      const json = await res.json();
-      const result = json.chart.result[0];
-      const prix = result.meta.regularMarketPrice;
-      const prevClose = result.meta.chartPreviousClose;
-      const variation = ((prix - prevClose) / prevClose) * 100;
-      const sens = variation >= 0 ? "up" : "down";
-      const signe = variation >= 0 ? "+" : "";
-      const fleche = variation >= 0 ? "▲" : "▼";
-      html += `<div class="ticker-item">
-        <span class="name">${t.nom}</span>
-        <span class="value">${prix.toFixed(2)}</span>
-        <span class="variation ${sens}">${fleche} ${signe}${variation.toFixed(2)}%</span>
-      </div>`;
-    } catch (e) {
-      console.log("Erreur ticker " + t.nom, e);
+        const response = await fetch('indices_live.json?t=' + Date.now());
+        if (!response.ok) {
+            console.log('Fichier indices_live.json introuvable.');
+            return;
+        }
+        const data = await response.json();
+        afficherTicker(data);
+    } catch (erreur) {
+        console.log('Erreur de chargement du ticker live :', erreur);
     }
-  }
-  if (html) container.innerHTML = html;
 }
 
-chargerIndices();
-setInterval(chargerIndices, 5 * 60 * 1000);
+function afficherTicker(data) {
+    const container = document.getElementById('tickerBar');
+    if (!container) return;
+
+    let html = "";
+    data.indices.forEach(indice => {
+        if (indice.valeur === null) return;
+
+        const variation = indice.variation !== null ? indice.variation : 0;
+        const sens = variation >= 0 ? "up" : "down";
+        const signe = variation >= 0 ? "+" : "";
+        const fleche = variation >= 0 ? "▲" : "▼";
+
+        html += `<div class="ticker-item">
+            <span class="name">${indice.nom}</span>
+            <span class="value">${indice.valeur.toFixed(2)}</span>
+            <span class="variation ${sens}">${fleche} ${signe}${variation.toFixed(2)}%</span>
+        </div>`;
+    });
+
+    if (html) container.innerHTML = html;
+}
+
+chargerIndicesLive();
+setInterval(chargerIndicesLive, 30 * 1000);
 </script>
 
 </body>
