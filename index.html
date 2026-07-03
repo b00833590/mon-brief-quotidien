@@ -85,14 +85,27 @@
   .ticker-bar {
     max-width: 1100px;
     margin: 0 auto;
-    display: flex;
-    gap: 28px;
-    overflow-x: auto;
+    overflow: hidden;
     padding: 12px 0;
     border-top: 1px solid rgba(255,255,255,0.08);
+    -webkit-mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent);
+    mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent);
+  }
+  .ticker-track {
+    display: inline-flex;
+    gap: 28px;
+    white-space: nowrap;
+    animation: defilement-ticker 40s linear infinite;
+  }
+  .ticker-bar:hover .ticker-track {
+    animation-play-state: paused;
+  }
+  @keyframes defilement-ticker {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
   }
   .ticker-item {
-    display: flex;
+    display: inline-flex;
     align-items: baseline;
     gap: 8px;
     white-space: nowrap;
@@ -230,6 +243,7 @@
     </div>
   </div>
   <div class="ticker-bar" id="tickerBar">
+    <div class="ticker-track" id="tickerTrack">
 
     <div class="ticker-item">
       <span class="name">DOW JONES</span>
@@ -258,9 +272,10 @@
     <div class="ticker-item">
       <span class="name">EUR/USD</span>
       <span class="value">1.14</span>
-      <span class="variation up">▲ +0.57%</span>
+      <span class="variation up">▲ +0.56%</span>
     </div>
     
+    </div>
   </div>
 </header>
 
@@ -270,9 +285,8 @@
 <a href="#section-1">Aktionnaire</a>
 <a href="#section-2">Bourseko</a>
 <a href="#section-3">Arcos</a>
-<a href="#section-4">Arcos</a>
-<a href="#section-5">Unhedged</a>
-<a href="#section-6">FT Opinion</a>
+<a href="#section-4">FT Unhedged</a>
+<a href="#section-5">FT Opinion</a>
 
   </div>
 </nav>
@@ -288,7 +302,7 @@
         <h2>FT Newswrap</h2>
       </div>
       <div class="section-body">
-        <ul><li>L'inflation et le coût de la vie aux États-Unis rendent les célébrations coûteuses (fête nationale).</li><li>L'IPC a atteint 4,2% (sur un an jusqu'en mai) et les prix à la production ont augmenté de 6,5%.</li><li>Les petites entreprises et les consommateurs subissent des pressions inflationnistes sur l'alimentation (dont les œufs, avec des accusations de collusion des producteurs), l'électricité et l'essence.</li><li>La confiance des consommateurs américains a atteint un plus bas historique en mai, restant au deuxième plus bas niveau depuis les années 1970 en juin.</li><li>68% des électeurs désapprouvent la gestion de l'inflation par le président Trump en juin.</li><li>La résurgence de l'inflation compromet les baisses de taux d'intérêt de la Réserve fédérale, malgré les appels de Trump.</li><li>Donald Trump ne soutiendra jamais un régulateur américain de l'IA.</li><li>Bruxelles a rejeté la demande britannique de participer aux prises de décision de l'UE, retardant un accord post-Brexit.</li><li>Un groupe de défense allemand a acquis le fabricant d'équipements pour les avions Spitfire britanniques.</li></ul>
+        <ul><li>L'inflation américaine (IPC à 4,2%, IPP à 6,5%) rend les fêtes les plus chères jamais enregistrées.</li><li>Les coûts alimentaires augmentent, notamment pour les hot-dogs Nathan's (+19%) et les œufs (accusations de collusion).</li><li>Les prix de l'électricité montent en flèche dans l'est des États-Unis en raison de la canicule.</li><li>Les prix à la pompe restent élevés.</li><li>La confiance des consommateurs a chuté en mai et reste au deuxième plus bas niveau depuis les années 1970 en juin.</li><li>68% des électeurs désapprouvent la gestion de l'inflation par Donald Trump.</li><li>La Réserve fédérale est peu susceptible de baisser les taux d'intérêt, le nouveau gouverneur s'engageant à la stabilité des prix.</li><li>Donald Trump ne soutiendra jamais un régulateur américain de l'IA.</li><li>Bruxelles a rejeté une demande britannique de participation aux décisions de l'UE, retardant un accord post-Brexit.</li><li>Un groupe de défense allemand a acquis le fabricant des engrenages des avions Spitfire britanniques.</li></ul>
       </div>
     </div>
     
@@ -299,7 +313,7 @@
         <h2>Aktionnaire</h2>
       </div>
       <div class="section-body">
-        <ul><li>Newsletter d'actualité économique, promettant des contenus quotidiens.</li></ul>
+        <ul><li>Newsletter sur l'actualité économique.</li></ul>
       </div>
     </div>
     
@@ -310,7 +324,7 @@
         <h2>Bourseko</h2>
       </div>
       <div class="section-body">
-        <ul><li>Newsletter axée sur la Bourse et l'investissement à long terme.</li><li>Propose un contenu original, documenté et utile (sujets pédagogiques, actualité boursière décryptée, analyses sectorielles/d'entreprises comme Nvidia ou Visa/Mastercard, suivi de gérants).</li><li>Le 'Club Bourseko' offre des analyses fondamentales approfondies (2 par mois) et des outils pour investir.</li></ul>
+        <ul><li>Newsletter axée sur la Bourse et l'investissement.</li><li>Contenu original, documenté et utile pour progresser et investir sereinement à long terme.</li><li>Couvre des sujets pédagogiques (ex: Free Cash Flow), l'actualité boursière décryptée (ex: départ de Luca de Meo), des analyses sectorielles ou d'entreprises (ex: avantage compétitif de Nvidia, risques pour Visa/Mastercard), et le suivi des investissements de grands gérants.</li><li>Le 'Club Bourseko' offre des analyses fondamentales approfondies (2 par mois).</li></ul>
       </div>
     </div>
     
@@ -321,40 +335,29 @@
         <h2>Arcos</h2>
       </div>
       <div class="section-body">
-        <ul><li>Newsletter quotidienne couvrant l'actualité mondiale : géopolitique, économie, technologie, sport, politique.</li><li>Offre un résumé précis et concis des événements importants.</li></ul>
+        <ul><li>Newsletter quotidienne couvrant l'actualité mondiale : Géopolitique, Économie, Tech, Sport, Politique.</li><li>Envoi quotidien à 7h07.</li></ul>
       </div>
     </div>
     
     <div class="section" id="section-4">
       <div class="section-header">
-        <span class="icon">🌍</span>
-        <span class="badge" style="background:#2f6b4f">Arcos</span>
-        <h2>Arcos</h2>
+        <span class="icon">📈</span>
+        <span class="badge" style="background:#5a4a8a">FT Unhedged</span>
+        <h2>FT Unhedged</h2>
       </div>
       <div class="section-body">
-        <ul><li>Confirmation d'abonnement aux publications sélectionnées, notamment Bourseko.</li></ul>
+        <ul><li>La 'grande rotation' des valeurs technologiques (des hyperscalers vers les semi-conducteurs) semble terminée; les actions des puces et de l'infrastructure IA stagnent.</li><li>Les secteurs de la santé, de la finance et de l'industrie sont performants ce mois-ci.</li><li>Le marché du travail américain a ralenti fin 2025, mais a montré des signes de reprise au printemps 2026 (mars-mai) avant un rapport de juin décevant.</li><li>La reprise économique potentielle était liée à l'investissement dans l'IA, aux bénéfices des entreprises et à la consommation croissante.</li></ul>
       </div>
     </div>
     
     <div class="section" id="section-5">
-      <div class="section-header">
-        <span class="icon">📩</span>
-        <span class="badge" style="background:#374151">Unhedged</span>
-        <h2>Unhedged</h2>
-      </div>
-      <div class="section-body">
-        <ul><li>La 'grande rotation' dans la technologie (des 'hyperscalers' vers les semi-conducteurs) semble terminée, les actions de semi-conducteurs et d'infrastructure IA étant en difficulté.</li><li>Les secteurs de la santé, de la finance et de l'industrie sont en forte croissance ce mois-ci.</li><li>Le rapport sur l'emploi de juin remet en question la réaccélération de l'économie américaine, après des signes positifs au printemps.</li><li>Le rapport sur l'emploi de juin est considéré comme un 'épiphénomène' que l'on espère isolé.</li></ul>
-      </div>
-    </div>
-    
-    <div class="section" id="section-6">
       <div class="section-header">
         <span class="icon">📈</span>
         <span class="badge" style="background:#5a4a8a">FT Opinion</span>
         <h2>FT Opinion</h2>
       </div>
       <div class="section-body">
-        <ul><li>La politique britannique est marquée par des visions nostalgiques concurrentes (Andy Burnham pré-Thatcherite vs Nigel Farage anti-ère Blair, plus le Brexit).</li><li>Le principal risque pour Burnham est de devoir montrer des résultats en seulement trois ans.</li><li>À l'occasion du 250e anniversaire de l'Amérique, il est suggéré de se souvenir des leçons d'Adam Smith pour un renouvellement des marchés libres.</li><li>Une étude suggère que les médicaments amaigrissants aident les femmes à trouver du travail et incitent les hommes à quitter leurs partenaires.</li><li>L'élimination de la 'tarification personnalisée' risquerait de nuire aux consommateurs.</li><li>La crise énergétique liée à l'IA à New York est attribuée au sabotage des objectifs verts par l'administration Trump, et non à une ambition excessive.</li><li>La proposition d'Altman sur la sécurité de l'IA est perçue comme un moyen de donner un avantage à une oligopole américaine, y compris sa propre entreprise.</li><li>Les coupes dans les cours d'enseignement supérieur au Royaume-Uni menacent les industries technologiques.</li><li>La Cour suprême a restreint Trump, mais a renforcé la présidence américaine.</li><li>L'industrie de défense turque est en plein essor, suscitant l'inquiétude mais aussi l'intérêt de l'Europe pour sa puissance.</li></ul>
+        <ul><li>La politique britannique est marquée par des visions nostalgiques concurrentes (Andy Burnham vs. Nigel Farage); celle de Burnham, axée sur le 'Northernism', est plus unificatrice.</li><li>À l'occasion du 250e anniversaire de l'Amérique, il est rappelé les leçons d'Adam Smith pour un renouveau des marchés libres.</li><li>Une étude suggère que les médicaments amaigrissants aident les femmes à trouver du travail et incitent les hommes à quitter leurs partenaires.</li><li>L'élimination de la 'tarification personnalisée' pourrait nuire aux consommateurs.</li><li>La proposition d'Altman pour la sécurité de l'IA favoriserait une oligopole américaine, y compris sa propre entreprise.</li><li>Les coupes dans l'enseignement supérieur britannique menacent les industries technologiques.</li><li>La Cour Suprême a freiné Trump mais a renforcé la présidence.</li><li>L'industrie de défense turque est en plein essor et vise l'Europe, malgré les préoccupations de l'UE concernant l'autoritarisme d'Erdoğan.</li><li>Les problèmes d'alimentation électrique de New York pour l'IA sont dus à un sabotage des objectifs verts par l'administration Trump, et non à des objectifs trop ambitieux.</li></ul>
       </div>
     </div>
     
@@ -413,8 +416,8 @@ function connecterAuTicker() {
 }
 
 function afficherTicker(data) {
-    const container = document.getElementById('tickerBar');
-    if (!container) return;
+    const track = document.getElementById('tickerTrack');
+    if (!track) return;
 
     let html = "";
     data.indices.forEach(indice => {
@@ -432,7 +435,8 @@ function afficherTicker(data) {
         </div>`;
     });
 
-    if (html) container.innerHTML = html;
+    // Contenu dupliqué 2 fois pour un défilement en boucle continue sans coupure visible
+    if (html) track.innerHTML = html + html;
 }
 
 connecterAuTicker();
