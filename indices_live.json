@@ -1,5 +1,5 @@
 {
-  "derniere_maj": "2026-07-03 17:05:59",
+  "derniere_maj": "2026-07-03 17:06:32",
   "indices": [
     {
       "nom": "DOW JONES",
@@ -18,23 +18,23 @@
     },
     {
       "nom": "CAC 40",
-      "valeur": 8513.75,
-      "variation": 0.46
+      "valeur": 8512.75,
+      "variation": 0.45
     },
     {
       "nom": "DAX",
-      "valeur": 25797.3,
-      "variation": 0.85
+      "valeur": 25793.11,
+      "variation": 0.83
     },
     {
       "nom": "FTSE 100",
-      "valeur": 10675.56,
-      "variation": 0.21
+      "valeur": 10674.35,
+      "variation": 0.2
     },
     {
       "nom": "EURO STOXX 50",
-      "valeur": 6416.93,
-      "variation": 0.89
+      "valeur": 6415.87,
+      "variation": 0.87
     },
     {
       "nom": "NIKKEI 225",
@@ -48,8 +48,8 @@
     },
     {
       "nom": "OR (Gold)",
-      "valeur": 4171.13,
-      "variation": 1.17
+      "valeur": 4170.71,
+      "variation": 1.16
     },
     {
       "nom": "PÉTROLE BRENT",
@@ -64,12 +64,12 @@
     {
       "nom": "GBP/USD",
       "valeur": 1.34,
-      "variation": 0.04
+      "variation": 0.03
     },
     {
       "nom": "BITCOIN",
-      "valeur": 62155.31,
-      "variation": 1.01
+      "valeur": 62166.28,
+      "variation": 1.03
     }
   ]
 }
