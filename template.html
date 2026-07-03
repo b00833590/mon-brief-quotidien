@@ -223,129 +223,27 @@
     </div>
     <div class="right">
       <div class="date-block">
-        <div class="date">Vendredi 03 juillet 2026</div>
+        <div class="date">{{DATE}}</div>
         <div class="date-sub">Mise a jour automatique</div>
       </div>
       <button class="theme-toggle" onclick="toggleTheme()" id="themeBtn">&#9789;</button>
     </div>
   </div>
   <div class="ticker-bar" id="tickerBar">
-
-    <div class="ticker-item">
-      <span class="name">DOW JONES</span>
-      <span class="value">52900.07</span>
-      <span class="variation up">▲ +1.14%</span>
-    </div>
-    
-    <div class="ticker-item">
-      <span class="name">S&P 500</span>
-      <span class="value">7483.24</span>
-      <span class="variation up">▲ +0.0%</span>
-    </div>
-    
-    <div class="ticker-item">
-      <span class="name">NASDAQ</span>
-      <span class="value">25832.67</span>
-      <span class="variation down">▼ -0.8%</span>
-    </div>
-    
-    <div class="ticker-item">
-      <span class="name">CAC 40</span>
-      <span class="value">8483.59</span>
-      <span class="variation up">▲ +0.1%</span>
-    </div>
-    
-    <div class="ticker-item">
-      <span class="name">EUR/USD</span>
-      <span class="value">1.15</span>
-      <span class="variation up">▲ +0.64%</span>
-    </div>
-    
+{{TICKER}}
   </div>
 </header>
 
 <nav class="subnav">
   <div class="inner">
-<a href="#section-0">Aktionnaire</a>
-<a href="#section-1">Bourseko</a>
-<a href="#section-2">Arcos</a>
-<a href="#section-3">Arcos (Abonnements recommandés)</a>
-<a href="#section-4">FT - Unhedged (Robert Armstrong)</a>
-<a href="#section-5">FT Opinion (Jonathan Derbyshire)</a>
-
+{{NAV_LINKS}}
   </div>
 </nav>
 
 <main>
   <div class="intro">Voici le resume du jour, genere automatiquement a partir de mes newsletters recues (Aktionnaire, Arcos, Les Echos, Financial Times).</div>
   <div class="grid">
-
-    <div class="section" id="section-0">
-      <div class="section-header">
-        <span class="icon">🎓</span>
-        <span class="badge" style="background:#0a1930">Aktionnaire</span>
-        <h2>Aktionnaire</h2>
-      </div>
-      <div class="section-body">
-        <ul><li>Bienvenue dans la newsletter Aktionnaire.</li><li>Instructions pour s'assurer que la newsletter arrive dans la boîte de réception principale (Gmail, Apple Mail).</li><li>Prochaine newsletter prévue pour demain matin.</li></ul>
-      </div>
-    </div>
-    
-    <div class="section" id="section-1">
-      <div class="section-header">
-        <span class="icon">💹</span>
-        <span class="badge" style="background:#b5651d">Bourseko</span>
-        <h2>Bourseko</h2>
-      </div>
-      <div class="section-body">
-        <ul><li>Bienvenue dans la newsletter Bourseko.</li><li>Contenu axé sur la Bourse et l'investissement, original, documenté et utile pour progresser et investir sereinement à long terme.</li><li>Plus de 150 éditions publiées depuis avril 2023.</li><li>Thématiques abordées : sujets pédagogiques (ex: Free Cash Flow), actualité boursière (ex: départ de Luca de Meo), analyses sectorielles ou d'entreprises (ex: Nvidia, Visa/Mastercard), suivi et analyse d'investissements de grands gérants.</li><li>Mention du 'Club Bourseko' pour un contenu et des outils avancés (inclut 2 analyses fondamentales par mois).</li></ul>
-      </div>
-    </div>
-    
-    <div class="section" id="section-2">
-      <div class="section-header">
-        <span class="icon">🌍</span>
-        <span class="badge" style="background:#2f6b4f">Arcos</span>
-        <h2>Arcos</h2>
-      </div>
-      <div class="section-body">
-        <ul><li>Bienvenue sur Arcos, la newsletter d'actualité quotidienne.</li><li>Reçoit l'essentiel de l'actualité mondiale tous les jours de la semaine à 7h07.</li><li>Couvre la géopolitique, l'économie, la tech, le sport, la politique de manière précise et concise.</li><li>Instructions pour s'assurer que la newsletter arrive dans la boîte de réception principale (Gmail, iPhone/iPad/Mac).</li></ul>
-      </div>
-    </div>
-    
-    <div class="section" id="section-3">
-      <div class="section-header">
-        <span class="icon">🌍</span>
-        <span class="badge" style="background:#2f6b4f">Arcos (Abonnements recommandés)</span>
-        <h2>Arcos (Abonnements recommandés)</h2>
-      </div>
-      <div class="section-body">
-        <ul><li>Confirmation d'abonnement aux publications sélectionnées via Arcos.</li><li>Abonnement automatique à 'Bourseko'.</li><li>Possibilité de se désinscrire des recommandations spécifiques ou de la liste globale d'Arcos.</li></ul>
-      </div>
-    </div>
-    
-    <div class="section" id="section-4">
-      <div class="section-header">
-        <span class="icon">📈</span>
-        <span class="badge" style="background:#5a4a8a">FT - Unhedged (Robert Armstrong)</span>
-        <h2>FT - Unhedged (Robert Armstrong)</h2>
-      </div>
-      <div class="section-body">
-        <ul><li>Discussion sur une potentielle 'grande rotation' dans le secteur technologique (des hyperscalers vers les semi-conducteurs) qui semble terminée, les stocks de puces étant en difficulté.</li><li>Performance actuelle : la santé, la finance et l'industrie sont en croissance.</li><li>Analyse du marché du travail américain : le rapport de juin remet en question la réaccélération économique prévue après une période de croissance des emplois.</li><li>Le rapport de juin rend difficile de croire à un scénario de reprise économique joyeuse.</li></ul>
-      </div>
-    </div>
-    
-    <div class="section" id="section-5">
-      <div class="section-header">
-        <span class="icon">📈</span>
-        <span class="badge" style="background:#5a4a8a">FT Opinion (Jonathan Derbyshire)</span>
-        <h2>FT Opinion (Jonathan Derbyshire)</h2>
-      </div>
-      <div class="section-body">
-        <ul><li>Andy Burnham et la politique de la nostalgie au Royaume-Uni, opposant sa vision d'une ère pré-Thatcherite à celle de Nigel Farage (anti-Blair).</li><li>Le défi de Burnham : seulement trois ans pour montrer des résultats.</li><li>La marque de Burnham est une vision plus optimiste et unificatrice, ciblant les électeurs 'red-wall'.</li><li>À l'occasion du 250e anniversaire de l'Amérique, un appel à se souvenir des leçons d'Adam Smith sur les marchés libres et les peuples libres.</li><li>L'économie du poids des femmes : les médicaments pour la perte de poids aident les femmes à trouver du travail et incitent les hommes à quitter leurs partenaires.</li><li>L'élimination de la 'tarification personnelle' pourrait nuire aux consommateurs.</li><li>Débat sur la politique énergétique verte de New York et les besoins des centres de données.</li><li>Autres articles d'opinion : proposition d'Altman sur la sécurité de l'IA, importance des maths pour des jeux comme Minecraft, coupes dans l'enseignement supérieur au Royaume-Uni, la Cour Suprême et le pouvoir présidentiel, l'industrie de la défense turque en plein essor et l'inquiétude de l'UE.</li></ul>
-      </div>
-    </div>
-    
+{{SECTIONS}}
   </div>
 </main>
 
