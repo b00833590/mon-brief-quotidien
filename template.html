@@ -281,7 +281,7 @@ async function chargerIndices() {
   let html = "";
   for (const t of TICKERS) {
     try {
-      const url = `https://api.allorigins.win/raw?url=${encodeURIComponent('https://query1.finance.yahoo.com/v8/finance/chart/' + t.symbole)}`;
+      const url = `https://corsproxy.io/?url=${encodeURIComponent('https://query1.finance.yahoo.com/v8/finance/chart/' + t.symbole)}`;
       const res = await fetch(url);
       const json = await res.json();
       const result = json.chart.result[0];
