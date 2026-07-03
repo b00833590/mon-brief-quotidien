@@ -268,18 +268,34 @@ function toggleTheme() {
   }
 })();
 
-async function chargerIndicesLive() {
-    try {
-        const response = await fetch('indices_live.json?t=' + Date.now());
-        if (!response.ok) {
-            console.log('Fichier indices_live.json introuvable.');
-            return;
+const URL_RELAIS = "wss://ticker-relay.onrender.com";
+let socketTicker = null;
+
+function connecterAuTicker() {
+    socketTicker = new WebSocket(URL_RELAIS);
+
+    socketTicker.onopen = () => {
+        console.log("Connecté au ticker live ✅");
+        socketTicker.send(JSON.stringify({ role: "navigateur" }));
+    };
+
+    socketTicker.onmessage = (event) => {
+        try {
+            const data = JSON.parse(event.data);
+            afficherTicker(data);
+        } catch (e) {
+            console.log("Erreur de parsing des données ticker :", e);
         }
-        const data = await response.json();
-        afficherTicker(data);
-    } catch (erreur) {
-        console.log('Erreur de chargement du ticker live :', erreur);
-    }
+    };
+
+    socketTicker.onclose = () => {
+        console.log("Connexion ticker perdue, reconnexion dans 3s...");
+        setTimeout(connecterAuTicker, 3000);
+    };
+
+    socketTicker.onerror = (err) => {
+        console.log("Erreur WebSocket ticker :", err);
+    };
 }
 
 function afficherTicker(data) {
@@ -305,8 +321,7 @@ function afficherTicker(data) {
     if (html) container.innerHTML = html;
 }
 
-chargerIndicesLive();
-setInterval(chargerIndicesLive, 30 * 1000);
+connecterAuTicker();
 </script>
 
 </body>
