@@ -283,39 +283,23 @@ function toggleTheme() {
   }
 })();
 
-const URL_RELAIS = "wss://ticker-relay.onrender.com";
-let socketTicker = null;
+const URL_RELAIS = "https://ticker-relay.onrender.com/latest";
 
-function connecterAuTicker() {
-    socketTicker = new WebSocket(URL_RELAIS);
-
-    socketTicker.onopen = () => {
-        console.log("Connecté au ticker live ✅");
-        socketTicker.send(JSON.stringify({ role: "navigateur" }));
-    };
-
-    socketTicker.onmessage = (event) => {
-        try {
-            const data = JSON.parse(event.data);
-            afficherTicker(data);
-        } catch (e) {
-            console.log("Erreur de parsing des données ticker :", e);
-        }
-    };
-
-    socketTicker.onclose = () => {
-        console.log("Connexion ticker perdue, reconnexion dans 3s...");
-        setTimeout(connecterAuTicker, 3000);
-    };
-
-    socketTicker.onerror = (err) => {
-        console.log("Erreur WebSocket ticker :", err);
-    };
+async function recupererTicker() {
+    try {
+        const reponse = await fetch(URL_RELAIS);
+        if (!reponse.ok) throw new Error(`Statut HTTP ${reponse.status}`);
+        const data = await reponse.json();
+        afficherTicker(data);
+    } catch (e) {
+        console.log("Erreur de recuperation du ticker :", e);
+    }
 }
 
 function afficherTicker(data) {
     const track = document.getElementById('tickerTrack');
     if (!track) return;
+    if (!data.indices) return;
 
     let html = "";
     data.indices.forEach(indice => {
@@ -333,11 +317,12 @@ function afficherTicker(data) {
         </div>`;
     });
 
-    // Contenu dupliqué 2 fois pour un défilement en boucle continue sans coupure visible
     if (html) track.innerHTML = html + html;
 }
 
-connecterAuTicker();
+// Premier chargement immediat, puis rafraichissement toutes les secondes
+recupererTicker();
+setInterval(recupererTicker, 1000);
 </script>
 
 </body>
