@@ -95,7 +95,7 @@
     display: inline-flex;
     gap: 28px;
     white-space: nowrap;
-    animation: defilement-ticker 15s linear infinite;
+    animation: defilement-ticker 25s linear infinite;
   }
   .ticker-bar:hover .ticker-track {
     animation-play-state: paused;
@@ -132,78 +132,80 @@
     overflow-x: auto;
     padding: 0 20px;
   }
-  nav.subnav a {
+  nav.subnav button {
     display: inline-block;
     padding: 14px 16px;
     font-size: 13.5px;
     font-weight: 600;
     color: var(--ink-soft);
     text-decoration: none;
+    border: none;
+    background: none;
     border-bottom: 2px solid transparent;
     white-space: nowrap;
+    cursor: pointer;
     transition: color .15s, border-color .15s;
+    font-family: inherit;
   }
-  nav.subnav a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+  nav.subnav button:hover { color: var(--accent); }
+  nav.subnav button.active { color: var(--accent); border-bottom-color: var(--accent); }
 
   main { max-width: 1100px; margin: 0 auto; padding: 36px 20px 70px; }
-  .intro { font-size: 14px; color: var(--ink-soft); margin-bottom: 28px; max-width: 640px; }
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 20px;
-  }
-  .section {
-    background: var(--card-bg);
-    border: 1px solid var(--border);
-    border-radius: 14px;
-    overflow: hidden;
-    box-shadow: 0 1px 2px rgba(16,24,40,0.04);
-    transition: box-shadow .2s, transform .2s;
-    scroll-margin-top: 70px;
-  }
-  .section:hover { box-shadow: 0 8px 24px rgba(16,24,40,0.10); transform: translateY(-2px); }
-  .section-header {
+  .intro { font-size: 14px; color: var(--ink-soft); margin-bottom: 20px; max-width: 640px; }
+
+  .tab-panel { display: none; }
+  .tab-panel.active { display: block; }
+  .tab-panel h2.tab-title { font-size: 22px; font-weight: 800; margin-bottom: 4px; }
+  .tab-panel .tab-subtitle { font-size: 13.5px; color: var(--ink-soft); margin-bottom: 22px; }
+
+  .flash-list { display: flex; flex-direction: column; gap: 4px; }
+  .flash-item {
     display: flex;
-    align-items: center;
-    gap: 12px;
-    padding: 18px 22px;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 16px 4px;
     border-bottom: 1px solid var(--border);
   }
-  .section-header .icon {
-    font-size: 20px;
+  .flash-item:last-child { border-bottom: none; }
+  .flash-rank {
     flex-shrink: 0;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: var(--navy);
+    color: var(--accent);
+    font-size: 12.5px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
-  .section-header .badge {
-    font-size: 10.5px;
+  [data-theme="dark"] .flash-rank { background: var(--accent); color: var(--navy); }
+  .flash-content { flex: 1; }
+  .flash-title {
+    font-size: 15px;
     font-weight: 700;
-    letter-spacing: 0.6px;
-    text-transform: uppercase;
-    padding: 4px 10px;
-    border-radius: 20px;
-    color: #fff;
-    flex-shrink: 0;
+    color: var(--ink);
+    margin-bottom: 3px;
   }
-  .section-header h2 { font-size: 16.5px; font-weight: 700; color: var(--ink); }
-  .section-body { padding: 18px 22px 24px; }
-  .section-body ul { list-style: none; }
-  .section-body li {
-    position: relative;
-    padding-left: 20px;
-    margin-bottom: 12px;
-    font-size: 14px;
+  .flash-summary {
+    font-size: 13.5px;
     color: var(--ink-soft);
   }
-  .section-body li:last-child { margin-bottom: 0; }
-  .section-body li::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 7px;
-    width: 7px;
-    height: 7px;
-    border-radius: 50%;
-    background: var(--accent);
+
+  .news-list { display: flex; flex-direction: column; gap: 10px; }
+  .news-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--accent-item, var(--accent));
+    border-radius: 10px;
+    padding: 14px 18px;
+    font-size: 14px;
+    color: var(--ink);
+    box-shadow: 0 1px 2px rgba(16,24,40,0.03);
+    transition: box-shadow .15s, transform .15s;
   }
+  .news-item:hover { box-shadow: 0 4px 14px rgba(16,24,40,0.08); transform: translateY(-1px); }
 
   footer {
     text-align: center;
@@ -219,7 +221,6 @@
     header .date-block { text-align: left; }
     header h1 { font-size: 20px; }
     main { padding: 24px 14px 50px; }
-    .grid { grid-template-columns: 1fr; }
   }
 </style>
 </head>
@@ -250,14 +251,14 @@
 </header>
 
 <nav class="subnav">
-  <div class="inner">
+  <div class="inner" id="navTabs">
 {{NAV_LINKS}}
   </div>
 </nav>
 
 <main>
-  <div class="intro">Voici le resume du jour, genere automatiquement a partir de mes newsletters recues (Aktionnaire, Arcos, Les Echos, Financial Times).</div>
-  <div class="grid">
+  <div class="intro">Voici le resume du jour, genere automatiquement a partir de mes newsletters recues (Aktionnaire, Arcos, Les Echos, Financial Times, Natixis).</div>
+  <div id="tabPanels">
 {{SECTIONS}}
   </div>
 </main>
@@ -283,6 +284,32 @@ function toggleTheme() {
   }
 })();
 
+// --- Gestion des onglets ---
+function activerOnglet(slug) {
+    document.querySelectorAll('#navTabs button').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.tab === slug);
+    });
+    document.querySelectorAll('.tab-panel').forEach(panel => {
+        panel.classList.toggle('active', panel.dataset.tab === slug);
+    });
+    localStorage.setItem('dernierOnglet', slug);
+}
+
+document.querySelectorAll('#navTabs button').forEach(btn => {
+    btn.addEventListener('click', () => activerOnglet(btn.dataset.tab));
+});
+
+(function() {
+    const dernier = localStorage.getItem('dernierOnglet');
+    const boutons = document.querySelectorAll('#navTabs button');
+    if (dernier && document.querySelector(`.tab-panel[data-tab="${dernier}"]`)) {
+        activerOnglet(dernier);
+    } else if (boutons.length > 0) {
+        activerOnglet(boutons[0].dataset.tab);
+    }
+})();
+
+// --- Ticker temps reel ---
 const URL_RELAIS = "https://ticker-relay.onrender.com/latest";
 
 async function recupererTicker() {
@@ -295,6 +322,8 @@ async function recupererTicker() {
         console.log("Erreur de recuperation du ticker :", e);
     }
 }
+
+let dernierContenuHTML = "";
 
 function afficherTicker(data) {
     const track = document.getElementById('tickerTrack');
@@ -317,10 +346,14 @@ function afficherTicker(data) {
         </div>`;
     });
 
-    if (html) track.innerHTML = html + html;
+    if (!html) return;
+
+    if (html !== dernierContenuHTML) {
+        dernierContenuHTML = html;
+        track.innerHTML = html + html;
+    }
 }
 
-// Premier chargement immediat, puis rafraichissement toutes les secondes
 recupererTicker();
 setInterval(recupererTicker, 1000);
 </script>

@@ -95,7 +95,7 @@
     display: inline-flex;
     gap: 28px;
     white-space: nowrap;
-    animation: defilement-ticker 15s linear infinite;
+    animation: defilement-ticker 25s linear infinite;
   }
   .ticker-bar:hover .ticker-track {
     animation-play-state: paused;
@@ -132,78 +132,80 @@
     overflow-x: auto;
     padding: 0 20px;
   }
-  nav.subnav a {
+  nav.subnav button {
     display: inline-block;
     padding: 14px 16px;
     font-size: 13.5px;
     font-weight: 600;
     color: var(--ink-soft);
     text-decoration: none;
+    border: none;
+    background: none;
     border-bottom: 2px solid transparent;
     white-space: nowrap;
+    cursor: pointer;
     transition: color .15s, border-color .15s;
+    font-family: inherit;
   }
-  nav.subnav a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+  nav.subnav button:hover { color: var(--accent); }
+  nav.subnav button.active { color: var(--accent); border-bottom-color: var(--accent); }
 
   main { max-width: 1100px; margin: 0 auto; padding: 36px 20px 70px; }
-  .intro { font-size: 14px; color: var(--ink-soft); margin-bottom: 28px; max-width: 640px; }
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 20px;
-  }
-  .section {
-    background: var(--card-bg);
-    border: 1px solid var(--border);
-    border-radius: 14px;
-    overflow: hidden;
-    box-shadow: 0 1px 2px rgba(16,24,40,0.04);
-    transition: box-shadow .2s, transform .2s;
-    scroll-margin-top: 70px;
-  }
-  .section:hover { box-shadow: 0 8px 24px rgba(16,24,40,0.10); transform: translateY(-2px); }
-  .section-header {
+  .intro { font-size: 14px; color: var(--ink-soft); margin-bottom: 20px; max-width: 640px; }
+
+  .tab-panel { display: none; }
+  .tab-panel.active { display: block; }
+  .tab-panel h2.tab-title { font-size: 22px; font-weight: 800; margin-bottom: 4px; }
+  .tab-panel .tab-subtitle { font-size: 13.5px; color: var(--ink-soft); margin-bottom: 22px; }
+
+  .flash-list { display: flex; flex-direction: column; gap: 4px; }
+  .flash-item {
     display: flex;
-    align-items: center;
-    gap: 12px;
-    padding: 18px 22px;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 16px 4px;
     border-bottom: 1px solid var(--border);
   }
-  .section-header .icon {
-    font-size: 20px;
+  .flash-item:last-child { border-bottom: none; }
+  .flash-rank {
     flex-shrink: 0;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: var(--navy);
+    color: var(--accent);
+    font-size: 12.5px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
-  .section-header .badge {
-    font-size: 10.5px;
+  [data-theme="dark"] .flash-rank { background: var(--accent); color: var(--navy); }
+  .flash-content { flex: 1; }
+  .flash-title {
+    font-size: 15px;
     font-weight: 700;
-    letter-spacing: 0.6px;
-    text-transform: uppercase;
-    padding: 4px 10px;
-    border-radius: 20px;
-    color: #fff;
-    flex-shrink: 0;
+    color: var(--ink);
+    margin-bottom: 3px;
   }
-  .section-header h2 { font-size: 16.5px; font-weight: 700; color: var(--ink); }
-  .section-body { padding: 18px 22px 24px; }
-  .section-body ul { list-style: none; }
-  .section-body li {
-    position: relative;
-    padding-left: 20px;
-    margin-bottom: 12px;
-    font-size: 14px;
+  .flash-summary {
+    font-size: 13.5px;
     color: var(--ink-soft);
   }
-  .section-body li:last-child { margin-bottom: 0; }
-  .section-body li::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 7px;
-    width: 7px;
-    height: 7px;
-    border-radius: 50%;
-    background: var(--accent);
+
+  .news-list { display: flex; flex-direction: column; gap: 10px; }
+  .news-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--accent-item, var(--accent));
+    border-radius: 10px;
+    padding: 14px 18px;
+    font-size: 14px;
+    color: var(--ink);
+    box-shadow: 0 1px 2px rgba(16,24,40,0.03);
+    transition: box-shadow .15s, transform .15s;
   }
+  .news-item:hover { box-shadow: 0 4px 14px rgba(16,24,40,0.08); transform: translateY(-1px); }
 
   footer {
     text-align: center;
@@ -219,7 +221,6 @@
     header .date-block { text-align: left; }
     header h1 { font-size: 20px; }
     main { padding: 24px 14px 50px; }
-    .grid { grid-template-columns: 1fr; }
   }
 </style>
 </head>
@@ -236,7 +237,7 @@
     </div>
     <div class="right">
       <div class="date-block">
-        <div class="date">Lundi 06 juillet 2026</div>
+        <div class="date">Jeudi 09 juillet 2026</div>
         <div class="date-sub">Mise a jour automatique</div>
       </div>
       <button class="theme-toggle" onclick="toggleTheme()" id="themeBtn">&#9789;</button>
@@ -247,32 +248,32 @@
 
     <div class="ticker-item">
       <span class="name">DOW JONES</span>
-      <span class="value">52900.07</span>
-      <span class="variation up">▲ +1.14%</span>
+      <span class="value">52348.39</span>
+      <span class="variation down">▼ -1.09%</span>
     </div>
     
     <div class="ticker-item">
       <span class="name">S&P 500</span>
-      <span class="value">7483.24</span>
-      <span class="variation up">▲ +0.0%</span>
+      <span class="value">7482.71</span>
+      <span class="variation down">▼ -0.28%</span>
     </div>
     
     <div class="ticker-item">
       <span class="name">NASDAQ</span>
-      <span class="value">25832.67</span>
-      <span class="variation down">▼ -0.8%</span>
+      <span class="value">25870.65</span>
+      <span class="variation up">▲ +0.2%</span>
     </div>
     
     <div class="ticker-item">
       <span class="name">CAC 40</span>
-      <span class="value">8500.53</span>
-      <span class="variation down">▼ -0.09%</span>
+      <span class="value">8284.88</span>
+      <span class="variation up">▲ +0.39%</span>
     </div>
     
     <div class="ticker-item">
       <span class="name">EUR/USD</span>
       <span class="value">1.14</span>
-      <span class="variation down">▼ -0.06%</span>
+      <span class="variation up">▲ +0.26%</span>
     </div>
     
     </div>
@@ -280,73 +281,107 @@
 </header>
 
 <nav class="subnav">
-  <div class="inner">
-<a href="#section-0">FT - Unhedged</a>
-<a href="#section-1">FT Opinion</a>
-<a href="#section-2">Aktionnaire</a>
-<a href="#section-3">Bourseko</a>
-<a href="#section-4">Natixis</a>
+  <div class="inner" id="navTabs">
+<button data-tab="flash">Flash</button>
+<button data-tab="marches">Marches</button>
+<button data-tab="usa">USA</button>
+<button data-tab="europe">Europe</button>
+<button data-tab="asie">Asie</button>
+<button data-tab="afrique">Afrique</button>
+<button data-tab="tech-ia">Tech & IA</button>
+<button data-tab="briefing-complet">Briefing complet</button>
+<button data-tab="agenda">Agenda</button>
 
   </div>
 </nav>
 
 <main>
-  <div class="intro">Voici le resume du jour, genere automatiquement a partir de mes newsletters recues (Aktionnaire, Arcos, Les Echos, Financial Times).</div>
-  <div class="grid">
+  <div class="intro">Voici le resume du jour, genere automatiquement a partir de mes newsletters recues (Aktionnaire, Arcos, Les Echos, Financial Times, Natixis).</div>
+  <div id="tabPanels">
 
-    <div class="section" id="section-0">
-      <div class="section-header">
-        <span class="icon">📈</span>
-        <span class="badge" style="background:#5a4a8a">FT - Unhedged</span>
-        <h2>FT - Unhedged</h2>
-      </div>
-      <div class="section-body">
-        <ul><li>Les producteurs d'œufs américains ont réglé des accusations de collusion pour manipuler les prix, un sujet qui avait auparavant impacté l'inflation du CPI américain.</li><li>La « SaaSpocalypse » (fin des entreprises de logiciels en raison de l'IA) semble être différée pour l'instant, malgré une perte de près de 1 000 milliards de dollars de valeur pour le secteur il y a six mois.</li><li>Le secteur du logiciel ne s'est pas encore pleinement rétabli six mois après la cristallisation des craintes liées à l'IA avec la sortie de Claude Cowork d'Anthropic.</li></ul>
-      </div>
+    <div class="tab-panel" data-tab="flash">
+      <h2 class="tab-title">⚡ Flash</h2>
+      <div class="flash-list">
+            <div class="flash-item">
+              <div class="flash-rank">1</div>
+              <div class="flash-content">
+                <div class="flash-title">US Frappes Iraniennes, Pétrole Flambe</div>
+                <div class="flash-summary">Les États-Unis ont frappé plus de 80 cibles en Iran, déclenchant une flambée de 5% du prix du Brent et ravivant les tensions au Moyen-Orient.</div>
+              </div>
+            </div>
+            
+            <div class="flash-item">
+              <div class="flash-rank">2</div>
+              <div class="flash-content">
+                <div class="flash-title">Fed maintient ton restrictif</div>
+                <div class="flash-summary">Les minutes de la Fed confirment un ton plus restrictif avec des risques inflationnistes persistants et un marché du travail jugé solide.</div>
+              </div>
+            </div>
+            
+            <div class="flash-item">
+              <div class="flash-rank">3</div>
+              <div class="flash-content">
+                <div class="flash-title">Anticipations hausses BCE/BoE renforcées</div>
+                <div class="flash-summary">Les marchés intègrent plus d'une hausse de taux supplémentaire de la BCE et de la Banque d'Angleterre d'ici la fin de l'année.</div>
+              </div>
+            </div>
+            
+            <div class="flash-item">
+              <div class="flash-rank">4</div>
+              <div class="flash-content">
+                <div class="flash-title">xAI fusionne avec SpaceX</div>
+                <div class="flash-summary">xAI est officiellement renommée SpaceXAI, devenant une filiale de SpaceX, avec X comme sous-filiale.</div>
+              </div>
+            </div>
+            
+            <div class="flash-item">
+              <div class="flash-rank">5</div>
+              <div class="flash-content">
+                <div class="flash-title">Flotte aérienne mondiale va doubler</div>
+                <div class="flash-summary">La flotte mondiale d'avions devrait doubler d'ici 2045, exigeant plus de 42 060 livraisons.</div>
+              </div>
+            </div>
+            </div>
     </div>
     
-    <div class="section" id="section-1">
-      <div class="section-header">
-        <span class="icon">📈</span>
-        <span class="badge" style="background:#5a4a8a">FT Opinion</span>
-        <h2>FT Opinion</h2>
-      </div>
-      <div class="section-body">
-        <ul><li>OpenAI et Anthropic pourraient avoir du mal à entrer en bourse en raison de modèles économiques non clairement durables, de la concurrence de leurs bailleurs de fonds des grandes entreprises technologiques et de la 'commoditisation' des modèles d'IA.</li><li>Le marché boursier est de plus en plus hésitant face aux plans d'investissement massifs de l'industrie de l'IA.</li></ul>
-      </div>
+    <div class="tab-panel" data-tab="marches">
+      <h2 class="tab-title">📈 Marches</h2>
+      <div class="news-list"><div class="news-item" style="--accent-item:#1f9d55">Les marchés actions ont globalement clôturé dans le rouge suite aux commentaires de D. Trump sur l'Iran.</div><div class="news-item" style="--accent-item:#1f9d55">Le prix du Brent a bondi de plus de 5%, repassant au-dessus de 80 dollars le baril, ravivant les craintes inflationnistes.</div><div class="news-item" style="--accent-item:#1f9d55">Les rendements souverains européens et britanniques ont progressé d'une dizaine de points de base, en raison des anticipations de resserrement monétaire.</div><div class="news-item" style="--accent-item:#1f9d55">Les marchés intègrent désormais environ 38 points de base de hausses de taux de la BCE et 36 points de base pour la BoE d'ici décembre.</div><div class="news-item" style="--accent-item:#1f9d55">Les courbes de taux ont évolué dans un mouvement de « bear flattening », avec le Schatz 2 ans en hausse de 12 points de base à 2,70 % et le Bund 10 ans progressant de 10 points de base à 3,09 %.</div><div class="news-item" style="--accent-item:#1f9d55">Les spreads souverains se sont écartés dans le sillage de la remontée du Brent, avec une légère sous-performance des OAT par rapport aux BTP (83 pb pour OAT-Bund et 81 pb pour BTP-Bund).</div><div class="news-item" style="--accent-item:#1f9d55">Le DXY s'est stabilisé à 101,10, après un bond initial du dollar lié aux déclarations de Trump.</div><div class="news-item" style="--accent-item:#1f9d55">L'USD/JPY a progressé à 162,66, le yen poursuivant son affaiblissement pour une quatrième séance consécutive.</div><div class="news-item" style="--accent-item:#1f9d55">L'USD/INR a bondi de 0,63 % à 95,5550, la roupie signant la plus forte baisse des devises asiatiques en raison de la flambée du pétrole.</div></div>
     </div>
     
-    <div class="section" id="section-2">
-      <div class="section-header">
-        <span class="icon">🎓</span>
-        <span class="badge" style="background:#0a1930">Aktionnaire</span>
-        <h2>Aktionnaire</h2>
-      </div>
-      <div class="section-body">
-        <ul><li>Les marchés ont été soutenus par des chiffres de l'emploi américain plus faibles que prévu (57 000 emplois créés en juin contre 113 000 attendus), réduisant la pression sur la Fed pour relever ses taux.</li><li>Les investisseurs attendent le début de la saison des résultats, qui s'ouvrira le 14 juillet avec les grandes banques américaines.</li><li>Abivax a atteint un plus haut historique en Bourse après des résultats cliniques rassurants sur son traitement obefazimod.</li><li>La Coupe du monde de l'Esport (EWC), financée par le fonds souverain saoudien pour la diversification économique, débute à Paris pour la première fois hors d'Arabie saoudite.</li></ul>
-      </div>
+    <div class="tab-panel" data-tab="usa">
+      <h2 class="tab-title">🇺🇸 USA</h2>
+      <div class="news-list"><div class="news-item" style="--accent-item:#3b5a9a">L'armée américaine a visé plus de 80 cibles en Iran, tuant huit militaires, pour dégrader leur capacité à menacer la navigation dans le détroit d'Ormuz.</div><div class="news-item" style="--accent-item:#3b5a9a">Téhéran a riposté sur des bases américaines au Koweït et à Bahreïn, le détroit d'Ormuz étant au cœur des tensions.</div><div class="news-item" style="--accent-item:#3b5a9a">Les minutes de la Fed ont confirmé un ton plus restrictif, les membres du FOMC jugeant les risques inflationnistes plus persistants et le marché du travail suffisamment solide.</div><div class="news-item" style="--accent-item:#3b5a9a">Le président Donald Trump est perçu comme ravivant une doctrine de non-alignement ou d'autonomie stratégique, avec des discussions sur un retrait de l'OTAN et la guerre en Ukraine considérée comme un problème européen.</div><div class="news-item" style="--accent-item:#3b5a9a">Broadcom a pris des couleurs après l'annonce d'un accord d'approvisionnement avec Apple estimé à plus de 30 milliards de dollars.</div></div>
     </div>
     
-    <div class="section" id="section-3">
-      <div class="section-header">
-        <span class="icon">💹</span>
-        <span class="badge" style="background:#b5651d">Bourseko</span>
-        <h2>Bourseko</h2>
-      </div>
-      <div class="section-body">
-        <ul><li>Les indices américains ont enregistré l'un de leurs meilleurs semestres depuis des années, tandis que les indices européens sont restés proches de leurs plus hauts, malgré un contexte perçu comme particulièrement négatif (conflit US-Iran, flambée des prix de l'énergie, changement à la tête de la Fed, feuilleton budgétaire français).</li></ul>
-      </div>
+    <div class="tab-panel" data-tab="europe">
+      <h2 class="tab-title">🇪🇺 Europe</h2>
+      <div class="news-list"><div class="news-item" style="--accent-item:#5a4a8a">Les rendements souverains européens et britanniques ont progressé d'une dizaine de points de base, avec des anticipations de resserrement monétaire renforcées pour la BCE et la BoE.</div><div class="news-item" style="--accent-item:#5a4a8a">L'ancien Premier ministre italien, Enrico Letta, estime que l'épargne européenne devrait être utilisée pour investir dans son propre avenir, soulignant la faible part des entreprises européennes dans l'équité mondiale investissable (10-12%) comparé aux américaines (>60%).</div><div class="news-item" style="--accent-item:#5a4a8a">Une prime de risque politique sur la France est suggérée par la légère sous-performance des OAT par rapport aux BTP.</div></div>
     </div>
     
-    <div class="section" id="section-4">
-      <div class="section-header">
-        <span class="icon">🏦</span>
-        <span class="badge" style="background:#c8102e">Natixis</span>
-        <h2>Natixis</h2>
-      </div>
-      <div class="section-body">
-        <ul><li>Le Stoxx Europe 600 a atteint un nouveau record historique, enregistrant sa quatrième semaine consécutive de hausse.</li><li>L'or a connu sa première semaine de hausse depuis mai (+2,2 %).</li><li>L'indice DXY a enregistré son plus fort repli hebdomadaire en 11 semaines (-0,5 %).</li><li>Le prix du Brent s'est stabilisé à 72,1 $/bbl, revenant aux niveaux d'avant le conflit iranien, et l'OPEP+ a relevé ses quotas de production.</li><li>Le rendement du Bund 10 ans a poursuivi sa remontée pour clôturer à 2,93%, le marché anticipant désormais 20 points de base de resserrement monétaire de la BCE d'ici fin d'année.</li><li>La volatilité implicite 1 an des options EUR/USD à la monnaie est tombée à 5,97%, son plus bas niveau depuis janvier 2022.</li><li>À surveiller cette semaine: ISM Services US (lundi), Minutes de la Fed (mercredi) et de la BCE (jeudi), inflation en Chine (jeudi), Sommet de l'OTAN à Ankara (7 et 8 juillet).</li></ul>
-      </div>
+    <div class="tab-panel" data-tab="asie">
+      <h2 class="tab-title">🌏 Asie</h2>
+      <div class="news-list"><div class="news-item" style="--accent-item:#b5651d">L'USD/JPY a progressé à 162,66, marquant un affaiblissement continu du yen pour la quatrième séance consécutive.</div><div class="news-item" style="--accent-item:#b5651d">La roupie indienne (USD/INR +0,63% à 95,5550) a enregistré la plus forte baisse parmi les devises asiatiques, affectée par les craintes sur sa facture énergétique suite à la flambée du pétrole.</div></div>
+    </div>
+    
+    <div class="tab-panel" data-tab="afrique">
+      <h2 class="tab-title">🌍 Afrique</h2>
+      <div class="news-list"><div class="news-item" style="--accent-item:#8a3b3b">Aucune actualité disponible dans les sources du jour.</div></div>
+    </div>
+    
+    <div class="tab-panel" data-tab="tech-ia">
+      <h2 class="tab-title">🤖 Tech & IA</h2>
+      <div class="news-list"><div class="news-item" style="--accent-item:#374151">xAI a été officiellement renommée SpaceXAI et est désormais une filiale de SpaceX, avec X (anciennement Twitter) comme sous-filiale de SpaceXAI.</div><div class="news-item" style="--accent-item:#374151">Broadcom a annoncé un accord d'approvisionnement de plus de 30 milliards de dollars avec Apple, impactant positivement son cours de bourse.</div></div>
+    </div>
+    
+    <div class="tab-panel" data-tab="briefing-complet">
+      <h2 class="tab-title">📋 Briefing complet</h2>
+      <div class="news-list"><div class="news-item" style="--accent-item:#0a1930">Les tensions géopolitiques au Moyen-Orient ont connu une nouvelle escalade, suite à la déclaration du président Trump de la fin du cessez-le-feu avec l'Iran. Les États-Unis ont mené des frappes contre plus de 80 cibles en Iran, provoquant des ripostes sur des bases américaines. Ces événements ont immédiatement ravivé les inquiétudes sur l'approvisionnement énergétique, entraînant une flambée de plus de 5% du prix du Brent, qui a repassé la barre des 80 dollars le baril. Le détroit d'Ormuz reste au cœur des préoccupations, l'Iran cherchant à imposer des droits de passage aux navires.</div><div class="news-item" style="--accent-item:#0a1930">Sur le plan monétaire, les minutes de la dernière réunion du Federal Open Market Committee (FOMC) ont confirmé un ton plus restrictif de la Réserve fédérale américaine. Les membres du FOMC estiment que les risques inflationnistes sont plus persistants et que le marché du travail est suffisamment solide pour justifier le maintien d'une politique monétaire restrictive.</div><div class="news-item" style="--accent-item:#0a1930">En Europe, le regain des tensions énergétiques s'est répercuté sur les marchés obligataires. Les rendements souverains européens et britanniques ont augmenté d'une dizaine de points de base, et les investisseurs anticipent désormais plus d'une hausse supplémentaire des taux de la Banque Centrale Européenne (environ 38 points de base) et de la Banque d'Angleterre (environ 36 points de base) d'ici la fin de l'année. Les courbes de taux ont connu un mouvement de « bear flattening » et les spreads souverains se sont écartés, avec une légère sous-performance des OAT françaises suggérant une prime de risque politique.</div><div class="news-item" style="--accent-item:#0a1930">Les marchés actions ont globalement clôturé la journée dans le rouge, impactés par les tensions géopolitiques. Cependant, le secteur technologique a vu des mouvements notables, notamment l'action Broadcom qui a progressé après l'annonce d'un accord d'approvisionnement de plus de 30 milliards de dollars avec Apple.</div><div class="news-item" style="--accent-item:#0a1930">Dans le domaine de la tech et de l'IA, xAI a été officiellement renommée SpaceXAI et est désormais une filiale de SpaceX, avec X (anciennement Twitter) comme sous-filiale de SpaceXAI, marquant une restructuration majeure des entités d'Elon Musk.</div><div class="news-item" style="--accent-item:#0a1930">Une analyse suggère que la politique de l'administration américaine actuelle, avec des discussions sur un possible retrait de l'OTAN et la qualification de la guerre en Ukraine comme un problème européen, s'inscrit dans une doctrine de « non-alignement » ou « autonomie stratégique ».</div><div class="news-item" style="--accent-item:#0a1930">En matière d'investissement, le débat se poursuit sur l'accès des investisseurs particuliers aux actifs privés. Les questions de complexité, d'opacité et de liquidité sont considérées comme surmontables, mais les frais élevés pour les particuliers par rapport aux institutions restent une barrière. Par ailleurs, l'ancien Premier ministre italien Enrico Letta souligne la nécessité pour l'Europe d'utiliser son épargne pour investir dans son propre avenir, constatant que les entreprises américaines dominent l'équité mondiale investissable (plus de 60%) tandis que l'Europe peine à mobiliser ses capitaux domestiquement (10-12%).</div><div class="news-item" style="--accent-item:#0a1930">Sur le marché des devises, le DXY s'est stabilisé après une volatilité initiale. Le yen japonais a continué de s'affaiblir face au dollar (USD/JPY à 162,66), tandis que la roupie indienne a subi la plus forte dépréciation parmi les devises asiatiques, en raison de l'impact de la flambée du pétrole sur sa facture énergétique.</div><div class="news-item" style="--accent-item:#0a1930">L'industrie aéronautique prévoit une expansion significative : la flotte mondiale d'avions devrait doubler en 20 ans, passant à 45 550 appareils d'ici 2045, nécessitant la livraison de plus de 42 060 avions neufs pour remplacer les appareils vieillissants et répondre à une croissance annuelle du trafic aérien de 3,9%.</div></div>
+    </div>
+    
+    <div class="tab-panel" data-tab="agenda">
+      <h2 class="tab-title">🗓️ Agenda</h2>
+      <div class="news-list"><div class="news-item" style="--accent-item:#2f6b4f">Aucune actualité disponible dans les sources du jour.</div></div>
     </div>
     
   </div>
@@ -373,6 +408,32 @@ function toggleTheme() {
   }
 })();
 
+// --- Gestion des onglets ---
+function activerOnglet(slug) {
+    document.querySelectorAll('#navTabs button').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.tab === slug);
+    });
+    document.querySelectorAll('.tab-panel').forEach(panel => {
+        panel.classList.toggle('active', panel.dataset.tab === slug);
+    });
+    localStorage.setItem('dernierOnglet', slug);
+}
+
+document.querySelectorAll('#navTabs button').forEach(btn => {
+    btn.addEventListener('click', () => activerOnglet(btn.dataset.tab));
+});
+
+(function() {
+    const dernier = localStorage.getItem('dernierOnglet');
+    const boutons = document.querySelectorAll('#navTabs button');
+    if (dernier && document.querySelector(`.tab-panel[data-tab="${dernier}"]`)) {
+        activerOnglet(dernier);
+    } else if (boutons.length > 0) {
+        activerOnglet(boutons[0].dataset.tab);
+    }
+})();
+
+// --- Ticker temps reel ---
 const URL_RELAIS = "https://ticker-relay.onrender.com/latest";
 
 async function recupererTicker() {
@@ -385,6 +446,8 @@ async function recupererTicker() {
         console.log("Erreur de recuperation du ticker :", e);
     }
 }
+
+let dernierContenuHTML = "";
 
 function afficherTicker(data) {
     const track = document.getElementById('tickerTrack');
@@ -407,10 +470,14 @@ function afficherTicker(data) {
         </div>`;
     });
 
-    if (html) track.innerHTML = html + html;
+    if (!html) return;
+
+    if (html !== dernierContenuHTML) {
+        dernierContenuHTML = html;
+        track.innerHTML = html + html;
+    }
 }
 
-// Premier chargement immediat, puis rafraichissement toutes les secondes
 recupererTicker();
 setInterval(recupererTicker, 1000);
 </script>
