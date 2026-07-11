@@ -487,7 +487,9 @@
   @media (max-width: 640px) {
     header { padding: 20px 18px 0; }
     header::before { font-size: 160px; right: -20px; top: -30px; }
-    header .top { flex-direction: column; align-items: flex-start; }
+    header .top { flex-direction: column; align-items: stretch; gap: 14px; }
+    header .header-search { flex: 0 0 auto; max-width: none; width: 100%; }
+    header .right { justify-content: space-between; width: 100%; }
     header .date-block { text-align: left; }
     header h1 { font-size: 24px; }
     main { padding: 24px 14px 50px; }
@@ -554,20 +556,20 @@
       <h2 class="tab-title">⚡ Flash</h2>
       
 <div class="sentiment-box">
-  <span class="sentiment-badge sent-up">Haussier</span>
-  <span class="sentiment-raison">Les marchés ont adopté une approche de « buy-the-dip » avec des actions en hausse et un rally obligataire, malgré les tensions géopolitiques. La pression sur les taux et la volatilité semblent s'apaiser temporairement.</span>
+  <span class="sentiment-badge sent-neutral">Neutre</span>
+  <span class="sentiment-raison">Les marchés ont opté pour un rachat sur repli malgré les frappes américaines sur l'Iran, mais le contexte géopolitique reste fragile. Les attentes de hausse de taux de la BCE ont reculé, tandis que le dollar a fléchi.</span>
 </div>
 
       <div class="acc-list">
         <details class="acc-item" style="--cat-couleur:#f59e0b">
           <summary class="acc-summary">
             <span class="acc-rank">1</span>
-            <span class="acc-region" title="Global">🌐</span>
+            <span class="acc-region" title="USA">🇺🇸</span>
             <span class="acc-pill" style="background:#f59e0b22;color:#f59e0b">Géopolitique</span>
-            <span class="acc-title">Tensions entre États-Unis et Iran impactent marchés pétroliers</span>
+            <span class="acc-title">Trump menace l'Iran d'une «décimation»</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">Les <strong class="highlight-phrase">États-Unis menacent de « décimer » l'Iran</strong> et exigent que Téhéran déclare le détroit d'Ormuz ouvert à la navigation. Malgré ces tensions géopolitiques, les marchés ont opté pour une stratégie de <strong class="highlight-phrase">« buy-the-dip »</strong>. Les cours du pétrole ont reculé d'environ <strong class="highlight-figure">2%</strong> pour s'établir à <strong class="highlight-figure">72$ le baril</strong>, tandis que les actions étaient en hausse et l'obligataire en rally, témoignant d'une relative résilience des investisseurs face à ce risque. L'environnement reste toutefois fragile, constituant le risque majeur pour le week-end.</div>
+          <div class="acc-body">Le président Trump a émis une déclaration forte, menaçant de «décimer» l'Iran, une rhétorique qui fait suite à des frappes américaines antérieures et contribue à un climat géopolitique déjà très tendu. Cette intensification des menaces entre les deux nations pourrait avoir des conséquences directes sur la stabilité régionale, notamment pour les approvisionnements en pétrole, et potentiellement déclencher des réactions sur les marchés mondiaux des matières premières. Les investisseurs sont invités à suivre de près les développements, car une escalade pourrait perturber les chaînes d'approvisionnement et la confiance économique à l'échelle internationale.</div>
         </details>
         
         <details class="acc-item" style="--cat-couleur:#8b5cf6">
@@ -575,54 +577,43 @@
             <span class="acc-rank">2</span>
             <span class="acc-region" title="USA">🇺🇸</span>
             <span class="acc-pill" style="background:#8b5cf622;color:#8b5cf6">Tech</span>
-            <span class="acc-title">Apple attaque OpenAI en justice</span>
+            <span class="acc-title">Apple poursuit en justice OpenAI</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body"><strong class="highlight-phrase">Apple a officiellement intenté une action en justice contre OpenAI</strong>, la start-up à l'origine de ChatGPT. Cette action marque une escalade significative des tensions dans le secteur de l'intelligence artificielle. Les détails de la plainte n'ont pas été précisés par les sources, mais cette confrontation entre deux géants technologiques pourrait avoir des <strong class="highlight-phrase">répercussions majeures sur l'avenir de l'IA</strong> et la propriété intellectuelle dans le domaine.</div>
+          <div class="acc-body">Apple a officiellement intenté une action en justice contre OpenAI, le développeur de ChatGPT. Bien que les détails spécifiques de la plainte ne soient pas encore publics, cette confrontation entre deux géants de la technologie marque une <strong class="highlight-phrase">escalade majeure</strong> dans la compétition et la régulation autour de l'intelligence artificielle, avec des <strong class="highlight-phrase">implications potentielles pour l'avenir</strong> des plateformes et des innovations IA. Cette bataille juridique pourrait redéfinir les frontières entre les géants technologiques et les startups innovantes.</div>
         </details>
         
-        <details class="acc-item" style="--cat-couleur:#ef4444">
+        <details class="acc-item" style="--cat-couleur:#3b82f6">
           <summary class="acc-summary">
             <span class="acc-rank">3</span>
-            <span class="acc-region" title="Europe">🇪🇺</span>
-            <span class="acc-pill" style="background:#ef444422;color:#ef4444">Macro</span>
-            <span class="acc-title">L'inflation au Royaume-Uni frappe inégalement</span>
+            <span class="acc-region" title="Global">🌐</span>
+            <span class="acc-pill" style="background:#3b82f622;color:#3b82f6">Marchés</span>
+            <span class="acc-title">Risques élevés pour le marché du GNL avant l'hiver</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">L'inflation britannique a un impact disparate sur les ménages, les chiffres globaux masquant d'importants écarts. Au pic de la crise du coût de la vie en <strong class="highlight-figure">octobre 2022</strong>, les <strong class="highlight-phrase">ménages les plus pauvres</strong> ont subi une inflation de <strong class="highlight-figure">14,5%</strong>, soit <strong class="highlight-figure">plus de trois points au-dessus de l'IPC (11,1%)</strong>. Cette divergence s'explique par la part des dépenses en alimentation et énergie, qui représente <strong class="highlight-phrase">près d'un quart</strong> du budget des ménages les plus modestes contre seulement <strong class="highlight-figure">14%</strong> pour les plus aisés. En <strong class="highlight-figure">2023 et 2024</strong>, les ménages plus riches ont, à leur tour, été plus impactés par la hausse des taux hypothécaires, suite à la politique de la Banque d'Angleterre dont le taux a culminé en <strong class="highlight-figure">août 2023</strong>.</div>
+          <div class="acc-body">Le marché du gaz naturel liquéfié (GNL) est confronté à des risques significatifs d'instabilité avant la saison hivernale, principalement dus à trois facteurs: la <strong class="highlight-phrase">guerre</strong>, les <strong class="highlight-phrase">conditions météorologiques extrêmes</strong> et les <strong class="highlight-phrase">interruptions d'approvisionnement</strong>. Ces menaces combinées pourraient potentiellement entraîner une <strong class="highlight-phrase">flambée des prix du gaz</strong>, impactant la sécurité énergétique et les coûts pour les consommateurs et les industries à l'échelle mondiale. La prudence est de mise pour les gestionnaires de portefeuilles énergétiques.</div>
         </details>
         
         <details class="acc-item" style="--cat-couleur:#ef4444">
           <summary class="acc-summary">
             <span class="acc-rank">4</span>
-            <span class="acc-region" title="Global">🌐</span>
+            <span class="acc-region" title="Europe">🇪🇺</span>
             <span class="acc-pill" style="background:#ef444422;color:#ef4444">Macro</span>
-            <span class="acc-title">La Banque de réserve de Nouvelle-Zélande relève ses taux</span>
+            <span class="acc-title">L'inflation britannique affecte inégalement les ménages</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">La Banque de réserve de Nouvelle-Zélande (RBNZ) a relevé ses taux directeurs, un événement qui a propulsé le <strong class="highlight-figure">NZD/USD en tête des performances du G10</strong>, avec une progression de <strong class="highlight-figure">1%</strong> pour atteindre <strong class="highlight-figure">0,5753</strong>. La RBNZ a également laissé entendre qu'un <strong class="highlight-phrase">nouveau resserrement monétaire serait possible</strong>, signalant une approche continue de lutte contre l'inflation. Cette décision intervient dans un contexte de faiblesse généralisée du dollar américain.</div>
+          <div class="acc-body">L'inflation au Royaume-Uni a montré une disparité significative, les <strong class="highlight-figure">10% de ménages les plus pauvres</strong> ayant subi une inflation de <strong class="highlight-figure">14,5%</strong> à son pic en <strong class="highlight-figure">octobre 2022</strong>, soit <strong class="highlight-figure">plus de 3 points de pourcentage</strong> au-dessus de l'IPC national. Cette différence s'explique par la part plus importante des dépenses en énergie et alimentation dans leurs budgets. Alors que les paiements hypothécaires ont ensuite impacté les ménages plus aisés en 2023-2024, l'inflation reste au-dessus de l'objectif de <strong class="highlight-figure">2%</strong> de la Banque d'Angleterre.</div>
         </details>
         
-        <details class="acc-item" style="--cat-couleur:#10b981">
+        <details class="acc-item" style="--cat-couleur:#f97316">
           <summary class="acc-summary">
             <span class="acc-rank">5</span>
-            <span class="acc-region" title="Europe">🇪🇺</span>
-            <span class="acc-pill" style="background:#10b98122;color:#10b981">Corporate</span>
-            <span class="acc-title">Fonds de private equity convoitent EasyJet</span>
+            <span class="acc-region" title="Global">🌐</span>
+            <span class="acc-pill" style="background:#f9731622;color:#f97316">IA</span>
+            <span class="acc-title">L'IA influence fortement les marchés actions et obligataires</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">La compagnie aérienne EasyJet Plc fait l'objet d'une bataille d'acquisition entre <strong class="highlight-phrase">deux fonds de private equity américains</strong>, une situation rare pour le secteur aérien. Cette industrie est généralement caractérisée par sa <strong class="highlight-phrase">volatilité et ses faibles marges</strong>, ce qui n'attire pas habituellement les investisseurs financiers. La compétition pour EasyJet souligne un <strong class="highlight-phrase">changement potentiel dans l'appétit pour le risque</strong> des fonds de private equity envers des industries réputées difficiles.</div>
-        </details>
-        
-        <details class="acc-item" style="--cat-couleur:#3b82f6">
-          <summary class="acc-summary">
-            <span class="acc-rank">6</span>
-            <span class="acc-region" title="Asie">🌏</span>
-            <span class="acc-pill" style="background:#3b82f622;color:#3b82f6">Marchés</span>
-            <span class="acc-title">Le Japon pousse ses fonds de pension à acheter des actifs locaux</span>
-            <span class="acc-chevron">▾</span>
-          </summary>
-          <div class="acc-body">Le ministre japonais des Finances, Katayama, a publiquement appelé les fonds de pension du pays à <strong class="highlight-phrase">privilégier l'achat d'actifs nationaux</strong>. Cette déclaration a eu un impact immédiat sur les marchés, propulsant la paire <strong class="highlight-figure">USD/JPY vers 161-162</strong> et entraînant une <strong class="highlight-phrase">forte baisse des rendements</strong> des obligations d'État japonaises (JGB) à long terme. Cette initiative vise à soutenir l'économie locale et à encourager les investissements domestiques, mais elle met également en lumière la pression gouvernementale sur les institutions financières.</div>
+          <div class="acc-body">L'intelligence artificielle a déjà <strong class="highlight-phrase">transformé le marché boursier</strong>, et son impact s'étend désormais aux <strong class="highlight-phrase">marchés obligataires</strong>. La <strong class="highlight-phrase">difficulté à évaluer le risque de crédit</strong> lié au boom de l'IA constitue un défi majeur pour les investisseurs et les régulateurs. L'intégration croissante de l'IA dans l'analyse financière soulève des questions sur la volatilité future et la gestion des risques des portefeuilles, nécessitant une adaptation des méthodes traditionnelles de valorisation.</div>
         </details>
         </div>
     </div>
@@ -631,8 +622,8 @@
       <h2 class="tab-title">📈 Marches</h2>
       
 <div class="sentiment-box">
-  <span class="sentiment-badge sent-up">Haussier</span>
-  <span class="sentiment-raison">Les marchés ont adopté une approche de « buy-the-dip » avec des actions en hausse et un rally obligataire, malgré les tensions géopolitiques. La pression sur les taux et la volatilité semblent s'apaiser temporairement.</span>
+  <span class="sentiment-badge sent-neutral">Neutre</span>
+  <span class="sentiment-raison">Les marchés ont opté pour un rachat sur repli malgré les frappes américaines sur l'Iran, mais le contexte géopolitique reste fragile. Les attentes de hausse de taux de la BCE ont reculé, tandis que le dollar a fléchi.</span>
 </div>
 
       <div class="acc-list">
@@ -641,10 +632,21 @@
             
             <span class="acc-region" title="Global">🌐</span>
             <span class="acc-pill" style="background:#3b82f622;color:#3b82f6">Marchés</span>
-            <span class="acc-title">Marchés en « buy-the-dip » malgré tensions</span>
+            <span class="acc-title">Les marchés adoptent une stratégie de rachat sur repli</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">Les marchés financiers mondiaux ont adopté une posture de <strong class="highlight-phrase">« buy-the-dip »</strong> malgré de nouvelles frappes américaines contre l'Iran, montrant une résilience inattendue. Les actions étaient en hausse, tirées par les <strong class="highlight-phrase">semiconducteurs qui rebondissaient fortement</strong>, et l'obligataire a connu un rally. Les cours du pétrole reculaient d'environ <strong class="highlight-figure">2%</strong> à <strong class="highlight-figure">72$ le baril</strong>.</div>
+          <div class="acc-body">Les marchés boursiers mondiaux ont montré une tendance à l'achat sur repli, avec des actions en hausse et un rally obligataire, malgré les <strong class="highlight-phrase">nouvelles frappes américaines contre l'Iran</strong>. Cet environnement reste cependant fragile et les tensions géopolitiques constituent un risque majeur pour le week-end.</div>
+        </details>
+        
+        <details class="acc-item" style="--cat-couleur:#3b82f6">
+          <summary class="acc-summary">
+            
+            <span class="acc-region" title="Global">🌐</span>
+            <span class="acc-pill" style="background:#3b82f622;color:#3b82f6">Marchés</span>
+            <span class="acc-title">Le pétrole recule après les tensions géopolitiques</span>
+            <span class="acc-chevron">▾</span>
+          </summary>
+          <div class="acc-body">Les cours du pétrole ont reculé d'environ <strong class="highlight-figure">2%</strong>, le Brent s'établissant à <strong class="highlight-figure">72$/baril</strong>, alors que les marchés choisissaient de passer outre les implications immédiates des frappes américaines sur l'Iran. Ce repli suggère une certaine résilience du marché face aux chocs initiaux.</div>
         </details>
         
         <details class="acc-item" style="--cat-couleur:#3b82f6">
@@ -652,43 +654,21 @@
             
             <span class="acc-region" title="Europe">🇪🇺</span>
             <span class="acc-pill" style="background:#3b82f622;color:#3b82f6">Marchés</span>
-            <span class="acc-title">Rally sur les taux EUR et resserrement des spreads</span>
+            <span class="acc-title">Le Stoxx 600 progresse, tiré par la technologie</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">Les taux européens ont connu un rally suite au repli des cours du Brent, dans un mouvement de « bull steepening ». Le rendement du <strong class="highlight-figure">Bund 10 ans</strong> a clôturé en baisse de <strong class="highlight-figure">4 pb</strong> à <strong class="highlight-figure">3,08%</strong>, et le Schatz 2 ans s'est replié de <strong class="highlight-figure">6 pb</strong> à <strong class="highlight-figure">2,65%</strong>. Les <strong class="highlight-phrase">spreads souverains se sont resserrés</strong>, avec une surperformance des courbes OAT et BTP qui ont baissé de <strong class="highlight-figure">3 pb</strong>, atteignant <strong class="highlight-figure">77 pb et 75 pb</strong> respectivement.</div>
+          <div class="acc-body">L'indice Stoxx 600 a progressé de <strong class="highlight-figure">0,8%</strong>, effaçant une partie des corrections récentes. Les <strong class="highlight-phrase">valeurs technologiques</strong> ont mené la hausse avec <strong class="highlight-figure">4%</strong>, suivies par les matériaux et les valeurs financières, tandis que les valeurs énergétiques et défensives ont reculé d'environ <strong class="highlight-figure">1%</strong>.</div>
         </details>
         
         <details class="acc-item" style="--cat-couleur:#3b82f6">
           <summary class="acc-summary">
             
-            <span class="acc-region" title="Global">🌐</span>
+            <span class="acc-region" title="USA">🇺🇸</span>
             <span class="acc-pill" style="background:#3b82f622;color:#3b82f6">Marchés</span>
-            <span class="acc-title">Performances des indices boursiers</span>
+            <span class="acc-title">Le S&P 500 et le Nasdaq en forte hausse</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">Le <strong class="highlight-figure">Stoxx 600</strong> a progressé de <strong class="highlight-figure">0,8%</strong>, effaçant une partie de la correction des derniers jours, principalement grâce aux valeurs technologiques en hausse de <strong class="highlight-figure">4%</strong>. Aux États-Unis, le <strong class="highlight-figure">S&P 500</strong> et le <strong class="highlight-phrase">Nasdaq</strong> ont également progressé de <strong class="highlight-figure">+0,6% et +1,4%</strong> respectivement, portés par le rebond des semiconducteurs.</div>
-        </details>
-        
-        <details class="acc-item" style="--cat-couleur:#3b82f6">
-          <summary class="acc-summary">
-            
-            <span class="acc-region" title="Global">🌐</span>
-            <span class="acc-pill" style="background:#3b82f622;color:#3b82f6">Marchés</span>
-            <span class="acc-title">Volatilité implicite en recul</span>
-            <span class="acc-chevron">▾</span>
-          </summary>
-          <div class="acc-body">La pression géopolitique s'estompe partiellement, bien qu'elle ne soit pas entièrement disparue, se reflétant dans le recul de l'indice <strong class="highlight-figure">VSTOXX de 2,7 points</strong> à <strong class="highlight-figure">17,5</strong>. Cette baisse de la volatilité implicite suggère un certain apaisement des craintes des investisseurs.</div>
-        </details>
-        
-        <details class="acc-item" style="--cat-couleur:#3b82f6">
-          <summary class="acc-summary">
-            
-            <span class="acc-region" title="Global">🌐</span>
-            <span class="acc-pill" style="background:#3b82f622;color:#3b82f6">Marchés</span>
-            <span class="acc-title">Le marché du GNL sous pression avant l'hiver</span>
-            <span class="acc-chevron">▾</span>
-          </summary>
-          <div class="acc-body">Le marché du gaz naturel liquéfié (GNL) pourrait être confronté à des ruptures importantes avant l'hiver en raison de trois facteurs majeurs : la <strong class="highlight-phrase">guerre, les conditions météorologiques imprévues et les pannes</strong> de production. Ces éléments pourraient entraîner une <strong class="highlight-phrase">forte augmentation des prix du gaz</strong>.</div>
+          <div class="acc-body">Le S&P 500 et le Nasdaq ont progressé respectivement de <strong class="highlight-figure">+0,6%</strong> et <strong class="highlight-figure">+1,4%</strong>, principalement portés par un <strong class="highlight-phrase">rebond marqué des semiconducteurs</strong>. Les secteurs de la consommation cyclique et de la finance ont également surperformé.</div>
         </details>
         
         <details class="acc-item" style="--cat-couleur:#3b82f6">
@@ -696,10 +676,10 @@
             
             <span class="acc-region" title="Europe">🇪🇺</span>
             <span class="acc-pill" style="background:#3b82f622;color:#3b82f6">Marchés</span>
-            <span class="acc-title">Attractivité des marchés boursiers européens ignorée</span>
+            <span class="acc-title">Les marchés actions européens sous-évalués mais boudés</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">Bien que l'économie européenne traverse une période difficile, ses marchés boursiers sont considérés comme <strong class="highlight-phrase">sous-évalués et potentiellement très attractifs</strong>. Cependant, les investisseurs internationaux restent <strong class="highlight-phrase">largement désintéressés</strong> par les actions européennes.</div>
+          <div class="acc-body">L'économie européenne est jugée en difficulté, mais ses marchés actions sont considérés comme une <strong class="highlight-phrase">aubaine («a steal»)</strong>. Cependant, les <strong class="highlight-phrase">investisseurs internationaux</strong> montrent toujours un <strong class="highlight-phrase">manque d'intérêt</strong>, malgré les valorisations attractives.</div>
         </details>
         
         <details class="acc-item" style="--cat-couleur:#3b82f6">
@@ -707,32 +687,10 @@
             
             <span class="acc-region" title="Global">🌐</span>
             <span class="acc-pill" style="background:#3b82f622;color:#3b82f6">Marchés</span>
-            <span class="acc-title">Le DXY recule, divergence FOMC</span>
+            <span class="acc-title">La volatilité implicite recule mais reste présente</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">L'indice du dollar américain (DXY) a reculé à <strong class="highlight-figure">100,93</strong>, suite à la publication du compte rendu du FOMC qui a révélé des <strong class="highlight-phrase">divergences au sein du comité</strong> sur le calendrier d'une éventuelle hausse des taux, certains membres ayant même envisagé une action immédiate.</div>
-        </details>
-        
-        <details class="acc-item" style="--cat-couleur:#3b82f6">
-          <summary class="acc-summary">
-            
-            <span class="acc-region" title="Global">🌐</span>
-            <span class="acc-pill" style="background:#3b82f622;color:#3b82f6">Marchés</span>
-            <span class="acc-title">NZD/USD meilleure performance du G10</span>
-            <span class="acc-chevron">▾</span>
-          </summary>
-          <div class="acc-body">Le <strong class="highlight-phrase">NZD/USD</strong> a enregistré la meilleure performance du G10, en progressant de <strong class="highlight-figure">1%</strong> pour atteindre <strong class="highlight-figure">0,5753</strong>, après que la Banque de réserve de Nouvelle-Zélande (RBNZ) ait relevé ses taux et évoqué de possibles futurs resserrements.</div>
-        </details>
-        
-        <details class="acc-item" style="--cat-couleur:#3b82f6">
-          <summary class="acc-summary">
-            
-            <span class="acc-region" title="Global">🌐</span>
-            <span class="acc-pill" style="background:#3b82f622;color:#3b82f6">Marchés</span>
-            <span class="acc-title">EUR/USD et devises à bêta élevé profitent du regain de risque</span>
-            <span class="acc-chevron">▾</span>
-          </summary>
-          <div class="acc-body">L'<strong class="highlight-phrase">EUR/USD</strong> s'est redressé de <strong class="highlight-figure">0,17%</strong> à <strong class="highlight-figure">1,1433</strong>, profitant de la faiblesse généralisée du dollar. Les devises à bêta élevé, telles que l'USD/NOK et l'USD/SEK, ont également bénéficié d'un <strong class="highlight-phrase">regain d'appétit pour le risque</strong>, reculant respectivement de <strong class="highlight-figure">0,55%</strong> à <strong class="highlight-figure">9,7055</strong> et de <strong class="highlight-figure">0,46%</strong> à <strong class="highlight-figure">9,6473</strong>.</div>
+          <div class="acc-body">L'indice VSTOXX, mesurant la volatilité implicite, a reculé de <strong class="highlight-figure">2,7 points</strong> pour s'établir à <strong class="highlight-figure">17,5</strong>. Cela indique une atténuation de la pression géopolitique, bien que le risque ne soit pas complètement disparu.</div>
         </details>
         </div>
     </div>
@@ -746,10 +704,10 @@
             
             <span class="acc-region" title="Europe">🇪🇺</span>
             <span class="acc-pill" style="background:#ef444422;color:#ef4444">Macro</span>
-            <span class="acc-title">L'inflation britannique frappe inégalement les ménages</span>
+            <span class="acc-title">Les taux EUR rallyent et les anticipations de la BCE baissent</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">Au pic de la crise du coût de la vie en <strong class="highlight-figure">octobre 2022</strong>, les <strong class="highlight-figure">10% de ménages les plus pauvres</strong> du Royaume-Uni ont fait face à une inflation de <strong class="highlight-figure">14,5%</strong>, soit <strong class="highlight-phrase">trois points de pourcentage au-dessus</strong> de l'IPC global de <strong class="highlight-figure">11,1%</strong>. Cette disparité s'explique par la forte proportion des dépenses en alimentation et énergie (près d'un quart) dans leur budget. En <strong class="highlight-figure">2023 et 2024</strong>, les ménages plus aisés ont vu leur inflation augmenter en raison des <strong class="highlight-phrase">paiements d'intérêts hypothécaires</strong>, après le pic du taux directeur de la Banque d'Angleterre en <strong class="highlight-figure">août 2023</strong>.</div>
+          <div class="acc-body">Un rally sur les taux EUR a été observé, avec le rendement du Bund 10 ans en baisse de <strong class="highlight-figure">4 pb</strong> à <strong class="highlight-figure">3,08%</strong> et le Schatz 2 ans replié de <strong class="highlight-figure">6 pb</strong> à <strong class="highlight-figure">2,65%</strong>. Les anticipations de hausse de taux de la BCE pour le reste de l'année ont reculé de <strong class="highlight-figure">40 pb à 33 pb</strong>.</div>
         </details>
         
         <details class="acc-item" style="--cat-couleur:#ef4444">
@@ -757,21 +715,10 @@
             
             <span class="acc-region" title="Global">🌐</span>
             <span class="acc-pill" style="background:#ef444422;color:#ef4444">Macro</span>
-            <span class="acc-title">Coût du vieillissement de la société réévalué</span>
+            <span class="acc-title">Les minutes du FOMC révèlent des divergences sur les taux</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">Une nouvelle analyse suggère qu'une société vieillissante pourrait ne pas entraîner des coûts aussi élevés que les prévisions pessimistes l'avaient anticipé. La vision dystopique d'un futur lourdement impacté par les dépenses liées au vieillissement de la population pourrait <strong class="highlight-phrase">ne pas se concrétiser entièrement</strong>, offrant une perspective plus nuancée sur les défis démographiques mondiaux.</div>
-        </details>
-        
-        <details class="acc-item" style="--cat-couleur:#ef4444">
-          <summary class="acc-summary">
-            
-            <span class="acc-region" title="Global">🌐</span>
-            <span class="acc-pill" style="background:#ef444422;color:#ef4444">Macro</span>
-            <span class="acc-title">Divergences au sein du FOMC sur les taux</span>
-            <span class="acc-chevron">▾</span>
-          </summary>
-          <div class="acc-body">Le compte rendu du FOMC a révélé des <strong class="highlight-phrase">divergences significatives</strong> au sein du comité concernant le calendrier d'une éventuelle hausse des taux d'intérêt. Certains membres ont même envisagé une <strong class="highlight-phrase">action immédiate en juin</strong>, soulignant l'incertitude quant à l'orientation future de la politique monétaire de la Réserve fédérale.</div>
+          <div class="acc-body">Le compte rendu du FOMC a mis en évidence des <strong class="highlight-phrase">divergences au sein du comité</strong> concernant le calendrier d'une éventuelle hausse des taux, avec certains membres ayant même envisagé une <strong class="highlight-phrase">action immédiate en juin</strong>. Cela souligne l'incertitude quant à la trajectoire future de la politique monétaire américaine.</div>
         </details>
         
         <details class="acc-item" style="--cat-couleur:#ef4444">
@@ -779,10 +726,32 @@
             
             <span class="acc-region" title="Europe">🇪🇺</span>
             <span class="acc-pill" style="background:#ef444422;color:#ef4444">Macro</span>
-            <span class="acc-title">Anticipations de hausse des taux de la BCE en recul</span>
+            <span class="acc-title">La BCE anticipe une inflation au-dessus de l'objectif l'an prochain</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">Les anticipations de hausse des taux de la Banque Centrale Européenne (BCE) pour le reste de l'année ont <strong class="highlight-figure">reculé, passant de 40 pb à 33 pb</strong>. Bien que le compte rendu de la BCE ait signalé une inflation au-dessus de l'objectif l'année prochaine, le repli des cours du Brent a contribué à un assouplissement des prévisions de resserrement monétaire.</div>
+          <div class="acc-body">Le compte rendu de la BCE a signalé que l'inflation devrait rester <strong class="highlight-phrase">au-dessus de l'objectif</strong> l'année prochaine, malgré un repli généralisé du dollar. Cette perspective pourrait influencer les futures décisions de politique monétaire de la Banque Centrale Européenne.</div>
+        </details>
+        
+        <details class="acc-item" style="--cat-couleur:#ef4444">
+          <summary class="acc-summary">
+            
+            <span class="acc-region" title="Asie">🌏</span>
+            <span class="acc-pill" style="background:#ef444422;color:#ef4444">Macro</span>
+            <span class="acc-title">Le ministre japonais exhorte les fonds de pension à acheter des actifs nationaux</span>
+            <span class="acc-chevron">▾</span>
+          </summary>
+          <div class="acc-body">Le ministre des Finances japonais, Katayama, a appelé les <strong class="highlight-phrase">fonds de pension</strong> à <strong class="highlight-phrase">acheter des actifs nationaux</strong>, ce qui a entraîné une forte baisse des rendements des JGB à long terme. Cette intervention vise à soutenir le marché domestique et l'économie japonaise.</div>
+        </details>
+        
+        <details class="acc-item" style="--cat-couleur:#ef4444">
+          <summary class="acc-summary">
+            
+            <span class="acc-region" title="Global">🌐</span>
+            <span class="acc-pill" style="background:#ef444422;color:#ef4444">Macro</span>
+            <span class="acc-title">Une société vieillissante ne serait pas trop coûteuse</span>
+            <span class="acc-chevron">▾</span>
+          </summary>
+          <div class="acc-body">Une nouvelle analyse suggère qu'une société vieillissante pourrait <strong class="highlight-phrase">ne pas engendrer des coûts excessifs</strong> comme souvent craint, potentiellement réfutant une vision dystopique de l'avenir. Cela pourrait avoir des implications sur la planification économique et sociale à long terme.</div>
         </details>
         </div>
     </div>
@@ -796,10 +765,10 @@
             
             <span class="acc-region" title="Europe">🇪🇺</span>
             <span class="acc-pill" style="background:#10b98122;color:#10b981">Corporate</span>
-            <span class="acc-title">Bataille entre fonds PE pour EasyJet</span>
+            <span class="acc-title">Bataille de fonds américains pour l'acquisition d'EasyJet</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">La compagnie aérienne <strong class="highlight-phrase">EasyJet Plc</strong> est au centre d'une bataille d'acquisition impliquant <strong class="highlight-phrase">deux fonds de private equity américains</strong>, une situation rare pour une industrie aérienne connue pour sa volatilité et ses marges serrées. Cet intérêt inattendu de la part de fonds financiers pourrait signaler une <strong class="highlight-phrase">réévaluation du potentiel de croissance</strong> ou de restructuration dans le secteur.</div>
+          <div class="acc-body">Deux <strong class="highlight-phrase">fonds de private equity américains</strong> se disputent le rachat d'EasyJet Plc, ce qui est <strong class="highlight-phrase">remarquable</strong> compte tenu de la volatilité et des faibles marges du secteur aérien. Cette compétition met en lumière un intérêt croissant des investisseurs financiers pour les compagnies aériennes.</div>
         </details>
         
         <details class="acc-item" style="--cat-couleur:#10b981">
@@ -807,10 +776,21 @@
             
             <span class="acc-region" title="USA">🇺🇸</span>
             <span class="acc-pill" style="background:#10b98122;color:#10b981">Corporate</span>
-            <span class="acc-title">Asha Sharma nouvelle dirigeante d'Xbox</span>
+            <span class="acc-title">Asha Sharma prend la tête de la division Xbox de Microsoft</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body"><strong class="highlight-phrase">Asha Sharma a été nommée nouvelle directrice de la division Xbox de Microsoft</strong>. En tant qu'outsider et nouvelle PDG, elle est confrontée à des décisions difficiles concernant l'emploi et l'avenir de cette branche de l'industrie du jeu vidéo. Sa nomination suscite de nombreuses attentes quant à l'orientation stratégique de Xbox.</div>
+          <div class="acc-body"><strong class="highlight-phrase">Asha Sharma</strong> a été nommée nouvelle directrice de la division Xbox de Microsoft. Elle est confrontée à des <strong class="highlight-phrase">décisions difficiles</strong> concernant l'emploi et l'orientation future de cette branche de l'industrie du jeu vidéo, notamment face à l'évolution rapide du marché.</div>
+        </details>
+        
+        <details class="acc-item" style="--cat-couleur:#10b981">
+          <summary class="acc-summary">
+            
+            <span class="acc-region" title="USA">🇺🇸</span>
+            <span class="acc-pill" style="background:#10b98122;color:#10b981">Corporate</span>
+            <span class="acc-title">Les revenus de Donald Trump soulèvent des questions éthiques</span>
+            <span class="acc-chevron">▾</span>
+          </summary>
+          <div class="acc-body">Donald Trump a déclaré avoir gagné <strong class="highlight-figure">plus de 2,2 milliards de dollars</strong> depuis son retour au pouvoir, ce qui suscite des questions sur l'enrichissement personnel des figures politiques. Des parallèles sont établis avec Robert Walpole et Silvio Berlusconi, interrogeant la perception des électeurs face à ces pratiques.</div>
         </details>
         </div>
     </div>
@@ -822,23 +802,23 @@
         <details class="acc-item" style="--cat-couleur:#8b5cf6">
           <summary class="acc-summary">
             
-            <span class="acc-region" title="USA">🇺🇸</span>
-            <span class="acc-pill" style="background:#8b5cf622;color:#8b5cf6">Tech</span>
-            <span class="acc-title">Apple poursuit OpenAI en justice</span>
-            <span class="acc-chevron">▾</span>
-          </summary>
-          <div class="acc-body"><strong class="highlight-phrase">Apple a engagé des poursuites judiciaires contre OpenAI</strong>, la société d'intelligence artificielle à l'origine de ChatGPT. Cette action légale est une étape majeure, révélant une potentielle confrontation sur des questions de concurrence, de propriété intellectuelle ou d'utilisation des données entre deux acteurs technologiques de premier plan.</div>
-        </details>
-        
-        <details class="acc-item" style="--cat-couleur:#8b5cf6">
-          <summary class="acc-summary">
-            
             <span class="acc-region" title="Asie">🌏</span>
             <span class="acc-pill" style="background:#8b5cf622;color:#8b5cf6">Tech</span>
             <span class="acc-title">La Chine peine à financer ses ambitions technologiques</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">La Chine pourrait rencontrer des difficultés à financer les ambitions technologiques du président Xi Jinping, et ce, malgré un <strong class="highlight-phrase">retour en force des marchés de capitaux</strong>. Les défis liés à l'investissement massif dans la tech pourraient freiner les objectifs du pays en matière d'innovation et d'autonomie technologique.</div>
+          <div class="acc-body">La Chine pourrait rencontrer des <strong class="highlight-phrase">difficultés à financer les ambitions technologiques</strong> de Xi Jinping, même avec un retour des marchés de capitaux. Cette contrainte financière pourrait ralentir les progrès du pays dans des secteurs clés et sa quête d'autosuffisance technologique.</div>
+        </details>
+        
+        <details class="acc-item" style="--cat-couleur:#8b5cf6">
+          <summary class="acc-summary">
+            
+            <span class="acc-region" title="Global">🌐</span>
+            <span class="acc-pill" style="background:#8b5cf622;color:#8b5cf6">Tech</span>
+            <span class="acc-title">Le code généré par l'IA engorge l'internet</span>
+            <span class="acc-chevron">▾</span>
+          </summary>
+          <div class="acc-body">Le code produit par l'intelligence artificielle est en train de <strong class="highlight-phrase">saturer l'internet</strong>, posant des défis en termes de gestion des infrastructures et de qualité du contenu en ligne. Ce phénomène souligne l'impact croissant de l'IA sur l'écosystème numérique.</div>
         </details>
         
         <details class="acc-item" style="--cat-couleur:#f97316">
@@ -846,21 +826,10 @@
             
             <span class="acc-region" title="Global">🌐</span>
             <span class="acc-pill" style="background:#f9731622;color:#f97316">IA</span>
-            <span class="acc-title">L'IA dans le marché boursier et obligataire</span>
+            <span class="acc-title">L'IA pourrait simplifier la régulation financière</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">L'intelligence artificielle a déjà <strong class="highlight-phrase">transformé le marché boursier</strong>, et les analyses indiquent que le marché obligataire est le prochain sur la liste. Cependant, <strong class="highlight-phrase">évaluer le risque de crédit</strong> dans le contexte de l'essor de l'IA reste une tâche complexe et difficile pour les investisseurs et analystes financiers.</div>
-        </details>
-        
-        <details class="acc-item" style="--cat-couleur:#f97316">
-          <summary class="acc-summary">
-            
-            <span class="acc-region" title="Global">🌐</span>
-            <span class="acc-pill" style="background:#f9731622;color:#f97316">IA</span>
-            <span class="acc-title">L'IA comme outil de régulation financière</span>
-            <span class="acc-chevron">▾</span>
-          </summary>
-          <div class="acc-body">Les régulateurs financiers envisagent d'utiliser l'intelligence artificielle comme un <strong class="highlight-phrase">« briseur de lenteur »</strong> (sludge buster) dans leur quête de réduction de la bureaucratie. L'intégration de l'IA pourrait simplifier et accélérer les processus réglementaires, potentiellement conduisant à une <strong class="highlight-phrase">meilleure efficacité et une réduction des coûts</strong> pour l'industrie.</div>
+          <div class="acc-body">Les régulateurs envisagent d'utiliser l'intelligence artificielle pour <strong class="highlight-phrase">réduire la bureaucratie et les réglementations excessives</strong> dans le secteur financier. L'IA pourrait ainsi devenir un outil clé pour moderniser et fluidifier le cadre réglementaire, en optimisant les processus d'audit et de conformité.</div>
         </details>
         </div>
     </div>
@@ -872,12 +841,12 @@
         <details class="acc-item" style="--cat-couleur:#f59e0b">
           <summary class="acc-summary">
             
-            <span class="acc-region" title="Global">🌐</span>
+            <span class="acc-region" title="USA">🇺🇸</span>
             <span class="acc-pill" style="background:#f59e0b22;color:#f59e0b">Géopolitique</span>
-            <span class="acc-title">Tensions escaladent entre États-Unis et Iran</span>
+            <span class="acc-title">Trump menace l'Iran d'une «décimation»</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">Les tensions géopolitiques s'intensifient avec la menace du président américain Donald Trump de <strong class="highlight-phrase">« décimer » l'Iran</strong>, et l'exigence des États-Unis à Téhéran de déclarer le détroit d'Ormuz ouvert au trafic maritime. Cette rhétorique agressive et les nouvelles frappes américaines dans la région suscitent des inquiétudes quant à une possible escalade militaire. Étonnamment, les marchés financiers ont réagi avec un mode <strong class="highlight-phrase">« buy-the-dip »</strong>, avec les actions en hausse et les cours du pétrole reculant d'environ <strong class="highlight-figure">2%</strong> à <strong class="highlight-figure">72$ le baril</strong>. Le rally obligataire indique que les investisseurs digèrent le risque tout en restant attentifs à un environnement qualifié de « fragile ».</div>
+          <div class="acc-body">Le président Trump a émis une déclaration forte, menaçant de «décimer» l'Iran, une rhétorique qui fait suite à des frappes américaines antérieures et contribue à un climat géopolitique déjà très tendu. Cette intensification des menaces entre les deux nations pourrait avoir des conséquences directes sur la stabilité régionale, notamment pour les approvisionnements en pétrole, et potentiellement déclencher des réactions sur les marchés mondiaux des matières premières. Les investisseurs sont invités à suivre de près les développements, car une escalade pourrait perturber les chaînes d'approvisionnement et la confiance économique à l'échelle internationale.</div>
         </details>
         
         <details class="acc-item" style="--cat-couleur:#8b5cf6">
@@ -885,32 +854,10 @@
             
             <span class="acc-region" title="USA">🇺🇸</span>
             <span class="acc-pill" style="background:#8b5cf622;color:#8b5cf6">Tech</span>
-            <span class="acc-title">Apple intente un procès à OpenAI</span>
+            <span class="acc-title">Apple poursuit en justice OpenAI</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body"><strong class="highlight-phrase">Apple a intenté une action en justice contre OpenAI</strong>, la société derrière le populaire modèle d'intelligence artificielle ChatGPT. Cette décision marque une confrontation majeure entre deux des entreprises technologiques les plus influentes au monde, avec des implications potentielles pour l'avenir du développement de l'IA. Bien que les détails de la plainte ne soient pas encore publics, une telle action pourrait concerner des questions de <strong class="highlight-phrase">concurrence déloyale, de propriété intellectuelle ou d'utilisation des données</strong>. L'issue de ce procès pourrait redéfinir les relations entre les géants de la tech et les innovateurs de l'IA, impactant le paysage réglementaire et l'accès aux technologies émergentes.</div>
-        </details>
-        
-        <details class="acc-item" style="--cat-couleur:#ef4444">
-          <summary class="acc-summary">
-            
-            <span class="acc-region" title="Europe">🇪🇺</span>
-            <span class="acc-pill" style="background:#ef444422;color:#ef4444">Macro</span>
-            <span class="acc-title">L'inflation britannique révèle des inégalités persistantes</span>
-            <span class="acc-chevron">▾</span>
-          </summary>
-          <div class="acc-body">Une étude récente du Bureau des Statistiques Nationales du Royaume-Uni met en lumière la nature inégale de l'inflation, soulignant que les <strong class="highlight-phrase">chiffres globaux masquent une réalité divergente</strong> pour les ménages. Au paroxysme de la crise du coût de la vie en <strong class="highlight-figure">octobre 2022</strong>, les <strong class="highlight-figure">10% de ménages les plus modestes</strong> ont subi une inflation de <strong class="highlight-figure">14,5%</strong>, soit une augmentation de <strong class="highlight-phrase">plus de trois points de pourcentage</strong> par rapport à l'indice des prix à la consommation (IPC) de <strong class="highlight-figure">11,1%</strong> utilisé par les décideurs politiques. Cette différence s'explique par la composition de leurs budgets, où l'alimentation et l'énergie représentent <strong class="highlight-phrase">près d'un quart</strong> des dépenses des ménages pauvres, contre seulement <strong class="highlight-figure">14%</strong> pour les plus riches. Par la suite, en <strong class="highlight-figure">2023 et 2024</strong>, les ménages plus aisés ont vu leur inflation augmenter en raison de la hausse des paiements d'intérêts hypothécaires, suite à la politique de la Banque d'Angleterre dont le taux a culminé en <strong class="highlight-figure">août 2023</strong>. Cette dynamique souligne la nécessité pour les décideurs de considérer l'impact différencié de la politique monétaire et des chocs énergétiques.</div>
-        </details>
-        
-        <details class="acc-item" style="--cat-couleur:#ef4444">
-          <summary class="acc-summary">
-            
-            <span class="acc-region" title="Global">🌐</span>
-            <span class="acc-pill" style="background:#ef444422;color:#ef4444">Macro</span>
-            <span class="acc-title">La RBNZ resserre sa politique monétaire</span>
-            <span class="acc-chevron">▾</span>
-          </summary>
-          <div class="acc-body">La Banque de réserve de Nouvelle-Zélande (RBNZ) a annoncé un <strong class="highlight-phrase">relèvement de ses taux directeurs</strong>, une décision qui a immédiatement eu des répercussions sur le marché des changes. Le <strong class="highlight-figure">NZD/USD a signé la meilleure performance du G10</strong>, grimpant de <strong class="highlight-figure">1%</strong> pour s'établir à <strong class="highlight-figure">0,5753</strong>, soulignant la confiance des investisseurs dans l'action de la banque centrale. De plus, la RBNZ a explicitement indiqué qu'un <strong class="highlight-phrase">nouveau resserrement monétaire était possible</strong>, signalant une <strong class="highlight-phrase">volonté ferme de contenir l'inflation</strong> et d'ancrer les attentes. Cette approche proactive contraste avec les hésitations observées dans d'autres banques centrales, ce qui pourrait positionner la Nouvelle-Zélande sur une trajectoire de normalisation monétaire plus agressive.</div>
+          <div class="acc-body">Apple a intenté un procès contre OpenAI, la startup à l'origine de ChatGPT, marquant une étape significative dans la compétition acharnée pour la domination de l'intelligence artificielle. Bien que les motifs précis de la plainte n'aient pas été entièrement divulgués, cette action suggère des désaccords majeurs sur les brevets, les données ou la concurrence, des enjeux cruciaux dans le développement rapide de l'IA. Cette bataille juridique pourrait redéfinir les frontières entre les géants technologiques et les startups innovantes, influençant l'avenir des innovations et des plateformes d'IA.</div>
         </details>
         
         <details class="acc-item" style="--cat-couleur:#3b82f6">
@@ -918,32 +865,142 @@
             
             <span class="acc-region" title="Global">🌐</span>
             <span class="acc-pill" style="background:#3b82f622;color:#3b82f6">Marchés</span>
-            <span class="acc-title">EasyJet, cible inattendue des fonds de private equity</span>
+            <span class="acc-title">Risques élevés pour le marché du GNL avant l'hiver</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">EasyJet Plc, la célèbre compagnie aérienne à bas coûts, est devenue l'objet d'une intense compétition pour son acquisition entre <strong class="highlight-phrase">deux fonds de private equity américains</strong>. Cette situation est considérée comme atypique, car le secteur des compagnies aériennes est traditionnellement jugé <strong class="highlight-phrase">peu attractif pour les investisseurs financiers</strong> en raison de sa volatilité inhérente, de ses marges opérationnelles faibles et de sa sensibilité aux chocs externes. L'intérêt de ces fonds pour EasyJet pourrait indiquer une <strong class="highlight-phrase">évolution de leur stratégie d'investissement</strong>, cherchant à capitaliser sur une restructuration potentielle ou une revalorisation future du secteur post-pandémie. Les implications de cette bataille pourraient inclure des changements stratégiques majeurs pour la compagnie, voire une consolidation accrue dans l'industrie aérienne européenne.</div>
+          <div class="acc-body">Le marché mondial du gaz naturel liquéfié (GNL) est confronté à une conjonction de risques significatifs qui pourraient fortement perturber l'approvisionnement et les prix avant l'hiver. Les principaux facteurs identifiés incluent l'<strong class="highlight-phrase">escalade des conflits géopolitiques</strong>, la survenue d'<strong class="highlight-phrase">événements météorologiques extrêmes</strong> et des <strong class="highlight-phrase">pannes inattendues</strong> dans les infrastructures de production ou de transport. Ces menaces pourraient collectivement entraîner une <strong class="highlight-phrase">forte augmentation des prix du gaz</strong>, créant des défis majeurs pour la sécurité énergétique des nations consommatrices et alourdissant le fardeau des coûts pour les ménages et les industries.</div>
+        </details>
+        
+        <details class="acc-item" style="--cat-couleur:#ef4444">
+          <summary class="acc-summary">
+            
+            <span class="acc-region" title="Europe">🇪🇺</span>
+            <span class="acc-pill" style="background:#ef444422;color:#ef4444">Macro</span>
+            <span class="acc-title">L'inflation britannique affecte inégalement les ménages</span>
+            <span class="acc-chevron">▾</span>
+          </summary>
+          <div class="acc-body">Au Royaume-Uni, l'inflation a révélé un impact fortement inégalitaire selon les niveaux de revenus, atteignant un pic de <strong class="highlight-figure">14,5%</strong> pour les <strong class="highlight-figure">10% de ménages les plus pauvres</strong> en <strong class="highlight-figure">octobre 2022</strong>, soit <strong class="highlight-phrase">plus de trois points de pourcentage</strong> au-dessus de l'indice des prix à la consommation (IPC) national de <strong class="highlight-figure">11,1%</strong>. Cette disparité s'explique principalement par la part prépondérante des dépenses en alimentation et énergie (près d'un quart) dans les budgets des ménages à faibles revenus, contre seulement <strong class="highlight-figure">14%</strong> pour les plus aisés. Par la suite, la politique de la Banque d'Angleterre a entraîné une hausse des paiements hypothécaires, affectant davantage les ménages plus riches en <strong class="highlight-figure">2023 et 2024</strong>, mais l'inflation reste globalement au-dessus de l'objectif de <strong class="highlight-figure">2%</strong>.</div>
+        </details>
+        
+        <details class="acc-item" style="--cat-couleur:#f97316">
+          <summary class="acc-summary">
+            
+            <span class="acc-region" title="Global">🌐</span>
+            <span class="acc-pill" style="background:#f9731622;color:#f97316">IA</span>
+            <span class="acc-title">L'IA influence fortement les marchés actions et obligataires</span>
+            <span class="acc-chevron">▾</span>
+          </summary>
+          <div class="acc-body">L'intelligence artificielle a déjà considérablement <strong class="highlight-phrase">transformé la dynamique du marché boursier</strong>, et son influence est désormais en passe de s'étendre aux <strong class="highlight-phrase">marchés obligataires</strong>. Les experts soulignent la <strong class="highlight-phrase">difficulté croissante à évaluer le risque de crédit</strong> associé aux entreprises du secteur de l'IA et celles impactées par cette technologie, un défi qui complique les décisions d'investissement traditionnelles. Cette adoption généralisée de l'IA dans l'analyse et les stratégies de trading pourrait modifier fondamentalement la liquidité, la volatilité et les modèles de valorisation des actifs, exigeant une nouvelle approche de la part des investisseurs et des régulateurs pour comprendre et gérer ces évolutions.</div>
         </details>
         
         <details class="acc-item" style="--cat-couleur:#3b82f6">
+          <summary class="acc-summary">
+            
+            <span class="acc-region" title="Global">🌐</span>
+            <span class="acc-pill" style="background:#3b82f622;color:#3b82f6">Marchés</span>
+            <span class="acc-title">Les marchés adoptent une stratégie de rachat sur repli</span>
+            <span class="acc-chevron">▾</span>
+          </summary>
+          <div class="acc-body">Malgré les <strong class="highlight-phrase">nouvelles frappes américaines contre l'Iran</strong>, les marchés financiers mondiaux ont montré une tendance au «buy-the-dip» (rachat sur repli), avec une hausse des actions – notamment tirées par les semiconducteurs qui ont fortement rebondi – et un rally obligataire. Les cours du pétrole ont également reculé, signifiant une digestion des chocs immédiats. Cependant, Natixis souligne que cet environnement reste <strong class="highlight-phrase">fragile</strong> et que la situation géopolitique constituera probablement le <strong class="highlight-phrase">risque majeur du week-end</strong>. Cette résilience initiale des marchés face aux tensions géopolitiques est donc à prendre avec prudence.</div>
+        </details>
+        
+        <details class="acc-item" style="--cat-couleur:#3b82f6">
+          <summary class="acc-summary">
+            
+            <span class="acc-region" title="Global">🌐</span>
+            <span class="acc-pill" style="background:#3b82f622;color:#3b82f6">Marchés</span>
+            <span class="acc-title">Le pétrole recule après les tensions géopolitiques</span>
+            <span class="acc-chevron">▾</span>
+          </summary>
+          <div class="acc-body">Les cours du pétrole ont enregistré une baisse d'environ <strong class="highlight-figure">2%</strong>, avec le baril de Brent s'échangeant autour de <strong class="highlight-figure">72$</strong>, malgré le contexte de tensions accrues et de frappes américaines contre l'Iran. Ce repli inattendu des prix du brut, alors qu'une escalade pourrait normalement les faire grimper, indique que les marchés choisissent pour l'instant de <strong class="highlight-phrase">passer outre les nouvelles géopolitiques</strong> pour un mouvement de rachat sur les actifs plus risqués. Cela pourrait refléter une perception d'un risque d'approvisionnement non immédiat ou une prise de bénéfices.</div>
+        </details>
+        
+        <details class="acc-item" style="--cat-couleur:#3b82f6">
+          <summary class="acc-summary">
+            
+            <span class="acc-region" title="Europe">🇪🇺</span>
+            <span class="acc-pill" style="background:#3b82f622;color:#3b82f6">Marchés</span>
+            <span class="acc-title">Le Stoxx 600 progresse, tiré par la technologie</span>
+            <span class="acc-chevron">▾</span>
+          </summary>
+          <div class="acc-body">L'indice paneuropéen Stoxx 600 a enregistré une progression de <strong class="highlight-figure">0,8%</strong>, réussissant à effacer une partie des corrections subies ces derniers jours. Cette performance a été largement <strong class="highlight-phrase">menée par les valeurs technologiques</strong>, qui ont bondi de <strong class="highlight-figure">4%</strong>, signalant un regain de confiance dans ce secteur après des périodes de pression. Les matériaux et les valeurs financières ont également contribué positivement, tandis que les valeurs énergétiques et défensives ont reculé d'environ <strong class="highlight-figure">1%</strong>, dans un contexte d'appétit pour le risque retrouvé.</div>
+        </details>
+        
+        <details class="acc-item" style="--cat-couleur:#3b82f6">
+          <summary class="acc-summary">
+            
+            <span class="acc-region" title="USA">🇺🇸</span>
+            <span class="acc-pill" style="background:#3b82f622;color:#3b82f6">Marchés</span>
+            <span class="acc-title">Le S&P 500 et le Nasdaq en forte hausse</span>
+            <span class="acc-chevron">▾</span>
+          </summary>
+          <div class="acc-body">Les principaux indices boursiers américains, le S&P 500 et le Nasdaq, ont clôturé en nette progression, affichant respectivement des hausses de <strong class="highlight-figure">+0,6%</strong> et <strong class="highlight-figure">+1,4%</strong>. Cette performance a été principalement <strong class="highlight-phrase">portée par un rebond significatif des valeurs des semiconducteurs</strong>, un secteur clé et volatil de la technologie. Les valeurs de la consommation cyclique et les financières ont également surperformé, reflétant un regain d'appétit pour le risque chez les investisseurs américains.</div>
+        </details>
+        
+        <details class="acc-item" style="--cat-couleur:#3b82f6">
+          <summary class="acc-summary">
+            
+            <span class="acc-region" title="Europe">🇪🇺</span>
+            <span class="acc-pill" style="background:#3b82f622;color:#3b82f6">Marchés</span>
+            <span class="acc-title">Les marchés actions européens sous-évalués mais boudés</span>
+            <span class="acc-chevron">▾</span>
+          </summary>
+          <div class="acc-body">Malgré une économie européenne jugée en difficulté, les <strong class="highlight-phrase">marchés boursiers du continent sont considérés comme fortement sous-évalués</strong> et offrent des opportunités d'investissement, un «steal» selon The Economist. Cependant, cette valorisation attrayante ne parvient toujours pas à <strong class="highlight-phrase">susciter l'intérêt des investisseurs internationaux</strong>, qui restent à l'écart. Cette situation souligne un manque de confiance persistant dans les perspectives économiques de la région, malgré des fondamentaux de valorisation potentiellement favorables.</div>
+        </details>
+        
+        <details class="acc-item" style="--cat-couleur:#3b82f6">
+          <summary class="acc-summary">
+            
+            <span class="acc-region" title="Global">🌐</span>
+            <span class="acc-pill" style="background:#3b82f622;color:#3b82f6">Marchés</span>
+            <span class="acc-title">La volatilité implicite recule mais reste présente</span>
+            <span class="acc-chevron">▾</span>
+          </summary>
+          <div class="acc-body">L'indice VSTOXX, qui mesure la volatilité implicite sur les marchés européens, a reculé de <strong class="highlight-figure">2,7 points</strong> pour s'établir à <strong class="highlight-figure">17,5</strong>. Cette baisse indique une certaine dissipation de la pression géopolitique immédiate, suggérant un apaisement des craintes à court terme chez les investisseurs. Néanmoins, il est précisé que le risque et l'incertitude ne sont pas complètement disparus, maintenant une vigilance de marché face aux événements futurs.</div>
+        </details>
+        
+        <details class="acc-item" style="--cat-couleur:#ef4444">
+          <summary class="acc-summary">
+            
+            <span class="acc-region" title="Europe">🇪🇺</span>
+            <span class="acc-pill" style="background:#ef444422;color:#ef4444">Macro</span>
+            <span class="acc-title">Les taux EUR rallyent et les anticipations de la BCE baissent</span>
+            <span class="acc-chevron">▾</span>
+          </summary>
+          <div class="acc-body">Le marché obligataire européen a connu un rally, se traduisant par un mouvement de «bull steepening» où les taux longs baissent moins vite que les courts. Le rendement du Bund allemand à 10 ans a clôturé en baisse de <strong class="highlight-figure">4 points de base (pb)</strong> à <strong class="highlight-figure">3,08%</strong>, tandis que le Schatz à 2 ans s'est replié de <strong class="highlight-figure">6 pb</strong> à <strong class="highlight-figure">2,65%</strong>. Parallèlement, les anticipations de hausses de taux de la Banque Centrale Européenne (BCE) pour le reste de l'année ont significativement reculé, passant de <strong class="highlight-figure">40 pb à 33 pb</strong>, reflétant une perspective plus dovish.</div>
+        </details>
+        
+        <details class="acc-item" style="--cat-couleur:#ef4444">
+          <summary class="acc-summary">
+            
+            <span class="acc-region" title="Global">🌐</span>
+            <span class="acc-pill" style="background:#ef444422;color:#ef4444">Macro</span>
+            <span class="acc-title">Les minutes du FOMC révèlent des divergences sur les taux</span>
+            <span class="acc-chevron">▾</span>
+          </summary>
+          <div class="acc-body">Le compte rendu de la dernière réunion du Comité fédéral de l'Open Market (FOMC) de la Réserve fédérale a révélé des <strong class="highlight-phrase">divergences notables au sein de ses membres</strong> concernant le calendrier approprié pour d'éventuelles hausses de taux. Fait marquant, certains membres ont même envisagé une <strong class="highlight-phrase">action immédiate en juin</strong>, soulignant la pression et l'incertitude quant à la meilleure approche pour gérer l'inflation et la croissance. Ces divisions pourraient rendre la communication future de la Fed plus complexe et introduire de la volatilité sur les marchés.</div>
+        </details>
+        
+        <details class="acc-item" style="--cat-couleur:#ef4444">
+          <summary class="acc-summary">
+            
+            <span class="acc-region" title="Europe">🇪🇺</span>
+            <span class="acc-pill" style="background:#ef444422;color:#ef4444">Macro</span>
+            <span class="acc-title">La BCE anticipe une inflation au-dessus de l'objectif l'an prochain</span>
+            <span class="acc-chevron">▾</span>
+          </summary>
+          <div class="acc-body">Malgré une faiblesse généralisée du dollar, les minutes de la Banque Centrale Européenne (BCE) ont signalé que l'inflation dans la zone euro devrait rester <strong class="highlight-phrase">au-dessus de l'objectif</strong> de <strong class="highlight-figure">2%</strong> l'année prochaine. Cette prévision indique que la BCE pourrait maintenir une posture prudente ou une politique monétaire restrictive plus longtemps que prévu, même si les anticipations de hausse de taux à court terme ont légèrement reculé. La persistance de l'inflation demeure donc une préoccupation centrale pour la politique monétaire européenne.</div>
+        </details>
+        
+        <details class="acc-item" style="--cat-couleur:#ef4444">
           <summary class="acc-summary">
             
             <span class="acc-region" title="Asie">🌏</span>
-            <span class="acc-pill" style="background:#3b82f622;color:#3b82f6">Marchés</span>
-            <span class="acc-title">Le Japon encourage l'investissement national des fonds de pension</span>
+            <span class="acc-pill" style="background:#ef444422;color:#ef4444">Macro</span>
+            <span class="acc-title">Le ministre japonais exhorte les fonds de pension à acheter des actifs nationaux</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">Dans une tentative notable de stimuler l'économie locale, le ministre japonais des Finances, Katayama, a publiquement exhorté les fonds de pension du pays à <strong class="highlight-phrase">augmenter leurs investissements dans les actifs nationaux</strong>. Cette intervention gouvernementale vise à rediriger les flux de capitaux vers le marché intérieur, souvent délaissé au profit d'opportunités internationales. L'annonce a eu un impact immédiat et mesurable sur les marchés : la paire <strong class="highlight-figure">USD/JPY a bondi vers 161-162</strong>, signalant une dépréciation du Yen, et les rendements des <strong class="highlight-phrase">obligations d'État japonaises (JGB) à long terme ont fortement chuté</strong>. Cette démarche pourrait non seulement soutenir les entreprises japonaises, mais aussi modifier la dynamique du marché obligataire et des devises à long terme, en soulignant l'importance stratégique de l'investissement domestique pour la stabilité économique du pays.</div>
-        </details>
-        
-        <details class="acc-item" style="--cat-couleur:#3b82f6">
-          <summary class="acc-summary">
-            
-            <span class="acc-region" title="Global">🌐</span>
-            <span class="acc-pill" style="background:#3b82f622;color:#3b82f6">Marchés</span>
-            <span class="acc-title">Les marchés en mode « buy-the-dip » face aux tensions géopolitiques</span>
-            <span class="acc-chevron">▾</span>
-          </summary>
-          <div class="acc-body">Les marchés financiers mondiaux ont affiché une résilience surprenante en adoptant une approche de <strong class="highlight-phrase">« buy-the-dip »</strong> malgré l'escalade des tensions entre les États-Unis et l'Iran. Bien que de nouvelles frappes aient eu lieu et que la rhétorique belliqueuse s'intensifie, les actions ont globalement progressé, notamment tirées par un <strong class="highlight-phrase">fort rebond du secteur des semiconducteurs</strong>. Parallèlement, le marché obligataire a connu un rally, et les prix du pétrole ont paradoxalement reculé d'environ <strong class="highlight-figure">2%</strong> pour s'établir à <strong class="highlight-figure">72$ le baril</strong>. Cette réaction suggère que les investisseurs évaluent que l'impact économique direct de cette confrontation pourrait être contenu, ou qu'ils considèrent les baisses récentes comme des opportunités d'achat. Cependant, l'environnement reste qualifié de « fragile » par les analystes, et les risques géopolitiques demeurent un facteur important à surveiller, surtout à l'approche du week-end.</div>
+          <div class="acc-body">Le ministre des Finances du Japon, Katayama, a publiquement appelé les <strong class="highlight-phrase">fonds de pension du pays à investir davantage dans les actifs domestiques</strong>. Cette exhortation a eu un effet immédiat, propulsant la paire USD/JPY vers la fourchette de <strong class="highlight-figure">161–162</strong> et entraînant une <strong class="highlight-phrase">forte baisse des rendements des obligations d'État japonaises (JGB) à long terme</strong>. Cette initiative vise à soutenir le marché financier et l'économie nationale, potentiellement en renforçant la demande pour les titres japonais.</div>
         </details>
         
         <details class="acc-item" style="--cat-couleur:#ef4444">
@@ -951,87 +1008,21 @@
             
             <span class="acc-region" title="Global">🌐</span>
             <span class="acc-pill" style="background:#ef444422;color:#ef4444">Macro</span>
-            <span class="acc-title">Divergences notables au sein du FOMC sur les hausses de taux</span>
+            <span class="acc-title">Une société vieillissante ne serait pas trop coûteuse</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">Le compte rendu de la dernière réunion du Comité Fédéral de l'Open Market (FOMC) a révélé des <strong class="highlight-phrase">divergences significatives</strong> parmi ses membres concernant le calendrier et la nécessité d'une éventuelle hausse des taux d'intérêt. Alors que certains participants estimaient qu'une approche prudente était nécessaire, d'autres ont même exprimé le souhait d'une <strong class="highlight-phrase">action immédiate dès juin</strong>. Cette fracture au sein de la Réserve fédérale souligne l'incertitude quant à la direction future de la politique monétaire américaine face aux pressions inflationnistes et aux signaux économiques mitigés. Une telle désunion pourrait accroître la volatilité des marchés alors que les investisseurs tentent de décrypter les intentions de la Fed pour le reste de l'année.</div>
+          <div class="acc-body">Contrairement aux prévisions pessimistes souvent avancées, de nouvelles recherches suggèrent qu'une <strong class="highlight-phrase">société vieillissante ne coûterait pas nécessairement trop cher</strong> à soutenir. Cette perspective conteste l'idée d'une vision dystopique de l'avenir liée au vieillissement démographique, en soulignant que les coûts pourraient être gérables. Cette réévaluation pourrait influencer les politiques publiques en matière de santé, de retraite et de travail, favorisant une approche plus optimiste et proactive face aux changements démographiques mondiaux.</div>
         </details>
         
-        <details class="acc-item" style="--cat-couleur:#3b82f6">
+        <details class="acc-item" style="--cat-couleur:#10b981">
           <summary class="acc-summary">
             
             <span class="acc-region" title="Europe">🇪🇺</span>
-            <span class="acc-pill" style="background:#3b82f622;color:#3b82f6">Marchés</span>
-            <span class="acc-title">Rally des taux européens et resserrement des spreads souverains</span>
+            <span class="acc-pill" style="background:#10b98122;color:#10b981">Corporate</span>
+            <span class="acc-title">Bataille de fonds américains pour l'acquisition d'EasyJet</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">Les marchés obligataires européens ont connu un rally, se traduisant par une <strong class="highlight-phrase">baisse des rendements</strong>, principalement due au repli des cours du pétrole Brent et à une réévaluation des attentes inflationnistes. Le rendement du <strong class="highlight-figure">Bund allemand à 10 ans</strong> a clôturé en baisse de <strong class="highlight-figure">4 points de base (pb)</strong> à <strong class="highlight-figure">3,08%</strong>, tandis que celui du <strong class="highlight-figure">Schatz à 2 ans</strong> a reculé de <strong class="highlight-figure">6 pb</strong> à <strong class="highlight-figure">2,65%</strong>. Ce mouvement s'est accompagné d'un <strong class="highlight-phrase">resserrement des spreads souverains</strong>, avec les obligations d'État françaises (OAT) et italiennes (BTP) qui ont surperformé, leurs spreads se resserrant de <strong class="highlight-figure">3 pb</strong> pour atteindre respectivement <strong class="highlight-figure">77 pb et 75 pb</strong>. Cette dynamique reflète un regain de confiance dans la stabilité des marchés de la dette souveraine européenne et une possible anticipation d'un assouplissement futur de la politique monétaire.</div>
-        </details>
-        
-        <details class="acc-item" style="--cat-couleur:#3b82f6">
-          <summary class="acc-summary">
-            
-            <span class="acc-region" title="Global">🌐</span>
-            <span class="acc-pill" style="background:#3b82f622;color:#3b82f6">Marchés</span>
-            <span class="acc-title">L'IA investit le marché obligataire après la bourse</span>
-            <span class="acc-chevron">▾</span>
-          </summary>
-          <div class="acc-body">L'intelligence artificielle, après avoir profondément transformé le marché boursier, est désormais en passe de s'imposer sur le <strong class="highlight-phrase">marché obligataire</strong>. Les avancées de l'IA permettent de traiter des volumes massifs de données pour l'analyse des tendances et la prédiction, mais l'intégration de ces technologies présente de nouveaux défis. L'un des principaux est la <strong class="highlight-phrase">difficulté à juger précisément le risque de crédit</strong> des entreprises et des émissions obligataires dans un environnement influencé par l'IA. Cette complexité accrue nécessite le développement de nouveaux modèles d'évaluation et de régulations adaptées pour garantir la stabilité et la transparence du marché.</div>
-        </details>
-        
-        <details class="acc-item" style="--cat-couleur:#8b5cf6">
-          <summary class="acc-summary">
-            
-            <span class="acc-region" title="Asie">🌏</span>
-            <span class="acc-pill" style="background:#8b5cf622;color:#8b5cf6">Tech</span>
-            <span class="acc-title">La Chine face aux défis de financement de ses ambitions tech</span>
-            <span class="acc-chevron">▾</span>
-          </summary>
-          <div class="acc-body">Malgré une reprise apparente sur les marchés de capitaux, la Chine pourrait rencontrer des <strong class="highlight-phrase">obstacles importants pour financer les vastes ambitions technologiques</strong> fixées par le président Xi Jinping. Les investissements colossaux nécessaires pour atteindre l'autonomie technologique et la suprématie dans des domaines clés comme les semi-conducteurs et l'IA posent un défi financier de taille. Les contraintes budgétaires, la compétition internationale pour les ressources et une possible réduction de l'appétit des investisseurs étrangers pourraient ralentir la réalisation de ces objectifs. Cette situation suggère que les rêves technologiques de la Chine pourraient être plus difficiles à concrétiser qu'initialement prévu.</div>
-        </details>
-        
-        <details class="acc-item" style="--cat-couleur:#ef4444">
-          <summary class="acc-summary">
-            
-            <span class="acc-region" title="Global">🌐</span>
-            <span class="acc-pill" style="background:#ef444422;color:#ef4444">Macro</span>
-            <span class="acc-title">Une société vieillissante moins coûteuse que prévu ?</span>
-            <span class="acc-chevron">▾</span>
-          </summary>
-          <div class="acc-body">Contrairement aux prévisions souvent alarmistes, une nouvelle analyse suggère que l'impact financier d'une société vieillissante pourrait être <strong class="highlight-phrase">moins onéreux que largement anticipé</strong>. Les coûts liés aux soins de santé et aux retraites, bien que réels, pourraient ne pas atteindre les niveaux « dystopiques » souvent décrits. Cette perspective plus optimiste repose sur l'hypothèse d'une meilleure gestion des ressources, de l'innovation technologique dans la santé et d'une participation accrue des seniors à la vie économique. Cela pourrait alléger une partie de la pression sur les budgets des États et offrir une vision plus nuancée des défis démographiques futurs.</div>
-        </details>
-        
-        <details class="acc-item" style="--cat-couleur:#3b82f6">
-          <summary class="acc-summary">
-            
-            <span class="acc-region" title="Global">🌐</span>
-            <span class="acc-pill" style="background:#3b82f622;color:#3b82f6">Marchés</span>
-            <span class="acc-title">Le marché du GNL sous la menace de plusieurs facteurs avant l'hiver</span>
-            <span class="acc-chevron">▾</span>
-          </summary>
-          <div class="acc-body">Le marché du gaz naturel liquéfié (GNL) est confronté à des risques significatifs de <strong class="highlight-phrase">perturbations et de hausses de prix</strong> avant la saison hivernale. Trois facteurs principaux sont identifiés comme pouvant « fissurer » le marché : l'escalade des conflits armés, les conditions météorologiques extrêmes imprévues, et les pannes de production ou d'infrastructures. La combinaison de ces éléments pourrait entraîner une <strong class="highlight-phrase">forte volatilité et une augmentation substantielle des prix du gaz</strong>, impactant la sécurité énergétique et les économies mondiales. Les marchés surveillent attentivement ces risques, qui pourraient reproduire ou même aggraver les chocs énergétiques passés.</div>
-        </details>
-        
-        <details class="acc-item" style="--cat-couleur:#3b82f6">
-          <summary class="acc-summary">
-            
-            <span class="acc-region" title="Europe">🇪🇺</span>
-            <span class="acc-pill" style="background:#3b82f622;color:#3b82f6">Marchés</span>
-            <span class="acc-title">Les marchés boursiers européens, une opportunité ignorée</span>
-            <span class="acc-chevron">▾</span>
-          </summary>
-          <div class="acc-body">Malgré une économie européenne traversant une période jugée « difficile », ses marchés boursiers sont considérés par certains comme <strong class="highlight-phrase">sous-évalués et représentant une véritable opportunité</strong> pour les investisseurs. Cependant, les capitaux internationaux semblent encore <strong class="highlight-phrase">bouder les actions européennes</strong>, montrant un manque d'intérêt persistant. Cette divergence entre la valeur intrinsèque perçue et l'appétit des investisseurs étrangers suggère que des facteurs macroéconomiques ou politiques plus larges continuent de peser sur la confiance, empêchant une revalorisation des actifs malgré leur faible coût relatif.</div>
-        </details>
-        
-        <details class="acc-item" style="--cat-couleur:#8b5cf6">
-          <summary class="acc-summary">
-            
-            <span class="acc-region" title="Global">🌐</span>
-            <span class="acc-pill" style="background:#8b5cf622;color:#8b5cf6">Tech</span>
-            <span class="acc-title">L'IA pour simplifier la régulation financière</span>
-            <span class="acc-chevron">▾</span>
-          </summary>
-          <div class="acc-body">Les régulateurs financiers explorent activement l'utilisation de l'intelligence artificielle pour agir comme un <strong class="highlight-phrase">« briseur de lenteur »</strong> (sludge buster) dans leurs opérations. L'objectif est de <strong class="highlight-phrase">réduire la bureaucratie et d'alléger le fardeau réglementaire</strong>, ce qui pourrait entraîner des gains d'efficacité significatifs et des économies de coûts. L'intégration de l'IA permettrait d'automatiser des tâches complexes, d'analyser de vastes ensembles de données pour la conformité et d'identifier plus rapidement les risques, promettant une régulation plus agile et moins coûteuse pour l'ensemble du secteur financier.</div>
+          <div class="acc-body">La compagnie aérienne britannique EasyJet Plc est au centre d'une <strong class="highlight-phrase">bataille entre deux fonds de private equity américains</strong> qui cherchent à l'acquérir. Cette situation est considérée comme <strong class="highlight-phrase">inhabituelle</strong> car le secteur aérien est souvent caractérisé par une forte volatilité et des marges faibles, ce qui le rend moins attrayant pour les investisseurs financiers traditionnels. L'intérêt de ces fonds pour EasyJet met en lumière une potentielle réévaluation du potentiel de croissance ou de restructuration au sein de l'industrie aéronautique.</div>
         </details>
         
         <details class="acc-item" style="--cat-couleur:#10b981">
@@ -1039,10 +1030,54 @@
             
             <span class="acc-region" title="USA">🇺🇸</span>
             <span class="acc-pill" style="background:#10b98122;color:#10b981">Corporate</span>
-            <span class="acc-title">Asha Sharma à la tête de la division Xbox de Microsoft</span>
+            <span class="acc-title">Asha Sharma prend la tête de la division Xbox de Microsoft</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body"><strong class="highlight-phrase">Asha Sharma a été nommée à la tête de la division Xbox de Microsoft</strong>, marquant une transition majeure pour le géant du jeu vidéo. En tant que nouvelle PDG et personne venant de l'extérieur du monde du gaming pur, elle est confrontée à la tâche ardue de prendre des <strong class="highlight-phrase">décisions difficiles concernant l'emploi et l'orientation stratégique future</strong> de l'industrie. Son rôle impliquera de naviguer dans un secteur en pleine mutation, entre innovations technologiques, concurrence féroce et attentes des millions de joueurs. Sa capacité à diriger une entreprise aussi emblématique, sans expérience préalable directe dans le jeu, sera un test majeur de leadership.</div>
+          <div class="acc-body"><strong class="highlight-phrase">Asha Sharma</strong> a été désignée nouvelle directrice de la division Xbox de Microsoft, succédant à une figure emblématique. En tant que première PDG de cette division, elle se trouve face à des <strong class="highlight-phrase">décisions stratégiques difficiles</strong> concernant les suppressions d'emplois et l'orientation future de l'activité dans un marché du jeu vidéo en pleine mutation. Sa nomination, en tant qu'«outsider» sans expérience préalable dans le gaming, est notable et pourrait signaler un changement d'approche pour Microsoft dans ce secteur concurrentiel.</div>
+        </details>
+        
+        <details class="acc-item" style="--cat-couleur:#10b981">
+          <summary class="acc-summary">
+            
+            <span class="acc-region" title="USA">🇺🇸</span>
+            <span class="acc-pill" style="background:#10b98122;color:#10b981">Corporate</span>
+            <span class="acc-title">Les revenus de Donald Trump soulèvent des questions éthiques</span>
+            <span class="acc-chevron">▾</span>
+          </summary>
+          <div class="acc-body">Donald Trump a récemment révélé avoir gagné <strong class="highlight-figure">plus de 2,2 milliards de dollars</strong> depuis son retour au pouvoir, un chiffre qui a suscité des réactions étonnées et des interrogations sur la «propreté politique». Des historiens et analystes établissent des parallèles avec des figures politiques controversées comme Robert Walpole en Grande-Bretagne et Silvio Berlusconi en Italie, connus pour leur enrichissement personnel en fonction. La question centrale demeure de savoir si les électeurs américains se soucient réellement de ces pratiques d'auto-enrichissement.</div>
+        </details>
+        
+        <details class="acc-item" style="--cat-couleur:#8b5cf6">
+          <summary class="acc-summary">
+            
+            <span class="acc-region" title="Asie">🌏</span>
+            <span class="acc-pill" style="background:#8b5cf622;color:#8b5cf6">Tech</span>
+            <span class="acc-title">La Chine peine à financer ses ambitions technologiques</span>
+            <span class="acc-chevron">▾</span>
+          </summary>
+          <div class="acc-body">Malgré une apparente reprise des marchés de capitaux, la Chine pourrait rencontrer des <strong class="highlight-phrase">difficultés significatives à financer les vastes ambitions technologiques</strong> fixées par le président Xi Jinping. Cet objectif d'autosuffisance et de leadership technologique, qui nécessite des investissements massifs, pourrait être freiné par des contraintes budgétaires ou des défis structurels. Cette situation pourrait ralentir le rythme d'innovation et le développement de secteurs clés en Chine, ayant des répercussions sur la compétition technologique mondiale.</div>
+        </details>
+        
+        <details class="acc-item" style="--cat-couleur:#8b5cf6">
+          <summary class="acc-summary">
+            
+            <span class="acc-region" title="Global">🌐</span>
+            <span class="acc-pill" style="background:#8b5cf622;color:#8b5cf6">Tech</span>
+            <span class="acc-title">Le code généré par l'IA engorge l'internet</span>
+            <span class="acc-chevron">▾</span>
+          </summary>
+          <div class="acc-body">Un phénomène préoccupant se développe: le code source généré par des intelligences artificielles est en train d'<strong class="highlight-phrase">engorger l'internet</strong>, provoquant des problèmes de performance et de gestion des données. Cette prolifération de code, souvent répétitif ou suboptimisé, pose des défis majeurs pour les infrastructures réseau et les plateformes de développement. Cela soulève également des questions sur la durabilité de la croissance des contenus numériques générés par IA et leur impact écologique.</div>
+        </details>
+        
+        <details class="acc-item" style="--cat-couleur:#f97316">
+          <summary class="acc-summary">
+            
+            <span class="acc-region" title="Global">🌐</span>
+            <span class="acc-pill" style="background:#f9731622;color:#f97316">IA</span>
+            <span class="acc-title">L'IA pourrait simplifier la régulation financière</span>
+            <span class="acc-chevron">▾</span>
+          </summary>
+          <div class="acc-body">Les régulateurs du secteur financier explorent activement l'utilisation de l'intelligence artificielle pour <strong class="highlight-phrase">réduire la «sludge» réglementaire</strong>, c'est-à-dire la bureaucratie et la complexité des règles. L'objectif est d'exploiter les capacités de l'IA pour automatiser la conformité, identifier les risques plus efficacement et simplifier les processus, ce qui pourrait potentiellement <strong class="highlight-phrase">alléger le fardeau réglementaire</strong> pour les institutions financières. Cette initiative représente un pas vers une modernisation significative de la gouvernance financière, rendant les systèmes plus agiles et moins coûteux.</div>
         </details>
         </div>
     </div>
