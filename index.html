@@ -210,8 +210,13 @@
     font-size: 10.5px;
   }
   .ticker-item .value { color: var(--parchment); font-weight: 600; }
-  .ticker-item .variation.up { color: #7fd4a0; }
-  .ticker-item .variation.down { color: #e6a1a1; }
+  .ticker-item .variation {
+    font-weight: 700;
+    padding: 2px 7px;
+    border-radius: 3px;
+  }
+  .ticker-item .variation.up { color: var(--ink); background: #7fd4a0; }
+  .ticker-item .variation.down { color: #2a0808; background: #e6a1a1; }
 
   /* ── NAV ── */
   nav.subnav {
@@ -484,12 +489,86 @@
     border-radius: 2px;
   }
   .tl-title { font-size: 13.5px; font-weight: 600; color: var(--text); }
+  .tl-badge-new {
+    font-family: var(--mono);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: var(--ink);
+    background: var(--brass-bright);
+    padding: 2px 6px;
+    border-radius: 2px;
+    margin-left: 8px;
+    flex-shrink: 0;
+  }
 
   @media (max-width: 640px) {
     .tl-item { grid-template-columns: 74px 10px 1fr; gap: 8px; }
     .tl-item::before { left: 79px; }
     .tl-date { font-size: 9.5px; }
   }
+
+  /* ── PERSONNALISATION TICKER ── */
+  .perso-intro { font-size: 13.5px; color: var(--text-soft); margin-bottom: 20px; max-width: 560px; }
+  .perso-search-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    padding: 10px 14px;
+    max-width: 480px;
+    margin-bottom: 10px;
+  }
+  .perso-search-bar:focus-within { border-color: var(--brass); }
+  .perso-search-bar input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: none;
+    font-family: var(--sans);
+    font-size: 13.5px;
+    color: var(--text);
+  }
+  .perso-results { display: flex; flex-direction: column; gap: 6px; max-width: 480px; margin-bottom: 28px; min-height: 4px; }
+  .perso-result-row, .perso-chip {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+  .perso-result-row .perso-nom, .perso-chip .perso-nom { font-weight: 600; color: var(--text); }
+  .perso-result-row .perso-symbole, .perso-chip .perso-symbole {
+    font-family: var(--mono);
+    font-size: 10.5px;
+    color: var(--text-soft);
+    margin-left: 6px;
+  }
+  .perso-btn-ajouter, .perso-btn-retirer {
+    flex-shrink: 0;
+    border: 1px solid var(--border);
+    background: none;
+    color: var(--text);
+    font-family: var(--sans);
+    font-size: 11.5px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: border-color .15s, color .15s;
+  }
+  .perso-btn-ajouter:hover { border-color: var(--green); color: var(--green); }
+  .perso-btn-retirer:hover { border-color: var(--red); color: var(--red); }
+  .perso-subtitle { font-family: var(--serif); font-size: 16px; font-weight: 600; margin-bottom: 12px; }
+  .perso-selection { display: flex; flex-direction: column; gap: 6px; max-width: 480px; }
+  .perso-empty { font-size: 13px; color: var(--text-soft); font-style: italic; }
 
   footer { display: none; }
 
@@ -503,6 +582,26 @@
     header h1 { font-size: 24px; }
     main { padding: 24px 14px 50px; }
     .acc-body { padding-left: 17px; }
+
+    /* Vue compacte (mobile uniquement) : cartes -> liste dense */
+    .acc-list { gap: 0; border: 1px solid var(--border); border-radius: 2px; overflow: hidden; }
+    .acc-item {
+      border: none;
+      border-top: 1px solid var(--border);
+      border-left: 3px solid var(--cat-couleur, var(--brass));
+      border-radius: 0;
+      box-shadow: none;
+    }
+    .acc-item:first-child { border-top: none; }
+    .acc-summary { padding: 9px 11px; gap: 8px; font-size: 12.5px; }
+    .acc-rank { width: 17px; height: 17px; font-size: 9px; }
+    .acc-region { font-size: 12px; }
+    .acc-pill { font-size: 8.5px; padding: 2px 6px; }
+    .acc-body { padding: 0 11px 12px 40px; padding-top: 10px; font-size: 12.5px; }
+
+    /* Ticker manuel (swipe) sur mobile, pas de defilement automatique */
+    .ticker-bar { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    .ticker-track { animation: none !important; }
   }
 </style>
 </head>
@@ -524,13 +623,13 @@
     </div>
     <div class="header-search">
       <span class="search-icon">🔍</span>
-      <input type="text" id="searchInput" placeholder="Rechercher un mot, une entreprise, un theme..." autocomplete="off">
+      <input type="text" id="searchInput" placeholder="Rechercher (Ctrl+K)..." autocomplete="off">
       <button id="searchClear" class="search-clear" style="display:none" aria-label="Effacer la recherche">✕</button>
     </div>
     <div class="right">
       <div class="date-block">
         <div class="date">Mercredi 15 juillet 2026</div>
-        <div class="date-sub">Mise à jour automatique</div>
+        <div class="date-sub">Générée à {{HEURE}}</div>
       </div>
       <button class="theme-toggle" onclick="toggleTheme()" id="themeBtn" aria-label="Changer le theme clair/sombre">&#9789;</button>
     </div>
@@ -552,6 +651,7 @@
 <button data-tab="briefing-complet">Briefing complet</button>
 <button data-tab="agenda">Agenda</button>
 
+    <button data-tab="indices-entreprises">Indices &amp; Entreprises</button>
   </div>
 </nav>
 
@@ -567,63 +667,74 @@
       
 <div class="sentiment-box">
   <span class="sentiment-badge sent-neutral">Neutre</span>
-  <span class="sentiment-raison">Les marchés ont accueilli favorablement un ralentissement de l'inflation américaine, réduisant les anticipations de hausses de taux. Cependant, les tensions géopolitiques persistantes au Moyen-Orient et la prudence des banques centrales tempèrent l'optimisme général.</span>
+  <span class="sentiment-raison">La bonne surprise de l'inflation américaine et les profits records des banques de Wall Street sont tempérés par la prudence de la Fed et l'escalade des tensions géopolitiques qui poussent le prix du pétrole.</span>
 </div>
 
       <div class="acc-list">
-        <details class="acc-item" style="--cat-couleur:#ef4444">
+        <details class="acc-item" style="--cat-couleur:#f59e0b">
           <summary class="acc-summary">
             <span class="acc-rank">1</span>
-            <span class="acc-region" title="USA">🇺🇸</span>
-            <span class="acc-pill" style="background:#ef444422;color:#ef4444">Macro</span>
-            <span class="acc-title">L'inflation américaine de juin surprend positivement</span>
+            <span class="acc-region" title="Global">🌐</span>
+            <span class="acc-pill" style="background:#f59e0b22;color:#f59e0b">Géopolitique</span>
+            <span class="acc-title">Escalade des tensions au Moyen-Orient et impact pétrolier</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">L'inflation globale aux États-Unis a enregistré sa <strong class="highlight-phrase">première baisse mensuelle en six ans</strong> en juin, et l'inflation sous-jacente est restée stable, un développement <strong class="highlight-phrase">nettement plus favorable qu'attendu</strong> par les marchés. Cette surprise a immédiatement fait chuter les anticipations de resserrement monétaire, avec les investisseurs estimant désormais à <strong class="highlight-figure">83,4% la probabilité</strong> que la Fed maintienne ses taux inchangés en juillet. Toutefois, Kevin Warsh de la Fed a rapidement tempéré l'euphorie, rappelant qu'<strong class="highlight-phrase">une seule publication favorable</strong> ne suffit pas à modifier la trajectoire restrictive de la banque centrale, ce qui maintient une certaine prudence.</div>
+          <div class="acc-body">Les États-Unis et l'Iran intensifient leurs frappes ciblées, signalant une escalade dans le détroit d'Ormuz, zone stratégique cruciale. Cette situation a propulsé le prix du baril de Brent <strong class="highlight-figure">au-delà de 100 dollars</strong>, après de nouvelles sanctions iraniennes et un renforcement militaire américain. Les tensions géopolitiques créent un <strong class="highlight-phrase">biais inflationniste persistant</strong> et alimentent de sérieuses inquiétudes sur l'approvisionnement mondial en énergie. Les marchés anticipent une possible poursuite de la hausse vers <strong class="highlight-figure">90 dollars</strong> si les tensions ne s'apaisent pas, soulignant la vulnérabilité des prix à ces développements régionaux.</div>
         </details>
         
-        <details class="acc-item" style="--cat-couleur:#10b981">
+        <details class="acc-item" style="--cat-couleur:#ef4444">
           <summary class="acc-summary">
             <span class="acc-rank">2</span>
             <span class="acc-region" title="USA">🇺🇸</span>
-            <span class="acc-pill" style="background:#10b98122;color:#10b981">Corporate</span>
-            <span class="acc-title">Profits records pour les géants bancaires de Wall Street</span>
+            <span class="acc-pill" style="background:#ef444422;color:#ef4444">Macro</span>
+            <span class="acc-title">Inflation américaine en baisse, mais la Fed reste prudente</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">Les quatre plus grandes banques de Wall Street – JPMorgan, Goldman Sachs, Citigroup et Bank of America – ont annoncé des <strong class="highlight-phrase">bénéfices trimestriels spectaculaires</strong>, portés par une envolée des revenus de trading et de banque d'investissement. Les revenus combinés du trading actions et obligations ont atteint <strong class="highlight-figure">38 milliards de dollars</strong>, soit une hausse de <strong class="highlight-phrase">plus d'un tiers sur un an</strong> et de <strong class="highlight-figure">60% sur deux ans</strong>. JPMorgan a réalisé un <strong class="highlight-phrase">trimestre record</strong> et Goldman Sachs ses meilleurs bénéfices en <strong class="highlight-phrase">cinq ans</strong>, notamment grâce aux <strong class="highlight-figure">500 millions de dollars de frais</strong> générés par l'IPO de SpaceX, reflétant l'impact de la volatilité et du boom de l'IA.</div>
-        </details>
-        
-        <details class="acc-item" style="--cat-couleur:#f59e0b">
-          <summary class="acc-summary">
-            <span class="acc-rank">3</span>
-            <span class="acc-region" title="Global">🌐</span>
-            <span class="acc-pill" style="background:#f59e0b22;color:#f59e0b">Géopolitique</span>
-            <span class="acc-title">Tensions US-Iran ravivent craintes pétrolières</span>
-            <span class="acc-chevron">▾</span>
-          </summary>
-          <div class="acc-body">Les <strong class="highlight-phrase">tensions entre les États-Unis et l'Iran s'intensifient</strong>, avec des frappes ciblées dans le détroit stratégique d'Ormuz, exacerbant les préoccupations autour de l'approvisionnement mondial en énergie. En réaction, le prix du pétrole Brent a dépassé les <strong class="highlight-figure">80 dollars le baril</strong> et pourrait viser les <strong class="highlight-figure">90 dollars</strong>, entretenant un <strong class="highlight-phrase">biais inflationniste</strong> sur les marchés. Cette escalade, notamment les « frappes quotidiennes » de Donald Trump, ajoute une forte incertitude géopolitique qui pèse sur les anticipations de politique monétaire des banques centrales.</div>
+          <div class="acc-body">L'inflation globale américaine a <strong class="highlight-phrase">surpris à la baisse en juin</strong>, enregistrant sa première diminution mensuelle depuis <strong class="highlight-phrase">six ans</strong>, principalement due à la chute des prix de l'énergie. Les marchés ont réagi en réduisant la probabilité d'une nouvelle hausse de taux de la Fed en juillet à seulement <strong class="highlight-figure">16,6%</strong> (basé sur 83,4% de maintien). Cependant, Kevin Warsh, président de la Fed, a immédiatement tempéré l'optimisme devant le Congrès, rappelant qu'<strong class="highlight-phrase">une seule publication favorable ne suffit pas</strong> à modifier la politique restrictive. La banque centrale maintiendrait sa politique « aussi longtemps que nécessaire », ce qui suggère que les attentes d'assouplissement pourraient être prématurées.</div>
         </details>
         
         <details class="acc-item" style="--cat-couleur:#10b981">
           <summary class="acc-summary">
-            <span class="acc-rank">4</span>
+            <span class="acc-rank">3</span>
             <span class="acc-region" title="USA">🇺🇸</span>
             <span class="acc-pill" style="background:#10b98122;color:#10b981">Corporate</span>
-            <span class="acc-title">IBM s'effondre après un avertissement sur résultats</span>
+            <span class="acc-title">Profits records pour les grandes banques de Wall Street</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">Les actions d'IBM ont subi une <strong class="highlight-figure">chute de plus de 20%</strong> après que l'entreprise a émis un avertissement sur ses résultats préliminaires du deuxième trimestre, qui se sont avérés <strong class="highlight-phrase">nettement inférieurs aux attentes</strong>. Cette contre-performance majeure est principalement attribuée à un <strong class="highlight-phrase">déplacement significatif des dépenses informatiques</strong> des clients. Ces derniers réorientent leurs investissements vers les infrastructures d'intelligence artificielle, ce qui met en lumière les <strong class="highlight-phrase">défis de transition</strong> pour les acteurs historiques du secteur face à l'essor de l'IA.</div>
+          <div class="acc-body">Quatre des plus grandes banques de Wall Street, dont JPMorgan, Goldman Sachs et Bank of America, ont annoncé des <strong class="highlight-phrase">profits du deuxième trimestre exceptionnels</strong>, dépassant les attentes. Leurs revenus de trading d'actions et d'obligations ont cumulé <strong class="highlight-figure">38 milliards de dollars</strong>, marquant une augmentation de <strong class="highlight-phrase">plus d'un tiers</strong> sur un an, grâce à la volatilité des marchés liée à l'IA et une déréglementation favorable. JPMorgan a enregistré un trimestre record, et Goldman Sachs a atteint ses <strong class="highlight-phrase">plus hauts profits en cinq ans</strong>, notamment grâce à l'introduction en bourse de SpaceX générant <strong class="highlight-figure">500 millions de dollars</strong> de frais pour Wall Street. Jamie Dimon de JPMorgan a cependant mis en garde, estimant que cette période de forte rentabilité est « proche du sommet » et que sa durée reste incertaine.</div>
         </details>
         
         <details class="acc-item" style="--cat-couleur:#f59e0b">
           <summary class="acc-summary">
-            <span class="acc-rank">5</span>
+            <span class="acc-rank">4</span>
             <span class="acc-region" title="Europe">🇪🇺</span>
             <span class="acc-pill" style="background:#f59e0b22;color:#f59e0b">Géopolitique</span>
-            <span class="acc-title">Ukraine achète composants de drones chinois avec fonds UE</span>
+            <span class="acc-title">L'Ukraine utilise des fonds européens pour des composants de drones chinois</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">L'Ukraine a obtenu l'autorisation d'utiliser une tranche de <strong class="highlight-figure">6 milliards d'euros</strong> issue d'un prêt de défense plus large de <strong class="highlight-figure">60 milliards d'euros</strong> de l'UE pour acheter des <strong class="highlight-phrase">composants de drones directement à la Chine</strong>. Cette décision révèle non seulement les <strong class="highlight-phrase">lacunes persistantes dans la production de défense</strong> au sein de l'Union européenne, mais aussi la <strong class="highlight-phrase">dépendance ukrainienne</strong> envers les fournisseurs chinois, alors même que Pékin est également accusé de soutenir l'effort de guerre russe.</div>
+          <div class="acc-body">Kyiv a obtenu une dérogation spéciale pour dépenser une partie d'une tranche de <strong class="highlight-figure">6 milliards d'euros</strong> issue d'un prêt de défense de l'UE pour l'achat de composants de drones en Chine. Cette décision, qui s'inscrit dans un programme de soutien plus vaste de <strong class="highlight-figure">60 milliards d'euros</strong>, met en lumière les <strong class="highlight-phrase">lacunes persistantes de la production de défense</strong> européenne, malgré les efforts pour renforcer sa base industrielle. Elle révèle également le rôle ambigu de la Chine, qui, tout en étant accusée par l'UE d'être un « facilitateur clé de la guerre de la Russie », fournit aussi des composants essentiels à l'industrie d'armement ukrainienne.</div>
+        </details>
+        
+        <details class="acc-item" style="--cat-couleur:#8b5cf6">
+          <summary class="acc-summary">
+            <span class="acc-rank">5</span>
+            <span class="acc-region" title="Global">🌐</span>
+            <span class="acc-pill" style="background:#8b5cf622;color:#8b5cf6">Tech</span>
+            <span class="acc-title">IBM chute lourdement après un avertissement sur les bénéfices lié à l'IA</span>
+            <span class="acc-chevron">▾</span>
+          </summary>
+          <div class="acc-body">IBM a subi une <strong class="highlight-figure">chute spectaculaire de 25%</strong> de la valeur de ses actions après avoir émis un avertissement sur ses bénéfices pour le deuxième trimestre, annonçant des résultats préliminaires bien en deçà des prévisions. Cette sous-performance majeure est principalement attribuée à un <strong class="highlight-phrase">changement significatif dans les dépenses informatiques</strong> des entreprises, qui réorientent massivement leurs budgets vers les infrastructures d'intelligence artificielle. Les clients accélèrent leurs investissements dans l'IA, modifiant les priorités budgétaires IT et impactant les lignes de produits traditionnels d'IBM, montrant la rapidité des mutations du marché technologique.</div>
+        </details>
+        
+        <details class="acc-item" style="--cat-couleur:#ef4444">
+          <summary class="acc-summary">
+            <span class="acc-rank">6</span>
+            <span class="acc-region" title="Europe">🇪🇺</span>
+            <span class="acc-pill" style="background:#ef444422;color:#ef4444">Macro</span>
+            <span class="acc-title">Les défis démographiques de l'Europe menacent sa croissance et ses finances</span>
+            <span class="acc-chevron">▾</span>
+          </summary>
+          <div class="acc-body">L'Europe est confrontée à des <strong class="highlight-phrase">défis démographiques sans précédent</strong>, caractérisés par un vieillissement rapide de sa population et une baisse continue des taux de natalité. L'âge médian au sein de l'UE à 27 a atteint <strong class="highlight-figure">44,5 ans</strong>, et les projections indiquent que la population des plus de <strong class="highlight-figure">80 ans pourrait doubler d'ici 2050</strong>. Cette transformation démographique représente une <strong class="highlight-phrase">menace significative pour la croissance économique</strong> future de la région, car elle implique une diminution de la main-d'œuvre active et exerce une pression considérable sur les systèmes de sécurité sociale et les finances publiques des États membres.</div>
         </details>
         </div>
     </div>
@@ -633,19 +744,41 @@
       
 <div class="sentiment-box">
   <span class="sentiment-badge sent-neutral">Neutre</span>
-  <span class="sentiment-raison">Les marchés ont accueilli favorablement un ralentissement de l'inflation américaine, réduisant les anticipations de hausses de taux. Cependant, les tensions géopolitiques persistantes au Moyen-Orient et la prudence des banques centrales tempèrent l'optimisme général.</span>
+  <span class="sentiment-raison">La bonne surprise de l'inflation américaine et les profits records des banques de Wall Street sont tempérés par la prudence de la Fed et l'escalade des tensions géopolitiques qui poussent le prix du pétrole.</span>
 </div>
 
       <div class="acc-list">
         <details class="acc-item" style="--cat-couleur:#3b82f6">
           <summary class="acc-summary">
             
-            <span class="acc-region" title="Europe">🇪🇺</span>
+            <span class="acc-region" title="Global">🌐</span>
             <span class="acc-pill" style="background:#3b82f622;color:#3b82f6">Marchés</span>
-            <span class="acc-title">Volatilité des taux euro après inflation US</span>
+            <span class="acc-title">Le Brent dépasse 100 $ après les sanctions contre l'Iran</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">Les taux européens ont connu une séance volatile, initialement impactés par la hausse du pétrole, avant de reculer après l'inflation américaine. Les anticipations de resserrement de la BCE ont été revues à la baisse, avec le marché ne prévoyant plus que <strong class="highlight-figure">40 points de base de hausses</strong> d'ici décembre.</div>
+          <div class="acc-body">Le prix du baril de Brent a franchi les <strong class="highlight-figure">100 dollars</strong> suite à de nouvelles sanctions visant l'Iran et un renforcement militaire américain dans le Golfe. Cette hausse reflète les <strong class="highlight-phrase">inquiétudes croissantes</strong> concernant l'approvisionnement pétrolier mondial, les tensions géopolitiques maintenant un biais inflationniste et une prévision de prix potentiels à <strong class="highlight-figure">90 dollars</strong>.</div>
+        </details>
+        
+        <details class="acc-item" style="--cat-couleur:#3b82f6">
+          <summary class="acc-summary">
+            
+            <span class="acc-region" title="Europe">🇪🇺</span>
+            <span class="acc-pill" style="background:#3b82f622;color:#3b82f6">Marchés</span>
+            <span class="acc-title">Volatilité des taux euro après l'inflation américaine</span>
+            <span class="acc-chevron">▾</span>
+          </summary>
+          <div class="acc-body">Les taux euro ont connu une séance volatile, initialement pénalisés par la poursuite de la hausse des prix du pétrole avant d'effacer une grande partie de leurs hausses après la publication d'une inflation américaine plus faible qu'attendu. Les anticipations de resserrement de la BCE ont ainsi été revues à la baisse, le marché ne prévoyant plus qu'environ <strong class="highlight-figure">40 points de base</strong> de hausses d'ici décembre, contre près de <strong class="highlight-figure">50 points de base</strong> au pic de la journée.</div>
+        </details>
+        
+        <details class="acc-item" style="--cat-couleur:#3b82f6">
+          <summary class="acc-summary">
+            
+            <span class="acc-region" title="Europe">🇪🇺</span>
+            <span class="acc-pill" style="background:#3b82f622;color:#3b82f6">Marchés</span>
+            <span class="acc-title">Le Bund 10 ans stable, Schatz 2 ans en légère hausse</span>
+            <span class="acc-chevron">▾</span>
+          </summary>
+          <div class="acc-body">Le Bund 10 ans a clôturé quasi inchangé autour de <strong class="highlight-figure">3,11 %</strong>, après avoir brièvement dépassé 3,15 %. Le Schatz 2 ans a terminé légèrement plus haut autour de <strong class="highlight-figure">2,76 %</strong>. Les courbes de taux conservent un biais de «bear flattening», le segment court restant sous pression.</div>
         </details>
         
         <details class="acc-item" style="--cat-couleur:#3b82f6">
@@ -653,10 +786,10 @@
             
             <span class="acc-region" title="USA">🇺🇸</span>
             <span class="acc-pill" style="background:#3b82f622;color:#3b82f6">Marchés</span>
-            <span class="acc-title">Rally des Treasuries US après chiffres inflation</span>
+            <span class="acc-title">Rally des Treasuries après les chiffres de l'inflation</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">Les Treasuries américains ont connu un <strong class="highlight-phrase">fort rally</strong> après les chiffres d'inflation, le rendement du 2 ans reculant d'environ <strong class="highlight-figure">10 points de base</strong>. Les investisseurs ont <strong class="highlight-phrase">réduit leurs anticipations de resserrement</strong> de la Fed, signalant une réaction positive du marché.</div>
+          <div class="acc-body">Les Treasuries américains ont connu un fort rally après les chiffres d'inflation. Le rendement du 2 ans a <strong class="highlight-figure">reculé d'environ 10 points de base</strong>, les investisseurs réduisant leurs anticipations de resserrement de la Fed.</div>
         </details>
         
         <details class="acc-item" style="--cat-couleur:#3b82f6">
@@ -664,21 +797,32 @@
             
             <span class="acc-region" title="Global">🌐</span>
             <span class="acc-pill" style="background:#3b82f622;color:#3b82f6">Marchés</span>
-            <span class="acc-title">Dollar recule suite à l'inflation US</span>
+            <span class="acc-title">Le dollar recule après le CPI américain</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">Le dollar a <strong class="highlight-phrase">fortement reculé</strong> après la publication d'un CPI américain plus faible qu'attendu, l'indice DXY baissant jusqu'à <strong class="highlight-figure">100,6</strong>. Cependant, il a limité ses pertes suite aux <strong class="highlight-phrase">commentaires prudents de Kevin Warsh</strong> de la Fed, tandis que l'EUR/USD est resté proche de <strong class="highlight-figure">1,141</strong>.</div>
+          <div class="acc-body">Le dollar a fortement reculé après la publication d'un CPI américain plus faible qu'attendu. L'indice DXY a baissé jusqu'à <strong class="highlight-figure">100,6</strong> avant de limiter ses pertes après les propos prudents de Kevin Warsh.</div>
         </details>
         
         <details class="acc-item" style="--cat-couleur:#3b82f6">
           <summary class="acc-summary">
             
-            <span class="acc-region" title="Global">🌐</span>
+            <span class="acc-region" title="Europe">🇪🇺</span>
             <span class="acc-pill" style="background:#3b82f622;color:#3b82f6">Marchés</span>
-            <span class="acc-title">Chute des prix du pétrole après un cessez-le-feu</span>
+            <span class="acc-title">EUR/USD stable malgré des perspectives mitigées</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">Les cours du pétrole, notamment le Brent et le WTI, ont enregistré une <strong class="highlight-phrase">chute</strong> suite à l'annonce d'un <strong class="highlight-phrase">accord de cessez-le-feu</strong>. Cette réaction des marchés illustre leur <strong class="highlight-phrase">sensibilité aux développements géopolitiques</strong>.</div>
+          <div class="acc-body">L'EUR/USD est resté proche de <strong class="highlight-figure">1,141</strong>, les perspectives de resserrement monétaire de la BCE étant toujours contrebalancées par des inquiétudes sur la croissance en zone euro.</div>
+        </details>
+        
+        <details class="acc-item" style="--cat-couleur:#3b82f6">
+          <summary class="acc-summary">
+            
+            <span class="acc-region" title="USA">🇺🇸</span>
+            <span class="acc-pill" style="background:#3b82f622;color:#3b82f6">Marchés</span>
+            <span class="acc-title">La suprématie financière américaine sous la menace</span>
+            <span class="acc-chevron">▾</span>
+          </summary>
+          <div class="acc-body">Des <strong class="highlight-phrase">nuages s'amoncellent</strong> sur la suprématie financière des États-Unis, avec les entreprises de paiement américaines potentiellement <strong class="highlight-phrase">les premières victimes</strong>. Cette situation soulève des questions sur la stabilité et la position dominante du secteur financier américain à l'échelle mondiale.</div>
         </details>
         </div>
     </div>
@@ -692,10 +836,21 @@
             
             <span class="acc-region" title="USA">🇺🇸</span>
             <span class="acc-pill" style="background:#ef444422;color:#ef4444">Macro</span>
-            <span class="acc-title">Forte décélération de l'inflation américaine en juin</span>
+            <span class="acc-title">Ralentissement significatif de l'inflation américaine</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">L'inflation américaine a connu son <strong class="highlight-phrase">plus grand ralentissement mensuel en six ans</strong>, principalement grâce à la <strong class="highlight-phrase">baisse des prix de l'énergie</strong>. Les marchés estiment désormais à <strong class="highlight-figure">83,4% la probabilité</strong> que la Fed maintienne ses taux inchangés en juillet.</div>
+          <div class="acc-body">L'inflation américaine a enregistré son <strong class="highlight-phrase">plus gros ralentissement sur un mois depuis six ans</strong>, principalement grâce à la <strong class="highlight-phrase">baisse des prix de l'énergie</strong>. Les investisseurs estiment désormais à <strong class="highlight-figure">83,4%</strong> la probabilité que la Fed (Banque centrale américaine) laisse ses taux inchangés en juillet.</div>
+        </details>
+        
+        <details class="acc-item" style="--cat-couleur:#ef4444">
+          <summary class="acc-summary">
+            
+            <span class="acc-region" title="USA">🇺🇸</span>
+            <span class="acc-pill" style="background:#ef444422;color:#ef4444">Macro</span>
+            <span class="acc-title">La Fed reste prudente malgré la baisse de l'inflation</span>
+            <span class="acc-chevron">▾</span>
+          </summary>
+          <div class="acc-body">Kevin Warsh, président de la Fed, a tempéré l'optimisme des marchés, rappelant qu'<strong class="highlight-phrase">une seule publication favorable ne suffit pas</strong> à remettre en cause la trajectoire de l'inflation. Il a réaffirmé la volonté de la banque centrale de maintenir une politique restrictive <strong class="highlight-phrase">aussi longtemps que nécessaire</strong>.</div>
         </details>
         
         <details class="acc-item" style="--cat-couleur:#ef4444">
@@ -703,10 +858,10 @@
             
             <span class="acc-region" title="Global">🌐</span>
             <span class="acc-pill" style="background:#ef444422;color:#ef4444">Macro</span>
-            <span class="acc-title">Comparaison de la santé économique États-Unis vs Europe</span>
+            <span class="acc-title">Comparaison économique entre les États-Unis et l'Europe</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">Bien que l'économie américaine soit souvent perçue comme <strong class="highlight-phrase">plus forte que l'Europe</strong>, Martin Wolf tempère cette vision, soulignant que la <strong class="highlight-phrase">croissance plus rapide des États-Unis</strong> n'a pas nécessairement conduit à une richesse relative accrue. Par ailleurs, certains experts estiment que les <strong class="highlight-phrase">mécanismes de tarification du carbone</strong> en Europe soutiennent sa compétitivité industrielle.</div>
+          <div class="acc-body">L'économie américaine demeure <strong class="highlight-phrase">plus forte que l'européenne</strong> en termes de croissance, bien que l'Europe présente des avantages en matière de <strong class="highlight-phrase">qualité de vie</strong> (espérance de vie, taux d'homicides). Martin Wolf note que la croissance américaine n'a pas nécessairement rendu le pays relativement plus riche qu'au départ.</div>
         </details>
         
         <details class="acc-item" style="--cat-couleur:#ef4444">
@@ -714,10 +869,10 @@
             
             <span class="acc-region" title="Europe">🇪🇺</span>
             <span class="acc-pill" style="background:#ef444422;color:#ef4444">Macro</span>
-            <span class="acc-title">Baisse des recettes fiscales en France</span>
+            <span class="acc-title">Le prix du carbone soutient la compétitivité européenne</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">La France enregistre une <strong class="highlight-phrase">chute de ses recettes fiscales</strong>, principalement attribuable à une <strong class="highlight-phrase">diminution des ventes de tabac et d'alcool</strong>. Cette tendance pourrait avoir des implications sur le budget de l'État.</div>
+          <div class="acc-body">Un fort prix du carbone est crucial pour la compétitivité européenne et <strong class="highlight-phrase">soutient les investissements</strong> dans des solutions nouvelles. De nombreuses entreprises comptent sur ce signal clair pour leurs décisions d'investissement, bien que Lakshmi Mittal ait remis en question l'efficacité du système actuel.</div>
         </details>
         
         <details class="acc-item" style="--cat-couleur:#ef4444">
@@ -725,10 +880,10 @@
             
             <span class="acc-region" title="Europe">🇪🇺</span>
             <span class="acc-pill" style="background:#ef444422;color:#ef4444">Macro</span>
-            <span class="acc-title">Déficit persistant des collectivités locales françaises</span>
+            <span class="acc-title">Les défis démographiques sans précédent de l'Europe</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">Les collectivités locales françaises font face à un <strong class="highlight-phrase">déficit persistant</strong>, avec un endettement global qui a atteint <strong class="highlight-figure">5% du PIB</strong>. Cette situation soulève des inquiétudes quant à leur capacité financière à long terme.</div>
+          <div class="acc-body">L'Europe fait face à des <strong class="highlight-phrase">défis démographiques inédits</strong>, notamment le vieillissement de sa population et la baisse des naissances. L'âge médian de l'UE à 27 est de <strong class="highlight-figure">44,5 ans</strong>, et la population des plus de <strong class="highlight-figure">80 ans pourrait doubler d'ici 2050</strong>, menaçant la croissance économique et les finances publiques.</div>
         </details>
         
         <details class="acc-item" style="--cat-couleur:#ef4444">
@@ -736,10 +891,10 @@
             
             <span class="acc-region" title="Europe">🇪🇺</span>
             <span class="acc-pill" style="background:#ef444422;color:#ef4444">Macro</span>
-            <span class="acc-title">Macron souligne défis économiques français</span>
+            <span class="acc-title">Baisse du chômage en Italie, pouvoir d'achat en recul</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">Emmanuel Macron a mis en évidence les principaux <strong class="highlight-phrase">défis économiques</strong> actuels pour la France, incluant l'<strong class="highlight-phrase">inflation</strong>, la question du pouvoir d'achat, le <strong class="highlight-phrase">déficit budgétaire</strong> et la nécessité de réformes des retraites et de l'assurance chômage.</div>
+          <div class="acc-body">Le taux de chômage en Italie a diminué à <strong class="highlight-figure">8,1% en mai 2022</strong>, atteignant son plus bas niveau depuis 2008. Cependant, le pouvoir d'achat des Italiens est en recul en raison d'une <strong class="highlight-phrase">inflation non compensée</strong> par les salaires, ce qui pose des défis pour les ménages.</div>
         </details>
         
         <details class="acc-item" style="--cat-couleur:#ef4444">
@@ -747,10 +902,10 @@
             
             <span class="acc-region" title="Europe">🇪🇺</span>
             <span class="acc-pill" style="background:#ef444422;color:#ef4444">Macro</span>
-            <span class="acc-title">Vieillissement de la population, défi démographique Europe</span>
+            <span class="acc-title">Baisse des recettes fiscales françaises (tabac/alcool)</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">L'Europe est confrontée à une <strong class="highlight-phrase">« équation démographique inédite »</strong> causée par le vieillissement de sa population. Ce phénomène aura des <strong class="highlight-phrase">impacts économiques significatifs</strong> sur les systèmes de retraite, la productivité et la croissance.</div>
+          <div class="acc-body">La France enregistre une <strong class="highlight-phrase">baisse des recettes fiscales</strong> provenant du tabac et de l'alcool. Le manque à gagner budgétaire est estimé à <strong class="highlight-figure">2 milliards d'euros</strong> pour le tabac seul, impactant les finances publiques et nécessitant potentiellement des ajustements budgétaires.</div>
         </details>
         
         <details class="acc-item" style="--cat-couleur:#ef4444">
@@ -758,21 +913,32 @@
             
             <span class="acc-region" title="Europe">🇪🇺</span>
             <span class="acc-pill" style="background:#ef444422;color:#ef4444">Macro</span>
-            <span class="acc-title">Chômage recule en Italie, pouvoir d'achat stagne</span>
+            <span class="acc-title">Déficits budgétaires persistants pour les collectivités locales françaises</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">En Italie, le <strong class="highlight-phrase">taux de chômage a reculé</strong>, ce qui est une bonne nouvelle pour le marché du travail. Cependant, le <strong class="highlight-phrase">pouvoir d'achat de la population stagne</strong>, limitant l'impact positif sur la consommation.</div>
+          <div class="acc-body">Les collectivités locales françaises sont confrontées à des <strong class="highlight-phrase">déficits budgétaires persistants</strong>, aggravés par l'inflation et la hausse des coûts de l'énergie. Cela exerce une pression continue sur leurs finances, limitant leurs capacités d'investissement et de services.</div>
         </details>
         
         <details class="acc-item" style="--cat-couleur:#ef4444">
           <summary class="acc-summary">
             
-            <span class="acc-region" title="Asie">🌏</span>
+            <span class="acc-region" title="Europe">🇪🇺</span>
             <span class="acc-pill" style="background:#ef444422;color:#ef4444">Macro</span>
-            <span class="acc-title">Chine pourrait peiner à financer ses ambitions tech</span>
+            <span class="acc-title">Canicule et incendies : impacts économiques en France</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">Malgré un rebond des marchés de capitaux, la Chine pourrait rencontrer des difficultés à <strong class="highlight-phrase">financer les vastes ambitions technologiques</strong> du président Xi Jinping. Cela soulève des questions sur la durabilité de ses investissements à grande échelle dans ce secteur clé.</div>
+          <div class="acc-body">La France subit une seconde vague de canicule et d'incendies, avec des <strong class="highlight-phrase">impacts économiques attendus</strong> sur l'agriculture, le tourisme et les assurances. Le calendrier des vendanges est également perturbé, ce qui pourrait affecter la production viticole nationale.</div>
+        </details>
+        
+        <details class="acc-item" style="--cat-couleur:#ef4444">
+          <summary class="acc-summary">
+            
+            <span class="acc-region" title="USA">🇺🇸</span>
+            <span class="acc-pill" style="background:#ef444422;color:#ef4444">Macro</span>
+            <span class="acc-title">Proposition de Trump : 1 000 $ pour les enfants nés durant son mandat</span>
+            <span class="acc-chevron">▾</span>
+          </summary>
+          <div class="acc-body">Le président Trump propose d'offrir <strong class="highlight-figure">1 000 dollars</strong> pour financer les comptes d'investissement des enfants nés durant son second mandat. Cette mesure vise à stimuler l'investissement à long terme et potentiellement le pouvoir d'achat des familles concernées.</div>
         </details>
         </div>
     </div>
@@ -786,10 +952,120 @@
             
             <span class="acc-region" title="USA">🇺🇸</span>
             <span class="acc-pill" style="background:#10b98122;color:#10b981">Corporate</span>
-            <span class="acc-title">Résultats exceptionnels pour grandes banques de Wall Street</span>
+            <span class="acc-title">Excellents résultats pour les banques de Wall Street</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">JPMorgan Chase, Bank of America, Citigroup et Goldman Sachs ont annoncé des <strong class="highlight-phrase">résultats trimestriels excellents</strong>. Les revenus du trading actions et obligations ont atteint <strong class="highlight-figure">38 milliards de dollars</strong>, en hausse de plus d'un tiers sur un an, et les commissions de banque d'investissement <strong class="highlight-figure">10 milliards de dollars</strong>. Les actions de Goldman, Morgan Stanley et Citigroup ont <strong class="highlight-figure">plus que doublé en 24 mois</strong>.</div>
+          <div class="acc-body">Quatre des cinq grandes banques de Wall Street (JPMorgan Chase, Bank of America, Citigroup et Goldman Sachs) ont annoncé des résultats exceptionnels. Les revenus combinés du trading d'actions et d'obligations ont atteint <strong class="highlight-figure">38 milliards de dollars</strong>, soit une hausse de <strong class="highlight-phrase">plus d'un tiers</strong> par rapport à l'année précédente et de <strong class="highlight-figure">60%</strong> sur deux ans. Les frais de banque d'investissement s'élèvent à <strong class="highlight-figure">10 milliards de dollars</strong> sur le trimestre.</div>
+        </details>
+        
+        <details class="acc-item" style="--cat-couleur:#10b981">
+          <summary class="acc-summary">
+            
+            <span class="acc-region" title="Europe">🇪🇺</span>
+            <span class="acc-pill" style="background:#10b98122;color:#10b981">Corporate</span>
+            <span class="acc-title">Airtel Africa prépare son introduction en bourse</span>
+            <span class="acc-chevron">▾</span>
+          </summary>
+          <div class="acc-body">Airtel Africa s'apprête à recruter davantage de banques d'investissement pour l'introduction en bourse de son activité de monnaie mobile à Londres, prévue dès la <strong class="highlight-phrase">seconde moitié de cette année</strong>. C'est une <strong class="highlight-phrase">rare offre publique</strong> au Royaume-Uni pour le groupe de télécommunications, visant à valoriser cette division.</div>
+        </details>
+        
+        <details class="acc-item" style="--cat-couleur:#10b981">
+          <summary class="acc-summary">
+            
+            <span class="acc-region" title="Global">🌐</span>
+            <span class="acc-pill" style="background:#10b98122;color:#10b981">Corporate</span>
+            <span class="acc-title">IBM chute après résultats inférieurs aux attentes</span>
+            <span class="acc-chevron">▾</span>
+          </summary>
+          <div class="acc-body">IBM a subi une <strong class="highlight-figure">baisse de 25%</strong> de ses actions suite à la publication de résultats préliminaires du deuxième trimestre nettement inférieurs aux attentes. Cela est dû à une <strong class="highlight-phrase">réorientation des dépenses informatiques</strong> des clients vers les infrastructures d'IA, un segment où IBM semble perdre du terrain.</div>
+        </details>
+        
+        <details class="acc-item" style="--cat-couleur:#10b981">
+          <summary class="acc-summary">
+            
+            <span class="acc-region" title="Europe">🇪🇺</span>
+            <span class="acc-pill" style="background:#10b98122;color:#10b981">Corporate</span>
+            <span class="acc-title">Succès de l'introduction en bourse du Slip Français</span>
+            <span class="acc-chevron">▾</span>
+          </summary>
+          <div class="acc-body">Pour sa première journée en Bourse, l'entreprise Le Slip Français a clôturé la séance en <strong class="highlight-figure">hausse de plus de 2%</strong>, marquant un début positif sur le marché. Cette IPO confirme l'intérêt des investisseurs pour les marques françaises de consommation.</div>
+        </details>
+        
+        <details class="acc-item" style="--cat-couleur:#10b981">
+          <summary class="acc-summary">
+            
+            <span class="acc-region" title="Europe">🇪🇺</span>
+            <span class="acc-pill" style="background:#10b98122;color:#10b981">Corporate</span>
+            <span class="acc-title">BYD vise à dépasser Toyota sans le marché américain</span>
+            <span class="acc-chevron">▾</span>
+          </summary>
+          <div class="acc-body">Un dirigeant de BYD a indiqué que l'entreprise chinoise peut <strong class="highlight-phrase">dépasser Toyota</strong> en ventes mondiales sans accès au marché américain. Cela suggère une <strong class="highlight-phrase">intensification de l'expansion agressive</strong> de BYD en Europe, où le constructeur cherche à consolider sa position sur le marché des véhicules électriques.</div>
+        </details>
+        
+        <details class="acc-item" style="--cat-couleur:#10b981">
+          <summary class="acc-summary">
+            
+            <span class="acc-region" title="Europe">🇪🇺</span>
+            <span class="acc-pill" style="background:#10b98122;color:#10b981">Corporate</span>
+            <span class="acc-title">Neko Health lève 700 M$ avec Mark Zuckerberg</span>
+            <span class="acc-chevron">▾</span>
+          </summary>
+          <div class="acc-body">Neko Health, la start-up suédoise de scan corporel de Daniel Ek, a levé <strong class="highlight-figure">700 millions de dollars</strong> lors d'un tour de financement. Des investisseurs comme Mark Zuckerberg y ont participé, valorisant l'entreprise de huit ans à près de <strong class="highlight-figure">7 milliards de dollars</strong>, soulignant l'intérêt pour les technologies de santé préventive.</div>
+        </details>
+        
+        <details class="acc-item" style="--cat-couleur:#10b981">
+          <summary class="acc-summary">
+            
+            <span class="acc-region" title="Global">🌐</span>
+            <span class="acc-pill" style="background:#10b98122;color:#10b981">Corporate</span>
+            <span class="acc-title">Oracle Cloud gagne des parts de marché</span>
+            <span class="acc-chevron">▾</span>
+          </summary>
+          <div class="acc-body">Oracle gagne des parts de marché importantes dans le secteur du cloud, en particulier avec le <strong class="highlight-phrase">déploiement de l'IA générative</strong>. L'entreprise a récemment conclu un accord de <strong class="highlight-figure">600 millions de dollars</strong> avec un client pour son infrastructure Cloud, ce qui témoigne de sa compétitivité croissante face aux leaders du secteur.</div>
+        </details>
+        
+        <details class="acc-item" style="--cat-couleur:#10b981">
+          <summary class="acc-summary">
+            
+            <span class="acc-region" title="Europe">🇪🇺</span>
+            <span class="acc-pill" style="background:#10b98122;color:#10b981">Corporate</span>
+            <span class="acc-title">Apollo prend une participation dans Bayer</span>
+            <span class="acc-chevron">▾</span>
+          </summary>
+          <div class="acc-body">La société Apollo a acquis une participation dans l'entreprise allemande Bayer. Ce mouvement pourrait signaler des <strong class="highlight-phrase">changements stratégiques à venir</strong> pour le géant pharmaceutique et agrochimique, potentiellement vers des restructurations ou des cessions d'actifs.</div>
+        </details>
+        
+        <details class="acc-item" style="--cat-couleur:#10b981">
+          <summary class="acc-summary">
+            
+            <span class="acc-region" title="Europe">🇪🇺</span>
+            <span class="acc-pill" style="background:#10b98122;color:#10b981">Corporate</span>
+            <span class="acc-title">Milliardaires s'intéressent aux opérateurs télécoms britanniques</span>
+            <span class="acc-chevron">▾</span>
+          </summary>
+          <div class="acc-body">Des milliardaires s'intéressent aux opérateurs de télécommunications britanniques, suggérant une potentielle <strong class="highlight-phrase">activité de fusions-acquisitions</strong> ou des investissements stratégiques dans le secteur. Cette attention pourrait entraîner une consolidation ou des évolutions majeures pour le marché britannique des télécoms.</div>
+        </details>
+        
+        <details class="acc-item" style="--cat-couleur:#10b981">
+          <summary class="acc-summary">
+            
+            <span class="acc-region" title="Global">🌐</span>
+            <span class="acc-pill" style="background:#10b98122;color:#10b981">Corporate</span>
+            <span class="acc-title">Stellantis redresse ses ventes grâce à l'Amérique du Nord</span>
+            <span class="acc-chevron">▾</span>
+          </summary>
+          <div class="acc-body">Stellantis a vu ses ventes se redresser, principalement grâce à la <strong class="highlight-phrase">performance du marché nord-américain</strong>. Cela indique une forte dépendance à cette région pour sa croissance actuelle, compensant d'autres marchés potentiellement plus faibles.</div>
+        </details>
+        
+        <details class="acc-item" style="--cat-couleur:#10b981">
+          <summary class="acc-summary">
+            
+            <span class="acc-region" title="Global">🌐</span>
+            <span class="acc-pill" style="background:#10b98122;color:#10b981">Corporate</span>
+            <span class="acc-title">De Beers contraint de baisser ses prix face à la demande</span>
+            <span class="acc-chevron">▾</span>
+          </summary>
+          <div class="acc-body">Le diamantier De Beers a été forcé de <strong class="highlight-phrase">réduire ses prix</strong> en réponse à une demande affaiblie. Cette décision souligne un <strong class="highlight-phrase">ralentissement sur le marché du diamant</strong>, potentiellement dû à des pressions économiques mondiales ou des changements dans les préférences des consommateurs.</div>
         </details>
         
         <details class="acc-item" style="--cat-couleur:#10b981">
@@ -797,76 +1073,10 @@
             
             <span class="acc-region" title="USA">🇺🇸</span>
             <span class="acc-pill" style="background:#10b98122;color:#10b981">Corporate</span>
-            <span class="acc-title">IBM chute après un avertissement sur résultats</span>
+            <span class="acc-title">Réglementation d'aide financière menace la science américaine</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">IBM a subi une <strong class="highlight-figure">baisse de 25%</strong> de son cours de bourse après avoir publié des résultats préliminaires du deuxième trimestre <strong class="highlight-phrase">bien inférieurs aux attentes</strong>. Cette contre-performance est attribuée au <strong class="highlight-phrase">déplacement des dépenses informatiques</strong> des clients vers les infrastructures d'IA.</div>
-        </details>
-        
-        <details class="acc-item" style="--cat-couleur:#10b981">
-          <summary class="acc-summary">
-            
-            <span class="acc-region" title="Europe">🇪🇺</span>
-            <span class="acc-pill" style="background:#10b98122;color:#10b981">Corporate</span>
-            <span class="acc-title">Le Slip Français réussit son introduction en bourse</span>
-            <span class="acc-chevron">▾</span>
-          </summary>
-          <div class="acc-body">Pour sa première journée de cotation en Bourse, l'entreprise Le Slip Français a vu son action <strong class="highlight-figure">augmenter de plus de 2%</strong>.</div>
-        </details>
-        
-        <details class="acc-item" style="--cat-couleur:#10b981">
-          <summary class="acc-summary">
-            
-            <span class="acc-region" title="Europe">🇪🇺</span>
-            <span class="acc-pill" style="background:#10b98122;color:#10b981">Corporate</span>
-            <span class="acc-title">Airtel Africa prépare une cotation à Londres</span>
-            <span class="acc-chevron">▾</span>
-          </summary>
-          <div class="acc-body">Airtel Africa engage de nouvelles banques d'investissement pour la <strong class="highlight-phrase">cotation de son activité de monnaie mobile</strong> à Londres, prévue pour le <strong class="highlight-phrase">second semestre de cette année</strong>. Ce serait une <strong class="highlight-phrase">rare introduction en bourse au Royaume-Uni</strong>.</div>
-        </details>
-        
-        <details class="acc-item" style="--cat-couleur:#10b981">
-          <summary class="acc-summary">
-            
-            <span class="acc-region" title="Europe">🇪🇺</span>
-            <span class="acc-pill" style="background:#10b98122;color:#10b981">Corporate</span>
-            <span class="acc-title">BYD intensifie son expansion en Europe</span>
-            <span class="acc-chevron">▾</span>
-          </summary>
-          <div class="acc-body">Un dirigeant de BYD a affirmé que l'entreprise pourrait <strong class="highlight-phrase">dépasser Toyota</strong> comme premier constructeur automobile mondial sans accès au marché américain. Cette déclaration signale une <strong class="highlight-phrase">expansion agressive et intensifiée</strong> de BYD sur le marché européen.</div>
-        </details>
-        
-        <details class="acc-item" style="--cat-couleur:#10b981">
-          <summary class="acc-summary">
-            
-            <span class="acc-region" title="Global">🌐</span>
-            <span class="acc-pill" style="background:#10b98122;color:#10b981">Corporate</span>
-            <span class="acc-title">Apollo prend une participation dans Bayer</span>
-            <span class="acc-chevron">▾</span>
-          </summary>
-          <div class="acc-body">La société d'investissement Apollo a acquis une participation dans le groupe allemand Bayer, signalant une opération notable sur le marché des fusions-acquisitions.</div>
-        </details>
-        
-        <details class="acc-item" style="--cat-couleur:#10b981">
-          <summary class="acc-summary">
-            
-            <span class="acc-region" title="Global">🌐</span>
-            <span class="acc-pill" style="background:#10b98122;color:#10b981">Corporate</span>
-            <span class="acc-title">Stellantis redresse ses ventes mondiales</span>
-            <span class="acc-chevron">▾</span>
-          </summary>
-          <div class="acc-body">Le constructeur automobile Stellantis a annoncé un <strong class="highlight-phrase">redressement de ses ventes</strong>, avec des performances particulièrement bonnes en <strong class="highlight-phrase">Amérique du Nord</strong>. Cela marque une amélioration pour le groupe sur les marchés clés.</div>
-        </details>
-        
-        <details class="acc-item" style="--cat-couleur:#10b981">
-          <summary class="acc-summary">
-            
-            <span class="acc-region" title="Global">🌐</span>
-            <span class="acc-pill" style="background:#10b98122;color:#10b981">Corporate</span>
-            <span class="acc-title">De Beers réduit ses prix face au marché</span>
-            <span class="acc-chevron">▾</span>
-          </summary>
-          <div class="acc-body">Le géant du diamant De Beers est contraint de <strong class="highlight-phrase">réduire ses prix</strong> face à un marché difficile et une demande affaiblie. Cette stratégie de « soldes » vise à stimuler les ventes dans un contexte économique tendu.</div>
+          <div class="acc-body">La nouvelle «Réglementation pour l'assistance financière fédérale» pourrait sonner le <strong class="highlight-phrase">glas de la science américaine</strong>. Elle risque de compromettre le financement et la recherche scientifique aux États-Unis, en imposant des contraintes ou en réduisant les aides disponibles.</div>
         </details>
         </div>
     </div>
@@ -878,23 +1088,67 @@
         <details class="acc-item" style="--cat-couleur:#8b5cf6">
           <summary class="acc-summary">
             
-            <span class="acc-region" title="Europe">🇪🇺</span>
+            <span class="acc-region" title="Global">🌐</span>
             <span class="acc-pill" style="background:#8b5cf622;color:#8b5cf6">Tech</span>
-            <span class="acc-title">Neko Health lève 700 millions de dollars</span>
+            <span class="acc-title">IBM chute suite à un avertissement sur les bénéfices et la priorité à l'IA</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">Neko Health, la startup de scan corporel de Daniel Ek, a levé <strong class="highlight-figure">700 millions de dollars</strong> lors d'un tour de financement. Des investisseurs comme Mark Zuckerberg y ont participé, valorisant la société suédoise à près de <strong class="highlight-figure">7 milliards de dollars</strong>.</div>
+          <div class="acc-body">IBM a subi une <strong class="highlight-figure">chute de 25%</strong> de ses actions après avoir émis un avertissement sur ses bénéfices pour le deuxième trimestre, avec des résultats préliminaires bien en deçà des attentes. Cette contre-performance est principalement attribuée au <strong class="highlight-phrase">déplacement des dépenses informatiques</strong> des clients vers les infrastructures d'intelligence artificielle, un segment où IBM semble du mal à capter pleinement la croissance actuelle.</div>
         </details>
         
-        <details class="acc-item" style="--cat-couleur:#f97316">
+        <details class="acc-item" style="--cat-couleur:#8b5cf6">
           <summary class="acc-summary">
             
             <span class="acc-region" title="Global">🌐</span>
-            <span class="acc-pill" style="background:#f9731622;color:#f97316">IA</span>
-            <span class="acc-title">Oracle remporte des contrats pour data centers IA</span>
+            <span class="acc-pill" style="background:#8b5cf622;color:#8b5cf6">Tech</span>
+            <span class="acc-title">Les investissements en IA stimulent les affaires des banques</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">Oracle gagne des <strong class="highlight-phrase">contrats significatifs</strong> auprès d'entreprises cherchant à construire leurs propres centres de données dédiés à l'intelligence artificielle, affirmant ainsi sa position dans l'infrastructure IA.</div>
+          <div class="acc-body">Jamie Dimon et David Solomon sont optimistes quant aux <strong class="highlight-phrase">trillions de dollars</strong> d'investissements potentiels dans l'IA qui soutiendront leurs activités. Les « hyperscalers » se tournent vers les marchés d'actions et d'obligations pour lever des <strong class="highlight-phrase">milliards de capitaux frais</strong> pour l'infrastructure d'IA, encore à ses <strong class="highlight-phrase">stades précoces</strong>, générant d'importantes commissions pour les banques.</div>
+        </details>
+        
+        <details class="acc-item" style="--cat-couleur:#8b5cf6">
+          <summary class="acc-summary">
+            
+            <span class="acc-region" title="Europe">🇪🇺</span>
+            <span class="acc-pill" style="background:#8b5cf622;color:#8b5cf6">Tech</span>
+            <span class="acc-title">Neko Health lève 700 M$ avec Mark Zuckerberg</span>
+            <span class="acc-chevron">▾</span>
+          </summary>
+          <div class="acc-body">Neko Health, la start-up suédoise de scan corporel de Daniel Ek, a levé <strong class="highlight-figure">700 millions de dollars</strong> lors d'un tour de financement. Des investisseurs comme Mark Zuckerberg y ont participé, valorisant l'entreprise de huit ans à près de <strong class="highlight-figure">7 milliards de dollars</strong>, confirmant l'attrait des investisseurs pour l'IA appliquée à la santé.</div>
+        </details>
+        
+        <details class="acc-item" style="--cat-couleur:#8b5cf6">
+          <summary class="acc-summary">
+            
+            <span class="acc-region" title="Global">🌐</span>
+            <span class="acc-pill" style="background:#8b5cf622;color:#8b5cf6">Tech</span>
+            <span class="acc-title">Oracle Cloud gagne des parts de marché</span>
+            <span class="acc-chevron">▾</span>
+          </summary>
+          <div class="acc-body">Oracle gagne des parts de marché importantes dans le secteur du cloud, en particulier avec le <strong class="highlight-phrase">déploiement de l'IA générative</strong>. L'entreprise a récemment conclu un accord de <strong class="highlight-figure">600 millions de dollars</strong> avec un client pour son infrastructure Cloud, démontrant sa capacité à s'adapter et à innover dans ce domaine en pleine expansion.</div>
+        </details>
+        
+        <details class="acc-item" style="--cat-couleur:#8b5cf6">
+          <summary class="acc-summary">
+            
+            <span class="acc-region" title="Asie">🌏</span>
+            <span class="acc-pill" style="background:#8b5cf622;color:#8b5cf6">Tech</span>
+            <span class="acc-title">La Chine pourrait peiner à financer ses ambitions technologiques</span>
+            <span class="acc-chevron">▾</span>
+          </summary>
+          <div class="acc-body">Malgré une reprise des marchés de capitaux, la Chine pourrait rencontrer des difficultés à <strong class="highlight-phrase">financer les ambitions technologiques</strong> de Xi Jinping. Cela soulève des questions sur la <strong class="highlight-phrase">durabilité de son programme</strong> d'innovation et sa capacité à rivaliser avec les leaders mondiaux sur le long terme.</div>
+        </details>
+        
+        <details class="acc-item" style="--cat-couleur:#8b5cf6">
+          <summary class="acc-summary">
+            
+            <span class="acc-region" title="Europe">🇪🇺</span>
+            <span class="acc-pill" style="background:#8b5cf622;color:#8b5cf6">Tech</span>
+            <span class="acc-title">Le «Click to Pay» gagne du terrain en France</span>
+            <span class="acc-chevron">▾</span>
+          </summary>
+          <div class="acc-body">La solution de paiement en ligne simplifiée, «Click to Pay», gagne en popularité en France. Elle offre une <strong class="highlight-phrase">alternative conviviale</strong> et sécurisée aux méthodes de paiement traditionnelles en ligne, répondant à une demande de fluidité et de rapidité dans les transactions.</div>
         </details>
         </div>
     </div>
@@ -903,37 +1157,26 @@
       <h2 class="tab-title">📋 Briefing complet</h2>
       
       <div class="acc-list">
-        <details class="acc-item" style="--cat-couleur:#ef4444">
-          <summary class="acc-summary">
-            
-            <span class="acc-region" title="USA">🇺🇸</span>
-            <span class="acc-pill" style="background:#ef444422;color:#ef4444">Macro</span>
-            <span class="acc-title">L'inflation américaine de juin surprend à la baisse</span>
-            <span class="acc-chevron">▾</span>
-          </summary>
-          <div class="acc-body">L'inflation globale aux États-Unis a enregistré sa <strong class="highlight-phrase">première baisse mensuelle en six ans</strong> en juin, un développement qui a <strong class="highlight-phrase">nettement surpassé les attentes</strong> des économistes et des marchés. Cette modération inattendue a entraîné une <strong class="highlight-phrase">réduction significative des anticipations de politique monétaire</strong> de la part des investisseurs, qui estiment désormais à <strong class="highlight-figure">83,4% la probabilité</strong> que la Réserve fédérale maintienne ses taux inchangés lors de sa prochaine réunion de juillet. Cependant, Kevin Warsh, président de la Fed, a rapidement tempéré cet optimisme lors de son audition devant le Congrès, soulignant qu'<strong class="highlight-phrase">une seule publication favorable ne suffit pas</strong> à remettre en cause la trajectoire inflationniste et réaffirmant la volonté de la banque centrale de maintenir une politique restrictive aussi longtemps que nécessaire. Les marchés ont initialement réagi par un fort rally des Treasuries, mais la prudence est revenue après ces commentaires, soulignant la <strong class="highlight-phrase">volatilité des attentes</strong> face aux données macroéconomiques et aux déclarations des banquiers centraux.</div>
-        </details>
-        
-        <details class="acc-item" style="--cat-couleur:#10b981">
-          <summary class="acc-summary">
-            
-            <span class="acc-region" title="USA">🇺🇸</span>
-            <span class="acc-pill" style="background:#10b98122;color:#10b981">Corporate</span>
-            <span class="acc-title">Profits records pour les géants bancaires de Wall Street</span>
-            <span class="acc-chevron">▾</span>
-          </summary>
-          <div class="acc-body">Quatre des cinq grandes banques de Wall Street, à savoir JPMorgan Chase, Bank of America, Citigroup et Goldman Sachs, ont annoncé des <strong class="highlight-phrase">résultats trimestriels exceptionnels</strong>, largement alimentés par une activité intense. Les revenus agrégés du trading d'actions et d'obligations pour ces quatre institutions ont atteint <strong class="highlight-figure">38 milliards de dollars</strong>, marquant une croissance de plus d'un tiers par rapport à l'année précédente et de <strong class="highlight-figure">60% sur deux ans</strong>. Les commissions de banque d'investissement ont également été robustes, totalisant <strong class="highlight-figure">10 milliards de dollars</strong> sur le trimestre. Tandis que les actions de Goldman, Morgan Stanley et Citigroup ont <strong class="highlight-figure">plus que doublé en 24 mois</strong>, JPMorgan et Bank of America, avec leurs opérations de banque commerciale et de détail étendues, ont connu des hausses moins spectaculaires. Ces performances exceptionnelles sont attribuées à la <strong class="highlight-phrase">volatilité des marchés liée à l'IA</strong> et à la déréglementation, avec l'IPO de SpaceX générant à elle seule <strong class="highlight-figure">500 millions de dollars de frais</strong> pour Wall Street, renforçant la position de Goldman Sachs comme acteur majeur. Le PDG de JPMorgan, Jamie Dimon, a reconnu que l'on approchait peut-être d'un pic, mais reste optimiste quant à l'impact des <strong class="highlight-phrase">« trillions de dollars » de dépenses liés à l'IA</strong> sur leurs activités futures.</div>
-        </details>
-        
         <details class="acc-item" style="--cat-couleur:#f59e0b">
           <summary class="acc-summary">
             
             <span class="acc-region" title="Global">🌐</span>
             <span class="acc-pill" style="background:#f59e0b22;color:#f59e0b">Géopolitique</span>
-            <span class="acc-title">Tensions US-Iran ravivent craintes pétrolières</span>
+            <span class="acc-title">Le prix du Brent flambe à plus de 100 $ sur fond de tensions Iran-USA</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">Les tensions géopolitiques entre les États-Unis et l'Iran connaissent une <strong class="highlight-phrase">escalade marquée</strong>, avec des informations faisant état de frappes ciblées dans le détroit d'Ormuz, une voie maritime essentielle pour le commerce mondial de pétrole. Cette situation a directement eu un impact sur les marchés de l'énergie, le prix du Brent s'établissant au-dessus de <strong class="highlight-figure">80 dollars le baril</strong>, avec la prévision qu'il pourrait <strong class="highlight-figure">atteindre 90 dollars</strong>. Donald Trump aurait intensifié les <strong class="highlight-phrase">« frappes quasi-quotidiennes » contre l'Iran</strong>, créant une incertitude quant à la capacité des États-Unis à gérer les coûts de cette escalade, en particulier à l'approche des élections de mi-mandat. Cette dynamique géopolitique persistante entretient un <strong class="highlight-phrase">biais inflationniste</strong> sur les marchés pétroliers et continue de conditionner les anticipations de politique monétaire des banques centrales, qui doivent intégrer ce risque dans leurs stratégies.</div>
+          <div class="acc-body">Le baril de Brent a atteint <strong class="highlight-figure">plus de 100 dollars</strong>, marquant une escalade significative sur les marchés pétroliers après de nouvelles sanctions visant l'Iran et un renforcement militaire américain dans le Golfe. Cette hausse spectaculaire, bien au-delà du seuil des <strong class="highlight-figure">80 dollars</strong> observé récemment, reflète les <strong class="highlight-phrase">inquiétudes croissantes</strong> des marchés concernant l'approvisionnement mondial en énergie, les tensions géopolitiques dans le détroit d'Ormuz maintenant un <strong class="highlight-phrase">biais inflationniste persistant</strong>. Les États-Unis et l'Iran mènent des frappes ciblées, signalant une volonté mutuelle d'intensifier la confrontation pour le contrôle de cette voie maritime stratégique cruciale. Les experts craignent que le prix ne se dirige vers les <strong class="highlight-figure">90 dollars</strong> voire plus si la situation ne s'apaise pas, avec des perturbations dans le détroit d'Ormuz qui alimentent toujours les incertitudes sur la fluidité de l'approvisionnement.</div>
+        </details>
+        
+        <details class="acc-item" style="--cat-couleur:#ef4444">
+          <summary class="acc-summary">
+            
+            <span class="acc-region" title="USA">🇺🇸</span>
+            <span class="acc-pill" style="background:#ef444422;color:#ef4444">Macro</span>
+            <span class="acc-title">L'inflation américaine surprend à la baisse, mais la Fed appelle à la prudence</span>
+            <span class="acc-chevron">▾</span>
+          </summary>
+          <div class="acc-body">L'inflation globale américaine a <strong class="highlight-phrase">surpris à la baisse en juin</strong>, enregistrant sa première diminution mensuelle depuis <strong class="highlight-phrase">six ans</strong>, principalement grâce à la <strong class="highlight-phrase">chute des prix de l'énergie</strong>. Cette publication a entraîné un net ajustement des anticipations de politique monétaire, les marchés réduisant sensiblement la probabilité d'une nouvelle hausse de taux de la Fed à court terme, estimée à seulement <strong class="highlight-figure">16,6%</strong> d'après les cotations des investisseurs. Cependant, Kevin Warsh, président de la Fed, a immédiatement tempéré cet optimisme lors de son audition devant le Congrès. Il a rappelé qu'<strong class="highlight-phrase">une seule publication favorable ne suffisait pas</strong> à remettre en cause la trajectoire de l'inflation et a réaffirmé la volonté de la banque centrale de maintenir une politique restrictive <strong class="highlight-phrase">aussi longtemps que nécessaire</strong>, signalant que le scénario de fond n'est pas fondamentalement modifié.</div>
         </details>
         
         <details class="acc-item" style="--cat-couleur:#10b981">
@@ -941,10 +1184,10 @@
             
             <span class="acc-region" title="USA">🇺🇸</span>
             <span class="acc-pill" style="background:#10b98122;color:#10b981">Corporate</span>
-            <span class="acc-title">IBM s'effondre après un avertissement sur résultats</span>
+            <span class="acc-title">Profits records pour les grandes banques de Wall Street grâce à la volatilité et l'IA</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">IBM a subi un <strong class="highlight-phrase">revers important en bourse</strong>, ses actions chutant de <strong class="highlight-figure">plus de 20%</strong>, après avoir publié des résultats préliminaires pour le deuxième trimestre qui se sont révélés <strong class="highlight-phrase">bien en deçà des attentes</strong>. Cette performance décevante est principalement due à la décision des clients de <strong class="highlight-phrase">réorienter leurs dépenses informatiques</strong> de manière significative vers les infrastructures dédiées à l'intelligence artificielle. Les entreprises anticipent des augmentations de prix dans ce domaine et ajustent leurs budgets en conséquence, ce qui a directement impacté les revenus d'IBM. Cet événement met en lumière les <strong class="highlight-phrase">défis majeurs auxquels sont confrontés les acteurs technologiques établis</strong> face à la rapide transformation du marché dictée par l'essor de l'IA, exigeant des investissements massifs et une adaptation rapide des offres de services.</div>
+          <div class="acc-body">Quatre des plus grandes banques de Wall Street – JPMorgan Chase, Bank of America, Citigroup et Goldman Sachs – ont annoncé des <strong class="highlight-phrase">profits du deuxième trimestre exceptionnels</strong>, dépassant largement les attentes du marché. Leurs revenus combinés de trading d'actions et d'obligations ont totalisé un impressionnant <strong class="highlight-figure">38 milliards de dollars</strong>, marquant une croissance de <strong class="highlight-phrase">plus d'un tiers</strong> sur un an et même de <strong class="highlight-figure">60%</strong> sur deux ans. Cette performance a été largement stimulée par la forte volatilité des marchés, notamment autour des actions liées à l'intelligence artificielle, créant un « environnement idéal » pour les activités de trading, et par des mesures de déréglementation qui ont libéré des ressources financières. Les frais de banque d'investissement ont également contribué de manière significative, s'élevant à <strong class="highlight-figure">10 milliards de dollars</strong> sur le trimestre, avec notamment l'introduction en bourse record de SpaceX qui a généré <strong class="highlight-figure">500 millions de dollars</strong> en frais pour l'ensemble de Wall Street. Goldman Sachs a enregistré ses <strong class="highlight-phrase">plus hauts profits en cinq ans</strong>, tandis que JPMorgan a réalisé un trimestre record, bien que son PDG Jamie Dimon ait mis en garde que la situation est « proche du sommet » et que sa durée reste incertaine. Les dirigeants restent néanmoins optimistes quant aux « trillions de dollars » d'investissements futurs dans l'IA qui devraient soutenir leurs activités, les entreprises technologiques se tournant vers les marchés pour lever des « milliards de capitaux frais ».</div>
         </details>
         
         <details class="acc-item" style="--cat-couleur:#f59e0b">
@@ -952,32 +1195,21 @@
             
             <span class="acc-region" title="Europe">🇪🇺</span>
             <span class="acc-pill" style="background:#f59e0b22;color:#f59e0b">Géopolitique</span>
-            <span class="acc-title">Ukraine achète composants de drones chinois avec fonds UE</span>
+            <span class="acc-title">L'Ukraine achète des composants de drones chinois avec des fonds européens, soulignant les lacunes de l'UE</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">L'Ukraine a reçu l'approbation pour utiliser une partie significative d'un prêt de défense de l'Union européenne, soit <strong class="highlight-figure">6 milliards d'euros</strong> sur un programme global de <strong class="highlight-figure">60 milliards d'euros</strong>, afin d'acquérir des <strong class="highlight-phrase">composants de drones auprès de fournisseurs chinois</strong>. Cette décision cruciale met en évidence les <strong class="highlight-phrase">lacunes persistantes dans la capacité de production de défense de l'UE</strong>, malgré les efforts déployés pour renforcer la base industrielle du continent et lier l'aide à l'Ukraine à des achats intra-européens. Parallèlement, cette situation souligne le <strong class="highlight-phrase">rôle complexe et ambigu de la Chine</strong> dans le conflit, Pékin étant considéré comme un <strong class="highlight-phrase">« facilitateur clé de la guerre de la Russie »</strong> tout en fournissant des éléments essentiels à l'industrie de l'armement ukrainienne.</div>
+          <div class="acc-body">Kyiv a obtenu une dérogation spéciale pour dépenser une partie d'une tranche de <strong class="highlight-figure">6 milliards d'euros</strong> issue d'un prêt de défense de l'UE pour l'achat de composants de drones en Chine. Cette décision, qui s'inscrit dans un programme de soutien plus vaste de <strong class="highlight-figure">60 milliards d'euros</strong> visant à renforcer la base industrielle européenne, met en lumière les <strong class="highlight-phrase">lacunes persistantes de la production de défense</strong> européenne, malgré les efforts consentis. Elle révèle également le rôle ambigu de la Chine dans le conflit, qui, tout en étant accusée par l'UE d'être un « facilitateur clé de la guerre de la Russie » par ses livraisons à Moscou, fournit aussi des composants essentiels à l'industrie d'armement ukrainienne, créant une situation géopolitique complexe et interdépendante. La décision est un rappel brutal des réalités de la chaîne d'approvisionnement mondiale.</div>
         </details>
         
-        <details class="acc-item" style="--cat-couleur:#10b981">
+        <details class="acc-item" style="--cat-couleur:#8b5cf6">
           <summary class="acc-summary">
             
-            <span class="acc-region" title="Europe">🇪🇺</span>
-            <span class="acc-pill" style="background:#10b98122;color:#10b981">Corporate</span>
-            <span class="acc-title">Airtel Africa prépare une cotation à Londres</span>
+            <span class="acc-region" title="Global">🌐</span>
+            <span class="acc-pill" style="background:#8b5cf622;color:#8b5cf6">Tech</span>
+            <span class="acc-title">IBM subit une chute historique après un avertissement sur les bénéfices lié au virage vers l'IA</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">Airtel Africa est en train de renforcer son équipe de banques d'investissement en vue d'une <strong class="highlight-phrase">cotation à Londres de son activité de monnaie mobile</strong>, une opération prévue dès le <strong class="highlight-phrase">second semestre de cette année</strong>. Cette introduction en bourse représenterait une <strong class="highlight-phrase">rare offre publique au Royaume-Uni</strong>, et s'inscrit dans un contexte où le marché londonien cherche à attirer davantage de listings d'envergure. La division de monnaie mobile d'Airtel Africa, bénéficiant d'une croissance significative, pourrait attirer un intérêt considérable de la part des investisseurs cherchant des opportunités sur les marchés émergents.</div>
-        </details>
-        
-        <details class="acc-item" style="--cat-couleur:#10b981">
-          <summary class="acc-summary">
-            
-            <span class="acc-region" title="Europe">🇪🇺</span>
-            <span class="acc-pill" style="background:#10b98122;color:#10b981">Corporate</span>
-            <span class="acc-title">BYD intensifie son expansion en Europe</span>
-            <span class="acc-chevron">▾</span>
-          </summary>
-          <div class="acc-body">Un dirigeant de BYD a fait une déclaration audacieuse en affirmant que le constructeur automobile chinois pourrait <strong class="highlight-phrase">dépasser Toyota</strong> pour devenir le plus grand au monde en termes de ventes, et ce, <strong class="highlight-phrase">sans même avoir accès au marché américain</strong>. Cette ambition est étayée par une stratégie d'<strong class="highlight-phrase">expansion agressive et intensifiée en Europe</strong>, où BYD déploie activement ses véhicules électriques. L'entreprise chinoise cherche à capitaliser sur la demande croissante de véhicules électriques sur le continent, concurrençant directement les marques européennes établies et les acteurs américains comme Tesla.</div>
+          <div class="acc-body">IBM a subi une <strong class="highlight-figure">chute spectaculaire de 25%</strong> de la valeur de ses actions après avoir émis un avertissement sur ses bénéfices pour le deuxième trimestre, annonçant des résultats préliminaires bien en deçà des prévisions des analystes. Cette sous-performance majeure est principalement attribuée à un <strong class="highlight-phrase">changement significatif dans les dépenses informatiques</strong> des entreprises, qui réorientent massivement leurs budgets vers les infrastructures d'intelligence artificielle. Les clients accélèrent leurs investissements dans l'IA, modifiant radicalement les priorités budgétaires IT et impactant négativement les lignes de produits traditionnels d'IBM, montrant que le groupe peine à s'adapter rapidement à cette mutation du marché technologique. Les autres géants technologiques profitent davantage de l'explosion des investissements dans l'IA, laissant IBM en difficulté sur ce segment en forte croissance.</div>
         </details>
         
         <details class="acc-item" style="--cat-couleur:#ef4444">
@@ -985,10 +1217,21 @@
             
             <span class="acc-region" title="Europe">🇪🇺</span>
             <span class="acc-pill" style="background:#ef444422;color:#ef4444">Macro</span>
-            <span class="acc-title">Speculation sur le Chancelier britannique après Mansion House</span>
+            <span class="acc-title">Les défis démographiques de l'Europe menacent sa croissance économique et ses finances publiques</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">L'actuelle Chancelière britannique, Rachel Reeves, a été au centre de toutes les conversations lors du prestigieux dîner de Mansion House, où la spéculation concernant son potentiel remplacement, notamment par <strong class="highlight-phrase">Shabana Mahmood</strong>, a dominé les discussions. Malgré cette atmosphère d'incertitude quant à son avenir politique, Mme Reeves a fait preuve d'aplomb et a reçu un <strong class="highlight-phrase">accueil chaleureux inattendu</strong> de la part des patrons de la City. Ce soutien pourrait refléter un regret face aux contraintes qui l'ont empêchée de pleinement concrétiser ses promesses pro-business, alors que la position du prochain Chancelier reste une énigme cruciale pour les marchés et la politique économique britannique.</div>
+          <div class="acc-body">L'Europe est confrontée à des <strong class="highlight-phrase">défis démographiques sans précédent</strong>, caractérisés par un vieillissement rapide de sa population et une baisse continue des taux de natalité, ce qui soulève des questions fondamentales sur son avenir économique. L'âge médian au sein de l'UE à 27 a atteint <strong class="highlight-figure">44,5 ans</strong>, et les projections indiquent que la population des plus de <strong class="highlight-figure">80 ans pourrait doubler d'ici 2050</strong>, accentuant la pression sur les systèmes sociaux. Cette transformation démographique représente une <strong class="highlight-phrase">menace significative pour la croissance économique</strong> future de la région, car elle implique une diminution progressive de la main-d'œuvre active, une augmentation des dépenses de santé et de retraite, et exerce une pression considérable sur les finances publiques des États membres. Des réformes structurelles urgentes sont nécessaires pour atténuer ces impacts et adapter les économies européennes à cette nouvelle réalité.</div>
+        </details>
+        
+        <details class="acc-item" style="--cat-couleur:#10b981">
+          <summary class="acc-summary">
+            
+            <span class="acc-region" title="Europe">🇪🇺</span>
+            <span class="acc-pill" style="background:#10b98122;color:#10b981">Corporate</span>
+            <span class="acc-title">Airtel Africa prépare son introduction en bourse à Londres pour la seconde moitié de l'année</span>
+            <span class="acc-chevron">▾</span>
+          </summary>
+          <div class="acc-body">Airtel Africa s'apprête à recruter davantage de banques d'investissement pour l'introduction en bourse de son activité de monnaie mobile à Londres. Cette cotation est attendue dès la <strong class="highlight-phrase">seconde moitié de cette année</strong>, ce qui en ferait une <strong class="highlight-phrase">rare offre publique</strong> significative au Royaume-Uni. Cette opération vise à capitaliser sur la forte croissance du secteur des services financiers mobiles en Afrique, où Airtel est un acteur majeur. L'entreprise cherche à valoriser cette division spécifique pour attirer des capitaux et financer son expansion future, soulignant l'attractivité des marchés financiers londoniens pour les entreprises opérant dans les économies émergentes.</div>
         </details>
         
         <details class="acc-item" style="--cat-couleur:#f59e0b">
@@ -996,32 +1239,10 @@
             
             <span class="acc-region" title="Europe">🇪🇺</span>
             <span class="acc-pill" style="background:#f59e0b22;color:#f59e0b">Géopolitique</span>
-            <span class="acc-title">Gibraltar et l'Espagne signent un traité de libre circulation</span>
+            <span class="acc-title">Gibraltar rejoint l'espace Schengen après 10 ans de Brexit</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">Gibraltar et l'Espagne ont franchi une étape historique en signant à Bruxelles, sous l'égide de la Commission européenne, un <strong class="highlight-phrase">traité de libre circulation</strong>. Cet accord met fin aux <strong class="highlight-figure">contrôles frontaliers rigoureux en vigueur depuis 1985</strong>, marquant une nouvelle ère de coopération entre les deux territoires. Cette décision devrait apporter un <strong class="highlight-figure">soulagement considérable aux 15 000 travailleurs transfrontaliers</strong> qui traversent quotidiennement la frontière, en facilitant leurs déplacements et en stimulant les échanges économiques locaux.</div>
-        </details>
-        
-        <details class="acc-item" style="--cat-couleur:#10b981">
-          <summary class="acc-summary">
-            
-            <span class="acc-region" title="Europe">🇪🇺</span>
-            <span class="acc-pill" style="background:#10b98122;color:#10b981">Corporate</span>
-            <span class="acc-title">Le Slip Français réussit son introduction en bourse</span>
-            <span class="acc-chevron">▾</span>
-          </summary>
-          <div class="acc-body">L'entreprise Le Slip Français a fait ses débuts en Bourse avec succès, enregistrant une <strong class="highlight-figure">hausse de plus de 2%</strong> de son cours de l'action dès sa première journée de cotation. Cette performance initiale positive indique une <strong class="highlight-phrase">confiance des investisseurs</strong> dans le modèle économique et les perspectives de croissance de la marque, connue pour son engagement dans la production locale et son image de marque forte. Le marché a visiblement bien accueilli cette nouvelle entrée, soulignant un intérêt pour les entreprises à fort ancrage local et portées par une image de durabilité.</div>
-        </details>
-        
-        <details class="acc-item" style="--cat-couleur:#ef4444">
-          <summary class="acc-summary">
-            
-            <span class="acc-region" title="Global">🌐</span>
-            <span class="acc-pill" style="background:#ef444422;color:#ef4444">Macro</span>
-            <span class="acc-title">Comparaison de la santé économique États-Unis vs Europe</span>
-            <span class="acc-chevron">▾</span>
-          </summary>
-          <div class="acc-body">Le débat sur la santé économique comparée des États-Unis et de l'Europe se poursuit, avec une perception générale selon laquelle l'économie européenne serait en déclin par rapport à son homologue américaine. Martin Wolf, cependant, offre une analyse plus nuancée, reconnaissant que si les États-Unis ont effectivement enregistré une <strong class="highlight-phrase">croissance plus rapide</strong>, cela ne signifie pas nécessairement qu'ils sont devenus relativement plus riches qu'auparavant. Par ailleurs, une lettre d'Eliot Whittington met en lumière l'importance d'une <strong class="highlight-phrase">tarification forte du carbone</strong> en Europe, qui, loin de freiner l'industrie, est perçue par de nombreuses entreprises comme un facteur essentiel pour soutenir la compétitivité et les investissements dans des solutions durables, notamment dans les secteurs de la technologie propre et de l'industrie lourde. Cela suggère que la politique environnementale européenne peut être un moteur économique.</div>
+          <div class="acc-body">Gibraltar a officiellement rejoint l'espace Schengen, <strong class="highlight-phrase">dix ans après le Brexit</strong>, marquant une étape significative dans la redéfinition de ses relations avec l'Union européenne. La signature d'un traité de libre circulation à Bruxelles, sous l'égide de la Commission européenne, lève <strong class="highlight-figure">dès aujourd'hui les contrôles frontaliers en vigueur depuis 1985</strong>. Cette intégration renforce considérablement ses liens avec l'Espagne et devrait grandement soulager les <strong class="highlight-figure">15 000 travailleurs transfrontaliers</strong> quotidiens, facilitant les échanges économiques et humains dans la région, et mettant fin à une décennie d'incertitudes post-Brexit.</div>
         </details>
         
         <details class="acc-item" style="--cat-couleur:#f59e0b">
@@ -1029,10 +1250,10 @@
             
             <span class="acc-region" title="Europe">🇪🇺</span>
             <span class="acc-pill" style="background:#f59e0b22;color:#f59e0b">Géopolitique</span>
-            <span class="acc-title">Conférence à Paris pour la reconstruction Ukraine</span>
+            <span class="acc-title">Trente-sept pays promettent 1,7 milliard d'euros d'aide d'urgence à l'Ukraine</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">Une conférence internationale se tient à Paris, réunissant des représentants de <strong class="highlight-figure">37 pays</strong>, dans le but de coordonner et de mobiliser les ressources nécessaires à la <strong class="highlight-phrase">reconstruction de l'Ukraine</strong>. Cet événement vise à apporter un soutien financier et technique substantiel face aux destructions massives causées par le conflit. Les discussions portent sur les priorités de reconstruction, les mécanismes de financement et l'implication de la communauté internationale pour aider l'Ukraine à se relever. L'UE et la communauté internationale ont également mobilisé près de <strong class="highlight-figure">900 millions d'euros</strong> pour Gaza, soulignant l'ampleur des besoins humanitaires et de reconstruction dans plusieurs régions du monde.</div>
+          <div class="acc-body"><strong class="highlight-phrase">Trente-sept pays</strong> ont réaffirmé leur soutien à Kyiv et promis une <strong class="highlight-figure">aide d'urgence de 1,7 milliard d'euros</strong> pour l'Ukraine. Cette somme s'ajoute aux soutiens financiers et militaires déjà apportés par la communauté internationale et vise à répondre aux besoins immédiats du pays dévasté par le conflit. Cette nouvelle enveloppe financière souligne la détermination continue des alliés à soutenir l'Ukraine face à l'agression, malgré les préoccupations croissantes concernant la production de défense européenne et l'approvisionnement en composants stratégiques, parfois même d'origine chinoise, comme révélé par l'utilisation de fonds européens pour des drones.</div>
         </details>
         
         <details class="acc-item" style="--cat-couleur:#ef4444">
@@ -1040,10 +1261,32 @@
             
             <span class="acc-region" title="Europe">🇪🇺</span>
             <span class="acc-pill" style="background:#ef444422;color:#ef4444">Macro</span>
-            <span class="acc-title">Baisse des recettes fiscales en France</span>
+            <span class="acc-title">Volatilité des taux euro et révision des anticipations de la BCE suite à l'inflation américaine</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">La France fait face à une <strong class="highlight-phrase">diminution notable de ses recettes fiscales</strong>, une tendance principalement attribuée à une <strong class="highlight-phrase">baisse des ventes de tabac et d'alcool</strong>. Cette contraction des revenus fiscaux met la pression sur le budget de l'État, d'autant plus que le président Emmanuel Macron a récemment souligné les multiples défis économiques du pays. Parmi ceux-ci figurent l'inflation persistante, la question du pouvoir d'achat, un déficit budgétaire élevé, et la nécessité de réformes structurantes telles que celles des retraites et de l'assurance chômage. Cette situation pourrait contraindre le gouvernement à ajuster ses prévisions budgétaires et à envisager de nouvelles mesures.</div>
+          <div class="acc-body">Les taux euro ont connu une séance particulièrement volatile, initialement pénalisés par la poursuite de la hausse des prix du pétrole avant d'effacer une grande partie de leurs hausses après la publication d'une inflation américaine plus faible qu'attendu. Les anticipations de resserrement de la Banque Centrale Européenne (BCE) ont ainsi été revues à la baisse en fin de séance, le marché ne prévoyant plus qu'environ <strong class="highlight-figure">40 points de base</strong> de hausses d'ici décembre, contre près de <strong class="highlight-figure">50 points de base</strong> au pic de la journée. Le Bund 10 ans a clôturé quasi inchangé autour de <strong class="highlight-figure">3,11 %</strong>, après avoir brièvement dépassé 3,15 %, tandis que le Schatz 2 ans a terminé légèrement plus haut autour de <strong class="highlight-figure">2,76 %</strong>. Les courbes de taux conservent un biais de «bear flattening», le segment court restant sous pression malgré le rebond de fin de séance. Le rendement du 2 ans américain a reculé d'environ <strong class="highlight-figure">10 points de base</strong>, les investisseurs réduisant leurs anticipations de resserrement de la Fed.</div>
+        </details>
+        
+        <details class="acc-item" style="--cat-couleur:#3b82f6">
+          <summary class="acc-summary">
+            
+            <span class="acc-region" title="Global">🌐</span>
+            <span class="acc-pill" style="background:#3b82f622;color:#3b82f6">Marchés</span>
+            <span class="acc-title">Le dollar recule après le CPI américain, l'EUR/USD reste stable</span>
+            <span class="acc-chevron">▾</span>
+          </summary>
+          <div class="acc-body">Le dollar a fortement reculé après la publication d'un indice des prix à la consommation (CPI) américain plus faible qu'attendu, ce qui a réduit les anticipations de hausses de taux de la Fed. L'indice DXY, mesurant la valeur du dollar face à un panier de devises, a ainsi baissé jusqu'à <strong class="highlight-figure">100,6</strong> avant de limiter ses pertes après les propos toujours prudents de Kevin Warsh, président de la Fed. Malgré cette volatilité sur le dollar, l'EUR/USD est resté relativement stable, évoluant proche de <strong class="highlight-figure">1,141</strong>. Les perspectives de resserrement monétaire de la BCE sont toujours contrebalancées par des inquiétudes sur la croissance en zone euro, ce qui maintient la paire de devises dans une fourchette étroite. La faiblesse temporaire du dollar pourrait offrir un répit aux marchés, mais la prudence des banques centrales et les tensions géopolitiques limitent l'enthousiasme général.</div>
+        </details>
+        
+        <details class="acc-item" style="--cat-couleur:#f59e0b">
+          <summary class="acc-summary">
+            
+            <span class="acc-region" title="Global">🌐</span>
+            <span class="acc-pill" style="background:#f59e0b22;color:#f59e0b">Géopolitique</span>
+            <span class="acc-title">Les États-Unis cherchent une alliance régionale de défense contre l'Iran</span>
+            <span class="acc-chevron">▾</span>
+          </summary>
+          <div class="acc-body">Les États-Unis œuvrent activement à la création d'une <strong class="highlight-phrase">alliance régionale de défense</strong> contre l'Iran, dans un contexte de tensions accrues au Moyen-Orient. Cette alliance stratégique impliquerait les monarchies pétrolières de la région, visant à renforcer la sécurité et la stabilité face à l'influence iranienne. Cette initiative s'inscrit dans la continuité des efforts américains pour contrer la puissance militaire de Téhéran, notamment après l'escalade des frappes quasi quotidiennes contre l'Iran, soulignant l'importance stratégique du détroit d'Ormuz et les risques pour l'approvisionnement énergétique mondial.</div>
         </details>
         
         <details class="acc-item" style="--cat-couleur:#ef4444">
@@ -1051,10 +1294,10 @@
             
             <span class="acc-region" title="Europe">🇪🇺</span>
             <span class="acc-pill" style="background:#ef444422;color:#ef4444">Macro</span>
-            <span class="acc-title">Déficit persistant des collectivités locales françaises</span>
+            <span class="acc-title">L'Italie voit son chômage baisser, mais le pouvoir d'achat reste menacé par l'inflation</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">Les collectivités locales françaises sont confrontées à un <strong class="highlight-phrase">déficit budgétaire persistant</strong>, avec un niveau d'endettement qui a désormais atteint <strong class="highlight-figure">5% du Produit Intérieur Brut (PIB)</strong>. Cette situation financière tendue soulève de sérieuses inquiétudes quant à la pérennité de leurs finances et à leur capacité à investir dans les services publics essentiels. Alors que le gouvernement cherche à maîtriser les dépenses publiques au niveau national, la santé financière des collectivités devient un point d'attention majeur, exigeant potentiellement des réformes ou un soutien accru pour éviter des répercussions sur les services à la population et la stabilité financière globale du pays.</div>
+          <div class="acc-body">Le taux de chômage en Italie a continué de baisser pour atteindre <strong class="highlight-figure">8,1% en mai 2022</strong>, marquant son plus bas niveau depuis 2008. Cette amélioration sur le front de l'emploi est une bonne nouvelle pour le marché du travail italien, mais elle est malheureusement tempérée par une autre réalité économique. Le pouvoir d'achat des Italiens est en recul en raison d'une <strong class="highlight-phrase">inflation non compensée</strong> par les salaires, ce qui signifie que les travailleurs ont moins d'argent réel pour leurs dépenses quotidiennes. Cette situation pose des défis importants pour la reprise économique durable et le bien-être des ménages en Italie, malgré la solidité apparente du marché de l'emploi.</div>
         </details>
         
         <details class="acc-item" style="--cat-couleur:#ef4444">
@@ -1062,10 +1305,10 @@
             
             <span class="acc-region" title="Europe">🇪🇺</span>
             <span class="acc-pill" style="background:#ef444422;color:#ef4444">Macro</span>
-            <span class="acc-title">Vieillissement de la population, défi démographique Europe</span>
+            <span class="acc-title">Baisse des recettes fiscales françaises pour le tabac et l'alcool impactant le budget</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">L'Europe est confrontée à une <strong class="highlight-phrase">« équation démographique inédite »</strong>, caractérisée par un <strong class="highlight-phrase">vieillissement accéléré de sa population</strong>. Ce phénomène a des <strong class="highlight-phrase">impacts économiques significatifs et multifactoriels</strong>, influençant directement les systèmes de retraite qui peinent à trouver leur équilibre, la productivité générale de la main-d'œuvre, et la croissance potentielle à long terme. La diminution de la part de la population active par rapport aux retraités pose des défis majeurs en termes de financement social et d'innovation, nécessitant des politiques adaptées en matière d'immigration, de santé et d'emploi des seniors pour maintenir la vitalité économique du continent.</div>
+          <div class="acc-body">La France enregistre une <strong class="highlight-phrase">baisse significative de ses recettes fiscales</strong> provenant de la vente de tabac et d'alcool. Ce manque à gagner budgétaire est estimé à <strong class="highlight-figure">2 milliards d'euros</strong> pour le tabac seul, créant un déficit inattendu dans les finances publiques. Cette tendance s'explique par une combinaison de facteurs, tels que la diminution de la consommation, la contrebande ou des changements dans les habitudes d'achat. Cette situation exerce une pression supplémentaire sur le budget de l'État et des collectivités locales, déjà confrontées à des déficits persistants et à la hausse des coûts de l'énergie due à l'inflation. Des ajustements pourraient être nécessaires pour compenser cette perte de revenus.</div>
         </details>
         
         <details class="acc-item" style="--cat-couleur:#ef4444">
@@ -1073,10 +1316,21 @@
             
             <span class="acc-region" title="Europe">🇪🇺</span>
             <span class="acc-pill" style="background:#ef444422;color:#ef4444">Macro</span>
-            <span class="acc-title">Chômage recule en Italie, pouvoir d'achat stagne</span>
+            <span class="acc-title">Les collectivités locales françaises subissent l'aggravation de leurs déficits budgétaires</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">En Italie, le marché du travail a montré des signes positifs avec un <strong class="highlight-phrase">recul du taux de chômage</strong>, ce qui est une nouvelle encourageante pour l'économie du pays. Cependant, cet indicateur positif est tempéré par la <strong class="highlight-phrase">stagnation du pouvoir d'achat de la population</strong>. Malgré moins de chômeurs, les salaires réels ne suivent pas suffisamment l'inflation ou le coût de la vie, ce qui limite l'impact positif de la baisse du chômage sur la consommation des ménages et la croissance économique globale. Cette situation met en lumière la nécessité de politiques visant à soutenir à la fois l'emploi et le revenu disponible pour stimuler pleinement l'économie italienne.</div>
+          <div class="acc-body">Les collectivités locales françaises font face à la persistance de leurs déficits budgétaires, une situation qui est fortement <strong class="highlight-phrase">aggravée par l'inflation</strong> et la <strong class="highlight-phrase">hausse des coûts de l'énergie</strong>. Cette double peine pèse lourdement sur leurs finances, augmentant leurs dépenses opérationnelles sans que leurs revenus ne suivent la même courbe. La capacité des communes, départements et régions à investir dans de nouveaux projets ou à maintenir la qualité de leurs services publics est ainsi mise à mal. Cette situation fragilise les finances publiques locales et pourrait entraîner des arbitrages difficiles en matière de dépenses, impactant directement les citoyens et l'attractivité des territoires.</div>
+        </details>
+        
+        <details class="acc-item" style="--cat-couleur:#ef4444">
+          <summary class="acc-summary">
+            
+            <span class="acc-region" title="Europe">🇪🇺</span>
+            <span class="acc-pill" style="background:#ef444422;color:#ef4444">Macro</span>
+            <span class="acc-title">Canicule et incendies en France : des impacts économiques divers et préoccupants</span>
+            <span class="acc-chevron">▾</span>
+          </summary>
+          <div class="acc-body">La France est confrontée à une deuxième vague de canicule et d'incendies, un phénomène qui a des <strong class="highlight-phrase">impacts économiques attendus</strong> sur plusieurs secteurs clés. L'agriculture est particulièrement touchée, avec des conséquences sur les rendements des cultures et un calendrier des vendanges fortement perturbé. Le tourisme subit également les effets de ces conditions extrêmes, avec une baisse de fréquentation dans certaines régions et des annulations. Enfin, le secteur des assurances fait face à une augmentation des sinistres liés aux incendies et aux dégâts climatiques, entraînant des coûts financiers importants. Ces événements mettent en lumière la vulnérabilité de l'économie française aux aléas climatiques et la nécessité d'adapter les politiques publiques à ces défis grandissants.</div>
         </details>
         
         <details class="acc-item" style="--cat-couleur:#10b981">
@@ -1084,10 +1338,10 @@
             
             <span class="acc-region" title="Global">🌐</span>
             <span class="acc-pill" style="background:#10b98122;color:#10b981">Corporate</span>
-            <span class="acc-title">Stellantis redresse ses ventes mondiales</span>
+            <span class="acc-title">Stellantis redresse ses ventes grâce à une forte performance en Amérique du Nord</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">Le constructeur automobile Stellantis a annoncé un <strong class="highlight-phrase">redressement significatif de ses ventes</strong> à l'échelle mondiale, marquant une amélioration de ses performances commerciales. Ce redressement est particulièrement notable en <strong class="highlight-phrase">Amérique du Nord</strong>, un marché clé où le groupe a enregistré des résultats robustes. Cette dynamique positive suggère une meilleure adaptation de Stellantis aux défis du marché automobile, incluant les ajustements liés à la chaîne d'approvisionnement et l'évolution de la demande des consommateurs. La capacité du groupe à renforcer sa présence dans des régions stratégiques est cruciale pour sa croissance future et sa compétitivité globale.</div>
+          <div class="acc-body">Stellantis, le géant de l'automobile, a vu ses ventes se redresser, principalement grâce à la <strong class="highlight-phrase">performance exceptionnelle du marché nord-américain</strong>. Cette région s'impose comme un moteur essentiel de la croissance pour le constructeur, compensant potentiellement des dynamiques plus faibles sur d'autres marchés. La forte demande pour certains modèles spécifiques et la résilience économique de l'Amérique du Nord ont permis à Stellantis de consolider sa position et de doper ses chiffres d'affaires. L'entreprise continue d'optimiser sa stratégie produit et de distribution pour maximiser ses gains sur ce marché crucial, illustrant l'importance des marchés régionaux dans la performance globale des multinationales.</div>
         </details>
         
         <details class="acc-item" style="--cat-couleur:#10b981">
@@ -1095,10 +1349,21 @@
             
             <span class="acc-region" title="Global">🌐</span>
             <span class="acc-pill" style="background:#10b98122;color:#10b981">Corporate</span>
-            <span class="acc-title">De Beers réduit ses prix face au marché</span>
+            <span class="acc-title">De Beers contraint de baisser ses prix face à une demande de diamants affaiblie</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">Le géant mondial du diamant, De Beers, se trouve contraint d'<strong class="highlight-phrase">opérer des réductions de prix</strong>, une stratégie qu'il qualifie de « soldes », pour faire face à un marché difficile et une demande en berne. Cette situation reflète un contexte économique global incertain où les dépenses de luxe sont souvent les premières à être affectées. La décision de réduire les prix vise à stimuler les ventes et à écouler les stocks dans un environnement concurrentiel où les consommateurs sont plus prudents. Cela met en évidence la <strong class="highlight-phrase">sensibilité du secteur du luxe</strong> aux fluctuations économiques mondiales et la pression sur les entreprises pour s'adapter rapidement.</div>
+          <div class="acc-body">Le diamantier De Beers a été contraint de <strong class="highlight-phrase">réduire ses prix</strong> en réponse à une demande affaiblie sur le marché mondial du diamant. Cette décision, rare pour un acteur de cette envergure, souligne un <strong class="highlight-phrase">ralentissement significatif sur le marché du diamant</strong>, potentiellement dû à des pressions économiques mondiales ou à des changements dans les préférences des consommateurs. La baisse des prix vise à stimuler les ventes et à réduire les stocks, mais elle témoigne également d'une période difficile pour l'industrie du luxe. De Beers devra s'adapter à cette nouvelle réalité du marché pour maintenir sa position dominante et faire face à la concurrence.</div>
+        </details>
+        
+        <details class="acc-item" style="--cat-couleur:#3b82f6">
+          <summary class="acc-summary">
+            
+            <span class="acc-region" title="Global">🌐</span>
+            <span class="acc-pill" style="background:#3b82f622;color:#3b82f6">Marchés</span>
+            <span class="acc-title">Les marchés de prédiction de Wall Street gagnent en influence pour l'analyse économique et politique</span>
+            <span class="acc-chevron">▾</span>
+          </summary>
+          <div class="acc-body">Les marchés de prédiction, un concept né à Wall Street, prennent de plus en plus d'importance et d'influence dans l'<strong class="highlight-phrase">analyse économique et politique</strong>. Ces plateformes permettent aux participants de miser sur l'issue d'événements futurs, offrant ainsi une agrégation des opinions et des attentes qui peut s'avérer plus précise que les sondages traditionnels ou les analyses d'experts. Ils sont utilisés pour anticiper des élections, des décisions de banques centrales, des résultats d'entreprises ou même l'évolution de la situation géopolitique. Leur montée en puissance suggère un changement dans la manière dont les professionnels de la finance et les analystes collectent et interprètent les informations pour éclairer leurs décisions, bien que leur fiabilité doive toujours être évaluée avec prudence.</div>
         </details>
         </div>
     </div>
@@ -1428,6 +1693,46 @@
         </div>
         
         <div class="tl-item">
+          <div class="tl-date">15/07</div>
+          <div class="tl-dot" style="background:#ef4444"></div>
+          <div class="tl-content">
+            <span class="acc-region" title="USA">🇺🇸</span>
+            <span class="acc-pill" style="background:#ef444422;color:#ef4444">Macro</span>
+            <span class="tl-title">US PPI Juin 2026</span>
+          </div>
+        </div>
+        
+        <div class="tl-item">
+          <div class="tl-date">15/07</div>
+          <div class="tl-dot" style="background:#10b981"></div>
+          <div class="tl-content">
+            <span class="acc-region" title="USA">🇺🇸</span>
+            <span class="acc-pill" style="background:#10b98122;color:#10b981">Corporate</span>
+            <span class="tl-title">Résultats BlackRock (BLK)</span>
+          </div>
+        </div>
+        
+        <div class="tl-item">
+          <div class="tl-date">15/07</div>
+          <div class="tl-dot" style="background:#10b981"></div>
+          <div class="tl-content">
+            <span class="acc-region" title="USA">🇺🇸</span>
+            <span class="acc-pill" style="background:#10b98122;color:#10b981">Corporate</span>
+            <span class="tl-title">Résultats Johnson & Johnson (JNJ)</span>
+          </div>
+        </div>
+        
+        <div class="tl-item">
+          <div class="tl-date">15/07</div>
+          <div class="tl-dot" style="background:#10b981"></div>
+          <div class="tl-content">
+            <span class="acc-region" title="USA">🇺🇸</span>
+            <span class="acc-pill" style="background:#10b98122;color:#10b981">Corporate</span>
+            <span class="tl-title">Résultats Morgan Stanley (MS)</span>
+          </div>
+        </div>
+        
+        <div class="tl-item">
           <div class="tl-date">16/07</div>
           <div class="tl-dot" style="background:#10b981"></div>
           <div class="tl-content">
@@ -1748,6 +2053,16 @@
         </div>
         
         <div class="tl-item">
+          <div class="tl-date">17/07</div>
+          <div class="tl-dot" style="background:#ef4444"></div>
+          <div class="tl-content">
+            <span class="acc-region" title="USA">🇺🇸</span>
+            <span class="acc-pill" style="background:#ef444422;color:#ef4444">Macro</span>
+            <span class="tl-title">US Prix Import/Export Juin 2026</span>
+          </div>
+        </div>
+        
+        <div class="tl-item">
           <div class="tl-date">20/07</div>
           <div class="tl-dot" style="background:#f59e0b"></div>
           <div class="tl-content">
@@ -1814,6 +2129,26 @@
             <span class="acc-region" title="Global">🌐</span>
             <span class="acc-pill" style="background:#ef444422;color:#ef4444">Macro</span>
             <span class="tl-title">Taux de chômage ILO UK</span>
+          </div>
+        </div>
+        
+        <div class="tl-item">
+          <div class="tl-date">21/07</div>
+          <div class="tl-dot" style="background:#ef4444"></div>
+          <div class="tl-content">
+            <span class="acc-region" title="USA">🇺🇸</span>
+            <span class="acc-pill" style="background:#ef444422;color:#ef4444">Macro</span>
+            <span class="tl-title">US Emploi/Chômage États Juin 2026</span>
+          </div>
+        </div>
+        
+        <div class="tl-item">
+          <div class="tl-date">21/07</div>
+          <div class="tl-dot" style="background:#ef4444"></div>
+          <div class="tl-content">
+            <span class="acc-region" title="USA">🇺🇸</span>
+            <span class="acc-pill" style="background:#ef444422;color:#ef4444">Macro</span>
+            <span class="tl-title">US Salaires Hebdomadaires T2 2026</span>
           </div>
         </div>
         
@@ -1964,6 +2299,16 @@
             <span class="acc-region" title="Europe">🇪🇺</span>
             <span class="acc-pill" style="background:#ef444422;color:#ef4444">Macro</span>
             <span class="tl-title">Début réunion politique monétaire BCE</span>
+          </div>
+        </div>
+        
+        <div class="tl-item">
+          <div class="tl-date">22/07</div>
+          <div class="tl-dot" style="background:#ef4444"></div>
+          <div class="tl-content">
+            <span class="acc-region" title="Global">🌐</span>
+            <span class="acc-pill" style="background:#ef444422;color:#ef4444">Macro</span>
+            <span class="tl-title">UK Rapport CPI Juin 2026</span>
           </div>
         </div>
         
@@ -2454,6 +2799,26 @@
             <span class="acc-region" title="Europe">🇪🇺</span>
             <span class="acc-pill" style="background:#ef444422;color:#ef4444">Macro</span>
             <span class="tl-title">Taux chômage Zone Euro Juin</span>
+          </div>
+        </div>
+        
+        <div class="tl-item">
+          <div class="tl-date">29/07</div>
+          <div class="tl-dot" style="background:#ef4444"></div>
+          <div class="tl-content">
+            <span class="acc-region" title="USA">🇺🇸</span>
+            <span class="acc-pill" style="background:#ef444422;color:#ef4444">Macro</span>
+            <span class="tl-title">US Emploi Zones Métro Juin 2026</span>
+          </div>
+        </div>
+        
+        <div class="tl-item">
+          <div class="tl-date">29/07</div>
+          <div class="tl-dot" style="background:#ef4444"></div>
+          <div class="tl-content">
+            <span class="acc-region" title="USA">🇺🇸</span>
+            <span class="acc-pill" style="background:#ef444422;color:#ef4444">Macro</span>
+            <span class="tl-title">US Dynamique Emploi T4 2025</span>
           </div>
         </div>
         
@@ -2958,6 +3323,26 @@
         </div>
         
         <div class="tl-item">
+          <div class="tl-date">31/07</div>
+          <div class="tl-dot" style="background:#3b82f6"></div>
+          <div class="tl-content">
+            <span class="acc-region" title="Asie">🌏</span>
+            <span class="acc-pill" style="background:#3b82f622;color:#3b82f6">Marchés</span>
+            <span class="tl-title">BoJ Perspectives Économiques et Prix</span>
+          </div>
+        </div>
+        
+        <div class="tl-item">
+          <div class="tl-date">31/07</div>
+          <div class="tl-dot" style="background:#ef4444"></div>
+          <div class="tl-content">
+            <span class="acc-region" title="USA">🇺🇸</span>
+            <span class="acc-pill" style="background:#ef444422;color:#ef4444">Macro</span>
+            <span class="tl-title">US Indice Coût Emploi T2 2026</span>
+          </div>
+        </div>
+        
+        <div class="tl-item">
           <div class="tl-date">01/08</div>
           <div class="tl-dot" style="background:#ef4444"></div>
           <div class="tl-content">
@@ -2984,6 +3369,16 @@
             <span class="acc-region" title="Global">🌐</span>
             <span class="acc-pill" style="background:#3b82f622;color:#3b82f6">Marchés</span>
             <span class="tl-title">Décision Politique Monétaire RBA</span>
+          </div>
+        </div>
+        
+        <div class="tl-item">
+          <div class="tl-date">04/08</div>
+          <div class="tl-dot" style="background:#ef4444"></div>
+          <div class="tl-content">
+            <span class="acc-region" title="USA">🇺🇸</span>
+            <span class="acc-pill" style="background:#ef444422;color:#ef4444">Macro</span>
+            <span class="tl-title">US Enquêtes Offres d'Emploi Juin 2026</span>
           </div>
         </div>
         
@@ -3096,9 +3491,42 @@
             <span class="tl-title">IPO Airtel Money Londres</span>
           </div>
         </div>
+        
+        <div class="tl-item">
+          <div class="tl-date">30-31/07</div>
+          <div class="tl-dot" style="background:#3b82f6"></div>
+          <div class="tl-content">
+            <span class="acc-region" title="Asie">🌏</span>
+            <span class="acc-pill" style="background:#3b82f622;color:#3b82f6">Marchés</span>
+            <span class="tl-title">Réunion politique monétaire BoJ</span>
+          </div>
+        </div>
+        
+        <div class="tl-item">
+          <div class="tl-date">Fin juillet</div>
+          <div class="tl-dot" style="background:#10b981"></div>
+          <div class="tl-content">
+            <span class="acc-region" title="Global">🌐</span>
+            <span class="acc-pill" style="background:#10b98122;color:#10b981">Corporate</span>
+            <span class="tl-title">Airtel Africa Introduction en Bourse Londres</span>
+          </div>
+        </div>
         </div>
     </div>
     
+    <div class="tab-panel" data-tab="indices-entreprises">
+      <h2 class="tab-title">📊 Indices &amp; Entreprises</h2>
+      <p class="perso-intro">Choisis les indices, actions ou cryptos a afficher dans le bandeau en haut de page. Ce choix est propre a ton navigateur.</p>
+
+      <div class="perso-search-bar">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="persoSearchInput" placeholder="Rechercher une entreprise, un indice, une crypto..." autocomplete="off">
+      </div>
+      <div id="persoSearchResults" class="perso-results"></div>
+
+      <h3 class="perso-subtitle">Ta selection actuelle</h3>
+      <div id="persoSelection" class="perso-selection"></div>
+    </div>
   </div>
 </main>
 
@@ -3144,14 +3572,28 @@ document.querySelectorAll('#navTabs button').forEach(btn => {
     }
 })();
 
-// --- Ticker temps reel ---
+// --- Ticker temps reel (par defaut, ou personnalise si l'utilisateur a fait une selection) ---
 const URL_RELAIS = "https://ticker-relay.onrender.com/latest";
 
 async function recupererTicker() {
+    const selectionPerso = chargerSelectionPerso();
+
     try {
-        const reponse = await fetch(URL_RELAIS);
-        if (!reponse.ok) throw new Error(`Statut HTTP ${reponse.status}`);
-        const data = await reponse.json();
+        let data;
+        if (selectionPerso.length > 0) {
+            const symboles = selectionPerso.map(i => i.symbole).join(",");
+            const reponse = await fetch(`${URL_RELAIS_BASE}/latest-custom?symbols=${encodeURIComponent(symboles)}`);
+            if (!reponse.ok) throw new Error(`Statut HTTP ${reponse.status}`);
+            data = await reponse.json();
+            const nomsParSymbole = Object.fromEntries(selectionPerso.map(i => [i.symbole, i.nom]));
+            (data.indices || []).forEach(indice => {
+                if (nomsParSymbole[indice.nom]) indice.nom = nomsParSymbole[indice.nom];
+            });
+        } else {
+            const reponse = await fetch(URL_RELAIS);
+            if (!reponse.ok) throw new Error(`Statut HTTP ${reponse.status}`);
+            data = await reponse.json();
+        }
         afficherTicker(data);
     } catch (e) {
         console.log("Erreur de recuperation du ticker :", e);
@@ -3189,7 +3631,8 @@ function afficherTicker(data) {
 
     if (html !== dernierContenuHTML) {
         dernierContenuHTML = html;
-        track.innerHTML = html + html;
+        const estMobile = window.innerWidth <= 640;
+        track.innerHTML = estMobile ? html : html + html;
     }
 }
 
@@ -3263,8 +3706,145 @@ searchClear.addEventListener('click', () => {
     searchInput.focus();
 });
 
+// --- Personnalisation du bandeau ticker : recherche, selection, persistance ---
+const URL_RELAIS_BASE = "https://ticker-relay.onrender.com";
+const CLE_SELECTION_PERSO = "tickerPersonnalise";
+
+function chargerSelectionPerso() {
+    try {
+        return JSON.parse(localStorage.getItem(CLE_SELECTION_PERSO) || "[]");
+    } catch (e) {
+        return [];
+    }
+}
+
+function sauvegarderSelectionPerso(liste) {
+    localStorage.setItem(CLE_SELECTION_PERSO, JSON.stringify(liste));
+}
+
+function rendreSelectionPerso() {
+    const conteneur = document.getElementById('persoSelection');
+    if (!conteneur) return;
+    const selection = chargerSelectionPerso();
+
+    if (selection.length === 0) {
+        conteneur.innerHTML = '<p class="perso-empty">Aucun element choisi pour l\'instant — le bandeau affiche les indices par defaut.</p>';
+        return;
+    }
+
+    conteneur.innerHTML = selection.map(item => `
+        <div class="perso-chip">
+            <span><span class="perso-nom">${item.nom}</span><span class="perso-symbole">${item.symbole}</span></span>
+            <button class="perso-btn-retirer" data-symbole="${item.symbole}">Retirer</button>
+        </div>
+    `).join('');
+
+    conteneur.querySelectorAll('.perso-btn-retirer').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const nouvelleListe = chargerSelectionPerso().filter(i => i.symbole !== btn.dataset.symbole);
+            sauvegarderSelectionPerso(nouvelleListe);
+            rendreSelectionPerso();
+        });
+    });
+}
+
+let minuteurRecherchePerso = null;
+const persoSearchInput = document.getElementById('persoSearchInput');
+const persoSearchResults = document.getElementById('persoSearchResults');
+
+if (persoSearchInput) {
+    persoSearchInput.addEventListener('input', (e) => {
+        clearTimeout(minuteurRecherchePerso);
+        const q = e.target.value.trim();
+        if (!q) {
+            persoSearchResults.innerHTML = '';
+            return;
+        }
+        minuteurRecherchePerso = setTimeout(() => rechercherSymbolesPerso(q), 350);
+    });
+}
+
+async function rechercherSymbolesPerso(q) {
+    try {
+        const reponse = await fetch(`${URL_RELAIS_BASE}/search?q=${encodeURIComponent(q)}`);
+        const data = await reponse.json();
+        const resultats = data.resultats || [];
+
+        if (resultats.length === 0) {
+            persoSearchResults.innerHTML = '<p class="perso-empty">Aucun resultat.</p>';
+            return;
+        }
+
+        const selectionActuelle = chargerSelectionPerso().map(i => i.symbole);
+
+        persoSearchResults.innerHTML = resultats.map(r => `
+            <div class="perso-result-row">
+                <span><span class="perso-nom">${r.nom}</span><span class="perso-symbole">${r.symbole} · ${r.bourse}</span></span>
+                <button class="perso-btn-ajouter" data-symbole="${r.symbole}" data-nom="${r.nom}" ${selectionActuelle.includes(r.symbole) ? 'disabled' : ''}>
+                    ${selectionActuelle.includes(r.symbole) ? 'Ajoute' : 'Ajouter'}
+                </button>
+            </div>
+        `).join('');
+
+        persoSearchResults.querySelectorAll('.perso-btn-ajouter').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const liste = chargerSelectionPerso();
+                if (!liste.some(i => i.symbole === btn.dataset.symbole)) {
+                    liste.push({ symbole: btn.dataset.symbole, nom: btn.dataset.nom });
+                    sauvegarderSelectionPerso(liste);
+                    rendreSelectionPerso();
+                    btn.disabled = true;
+                    btn.textContent = 'Ajoute';
+                }
+            });
+        });
+    } catch (e) {
+        persoSearchResults.innerHTML = '<p class="perso-empty">Recherche indisponible pour le moment.</p>';
+    }
+}
+
+rendreSelectionPerso();
+
 recupererTicker();
 setInterval(recupererTicker, 1000);
+
+// --- Raccourci clavier Ctrl+K / Cmd+K pour la recherche ---
+document.addEventListener('keydown', (e) => {
+    if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k') {
+        e.preventDefault();
+        searchInput.focus();
+        searchInput.select();
+    }
+});
+
+// --- Badge "nouveau" sur les evenements d'agenda ajoutes depuis la derniere visite ---
+(function() {
+    const cleAgendaVus = 'agendaEvenementsVus';
+    const itemsAgenda = document.querySelectorAll('.tl-item');
+    if (itemsAgenda.length === 0) return;
+
+    const dejaVus = new Set(JSON.parse(localStorage.getItem(cleAgendaVus) || '[]'));
+    const idsActuels = [];
+
+    itemsAgenda.forEach(item => {
+        const date = item.querySelector('.tl-date')?.textContent.trim() || '';
+        const titre = item.querySelector('.tl-title')?.textContent.trim() || '';
+        const id = `${date}::${titre}`;
+        idsActuels.push(id);
+
+        if (!dejaVus.has(id)) {
+            const contenu = item.querySelector('.tl-content');
+            if (contenu) {
+                const badge = document.createElement('span');
+                badge.className = 'tl-badge-new';
+                badge.textContent = 'Nouveau';
+                contenu.appendChild(badge);
+            }
+        }
+    });
+
+    localStorage.setItem(cleAgendaVus, JSON.stringify(idsActuels));
+})();
 </script>
 
 </body>
