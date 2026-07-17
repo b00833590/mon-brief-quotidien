@@ -53,6 +53,8 @@
   }
   
   [data-theme="dark"] {
+    --accent-gold: #f59e0b;
+    --accent-gold-rgb: 245, 158, 11;
     --bg: #090d16;
     --card-bg: #111827;
     --card-bg-soft: #1f2937;
@@ -739,16 +741,22 @@
     color: var(--accent-gold);
     font-family: var(--mono);
     font-weight: 700;
-    background-color: rgba(var(--accent-gold-rgb), 0.06);
-    padding: 1px 4px;
+    background-color: rgba(var(--accent-gold-rgb), 0.12);
+    border: 1px solid rgba(var(--accent-gold-rgb), 0.25);
+    padding: 2px 6px;
     border-radius: var(--radius-sm);
+    display: inline-block;
+    line-height: 1.2;
   }
   .highlight-phrase {
     color: var(--text);
     font-weight: 700;
-    background: rgba(var(--accent-rgb), 0.08);
-    padding: 0 4px;
-    border-radius: 2px;
+    background-color: rgba(var(--accent-rgb), 0.08);
+    border: 1px solid rgba(var(--accent-rgb), 0.18);
+    padding: 2px 6px;
+    border-radius: var(--radius-sm);
+    display: inline-block;
+    line-height: 1.2;
   }
 
   /* ── AGENDA (registre chronologique) ── */
@@ -1263,7 +1271,7 @@
     <div class="right">
       <div class="date-block">
         <div class="date">Vendredi 17 juillet 2026</div>
-        <div class="date-sub">Générée à 16h21</div>
+        <div class="date-sub">Générée à 16h24</div>
       </div>
       <button class="theme-toggle" onclick="toggleTheme()" id="themeBtn" aria-label="Changer le theme clair/sombre">&#9789;</button>
     </div>
@@ -1306,7 +1314,7 @@
       
 <div class="sentiment-box">
   <span class="sentiment-badge sent-down">Baissier</span>
-  <span class="sentiment-raison">Les marchés actions mondiaux sont en forte baisse, notamment le secteur technologique, sur fond de tensions géopolitiques exacerbées au Moyen-Orient et de la crise énergétique russe. Les rendements obligataires européens sont également sous pression, reflétant une aversion au risque croissante.</span>
+  <span class="sentiment-raison">L'escalade des tensions géopolitiques au Moyen-Orient et en Russie alimente les craintes sur l'approvisionnement énergétique mondial, tandis que les valeurs technologiques et de semi-conducteurs subissent une forte correction.</span>
 </div>
 
       <div class="acc-list">
@@ -1315,10 +1323,10 @@
             <span class="acc-rank">1</span>
             <span class="acc-region" title="Global">🌐</span>
             <span class="acc-pill" style="background:#f59e0b22;color:#f59e0b">Géopolitique</span>
-            <span class="acc-title">Escalade des tensions au Moyen-Orient impacte l'énergie et le commerce</span>
+            <span class="acc-title">Escalade du conflit Iran-US et tensions énergétiques mondiales</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">Les frappes réciproques entre l'Iran et les États-Unis se sont intensifiées, ciblant des infrastructures civiles comme une usine de dessalement au Koweït et des installations électriques en Iran. Cette escalade a <strong class="highlight-phrase">interrompu les expéditions de pétrole via le détroit d'Ormuz</strong> après un mois de cessez-le-feu, entraînant une <strong class="highlight-figure">hausse de 11% du prix du Brent en une semaine</strong>. L'Agence internationale de l'énergie exprime de vives inquiétudes quant aux approvisionnements mondiaux, tandis que les exportateurs américains de gaz naturel liquéfié (GNL) deviennent des bénéficiaires majeurs, le GNL devant devenir la <strong class="highlight-phrase">deuxième exportation nette la plus précieuse des États-Unis</strong> en cinq ans.</div>
+          <div class="acc-body">Le conflit entre l'Iran et les États-Unis s'intensifie avec des <strong class="highlight-phrase">frappes réciproques sur les infrastructures civiles</strong>, notamment une usine de dessalement koweïtienne et le réseau électrique iranien. Cette situation a entraîné l'interruption des <strong class="highlight-phrase">expéditions de pétrole via le détroit d'Ormuz</strong>, provoquant une augmentation du prix du Brent de <strong class="highlight-figure">11% en une semaine</strong>. Parallèlement, les attaques de drones ukrainiens sur les raffineries russes ont <strong class="highlight-phrase">perturbé les exportations de diesel</strong>, la Russie ayant interdit ces exportations, ce qui a fait grimper les prix américains au-dessus de <strong class="highlight-figure">5 dollars le gallon</strong> et a conduit l'AIE à exprimer des inquiétudes quant aux approvisionnements mondiaux.</div>
         </details>
         
         <details class="acc-item" style="--cat-couleur:#3b82f6">
@@ -1326,10 +1334,10 @@
             <span class="acc-rank">2</span>
             <span class="acc-region" title="Global">🌐</span>
             <span class="acc-pill" style="background:#3b82f622;color:#3b82f6">Marchés</span>
-            <span class="acc-title">Chute généralisée des marchés et du secteur des semi-conducteurs</span>
+            <span class="acc-title">Vague de ventes mondiales sur les valeurs technologiques et semi-conducteurs</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">Les marchés actions mondiaux ont connu une journée difficile, les <strong class="highlight-figure">indices asiatiques comme le Nikkei (-5%) et le Kospi (-6%)</strong> plongeant lourdement, suivis par les futures du Nasdaq (-1.3%) et du S&P 500 (-0.8%). Le secteur des semi-conducteurs a été particulièrement touché, entrant en « bear market », malgré des résultats positifs pour certains acteurs comme TSMC. Cette correction s'explique par la <strong class="highlight-phrase">prise de bénéfices des investisseurs</strong> et des attentes élevées, ainsi que par les craintes persistantes concernant la rentabilité future de l'IA.</div>
+          <div class="acc-body">Les marchés boursiers mondiaux ont connu une journée difficile, les <strong class="highlight-phrase">valeurs technologiques et les fabricants de puces en particulier</strong> étant sous pression, avec des contrats à terme du Nasdaq 100 en baisse de <strong class="highlight-figure">-1,60%</strong> et des pertes significatives en Asie (Nikkei <strong class="highlight-figure">-4%</strong>, CSI 300 <strong class="highlight-figure">-3,6%</strong>). Cette correction, caractérisée par des <strong class="highlight-phrase">prises de bénéfices malgré de bons résultats</strong> pour certains (comme TSMC avec une hausse de <strong class="highlight-figure">77%</strong> de ses bénéfices trimestriels qui n'a pas suffi), reflète des attentes très élevées envers le secteur et des préoccupations quant à la <strong class="highlight-phrase">monétisation de l'IA</strong>. Les entreprises américaines de semi-conducteurs se dirigent vers leur <strong class="highlight-phrase">pire semaine</strong> depuis le 'jour de la libération' l'année dernière.</div>
         </details>
         
         <details class="acc-item" style="--cat-couleur:#f97316">
@@ -1337,10 +1345,10 @@
             <span class="acc-rank">3</span>
             <span class="acc-region" title="Global">🌐</span>
             <span class="acc-pill" style="background:#f9731622;color:#f97316">IA</span>
-            <span class="acc-title">La course mondiale à l'IA s'intensifie avec les ambitions chinoises</span>
+            <span class="acc-title">La Chine affirme son leadership mondial en IA face aux défis américains</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">Le Président Xi Jinping a affirmé l'ambition de la Chine de devenir un leader mondial de l'intelligence artificielle, appelant à une coopération internationale tout en avertissant des risques. <strong class="highlight-phrase">Trente pays, mais aucun occidental</strong>, ont rejoint la nouvelle « Organisation mondiale de coopération en intelligence artificielle » dirigée par Pékin. Simultanément, la firme chinoise Moonshot a dévoilé un modèle de langage étendu qui, selon elle, est le <strong class="highlight-phrase">plus grand modèle d'IA ouvert au monde</strong>, soulignant la concurrence accrue avec les laboratoires américains comme OpenAI.</div>
+          <div class="acc-body">Le président Xi Jinping a appelé à une <strong class="highlight-phrase">coopération internationale sur l'IA</strong> tout en affirmant l'ambition de la Chine de devenir le <strong class="highlight-phrase">leader mondial du secteur</strong>, soulignant les «nouvelles injustices historiques» liées à l'accès inégal à la technologie. Un nouveau groupe de <strong class="highlight-figure">30 pays (excluant l'Occident)</strong> a été formé pour influencer les standards internationaux de l'IA. Cette initiative intervient alors que des entreprises chinoises comme Moonshot lancent des <strong class="highlight-phrase">modèles de langage puissants</strong>, réduisant l'écart avec les laboratoires américains. En parallèle, Apple a émis des <strong class="highlight-phrase">avertissements légaux</strong> à des dizaines d'anciens employés, désormais chez OpenAI, concernant le vol présumé de secrets commerciaux.</div>
         </details>
         
         <details class="acc-item" style="--cat-couleur:#ef4444">
@@ -1348,10 +1356,10 @@
             <span class="acc-rank">4</span>
             <span class="acc-region" title="Europe">🇪🇺</span>
             <span class="acc-pill" style="background:#ef444422;color:#ef4444">Macro</span>
-            <span class="acc-title">La Banque d'Angleterre sous pression pour ralentir ses ventes d'obligations</span>
+            <span class="acc-title">La Banque d'Angleterre pressentie pour ralentir ou arrêter les ventes d'obligations</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">Des investisseurs majeurs anticipent que la Banque d'Angleterre devra <strong class="highlight-phrase">ralentir, voire stopper, ses ventes d'obligations d'État à long terme</strong> cet automne. Cette mesure de « resserrement quantitatif » pèse lourdement sur un marché des gilts déjà fragile, entraînant une <strong class="highlight-phrase">hausse des taux hypothécaires</strong> au Royaume-Uni et freinant la récente détente des coûts pour les emprunteurs. Les anticipations de hausses de taux de la BCE ont également été révisées à la hausse, avec <strong class="highlight-figure">près de 42 points de base pricés d'ici la fin de l'année</strong>.</div>
+          <div class="acc-body">De grands investisseurs obligataires s'attendent à ce que la Banque d'Angleterre (BoE) <strong class="highlight-phrase">ralentisse ou même arrête ses ventes d'obligations</strong> d'État britanniques à long terme cet automne. Cette anticipation est due aux préoccupations croissantes concernant la <strong class="highlight-phrase">fragilité du marché des gilts</strong> et la pression exercée par son programme de resserrement quantitatif. Cette décision pourrait avoir des implications importantes pour la stabilité financière du Royaume-Uni et les coûts d'emprunt.</div>
         </details>
         
         <details class="acc-item" style="--cat-couleur:#10b981">
@@ -1359,21 +1367,21 @@
             <span class="acc-rank">5</span>
             <span class="acc-region" title="USA">🇺🇸</span>
             <span class="acc-pill" style="background:#10b98122;color:#10b981">Corporate</span>
-            <span class="acc-title">SpaceX perd plus de 1 000 milliards de dollars en valeur boursière</span>
+            <span class="acc-title">SpaceX perd plus de mille milliards de dollars de valeur boursière</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">Les actions de SpaceX ont <strong class="highlight-phrase">chuté brusquement vendredi</strong>, la société étant en passe de voir sa capitalisation boursière diminuer de <strong class="highlight-figure">plus de 1 000 milliards de dollars</strong> par rapport à son sommet historique. Cette baisse s'inscrit dans un contexte général de refroidissement des investisseurs pour les grands noms de la technologie et de l'IA, malgré son statut de géant de la fusée et de l'intelligence artificielle.</div>
+          <div class="acc-body">Les actions de SpaceX ont chuté drastiquement vendredi, plaçant le géant de la fusée et de l'intelligence artificielle sur la voie d'une <strong class="highlight-figure">perte de plus de 1 mille milliards de dollars</strong> de valeur de marché par rapport à son sommet historique. Cette baisse souligne une <strong class="highlight-phrase">correction importante</strong> pour l'une des entreprises technologiques les plus valorisées et emblématiques des États-Unis.</div>
         </details>
         
-        <details class="acc-item" style="--cat-couleur:#ef4444">
+        <details class="acc-item" style="--cat-couleur:#f97316">
           <summary class="acc-summary">
             <span class="acc-rank">6</span>
-            <span class="acc-region" title="Global">🌐</span>
-            <span class="acc-pill" style="background:#ef444422;color:#ef4444">Macro</span>
-            <span class="acc-title">La Russie face à une crise du diesel et un recul économique</span>
+            <span class="acc-region" title="Europe">🇪🇺</span>
+            <span class="acc-pill" style="background:#f9731622;color:#f97316">IA</span>
+            <span class="acc-title">L'UE contraint Google à ouvrir Android aux modèles d'IA concurrents</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">Les attaques de drones ukrainiens contre les raffineries russes ont gravement affecté l'infrastructure pétrolière du pays, culminant avec une <strong class="highlight-phrase">interdiction des exportations de diesel par la Russie la semaine dernière</strong>. Cette décision, qualifiée de « signe » par les experts, révèle l'ampleur des perturbations économiques russes, avec des <strong class="highlight-figure">prix du diesel américains dépassant 5 dollars le gallon</strong>. La pénurie mondiale qui en résulte a des conséquences généralisées, touchant l'agriculture, les transports publics et la logistique.</div>
+          <div class="acc-body">L'Union européenne va forcer Google à <strong class="highlight-phrase">autoriser l'utilisation de modèles d'IA concurrents</strong> sur son écosystème Android, aux côtés de son propre outil Gemini. La Commission européenne a jugé que le <strong class="highlight-phrase">préchargement de Gemini</strong> sur les appareils Android réduisait l'attractivité des modèles tiers pour les <strong class="highlight-figure">60% des adultes européens</strong> utilisant Android. Cette mesure devrait <strong class="highlight-phrase">ouvrir le marché</strong> à des géants de l'IA comme Anthropic et OpenAI, ainsi qu'à la startup française Mistral, dont les chatbots pourraient bientôt être utilisés pour opérer les smartphones.</div>
         </details>
         </div>
     </div>
@@ -1383,7 +1391,7 @@
       
 <div class="sentiment-box">
   <span class="sentiment-badge sent-down">Baissier</span>
-  <span class="sentiment-raison">Les marchés actions mondiaux sont en forte baisse, notamment le secteur technologique, sur fond de tensions géopolitiques exacerbées au Moyen-Orient et de la crise énergétique russe. Les rendements obligataires européens sont également sous pression, reflétant une aversion au risque croissante.</span>
+  <span class="sentiment-raison">L'escalade des tensions géopolitiques au Moyen-Orient et en Russie alimente les craintes sur l'approvisionnement énergétique mondial, tandis que les valeurs technologiques et de semi-conducteurs subissent une forte correction.</span>
 </div>
 
       <div class="acc-list">
@@ -1392,10 +1400,10 @@
             
             <span class="acc-region" title="Global">🌐</span>
             <span class="acc-pill" style="background:#3b82f622;color:#3b82f6">Marchés</span>
-            <span class="acc-title">Correction mondiale des marchés actions et tech</span>
+            <span class="acc-title">Nouvelle correction des marchés actions mondiaux</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">Les marchés actions mondiaux ont <strong class="highlight-phrase">terminé dans le rouge</strong>, principalement à cause du secteur des semi-conducteurs, où les investisseurs ont <strong class="highlight-phrase">pris leurs bénéfices</strong> malgré de bons résultats. Les indices asiatiques comme le <strong class="highlight-figure">Nikkei (-5%)</strong> et le <strong class="highlight-figure">Kospi (-6%)</strong> ont fortement chuté, suivis par une baisse des futures du Nasdaq 100 de <strong class="highlight-figure">-1.60%</strong> et du S&P 500 de <strong class="highlight-figure">-0.83%</strong>.</div>
+          <div class="acc-body">Les marchés actions mondiaux ont terminé la journée dans le rouge, en grande partie à cause du <strong class="highlight-phrase">secteur des semi-conducteurs</strong>. Les contrats à terme du Nasdaq 100 ont chuté de <strong class="highlight-figure">-1,60%</strong> et le S&P 500 de <strong class="highlight-figure">-0,83%</strong> avant l'ouverture, tandis que le Nikkei a reculé de <strong class="highlight-figure">-4%</strong> et le CSI 300 de <strong class="highlight-figure">-3,6%</strong>. Les investisseurs ont privilégié les <strong class="highlight-phrase">secteurs plus défensifs</strong> comme les biens de consommation courante, dont l'ETF a enregistré une hausse.</div>
         </details>
         
         <details class="acc-item" style="--cat-couleur:#3b82f6">
@@ -1403,10 +1411,10 @@
             
             <span class="acc-region" title="USA">🇺🇸</span>
             <span class="acc-pill" style="background:#3b82f622;color:#3b82f6">Marchés</span>
-            <span class="acc-title">Le secteur des semi-conducteurs en forte baisse</span>
+            <span class="acc-title">Les valeurs des semi-conducteurs et technologiques s'effondrent</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">Après une journée difficile pour les valeurs technologiques et les fabricants de puces, le secteur des semi-conducteurs est officiellement entré en « bear market ». Des entreprises comme SanDisk <strong class="highlight-figure">(-12.63%)</strong> et Western Digital <strong class="highlight-figure">(-9.15%)</strong>, ainsi que SK Hynix, ont subi des <strong class="highlight-phrase">chutes significatives</strong> reflétant une prise de bénéfices et des attentes très élevées des investisseurs.</div>
+          <div class="acc-body">Le secteur des semi-conducteurs a subi une forte correction, les titres comme SanDisk perdant <strong class="highlight-figure">-12,63%</strong> et Western Digital <strong class="highlight-figure">-9,15%</strong>. Cette vente massive, qui touche également SK Hynix, s'explique par des <strong class="highlight-phrase">prises de bénéfices</strong> malgré de bons résultats, signalant des attentes toujours très élevées. Les entreprises américaines de semi-conducteurs connaissent leur <strong class="highlight-phrase">pire semaine</strong> depuis l'année dernière.</div>
         </details>
         
         <details class="acc-item" style="--cat-couleur:#3b82f6">
@@ -1414,10 +1422,10 @@
             
             <span class="acc-region" title="Global">🌐</span>
             <span class="acc-pill" style="background:#3b82f622;color:#3b82f6">Marchés</span>
-            <span class="acc-title">Les rendements obligataires mondiaux se tendent</span>
+            <span class="acc-title">Hausse des rendements obligataires et aversion au risque</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">Malgré des chiffres d'inflation US inférieurs aux attentes, les <strong class="highlight-phrase">rendements obligataires se sont tendus</strong> sur la quasi-totalité des marchés développés. Le 10 ans OAT a <strong class="highlight-figure">progressé de 2 points de base</strong>, s'approchant de <strong class="highlight-figure">3.93%</strong>, un niveau non vu depuis <strong class="highlight-figure">septembre 2008</strong>, tandis que le spread 10 ans BTP-Bund a atteint <strong class="highlight-figure">80 points de base</strong>.</div>
+          <div class="acc-body">Les rendements obligataires ont augmenté sur la quasi-totalité des marchés développés, le 10Y OAT s'approchant de <strong class="highlight-figure">4%</strong> et le Bund 10 ans clôturant à <strong class="highlight-figure">3,13%</strong>. Le spread BTP-Bund 10 ans a atteint <strong class="highlight-figure">81 points de base</strong>, l'Italie sous-performant dans cet environnement d'aversion au risque. Le 10 ans américain a progressé de <strong class="highlight-figure">1 point de base</strong>.</div>
         </details>
         
         <details class="acc-item" style="--cat-couleur:#3b82f6">
@@ -1425,32 +1433,10 @@
             
             <span class="acc-region" title="Global">🌐</span>
             <span class="acc-pill" style="background:#3b82f622;color:#3b82f6">Marchés</span>
-            <span class="acc-title">Les matières premières montrent des signes mitigés</span>
+            <span class="acc-title">Le pétrole brut en hausse suite aux tensions géopolitiques</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">Alors que les tensions géopolitiques au Moyen-Orient poussent le <strong class="highlight-figure">pétrole brut à la hausse (+2.33% à 80.79 dollars)</strong>, l'or se stabilise avec une légère hausse de <strong class="highlight-figure">0.20% à 4000.20 dollars</strong>. Le prix du diesel américain a <strong class="highlight-figure">dépassé les 5 dollars le gallon</strong>, en raison des perturbations des exportations russes.</div>
-        </details>
-        
-        <details class="acc-item" style="--cat-couleur:#3b82f6">
-          <summary class="acc-summary">
-            
-            <span class="acc-region" title="USA">🇺🇸</span>
-            <span class="acc-pill" style="background:#3b82f622;color:#3b82f6">Marchés</span>
-            <span class="acc-title">Les banques d'investissement affichent des revenus de trading records</span>
-            <span class="acc-chevron">▾</span>
-          </summary>
-          <div class="acc-body">Goldman Sachs a vu ses revenus de trading actions augmenter de <strong class="highlight-figure">72% pour atteindre 7.4 milliards de dollars</strong>, tandis que Morgan Stanley et JPMorgan ont enregistré des hausses respectives de <strong class="highlight-figure">69% et 85%</strong>. Cependant, la plupart des investisseurs particuliers ont <strong class="highlight-figure">sous-performé le S&P 500</strong>, selon Interactive Brokers.</div>
-        </details>
-        
-        <details class="acc-item" style="--cat-couleur:#3b82f6">
-          <summary class="acc-summary">
-            
-            <span class="acc-region" title="USA">🇺🇸</span>
-            <span class="acc-pill" style="background:#3b82f622;color:#3b82f6">Marchés</span>
-            <span class="acc-title">SpaceX s'effondre en bourse</span>
-            <span class="acc-chevron">▾</span>
-          </summary>
-          <div class="acc-body">Les actions de SpaceX ont <strong class="highlight-phrase">chuté brutalement</strong> vendredi, effaçant <strong class="highlight-figure">plus de 1 000 milliards de dollars</strong> de sa valeur boursière par rapport à son sommet. Cette baisse s'inscrit dans un mouvement plus large de dévalorisation de certaines mégacapitalisations technologiques.</div>
+          <div class="acc-body">Le prix du pétrole brut a augmenté de <strong class="highlight-figure">+2,33%</strong>, atteignant <strong class="highlight-figure">80,79 dollars</strong>, en raison de l'escalade du conflit au Moyen-Orient et de la perturbation des expéditions via le détroit d'Ormuz. Le prix du Brent a augmenté de <strong class="highlight-figure">11% en une semaine</strong>, tandis que le diesel américain a dépassé les <strong class="highlight-figure">5 dollars le gallon</strong>. L'AIE s'inquiète des approvisionnements mondiaux.</div>
         </details>
         </div>
     </div>
@@ -1464,21 +1450,10 @@
             
             <span class="acc-region" title="Europe">🇪🇺</span>
             <span class="acc-pill" style="background:#ef444422;color:#ef4444">Macro</span>
-            <span class="acc-title">La BoE sous pression pour ses ventes d'obligations</span>
+            <span class="acc-title">La Banque d'Angleterre sous pression pour ralentir son resserrement quantitatif</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">Les grands investisseurs anticipent un <strong class="highlight-phrase">ralentissement ou un arrêt des ventes d'obligations d'État à long terme</strong> par la Banque d'Angleterre cet automne, craignant une pression excessive sur le marché des gilts. Cela intervient alors que les banques britanniques <strong class="highlight-phrase">augmentent leurs taux hypothécaires</strong>, inversant les baisses récentes.</div>
-        </details>
-        
-        <details class="acc-item" style="--cat-couleur:#ef4444">
-          <summary class="acc-summary">
-            
-            <span class="acc-region" title="Europe">🇪🇺</span>
-            <span class="acc-pill" style="background:#ef444422;color:#ef4444">Macro</span>
-            <span class="acc-title">Les anticipations de hausses de taux de la BCE s'accentuent</span>
-            <span class="acc-chevron">▾</span>
-          </summary>
-          <div class="acc-body">Dans un contexte de tensions géopolitiques et de rebond des prix du pétrole, les marchés prévoient désormais <strong class="highlight-figure">près de 42 points de base de hausses de taux de la BCE</strong> d'ici la fin de l'année. Les taux euro continuent de se tendre, le Bund 10 ans clôturant en hausse d'environ <strong class="highlight-figure">2 points de base</strong>.</div>
+          <div class="acc-body">Les grands investisseurs obligataires anticipent que la Banque d'Angleterre pourrait <strong class="highlight-phrase">ralentir ou suspendre ses ventes d'obligations</strong> d'État britanniques à long terme cet automne. Cette attente est motivée par les inquiétudes concernant la <strong class="highlight-phrase">fragilité du marché des gilts</strong> face aux pressions du resserrement quantitatif. Plusieurs grandes banques britanniques ont déjà commencé à <strong class="highlight-phrase">augmenter leurs taux d'intérêt hypothécaires</strong> cette semaine, inversant la tendance à la baisse des coûts pour les emprunteurs.</div>
         </details>
         
         <details class="acc-item" style="--cat-couleur:#ef4444">
@@ -1486,10 +1461,21 @@
             
             <span class="acc-region" title="USA">🇺🇸</span>
             <span class="acc-pill" style="background:#ef444422;color:#ef4444">Macro</span>
-            <span class="acc-title">La Fed de Kevin Warsh face au défi du bilan</span>
+            <span class="acc-title">La reprise de l'industrie manufacturière américaine se poursuit malgré les risques</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">Le nouveau président de la Fed, Kevin Warsh, doit faire face à la difficulté de <strong class="highlight-figure">réduire le bilan de la banque centrale, qui s'élève à 7 000 milliards de dollars</strong>. Malgré l'aide de « poids lourds », inverser les effets des achats d'obligations s'annonce complexe.</div>
+          <div class="acc-body">L'économie industrielle américaine maintient sa reprise, avec une <strong class="highlight-phrase">expansion de la croissance au-delà des fournisseurs d'IA</strong>, malgré les risques persistants liés au conflit en Iran et aux tarifs douaniers potentiels imposés par l'administration Trump. Cette évolution marque un élargissement attendu de la croissance. La Fed, sous la direction de son nouveau président Kevin Warsh, sera confrontée à la difficile tâche de réduire son <strong class="highlight-figure">bilan de 7 mille milliards de dollars</strong>.</div>
+        </details>
+        
+        <details class="acc-item" style="--cat-couleur:#ef4444">
+          <summary class="acc-summary">
+            
+            <span class="acc-region" title="Asie">🌏</span>
+            <span class="acc-pill" style="background:#ef444422;color:#ef4444">Macro</span>
+            <span class="acc-title">La Chine face à la réduction de son écart commercial et à l'austérité budgétaire</span>
+            <span class="acc-chevron">▾</span>
+          </summary>
+          <div class="acc-body">La Chine voit son <strong class="highlight-phrase">écart commercial se réduire</strong> et semble s'engager dans une période d'austérité budgétaire. Cela suggère des défis pour la deuxième économie mondiale. Les données économiques futures, comme les indices des prix à l'importation et à l'exportation des États-Unis, seront surveillées pour évaluer les dynamiques commerciales mondiales.</div>
         </details>
         
         <details class="acc-item" style="--cat-couleur:#ef4444">
@@ -1497,43 +1483,10 @@
             
             <span class="acc-region" title="Global">🌐</span>
             <span class="acc-pill" style="background:#ef444422;color:#ef4444">Macro</span>
-            <span class="acc-title">La Russie face à une crise du diesel</span>
+            <span class="acc-title">L'inflation et l'emploi russes impactés par le conflit</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">L'interdiction par la Russie des exportations de diesel, suite aux <strong class="highlight-phrase">attaques de drones ukrainiens sur ses raffineries</strong>, a provoqué une crise mondiale. Les prix du diesel aux États-Unis ont <strong class="highlight-figure">dépassé les 5 dollars le gallon</strong>, impactant gravement l'agriculture, les transports et les services publics.</div>
-        </details>
-        
-        <details class="acc-item" style="--cat-couleur:#ef4444">
-          <summary class="acc-summary">
-            
-            <span class="acc-region" title="USA">🇺🇸</span>
-            <span class="acc-pill" style="background:#ef444422;color:#ef4444">Macro</span>
-            <span class="acc-title">La reprise industrielle américaine s'élargit</span>
-            <span class="acc-chevron">▾</span>
-          </summary>
-          <div class="acc-body">L'économie industrielle américaine montre des signes de <strong class="highlight-phrase">reprise continue</strong>, avec une croissance qui s'étend au-delà des seuls fournisseurs d'IA. Cela se produit malgré les risques persistants liés à la guerre en Iran et aux tarifs douaniers de l'administration Trump.</div>
-        </details>
-        
-        <details class="acc-item" style="--cat-couleur:#ef4444">
-          <summary class="acc-summary">
-            
-            <span class="acc-region" title="Global">🌐</span>
-            <span class="acc-pill" style="background:#ef444422;color:#ef4444">Macro</span>
-            <span class="acc-title">Le déficit commercial chinois se réduit, mais l'économie ralentit</span>
-            <span class="acc-chevron">▾</span>
-          </summary>
-          <div class="acc-body">Le déficit commercial de la Chine se resserre, mais la <strong class="highlight-phrase">deuxième économie mondiale est confrontée à une austérité budgétaire</strong>, signalant un ralentissement économique.</div>
-        </details>
-        
-        <details class="acc-item" style="--cat-couleur:#ef4444">
-          <summary class="acc-summary">
-            
-            <span class="acc-region" title="Europe">🇪🇺</span>
-            <span class="acc-pill" style="background:#ef444422;color:#ef4444">Macro</span>
-            <span class="acc-title">L'euro numérique se prépare aux tests bêta</span>
-            <span class="acc-chevron">▾</span>
-          </summary>
-          <div class="acc-body">L'Union européenne se prépare à lancer la <strong class="highlight-phrase">phase de test bêta de l'euro numérique</strong>, marquant une avancée significative dans la finance numérique de la région.</div>
+          <div class="acc-body">Les actions militaires de l'Ukraine ont gravement endommagé les infrastructures pétrolières russes, entraînant des <strong class="highlight-phrase">perturbations significatives de l'économie</strong>. Le gouvernement russe a <strong class="highlight-phrase">cessé de publier une grande partie de ses données économiques</strong> pour masquer l'impact de la guerre. Néanmoins, la crise est devenue visible, avec des files d'attente de plusieurs jours pour le carburant dans certaines régions et une augmentation des prix de détail de <strong class="highlight-figure">50% ou plus</strong> pour le diesel, affectant l'agriculture, les transports publics et les petites entreprises.</div>
         </details>
         </div>
     </div>
@@ -1547,87 +1500,10 @@
             
             <span class="acc-region" title="USA">🇺🇸</span>
             <span class="acc-pill" style="background:#10b98122;color:#10b981">Corporate</span>
-            <span class="acc-title">Les Yankees cherchent 3 milliards de dollars auprès d'Apollo Global</span>
+            <span class="acc-title">Les Yankees de New York cherchent 3 milliards de dollars de financement</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">Les New York Yankees sont en discussions avancées pour lever <strong class="highlight-figure">près de 3 milliards de dollars</strong> auprès d'Apollo Global, principalement via de la dette et une prise de participation. Les fonds serviront à <strong class="highlight-phrase">refinancer des obligations existantes</strong> et à financer des « opportunités de croissance ».</div>
-        </details>
-        
-        <details class="acc-item" style="--cat-couleur:#10b981">
-          <summary class="acc-summary">
-            
-            <span class="acc-region" title="Europe">🇪🇺</span>
-            <span class="acc-pill" style="background:#10b98122;color:#10b981">Corporate</span>
-            <span class="acc-title">Burberry boosté par les ventes en Amérique et en Chine</span>
-            <span class="acc-chevron">▾</span>
-          </summary>
-          <div class="acc-body">Burberry a vu ses ventes à périmètre comparable augmenter de <strong class="highlight-figure">5% au premier trimestre</strong>, tirées par les performances en Amérique et en Grande Chine. Le chiffre d'affaires retail a progressé de <strong class="highlight-figure">4% à 455 millions de livres sterling</strong>, compensant un déclin de <strong class="highlight-figure">3%</strong> dans la région EMEA.</div>
-        </details>
-        
-        <details class="acc-item" style="--cat-couleur:#10b981">
-          <summary class="acc-summary">
-            
-            <span class="acc-region" title="Europe">🇪🇺</span>
-            <span class="acc-pill" style="background:#10b98122;color:#10b981">Corporate</span>
-            <span class="acc-title">Accor enquête sur la conduite de son PDG Sébastien Bazin</span>
-            <span class="acc-chevron">▾</span>
-          </summary>
-          <div class="acc-body">Le conseil d'administration du groupe hôtelier Accor a mandaté un <strong class="highlight-phrase">cabinet d'avocats parisien pour enquêter</strong> sur le PDG Sébastien Bazin, suite à des allégations de conflits d'intérêts et de favoritisme.</div>
-        </details>
-        
-        <details class="acc-item" style="--cat-couleur:#10b981">
-          <summary class="acc-summary">
-            
-            <span class="acc-region" title="Europe">🇪🇺</span>
-            <span class="acc-pill" style="background:#10b98122;color:#10b981">Corporate</span>
-            <span class="acc-title">Dassault Systèmes en discussion pour acquérir ArisGlobal</span>
-            <span class="acc-chevron">▾</span>
-          </summary>
-          <div class="acc-body">Le conglomérat français Dassault Systèmes serait en négociations pour <strong class="highlight-phrase">acheter ArisGlobal</strong>, un éditeur de logiciels d'essais cliniques, auprès de Nordic Capital pour environ <strong class="highlight-figure">2 milliards de dollars</strong>.</div>
-        </details>
-        
-        <details class="acc-item" style="--cat-couleur:#10b981">
-          <summary class="acc-summary">
-            
-            <span class="acc-region" title="Global">🌐</span>
-            <span class="acc-pill" style="background:#10b98122;color:#10b981">Corporate</span>
-            <span class="acc-title">Chevron et l'Irak envisagent un pipeline alternatif à Ormuz</span>
-            <span class="acc-chevron">▾</span>
-          </summary>
-          <div class="acc-body">Chevron et l'Irak sont en discussions avancées pour former un consortium visant à <strong class="highlight-phrase">construire et relancer un réseau de pipelines</strong> vers la Syrie, afin de contourner le détroit d'Ormuz. L'opération est orchestrée par Tom Barrack, un conseiller de Donald Trump.</div>
-        </details>
-        
-        <details class="acc-item" style="--cat-couleur:#10b981">
-          <summary class="acc-summary">
-            
-            <span class="acc-region" title="Europe">🇪🇺</span>
-            <span class="acc-pill" style="background:#10b98122;color:#10b981">Corporate</span>
-            <span class="acc-title">ABB acquiert Rotork pour 4.1 milliards de livres sterling</span>
-            <span class="acc-chevron">▾</span>
-          </summary>
-          <div class="acc-body">Le groupe d'ingénierie suisse ABB a accepté d'acheter son rival britannique Rotork pour <strong class="highlight-figure">4.1 milliards de livres sterling</strong> en espèces. Cette acquisition vise à <strong class="highlight-phrase">renforcer la division automatisation d'ABB</strong>.</div>
-        </details>
-        
-        <details class="acc-item" style="--cat-couleur:#10b981">
-          <summary class="acc-summary">
-            
-            <span class="acc-region" title="Europe">🇪🇺</span>
-            <span class="acc-pill" style="background:#10b98122;color:#10b981">Corporate</span>
-            <span class="acc-title">DCC visé par une offre de rachat améliorée</span>
-            <span class="acc-chevron">▾</span>
-          </summary>
-          <div class="acc-body">Le groupe énergétique DCC a reçu une <strong class="highlight-phrase">offre de rachat améliorée</strong> de la part de KKR et Energy Capital Partners. Cette opération pourrait devenir l'une des plus importantes privatisations d'une entreprise cotée à Londres cette année.</div>
-        </details>
-        
-        <details class="acc-item" style="--cat-couleur:#10b981">
-          <summary class="acc-summary">
-            
-            <span class="acc-region" title="Europe">🇪🇺</span>
-            <span class="acc-pill" style="background:#10b98122;color:#10b981">Corporate</span>
-            <span class="acc-title">Micromania change de main en France</span>
-            <span class="acc-chevron">▾</span>
-          </summary>
-          <div class="acc-body">Quatre entrepreneurs franco-québécois, dont S. Tétrault, ont <strong class="highlight-phrase">acquis Micromania</strong>. Leur stratégie inclut de miser sur la communauté, la nostalgie et les produits exclusifs pour relancer l'enseigne de jeux vidéo.</div>
+          <div class="acc-body">L'équipe de baseball des Yankees de New York est en <strong class="highlight-figure">négociations avancées pour lever près de 3 milliards de dollars</strong> auprès d'Apollo Global. Le financement, composé majoritairement de dette et d'une participation au capital, servirait à <strong class="highlight-phrase">refinancer des obligations existantes</strong> et à soutenir de futures «opportunités de croissance». L'équipe est actuellement valorisée à <strong class="highlight-figure">8,5 milliards de dollars</strong> par Forbes, ce qui en fait l'une des franchises sportives les plus chères au monde.</div>
         </details>
         
         <details class="acc-item" style="--cat-couleur:#10b981">
@@ -1635,10 +1511,76 @@
             
             <span class="acc-region" title="USA">🇺🇸</span>
             <span class="acc-pill" style="background:#10b98122;color:#10b981">Corporate</span>
-            <span class="acc-title">Netflix voit sa valeur boursière chuter de 45%</span>
+            <span class="acc-title">Netflix voit sa valeur boursière chuter de 45% depuis son pic</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">Depuis son pic de <strong class="highlight-figure">juin 2025</strong>, Netflix a <strong class="highlight-figure">perdu 45% de sa valeur en Bourse</strong>. Ses derniers résultats, bien qu'en ligne avec les attentes (CA de <strong class="highlight-figure">12.56 milliards de dollars, +13%</strong>, Bénéfice net de <strong class="highlight-figure">3.4 milliards, +9%</strong>), sont principalement dus aux hausses de prix et à la publicité, plutôt qu'à une croissance du nombre d'abonnés.</div>
+          <div class="acc-body">Netflix a enregistré une <strong class="highlight-figure">perte de 45% de sa valeur en Bourse</strong> depuis son sommet historique de juin 2025. Les derniers résultats trimestriels affichent un chiffre d'affaires de <strong class="highlight-figure">12,56 milliards de dollars (+13% sur un an)</strong> et un bénéfice net de <strong class="highlight-figure">3,4 milliards de dollars (+9%)</strong>, globalement conformes aux attentes du marché. Cependant, cette croissance est principalement due aux <strong class="highlight-phrase">augmentations de prix et à l'expansion de la publicité</strong>, plutôt qu'à une forte augmentation du nombre d'abonnés.</div>
+        </details>
+        
+        <details class="acc-item" style="--cat-couleur:#10b981">
+          <summary class="acc-summary">
+            
+            <span class="acc-region" title="Europe">🇪🇺</span>
+            <span class="acc-pill" style="background:#10b98122;color:#10b981">Corporate</span>
+            <span class="acc-title">Burberry affiche une croissance de ses ventes malgré la guerre au Moyen-Orient</span>
+            <span class="acc-chevron">▾</span>
+          </summary>
+          <div class="acc-body">Burberry a annoncé une <strong class="highlight-figure">augmentation de 5% de ses ventes comparables</strong> au premier trimestre (fin juin), avec un chiffre d'affaires au détail en hausse de <strong class="highlight-figure">4% à 455 millions de livres sterling</strong> à taux de change constants. Cette croissance a été principalement tirée par les dépenses de consommation en <strong class="highlight-phrase">Amérique et en Grande Chine</strong>. Cependant, la région Europe, Moyen-Orient, Inde et Afrique a enregistré un <strong class="highlight-figure">déclin de 3%</strong> en raison de l'impact du conflit au Moyen-Orient. Le groupe a aussi noté une croissance sur toutes ses gammes pour la première fois en <strong class="highlight-phrase">trois ans</strong>.</div>
+        </details>
+        
+        <details class="acc-item" style="--cat-couleur:#10b981">
+          <summary class="acc-summary">
+            
+            <span class="acc-region" title="Europe">🇪🇺</span>
+            <span class="acc-pill" style="background:#10b98122;color:#10b981">Corporate</span>
+            <span class="acc-title">Enquête sur le PDG d'Accor pour conflits d'intérêts</span>
+            <span class="acc-chevron">▾</span>
+          </summary>
+          <div class="acc-body">Le conseil d'administration du groupe hôtelier Accor a diligenté un <strong class="highlight-phrase">cabinet d'avocats parisien de premier plan</strong> pour enquêter sur la conduite de son PDG, Sébastien Bazin. Cette enquête fait suite à des allégations de <strong class="highlight-phrase">conflits d'intérêts et de favoritisme</strong> sous sa direction. Les résultats de l'enquête pourraient avoir des implications significatives pour la gouvernance et la direction de l'entreprise.</div>
+        </details>
+        
+        <details class="acc-item" style="--cat-couleur:#10b981">
+          <summary class="acc-summary">
+            
+            <span class="acc-region" title="Europe">🇪🇺</span>
+            <span class="acc-pill" style="background:#10b98122;color:#10b981">Corporate</span>
+            <span class="acc-title">Dassault Systèmes en négociation pour acquérir ArisGlobal pour 2 milliards de dollars</span>
+            <span class="acc-chevron">▾</span>
+          </summary>
+          <div class="acc-body">Le conglomérat français Dassault Systèmes est en discussion pour <strong class="highlight-phrase">acquérir le fabricant de logiciels d'essais cliniques ArisGlobal</strong> auprès de Nordic Capital pour environ <strong class="highlight-figure">2 milliards de dollars</strong>. Cette transaction représenterait une nouvelle sortie réussie pour le groupe de capital-investissement suédois. L'acquisition renforcerait la position de Dassault Systèmes dans le secteur des logiciels de santé et des sciences de la vie.</div>
+        </details>
+        
+        <details class="acc-item" style="--cat-couleur:#10b981">
+          <summary class="acc-summary">
+            
+            <span class="acc-region" title="Europe">🇪🇺</span>
+            <span class="acc-pill" style="background:#10b98122;color:#10b981">Corporate</span>
+            <span class="acc-title">Micromania change de propriétaire et mise sur la communauté et la nostalgie</span>
+            <span class="acc-chevron">▾</span>
+          </summary>
+          <div class="acc-body">L'enseigne Micromania a été acquise par <strong class="highlight-phrase">quatre entrepreneurs franco-québécois</strong>, dont S. Tétrault, connu pour avoir relancé EB Games au Canada. La stratégie envisagée pour «faire renaître le mythe» repose sur la <strong class="highlight-phrase">mise en valeur de la communauté, de la nostalgie et de l'innovation</strong>, en proposant des produits exclusifs, des cartes et des objets de collection. Cette approche vise à capitaliser sur le fort attachement des consommateurs à la marque.</div>
+        </details>
+        
+        <details class="acc-item" style="--cat-couleur:#10b981">
+          <summary class="acc-summary">
+            
+            <span class="acc-region" title="Europe">🇪🇺</span>
+            <span class="acc-pill" style="background:#10b98122;color:#10b981">Corporate</span>
+            <span class="acc-title">Le marché londonien continue de se contracter avec des acquisitions étrangères</span>
+            <span class="acc-chevron">▾</span>
+          </summary>
+          <div class="acc-body">Le marché boursier de Londres continue de voir un nombre croissant d'entreprises britanniques être <strong class="highlight-phrase">acquises par des acheteurs étrangers ou quitter la bourse locale</strong>. easyJet a reçu des offres concurrentes de Castlelake et Apollo, et Schroders a été vendu au rival américain Nuveen. ABB, le groupe suisse d'ingénierie, a accepté d'acheter le britannique Rotork pour <strong class="highlight-figure">4,1 milliards de livres sterling en espèces</strong>, tandis que DCC, un groupe énergétique du FTSE 100, a reçu une offre améliorée de KKR et Energy Capital Partners. Ces acquisitions sont souvent motivées par les <strong class="highlight-phrase">valorisations déprimées</strong> et les opérations internationales des entreprises cotées à Londres.</div>
+        </details>
+        
+        <details class="acc-item" style="--cat-couleur:#10b981">
+          <summary class="acc-summary">
+            
+            <span class="acc-region" title="USA">🇺🇸</span>
+            <span class="acc-pill" style="background:#10b98122;color:#10b981">Corporate</span>
+            <span class="acc-title">Les exportateurs de gaz américains grands gagnants du conflit iranien</span>
+            <span class="acc-chevron">▾</span>
+          </summary>
+          <div class="acc-body">Les exportateurs de gaz naturel liquéfié (GNL) américains sont devenus l'un des <strong class="highlight-phrase">principaux bénéficiaires</strong> du conflit en Iran. Les attaques de drones sur les centres d'exportation du Qatar et le chaos dans le détroit d'Ormuz ont fondamentalement modifié l'équation du marché. Le GNL devrait devenir la <strong class="highlight-phrase">deuxième exportation nette la plus précieuse des États-Unis</strong> (après les avions civils) d'ici <strong class="highlight-phrase">cinq ans</strong>, capturant ainsi plus de <strong class="highlight-figure">30% du marché mondial</strong>.</div>
         </details>
         </div>
     </div>
@@ -1652,43 +1594,43 @@
             
             <span class="acc-region" title="Global">🌐</span>
             <span class="acc-pill" style="background:#f9731622;color:#f97316">IA</span>
-            <span class="acc-title">La Chine s'affirme comme leader mondial de l'IA</span>
+            <span class="acc-title">L'Europe cherche une souveraineté en IA face à la dominance américaine et chinoise</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">Le Président Xi Jinping a souligné les <strong class="highlight-phrase">ambitions de la Chine de dominer le secteur de l'IA</strong> et a appelé à une coopération internationale. Un nouveau groupe, l'« Organisation mondiale de coopération en intelligence artificielle », a été créé avec <strong class="highlight-figure">30 pays non-occidentaux</strong>, et la start-up chinoise Moonshot a dévoilé un LLM présenté comme le <strong class="highlight-phrase">plus grand modèle ouvert au monde</strong>.</div>
+          <div class="acc-body">L'Union européenne exige que Google permette aux <strong class="highlight-phrase">modèles d'IA concurrents d'utiliser son écosystème Android</strong>, défiant la prédominance de Gemini. Cette décision devrait <strong class="highlight-phrase">ouvrir le marché</strong> pour des entreprises comme Anthropic, OpenAI et Mistral. Le co-fondateur de Mistral a souligné la nécessité pour l'Europe de <strong class="highlight-phrase">construire une IA souveraine</strong>, capable de rivaliser avec les leaders américains et chinois, qui continuent de développer des modèles toujours plus puissants.</div>
         </details>
         
         <details class="acc-item" style="--cat-couleur:#f97316">
           <summary class="acc-summary">
             
-            <span class="acc-region" title="Europe">🇪🇺</span>
+            <span class="acc-region" title="Asie">🌏</span>
             <span class="acc-pill" style="background:#f9731622;color:#f97316">IA</span>
-            <span class="acc-title">L'UE impose à Google d'ouvrir Android aux IA concurrentes</span>
+            <span class="acc-title">La Chine s'affirme comme leader mondial de l'IA avec un nouveau groupe et des modèles puissants</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">L'Union européenne va <strong class="highlight-phrase">obliger Google à permettre l'utilisation de modèles d'IA concurrents</strong> sur son écosystème Android, aux côtés de Gemini. Cette décision vise à accroître la concurrence pour les <strong class="highlight-figure">60% des utilisateurs d'Android en Europe</strong>, bénéficiant à des acteurs comme Anthropic, OpenAI et Mistral.</div>
+          <div class="acc-body">Le président Xi Jinping a positionné la Chine comme le <strong class="highlight-phrase">chef de file d'un nouvel ordre mondial de l'IA</strong>, appelant à la coopération internationale et mettant en garde contre les risques et les «nouvelles injustices historiques» liés à un accès inégal. Un nouveau groupe international, incluant <strong class="highlight-figure">30 pays (sans les puissances occidentales)</strong>, a été créé pour définir les standards. Dans ce contexte, la startup chinoise Moonshot a présenté un <strong class="highlight-phrase">modèle de langage large</strong> qui réduit l'écart avec les laboratoires américains de pointe. Ce développement intervient alors que les investissements en IA continuent de favoriser l'industrie des puces, qui en tire le plus de valeur.</div>
         </details>
         
-        <details class="acc-item" style="--cat-couleur:#8b5cf6">
+        <details class="acc-item" style="--cat-couleur:#f97316">
           <summary class="acc-summary">
             
             <span class="acc-region" title="USA">🇺🇸</span>
-            <span class="acc-pill" style="background:#8b5cf622;color:#8b5cf6">Tech</span>
-            <span class="acc-title">Apple poursuit OpenAI pour vol de secrets commerciaux</span>
+            <span class="acc-pill" style="background:#f9731622;color:#f97316">IA</span>
+            <span class="acc-title">Apple accuse OpenAI de vol de secrets commerciaux</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">Apple a envoyé des avertissements légaux à des <strong class="highlight-phrase">dizaines d'anciens employés</strong> ayant rejoint OpenAI, dans le but de collecter des preuves pour soutenir ses accusations de <strong class="highlight-phrase">vol de secrets commerciaux</strong> par le créateur de ChatGPT.</div>
+          <div class="acc-body">Apple a ciblé des <strong class="highlight-phrase">dizaines d'anciens employés d'OpenAI</strong> avec des avertissements légaux personnels, cherchant des preuves pour étayer ses allégations selon lesquelles le créateur de ChatGPT aurait <strong class="highlight-phrase">volé ses secrets commerciaux</strong>. Cette action légale souligne l'intensification de la concurrence et des enjeux de propriété intellectuelle dans le secteur de l'intelligence artificielle.</div>
         </details>
         
-        <details class="acc-item" style="--cat-couleur:#8b5cf6">
+        <details class="acc-item" style="--cat-couleur:#f97316">
           <summary class="acc-summary">
             
             <span class="acc-region" title="Global">🌐</span>
-            <span class="acc-pill" style="background:#8b5cf622;color:#8b5cf6">Tech</span>
-            <span class="acc-title">Le boom de l'IA en question sur sa monétisation</span>
+            <span class="acc-pill" style="background:#f9731622;color:#f97316">IA</span>
+            <span class="acc-title">La monétisation de l'IA et l'avantage des fabricants de puces</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">L'investissement massif dans l'IA est confronté à la question de sa <strong class="highlight-phrase">monétisation</strong>, car les modèles de pointe sont souvent fournis à un coût inférieur à la production. La <strong class="highlight-phrase">majorité de la valeur générée</strong> profite actuellement à l'industrie des puces, soulevant des doutes sur la rentabilité à long terme des développeurs de modèles.</div>
+          <div class="acc-body">L'investissement dans l'IA est entré dans une phase où les modèles de pointe sont souvent fournis <strong class="highlight-phrase">en dessous de leur coût réel</strong>, subventionnant ainsi les utilisateurs. Cette dynamique fait que la <strong class="highlight-phrase">majorité de la valeur générée</strong> dans la chaîne d'approvisionnement de l'IA va directement à l'<strong class="highlight-phrase">industrie des semi-conducteurs</strong>. Les investisseurs, qui ont soutenu des cycles de financement massifs, croient que la technologie atteindra une adoption de masse. Cependant, la question de la rentabilité réelle pour les développeurs de modèles reste ouverte, car l'IA consomme plus de capital qu'elle n'en génère pour l'instant.</div>
         </details>
         </div>
     </div>
@@ -1702,10 +1644,10 @@
             
             <span class="acc-region" title="Global">🌐</span>
             <span class="acc-pill" style="background:#f59e0b22;color:#f59e0b">Géopolitique</span>
-            <span class="acc-title">L'escalade militaire au Moyen-Orient provoque une crise énergétique mondiale et des bouleversements commerciaux</span>
+            <span class="acc-title">Le conflit Iran-US s'intensifie, menaçant l'approvisionnement énergétique mondial</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">Les tensions se sont considérablement aggravées au Moyen-Orient, avec des frappes réciproques entre l'Iran et les États-Unis qui ont ciblé des <strong class="highlight-phrase">infrastructures civiles essentielles</strong>, comme l'usine de dessalement du Koweït et le réseau électrique iranien. Cette intensification des hostilités a entraîné l'<strong class="highlight-phrase">interruption des expéditions pétrolières à travers le stratégique détroit d'Ormuz</strong> après seulement un mois de cessez-le-feu, ce qui a eu un impact immédiat sur les marchés de l'énergie. Le prix du baril de Brent a bondi de <strong class="highlight-figure">11% en une semaine</strong>, et l'Agence internationale de l'énergie (AIE) a exprimé de <strong class="highlight-phrase">vives préoccupations concernant les approvisionnements mondiaux en carburant</strong>. Dans ce contexte de perturbation, les États-Unis voient leurs <strong class="highlight-phrase">exportations de gaz naturel liquéfié (GNL) devenir un atout majeur</strong>, le GNL étant en passe de devenir la <strong class="highlight-phrase">deuxième exportation nette la plus précieuse du pays</strong> d'ici cinq ans, capturant <strong class="highlight-figure">30% du marché mondial</strong>. Cette situation est renforcée par une administration Trump « agressivement pro-gaz » et les attaques de drones sur les infrastructures d'exportation de gaz du Qatar.</div>
+          <div class="acc-body">Le conflit entre l'Iran et les États-Unis a connu une <strong class="highlight-phrase">escalade significative</strong>, avec des frappes réciproques sur les infrastructures civiles des deux côtés. L'Iran a frappé une <strong class="highlight-phrase">usine de dessalement koweïtienne</strong>, tandis que les États-Unis ont ciblé des infrastructures iraniennes, y compris des aéroports et des ponts. Cette situation a conduit à la <strong class="highlight-phrase">suspension des expéditions de pétrole via le détroit d'Ormuz</strong>, entraînant une hausse de <strong class="highlight-figure">11% du prix du Brent en une semaine</strong>. L'Agence Internationale de l'Énergie a exprimé sa <strong class="highlight-phrase">vive inquiétude quant aux approvisionnements mondiaux en carburant</strong>, d'autant plus que les attaques de drones ukrainiens sur les raffineries russes ont <strong class="highlight-phrase">perturbé les exportations de diesel</strong>, provoquant des pénuries et une hausse des prix de plus de <strong class="highlight-figure">5 dollars le gallon</strong> aux États-Unis, après que la Russie ait interdit ses exportations de diesel la semaine dernière. Chevron est également en discussion avec l'Irak pour un pipeline vers la Syrie, une initiative qui vise à contourner ce détroit stratégique.</div>
         </details>
         
         <details class="acc-item" style="--cat-couleur:#3b82f6">
@@ -1713,10 +1655,32 @@
             
             <span class="acc-region" title="Global">🌐</span>
             <span class="acc-pill" style="background:#3b82f622;color:#3b82f6">Marchés</span>
-            <span class="acc-title">Les marchés actions mondiaux subissent une correction majeure, plombés par la tech et les puces</span>
+            <span class="acc-title">Chute généralisée des marchés boursiers, en particulier la tech et les semi-conducteurs</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">Les marchés actions mondiaux ont connu une journée de forte correction, avec des <strong class="highlight-figure">chutes notables en Asie, où le Nikkei a reculé de 5% et le Kospi de 6%</strong>, reflétant une inquiétude généralisée. Les futures américains indiquent également une ouverture en baisse pour le Nasdaq 100 <strong class="highlight-figure">(-1.3%)</strong> et le S&P 500 <strong class="highlight-figure">(-0.8%)</strong>. Le secteur des semi-conducteurs est particulièrement touché, entrant en « bear market » et subissant d'importantes prises de bénéfices. Des entreprises comme <strong class="highlight-figure">SanDisk (-12.63%)</strong>, <strong class="highlight-figure">Western Digital (-9.15%)</strong> et SK Hynix ont été lourdement pénalisées, malgré des résultats parfois solides pour certains acteurs comme TSMC dont les bénéfices ont <strong class="highlight-figure">bondi de 77% au second trimestre</strong>. Cette correction s'explique par des attentes jugées trop élevées et des doutes croissants sur la capacité des entreprises d'IA à monétiser leurs investissements massifs en capacité de calcul, la valeur profitant majoritairement à l'industrie des puces.</div>
+          <div class="acc-body">Les marchés boursiers mondiaux ont connu une journée de forte baisse, avec des contrats à terme du Nasdaq 100 en recul de <strong class="highlight-figure">-1,60%</strong> et du S&P 500 de <strong class="highlight-figure">-0,83%</strong> avant l'ouverture. Les marchés asiatiques ont été particulièrement touchés, avec le Nikkei 225 chutant de <strong class="highlight-figure">-4%</strong> et le CSI 300 de <strong class="highlight-figure">-3,6%</strong>. La vente massive a été principalement menée par le <strong class="highlight-phrase">secteur des semi-conducteurs</strong>, où des entreprises comme SanDisk ont perdu <strong class="highlight-figure">-12,63%</strong> et Western Digital <strong class="highlight-figure">-9,15%</strong>, malgré des résultats trimestriels positifs pour certains acteurs comme TSMC (+<strong class="highlight-figure">77%</strong> de bénéfices). Cette correction s'explique par des <strong class="highlight-phrase">prises de bénéfices</strong> et des inquiétudes persistantes quant à la capacité des entreprises d'IA à monétiser leurs investissements massifs, malgré un volume de trading record enregistré par les grandes banques d'investissement comme Goldman Sachs (<strong class="highlight-figure">7,4 milliards de dollars</strong> de revenus de trading au T2, en hausse de <strong class="highlight-figure">72%</strong>).</div>
+        </details>
+        
+        <details class="acc-item" style="--cat-couleur:#10b981">
+          <summary class="acc-summary">
+            
+            <span class="acc-region" title="USA">🇺🇸</span>
+            <span class="acc-pill" style="background:#10b98122;color:#10b981">Corporate</span>
+            <span class="acc-title">SpaceX perd plus de mille milliards de dollars de valorisation boursière</span>
+            <span class="acc-chevron">▾</span>
+          </summary>
+          <div class="acc-body">Les actions de SpaceX ont enregistré une <strong class="highlight-phrase">chute spectaculaire</strong> vendredi, mettant la société sur la voie d'une <strong class="highlight-figure">perte de plus de 1 mille milliards de dollars</strong> de valeur de marché par rapport à son sommet. Cette baisse intervient alors que le secteur technologique global subit une correction et que les investisseurs réévaluent les valorisations des entreprises à forte croissance. Cette dépréciation représente un revers majeur pour l'une des entreprises privées les plus valorisées au monde, bien qu'aucune raison spécifique n'ait été détaillée au-delà du sentiment général du marché.</div>
+        </details>
+        
+        <details class="acc-item" style="--cat-couleur:#f97316">
+          <summary class="acc-summary">
+            
+            <span class="acc-region" title="Asie">🌏</span>
+            <span class="acc-pill" style="background:#f9731622;color:#f97316">IA</span>
+            <span class="acc-title">La Chine se positionne en leader mondial de l'IA avec un programme ambitieux</span>
+            <span class="acc-chevron">▾</span>
+          </summary>
+          <div class="acc-body">Le président chinois Xi Jinping a exposé les ambitions de son pays de devenir le <strong class="highlight-phrase">leader mondial de l'intelligence artificielle</strong>, appelant à une <strong class="highlight-phrase">coopération internationale</strong> tout en avertissant des risques inhérents à cette technologie en développement «à une vitesse fulgurante». Ces déclarations interviennent un jour après que <strong class="highlight-figure">30 pays (à l'exclusion des nations occidentales)</strong> aient rejoint un nouveau groupe qui donnera à Pékin plus d'influence sur les normes internationales de l'IA. Les startups chinoises, comme Moonshot qui a récemment lancé un <strong class="highlight-phrase">modèle de langage puissant</strong>, montrent un rétrécissement de l'écart technologique avec les leaders américains. Cependant, la course à l'IA s'accompagne de tensions, comme en témoigne la décision d'Apple de menacer de poursuites des dizaines d'anciens employés, désormais chez OpenAI, pour <strong class="highlight-phrase">vol présumé de secrets commerciaux</strong>.</div>
         </details>
         
         <details class="acc-item" style="--cat-couleur:#ef4444">
@@ -1724,21 +1688,21 @@
             
             <span class="acc-region" title="Europe">🇪🇺</span>
             <span class="acc-pill" style="background:#ef444422;color:#ef4444">Macro</span>
-            <span class="acc-title">La Banque d'Angleterre sous pression pour ses ventes d'obligations, tensions sur les taux européens</span>
+            <span class="acc-title">La Banque d'Angleterre sous pression pour ajuster sa politique de resserrement quantitatif</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">De grands investisseurs anticipent un <strong class="highlight-phrase">ralentissement ou un arrêt des ventes d'obligations d'État à long terme</strong> par la Banque d'Angleterre (BoE) cet automne, craignant que le programme de « resserrement quantitatif » n'exerce une <strong class="highlight-phrase">pression insoutenable sur le marché des gilts britanniques déjà fragile</strong>. Parallèlement, au Royaume-Uni, plusieurs prêteurs hypothécaires ont commencé à <strong class="highlight-phrase">augmenter leurs taux d'intérêt</strong>, inversant la tendance récente à la baisse des coûts pour les emprunteurs et signalant de futures hausses. Dans la zone euro, les anticipations de politique monétaire ont été <strong class="highlight-figure">revues à la hausse, avec près de 42 points de base de hausses de taux de la BCE désormais pricés d'ici la fin de l'année</strong>, sous l'effet de l'escalade géopolitique et du rebond des prix du pétrole. Le rendement du Bund allemand à 10 ans a augmenté de <strong class="highlight-figure">2 points de base</strong>, tandis que le spread BTP-Bund italien a atteint <strong class="highlight-figure">81 points de base</strong>, reflétant une aversion au risque accrue.</div>
+          <div class="acc-body">Les grands investisseurs obligataires anticipent un changement de cap de la Banque d'Angleterre (BoE), s'attendant à ce qu'elle <strong class="highlight-phrase">ralentisse voire stoppe ses ventes d'obligations</strong> d'État britanniques à long terme cet automne. Cette pression découle de préoccupations sérieuses quant à la <strong class="highlight-phrase">fragilité du marché des gilts</strong>, soumise à une forte pression par le programme de resserrement quantitatif. Cette évolution potentielle marque un revirement significatif dans la politique monétaire de la BoE, qui cherche à stabiliser les marchés. Parallèlement, plusieurs grandes banques britanniques ont commencé à <strong class="highlight-phrase">augmenter leurs taux d'intérêt hypothécaires</strong> cette semaine, annulant les baisses récentes et signalant une persistance des tensions sur les coûts d'emprunt pour les ménages.</div>
         </details>
         
-        <details class="acc-item" style="--cat-couleur:#f97316">
+        <details class="acc-item" style="--cat-couleur:#10b981">
           <summary class="acc-summary">
             
-            <span class="acc-region" title="Global">🌐</span>
-            <span class="acc-pill" style="background:#f9731622;color:#f97316">IA</span>
-            <span class="acc-title">La Chine affirme ses ambitions de leader mondial de l'IA et met en garde contre les risques</span>
+            <span class="acc-region" title="Europe">🇪🇺</span>
+            <span class="acc-pill" style="background:#10b98122;color:#10b981">Corporate</span>
+            <span class="acc-title">Accor enquête sur son PDG, tandis que le marché londonien continue de voir ses entreprises rachetées</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">Le Président Xi Jinping a clairement exprimé les <strong class="highlight-phrase">ambitions de la Chine de défier les États-Unis et de devenir le leader mondial de l'intelligence artificielle</strong>. Lors d'une conférence sur l'IA, il a appelé à une <strong class="highlight-phrase">coopération internationale</strong> tout en soulignant les risques de cette technologie en développement rapide. Pékin a pris les devants en lançant la « World Artificial Intelligence Cooperation Organization », à laquelle <strong class="highlight-figure">30 pays ont adhéré, mais sans participation occidentale</strong>, cherchant à renforcer son influence sur les normes internationales de l'IA. Cette initiative coïncide avec la montée en puissance de start-ups chinoises, comme Moonshot, qui a récemment dévoilé un <strong class="highlight-phrase">grand modèle de langage affirmé comme le plus grand modèle d'IA ouvert au monde</strong>, démontrant un <strong class="highlight-phrase">rétrécissement de l'écart technologique</strong> avec les leaders américains.</div>
+          <div class="acc-body">Le conseil d'administration du groupe hôtelier Accor a diligenté un <strong class="highlight-phrase">cabinet d'avocats parisien réputé</strong> pour enquêter sur la conduite de son PDG, Sébastien Bazin, suite à des allégations de <strong class="highlight-phrase">conflits d'intérêts et de favoritisme</strong>. Cette nouvelle intervient dans un contexte où le marché londonien continue de se contracter, avec de nombreuses entreprises britanniques faisant l'objet d'offres de rachat par des entités étrangères. Par exemple, le groupe d'ingénierie suisse ABB a accepté d'acheter le britannique Rotork pour <strong class="highlight-figure">4,1 milliards de livres sterling</strong> en numéraire, et DCC a reçu une offre améliorée de KKR et Energy Capital Partners. Ces acquisitions sont facilitées par les <strong class="highlight-phrase">valorisations déprimées</strong> des entreprises cotées à Londres, attirant les capitaux étrangers.</div>
         </details>
         
         <details class="acc-item" style="--cat-couleur:#f97316">
@@ -1746,43 +1710,10 @@
             
             <span class="acc-region" title="Europe">🇪🇺</span>
             <span class="acc-pill" style="background:#f9731622;color:#f97316">IA</span>
-            <span class="acc-title">L'UE force Google à ouvrir Android aux IA concurrentes, stimulant la concurrence</span>
+            <span class="acc-title">L'Union européenne impose à Google d'ouvrir Android aux IA concurrentes</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">La Commission européenne a ordonné à Google d'<strong class="highlight-phrase">autoriser l'intégration de modèles d'intelligence artificielle concurrents</strong> sur son écosystème Android, en parallèle de son propre outil Gemini. Cette décision vise à remédier à la réduction de l'attractivité des modèles tiers pour les <strong class="highlight-figure">60% des adultes européens</strong> qui utilisent Android, en raison du préchargement de Gemini. Cette initiative devrait <strong class="highlight-phrase">ouvrir significativement le marché</strong> et bénéficier à des géants de l'AI comme Anthropic et OpenAI, ainsi qu'à des acteurs européens comme la start-up française Mistral, dont les chatbots pourraient bientôt opérer sur les smartphones, stimulant ainsi une <strong class="highlight-phrase">souveraineté numérique européenne</strong> en matière d'IA.</div>
-        </details>
-        
-        <details class="acc-item" style="--cat-couleur:#10b981">
-          <summary class="acc-summary">
-            
-            <span class="acc-region" title="USA">🇺🇸</span>
-            <span class="acc-pill" style="background:#10b98122;color:#10b981">Corporate</span>
-            <span class="acc-title">Les New York Yankees lèvent 3 milliards de dollars pour le refinancement et la croissance</span>
-            <span class="acc-chevron">▾</span>
-          </summary>
-          <div class="acc-body">L'emblématique franchise de baseball des New York Yankees est en <strong class="highlight-phrase">négociations avancées avec Apollo Global</strong> pour lever un financement substantiel de <strong class="highlight-figure">près de 3 milliards de dollars</strong>. Cet accord, qui comprendra majoritairement de la dette ainsi qu'une prise de participation en capital, est destiné à <strong class="highlight-phrase">refinancer les obligations existantes de l'équipe</strong> et à soutenir de futures « opportunités de croissance ». Évaluée par Forbes à <strong class="highlight-figure">8.5 milliards de dollars</strong>, la franchise cherche à renforcer sa position financière malgré une longue disette de titres mondiaux de près de <strong class="highlight-figure">17 ans</strong>, soulignant l'importance stratégique de cette levée de fonds.</div>
-        </details>
-        
-        <details class="acc-item" style="--cat-couleur:#10b981">
-          <summary class="acc-summary">
-            
-            <span class="acc-region" title="Global">🌐</span>
-            <span class="acc-pill" style="background:#10b98122;color:#10b981">Corporate</span>
-            <span class="acc-title">Acquisitions et prises de contrôle animent les marchés, notamment au Royaume-Uni</span>
-            <span class="acc-chevron">▾</span>
-          </summary>
-          <div class="acc-body">Le marché des fusions-acquisitions est dynamique, avec plusieurs opérations majeures. Le groupe suisse ABB a accepté d'acquérir le britannique Rotork pour <strong class="highlight-figure">4.1 milliards de livres sterling</strong> en espèces, visant à renforcer sa division automatisation. Parallèlement, le groupe énergétique DCC a reçu une <strong class="highlight-phrase">offre de rachat améliorée de KKR et Energy Capital Partners</strong>, marquant potentiellement l'une des plus grandes privatisations britanniques de l'année. Les entreprises britanniques cotées en bourse restent des cibles attrayantes pour les acheteurs étrangers en raison de <strong class="highlight-phrase">valorisations jugées faibles</strong>. En France, Dassault Systèmes serait en discussion pour <strong class="highlight-figure">acquérir ArisGlobal pour 2 milliards de dollars</strong>. Enfin, Micromania a été rachetée par quatre entrepreneurs franco-québécois, qui prévoient de relancer l'enseigne en misant sur la communauté et la nostalgie.</div>
-        </details>
-        
-        <details class="acc-item" style="--cat-couleur:#8b5cf6">
-          <summary class="acc-summary">
-            
-            <span class="acc-region" title="USA">🇺🇸</span>
-            <span class="acc-pill" style="background:#8b5cf622;color:#8b5cf6">Tech</span>
-            <span class="acc-title">Apple intensifie la bataille légale contre OpenAI pour vol de secrets commerciaux</span>
-            <span class="acc-chevron">▾</span>
-          </summary>
-          <div class="acc-body">Apple a pris des mesures juridiques directes, ciblant des <strong class="highlight-phrase">dizaines d'employés d'OpenAI qui avaient précédemment travaillé pour la firme de Cupertino</strong>, avec des avertissements légaux personnels. L'objectif est de recueillir des preuves pour étayer ses accusations selon lesquelles le créateur de ChatGPT, OpenAI, aurait <strong class="highlight-phrase">volé des secrets commerciaux</strong>. Cette démarche agressive souligne l'intensification de la concurrence et des tensions dans le secteur de l'intelligence artificielle, où les enjeux de propriété intellectuelle sont colossaux.</div>
+          <div class="acc-body">L'Union européenne a décidé de forcer Google à <strong class="highlight-phrase">autoriser l'utilisation de modèles d'IA concurrents</strong> au sein de son écosystème Android, en plus de son propre outil Gemini. Cette décision de la Commission européenne vise à remédier au fait que le <strong class="highlight-phrase">préchargement de Gemini</strong> sur les appareils Android réduisait l'attractivité des modèles d'IA tiers pour les <strong class="highlight-figure">60% des utilisateurs européens</strong> d'Android. Cette mesure majeure est perçue comme une victoire pour des entreprises telles qu'Anthropic, OpenAI et Mistral, dont les chatbots pourraient désormais être intégrés directement dans les smartphones. Cela souligne également la volonté de l'Europe de promouvoir la concurrence et l'innovation dans le domaine de l'intelligence artificielle sur son territoire, avec l'objectif de bâtir une <strong class="highlight-phrase">IA souveraine</strong>.</div>
         </details>
         </div>
     </div>
@@ -1794,7 +1725,7 @@
         <details class="agenda-date-group" open>
           <summary class="agenda-date-summary">
             <span class="agenda-date-badge">🗓️ 17/07</span>
-            <span class="agenda-date-count">18 événements</span>
+            <span class="agenda-date-count">20 événements</span>
             <span class="agenda-date-chevron">▾</span>
           </summary>
           <div class="agenda-date-content">
@@ -1905,6 +1836,18 @@
               <span class="acc-region" title="Global">🌐</span>
               <span class="acc-pill" style="background:#f59e0b22;color:#f59e0b;flex-shrink:0;">Géopolitique</span>
               <span class="tl-title">Fin du Aspen Security Forum</span>
+            </div>
+            
+            <div class="agenda-event-row" style="--cat-couleur:#f59e0b">
+              <span class="acc-region" title="Global">🌐</span>
+              <span class="acc-pill" style="background:#f59e0b22;color:#f59e0b;flex-shrink:0;">Géopolitique</span>
+              <span class="tl-title">Aspen Security Forum</span>
+            </div>
+            
+            <div class="agenda-event-row" style="--cat-couleur:#ef4444">
+              <span class="acc-region" title="Europe">🇪🇺</span>
+              <span class="acc-pill" style="background:#ef444422;color:#ef4444;flex-shrink:0;">Macro</span>
+              <span class="tl-title">Inflation Zone Euro (HICP) Finale Juin</span>
             </div>
             
           </div>
@@ -2661,7 +2604,7 @@
         <details class="agenda-date-group" >
           <summary class="agenda-date-summary">
             <span class="agenda-date-badge">🗓️ 29/07</span>
-            <span class="agenda-date-count">47 événements</span>
+            <span class="agenda-date-count">48 événements</span>
             <span class="agenda-date-chevron">▾</span>
           </summary>
           <div class="agenda-date-content">
@@ -2948,13 +2891,19 @@
               <span class="tl-title">Publication PCE (inflation) USA</span>
             </div>
             
+            <div class="agenda-event-row" style="--cat-couleur:#3b82f6">
+              <span class="acc-region" title="USA">🇺🇸</span>
+              <span class="acc-pill" style="background:#3b82f622;color:#3b82f6;flex-shrink:0;">Marchés</span>
+              <span class="tl-title">Décision Taux FOMC</span>
+            </div>
+            
           </div>
         </details>
         
         <details class="agenda-date-group" >
           <summary class="agenda-date-summary">
             <span class="agenda-date-badge">🗓️ 30/07</span>
-            <span class="agenda-date-count">60 événements</span>
+            <span class="agenda-date-count">61 événements</span>
             <span class="agenda-date-chevron">▾</span>
           </summary>
           <div class="agenda-date-content">
@@ -3319,13 +3268,19 @@
               <span class="tl-title">Publication PIB préliminaire USA</span>
             </div>
             
+            <div class="agenda-event-row" style="--cat-couleur:#ef4444">
+              <span class="acc-region" title="USA">🇺🇸</span>
+              <span class="acc-pill" style="background:#ef444422;color:#ef4444;flex-shrink:0;">Macro</span>
+              <span class="tl-title">PIB US Estimation Préliminaire T2</span>
+            </div>
+            
           </div>
         </details>
         
         <details class="agenda-date-group" >
           <summary class="agenda-date-summary">
             <span class="agenda-date-badge">🗓️ 31/07</span>
-            <span class="agenda-date-count">24 événements</span>
+            <span class="agenda-date-count">25 événements</span>
             <span class="agenda-date-chevron">▾</span>
           </summary>
           <div class="agenda-date-content">
@@ -3472,6 +3427,12 @@
               <span class="acc-region" title="Asie">🌏</span>
               <span class="acc-pill" style="background:#ef444422;color:#ef4444;flex-shrink:0;">Macro</span>
               <span class="tl-title">Décision taux directeurs BoJ</span>
+            </div>
+            
+            <div class="agenda-event-row" style="--cat-couleur:#ef4444">
+              <span class="acc-region" title="USA">🇺🇸</span>
+              <span class="acc-pill" style="background:#ef444422;color:#ef4444;flex-shrink:0;">Macro</span>
+              <span class="tl-title">Indice Coût Emploi US T2</span>
             </div>
             
           </div>
