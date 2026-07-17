@@ -36,9 +36,12 @@ Structure du dossier parent (non versionné dans ce repo) :
 - **Génération du contenu** : Python (`../gmail_test.py`), libs clés : `google-genai` (Gemini),
   `google-api-python-client` (Gmail + Drive), `playwright` + `PyMuPDF`/`fitz` (PDF Natixis),
   `feedparser` (RSS), `BeautifulSoup`, `yfinance`.
-- **Déploiement** : Netlify, connecté au repo GitHub `mon-brief-quotidien`, déploiement
-  automatique à chaque push sur `main` — pas de `netlify.toml` dans le repo, donc la config
-  (site statique, aucune commande de build, publish = racine) est définie côté dashboard Netlify.
+- **Déploiement** : Vercel (`mon-brief-quotidien.vercel.app`, confirmé via `Server: Vercel` dans les
+  en-têtes HTTP), connecté au repo GitHub `mon-brief-quotidien`, déploiement automatique à chaque
+  push sur `main` — pas de `vercel.json` dans le repo, donc la config (site statique, aucune
+  commande de build, output = racine) est définie côté dashboard Vercel. (Corrigé le 2026-07-17 :
+  ce fichier mentionnait Netlify par erreur — aucun site n'existe sur
+  `mon-brief-quotidien.netlify.app`, qui renvoie 404.)
 
 ## Logique de scraping (dans `../gmail_test.py`)
 
