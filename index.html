@@ -746,7 +746,13 @@
   }
   .acc-summary::-webkit-details-marker { display: none; }
   .acc-summary::marker { content: ''; }
-  
+  .acc-summary:focus-visible,
+  .agenda-date-summary:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: -2px;
+    background-color: var(--card-bg-soft);
+  }
+
   .acc-summary:not(:has(.acc-rank))::before {
     grid-column: 1;
     content: counter(ligne-registre, decimal-leading-zero);
@@ -1485,7 +1491,7 @@
     <div class="right">
       <div class="date-block">
         <div class="date">Mardi 21 juillet 2026</div>
-        <div class="date-sub">Générée à 00h52</div>
+        <div class="date-sub">Générée à 01h03</div>
       </div>
       <button class="theme-toggle" onclick="toggleTheme()" id="themeBtn" aria-label="Changer le theme clair/sombre"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg></button>
     </div>
@@ -1536,7 +1542,7 @@
       
 <div class="sentiment-box">
   <span class="sentiment-badge sent-down">Baissier</span>
-  <span class="sentiment-raison">Les tensions géopolitiques s'intensifient entre les États-Unis et l'Iran, provoquant une flambée des prix du pétrole et des inquiétudes sur l'approvisionnement. Les marchés actions mondiaux sont sous pression, avec une chute notable des valeurs technologiques et un sentiment général de prudence.</span>
+  <span class="sentiment-raison">L'escalade des tensions géopolitiques entre les États-Unis et l'Iran a provoqué une flambée significative des prix du pétrole et une pression sur les marchés actions. L'incertitude plane également sur les prochaines décisions des banques centrales et l'impact de l'innovation en IA sur le secteur des semi-conducteurs.</span>
 </div>
 
       <div class="acc-list">
@@ -1545,21 +1551,21 @@
             <span class="acc-rank">1</span>
             <span class="acc-region" title="Global">GLOBAL</span>
             <span class="acc-pill" style="background:#6E6C6322;color:#6E6C63">Géopolitique</span>
-            <span class="acc-title">Escalade des tensions US-Iran et impact pétrolier</span>
+            <span class="acc-title">Escalade des tensions entre USA et Iran</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">Les frappes réciproques entre les États-Unis et l'Iran se sont intensifiées, mettant fin au cessez-le-feu provisoire et poussant l'Iran à suspendre ses engagements dans l'accord intérimaire. Cette escalade, couplée aux menaces des Houthis, a <strong class="highlight-phrase">provoqué un envol des prix du Brent</strong>, avec une <strong class="highlight-figure">hausse hebdomadaire de 16%</strong> et un cours dépassant les <strong class="highlight-figure">90 dollars le baril</strong>. L'incertitude quant à la réouverture du détroit d'Hormuz, crucial pour le transport pétrolier, s'accentue, impactant la stabilité du marché mondial de l'énergie et exacerbant une crise du carburant.</div>
+          <div class="acc-body">Les frappes mutuelles entre les États-Unis et l'Iran ont continué pour une <strong class="highlight-phrase">septième nuit consécutive</strong>, mettant fin au cessez-le-feu provisoire. Téhéran a officiellement <strong class="highlight-phrase">suspendu ses engagements</strong> de l'accord intérimaire, ce qui a provoqué une <strong class="highlight-figure">flambée du prix du pétrole Brent de +16 %</strong> sur la semaine, atteignant <strong class="highlight-figure">plus de 90 $/bbl</strong> ce matin. Cette escalade dans le détroit d'Hormuz, une voie maritime cruciale, <strong class="highlight-phrase">menace l'approvisionnement mondial en carburant</strong> et intensifie la crise énergétique. Les Houthis ont également <strong class="highlight-phrase">menacé de bloquer la navigation</strong> dans le détroit, accentuant les craintes d'un embrasement régional.</div>
         </details>
         
-        <details class="acc-item" style="--cat-couleur:#8C6A2C">
+        <details class="acc-item" style="--cat-couleur:#5B7553">
           <summary class="acc-summary">
             <span class="acc-rank">2</span>
-            <span class="acc-region" title="Global">GLOBAL</span>
-            <span class="acc-pill" style="background:#8C6A2C22;color:#8C6A2C">Marchés</span>
-            <span class="acc-title">Chute des marchés actions mondiaux et rotation sectorielle</span>
+            <span class="acc-region" title="USA">US</span>
+            <span class="acc-pill" style="background:#5B755322;color:#5B7553">Corporate</span>
+            <span class="acc-title">Fusion Paramount-WBD suspendue par un juge</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">Les marchés actions ont subi d'importantes pressions, notamment en Europe où le Stoxx 600 a reculé de <strong class="highlight-figure">0,5%</strong> et le FTSE MIB de <strong class="highlight-figure">1,0%</strong>. Aux États-Unis, le Nasdaq 100 a chuté de <strong class="highlight-figure">1,4%</strong> et le S&P 500 de <strong class="highlight-figure">1%</strong>, marquant une <strong class="highlight-phrase">rotation sectorielle notable</strong> des valeurs technologiques vers l'énergie et les secteurs défensifs. En Asie, le Kospi a dégringolé de <strong class="highlight-figure">4,2%</strong>, reflétant une inquiétude généralisée face aux tensions géopolitiques et au ralentissement économique chinois.</div>
+          <div class="acc-body">Un juge a décidé de <strong class="highlight-phrase">suspendre provisoirement l'accord de fusion</strong> entre Paramount Global et Warner Bros. Discovery (WBD). Cette décision intervient dans un contexte de consolidation majeure de l'industrie des médias, et les <strong class="highlight-phrase">détails de la suspension</strong> pourraient impacter l'avenir des deux conglomérats. L'issue de cette pause judiciaire est <strong class="highlight-phrase">très attendue par le marché</strong>, influençant potentiellement d'autres transactions dans le secteur du divertissement.</div>
         </details>
         
         <details class="acc-item" style="--cat-couleur:#3E5C76">
@@ -1567,32 +1573,32 @@
             <span class="acc-rank">3</span>
             <span class="acc-region" title="Global">GLOBAL</span>
             <span class="acc-pill" style="background:#3E5C7622;color:#3E5C76">Macro</span>
-            <span class="acc-title">BCE et Fed en période de silence avant leurs réunions</span>
+            <span class="acc-title">Banques centrales en mode silence avant réunions</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">La Banque Centrale Européenne (BCE) et la Réserve Fédérale (Fed) sont entrées dans leur période de silence réglementaire avant leurs réunions respectives. La BCE est attendue cette semaine pour <strong class="highlight-phrase">maintenir ses taux directeurs inchangés</strong>, une décision qui pourrait se répéter en septembre, tandis que la Fed se prépare pour sa réunion des <strong class="highlight-figure">28 et 29 juillet</strong>. Ces banques centrales font face à des défis combinant inflation persistante, croissance fragile et incertitudes géopolitiques, rendant chaque décision critique pour la stabilité financière mondiale.</div>
+          <div class="acc-body">La Réserve fédérale et la Banque centrale européenne sont toutes deux entrées dans leur <strong class="highlight-phrase">période de silence</strong> avant leurs prochaines réunions de politique monétaire. La BCE devrait <strong class="highlight-phrase">maintenir ses taux directeurs inchangés</strong> le <strong class="highlight-figure">22 et 23 juillet</strong>, avec un statu quo également anticipé en septembre. La Fed se réunira les <strong class="highlight-figure">28 et 29 juillet</strong>, et les marchés surveillent attentivement tout signe concernant l'évolution de leur politique de réduction du bilan, qui pèse actuellement sur <strong class="highlight-figure">un portefeuille de 7 000 milliards de dollars</strong>.</div>
+        </details>
+        
+        <details class="acc-item" style="--cat-couleur:#3E5C76">
+          <summary class="acc-summary">
+            <span class="acc-rank">4</span>
+            <span class="acc-region" title="Asie">ASIA</span>
+            <span class="acc-pill" style="background:#3E5C7622;color:#3E5C76">Macro</span>
+            <span class="acc-title">Réduction inattendue de l'écart commercial chinois</span>
+            <span class="acc-chevron">▾</span>
+          </summary>
+          <div class="acc-body">La Chine a enregistré un <strong class="highlight-phrase">rétrécissement de son excédent commercial</strong>, une surprise pour les analystes alors que la deuxième économie mondiale semble s'orienter vers une <strong class="highlight-phrase">politique d'austérité budgétaire</strong>. Ce développement intervient dans un contexte de défis économiques internes et pourrait indiquer une <strong class="highlight-phrase">modération de la demande mondiale</strong> ou des changements dans les dynamiques commerciales. Cela suggère un <strong class="highlight-phrase">ralentissement de la croissance chinoise</strong> et un potentiel impact sur les chaînes d'approvisionnement globales.</div>
         </details>
         
         <details class="acc-item" style="--cat-couleur:#9C5B45">
           <summary class="acc-summary">
-            <span class="acc-rank">4</span>
-            <span class="acc-region" title="Asie">ASIA</span>
-            <span class="acc-pill" style="background:#9C5B4522;color:#9C5B45">IA</span>
-            <span class="acc-title">Lancement IA chinoise et déroute des semi-conducteurs</span>
-            <span class="acc-chevron">▾</span>
-          </summary>
-          <div class="acc-body">Le lancement du nouveau modèle d'intelligence artificielle chinois, <strong class="highlight-figure">Kimi K3</strong>, a déclenché une <strong class="highlight-phrase">forte déroute des actions de semi-conducteurs</strong>, en particulier en Asie. Le Kospi a chuté de <strong class="highlight-figure">4,2%</strong>, et les marchés européens et américains ont également vu leurs valeurs technologiques sous pression, entraînant une rotation sectorielle. Cet événement souligne la <strong class="highlight-phrase">compétition intense dans le secteur de l'IA</strong> et son impact immédiat sur les valuations des entreprises de puces.</div>
-        </details>
-        
-        <details class="acc-item" style="--cat-couleur:#5B7553">
-          <summary class="acc-summary">
             <span class="acc-rank">5</span>
-            <span class="acc-region" title="USA">US</span>
-            <span class="acc-pill" style="background:#5B755322;color:#5B7553">Corporate</span>
-            <span class="acc-title">Paramount-WBD : un juge suspend l'accord</span>
+            <span class="acc-region" title="Asie">ASIA</span>
+            <span class="acc-pill" style="background:#9C5B4522;color:#9C5B45">Tech</span>
+            <span class="acc-title">Lancement de Kimi K3 et impact sur semi-conducteurs</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">Un juge a ordonné la <strong class="highlight-phrase">suspension de l'accord de fusion</strong> entre Paramount Global et Warner Bros. Discovery. Cette décision jette une incertitude majeure sur l'avenir de cette transaction majeure dans le secteur des médias, qui visait à créer un géant du divertissement capable de rivaliser avec Netflix et Disney. La suspension intervient alors que les <strong class="highlight-phrase">autorités antitrust</strong> examinent de près les fusions-acquisitions à grande échelle, signalant un environnement réglementaire plus strict.</div>
+          <div class="acc-body">Le lancement du <strong class="highlight-figure">modèle chinois d'IA Kimi K3</strong> a déclenché une déroute des actions des semi-conducteurs en Asie. Le marché a réagi par une <strong class="highlight-phrase">pression à la baisse sur les valeurs technologiques</strong>, notamment en Corée du Sud où le Kospi a <strong class="highlight-figure">reculé de 4,2 %</strong>, soulignant la <strong class="highlight-phrase">sensibilité du secteur</strong> aux innovations et à la concurrence intense dans l'IA. Cette nouvelle technologie pourrait <strong class="highlight-phrase">modifier la dynamique</strong> du marché asiatique des puces électroniques.</div>
         </details>
         </div>
     </div>
@@ -1602,7 +1608,7 @@
       
 <div class="sentiment-box">
   <span class="sentiment-badge sent-down">Baissier</span>
-  <span class="sentiment-raison">Les tensions géopolitiques s'intensifient entre les États-Unis et l'Iran, provoquant une flambée des prix du pétrole et des inquiétudes sur l'approvisionnement. Les marchés actions mondiaux sont sous pression, avec une chute notable des valeurs technologiques et un sentiment général de prudence.</span>
+  <span class="sentiment-raison">L'escalade des tensions géopolitiques entre les États-Unis et l'Iran a provoqué une flambée significative des prix du pétrole et une pression sur les marchés actions. L'incertitude plane également sur les prochaines décisions des banques centrales et l'impact de l'innovation en IA sur le secteur des semi-conducteurs.</span>
 </div>
 
       <div class="acc-list">
@@ -1611,10 +1617,10 @@
             
             <span class="acc-region" title="Global">GLOBAL</span>
             <span class="acc-pill" style="background:#8C6A2C22;color:#8C6A2C">Marchés</span>
-            <span class="acc-title">Pétrole Brent au-dessus de 90 dollars le baril</span>
+            <span class="acc-title">Flambée des prix du pétrole Brent</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">Le prix du pétrole Brent a franchi la barre des <strong class="highlight-figure">90 dollars le baril</strong>, après avoir enregistré sa <strong class="highlight-figure">plus forte hausse hebdomadaire depuis avril avec 16%</strong>. Cette progression est directement liée à l'escalade des tensions entre les États-Unis et l'Iran, et aux menaces des Houthis, qui ravivent les craintes sur l'approvisionnement mondial.</div>
+          <div class="acc-body">Le prix du <strong class="highlight-figure">Brent a enregistré une hausse hebdomadaire de +16 %</strong>, sa plus forte depuis avril, et a dépassé les <strong class="highlight-figure">90 $/bbl</strong> ce matin. Cette augmentation est directement liée à l'escalade des tensions géopolitiques entre les États-Unis et l'Iran, et à la <strong class="highlight-phrase">menace sur le détroit d'Hormuz</strong>, un point de transit crucial pour le pétrole.</div>
         </details>
         
         <details class="acc-item" style="--cat-couleur:#8C6A2C">
@@ -1622,10 +1628,10 @@
             
             <span class="acc-region" title="Europe">EU</span>
             <span class="acc-pill" style="background:#8C6A2C22;color:#8C6A2C">Marchés</span>
-            <span class="acc-title">Bourses européennes en baisse suite aux tensions</span>
+            <span class="acc-title">Baisse générale des marchés actions européens</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">Les marchés européens ont clôturé en baisse, le <strong class="highlight-figure">Stoxx 600 reculant de 0,5%</strong> et le <strong class="highlight-figure">FTSE MIB affichant la plus forte baisse avec -1,0%</strong>. Seul le FTSE 100 a affiché une performance stable, soutenu par la composition de son indice favorable aux valeurs défensives et au secteur de l'énergie.</div>
+          <div class="acc-body">Les marchés européens ont clôturé majoritairement en baisse, le <strong class="highlight-figure">FTSE MIB affichant la plus forte baisse (-1,0 %)</strong>. Le Stoxx 600 a reculé de <strong class="highlight-figure">-0,5 %</strong>, tandis que le FTSE 100 a maintenu une performance quasi stable, soutenu par sa <strong class="highlight-phrase">composition orientée vers les valeurs défensives</strong> et l'énergie.</div>
         </details>
         
         <details class="acc-item" style="--cat-couleur:#8C6A2C">
@@ -1633,10 +1639,10 @@
             
             <span class="acc-region" title="USA">US</span>
             <span class="acc-pill" style="background:#8C6A2C22;color:#8C6A2C">Marchés</span>
-            <span class="acc-title">Marchés américains sous pression, rotation sectorielle</span>
+            <span class="acc-title">Pression sur les actions américaines, rotation sectorielle</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">Les actions américaines ont été sous pression, avec le <strong class="highlight-figure">Nasdaq 100 en baisse de 1,4%</strong> et le <strong class="highlight-figure">S&P 500 reculant de 1%</strong>. Cette chute reflète une nette <strong class="highlight-phrase">rotation sectorielle</strong> des valeurs technologiques vers les secteurs de l'énergie et les valeurs défensives, dans un contexte de préoccupations géopolitiques et de perspectives de taux.</div>
+          <div class="acc-body">Les actions américaines ont subi une pression, le <strong class="highlight-figure">Nasdaq 100 menant la baisse avec -1,4 %</strong>. Le S&P 500 a reculé de <strong class="highlight-figure">1 %</strong>, reflétant une <strong class="highlight-phrase">rotation sectorielle</strong> hors des valeurs technologiques et au profit des secteurs de l'énergie et des valeurs défensives.</div>
         </details>
         
         <details class="acc-item" style="--cat-couleur:#8C6A2C">
@@ -1644,32 +1650,43 @@
             
             <span class="acc-region" title="Global">GLOBAL</span>
             <span class="acc-pill" style="background:#8C6A2C22;color:#8C6A2C">Marchés</span>
-            <span class="acc-title">Dollar neutre, couronne norvégienne en force</span>
+            <span class="acc-title">Fonds monétaires fuyant les risques de taux</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">L'indice dollar DXY a terminé la séance inchangé à <strong class="highlight-figure">100,765</strong>, avec un recul hebdomadaire de <strong class="highlight-figure">0,2%</strong>, ne jouant pas son rôle habituel de valeur refuge. En revanche, la couronne norvégienne s'est <strong class="highlight-phrase">fortement appréciée</strong>, l'EUR/NOK revenant à <strong class="highlight-figure">11,03</strong>, signant son <strong class="highlight-phrase">plus fort repli hebdomadaire en trois mois</strong> de <strong class="highlight-figure">1,2%</strong> grâce à l'envolée des prix du Brent.</div>
+          <div class="acc-body">Les <strong class="highlight-phrase">fonds monétaires</strong> (Money Market Funds) commencent à <strong class="highlight-phrase">fuir les risques de taux d'intérêt</strong>, cherchant des options plus sûres face à l'incertitude économique. Ce mouvement indique une <strong class="highlight-phrase">aversion croissante au risque</strong> sur le marché des capitaux à court terme.</div>
         </details>
         
         <details class="acc-item" style="--cat-couleur:#8C6A2C">
           <summary class="acc-summary">
             
-            <span class="acc-region" title="Asie">ASIA</span>
+            <span class="acc-region" title="Global">GLOBAL</span>
+            <span class="acc-pill" style="background:#8C6A2C22;color:#8C6A2C">Marchés</span>
+            <span class="acc-title">Le dollar peine à jouer son rôle de valeur refuge</span>
+            <span class="acc-chevron">▾</span>
+          </summary>
+          <div class="acc-body">Malgré un environnement <strong class="highlight-phrase">« risk-off »</strong>, l'indice dollar DXY a terminé la séance <strong class="highlight-figure">inchangé à 100,765</strong>, enregistrant un recul hebdomadaire de <strong class="highlight-figure">0,2 %</strong>. L'euro est resté stable à <strong class="highlight-figure">1,1439</strong>, mais affichait une progression hebdomadaire de <strong class="highlight-figure">0,2 %</strong>, effaçant le repli de la semaine précédente.</div>
+        </details>
+        
+        <details class="acc-item" style="--cat-couleur:#8C6A2C">
+          <summary class="acc-summary">
+            
+            <span class="acc-region" title="Global">GLOBAL</span>
+            <span class="acc-pill" style="background:#8C6A2C22;color:#8C6A2C">Marchés</span>
+            <span class="acc-title">Le franc suisse et la couronne norvégienne se distinguent</span>
+            <span class="acc-chevron">▾</span>
+          </summary>
+          <div class="acc-body">Le <strong class="highlight-phrase">franc suisse (CHF) s'est apprécié</strong> face à la plupart des devises du G10, sauf la NOK. La <strong class="highlight-phrase">couronne norvégienne (NOK) a été fortement soutenue</strong> par la flambée du Brent, l'EUR/NOK revenant à <strong class="highlight-figure">11,03</strong>, son plus fort repli hebdomadaire en <strong class="highlight-figure">trois mois (-1,2 %)</strong>.</div>
+        </details>
+        
+        <details class="acc-item" style="--cat-couleur:#8C6A2C">
+          <summary class="acc-summary">
+            
+            <span class="acc-region" title="Global">GLOBAL</span>
             <span class="acc-pill" style="background:#8C6A2C22;color:#8C6A2C">Marchés</span>
             <span class="acc-title">Hedge funds ciblent le dollar néo-zélandais</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">Des hedge funds ont commencé à <strong class="highlight-phrase">cibler le dollar néo-zélandais</strong> via des ventes, anticipant probablement une dépréciation de la devise. Cette manœuvre indique une perception de risque ou d'opportunité baissière spécifique à la monnaie kiwi, dans un contexte de marché mondial volatil.</div>
-        </details>
-        
-        <details class="acc-item" style="--cat-couleur:#8C6A2C">
-          <summary class="acc-summary">
-            
-            <span class="acc-region" title="USA">US</span>
-            <span class="acc-pill" style="background:#8C6A2C22;color:#8C6A2C">Marchés</span>
-            <span class="acc-title">Fonds monétaires fuient les risques de taux</span>
-            <span class="acc-chevron">▾</span>
-          </summary>
-          <div class="acc-body">Les fonds du marché monétaire aux États-Unis sont en train de <strong class="highlight-phrase">fuir les risques liés aux taux d'intérêt</strong>, cherchant à se positionner sur des actifs plus sûrs. Cette stratégie indique une prudence accrue des investisseurs face aux incertitudes concernant l'évolution future des politiques monétaires et la volatilité des marchés.</div>
+          <div class="acc-body">Des <strong class="highlight-phrase">hedge funds</strong> se sont positionnés contre le dollar néo-zélandais (NZD), signalant des <strong class="highlight-phrase">attentes baissières</strong> pour cette devise. Cette stratégie pourrait être liée aux <strong class="highlight-phrase">perspectives économiques de la Nouvelle-Zélande</strong> ou à des dynamiques de carry trade.</div>
         </details>
         </div>
     </div>
@@ -1683,32 +1700,21 @@
             
             <span class="acc-region" title="USA">US</span>
             <span class="acc-pill" style="background:#3E5C7622;color:#3E5C76">Macro</span>
-            <span class="acc-title">Défi de la Fed pour réduire son bilan colossal</span>
+            <span class="acc-title">Débat sur la réduction du bilan de la Fed</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">La Réserve Fédérale fait face à l'énorme défi de <strong class="highlight-figure">réduire son bilan de 7 billions de dollars</strong>, une tâche complexe dont la gestion pourrait incomber à des figures comme Kevin Warsh s'il était nommé à la tête de la Fed. Cette normalisation des actifs est cruciale pour l'équilibre monétaire.</div>
+          <div class="acc-body">Un débat est en cours sur la manière de <strong class="highlight-phrase">réduire le bilan de la Réserve fédérale</strong>, qui s'élève à <strong class="highlight-figure">7 000 milliards de dollars</strong>. Des voix influentes comme celle de Kevin Warsh militent pour une <strong class="highlight-phrase">réflexion approfondie sur la politique monétaire</strong> et l'efficacité des achats d'obligations.</div>
         </details>
         
         <details class="acc-item" style="--cat-couleur:#3E5C76">
           <summary class="acc-summary">
             
-            <span class="acc-region" title="USA">US</span>
+            <span class="acc-region" title="Global">GLOBAL</span>
             <span class="acc-pill" style="background:#3E5C7622;color:#3E5C76">Macro</span>
-            <span class="acc-title">Réflexion sur la politique monétaire future de la Fed</span>
+            <span class="acc-title">La Fed s'apprête à une réunion clé</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">Des experts envisagent comment une potentielle future direction de la Fed, sous l'égide de personnalités comme Kevin Warsh, pourrait <strong class="highlight-phrase">réimaginer la politique monétaire</strong> pour aborder des problèmes complexes. Les discussions portent sur de nouvelles approches face aux défis macroéconomiques persistants.</div>
-        </details>
-        
-        <details class="acc-item" style="--cat-couleur:#3E5C76">
-          <summary class="acc-summary">
-            
-            <span class="acc-region" title="Asie">ASIA</span>
-            <span class="acc-pill" style="background:#3E5C7622;color:#3E5C76">Macro</span>
-            <span class="acc-title">Réduction de l'écart commercial chinois et austérité</span>
-            <span class="acc-chevron">▾</span>
-          </summary>
-          <div class="acc-body">L'économie chinoise montre des signes d'austérité budgétaire alors que son <strong class="highlight-phrase">écart commercial se réduit</strong>, signe d'un rééquilibrage ou d'un ralentissement de son modèle de croissance axé sur les exportations. Cette tendance pourrait avoir des implications pour la demande mondiale et les marchés émergents.</div>
+          <div class="acc-body">La Réserve fédérale est entrée dans sa <strong class="highlight-phrase">période de silence</strong> avant sa réunion des <strong class="highlight-figure">28 et 29 juillet</strong>. Les discussions se concentrent sur la <strong class="highlight-phrase">réorientation de la politique monétaire</strong>, notamment l'approche à adopter pour son bilan et les éventuelles implications pour les marchés.</div>
         </details>
         
         <details class="acc-item" style="--cat-couleur:#3E5C76">
@@ -1716,10 +1722,21 @@
             
             <span class="acc-region" title="Europe">EU</span>
             <span class="acc-pill" style="background:#3E5C7622;color:#3E5C76">Macro</span>
-            <span class="acc-title">BCE devrait maintenir ses taux directeurs</span>
+            <span class="acc-title">La BCE anticipe un statu quo sur les taux</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">La Banque Centrale Européenne (BCE) devrait <strong class="highlight-phrase">laisser ses taux directeurs inchangés</strong> lors de sa prochaine réunion cette semaine. Les analystes anticipent un <strong class="highlight-phrase">statu quo également en septembre</strong>, signalant une approche prudente face aux pressions inflationnistes et à la croissance économique fragile dans la zone euro.</div>
+          <div class="acc-body">La Banque centrale européenne est également en <strong class="highlight-phrase">période de silence</strong> avant sa réunion des <strong class="highlight-figure">22 et 23 juillet</strong>. Il est largement anticipé que la BCE <strong class="highlight-phrase">maintiendra ses taux directeurs inchangés</strong>, avec un <strong class="highlight-phrase">statu quo</strong> également prévu pour le mois de septembre, signalant une pause estivale.</div>
+        </details>
+        
+        <details class="acc-item" style="--cat-couleur:#3E5C76">
+          <summary class="acc-summary">
+            
+            <span class="acc-region" title="Asie">ASIA</span>
+            <span class="acc-pill" style="background:#3E5C7622;color:#3E5C76">Macro</span>
+            <span class="acc-title">La Chine face à un rétrécissement de son excédent commercial</span>
+            <span class="acc-chevron">▾</span>
+          </summary>
+          <div class="acc-body">La Chine observe un <strong class="highlight-phrase">rétrécissement de son écart commercial</strong>, un développement surprenant alors que l'économie semble se diriger vers une <strong class="highlight-phrase">politique d'austérité budgétaire</strong>. Cela pourrait indiquer des <strong class="highlight-phrase">défis économiques internes</strong> et une modification des dynamiques commerciales mondiales.</div>
         </details>
         </div>
     </div>
@@ -1733,10 +1750,21 @@
             
             <span class="acc-region" title="USA">US</span>
             <span class="acc-pill" style="background:#5B755322;color:#5B7553">Corporate</span>
-            <span class="acc-title">Juge suspend l'accord Paramount-WBD</span>
+            <span class="acc-title">Accord de fusion Paramount-WBD suspendu</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">Un juge a décidé de <strong class="highlight-phrase">suspendre l'accord de fusion</strong> entre Paramount Global et Warner Bros. Discovery. Cette décision met en pause une transaction majeure dans le secteur des médias et introduit une incertitude significative quant à sa finalisation, potentiellement en raison de préoccupations antitrust.</div>
+          <div class="acc-body">Un juge a pris la décision de <strong class="highlight-phrase">suspendre l'accord de fusion</strong> entre Paramount Global et Warner Bros. Discovery. Cette suspension met en pause une transaction majeure dans l'industrie des médias, potentiellement en raison de <strong class="highlight-phrase">préoccupations antitrust</strong> ou d'autres obstacles réglementaires.</div>
+        </details>
+        
+        <details class="acc-item" style="--cat-couleur:#5B7553">
+          <summary class="acc-summary">
+            
+            <span class="acc-region" title="Global">GLOBAL</span>
+            <span class="acc-pill" style="background:#5B755322;color:#5B7553">Corporate</span>
+            <span class="acc-title">Le plan de Forrest pour le tungstène en Australie</span>
+            <span class="acc-chevron">▾</span>
+          </summary>
+          <div class="acc-body">L'homme d'affaires australien Andrew Forrest développe un <strong class="highlight-phrase">plan pour l'approvisionnement en tungstène</strong> en Australie. Ce projet pourrait avoir des <strong class="highlight-phrase">implications géopolitiques</strong>, notamment en ce qui concerne la dépendance à la Chine pour les ressources critiques.</div>
         </details>
         </div>
     </div>
@@ -1750,10 +1778,10 @@
             
             <span class="acc-region" title="Asie">ASIA</span>
             <span class="acc-pill" style="background:#9C5B4522;color:#9C5B45">IA</span>
-            <span class="acc-title">Lancement Kimi K3 entraîne une chute des semi-conducteurs</span>
+            <span class="acc-title">Lancement de Kimi K3 et impact sur les semi-conducteurs</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">Le lancement du <strong class="highlight-figure">modèle d'IA chinois Kimi K3</strong> a provoqué une <strong class="highlight-phrase">déroute des actions des semi-conducteurs</strong>, particulièrement visible sur les marchés asiatiques comme le Kospi qui a reculé de <strong class="highlight-figure">4,2%</strong>. Cet événement met en lumière la sensibilité du secteur tech aux avancées concurrentielles en matière d'intelligence artificielle.</div>
+          <div class="acc-body">Le <strong class="highlight-figure">modèle chinois d'IA Kimi K3</strong> a été lancé, provoquant une <strong class="highlight-phrase">chute des actions des semi-conducteurs</strong> en Asie. Cette nouvelle concurrence dans le domaine de l'intelligence artificielle a <strong class="highlight-phrase">secoué le marché</strong>, en particulier en Corée du Sud, où le Kospi a réagi négativement à cette annonce.</div>
         </details>
         </div>
     </div>
@@ -1767,54 +1795,10 @@
             
             <span class="acc-region" title="Global">GLOBAL</span>
             <span class="acc-pill" style="background:#6E6C6322;color:#6E6C63">Géopolitique</span>
-            <span class="acc-title">Tensions US-Iran s'intensifient, impacts sur le pétrole mondial</span>
+            <span class="acc-title">Les tensions USA-Iran s'intensifient, impactant le pétrole</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">Les relations entre les États-Unis et l'Iran ont connu une <strong class="highlight-phrase">détérioration significative</strong> avec la poursuite des frappes réciproques pour une septième nuit consécutive, marquant la fin du cessez-le-feu provisoire. L'Iran a officiellement annoncé la <strong class="highlight-phrase">suspension de ses engagements</strong> dans le cadre de l'accord intérimaire, ce qui remet en question la réouverture partielle du détroit d'Hormuz, une voie maritime cruciale. Cette escalade, couplée aux menaces des Houthis de bloquer des voies maritimes essentielles, a provoqué un <strong class="highlight-phrase">envol spectaculaire du prix du Brent</strong>, qui a enregistré une <strong class="highlight-figure">hausse hebdomadaire de 16%</strong> et dépassé les <strong class="highlight-figure">90 dollars le baril</strong>. Le marché anticipe une <strong class="highlight-phrase">crise du carburant mondiale</strong> due à ces incertitudes d'approvisionnement.</div>
-        </details>
-        
-        <details class="acc-item" style="--cat-couleur:#8C6A2C">
-          <summary class="acc-summary">
-            
-            <span class="acc-region" title="Global">GLOBAL</span>
-            <span class="acc-pill" style="background:#8C6A2C22;color:#8C6A2C">Marchés</span>
-            <span class="acc-title">Chute généralisée des marchés actions face aux incertitudes</span>
-            <span class="acc-chevron">▾</span>
-          </summary>
-          <div class="acc-body">Les marchés actions mondiaux ont subi des pressions importantes, reflétant l'inquiétude des investisseurs. En Europe, le <strong class="highlight-figure">Stoxx 600 a reculé de 0,5%</strong> et le <strong class="highlight-figure">FTSE MIB de 1,0%</strong>, tandis qu'aux États-Unis, le <strong class="highlight-figure">Nasdaq 100 a chuté de 1,4%</strong> et le <strong class="highlight-figure">S&P 500 de 1%</strong>. Cette baisse a été accompagnée d'une <strong class="highlight-phrase">rotation sectorielle marquée</strong>, les investisseurs délaissant les valeurs technologiques au profit des secteurs de l'énergie et des valeurs défensives, jugés plus résilients. En Asie, le <strong class="highlight-figure">Kospi coréen a dégringolé de 4,2%</strong> et le Taiex de <strong class="highlight-figure">0,5%</strong>, illustrant un sentiment « risk-off » généralisé exacerbé par les tensions géopolitiques et le ralentissement économique en Chine.</div>
-        </details>
-        
-        <details class="acc-item" style="--cat-couleur:#3E5C76">
-          <summary class="acc-summary">
-            
-            <span class="acc-region" title="USA">US</span>
-            <span class="acc-pill" style="background:#3E5C7622;color:#3E5C76">Macro</span>
-            <span class="acc-title">Défi colossal pour la Fed de réduire son bilan de 7 billions</span>
-            <span class="acc-chevron">▾</span>
-          </summary>
-          <div class="acc-body">La Réserve Fédérale est confrontée à un défi d'envergure pour <strong class="highlight-figure">réduire son bilan, qui s'élève à 7 billions de dollars</strong>. Cette tâche revient en grande partie à la direction de la Fed, et des experts comme Kevin Warsh ont proposé des stratégies pour superviser le resserrement quantitatif sans déstabiliser les marchés. Cette démarche de « dégonflement » est cruciale pour normaliser les outils de politique monétaire utilisés intensivement après la crise financière de 2008 et la pandémie de COVID-19, et pour assurer une liquidité adéquate dans le système financier.</div>
-        </details>
-        
-        <details class="acc-item" style="--cat-couleur:#3E5C76">
-          <summary class="acc-summary">
-            
-            <span class="acc-region" title="Asie">ASIA</span>
-            <span class="acc-pill" style="background:#3E5C7622;color:#3E5C76">Macro</span>
-            <span class="acc-title">L'économie chinoise face à l'austérité et un écart commercial réduit</span>
-            <span class="acc-chevron">▾</span>
-          </summary>
-          <div class="acc-body">L'économie chinoise, la deuxième mondiale, montre des signes de <strong class="highlight-phrase">basculement vers une austérité budgétaire</strong>, alors que son <strong class="highlight-phrase">écart commercial se réduit</strong>. Historiquement, la Chine a fortement dépendu des exportations pour sa croissance, mais ce resserrement indique un possible ralentissement de cette locomotive. Cette situation pourrait entraîner des répercussions significatives pour les partenaires commerciaux de la Chine et les marchés mondiaux de matières premières, poussant le gouvernement à envisager de nouvelles stratégies pour stimuler la demande intérieure.</div>
-        </details>
-        
-        <details class="acc-item" style="--cat-couleur:#3E5C76">
-          <summary class="acc-summary">
-            
-            <span class="acc-region" title="Europe">EU</span>
-            <span class="acc-pill" style="background:#3E5C7622;color:#3E5C76">Macro</span>
-            <span class="acc-title">BCE en période de silence avant une probable stabilité des taux</span>
-            <span class="acc-chevron">▾</span>
-          </summary>
-          <div class="acc-body">La Banque Centrale Européenne (BCE) est entrée dans sa période de silence avant sa réunion très attendue des <strong class="highlight-figure">22 et 23 juillet</strong>, où elle devrait <strong class="highlight-phrase">maintenir ses taux directeurs inchangés</strong>. Cette décision, si elle se confirme, refléterait la prudence de la BCE face à une inflation qui reste élevée mais une croissance économique qui peine à décoller dans la zone euro. Les analystes de Natixis anticipent également un <strong class="highlight-phrase">statu quo en septembre</strong>, suggérant une pause prolongée dans les ajustements de politique monétaire pour évaluer pleinement l'impact des mesures passées.</div>
+          <div class="acc-body">Le conflit entre les États-Unis et l'Iran a atteint un nouveau palier, avec une <strong class="highlight-phrase">septième nuit consécutive de frappes mutuelles</strong>, marquant la fin du cessez-le-feu provisoire. L'Iran a officiellement annoncé la <strong class="highlight-phrase">suspension de ses engagements</strong> dans le cadre de l'accord intérimaire, ce qui a directement alimenté la <strong class="highlight-figure">flambée des prix du pétrole Brent de +16 %</strong> sur la semaine, sa plus forte hausse depuis avril, pour s'échanger à <strong class="highlight-figure">plus de 90 $/bbl</strong> ce matin. Cette escalade, aggravée par les <strong class="highlight-phrase">menaces des Houthis de bloquer le détroit d'Hormuz</strong>, une artère vitale pour les approvisionnements mondiaux, génère une <strong class="highlight-phrase">crise énergétique mondiale</strong> et pèse lourdement sur le sentiment des investisseurs, exacerbant l'aversion au risque.</div>
         </details>
         
         <details class="acc-item" style="--cat-couleur:#5B7553">
@@ -1822,21 +1806,43 @@
             
             <span class="acc-region" title="USA">US</span>
             <span class="acc-pill" style="background:#5B755322;color:#5B7553">Corporate</span>
-            <span class="acc-title">Suspension de l'accord Paramount-WBD par décision judiciaire</span>
+            <span class="acc-title">La fusion Paramount-WBD en suspens judiciaire</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">L'accord de fusion très médiatisé entre <strong class="highlight-phrase">Paramount Global et Warner Bros. Discovery a été suspendu</strong> par décision d'un juge. Cette intervention judiciaire met un coup d'arrêt à la création d'un mastodonte du divertissement qui aurait rivalisé plus directement avec les géants du streaming comme Netflix et Disney. La suspension intervient probablement dans le cadre d'un examen plus approfondi par les <strong class="highlight-phrase">autorités antitrust</strong> qui ont renforcé leur surveillance des fusions-acquisitions d'envergure, craignant une réduction de la concurrence et un impact négatif sur les consommateurs.</div>
+          <div class="acc-body">Un juge a décidé de <strong class="highlight-phrase">mettre en pause l'accord de fusion</strong> proposé entre Paramount Global et Warner Bros. Discovery. Cette décision judiciaire intervient à un moment crucial pour l'industrie des médias, qui est en pleine consolidation pour faire face aux défis du streaming et à la concurrence. Les raisons détaillées de cette suspension n'ont pas encore été entièrement divulguées, mais elles pourraient être liées à des <strong class="highlight-phrase">inquiétudes antitrust</strong> ou à des clauses spécifiques de l'accord qui nécessitent une clarification légale. Cette interruption crée une <strong class="highlight-phrase">incertitude significative</strong> pour les actionnaires et la stratégie future des deux géants médiatiques, et pourrait servir de précédent pour d'autres fusions importantes dans le secteur.</div>
+        </details>
+        
+        <details class="acc-item" style="--cat-couleur:#3E5C76">
+          <summary class="acc-summary">
+            
+            <span class="acc-region" title="Global">GLOBAL</span>
+            <span class="acc-pill" style="background:#3E5C7622;color:#3E5C76">Macro</span>
+            <span class="acc-title">Banques centrales en mode attente avant leurs réunions estivales</span>
+            <span class="acc-chevron">▾</span>
+          </summary>
+          <div class="acc-body">La Réserve fédérale et la Banque centrale européenne sont toutes deux entrées dans leur <strong class="highlight-phrase">période de silence obligatoire</strong> avant leurs prochaines réunions de politique monétaire. La BCE se réunira les <strong class="highlight-figure">22 et 23 juillet</strong>, et la prévision dominante est un <strong class="highlight-phrase">maintien des taux directeurs inchangés</strong>, avec une anticipation similaire pour septembre, marquant une pause estivale. Parallèlement, la Fed tiendra sa réunion les <strong class="highlight-figure">28 et 29 juillet</strong>, où les discussions porteront sur l'orientation future de la politique monétaire, notamment la <strong class="highlight-figure">stratégie de réduction de son bilan de 7 000 milliards de dollars</strong>. Les marchés surveillent attentivement les communications des deux institutions pour anticiper les ajustements de politique monétaire et leurs impacts potentiels sur l'économie mondiale et les valorisations des actifs.</div>
+        </details>
+        
+        <details class="acc-item" style="--cat-couleur:#3E5C76">
+          <summary class="acc-summary">
+            
+            <span class="acc-region" title="Asie">ASIA</span>
+            <span class="acc-pill" style="background:#3E5C7622;color:#3E5C76">Macro</span>
+            <span class="acc-title">La Chine face à un excédent commercial réduit et l'austérité budgétaire</span>
+            <span class="acc-chevron">▾</span>
+          </summary>
+          <div class="acc-body">La Chine a surpris les analystes en annonçant un <strong class="highlight-phrase">rétrécissement de son excédent commercial</strong>, un indicateur clé de sa santé économique. Ce phénomène intervient alors que la deuxième économie mondiale semble s'orienter vers une <strong class="highlight-phrase">politique d'austérité budgétaire</strong>, contrastant avec les mesures de relance observées par le passé. Ce virage pourrait être une réponse aux <strong class="highlight-phrase">défis économiques internes</strong>, tels que la faiblesse de la demande intérieure ou les problèmes persistants dans le secteur immobilier, ainsi qu'aux pressions externes. Un tel développement suggère un <strong class="highlight-phrase">ralentissement de la croissance chinoise</strong>, avec des implications importantes pour les partenaires commerciaux mondiaux et la demande globale en matières premières et biens manufacturés.</div>
         </details>
         
         <details class="acc-item" style="--cat-couleur:#9C5B45">
           <summary class="acc-summary">
             
             <span class="acc-region" title="Asie">ASIA</span>
-            <span class="acc-pill" style="background:#9C5B4522;color:#9C5B45">IA</span>
-            <span class="acc-title">Kimi K3 chinois déclenche une chute du secteur des semi-conducteurs</span>
+            <span class="acc-pill" style="background:#9C5B4522;color:#9C5B45">Tech</span>
+            <span class="acc-title">Lancement de Kimi K3 perturbe le marché des semi-conducteurs</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">Le lancement du <strong class="highlight-figure">modèle d'intelligence artificielle Kimi K3</strong> par une entreprise chinoise a eu un impact immédiat et négatif sur le marché des <strong class="highlight-phrase">actions des semi-conducteurs</strong>. Cette nouvelle a déclenché une <strong class="highlight-phrase">déroute</strong> dans le secteur, particulièrement perceptible sur le marché asiatique où le <strong class="highlight-figure">Kospi a reculé de 4,2%</strong>. Cet événement souligne la rapidité avec laquelle les avancées technologiques et la <strong class="highlight-phrase">compétition féroce dans l'IA</strong> peuvent influencer les valorisations boursières, incitant les investisseurs à réévaluer les perspectives de croissance des entreprises de puces face à une concurrence accrue.</div>
+          <div class="acc-body">Le lancement du <strong class="highlight-figure">modèle chinois d'intelligence artificielle Kimi K3</strong> a eu des répercussions immédiates sur le marché asiatique, entraînant une <strong class="highlight-phrase">chute significative des actions des semi-conducteurs</strong>. La nouvelle a été particulièrement ressentie en Corée du Sud, où le Kospi a <strong class="highlight-figure">reculé de 4,2 %</strong>, reflétant la sensibilité du secteur technologique aux innovations et à la concurrence. Ce développement souligne l'intensité de la course à l'IA entre les grandes puissances technologiques et l'impact direct des avancées chinoises sur la valorisation des entreprises de puces électroniques. Les investisseurs craignent une <strong class="highlight-phrase">guerre des prix ou une saturation du marché</strong> face à l'émergence rapide de nouveaux acteurs et technologies.</div>
         </details>
         
         <details class="acc-item" style="--cat-couleur:#8C6A2C">
@@ -1844,10 +1850,43 @@
             
             <span class="acc-region" title="Global">GLOBAL</span>
             <span class="acc-pill" style="background:#8C6A2C22;color:#8C6A2C">Marchés</span>
-            <span class="acc-title">Le dollar faiblit comme valeur refuge, NOK dopée par le pétrole</span>
+            <span class="acc-title">Les marchés actions mondiaux sous pression, rotation sectorielle</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">Contrairement à son rôle habituel en période de risques, le <strong class="highlight-phrase">dollar n'a pas agi comme valeur refuge</strong> et son indice DXY a terminé la séance inchangé à <strong class="highlight-figure">100,765</strong>, avec un recul hebdomadaire de <strong class="highlight-figure">0,2%</strong>. Parallèlement, l'euro est resté stable à <strong class="highlight-figure">1,1439</strong>, mais c'est la <strong class="highlight-phrase">couronne norvégienne (NOK)</strong> qui s'est distinguée. Soutenue par la <strong class="highlight-figure">flambée du Brent (+16% sur la semaine)</strong>, l'EUR/NOK est revenue à <strong class="highlight-figure">11,03</strong>, marquant son <strong class="highlight-phrase">plus fort repli hebdomadaire en trois mois</strong> avec <strong class="highlight-figure">-1,2%</strong>. Le franc suisse s'est également apprécié face à la plupart des devises du G10.</div>
+          <div class="acc-body">Les marchés actions ont connu une séance difficile, les indices européens clôturant globalement en baisse, avec le <strong class="highlight-figure">FTSE MIB (-1,0 %)</strong> et le <strong class="highlight-figure">Stoxx 600 (-0,5 %)</strong> fortement impactés. Aux États-Unis, le <strong class="highlight-figure">Nasdaq 100 a mené la baisse avec -1,4 %</strong>, et le <strong class="highlight-figure">S&P 500 a reculé de 1 %</strong>. Cette performance est en partie due à une <strong class="highlight-phrase">rotation sectorielle marquée</strong>, les investisseurs délaissant les valeurs technologiques au profit des secteurs de l'énergie et des valeurs défensives, dans un contexte d'escalade des tensions géopolitiques et de flambée des prix du pétrole. Le sentiment général est à l'aversion au risque, avec une <strong class="highlight-phrase">prudence accrue</strong> face aux incertitudes économiques et politiques actuelles.</div>
+        </details>
+        
+        <details class="acc-item" style="--cat-couleur:#8C6A2C">
+          <summary class="acc-summary">
+            
+            <span class="acc-region" title="Global">GLOBAL</span>
+            <span class="acc-pill" style="background:#8C6A2C22;color:#8C6A2C">Marchés</span>
+            <span class="acc-title">Comportement divergent du dollar et de l'euro sur le marché des changes</span>
+            <span class="acc-chevron">▾</span>
+          </summary>
+          <div class="acc-body">Malgré un environnement classé comme <strong class="highlight-phrase">« risk-off »</strong>, le dollar n'a pas pleinement rempli son rôle traditionnel de valeur refuge. L'indice dollar DXY a terminé la séance <strong class="highlight-figure">inchangé à 100,765</strong>, affichant même un recul hebdomadaire de <strong class="highlight-figure">0,2 %</strong>. L'euro, de son côté, est resté stable face au dollar à <strong class="highlight-figure">1,1439</strong>, mais a enregistré une progression hebdomadaire de <strong class="highlight-figure">0,2 %</strong>, effaçant ainsi le repli de la semaine précédente. Cette divergence indique une <strong class="highlight-phrase">dynamique complexe des flux de capitaux</strong>, où d'autres facteurs, tels que les anticipations de politique monétaire des banques centrales, pourraient influencer les devises au-delà de la simple perception du risque global. Le franc suisse (CHF) et la couronne norvégienne (NOK) se sont eux distingués par leur appréciation.</div>
+        </details>
+        
+        <details class="acc-item" style="--cat-couleur:#6E6C63">
+          <summary class="acc-summary">
+            
+            <span class="acc-region" title="Global">GLOBAL</span>
+            <span class="acc-pill" style="background:#6E6C6322;color:#6E6C63">Géopolitique</span>
+            <span class="acc-title">Le plan de Forrest pour l'autonomie en tungstène en Australie</span>
+            <span class="acc-chevron">▾</span>
+          </summary>
+          <div class="acc-body">Andrew Forrest, magnat australien, promeut un plan ambitieux visant à renforcer l'<strong class="highlight-phrase">autonomie de l'Australie en matière de tungstène</strong>. Le tungstène est un métal stratégique essentiel pour de nombreuses industries de haute technologie, et sa chaîne d'approvisionnement est actuellement dominée par la Chine. Le projet de Forrest vise à <strong class="highlight-phrase">réduire la dépendance australienne</strong> vis-à-vis des importations et à positionner le pays comme un acteur majeur dans l'extraction et le traitement de ce minerai. Cette initiative a des <strong class="highlight-phrase">implications géopolitiques significatives</strong>, car elle s'inscrit dans une tendance mondiale de sécurisation des approvisionnements en ressources critiques face aux tensions commerciales et politiques.</div>
+        </details>
+        
+        <details class="acc-item" style="--cat-couleur:#8C6A2C">
+          <summary class="acc-summary">
+            
+            <span class="acc-region" title="Global">GLOBAL</span>
+            <span class="acc-pill" style="background:#8C6A2C22;color:#8C6A2C">Marchés</span>
+            <span class="acc-title">Les hedge funds ciblent le dollar néo-zélandais</span>
+            <span class="acc-chevron">▾</span>
+          </summary>
+          <div class="acc-body">Les <strong class="highlight-phrase">hedge funds</strong> ont montré un intérêt croissant à se positionner contre le dollar néo-zélandais (NZD), ce qui indique des <strong class="highlight-phrase">attentes baissières pour cette devise</strong>. Cette activité pourrait être le reflet de diverses analyses, notamment des prévisions de <strong class="highlight-phrase">ralentissement de la croissance économique</strong> en Nouvelle-Zélande, des ajustements anticipés de la politique monétaire de la Banque de réserve de Nouvelle-Zélande, ou des dynamiques de portage des taux d'intérêt (carry trade) qui rendent le NZD moins attractif. Une telle activité des fonds spéculatifs peut exacerber les mouvements de devises, ajoutant de la volatilité au marché des changes.</div>
         </details>
         </div>
     </div>
@@ -1859,7 +1898,7 @@
         <details class="agenda-date-group" open>
           <summary class="agenda-date-summary">
             <span class="agenda-date-badge">21/07</span>
-            <span class="agenda-date-count">33 événements</span>
+            <span class="agenda-date-count">47 événements</span>
             <span class="agenda-date-chevron">▾</span>
           </summary>
           <div class="agenda-date-content">
@@ -2062,13 +2101,97 @@
               <span class="tl-title">Résultats Alphabet Inc. (GOOGL)</span>
             </div>
             
+            <div class="agenda-event-row" style="--cat-couleur:#3E5C76">
+              <span class="acc-region" title="Europe">EU</span>
+              <span class="acc-pill" style="background:#3E5C7622;color:#3E5C76;flex-shrink:0;">Macro</span>
+              <span class="tl-title">Taux chômage Royaume-Uni</span>
+            </div>
+            
+            <div class="agenda-event-row" style="--cat-couleur:#3E5C76">
+              <span class="acc-region" title="Europe">EU</span>
+              <span class="acc-pill" style="background:#3E5C7622;color:#3E5C76;flex-shrink:0;">Macro</span>
+              <span class="tl-title">Indice sentiment économique ZEW Eurozone</span>
+            </div>
+            
+            <div class="agenda-event-row" style="--cat-couleur:#3E5C76">
+              <span class="acc-region" title="Europe">EU</span>
+              <span class="acc-pill" style="background:#3E5C7622;color:#3E5C76;flex-shrink:0;">Macro</span>
+              <span class="tl-title">Indice sentiment économique ZEW Allemagne</span>
+            </div>
+            
+            <div class="agenda-event-row" style="--cat-couleur:#5B7553">
+              <span class="acc-region" title="Global">GLOBAL</span>
+              <span class="acc-pill" style="background:#5B755322;color:#5B7553;flex-shrink:0;">Corporate</span>
+              <span class="tl-title">Réunion d'analystes Icade</span>
+            </div>
+            
+            <div class="agenda-event-row" style="--cat-couleur:#5B7553">
+              <span class="acc-region" title="Global">GLOBAL</span>
+              <span class="acc-pill" style="background:#5B755322;color:#5B7553;flex-shrink:0;">Corporate</span>
+              <span class="tl-title">Résultats semestriels Covivio Hotels</span>
+            </div>
+            
+            <div class="agenda-event-row" style="--cat-couleur:#5B7553">
+              <span class="acc-region" title="Global">GLOBAL</span>
+              <span class="acc-pill" style="background:#5B755322;color:#5B7553;flex-shrink:0;">Corporate</span>
+              <span class="tl-title">Résultats semestriels Covivio</span>
+            </div>
+            
+            <div class="agenda-event-row" style="--cat-couleur:#5B7553">
+              <span class="acc-region" title="Global">GLOBAL</span>
+              <span class="acc-pill" style="background:#5B755322;color:#5B7553;flex-shrink:0;">Corporate</span>
+              <span class="tl-title">CA T3 Vente-Unique.com</span>
+            </div>
+            
+            <div class="agenda-event-row" style="--cat-couleur:#5B7553">
+              <span class="acc-region" title="Global">GLOBAL</span>
+              <span class="acc-pill" style="background:#5B755322;color:#5B7553;flex-shrink:0;">Corporate</span>
+              <span class="tl-title">CA S1 Maurel et Prom</span>
+            </div>
+            
+            <div class="agenda-event-row" style="--cat-couleur:#5B7553">
+              <span class="acc-region" title="Global">GLOBAL</span>
+              <span class="acc-pill" style="background:#5B755322;color:#5B7553;flex-shrink:0;">Corporate</span>
+              <span class="tl-title">AG annuelle Remy Cointreau</span>
+            </div>
+            
+            <div class="agenda-event-row" style="--cat-couleur:#5B7553">
+              <span class="acc-region" title="Europe">EU</span>
+              <span class="acc-pill" style="background:#5B755322;color:#5B7553;flex-shrink:0;">Corporate</span>
+              <span class="tl-title">Résultats Novartis AG</span>
+            </div>
+            
+            <div class="agenda-event-row" style="--cat-couleur:#5B7553">
+              <span class="acc-region" title="USA">US</span>
+              <span class="acc-pill" style="background:#5B755322;color:#5B7553;flex-shrink:0;">Corporate</span>
+              <span class="tl-title">Résultats Charles Schwab</span>
+            </div>
+            
+            <div class="agenda-event-row" style="--cat-couleur:#5B7553">
+              <span class="acc-region" title="USA">US</span>
+              <span class="acc-pill" style="background:#5B755322;color:#5B7553;flex-shrink:0;">Corporate</span>
+              <span class="tl-title">Résultats Danaher Corporation</span>
+            </div>
+            
+            <div class="agenda-event-row" style="--cat-couleur:#5B7553">
+              <span class="acc-region" title="USA">US</span>
+              <span class="acc-pill" style="background:#5B755322;color:#5B7553;flex-shrink:0;">Corporate</span>
+              <span class="tl-title">Résultats Capital One Financial Corp.</span>
+            </div>
+            
+            <div class="agenda-event-row" style="--cat-couleur:#3E5C76">
+              <span class="acc-region" title="Europe">EU</span>
+              <span class="acc-pill" style="background:#3E5C7622;color:#3E5C76;flex-shrink:0;">Macro</span>
+              <span class="tl-title">CPI (Inflation) Royaume-Uni</span>
+            </div>
+            
           </div>
         </details>
         
         <details class="agenda-date-group" >
           <summary class="agenda-date-summary">
             <span class="agenda-date-badge">22/07</span>
-            <span class="agenda-date-count">57 événements</span>
+            <span class="agenda-date-count">59 événements</span>
             <span class="agenda-date-chevron">▾</span>
           </summary>
           <div class="agenda-date-content">
@@ -2415,13 +2538,25 @@
               <span class="tl-title">Résultats Tesla, Inc. (TSLA)</span>
             </div>
             
+            <div class="agenda-event-row" style="--cat-couleur:#3E5C76">
+              <span class="acc-region" title="Europe">EU</span>
+              <span class="acc-pill" style="background:#3E5C7622;color:#3E5C76;flex-shrink:0;">Macro</span>
+              <span class="tl-title">Taux Inflation Base Annuel Royaume-Uni</span>
+            </div>
+            
+            <div class="agenda-event-row" style="--cat-couleur:#3E5C76">
+              <span class="acc-region" title="Europe">EU</span>
+              <span class="acc-pill" style="background:#3E5C7622;color:#3E5C76;flex-shrink:0;">Macro</span>
+              <span class="tl-title">Taux Inflation Annuel Royaume-Uni</span>
+            </div>
+            
           </div>
         </details>
         
         <details class="agenda-date-group" >
           <summary class="agenda-date-summary">
             <span class="agenda-date-badge">23/07</span>
-            <span class="agenda-date-count">62 événements</span>
+            <span class="agenda-date-count">71 événements</span>
             <span class="agenda-date-chevron">▾</span>
           </summary>
           <div class="agenda-date-content">
@@ -2798,13 +2933,67 @@
               <span class="tl-title">Décision Taux BCE & Conférence</span>
             </div>
             
+            <div class="agenda-event-row" style="--cat-couleur:#3E5C76">
+              <span class="acc-region" title="Europe">EU</span>
+              <span class="acc-pill" style="background:#3E5C7622;color:#3E5C76;flex-shrink:0;">Macro</span>
+              <span class="tl-title">Conférence presse BCE</span>
+            </div>
+            
+            <div class="agenda-event-row" style="--cat-couleur:#3E5C76">
+              <span class="acc-region" title="Europe">EU</span>
+              <span class="acc-pill" style="background:#3E5C7622;color:#3E5C76;flex-shrink:0;">Macro</span>
+              <span class="tl-title">Confiance entreprises France</span>
+            </div>
+            
+            <div class="agenda-event-row" style="--cat-couleur:#3E5C76">
+              <span class="acc-region" title="USA">US</span>
+              <span class="acc-pill" style="background:#3E5C7622;color:#3E5C76;flex-shrink:0;">Macro</span>
+              <span class="tl-title">Inscriptions chômage hebdomadaires US</span>
+            </div>
+            
+            <div class="agenda-event-row" style="--cat-couleur:#3E5C76">
+              <span class="acc-region" title="USA">US</span>
+              <span class="acc-pill" style="background:#3E5C7622;color:#3E5C76;flex-shrink:0;">Macro</span>
+              <span class="tl-title">Indice activité nationale Fed Chicago</span>
+            </div>
+            
+            <div class="agenda-event-row" style="--cat-couleur:#3E5C76">
+              <span class="acc-region" title="Europe">EU</span>
+              <span class="acc-pill" style="background:#3E5C7622;color:#3E5C76;flex-shrink:0;">Macro</span>
+              <span class="tl-title">Confiance consommateurs Flash Eurozone</span>
+            </div>
+            
+            <div class="agenda-event-row" style="--cat-couleur:#5B7553">
+              <span class="acc-region" title="Global">GLOBAL</span>
+              <span class="acc-pill" style="background:#5B755322;color:#5B7553;flex-shrink:0;">Corporate</span>
+              <span class="tl-title">Résultats semestriels Dassault Systemes</span>
+            </div>
+            
+            <div class="agenda-event-row" style="--cat-couleur:#5B7553">
+              <span class="acc-region" title="Global">GLOBAL</span>
+              <span class="acc-pill" style="background:#5B755322;color:#5B7553;flex-shrink:0;">Corporate</span>
+              <span class="tl-title">Résultats semestriels TotalEnergies SE</span>
+            </div>
+            
+            <div class="agenda-event-row" style="--cat-couleur:#5B7553">
+              <span class="acc-region" title="Global">GLOBAL</span>
+              <span class="acc-pill" style="background:#5B755322;color:#5B7553;flex-shrink:0;">Corporate</span>
+              <span class="tl-title">Résultats semestriels STMicroelectronics</span>
+            </div>
+            
+            <div class="agenda-event-row" style="--cat-couleur:#3E5C76">
+              <span class="acc-region" title="Asie">ASIA</span>
+              <span class="acc-pill" style="background:#3E5C7622;color:#3E5C76;flex-shrink:0;">Macro</span>
+              <span class="tl-title">CPI (Inflation) Japon</span>
+            </div>
+            
           </div>
         </details>
         
         <details class="agenda-date-group" >
           <summary class="agenda-date-summary">
             <span class="agenda-date-badge">24/07</span>
-            <span class="agenda-date-count">14 événements</span>
+            <span class="agenda-date-count">29 événements</span>
             <span class="agenda-date-chevron">▾</span>
           </summary>
           <div class="agenda-date-content">
@@ -2893,6 +3082,96 @@
               <span class="tl-title">PMI Services Flash UEM</span>
             </div>
             
+            <div class="agenda-event-row" style="--cat-couleur:#3E5C76">
+              <span class="acc-region" title="Europe">EU</span>
+              <span class="acc-pill" style="background:#3E5C7622;color:#3E5C76;flex-shrink:0;">Macro</span>
+              <span class="tl-title">Confiance consommateurs Gfk Royaume-Uni</span>
+            </div>
+            
+            <div class="agenda-event-row" style="--cat-couleur:#3E5C76">
+              <span class="acc-region" title="Asie">ASIA</span>
+              <span class="acc-pill" style="background:#3E5C7622;color:#3E5C76;flex-shrink:0;">Macro</span>
+              <span class="tl-title">Taux Inflation Base Annuel Japon</span>
+            </div>
+            
+            <div class="agenda-event-row" style="--cat-couleur:#3E5C76">
+              <span class="acc-region" title="Asie">ASIA</span>
+              <span class="acc-pill" style="background:#3E5C7622;color:#3E5C76;flex-shrink:0;">Macro</span>
+              <span class="tl-title">Taux Inflation Annuel Japon</span>
+            </div>
+            
+            <div class="agenda-event-row" style="--cat-couleur:#3E5C76">
+              <span class="acc-region" title="Asie">ASIA</span>
+              <span class="acc-pill" style="background:#3E5C7622;color:#3E5C76;flex-shrink:0;">Macro</span>
+              <span class="tl-title">Indice PMI Services Flash Japon</span>
+            </div>
+            
+            <div class="agenda-event-row" style="--cat-couleur:#3E5C76">
+              <span class="acc-region" title="Asie">ASIA</span>
+              <span class="acc-pill" style="background:#3E5C7622;color:#3E5C76;flex-shrink:0;">Macro</span>
+              <span class="tl-title">Indice PMI Manufacturier Flash Japon</span>
+            </div>
+            
+            <div class="agenda-event-row" style="--cat-couleur:#3E5C76">
+              <span class="acc-region" title="Europe">EU</span>
+              <span class="acc-pill" style="background:#3E5C7622;color:#3E5C76;flex-shrink:0;">Macro</span>
+              <span class="tl-title">Ventes au Détail Annuel Royaume-Uni</span>
+            </div>
+            
+            <div class="agenda-event-row" style="--cat-couleur:#3E5C76">
+              <span class="acc-region" title="Europe">EU</span>
+              <span class="acc-pill" style="background:#3E5C7622;color:#3E5C76;flex-shrink:0;">Macro</span>
+              <span class="tl-title">Confiance consommateurs Gfk Allemagne</span>
+            </div>
+            
+            <div class="agenda-event-row" style="--cat-couleur:#3E5C76">
+              <span class="acc-region" title="Europe">EU</span>
+              <span class="acc-pill" style="background:#3E5C7622;color:#3E5C76;flex-shrink:0;">Macro</span>
+              <span class="tl-title">Indice PMI Manufacturier Flash France</span>
+            </div>
+            
+            <div class="agenda-event-row" style="--cat-couleur:#3E5C76">
+              <span class="acc-region" title="Europe">EU</span>
+              <span class="acc-pill" style="background:#3E5C7622;color:#3E5C76;flex-shrink:0;">Macro</span>
+              <span class="tl-title">Indice PMI Composite Flash France</span>
+            </div>
+            
+            <div class="agenda-event-row" style="--cat-couleur:#3E5C76">
+              <span class="acc-region" title="Europe">EU</span>
+              <span class="acc-pill" style="background:#3E5C7622;color:#3E5C76;flex-shrink:0;">Macro</span>
+              <span class="tl-title">Indice PMI Services Flash France</span>
+            </div>
+            
+            <div class="agenda-event-row" style="--cat-couleur:#3E5C76">
+              <span class="acc-region" title="Europe">EU</span>
+              <span class="acc-pill" style="background:#3E5C7622;color:#3E5C76;flex-shrink:0;">Macro</span>
+              <span class="tl-title">Indice PMI Manufacturier Flash Allemagne</span>
+            </div>
+            
+            <div class="agenda-event-row" style="--cat-couleur:#3E5C76">
+              <span class="acc-region" title="Europe">EU</span>
+              <span class="acc-pill" style="background:#3E5C7622;color:#3E5C76;flex-shrink:0;">Macro</span>
+              <span class="tl-title">Indice PMI Services Flash Allemagne</span>
+            </div>
+            
+            <div class="agenda-event-row" style="--cat-couleur:#3E5C76">
+              <span class="acc-region" title="Europe">EU</span>
+              <span class="acc-pill" style="background:#3E5C7622;color:#3E5C76;flex-shrink:0;">Macro</span>
+              <span class="tl-title">Indice PMI Composite Flash Allemagne</span>
+            </div>
+            
+            <div class="agenda-event-row" style="--cat-couleur:#3E5C76">
+              <span class="acc-region" title="Europe">EU</span>
+              <span class="acc-pill" style="background:#3E5C7622;color:#3E5C76;flex-shrink:0;">Macro</span>
+              <span class="tl-title">Indice PMI Manufacturier Flash Eurozone</span>
+            </div>
+            
+            <div class="agenda-event-row" style="--cat-couleur:#3E5C76">
+              <span class="acc-region" title="USA">US</span>
+              <span class="acc-pill" style="background:#3E5C7622;color:#3E5C76;flex-shrink:0;">Macro</span>
+              <span class="tl-title">Ventes maisons neuves US</span>
+            </div>
+            
           </div>
         </details>
         
@@ -2916,7 +3195,7 @@
         <details class="agenda-date-group" >
           <summary class="agenda-date-summary">
             <span class="agenda-date-badge">27/07</span>
-            <span class="agenda-date-count">4 événements</span>
+            <span class="agenda-date-count">5 événements</span>
             <span class="agenda-date-chevron">▾</span>
           </summary>
           <div class="agenda-date-content">
@@ -2945,13 +3224,19 @@
               <span class="tl-title">Résultats Cadence Design Systems</span>
             </div>
             
+            <div class="agenda-event-row" style="--cat-couleur:#3E5C76">
+              <span class="acc-region" title="USA">US</span>
+              <span class="acc-pill" style="background:#3E5C7622;color:#3E5C76;flex-shrink:0;">Macro</span>
+              <span class="tl-title">Commandes biens durables US (Prél.)</span>
+            </div>
+            
           </div>
         </details>
         
         <details class="agenda-date-group" >
           <summary class="agenda-date-summary">
             <span class="agenda-date-badge">28/07</span>
-            <span class="agenda-date-count">29 événements</span>
+            <span class="agenda-date-count">33 événements</span>
             <span class="agenda-date-chevron">▾</span>
           </summary>
           <div class="agenda-date-content">
@@ -3130,13 +3415,37 @@
               <span class="tl-title">Réunion FOMC (Jour 1)</span>
             </div>
             
+            <div class="agenda-event-row" style="--cat-couleur:#3E5C76">
+              <span class="acc-region" title="USA">US</span>
+              <span class="acc-pill" style="background:#3E5C7622;color:#3E5C76;flex-shrink:0;">Macro</span>
+              <span class="tl-title">Inventaires de gros US (Prél.)</span>
+            </div>
+            
+            <div class="agenda-event-row" style="--cat-couleur:#3E5C76">
+              <span class="acc-region" title="USA">US</span>
+              <span class="acc-pill" style="background:#3E5C7622;color:#3E5C76;flex-shrink:0;">Macro</span>
+              <span class="tl-title">Indice S&P/Case-Shiller Prix Immobiliers US</span>
+            </div>
+            
+            <div class="agenda-event-row" style="--cat-couleur:#3E5C76">
+              <span class="acc-region" title="USA">US</span>
+              <span class="acc-pill" style="background:#3E5C7622;color:#3E5C76;flex-shrink:0;">Macro</span>
+              <span class="tl-title">Indice manufacturier Richmond Fed</span>
+            </div>
+            
+            <div class="agenda-event-row" style="--cat-couleur:#3E5C76">
+              <span class="acc-region" title="USA">US</span>
+              <span class="acc-pill" style="background:#3E5C7622;color:#3E5C76;flex-shrink:0;">Macro</span>
+              <span class="tl-title">Confiance consommateurs US</span>
+            </div>
+            
           </div>
         </details>
         
         <details class="agenda-date-group" >
           <summary class="agenda-date-summary">
             <span class="agenda-date-badge">29/07</span>
-            <span class="agenda-date-count">69 événements</span>
+            <span class="agenda-date-count">70 événements</span>
             <span class="agenda-date-chevron">▾</span>
           </summary>
           <div class="agenda-date-content">
@@ -3553,6 +3862,12 @@
               <span class="acc-region" title="USA">US</span>
               <span class="acc-pill" style="background:#3E5C7622;color:#3E5C76;flex-shrink:0;">Macro</span>
               <span class="tl-title">Décision Taux Fed & Conférence</span>
+            </div>
+            
+            <div class="agenda-event-row" style="--cat-couleur:#3E5C76">
+              <span class="acc-region" title="Global">GLOBAL</span>
+              <span class="acc-pill" style="background:#3E5C7622;color:#3E5C76;flex-shrink:0;">Macro</span>
+              <span class="tl-title">Résumé délibérations BoC</span>
             </div>
             
           </div>
@@ -4100,7 +4415,7 @@
         <details class="agenda-date-group" >
           <summary class="agenda-date-summary">
             <span class="agenda-date-badge">31/07</span>
-            <span class="agenda-date-count">35 événements</span>
+            <span class="agenda-date-count">37 événements</span>
             <span class="agenda-date-chevron">▾</span>
           </summary>
           <div class="agenda-date-content">
@@ -4315,6 +4630,18 @@
               <span class="tl-title">Décision Taux BoJ & Conférence</span>
             </div>
             
+            <div class="agenda-event-row" style="--cat-couleur:#3E5C76">
+              <span class="acc-region" title="USA">US</span>
+              <span class="acc-pill" style="background:#3E5C7622;color:#3E5C76;flex-shrink:0;">Macro</span>
+              <span class="tl-title">Nombre plateformes forage Baker Hughes</span>
+            </div>
+            
+            <div class="agenda-event-row" style="--cat-couleur:#3E5C76">
+              <span class="acc-region" title="USA">US</span>
+              <span class="acc-pill" style="background:#3E5C7622;color:#3E5C76;flex-shrink:0;">Macro</span>
+              <span class="tl-title">Total plateformes Baker Hughes</span>
+            </div>
+            
           </div>
         </details>
         
@@ -4367,7 +4694,7 @@
         <details class="agenda-date-group" >
           <summary class="agenda-date-summary">
             <span class="agenda-date-badge">03/08</span>
-            <span class="agenda-date-count">11 événements</span>
+            <span class="agenda-date-count">17 événements</span>
             <span class="agenda-date-chevron">▾</span>
           </summary>
           <div class="agenda-date-content">
@@ -4438,13 +4765,49 @@
               <span class="tl-title">Résultats Berkshire Hathaway</span>
             </div>
             
+            <div class="agenda-event-row" style="--cat-couleur:#3E5C76">
+              <span class="acc-region" title="USA">US</span>
+              <span class="acc-pill" style="background:#3E5C7622;color:#3E5C76;flex-shrink:0;">Macro</span>
+              <span class="tl-title">Indice PMI Manufacturier Final US</span>
+            </div>
+            
+            <div class="agenda-event-row" style="--cat-couleur:#3E5C76">
+              <span class="acc-region" title="USA">US</span>
+              <span class="acc-pill" style="background:#3E5C7622;color:#3E5C76;flex-shrink:0;">Macro</span>
+              <span class="tl-title">Indice ISM Manufacturier US</span>
+            </div>
+            
+            <div class="agenda-event-row" style="--cat-couleur:#3E5C76">
+              <span class="acc-region" title="USA">US</span>
+              <span class="acc-pill" style="background:#3E5C7622;color:#3E5C76;flex-shrink:0;">Macro</span>
+              <span class="tl-title">Indice ISM Manufacturier Emploi US</span>
+            </div>
+            
+            <div class="agenda-event-row" style="--cat-couleur:#3E5C76">
+              <span class="acc-region" title="USA">US</span>
+              <span class="acc-pill" style="background:#3E5C7622;color:#3E5C76;flex-shrink:0;">Macro</span>
+              <span class="tl-title">Dépenses de construction US (Mensuel)</span>
+            </div>
+            
+            <div class="agenda-event-row" style="--cat-couleur:#3E5C76">
+              <span class="acc-region" title="USA">US</span>
+              <span class="acc-pill" style="background:#3E5C7622;color:#3E5C76;flex-shrink:0;">Macro</span>
+              <span class="tl-title">Indice ISM Manufacturier Nouvelles Commandes US</span>
+            </div>
+            
+            <div class="agenda-event-row" style="--cat-couleur:#3E5C76">
+              <span class="acc-region" title="USA">US</span>
+              <span class="acc-pill" style="background:#3E5C7622;color:#3E5C76;flex-shrink:0;">Macro</span>
+              <span class="tl-title">Indice ISM Manufacturier Prix US</span>
+            </div>
+            
           </div>
         </details>
         
         <details class="agenda-date-group" >
           <summary class="agenda-date-summary">
             <span class="agenda-date-badge">04/08</span>
-            <span class="agenda-date-count">8 événements</span>
+            <span class="agenda-date-count">13 événements</span>
             <span class="agenda-date-chevron">▾</span>
           </summary>
           <div class="agenda-date-content">
@@ -4497,6 +4860,36 @@
               <span class="tl-title">Réunion de politique monétaire RBA</span>
             </div>
             
+            <div class="agenda-event-row" style="--cat-couleur:#3E5C76">
+              <span class="acc-region" title="Global">GLOBAL</span>
+              <span class="acc-pill" style="background:#3E5C7622;color:#3E5C76;flex-shrink:0;">Macro</span>
+              <span class="tl-title">Réunion Politique Monétaire RBA</span>
+            </div>
+            
+            <div class="agenda-event-row" style="--cat-couleur:#3E5C76">
+              <span class="acc-region" title="USA">US</span>
+              <span class="acc-pill" style="background:#3E5C7622;color:#3E5C76;flex-shrink:0;">Macro</span>
+              <span class="tl-title">Indice LMI Responsables Logistiques US</span>
+            </div>
+            
+            <div class="agenda-event-row" style="--cat-couleur:#3E5C76">
+              <span class="acc-region" title="USA">US</span>
+              <span class="acc-pill" style="background:#3E5C7622;color:#3E5C76;flex-shrink:0;">Macro</span>
+              <span class="tl-title">Balance Commerciale US</span>
+            </div>
+            
+            <div class="agenda-event-row" style="--cat-couleur:#3E5C76">
+              <span class="acc-region" title="USA">US</span>
+              <span class="acc-pill" style="background:#3E5C7622;color:#3E5C76;flex-shrink:0;">Macro</span>
+              <span class="tl-title">JOLTs Offres d'emploi US</span>
+            </div>
+            
+            <div class="agenda-event-row" style="--cat-couleur:#3E5C76">
+              <span class="acc-region" title="USA">US</span>
+              <span class="acc-pill" style="background:#3E5C7622;color:#3E5C76;flex-shrink:0;">Macro</span>
+              <span class="tl-title">Commandes à l'industrie US (Mensuel)</span>
+            </div>
+            
           </div>
         </details>
         
@@ -4532,7 +4925,7 @@
         <details class="agenda-date-group" >
           <summary class="agenda-date-summary">
             <span class="agenda-date-badge">06/08</span>
-            <span class="agenda-date-count">1 événement</span>
+            <span class="agenda-date-count">2 événements</span>
             <span class="agenda-date-chevron">▾</span>
           </summary>
           <div class="agenda-date-content">
@@ -4541,6 +4934,12 @@
               <span class="acc-region" title="USA">US</span>
               <span class="acc-pill" style="background:#3E5C7622;color:#3E5C76;flex-shrink:0;">Macro</span>
               <span class="tl-title">Publication Productivité et Coûts T2</span>
+            </div>
+            
+            <div class="agenda-event-row" style="--cat-couleur:#3E5C76">
+              <span class="acc-region" title="Europe">EU</span>
+              <span class="acc-pill" style="background:#3E5C7622;color:#3E5C76;flex-shrink:0;">Macro</span>
+              <span class="tl-title">Réunion MPC BoE</span>
             </div>
             
           </div>
@@ -5379,6 +5778,34 @@ document.addEventListener('keydown', (e) => {
         searchInput.focus();
         searchInput.select();
     }
+});
+
+// --- Navigation clavier j/k (+ fleches) entre les breves de l'onglet actif ---
+document.addEventListener('keydown', (e) => {
+    if (e.ctrlKey || e.metaKey || e.altKey) return;
+    const balise = document.activeElement.tagName;
+    if (balise === 'INPUT' || balise === 'TEXTAREA') return;
+
+    const touche = e.key.toLowerCase();
+    const estSuivant = touche === 'j' || e.key === 'ArrowDown';
+    const estPrecedent = touche === 'k' || e.key === 'ArrowUp';
+    if (!estSuivant && !estPrecedent) return;
+
+    const panelActif = document.querySelector('.tab-panel.active');
+    if (!panelActif) return;
+    const items = Array.from(panelActif.querySelectorAll('.acc-summary, .agenda-date-summary'));
+    if (items.length === 0) return;
+
+    e.preventDefault();
+    const idxActuel = items.indexOf(document.activeElement);
+    let idxSuivant;
+    if (estSuivant) {
+        idxSuivant = idxActuel === -1 ? 0 : Math.min(idxActuel + 1, items.length - 1);
+    } else {
+        idxSuivant = idxActuel === -1 ? 0 : Math.max(idxActuel - 1, 0);
+    }
+    items[idxSuivant].focus();
+    items[idxSuivant].scrollIntoView({ block: 'center', behavior: 'smooth' });
 });
 
 // --- Badge "nouveau" sur les evenements d'agenda ajoutes depuis la derniere visite ---
