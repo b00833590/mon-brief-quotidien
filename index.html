@@ -9,8 +9,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
   :root {
-    --accent-gold: #b45309;
-    --accent-gold-rgb: 180, 83, 9;
+    --accent-gold: #f59e0b;
+    --accent-gold-rgb: 245, 158, 11;
     --bg: #f8fafc;
     --card-bg: #ffffff;
     --card-bg-soft: #f1f5f9;
@@ -1243,6 +1243,38 @@
     .ticker-bar { overflow-x: auto; -webkit-overflow-scrolling: touch; }
     .ticker-track { animation: none !important; }
   }
+@media (max-width: 600px) {
+  /* Mobile tweaks */
+  body {
+    overflow: auto;
+    height: auto;
+    grid-template-columns: 1px; /* force single column */
+    grid-template-rows: auto auto 1fr;
+    grid-template-areas:
+      "header"
+      "nav"
+      "search"
+      "main";
+  }
+  main { padding: 16px 12px 40px; }
+  header .top { gap: 12px; }
+  header .brand-glyph { width: 30px; height: 30px; }
+  header h1 { font-size: 20px; }
+  nav.subnav button,
+  .agenda-event-row,
+  .agenda-date-summary {
+    min-height: 44px;
+    padding: 12px;
+    font-size: 14px;
+  }
+  .agenda-date-group { width: 100%; }
+  .agenda-event-row { flex-wrap: wrap; }
+  .agenda-event-row .tl-title { flex-basis: 100%; }
+  .acc-title, .tl-title, .agenda-date-summary { font-size: 13px; }
+  .acc-body, .agenda-event-row .acc-body { font-size: 13px; }
+  .perso-search-bar { width: 100%; }
+  .search-results-wrap { padding: 0 8px; }
+}
 </style>
 </head>
 <body data-theme="light">
@@ -1269,7 +1301,7 @@
     <div class="right">
       <div class="date-block">
         <div class="date">Lundi 20 juillet 2026</div>
-        <div class="date-sub">Générée à 09h14</div>
+        <div class="date-sub">Générée à 10h25</div>
       </div>
       <button class="theme-toggle" onclick="toggleTheme()" id="themeBtn" aria-label="Changer le theme clair/sombre">&#9789;</button>
     </div>
@@ -1311,8 +1343,8 @@
       <h2 class="tab-title">⚡ Flash</h2>
       
 <div class="sentiment-box">
-  <span class="sentiment-badge sent-down">Baissier</span>
-  <span class="sentiment-raison">L'escalade des tensions entre les États-Unis et l'Iran a propulsé les prix du pétrole et mis sous pression les marchés, notamment asiatiques. Les craintes d'une bulle de l'IA alimentent également la volatilité, entraînant une rotation sectorielle.</span>
+  <span class="sentiment-badge sent-neutral">Neutre</span>
+  <span class="sentiment-raison">Les marchés sont tiraillés entre l'escalade des tensions géopolitiques et la prudence des banques centrales, tandis que les actions technologiques subissent des corrections.</span>
 </div>
 
       <div class="acc-list">
@@ -1321,65 +1353,54 @@
             <span class="acc-rank">1</span>
             <span class="acc-region" title="Global">🌐</span>
             <span class="acc-pill" style="background:#f59e0b22;color:#f59e0b">Géopolitique</span>
-            <span class="acc-title">Escalade des tensions US-Iran et impact pétrolier</span>
+            <span class="acc-title">Escalade des tensions US-Iran fait flamber pétrole</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">Les hostilités entre les États-Unis et l'Iran ont <strong class="highlight-phrase">repris violemment</strong> ce week-end, marquant la <strong class="highlight-phrase">fin du cessez-le-feu provisoire</strong> et faisant état de <strong class="highlight-phrase">deux militaires américains tués</strong> en Jordanie. En réaction, l'Iran a <strong class="highlight-phrase">suspendu ses engagements</strong> dans l'accord. Cette escalade a propulsé les prix du Brent <strong class="highlight-figure">au-dessus de 90 dollars le baril</strong>, avec une hausse hebdomadaire de <strong class="highlight-figure">+16%</strong>, la plus forte depuis avril, alimentant les craintes d'une <strong class="highlight-phrase">crise mondiale des carburants</strong> et une dépréciation record du rial iranien.</div>
+          <div class="acc-body">Les hostilités ont repris entre les <strong class="highlight-phrase">États-Unis et l'Iran</strong>, marquant la <strong class="highlight-phrase">fin du cessez-le-feu provisoire</strong> et entraînant la mort de <strong class="highlight-phrase">deux militaires américains</strong> en Jordanie. L'Iran a <strong class="highlight-phrase">suspendu ses engagements</strong> sur l'accord et le <strong class="highlight-phrase">détroit d'Hormuz</strong> est de nouveau sous pression. Le Brent a bondi de <strong class="highlight-figure">16%</strong> la semaine dernière et dépasse les <strong class="highlight-figure">90$/bbl</strong> ce matin, sa plus forte hausse hebdomadaire depuis avril.</div>
+        </details>
+        
+        <details class="acc-item" style="--cat-couleur:#10b981">
+          <summary class="acc-summary">
+            <span class="acc-rank">2</span>
+            <span class="acc-region" title="USA">🇺🇸</span>
+            <span class="acc-pill" style="background:#10b98122;color:#10b981">Corporate</span>
+            <span class="acc-title">Trump Media veut faire payer l'accès rapide aux posts</span>
+            <span class="acc-chevron">▾</span>
+          </summary>
+          <div class="acc-body">Trump Media & Technology Group envisage de facturer <strong class="highlight-figure">jusqu'à 100 000 dollars par mois</strong> pour un accès rapide aux posts de Donald Trump sur Truth Social. Cette « Truth API » est destinée aux traders et hedge funds, car les messages de l'ex-président peuvent <strong class="highlight-phrase">faire bouger les marchés financiers</strong>, comme une fois le S&P 500 a gagné <strong class="highlight-figure">9,5%</strong>. Wall Street exprime son mécontentement mais certains reconnaissent qu'ils devront payer.</div>
+        </details>
+        
+        <details class="acc-item" style="--cat-couleur:#10b981">
+          <summary class="acc-summary">
+            <span class="acc-rank">3</span>
+            <span class="acc-region" title="Europe">🇪🇺</span>
+            <span class="acc-pill" style="background:#10b98122;color:#10b981">Corporate</span>
+            <span class="acc-title">Prologis intensifie son offre pour acquérir Segro</span>
+            <span class="acc-chevron">▾</span>
+          </summary>
+          <div class="acc-body">Le groupe américain Prologis a soumis une <strong class="highlight-phrase">troisième proposition</strong> pour acquérir le spécialiste immobilier britannique Segro, valorisant l'entreprise à <strong class="highlight-figure">environ 13,5 milliards de livres sterling</strong>, contre 12,6 milliards précédemment. Cette offre comprend un échange d'actions (<strong class="highlight-figure">0,0890 nouvelles actions Prologis</strong>) et une alternative en espèces <strong class="highlight-figure">jusqu'à 2,7 milliards de livres sterling</strong>. Segro a de nouveau rejeté l'offre, estimant sa valeur sous-estimée.</div>
         </details>
         
         <details class="acc-item" style="--cat-couleur:#3b82f6">
           <summary class="acc-summary">
-            <span class="acc-rank">2</span>
-            <span class="acc-region" title="Global">🌐</span>
-            <span class="acc-pill" style="background:#3b82f622;color:#3b82f6">Marchés</span>
-            <span class="acc-title">Craintes de bulle IA et valorisations élevées</span>
-            <span class="acc-chevron">▾</span>
-          </summary>
-          <div class="acc-body">Les marchés boursiers américains sont tiraillés entre l'avidité et la peur, avec un indice Cape de Robert Shiller atteignant <strong class="highlight-figure">41</strong>, un niveau historiquement élevé, seulement dépassé en 2001. Les attentes de croissance des bénéfices du S&P 500 sont très fortes ( <strong class="highlight-figure">+24%</strong> cette année, <strong class="highlight-figure">+17%</strong> en 2027), mais l'indice stagne depuis <strong class="highlight-phrase">deux mois</strong>, et les secteurs spéculatifs comme les semi-conducteurs sont <strong class="highlight-phrase">très volatils</strong>. Cela suggère que le « trade de l'IA » pourrait être en train de <strong class="highlight-phrase">gonfler une bulle</strong>, rendant les rendements futurs probablement <strong class="highlight-phrase">inférieurs à la moyenne</strong> sur les cinq à dix prochaines années.</div>
-        </details>
-        
-        <details class="acc-item" style="--cat-couleur:#8b5cf6">
-          <summary class="acc-summary">
-            <span class="acc-rank">3</span>
-            <span class="acc-region" title="USA">🇺🇸</span>
-            <span class="acc-pill" style="background:#8b5cf622;color:#8b5cf6">Tech</span>
-            <span class="acc-title">Trump Media propose un accès payant aux posts présidentiels</span>
-            <span class="acc-chevron">▾</span>
-          </summary>
-          <div class="acc-body">Trump Media & Technology Group (TMTG) a discuté de la possibilité de facturer aux traders et investisseurs <strong class="highlight-figure">jusqu'à 100 000 dollars par mois</strong> pour un accès plus rapide aux publications du président Donald Trump sur Truth Social. Cette « Truth API » permettrait aux <strong class="highlight-phrase">hedge funds et sociétés de trading</strong> de réagir instantanément aux annonces majeures de Trump, qui ont prouvé leur capacité à <strong class="highlight-phrase">faire fluctuer fortement les marchés</strong>, suscitant déjà un <strong class="highlight-phrase">tollé à Wall Street</strong> concernant l'équité de l'information.</div>
-        </details>
-        
-        <details class="acc-item" style="--cat-couleur:#10b981">
-          <summary class="acc-summary">
             <span class="acc-rank">4</span>
             <span class="acc-region" title="Global">🌐</span>
-            <span class="acc-pill" style="background:#10b98122;color:#10b981">Corporate</span>
-            <span class="acc-title">Apple détrône Nvidia en capitalisation boursière</span>
+            <span class="acc-pill" style="background:#3b82f622;color:#3b82f6">Marchés</span>
+            <span class="acc-title">Craintes de bulle IA pèsent sur marchés actions américains</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">Pour la <strong class="highlight-figure">première fois depuis avril 2025</strong>, Apple a récupéré sa place de <strong class="highlight-phrase">première entreprise mondiale</strong> en termes de capitalisation boursière, dépassant Nvidia. Apple pèse désormais <strong class="highlight-figure">4 880 milliards de dollars</strong>, contre <strong class="highlight-figure">4 860 milliards de dollars</strong> pour Nvidia. Ce changement de leadership reflète une <strong class="highlight-phrase">rotation sectorielle</strong> sur les marchés, s'éloignant temporairement des valeurs technologiques à forte croissance.</div>
-        </details>
-        
-        <details class="acc-item" style="--cat-couleur:#10b981">
-          <summary class="acc-summary">
-            <span class="acc-rank">5</span>
-            <span class="acc-region" title="Europe">🇪🇺</span>
-            <span class="acc-pill" style="background:#10b98122;color:#10b981">Corporate</span>
-            <span class="acc-title">Prologis intensifie son offre de rachat sur Segro</span>
-            <span class="acc-chevron">▾</span>
-          </summary>
-          <div class="acc-body">Le géant américain de l'immobilier Prologis a porté son offre d'acquisition sur le britannique Segro à environ <strong class="highlight-figure">13,5 milliards de livres sterling</strong>, valorisant Segro à <strong class="highlight-figure">993 pence par action</strong>. Après le rejet d'une <strong class="highlight-phrase">troisième proposition</strong> par le conseil d'administration de Segro, Prologis s'adresse désormais <strong class="highlight-phrase">directement aux actionnaires</strong>, proposant une alternative partielle en espèces allant jusqu'à <strong class="highlight-figure">2,7 milliards de livres sterling</strong>, soulignant la conviction que les <strong class="highlight-phrase">actifs britanniques restent sous-évalués</strong>.</div>
+          <div class="acc-body">Les marchés actions américains affichent des valorisations et attentes très élevées, avec un CAPE de Robert Shiller à <strong class="highlight-figure">41</strong>, un niveau seulement dépassé en 2001. Malgré des prévisions de croissance des bénéfices du S&P 500 de <strong class="highlight-figure">24%</strong> cette année et <strong class="highlight-figure">17%</strong> en 2027, l'indice stagne, et le secteur des semi-conducteurs montre une <strong class="highlight-phrase">forte volatilité</strong>, signalant une potentielle <strong class="highlight-phrase">bulle liée à l'IA</strong>.</div>
         </details>
         
         <details class="acc-item" style="--cat-couleur:#ef4444">
           <summary class="acc-summary">
-            <span class="acc-rank">6</span>
-            <span class="acc-region" title="Europe">🇪🇺</span>
+            <span class="acc-rank">5</span>
+            <span class="acc-region" title="Global">🌐</span>
             <span class="acc-pill" style="background:#ef444422;color:#ef4444">Macro</span>
-            <span class="acc-title">Andy Burnham prend les rênes du gouvernement britannique</span>
+            <span class="acc-title">Banques centrales entrent en période de silence avant réunions</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">Andy Burnham prend officiellement ses fonctions de <strong class="highlight-phrase">Premier ministre britannique</strong> ce jour, succédant à Sir Keir Starmer. Il prévoit une <strong class="highlight-phrase">refonte du bureau du Premier ministre</strong> pour un contrôle accru sur les dépenses publiques et un <strong class="highlight-phrase">« blitz » d'annonces politiques</strong>. Confronté à une croissance ralentie et aux impacts du Brexit, ses <strong class="highlight-figure">100 premiers jours</strong> seront cruciaux pour établir son élan et faire face aux défis, y compris les <strong class="highlight-phrase">règles budgétaires strictes</strong>.</div>
+          <div class="acc-body">La <strong class="highlight-phrase">BCE et la Fed</strong> sont entrées dans leur période de silence avant leurs réunions respectives des <strong class="highlight-figure">22-23 juillet</strong> et <strong class="highlight-figure">28-29 juillet</strong>. La BCE devrait <strong class="highlight-phrase">maintenir ses taux directeurs inchangés</strong> ce jeudi, et un statu quo est également anticipé pour septembre, reflétant une approche prudente face aux incertitudes économiques.</div>
         </details>
         </div>
     </div>
@@ -1388,8 +1409,8 @@
       <h2 class="tab-title">📈 Marches</h2>
       
 <div class="sentiment-box">
-  <span class="sentiment-badge sent-down">Baissier</span>
-  <span class="sentiment-raison">L'escalade des tensions entre les États-Unis et l'Iran a propulsé les prix du pétrole et mis sous pression les marchés, notamment asiatiques. Les craintes d'une bulle de l'IA alimentent également la volatilité, entraînant une rotation sectorielle.</span>
+  <span class="sentiment-badge sent-neutral">Neutre</span>
+  <span class="sentiment-raison">Les marchés sont tiraillés entre l'escalade des tensions géopolitiques et la prudence des banques centrales, tandis que les actions technologiques subissent des corrections.</span>
 </div>
 
       <div class="acc-list">
@@ -1398,10 +1419,10 @@
             
             <span class="acc-region" title="Global">🌐</span>
             <span class="acc-pill" style="background:#3b82f622;color:#3b82f6">Marchés</span>
-            <span class="acc-title">Marchés en recul suite aux tensions géopolitiques et à l'IA</span>
+            <span class="acc-title">Le pétrole Brent dépasse les 90 dollars le baril</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">Les marchés mondiaux ont clôturé la semaine dans le rouge, notamment à cause de l'<strong class="highlight-phrase">escalade des hostilités au Moyen-Orient</strong> et des <strong class="highlight-phrase">impacts du nouveau modèle d'IA chinois</strong> Kimi K3. En Asie, le Kospi a reculé de <strong class="highlight-figure">-4,2%</strong> et le Taiex de <strong class="highlight-figure">-0,5%</strong>, tandis qu'en Europe, le Stoxx 600 a baissé de <strong class="highlight-figure">-0,5%</strong> et le FTSE MIB de <strong class="highlight-figure">-1,0%</strong>.</div>
+          <div class="acc-body">Le prix du pétrole Brent a augmenté de <strong class="highlight-figure">2,5%</strong> pour atteindre <strong class="highlight-figure">90,30 dollars le baril</strong> en Asie ce matin, un niveau inédit depuis plus d'un mois. Cette hausse est due à l'escalade des tensions entre les États-Unis et l'Iran. Le Brent avait déjà connu une <strong class="highlight-figure">hausse hebdomadaire de 16%</strong> la semaine précédente.</div>
         </details>
         
         <details class="acc-item" style="--cat-couleur:#3b82f6">
@@ -1409,10 +1430,10 @@
             
             <span class="acc-region" title="Global">🌐</span>
             <span class="acc-pill" style="background:#3b82f622;color:#3b82f6">Marchés</span>
-            <span class="acc-title">Rotation sectorielle pénalise la tech américaine</span>
+            <span class="acc-title">Marchés actions sous pression mondiale</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">Les actions américaines ont été sous pression, le Nasdaq 100 menant la baisse avec <strong class="highlight-figure">-1,4%</strong> et le S&P 500 reculant de <strong class="highlight-figure">-1%</strong>. Cette performance reflète une <strong class="highlight-phrase">rotation sectorielle</strong> marquée, les investisseurs délaissant les valeurs technologiques au profit des <strong class="highlight-phrase">secteurs de l'énergie et des valeurs défensives</strong>, plus résilients dans un contexte de volatilité.</div>
+          <div class="acc-body">Les marchés mondiaux ont clôturé la semaine dans le rouge, impactés par les tensions géopolitiques et le secteur des semi-conducteurs. En Asie, le Kospi a chuté de <strong class="highlight-figure">4,2%</strong> et le Taiex de <strong class="highlight-figure">0,5%</strong>, tandis qu'en Europe le Stoxx 600 a reculé de <strong class="highlight-figure">0,5%</strong>. Les actions américaines ont aussi baissé, le Nasdaq 100 de <strong class="highlight-figure">-1,4%</strong> et le S&P 500 de <strong class="highlight-figure">-1%</strong>.</div>
         </details>
         
         <details class="acc-item" style="--cat-couleur:#3b82f6">
@@ -1420,10 +1441,10 @@
             
             <span class="acc-region" title="Global">🌐</span>
             <span class="acc-pill" style="background:#3b82f622;color:#3b82f6">Marchés</span>
-            <span class="acc-title">Pétrole Brent s'envole au-dessus de 90 dollars le baril</span>
+            <span class="acc-title">Apple récupère le titre de première capitalisation mondiale</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">Le prix du pétrole Brent a atteint <strong class="highlight-figure">plus de 90 dollars le baril</strong>, enregistrant sa <strong class="highlight-phrase">plus forte hausse hebdomadaire depuis avril</strong> avec <strong class="highlight-figure">+16%</strong>. Cette flambée est directement liée à l'<strong class="highlight-phrase">intensification des frappes</strong> entre les États-Unis et l'Iran, et à la suspension par l'Iran de ses engagements sur le détroit d'Hormuz, accentuant les risques sur l'approvisionnement.</div>
+          <div class="acc-body">La semaine dernière, <strong class="highlight-phrase">Apple a dépassé Nvidia</strong> pour redevenir la première entreprise mondiale en termes de capitalisation boursière, une première depuis avril 2025. Apple pèse désormais <strong class="highlight-figure">4 880 milliards de dollars</strong>, contre <strong class="highlight-figure">4 860 milliards</strong> pour Nvidia, suite à la mauvaise passe du secteur des semi-conducteurs.</div>
         </details>
         
         <details class="acc-item" style="--cat-couleur:#3b82f6">
@@ -1431,10 +1452,10 @@
             
             <span class="acc-region" title="Global">🌐</span>
             <span class="acc-pill" style="background:#3b82f622;color:#3b82f6">Marchés</span>
-            <span class="acc-title">Dollar stable, devise scandinave et franc suisse en hausse</span>
+            <span class="acc-title">Le dollar stable, couronne norvégienne et franc suisse en hausse</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">Malgré un environnement de « risk-off », l'indice dollar DXY est resté inchangé à <strong class="highlight-figure">100,765</strong>, terminant la semaine en léger recul de <strong class="highlight-figure">-0,2%</strong>. L'euro est également resté stable à <strong class="highlight-figure">1,1439</strong>. Le <strong class="highlight-phrase">franc suisse</strong> s'est apprécié face à la plupart des devises du G10, tandis que la <strong class="highlight-phrase">couronne norvégienne</strong> a fortement progressé, soutenue par la hausse des prix du Brent.</div>
+          <div class="acc-body">L'indice dollar DXY est resté stable à <strong class="highlight-figure">100,765</strong>, enregistrant un recul hebdomadaire de <strong class="highlight-figure">0,2%</strong>. L'euro est également resté stable à <strong class="highlight-figure">1,1439</strong>, avec une progression hebdomadaire de <strong class="highlight-figure">0,2%</strong>. Le franc suisse s'est apprécié, et la couronne norvégienne a été soutenue par la <strong class="highlight-phrase">flambée du Brent</strong>, son plus fort repli hebdomadaire en trois mois de <strong class="highlight-figure">-1,2%</strong> face à l'euro.</div>
         </details>
         </div>
     </div>
@@ -1448,10 +1469,10 @@
             
             <span class="acc-region" title="Europe">🇪🇺</span>
             <span class="acc-pill" style="background:#ef444422;color:#ef4444">Macro</span>
-            <span class="acc-title">La BCE entre en période de silence avant sa réunion</span>
+            <span class="acc-title">Andy Burnham prend les rênes du Royaume-Uni</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">La Banque Centrale Européenne (BCE) est entrée dans sa période de silence réglementaire avant sa réunion des <strong class="highlight-figure">22 et 23 juillet</strong>. Le marché anticipe que la BCE <strong class="highlight-phrase">maintiendra ses taux directeurs inchangés</strong> ce <strong class="highlight-phrase">jeudi</strong>, avec une probabilité de statu quo également pour la réunion de septembre.</div>
+          <div class="acc-body">Andy Burnham devient officiellement Premier ministre britannique et prévoit un remaniement de Downing Street pour centraliser le contrôle des dépenses publiques. La Resolution Foundation estime qu'il dispose d'une marge de manœuvre de <strong class="highlight-figure">16 milliards de livres sterling</strong> pour l'investissement dans les infrastructures sans enfreindre les règles budgétaires. Martin Wolf met en garde contre l'idée d'un « déjeuner fiscal gratuit », soulignant la nécessité de <strong class="highlight-phrase">choix difficiles</strong>.</div>
         </details>
         
         <details class="acc-item" style="--cat-couleur:#ef4444">
@@ -1459,21 +1480,10 @@
             
             <span class="acc-region" title="USA">🇺🇸</span>
             <span class="acc-pill" style="background:#ef444422;color:#ef4444">Macro</span>
-            <span class="acc-title">La Fed prépare sa réunion avec une période de silence</span>
+            <span class="acc-title">La Fed s'apprête à débattre du bilan de 7 000 milliards de dollars</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">La Réserve fédérale américaine (Fed) est également entrée dans sa période de silence avant la réunion du FOMC prévue les <strong class="highlight-figure">28 et 29 juillet</strong>. Cette période de prudence précède des discussions cruciales sur la politique monétaire, alors que les marchés restent attentifs à la résilience de l'économie face aux chocs récents.</div>
-        </details>
-        
-        <details class="acc-item" style="--cat-couleur:#ef4444">
-          <summary class="acc-summary">
-            
-            <span class="acc-region" title="USA">🇺🇸</span>
-            <span class="acc-pill" style="background:#ef444422;color:#ef4444">Macro</span>
-            <span class="acc-title">Kevin Warsh face au défi de la réduction du bilan de la Fed</span>
-            <span class="acc-chevron">▾</span>
-          </summary>
-          <div class="acc-body">Le nouveau président de la Fed, Kevin Warsh, sera confronté à la tâche ardue de <strong class="highlight-phrase">réduire le bilan de l'institution</strong>, qui s'élève à <strong class="highlight-figure">7 000 milliards de dollars</strong>. Il est prévu qu'il s'entoure de personnalités influentes pour réimaginer l'élaboration de la politique monétaire face à des problèmes complexes.</div>
+          <div class="acc-body">Kevin Warsh, le nouveau président de la Fed, sera confronté à la tâche ardue de réduire le bilan de la Réserve Fédérale, qui atteint <strong class="highlight-figure">7 000 milliards de dollars</strong>. Il s'efforcera d'inverser les effets des achats d'obligations massifs passés. La Fed est désormais entrée dans sa <strong class="highlight-phrase">période de silence</strong> avant sa réunion des 28 et 29 juillet.</div>
         </details>
         
         <details class="acc-item" style="--cat-couleur:#ef4444">
@@ -1481,10 +1491,10 @@
             
             <span class="acc-region" title="Europe">🇪🇺</span>
             <span class="acc-pill" style="background:#ef444422;color:#ef4444">Macro</span>
-            <span class="acc-title">Le Royaume-Uni doit faire face à des choix budgétaires difficiles</span>
+            <span class="acc-title">La BCE devrait maintenir ses taux inchangés en juillet</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">Martin Wolf a conseillé au nouveau Premier ministre britannique, Andy Burnham, de ne pas se méprendre sur la situation fiscale du pays, qui ne bénéficie pas d'un « déjeuner fiscal gratuit ». Il a souligné la nécessité de faire face à des <strong class="highlight-phrase">choix difficiles</strong> pour garantir la stabilité budgétaire, condition essentielle à la réalisation des objectifs gouvernementaux.</div>
+          <div class="acc-body">La Banque Centrale Européenne (BCE) est entrée dans sa période de silence avant sa réunion des <strong class="highlight-figure">22 et 23 juillet</strong>. Elle devrait <strong class="highlight-phrase">laisser ses taux directeurs inchangés</strong> ce jeudi, et un statu quo est également anticipé pour septembre. Cette approche prudente reflète la volonté de la BCE de conserver une certaine flexibilité face à l'environnement économique.</div>
         </details>
         
         <details class="acc-item" style="--cat-couleur:#ef4444">
@@ -1492,10 +1502,10 @@
             
             <span class="acc-region" title="Asie">🌏</span>
             <span class="acc-pill" style="background:#ef444422;color:#ef4444">Macro</span>
-            <span class="acc-title">Le déficit commercial chinois se réduit, vers l'austérité budgétaire</span>
+            <span class="acc-title">La roupie indienne affaiblie par l'investissement privé atone</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">L'économie chinoise montre des signes surprenants, avec un <strong class="highlight-phrase">rétrécissement de son déficit commercial</strong>. Cependant, le pays s'oriente également vers une <strong class="highlight-phrase">austérité budgétaire</strong>, ce qui pourrait indiquer des défis économiques sous-jacents et des ajustements politiques importants à venir.</div>
+          <div class="acc-body">La faiblesse de la roupie indienne est principalement due à un <strong class="highlight-phrase">investissement privé modéré</strong> et à l'incertitude concernant le climat des affaires. Les experts estiment que le problème de la monnaie a été mal diagnostiqué.</div>
         </details>
         
         <details class="acc-item" style="--cat-couleur:#ef4444">
@@ -1503,10 +1513,10 @@
             
             <span class="acc-region" title="Asie">🌏</span>
             <span class="acc-pill" style="background:#ef444422;color:#ef4444">Macro</span>
-            <span class="acc-title">La faiblesse de la roupie indienne révèle des investissements privés timides</span>
+            <span class="acc-title">La balance commerciale chinoise se réduit dans un contexte d'austérité</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">La <strong class="highlight-phrase">faiblesse de la roupie indienne</strong> est attribuée à un niveau <strong class="highlight-phrase">faible d'investissement privé</strong> et à une incertitude persistante concernant le climat des affaires. Cela suggère des défis structurels pour la croissance économique du pays, malgré les efforts pour attirer les capitaux.</div>
+          <div class="acc-body">L'écart commercial de la Chine se réduit, tandis que la <strong class="highlight-phrase">deuxième économie mondiale</strong> s'oriente vers une politique d'<strong class="highlight-phrase">austérité fiscale</strong>. Cette situation pourrait avoir des implications sur la croissance et la demande mondiale.</div>
         </details>
         </div>
     </div>
@@ -1520,21 +1530,21 @@
             
             <span class="acc-region" title="Europe">🇪🇺</span>
             <span class="acc-pill" style="background:#10b98122;color:#10b981">Corporate</span>
-            <span class="acc-title">Prologis lance une offre de 13,5 milliards de livres sterling pour Segro</span>
+            <span class="acc-title">Prologis intensifie son offre pour acquérir Segro</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">Le groupe américain Prologis a soumis une <strong class="highlight-phrase">troisième proposition</strong> pour acquérir le développeur immobilier britannique Segro, valorisant l'entreprise à environ <strong class="highlight-figure">13,5 milliards de livres sterling</strong>, soit <strong class="highlight-figure">993 pence par action</strong>. L'offre inclut une alternative partielle en espèces allant jusqu'à <strong class="highlight-figure">2,7 milliards de livres sterling</strong> et intervient après le rejet des précédentes propositions par le conseil d'administration de Segro, ce qui a incité Prologis à s'adresser <strong class="highlight-phrase">directement aux actionnaires</strong>.</div>
+          <div class="acc-body">Le groupe américain Prologis a soumis une <strong class="highlight-phrase">troisième proposition</strong> pour acquérir le spécialiste immobilier britannique Segro, valorisant l'entreprise à <strong class="highlight-figure">environ 13,5 milliards de livres sterling</strong>, contre 12,6 milliards précédemment. Cette offre comprend un échange d'actions (<strong class="highlight-figure">0,0890 nouvelles actions Prologis</strong>) et une alternative en espèces <strong class="highlight-figure">jusqu'à 2,7 milliards de livres sterling</strong>. Segro a de nouveau rejeté l'offre, estimant sa valeur sous-estimée.</div>
         </details>
         
         <details class="acc-item" style="--cat-couleur:#10b981">
           <summary class="acc-summary">
             
-            <span class="acc-region" title="Asie">🌏</span>
+            <span class="acc-region" title="USA">🇺🇸</span>
             <span class="acc-pill" style="background:#10b98122;color:#10b981">Corporate</span>
-            <span class="acc-title">Samsung Biologics acquiert PolyPeptide pour 1,8 milliard de dollars</span>
+            <span class="acc-title">Trump Media veut faire payer l'accès rapide aux posts</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">Samsung Biologics Co. a conclu un accord pour acquérir le groupe suisse PolyPeptide Group AG pour un montant de <strong class="highlight-figure">1,8 milliard de dollars</strong> en espèces, soit <strong class="highlight-figure">1,46 milliard de francs suisses</strong>. Cette acquisition stratégique vise à <strong class="highlight-phrase">élargir les capacités de fabrication</strong> de Samsung Biologics, renforçant sa position sur le marché des sous-traitants pharmaceutiques.</div>
+          <div class="acc-body">Trump Media & Technology Group envisage de facturer <strong class="highlight-figure">jusqu'à 100 000 dollars par mois</strong> pour un accès rapide aux posts de Donald Trump sur Truth Social. Cette « Truth API » est destinée aux traders et hedge funds, car les messages de l'ex-président peuvent <strong class="highlight-phrase">faire bouger les marchés financiers</strong>, comme une fois le S&P 500 a gagné <strong class="highlight-figure">9,5%</strong>. Wall Street exprime son mécontentement mais certains reconnaissent qu'ils devront payer.</div>
         </details>
         
         <details class="acc-item" style="--cat-couleur:#10b981">
@@ -1542,21 +1552,10 @@
             
             <span class="acc-region" title="Europe">🇪🇺</span>
             <span class="acc-pill" style="background:#10b98122;color:#10b981">Corporate</span>
-            <span class="acc-title">Le propriétaire de Superdrug envisage de reporter son IPO de 30 milliards de dollars</span>
+            <span class="acc-title">Ryanair voit ses bénéfices chuter de plus d'un tiers</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">AS Watson, la société mère de la chaîne de magasins britanniques Superdrug, étudie la possibilité de <strong class="highlight-figure">reporter son introduction en bourse (IPO) de 30 milliards de dollars</strong> à l'année prochaine. Cette décision intervient dans un contexte de prudence sur les marchés et de défis pour les grandes opérations de levée de fonds, en particulier pour les IPO de cette envergure.</div>
-        </details>
-        
-        <details class="acc-item" style="--cat-couleur:#10b981">
-          <summary class="acc-summary">
-            
-            <span class="acc-region" title="Afrique">🌍</span>
-            <span class="acc-pill" style="background:#10b98122;color:#10b981">Corporate</span>
-            <span class="acc-title">Airtel Africa prépare l'IPO de sa division de services mobiles</span>
-            <span class="acc-chevron">▾</span>
-          </summary>
-          <div class="acc-body">Airtel Africa, cotée à Londres, a commencé à recruter des banquiers pour une <strong class="highlight-phrase">introduction en bourse (IPO) de sa division de services mobiles</strong>, estimée à <strong class="highlight-figure">7,5 milliards de livres sterling</strong>. Cette opération vise à valoriser et à potentiellement séparer ses activités de « mobile money », un segment en forte croissance sur le continent africain.</div>
+          <div class="acc-body">La compagnie aérienne à bas coûts Ryanair a annoncé une <strong class="highlight-phrase">chute de ses bénéfices de plus d'un tiers</strong>. Cette performance s'inscrit dans un contexte de défis pour le secteur aérien, malgré une demande de voyages toujours présente. La société publiera ses résultats du premier trimestre aujourd'hui.</div>
         </details>
         
         <details class="acc-item" style="--cat-couleur:#10b981">
@@ -1564,10 +1563,21 @@
             
             <span class="acc-region" title="Global">🌐</span>
             <span class="acc-pill" style="background:#10b98122;color:#10b981">Corporate</span>
-            <span class="acc-title">Le film « The Odyssey » réalise des centaines de millions au box-office</span>
+            <span class="acc-title">AstraZeneca vise 80 milliards de dollars de revenus</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">Le film « The Odyssey » a connu un <strong class="highlight-phrase">succès retentissant</strong> lors de son week-end d'ouverture, générant des <strong class="highlight-phrase">centaines de millions de dollars</strong> au box-office. Ce succès souligne la capacité des grands événements cinématographiques à capter l'attention du public et à générer des revenus significatifs dans l'industrie du divertissement.</div>
+          <div class="acc-body">AstraZeneca s'est fixé un objectif ambitieux de <strong class="highlight-figure">80 milliards de dollars de revenus</strong>, en mettant l'accent sur les <strong class="highlight-phrase">maladies rares</strong>. Cette stratégie vise à diversifier ses sources de revenus et à capitaliser sur des marchés à forte valeur ajoutée. L'entreprise cherche ainsi à renforcer sa position de leader dans le secteur pharmaceutique.</div>
+        </details>
+        
+        <details class="acc-item" style="--cat-couleur:#10b981">
+          <summary class="acc-summary">
+            
+            <span class="acc-region" title="Europe">🇪🇺</span>
+            <span class="acc-pill" style="background:#10b98122;color:#10b981">Corporate</span>
+            <span class="acc-title">Marché IPO britannique : signaux mitigés pour les introductions</span>
+            <span class="acc-chevron">▾</span>
+          </summary>
+          <div class="acc-body">Le marché des introductions en bourse (IPO) au Royaume-Uni envoie des signaux contrastés. AS Watson, propriétaire de Superdrug, envisage de <strong class="highlight-figure">reporter son IPO de 30 milliards de dollars</strong> à l'année prochaine. À l'inverse, Airtel Africa a commencé à recruter des banquiers pour l'IPO de son activité de monnaie mobile, évaluée à <strong class="highlight-figure">7,5 milliards de livres sterling</strong>.</div>
         </details>
         
         <details class="acc-item" style="--cat-couleur:#10b981">
@@ -1575,10 +1585,32 @@
             
             <span class="acc-region" title="Global">🌐</span>
             <span class="acc-pill" style="background:#10b98122;color:#10b981">Corporate</span>
-            <span class="acc-title">Versant signe un accord de 100 millions de dollars pour la Bundesliga</span>
+            <span class="acc-title">BlackRock atteint un record avec 15,3 mille milliards de dollars d'actifs</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">Versant, dirigée par Mark Lazarus, a annoncé un accord de <strong class="highlight-figure">100 millions de dollars</strong> pour les droits de diffusion de la Bundesliga allemande. Cet investissement met en évidence la <strong class="highlight-phrase">confiance des dirigeants des médias</strong> dans la capacité des événements sportifs et en direct à attirer une part croissante des dépenses des consommateurs et des annonceurs.</div>
+          <div class="acc-body">BlackRock, le plus grand gestionnaire d'actifs mondial, a vu ses actifs sous gestion atteindre le <strong class="highlight-figure">chiffre record de 15,3 mille milliards de dollars</strong>. Cette croissance témoigne de la confiance continue des investisseurs dans ses stratégies et produits. Ce jalon renforce la position dominante de BlackRock sur les marchés financiers internationaux.</div>
+        </details>
+        
+        <details class="acc-item" style="--cat-couleur:#10b981">
+          <summary class="acc-summary">
+            
+            <span class="acc-region" title="Global">🌐</span>
+            <span class="acc-pill" style="background:#10b98122;color:#10b981">Corporate</span>
+            <span class="acc-title">Morgan Stanley se distingue dans les accords de dette pour l'IA</span>
+            <span class="acc-chevron">▾</span>
+          </summary>
+          <div class="acc-body">Morgan Stanley est devenu un <strong class="highlight-phrase">architecte majeur</strong> des accords de dette pour les entreprises du secteur de l'intelligence artificielle. La banque d'investissement s'est imposée comme un acteur clé dans le financement de cette industrie en pleine croissance. Elle joue un rôle crucial en facilitant l'accès au capital pour les développeurs et innovateurs de l'IA.</div>
+        </details>
+        
+        <details class="acc-item" style="--cat-couleur:#10b981">
+          <summary class="acc-summary">
+            
+            <span class="acc-region" title="Europe">🇪🇺</span>
+            <span class="acc-pill" style="background:#10b98122;color:#10b981">Corporate</span>
+            <span class="acc-title">Exodus de conseillers chez St James's Place</span>
+            <span class="acc-chevron">▾</span>
+          </summary>
+          <div class="acc-body">La société de gestion de patrimoine St James's Place connaît un <strong class="highlight-phrase">exode de ses conseillers</strong>. Cette situation pourrait avoir des implications sur ses services et sa base de clients. La cause exacte de cet exode n'est pas détaillée.</div>
         </details>
         </div>
     </div>
@@ -1587,37 +1619,26 @@
       <h2 class="tab-title">🤖 Tech & IA</h2>
       
       <div class="acc-list">
+        <details class="acc-item" style="--cat-couleur:#3b82f6">
+          <summary class="acc-summary">
+            
+            <span class="acc-region" title="Global">🌐</span>
+            <span class="acc-pill" style="background:#3b82f622;color:#3b82f6">Marchés</span>
+            <span class="acc-title">Craintes de bulle IA pèsent sur marchés actions américains</span>
+            <span class="acc-chevron">▾</span>
+          </summary>
+          <div class="acc-body">Les marchés actions américains affichent des valorisations et attentes très élevées, avec un CAPE de Robert Shiller à <strong class="highlight-figure">41</strong>, un niveau seulement dépassé en 2001. Malgré des prévisions de croissance des bénéfices du S&P 500 de <strong class="highlight-figure">24%</strong> cette année et <strong class="highlight-figure">17%</strong> en 2027, l'indice stagne, et le secteur des semi-conducteurs montre une <strong class="highlight-phrase">forte volatilité</strong>, signalant une potentielle <strong class="highlight-phrase">bulle liée à l'IA</strong>.</div>
+        </details>
+        
         <details class="acc-item" style="--cat-couleur:#8b5cf6">
           <summary class="acc-summary">
             
-            <span class="acc-region" title="USA">🇺🇸</span>
-            <span class="acc-pill" style="background:#8b5cf622;color:#8b5cf6">Tech</span>
-            <span class="acc-title">Trump Media propose un abonnement à 100 000 dollars pour des posts rapides</span>
-            <span class="acc-chevron">▾</span>
-          </summary>
-          <div class="acc-body">Trump Media & Technology Group a envisagé de facturer les traders et investisseurs <strong class="highlight-figure">jusqu'à 100 000 dollars par mois</strong> pour un accès rapide aux posts de Donald Trump sur Truth Social via une « Truth API ». Ce service est destiné aux <strong class="highlight-phrase">sociétés de trading propriétaires et aux hedge funds</strong> qui cherchent à capitaliser sur les annonces qui <strong class="highlight-phrase">font bouger les marchés</strong>, créant un débat sur l'accès privilégié à l'information.</div>
-        </details>
-        
-        <details class="acc-item" style="--cat-couleur:#f97316">
-          <summary class="acc-summary">
-            
-            <span class="acc-region" title="Global">🌐</span>
-            <span class="acc-pill" style="background:#f9731622;color:#f97316">IA</span>
-            <span class="acc-title">Craintes de bulle de l'IA et volatilité du secteur des semi-conducteurs</span>
-            <span class="acc-chevron">▾</span>
-          </summary>
-          <div class="acc-body">Le marché est marqué par des craintes qu'une <strong class="highlight-phrase">bulle de l'intelligence artificielle</strong> soit en train de se gonfler, entraînant une <strong class="highlight-phrase">volatilité extrême</strong> dans le secteur des semi-conducteurs. Les valorisations sont jugées très élevées, et les attentes de croissance des bénéfices sont ambitieuses, ce qui pourrait rendre les <strong class="highlight-phrase">rendements futurs inférieurs à la moyenne</strong>.</div>
-        </details>
-        
-        <details class="acc-item" style="--cat-couleur:#f97316">
-          <summary class="acc-summary">
-            
             <span class="acc-region" title="Asie">🌏</span>
-            <span class="acc-pill" style="background:#f9731622;color:#f97316">IA</span>
-            <span class="acc-title">Le modèle d'IA chinois Kimi K3 perturbe le marché des semi-conducteurs</span>
+            <span class="acc-pill" style="background:#8b5cf622;color:#8b5cf6">Tech</span>
+            <span class="acc-title">Un nouveau modèle d'IA chinois perturbe le marché des semi-conducteurs</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">Le lancement du modèle d'intelligence artificielle chinois Kimi K3 a déclenché une <strong class="highlight-phrase">déroute sur le marché des actions des semi-conducteurs</strong>. Cet événement a mis en lumière la <strong class="highlight-phrase">sensibilité du secteur</strong> aux avancées technologiques et à la concurrence, provoquant une pression notable sur les marchés asiatiques et mondiaux.</div>
+          <div class="acc-body">La publication du <strong class="highlight-figure">modèle d'IA chinois Kimi K3</strong> a provoqué une déroute des actions de semi-conducteurs, notamment celles de DeepSeek. Cette nouvelle concurrence intense dans le secteur de l'intelligence artificielle a mis la pression sur les entreprises existantes. Le marché asiatique a particulièrement ressenti cet impact, avec des baisses sur les indices clés.</div>
         </details>
         
         <details class="acc-item" style="--cat-couleur:#f97316">
@@ -1625,10 +1646,21 @@
             
             <span class="acc-region" title="Global">🌐</span>
             <span class="acc-pill" style="background:#f9731622;color:#f97316">IA</span>
-            <span class="acc-title">L'entraînement des systèmes d'IA d'entreprise soulève des enjeux de pouvoir</span>
+            <span class="acc-title">L'IA corporative dépendra de la collaboration des employés</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">La création de systèmes d'IA d'entreprise nécessite l'extraction de connaissances des employés, ce qui pose la question de leur <strong class="highlight-phrase">consentement et de leur collaboration active</strong>. Cela pourrait donner lieu à des <strong class="highlight-phrase">rapports de force inédits</strong> sur le lieu de travail, les employés cherchant à comprendre ce qu'ils pourraient gagner ou perdre en participant à cet effort.</div>
+          <div class="acc-body">Le développement des systèmes d'IA sur mesure pour les entreprises nécessite la <strong class="highlight-phrase">connaissance tacite des employés</strong> pour leur entraînement. Cela soulève la question du <strong class="highlight-phrase">consentement et de la collaboration active</strong> des travailleurs. La problématique est de savoir ce que les employés ont à gagner ou à perdre en participant à cette révolution technologique.</div>
+        </details>
+        
+        <details class="acc-item" style="--cat-couleur:#10b981">
+          <summary class="acc-summary">
+            
+            <span class="acc-region" title="Global">🌐</span>
+            <span class="acc-pill" style="background:#10b98122;color:#10b981">Corporate</span>
+            <span class="acc-title">Morgan Stanley se distingue dans les accords de dette pour l'IA</span>
+            <span class="acc-chevron">▾</span>
+          </summary>
+          <div class="acc-body">Morgan Stanley est devenu un <strong class="highlight-phrase">architecte majeur</strong> des accords de dette pour les entreprises du secteur de l'intelligence artificielle. La banque d'investissement s'est imposée comme un acteur clé dans le financement de cette industrie en pleine croissance. Elle joue un rôle crucial en facilitant l'accès au capital pour les développeurs et innovateurs de l'IA.</div>
         </details>
         </div>
     </div>
@@ -1642,131 +1674,10 @@
             
             <span class="acc-region" title="Global">🌐</span>
             <span class="acc-pill" style="background:#f59e0b22;color:#f59e0b">Géopolitique</span>
-            <span class="acc-title">Reprise brutale des hostilités entre les États-Unis et l'Iran</span>
+            <span class="acc-title">Reprise des hostilités US-Iran fait flamber le pétrole</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">Les tensions entre les États-Unis et l'Iran ont connu une <strong class="highlight-phrase">escalade significative</strong> ce week-end, marquant la <strong class="highlight-phrase">fin du fragile cessez-le-feu</strong> signé le mois dernier. Deux militaires américains ont été <strong class="highlight-phrase">tués vendredi</strong> lors de frappes iraniennes en Jordanie, poussant l'Iran à <strong class="highlight-phrase">suspendre officiellement ses engagements</strong> dans l'accord provisoire. Cette reprise des hostilités, avec une <strong class="highlight-phrase">septième nuit consécutive de frappes</strong>, a des répercussions majeures : le détroit d'Hormuz, partiellement rouvert, est de nouveau sous tension, et la <strong class="highlight-phrase">monnaie iranienne a atteint un plus bas historique</strong> face au dollar. Donald Trump a promis de « punir » les responsables, exacerbant les craintes d'un conflit élargi.</div>
-        </details>
-        
-        <details class="acc-item" style="--cat-couleur:#3b82f6">
-          <summary class="acc-summary">
-            
-            <span class="acc-region" title="Global">🌐</span>
-            <span class="acc-pill" style="background:#3b82f622;color:#3b82f6">Marchés</span>
-            <span class="acc-title">Craintes de bulle de l'IA et marché boursier en pleine dualité</span>
-            <span class="acc-chevron">▾</span>
-          </summary>
-          <div class="acc-body">Les marchés boursiers américains sont actuellement caractérisés par une tension entre une <strong class="highlight-phrase">« avidité » pour l'IA</strong> et une <strong class="highlight-phrase">« peur » des valorisations excessives</strong>. L'indice cycliquement ajusté P/E (Cape) de Robert Shiller s'élève à <strong class="highlight-figure">41</strong>, un niveau qui n'a été dépassé qu'une seule fois dans l'histoire, en 2001, ce qui suggère une <strong class="highlight-phrase">surévaluation importante</strong>. Malgré des attentes de croissance des bénéfices du S&P 500 de <strong class="highlight-figure">+24%</strong> cette année et de <strong class="highlight-figure">+17%</strong> en 2027, l'indice a <strong class="highlight-phrase">stagné depuis deux mois</strong> et les secteurs spéculatifs, notamment les semi-conducteurs, affichent une <strong class="highlight-phrase">volatilité extrême</strong>. Cela soulève des inquiétudes quant à une possible <strong class="highlight-phrase">bulle alimentée par le « trade de l'IA »</strong>, avec la perspective que les rendements boursiers des <strong class="highlight-phrase">cinq à dix prochaines années</strong> soient probablement <strong class="highlight-phrase">inférieurs à la moyenne historique</strong>.</div>
-        </details>
-        
-        <details class="acc-item" style="--cat-couleur:#8b5cf6">
-          <summary class="acc-summary">
-            
-            <span class="acc-region" title="USA">🇺🇸</span>
-            <span class="acc-pill" style="background:#8b5cf622;color:#8b5cf6">Tech</span>
-            <span class="acc-title">Trump Media envisage un accès premium aux posts de l'ex-président à 100 000 dollars</span>
-            <span class="acc-chevron">▾</span>
-          </summary>
-          <div class="acc-body">Trump Media & Technology Group (TMTG), la société mère de Truth Social, a engagé des discussions pour vendre un service de données « Truth API » qui offrirait aux traders et investisseurs un <strong class="highlight-phrase">accès ultra-rapide aux publications de Donald Trump</strong>, avec un prix potentiel allant jusqu'à <strong class="highlight-figure">100 000 dollars par mois</strong>. Cette initiative a provoqué un <strong class="highlight-phrase">tolle généralisé à Wall Street</strong>, car les posts de Trump ont la capacité avérée de <strong class="highlight-phrase">faire fluctuer considérablement les marchés financiers mondiaux</strong>. Par exemple, un post sur les tarifs a précédemment déclenché un <strong class="highlight-figure">rallye de 9,5% du S&P 500</strong> en une journée, et des commentaires sur l'Iran ont provoqué une <strong class="highlight-phrase">chute rapide des prix du pétrole</strong>. Les critiques s'inquiètent de la création d'un avantage injuste pour les entreprises capables de payer pour cette information privilégiée, soulevant des questions éthiques et d'équité sur les marchés.</div>
-        </details>
-        
-        <details class="acc-item" style="--cat-couleur:#10b981">
-          <summary class="acc-summary">
-            
-            <span class="acc-region" title="Global">🌐</span>
-            <span class="acc-pill" style="background:#10b98122;color:#10b981">Corporate</span>
-            <span class="acc-title">Apple retrouve son statut de plus grande capitalisation boursière mondiale, devant Nvidia</span>
-            <span class="acc-chevron">▾</span>
-          </summary>
-          <div class="acc-body">Pour la <strong class="highlight-figure">première fois depuis avril 2025</strong>, Apple a de nouveau dépassé Nvidia pour devenir la <strong class="highlight-phrase">société la plus valorisée au monde</strong> en termes de capitalisation boursière. Apple pèse désormais <strong class="highlight-figure">4 880 milliards de dollars</strong>, tandis que Nvidia se positionne juste derrière avec <strong class="highlight-figure">4 860 milliards de dollars</strong>. Ce changement de leadership reflète une <strong class="highlight-phrase">rotation notable des investissements</strong> sur les marchés, les valeurs technologiques à forte croissance étant sous pression à la suite du nouveau modèle d'IA chinois et de la volatilité du secteur des semi-conducteurs. Les investisseurs semblent réévaluer les perspectives de croissance à court terme, se tournant vers des entreprises établies comme Apple.</div>
-        </details>
-        
-        <details class="acc-item" style="--cat-couleur:#10b981">
-          <summary class="acc-summary">
-            
-            <span class="acc-region" title="Europe">🇪🇺</span>
-            <span class="acc-pill" style="background:#10b98122;color:#10b981">Corporate</span>
-            <span class="acc-title">Prologis poursuit son offensive sur Segro avec une offre de 13,5 milliards de livres sterling</span>
-            <span class="acc-chevron">▾</span>
-          </summary>
-          <div class="acc-body">Le groupe immobilier américain Prologis a intensifié ses efforts pour acquérir le développeur britannique de centres logistiques et de données Segro, en soumettant une <strong class="highlight-figure">troisième proposition valorisant la société à environ 13,5 milliards de livres sterling</strong>, soit <strong class="highlight-figure">993 pence par action</strong>. Cette offre représente une augmentation de <strong class="highlight-figure">6%</strong> par rapport à la proposition initiale et inclut une option partielle en espèces allant jusqu'à <strong class="highlight-figure">2,7 milliards de livres sterling</strong>. Le conseil d'administration de Segro ayant <strong class="highlight-phrase">rejeté les offres précédentes</strong>, Prologis a choisi de s'adresser <strong class="highlight-phrase">directement aux actionnaires</strong>, soulignant que les <strong class="highlight-phrase">actifs britanniques sont toujours considérés comme sous-évalués</strong>. Segro, propriétaire de nombreux entrepôts et centres de données, principalement dans le sud-est de l'Angleterre, a défendu son potentiel de croissance en tant qu'entreprise indépendante. Cette tentative de rachat s'inscrit dans une tendance récente d'acquisitions de sociétés britanniques par des investisseurs américains.</div>
-        </details>
-        
-        <details class="acc-item" style="--cat-couleur:#ef4444">
-          <summary class="acc-summary">
-            
-            <span class="acc-region" title="Europe">🇪🇺</span>
-            <span class="acc-pill" style="background:#ef444422;color:#ef4444">Macro</span>
-            <span class="acc-title">Andy Burnham prend les commandes du gouvernement britannique et prépare une refonte de Downing Street</span>
-            <span class="acc-chevron">▾</span>
-          </summary>
-          <div class="acc-body">Andy Burnham prend officiellement la fonction de <strong class="highlight-phrase">Premier ministre du Royaume-Uni</strong> ce jour, succédant à Sir Keir Starmer et devenant le <strong class="highlight-phrase">septième Premier ministre en dix ans</strong>. Il prévoit une <strong class="highlight-figure">refonte majeure du Number 10</strong> pour centraliser le contrôle et réduire sa dépendance envers le Trésor, afin de mieux exécuter ses priorités en matière de décentralisation, de transport, d'eau et de services sociaux. Les <strong class="highlight-figure">100 premiers jours</strong> de son mandat seront cruciaux pour créer un élan, alors qu'il fait face à des défis internes comme la <strong class="highlight-phrase">croissance économique ralentie</strong>, l'<strong class="highlight-phrase">impact du Brexit</strong> et le <strong class="highlight-phrase">décrochage de la classe moyenne</strong>, ainsi qu'à des enjeux internationaux tels que les guerres en Ukraine et en Iran, ou la réglementation de l'IA. La Resolution Foundation estime qu'il dispose d'une marge de manœuvre pour augmenter les investissements en infrastructures de <strong class="highlight-figure">16 milliards de livres sterling</strong> sans enfreindre les règles budgétaires du gouvernement.</div>
-        </details>
-        
-        <details class="acc-item" style="--cat-couleur:#3b82f6">
-          <summary class="acc-summary">
-            
-            <span class="acc-region" title="Global">🌐</span>
-            <span class="acc-pill" style="background:#3b82f622;color:#3b82f6">Marchés</span>
-            <span class="acc-title">Les marchés mondiaux clôturent la semaine dans le rouge, sous la pression de l'IA chinoise et du Moyen-Orient</span>
-            <span class="acc-chevron">▾</span>
-          </summary>
-          <div class="acc-body">Les marchés mondiaux ont globalement terminé la semaine dernière dans une tendance baissière. Cette situation est principalement due à la <strong class="highlight-phrase">double pression exercée par l'escalade des tensions géopolitiques</strong> entre les États-Unis et l'Iran, et la <strong class="highlight-figure">publication du nouveau modèle d'IA chinois Kimi K3</strong>, qui a entraîné une <strong class="highlight-phrase">chute généralisée des actions du secteur des semi-conducteurs</strong>. Les places asiatiques ont été particulièrement touchées, avec un recul du Kospi de <strong class="highlight-figure">-4,2%</strong> et du Taiex de <strong class="highlight-figure">-0,5%</strong> (le Japon étant fermé). En Europe, le Stoxx 600 a perdu <strong class="highlight-figure">-0,5%</strong>, le FTSE MIB <strong class="highlight-figure">-1,0%</strong>, tandis que le FTSE 100 s'est maintenu à un niveau quasi stable grâce à sa composition orientée vers les valeurs défensives et énergétiques. Aux États-Unis, le Nasdaq 100 a baissé de <strong class="highlight-figure">-1,4%</strong> et le S&P 500 de <strong class="highlight-figure">-1%</strong>, marquant une <strong class="highlight-phrase">rotation sectorielle hors de la technologie</strong> et vers les valeurs plus traditionnelles.</div>
-        </details>
-        
-        <details class="acc-item" style="--cat-couleur:#f59e0b">
-          <summary class="acc-summary">
-            
-            <span class="acc-region" title="Global">🌐</span>
-            <span class="acc-pill" style="background:#f59e0b22;color:#f59e0b">Géopolitique</span>
-            <span class="acc-title">Le prix du pétrole s'envole, le Brent au-dessus de 90 dollars le baril</span>
-            <span class="acc-chevron">▾</span>
-          </summary>
-          <div class="acc-body">Le prix du pétrole Brent a connu une <strong class="highlight-phrase">flambée spectaculaire</strong>, atteignant <strong class="highlight-figure">plus de 90 dollars le baril</strong> et enregistrant sa <strong class="highlight-phrase">plus forte hausse hebdomadaire depuis avril</strong> avec <strong class="highlight-figure">+16%</strong>, dont <strong class="highlight-figure">+3%</strong> ce matin. Cette envolée est directement liée à l'<strong class="highlight-phrase">escalade des tensions</strong> entre les États-Unis et l'Iran, suite à la <strong class="highlight-phrase">septième nuit consécutive de frappes</strong> et à la décision de l'Iran de <strong class="highlight-phrase">suspendre ses engagements</strong> dans l'accord provisoire. Cette situation met fin au cadre qui soutenait la réouverture partielle du détroit d'Hormuz depuis juin, alimentant les inquiétudes concernant l'approvisionnement mondial en carburant et entraînant une <strong class="highlight-phrase">dépréciation record de la monnaie iranienne</strong>.</div>
-        </details>
-        
-        <details class="acc-item" style="--cat-couleur:#10b981">
-          <summary class="acc-summary">
-            
-            <span class="acc-region" title="Global">🌐</span>
-            <span class="acc-pill" style="background:#10b98122;color:#10b981">Corporate</span>
-            <span class="acc-title">L'Espagne remporte la Coupe du Monde et 50 millions de dollars de récompense</span>
-            <span class="acc-chevron">▾</span>
-          </summary>
-          <div class="acc-body">L'équipe d'Espagne de football a remporté la Coupe du Monde, s'adjugeant un prix de <strong class="highlight-figure">50 millions de dollars</strong>, soit l'équivalent de <strong class="highlight-figure">43,41 millions d'euros</strong>. Ce montant est <strong class="highlight-figure">8 millions d'euros supérieur</strong> à celui reçu par l'Argentine lors de sa victoire en 2022. En comparaison, l'Argentine avait touché <strong class="highlight-figure">28,65 millions d'euros</strong> et la France, finaliste, avait reçu <strong class="highlight-figure">23,43 millions d'euros</strong>. Cette victoire représente non seulement un prestige sportif mais aussi une manne financière significative pour la fédération nationale.</div>
-        </details>
-        
-        <details class="acc-item" style="--cat-couleur:#10b981">
-          <summary class="acc-summary">
-            
-            <span class="acc-region" title="Asie">🌏</span>
-            <span class="acc-pill" style="background:#10b98122;color:#10b981">Corporate</span>
-            <span class="acc-title">Samsung Biologics va acquérir PolyPeptide Group pour 1,8 milliard de dollars</span>
-            <span class="acc-chevron">▾</span>
-          </summary>
-          <div class="acc-body">Samsung Biologics Co. a annoncé son intention d'acquérir l'entreprise suisse PolyPeptide Group AG par le biais d'une transaction entièrement en espèces, valorisant la société pharmaceutique sous-traitante à environ <strong class="highlight-figure">1,46 milliard de francs suisses</strong>, soit <strong class="highlight-figure">1,8 milliard de dollars</strong>. Cette acquisition vise à <strong class="highlight-phrase">renforcer et étendre les capacités de fabrication</strong> de Samsung Biologics, particulièrement dans le domaine des peptides, un segment stratégique pour la production de médicaments. L'opération s'inscrit dans la stratégie de croissance de l'entreprise pour diversifier son offre et sa présence mondiale sur le marché de la fabrication de médicaments pour compte d'autrui (CDMO).</div>
-        </details>
-        
-        <details class="acc-item" style="--cat-couleur:#10b981">
-          <summary class="acc-summary">
-            
-            <span class="acc-region" title="Europe">🇪🇺</span>
-            <span class="acc-pill" style="background:#10b98122;color:#10b981">Corporate</span>
-            <span class="acc-title">AS Watson envisage un report de son IPO de 30 milliards de dollars à l'année prochaine</span>
-            <span class="acc-chevron">▾</span>
-          </summary>
-          <div class="acc-body">AS Watson, le propriétaire de la célèbre chaîne britannique Superdrug, envisage de <strong class="highlight-figure">reporter son introduction en bourse (IPO) potentielle de 30 milliards de dollars</strong> à l'année prochaine. Cette décision reflète une certaine prudence face aux conditions actuelles du marché et une évaluation des perspectives de valorisation. Une IPO de cette ampleur est soumise à des conditions de marché optimales pour maximiser l'intérêt des investisseurs, et le report suggère une attente d'un environnement plus favorable.</div>
-        </details>
-        
-        <details class="acc-item" style="--cat-couleur:#10b981">
-          <summary class="acc-summary">
-            
-            <span class="acc-region" title="Afrique">🌍</span>
-            <span class="acc-pill" style="background:#10b98122;color:#10b981">Corporate</span>
-            <span class="acc-title">Airtel Africa initie les démarches pour l'IPO de sa branche de services mobiles de 7,5 milliards de livres sterling</span>
-            <span class="acc-chevron">▾</span>
-          </summary>
-          <div class="acc-body">Airtel Africa, une entreprise cotée à Londres, a entamé le processus de recrutement de banquiers en vue d'une <strong class="highlight-phrase">introduction en bourse (IPO) de sa branche de services mobiles</strong>, dont la valeur est estimée à <strong class="highlight-figure">7,5 milliards de livres sterling</strong>. Cette opération stratégique vise à capitaliser sur la forte croissance des services de paiement mobile et autres services financiers sur le continent africain. L'IPO permettrait de libérer de la valeur de cette unité commerciale distincte et potentiellement d'attirer de nouveaux investisseurs spécialisés dans la technologie financière et les marchés émergents.</div>
+          <div class="acc-body">Le cessez-le-feu provisoire entre les États-Unis et l'Iran a été brisé par une <strong class="highlight-phrase">septième nuit consécutive de frappes</strong>, entraînant la mort tragique de <strong class="highlight-phrase">deux militaires américains</strong> en Jordanie. En réponse, l'Iran a officiellement <strong class="highlight-phrase">suspendu ses engagements</strong> dans l'accord de juin qui permettait une réouverture partielle du <strong class="highlight-phrase">détroit d'Hormuz</strong>. Cette escalade a immédiatement propulsé le prix du baril de Brent à <strong class="highlight-figure">plus de 90 dollars</strong>, enregistrant sa <strong class="highlight-figure">plus forte hausse hebdomadaire de 16%</strong> depuis avril et poursuivant sa progression de <strong class="highlight-figure">3%</strong> ce matin. Cette situation intensifie les craintes d'un <strong class="highlight-phrase">choc pétrolier mondial</strong> et met en évidence la <strong class="highlight-phrase">fragilité persistante de la stabilité géopolitique</strong> au Moyen-Orient. La monnaie iranienne, le rial, a également chuté à un <strong class="highlight-phrase">plus bas historique</strong> face au dollar.</div>
         </details>
         
         <details class="acc-item" style="--cat-couleur:#10b981">
@@ -1774,10 +1685,65 @@
             
             <span class="acc-region" title="USA">🇺🇸</span>
             <span class="acc-pill" style="background:#10b98122;color:#10b981">Corporate</span>
-            <span class="acc-title">Le film « The Odyssey » réalise un démarrage record au box-office</span>
+            <span class="acc-title">Trump Media veut faire payer l'accès rapide aux posts</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">Le film « The Odyssey » a connu un <strong class="highlight-phrase">succès phénoménal</strong> dès son week-end d'ouverture, générant des <strong class="highlight-phrase">centaines de millions de dollars</strong> au box-office. Ce résultat impressionnant confirme l'attrait du public pour les productions cinématographiques à grand spectacle et souligne la capacité de l'industrie du cinéma à générer des revenus substantiels. Ce succès est particulièrement notable dans un contexte de fragmentation culturelle, où les événements en direct et les spectacles à grande échelle attirent toujours un large public.</div>
+          <div class="acc-body">Trump Media & Technology Group envisage de facturer <strong class="highlight-figure">jusqu'à 100 000 dollars par mois</strong> pour un accès ultra-rapide aux posts de Donald Trump sur sa plateforme Truth Social. Ce service, appelé « Truth API », vise les traders propriétaires et les hedge funds, car les déclarations de l'ex-président sont réputées <strong class="highlight-phrase">faire bouger les marchés financiers</strong> en quelques millisecondes. Par exemple, un post de Trump avait fait bondir le S&P 500 de <strong class="highlight-figure">9,5%</strong> en une journée après l'annonce d'une pause tarifaire, et un autre avait entraîné une forte baisse des prix du pétrole. Cette proposition a suscité un <strong class="highlight-phrase">fort désaccord à Wall Street</strong>, bien que certains reconnaissent qu'ils devront s'y conformer pour ne pas être désavantagés.</div>
+        </details>
+        
+        <details class="acc-item" style="--cat-couleur:#10b981">
+          <summary class="acc-summary">
+            
+            <span class="acc-region" title="Europe">🇪🇺</span>
+            <span class="acc-pill" style="background:#10b98122;color:#10b981">Corporate</span>
+            <span class="acc-title">Prologis intensifie son offre pour acquérir Segro</span>
+            <span class="acc-chevron">▾</span>
+          </summary>
+          <div class="acc-body">Le géant américain de l'immobilier Prologis a soumis une <strong class="highlight-phrase">troisième proposition d'acquisition</strong> pour le groupe britannique Segro, valorisant l'entreprise à <strong class="highlight-figure">environ 13,5 milliards de livres sterling</strong>, en nette hausse par rapport à l'offre précédente de 12,6 milliards. L'offre combine un échange d'actions, proposant <strong class="highlight-figure">0,0890 nouvelles actions Prologis</strong> pour chaque action Segro, et une option en espèces pouvant atteindre <strong class="highlight-figure">2,7 milliards de livres sterling</strong> à un prix fixe de <strong class="highlight-figure">1 000 pence par action Segro</strong>. Le conseil d'administration de Segro a une nouvelle fois rejeté l'offre, affirmant que l'entreprise est <strong class="highlight-phrase">sous-évaluée</strong> et que ses perspectives de croissance en tant qu'entité indépendante sont solides, ce qui alimente le débat sur la <strong class="highlight-phrase">sous-évaluation des actifs britanniques</strong>.</div>
+        </details>
+        
+        <details class="acc-item" style="--cat-couleur:#3b82f6">
+          <summary class="acc-summary">
+            
+            <span class="acc-region" title="Global">🌐</span>
+            <span class="acc-pill" style="background:#3b82f622;color:#3b82f6">Marchés</span>
+            <span class="acc-title">Craintes de bulle IA pèsent sur marchés actions américains</span>
+            <span class="acc-chevron">▾</span>
+          </summary>
+          <div class="acc-body">Les marchés actions américains semblent pris entre l'avidité et la peur, avec des valorisations et des attentes extrêmement élevées. Le ratio CAPE de Robert Shiller, ajusté cycliquement, s'établit à <strong class="highlight-figure">41</strong>, un niveau qui n'a été dépassé qu'une seule fois dans l'histoire, en 2001. Le rendement excédentaire du CAPE, qui mesure le rendement des bénéfices ajusté aux taux d'intérêt, est à <strong class="highlight-figure">1,4%</strong>, un de ses niveaux les plus bas historiques. Malgré cela, les marchés anticipent une croissance des bénéfices du S&P 500 de <strong class="highlight-figure">24%</strong> cette année et de <strong class="highlight-figure">17%</strong> supplémentaires en 2027. Cependant, l'indice S&P 500 a stagné ces deux derniers mois et le secteur des semi-conducteurs, fortement lié à l'IA, connaît une <strong class="highlight-phrase">volatilité considérable</strong>, ce qui alimente les craintes d'une <strong class="highlight-phrase">bulle spéculative autour de l'IA</strong> qui pourrait emporter des secteurs variés, des semi-conducteurs aux banques.</div>
+        </details>
+        
+        <details class="acc-item" style="--cat-couleur:#ef4444">
+          <summary class="acc-summary">
+            
+            <span class="acc-region" title="Global">🌐</span>
+            <span class="acc-pill" style="background:#ef444422;color:#ef4444">Macro</span>
+            <span class="acc-title">Banques centrales entrent en période de silence avant réunions cruciales</span>
+            <span class="acc-chevron">▾</span>
+          </summary>
+          <div class="acc-body">La <strong class="highlight-phrase">Banque Centrale Européenne (BCE)</strong> et la <strong class="highlight-phrase">Réserve Fédérale (Fed)</strong> sont toutes deux entrées dans leur période de silence réglementaire avant leurs réunions respectives des 22-23 juillet et 28-29 juillet. La BCE devrait <strong class="highlight-phrase">maintenir ses taux directeurs inchangés</strong> ce jeudi, une décision qui pourrait être reconduite en septembre, signalant une approche prudente face aux incertitudes économiques persistantes. La Fed, sous la présidence de Kevin Warsh, aura quant à elle la tâche complexe de réévaluer sa politique monétaire et la réduction de son bilan de <strong class="highlight-figure">7 000 milliards de dollars</strong>, tandis que certains observateurs anticipent une possible <strong class="highlight-phrase">volatilité des marchés</strong> en raison de la communication mesurée de son président. Ces réunions sont cruciales pour l'orientation des politiques monétaires mondiales.</div>
+        </details>
+        
+        <details class="acc-item" style="--cat-couleur:#ef4444">
+          <summary class="acc-summary">
+            
+            <span class="acc-region" title="Europe">🇪🇺</span>
+            <span class="acc-pill" style="background:#ef444422;color:#ef4444">Macro</span>
+            <span class="acc-title">Andy Burnham prend les rênes du Royaume-Uni avec des défis budgétaires</span>
+            <span class="acc-chevron">▾</span>
+          </summary>
+          <div class="acc-body">Andy Burnham est officiellement devenu Premier ministre britannique aujourd'hui, succédant à K. Starmer. Il prévoit une <strong class="highlight-phrase">refonte du bureau du Premier ministre</strong> pour renforcer le contrôle sur les décisions de dépenses publiques et s'apprête à dévoiler une série d'annonces politiques sur la décentralisation, les transports, l'eau et les services sociaux. Selon la Resolution Foundation, il pourrait augmenter les investissements dans les infrastructures de <strong class="highlight-figure">16 milliards de livres sterling</strong> sans rompre les règles budgétaires du gouvernement. Cependant, le pays fait face à une <strong class="highlight-phrase">croissance économique au ralenti</strong>, aux impacts du Brexit et à la pression sur la classe moyenne. Martin Wolf, chroniqueur du FT, a d'ailleurs mis en garde Burnham contre l'idée d'un « déjeuner fiscal gratuit », soulignant que la <strong class="highlight-phrase">stabilité fiscale</strong> est une condition nécessaire pour atteindre ses objectifs.</div>
+        </details>
+        
+        <details class="acc-item" style="--cat-couleur:#3b82f6">
+          <summary class="acc-summary">
+            
+            <span class="acc-region" title="Global">🌐</span>
+            <span class="acc-pill" style="background:#3b82f622;color:#3b82f6">Marchés</span>
+            <span class="acc-title">Marchés actions mondiaux sous pression, avec une rotation sectorielle</span>
+            <span class="acc-chevron">▾</span>
+          </summary>
+          <div class="acc-body">Les marchés actions mondiaux ont connu une semaine difficile, clôturant majoritairement dans le rouge. En Asie, le Kospi a chuté de <strong class="highlight-figure">4,2%</strong> et le Taiex de <strong class="highlight-figure">0,5%</strong>, notamment suite à la publication du modèle d'IA chinois Kimi K3, qui a impacté le secteur des semi-conducteurs. En Europe, le Stoxx 600 a reculé de <strong class="highlight-figure">0,5%</strong>, tandis que le FTSE 100 est resté quasiment stable, soutenu par sa composition en <strong class="highlight-phrase">valeurs défensives et énergétiques</strong>. Aux États-Unis, le Nasdaq 100 a mené la baisse avec <strong class="highlight-figure">-1,4%</strong> et le S&P 500 a reculé de <strong class="highlight-figure">-1%</strong>, reflétant une <strong class="highlight-phrase">rotation sectorielle</strong> hors des technologies vers les secteurs de l'énergie et des valeurs défensives.</div>
         </details>
         
         <details class="acc-item" style="--cat-couleur:#10b981">
@@ -1785,32 +1751,32 @@
             
             <span class="acc-region" title="Global">🌐</span>
             <span class="acc-pill" style="background:#10b98122;color:#10b981">Corporate</span>
-            <span class="acc-title">Versant, dirigé par Mark Lazarus, s'offre les droits de diffusion de la Bundesliga allemande pour 100 millions de dollars</span>
+            <span class="acc-title">BlackRock atteint un record avec 15,3 mille milliards de dollars d'actifs</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">Versant, la société dirigée par le grand exécutif des médias sportifs Mark Lazarus, a annoncé un accord de <strong class="highlight-figure">100 millions de dollars</strong> pour acquérir les droits de diffusion de la Bundesliga allemande. Cet accord renforce la conviction que les <strong class="highlight-phrase">événements sportifs et en direct</strong> continueront d'attirer une part croissante des dépenses des consommateurs et des budgets marketing. Selon Lazarus, les événements sportifs compétitifs et à forts enjeux sont la <strong class="highlight-phrase">« dernière meilleure chance »</strong> de l'industrie télévisuelle américaine face à la fragmentation des médias par le streaming, et ils sont appelés à occuper une place de plus en plus importante dans nos vies.</div>
+          <div class="acc-body">BlackRock, le plus grand gestionnaire d'actifs au monde, a vu ses actifs sous gestion grimper à un <strong class="highlight-figure">niveau record de 15,3 mille milliards de dollars</strong>. Cette croissance impressionnante témoigne de la confiance continue des investisseurs et de la performance de ses fonds dans un environnement de marché complexe. Le gestionnaire d'actifs continue de dominer l'industrie, renforçant sa position stratégique et son influence sur les marchés financiers mondiaux. Cette augmentation substantielle conforte BlackRock dans son rôle de leader incontesté.</div>
         </details>
         
-        <details class="acc-item" style="--cat-couleur:#ef4444">
+        <details class="acc-item" style="--cat-couleur:#10b981">
           <summary class="acc-summary">
             
-            <span class="acc-region" title="Europe">🇪🇺</span>
-            <span class="acc-pill" style="background:#ef444422;color:#ef4444">Macro</span>
-            <span class="acc-title">La faiblesse de la roupie indienne reflète un manque d'investissement privé et d'incertitude économique</span>
+            <span class="acc-region" title="Global">🌐</span>
+            <span class="acc-pill" style="background:#10b98122;color:#10b981">Corporate</span>
+            <span class="acc-title">Morgan Stanley se distingue dans les accords de dette pour l'IA</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">La <strong class="highlight-phrase">faiblesse actuelle de la roupie indienne</strong> est principalement attribuée à un <strong class="highlight-phrase">investissement privé insuffisant</strong> et à une <strong class="highlight-phrase">incertitude persistante</strong> concernant le climat des affaires dans le pays. Cette situation met en évidence les défis structurels auxquels l'Inde est confrontée pour stimuler sa croissance économique. Les politiques publiques devront probablement se concentrer sur la création d'un environnement plus stable et attrayant pour les investisseurs afin de contrer cette tendance. Les économistes suggèrent une mauvaise interprétation des causes de cette faiblesse monétaire, insistant sur l'importance des facteurs internes plutôt que sur la conjoncture extérieure.</div>
+          <div class="acc-body">Morgan Stanley s'est imposé comme le <strong class="highlight-phrase">principal architecte des accords de dette</strong> pour les entreprises du secteur de l'intelligence artificielle. La banque d'investissement joue un rôle crucial en structurant le financement des sociétés innovantes dans ce domaine en pleine expansion. Ce positionnement stratégique lui permet de capitaliser sur la croissance rapide de l'IA, en fournissant des solutions de capital adaptées aux besoins spécifiques de ces entreprises. La banque démontre ainsi sa capacité à s'adapter aux nouvelles tendances du marché.</div>
         </details>
         
-        <details class="acc-item" style="--cat-couleur:#ef4444">
+        <details class="acc-item" style="--cat-couleur:#f97316">
           <summary class="acc-summary">
             
-            <span class="acc-region" title="Europe">🇪🇺</span>
-            <span class="acc-pill" style="background:#ef444422;color:#ef4444">Macro</span>
-            <span class="acc-title">L'Europe doit adopter la climatisation face aux étés de plus en plus chauds</span>
+            <span class="acc-region" title="Global">🌐</span>
+            <span class="acc-pill" style="background:#f9731622;color:#f97316">IA</span>
+            <span class="acc-title">L'entraînement de l'IA corporative requiert la collaboration des employés</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">Face à la multiplication des étés <strong class="highlight-phrase">plus chauds et plus fréquents</strong>, l'Europe est appelée à <strong class="highlight-phrase">adopter massivement la climatisation</strong>. Cette mesure est jugée nécessaire pour <strong class="highlight-phrase">préserver la productivité</strong> des travailleurs et <strong class="highlight-phrase">éviter des pertes de vies humaines</strong> liées aux vagues de chaleur. La climatisation, autrefois considérée comme un luxe ou une solution marginale, devient une nécessité infrastructurelle et économique pour s'adapter aux changements climatiques et maintenir la performance économique de la région.</div>
+          <div class="acc-body">Le développement de systèmes d'intelligence artificielle personnalisés pour les entreprises dépend crucialement des <strong class="highlight-phrase">connaissances internes des employés</strong>. Pour que ces systèmes soient efficaces, il est impératif d'obtenir le <strong class="highlight-phrase">consentement et la collaboration active</strong> du personnel pour l'entraînement des modèles d'IA. Cette dynamique soulève des questions importantes sur les intérêts des employés : quels sont les avantages et les inconvénients potentiels pour eux de participer à cette transformation, et comment leurs contributions seront-elles valorisées ou protégées dans ce nouveau paysage professionnel ?</div>
         </details>
         
         <details class="acc-item" style="--cat-couleur:#10b981">
@@ -1818,10 +1784,10 @@
             
             <span class="acc-region" title="Europe">🇪🇺</span>
             <span class="acc-pill" style="background:#10b98122;color:#10b981">Corporate</span>
-            <span class="acc-title">Un juge fédéral tranchera mercredi sur l'acquisition de Warner Bros. Discovery par Paramount</span>
+            <span class="acc-title">Ryanair voit ses bénéfices chuter de plus d'un tiers</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">Un juge fédéral doit décider ce <strong class="highlight-phrase">mercredi</strong> s'il émet une ordonnance restrictive temporaire pour empêcher Paramount de finaliser son acquisition de Warner Bros. Discovery. Paramount est soumise à l'obligation de verser environ <strong class="highlight-figure">625 millions de dollars</strong> par trimestre à ses actionnaires d'ici fin septembre, ce qui rend cette décision cruciale. L'entreprise a déjà argumenté que la définition des marchés concurrentiels par les États est erronée. Même sans cette ordonnance, les États chercheront une injonction préliminaire qui pourrait <strong class="highlight-phrase">bloquer la fusion</strong>, ce qui aurait des implications financières importantes pour Paramount.</div>
+          <div class="acc-body">La compagnie aérienne irlandaise à bas coûts Ryanair a annoncé une <strong class="highlight-phrase">chute de ses bénéfices de plus d'un tiers</strong> pour le premier trimestre. Cette baisse est due à divers facteurs incluant la hausse des coûts du carburant et l'intensification de la concurrence sur le marché européen. Les résultats du premier trimestre de Ryanair sont attendus aujourd'hui, offrant une visibilité plus détaillée sur les performances et les perspectives de la compagnie. La direction se prépare à des défis continus dans un secteur sous pression.</div>
         </details>
         </div>
     </div>
@@ -1833,7 +1799,7 @@
         <details class="agenda-date-group" open>
           <summary class="agenda-date-summary">
             <span class="agenda-date-badge">🗓️ 20/07</span>
-            <span class="agenda-date-count">7 événements</span>
+            <span class="agenda-date-count">9 événements</span>
             <span class="agenda-date-chevron">▾</span>
           </summary>
           <div class="agenda-date-content">
@@ -1880,13 +1846,25 @@
               <span class="tl-title">Résultats Q2 Epiroc A.</span>
             </div>
             
+            <div class="agenda-event-row" style="--cat-couleur:#ef4444">
+              <span class="acc-region" title="Europe">🇪🇺</span>
+              <span class="acc-pill" style="background:#ef444422;color:#ef4444;flex-shrink:0;">Macro</span>
+              <span class="tl-title">Statistiques fonds investissement zone euro</span>
+            </div>
+            
+            <div class="agenda-event-row" style="--cat-couleur:#ef4444">
+              <span class="acc-region" title="Europe">🇪🇺</span>
+              <span class="acc-pill" style="background:#ef444422;color:#ef4444;flex-shrink:0;">Macro</span>
+              <span class="tl-title">Enquête accès financement entreprises</span>
+            </div>
+            
           </div>
         </details>
         
         <details class="agenda-date-group" >
           <summary class="agenda-date-summary">
             <span class="agenda-date-badge">🗓️ 21/07</span>
-            <span class="agenda-date-count">22 événements</span>
+            <span class="agenda-date-count">23 événements</span>
             <span class="agenda-date-chevron">▾</span>
           </summary>
           <div class="agenda-date-content">
@@ -2023,13 +2001,19 @@
               <span class="tl-title">Résultats trimestriels General Motors</span>
             </div>
             
+            <div class="agenda-event-row" style="--cat-couleur:#10b981">
+              <span class="acc-region" title="USA">🇺🇸</span>
+              <span class="acc-pill" style="background:#10b98122;color:#10b981;flex-shrink:0;">Corporate</span>
+              <span class="tl-title">Résultats Alphabet Inc.</span>
+            </div>
+            
           </div>
         </details>
         
         <details class="agenda-date-group" >
           <summary class="agenda-date-summary">
             <span class="agenda-date-badge">🗓️ 22/07</span>
-            <span class="agenda-date-count">40 événements</span>
+            <span class="agenda-date-count">45 événements</span>
             <span class="agenda-date-chevron">▾</span>
           </summary>
           <div class="agenda-date-content">
@@ -2274,13 +2258,43 @@
               <span class="tl-title">Date limite offre Prologis/Segro</span>
             </div>
             
+            <div class="agenda-event-row" style="--cat-couleur:#10b981">
+              <span class="acc-region" title="USA">🇺🇸</span>
+              <span class="acc-pill" style="background:#10b98122;color:#10b981;flex-shrink:0;">Corporate</span>
+              <span class="tl-title">Résultats Tesla Q2</span>
+            </div>
+            
+            <div class="agenda-event-row" style="--cat-couleur:#10b981">
+              <span class="acc-region" title="USA">🇺🇸</span>
+              <span class="acc-pill" style="background:#10b98122;color:#10b981;flex-shrink:0;">Corporate</span>
+              <span class="tl-title">Résultats Freeport-McMoRan</span>
+            </div>
+            
+            <div class="agenda-event-row" style="--cat-couleur:#10b981">
+              <span class="acc-region" title="USA">🇺🇸</span>
+              <span class="acc-pill" style="background:#10b98122;color:#10b981;flex-shrink:0;">Corporate</span>
+              <span class="tl-title">Résultats GE Vernova</span>
+            </div>
+            
+            <div class="agenda-event-row" style="--cat-couleur:#10b981">
+              <span class="acc-region" title="Asie">🌏</span>
+              <span class="acc-pill" style="background:#10b98122;color:#10b981;flex-shrink:0;">Corporate</span>
+              <span class="tl-title">Résultats SK Hynix</span>
+            </div>
+            
+            <div class="agenda-event-row" style="--cat-couleur:#10b981">
+              <span class="acc-region" title="USA">🇺🇸</span>
+              <span class="acc-pill" style="background:#10b98122;color:#10b981;flex-shrink:0;">Corporate</span>
+              <span class="tl-title">Résultats TEConnectivity</span>
+            </div>
+            
           </div>
         </details>
         
         <details class="agenda-date-group" >
           <summary class="agenda-date-summary">
             <span class="agenda-date-badge">🗓️ 23/07</span>
-            <span class="agenda-date-count">51 événements</span>
+            <span class="agenda-date-count">55 événements</span>
             <span class="agenda-date-chevron">▾</span>
           </summary>
           <div class="agenda-date-content">
@@ -2591,13 +2605,37 @@
               <span class="tl-title">Résultats S1 Getlink SE</span>
             </div>
             
+            <div class="agenda-event-row" style="--cat-couleur:#10b981">
+              <span class="acc-region" title="USA">🇺🇸</span>
+              <span class="acc-pill" style="background:#10b98122;color:#10b981;flex-shrink:0;">Corporate</span>
+              <span class="tl-title">Résultats American Airlines Group</span>
+            </div>
+            
+            <div class="agenda-event-row" style="--cat-couleur:#10b981">
+              <span class="acc-region" title="USA">🇺🇸</span>
+              <span class="acc-pill" style="background:#10b98122;color:#10b981;flex-shrink:0;">Corporate</span>
+              <span class="tl-title">Résultats RTX Corporation</span>
+            </div>
+            
+            <div class="agenda-event-row" style="--cat-couleur:#10b981">
+              <span class="acc-region" title="USA">🇺🇸</span>
+              <span class="acc-pill" style="background:#10b98122;color:#10b981;flex-shrink:0;">Corporate</span>
+              <span class="tl-title">Résultats Honeywell International</span>
+            </div>
+            
+            <div class="agenda-event-row" style="--cat-couleur:#10b981">
+              <span class="acc-region" title="USA">🇺🇸</span>
+              <span class="acc-pill" style="background:#10b98122;color:#10b981;flex-shrink:0;">Corporate</span>
+              <span class="tl-title">Résultats Newmont Corporation</span>
+            </div>
+            
           </div>
         </details>
         
         <details class="agenda-date-group" >
           <summary class="agenda-date-summary">
             <span class="agenda-date-badge">🗓️ 24/07</span>
-            <span class="agenda-date-count">4 événements</span>
+            <span class="agenda-date-count">5 événements</span>
             <span class="agenda-date-chevron">▾</span>
           </summary>
           <div class="agenda-date-content">
@@ -2626,6 +2664,12 @@
               <span class="tl-title">PMI Flash S&P Global Juillet</span>
             </div>
             
+            <div class="agenda-event-row" style="--cat-couleur:#10b981">
+              <span class="acc-region" title="USA">🇺🇸</span>
+              <span class="acc-pill" style="background:#10b98122;color:#10b981;flex-shrink:0;">Corporate</span>
+              <span class="tl-title">Résultats American Express Company</span>
+            </div>
+            
           </div>
         </details>
         
@@ -2649,7 +2693,7 @@
         <details class="agenda-date-group" >
           <summary class="agenda-date-summary">
             <span class="agenda-date-badge">🗓️ 27/07</span>
-            <span class="agenda-date-count">3 événements</span>
+            <span class="agenda-date-count">4 événements</span>
             <span class="agenda-date-chevron">▾</span>
           </summary>
           <div class="agenda-date-content">
@@ -2672,13 +2716,19 @@
               <span class="tl-title">Commandes biens durables juin</span>
             </div>
             
+            <div class="agenda-event-row" style="--cat-couleur:#10b981">
+              <span class="acc-region" title="USA">🇺🇸</span>
+              <span class="acc-pill" style="background:#10b98122;color:#10b981;flex-shrink:0;">Corporate</span>
+              <span class="tl-title">Résultats Cadence Design Systems</span>
+            </div>
+            
           </div>
         </details>
         
         <details class="agenda-date-group" >
           <summary class="agenda-date-summary">
             <span class="agenda-date-badge">🗓️ 28/07</span>
-            <span class="agenda-date-count">17 événements</span>
+            <span class="agenda-date-count">27 événements</span>
             <span class="agenda-date-chevron">▾</span>
           </summary>
           <div class="agenda-date-content">
@@ -2785,13 +2835,73 @@
               <span class="tl-title">Début Réunion FOMC</span>
             </div>
             
+            <div class="agenda-event-row" style="--cat-couleur:#10b981">
+              <span class="acc-region" title="USA">🇺🇸</span>
+              <span class="acc-pill" style="background:#10b98122;color:#10b981;flex-shrink:0;">Corporate</span>
+              <span class="tl-title">Résultats Corning Incorporated</span>
+            </div>
+            
+            <div class="agenda-event-row" style="--cat-couleur:#10b981">
+              <span class="acc-region" title="USA">🇺🇸</span>
+              <span class="acc-pill" style="background:#10b98122;color:#10b981;flex-shrink:0;">Corporate</span>
+              <span class="tl-title">Résultats KLA Corporation</span>
+            </div>
+            
+            <div class="agenda-event-row" style="--cat-couleur:#10b981">
+              <span class="acc-region" title="USA">🇺🇸</span>
+              <span class="acc-pill" style="background:#10b98122;color:#10b981;flex-shrink:0;">Corporate</span>
+              <span class="tl-title">Résultats Bloom Energy</span>
+            </div>
+            
+            <div class="agenda-event-row" style="--cat-couleur:#10b981">
+              <span class="acc-region" title="USA">🇺🇸</span>
+              <span class="acc-pill" style="background:#10b98122;color:#10b981;flex-shrink:0;">Corporate</span>
+              <span class="tl-title">Résultats Centene Corporation</span>
+            </div>
+            
+            <div class="agenda-event-row" style="--cat-couleur:#10b981">
+              <span class="acc-region" title="USA">🇺🇸</span>
+              <span class="acc-pill" style="background:#10b98122;color:#10b981;flex-shrink:0;">Corporate</span>
+              <span class="tl-title">Résultats Boeing Company</span>
+            </div>
+            
+            <div class="agenda-event-row" style="--cat-couleur:#10b981">
+              <span class="acc-region" title="USA">🇺🇸</span>
+              <span class="acc-pill" style="background:#10b98122;color:#10b981;flex-shrink:0;">Corporate</span>
+              <span class="tl-title">Résultats Teradyne</span>
+            </div>
+            
+            <div class="agenda-event-row" style="--cat-couleur:#10b981">
+              <span class="acc-region" title="USA">🇺🇸</span>
+              <span class="acc-pill" style="background:#10b98122;color:#10b981;flex-shrink:0;">Corporate</span>
+              <span class="tl-title">Résultats Seagate Technology Holdings</span>
+            </div>
+            
+            <div class="agenda-event-row" style="--cat-couleur:#10b981">
+              <span class="acc-region" title="USA">🇺🇸</span>
+              <span class="acc-pill" style="background:#10b98122;color:#10b981;flex-shrink:0;">Corporate</span>
+              <span class="tl-title">Résultats NXP Semiconductors</span>
+            </div>
+            
+            <div class="agenda-event-row" style="--cat-couleur:#10b981">
+              <span class="acc-region" title="USA">🇺🇸</span>
+              <span class="acc-pill" style="background:#10b98122;color:#10b981;flex-shrink:0;">Corporate</span>
+              <span class="tl-title">Résultats United Parcel Service</span>
+            </div>
+            
+            <div class="agenda-event-row" style="--cat-couleur:#10b981">
+              <span class="acc-region" title="USA">🇺🇸</span>
+              <span class="acc-pill" style="background:#10b98122;color:#10b981;flex-shrink:0;">Corporate</span>
+              <span class="tl-title">Résultats PayPal Holdings</span>
+            </div>
+            
           </div>
         </details>
         
         <details class="agenda-date-group" >
           <summary class="agenda-date-summary">
             <span class="agenda-date-badge">🗓️ 29/07</span>
-            <span class="agenda-date-count">53 événements</span>
+            <span class="agenda-date-count">62 événements</span>
             <span class="agenda-date-chevron">▾</span>
           </summary>
           <div class="agenda-date-content">
@@ -3114,13 +3224,67 @@
               <span class="tl-title">Résultats trimestriels Meta Platforms</span>
             </div>
             
+            <div class="agenda-event-row" style="--cat-couleur:#ef4444">
+              <span class="acc-region" title="Asie">🌏</span>
+              <span class="acc-pill" style="background:#ef444422;color:#ef4444;flex-shrink:0;">Macro</span>
+              <span class="tl-title">Début réunion BoJ</span>
+            </div>
+            
+            <div class="agenda-event-row" style="--cat-couleur:#ef4444">
+              <span class="acc-region" title="Global">🌐</span>
+              <span class="acc-pill" style="background:#ef444422;color:#ef4444;flex-shrink:0;">Macro</span>
+              <span class="tl-title">Publication Business Employment Dynamics</span>
+            </div>
+            
+            <div class="agenda-event-row" style="--cat-couleur:#10b981">
+              <span class="acc-region" title="USA">🇺🇸</span>
+              <span class="acc-pill" style="background:#10b98122;color:#10b981;flex-shrink:0;">Corporate</span>
+              <span class="tl-title">Résultats Robinhood Markets</span>
+            </div>
+            
+            <div class="agenda-event-row" style="--cat-couleur:#10b981">
+              <span class="acc-region" title="USA">🇺🇸</span>
+              <span class="acc-pill" style="background:#10b98122;color:#10b981;flex-shrink:0;">Corporate</span>
+              <span class="tl-title">Résultats Arm Holdings</span>
+            </div>
+            
+            <div class="agenda-event-row" style="--cat-couleur:#10b981">
+              <span class="acc-region" title="USA">🇺🇸</span>
+              <span class="acc-pill" style="background:#10b98122;color:#10b981;flex-shrink:0;">Corporate</span>
+              <span class="tl-title">Résultats Starbucks Corporation</span>
+            </div>
+            
+            <div class="agenda-event-row" style="--cat-couleur:#10b981">
+              <span class="acc-region" title="USA">🇺🇸</span>
+              <span class="acc-pill" style="background:#10b98122;color:#10b981;flex-shrink:0;">Corporate</span>
+              <span class="tl-title">Résultats Chipotle Mexican Grill</span>
+            </div>
+            
+            <div class="agenda-event-row" style="--cat-couleur:#10b981">
+              <span class="acc-region" title="USA">🇺🇸</span>
+              <span class="acc-pill" style="background:#10b98122;color:#10b981;flex-shrink:0;">Corporate</span>
+              <span class="tl-title">Résultats Amphenol Corporation</span>
+            </div>
+            
+            <div class="agenda-event-row" style="--cat-couleur:#10b981">
+              <span class="acc-region" title="USA">🇺🇸</span>
+              <span class="acc-pill" style="background:#10b98122;color:#10b981;flex-shrink:0;">Corporate</span>
+              <span class="tl-title">Résultats FormFactor</span>
+            </div>
+            
+            <div class="agenda-event-row" style="--cat-couleur:#10b981">
+              <span class="acc-region" title="USA">🇺🇸</span>
+              <span class="acc-pill" style="background:#10b98122;color:#10b981;flex-shrink:0;">Corporate</span>
+              <span class="tl-title">Résultats O'Reilly Automotive</span>
+            </div>
+            
           </div>
         </details>
         
         <details class="agenda-date-group" >
           <summary class="agenda-date-summary">
             <span class="agenda-date-badge">🗓️ 30/07</span>
-            <span class="agenda-date-count">69 événements</span>
+            <span class="agenda-date-count">77 événements</span>
             <span class="agenda-date-chevron">▾</span>
           </summary>
           <div class="agenda-date-content">
@@ -3539,13 +3703,61 @@
               <span class="tl-title">Résultats trimestriels Amazon</span>
             </div>
             
+            <div class="agenda-event-row" style="--cat-couleur:#ef4444">
+              <span class="acc-region" title="Global">🌐</span>
+              <span class="acc-pill" style="background:#ef444422;color:#ef4444;flex-shrink:0;">Macro</span>
+              <span class="tl-title">Décision taux BoE</span>
+            </div>
+            
+            <div class="agenda-event-row" style="--cat-couleur:#ef4444">
+              <span class="acc-region" title="Asie">🌏</span>
+              <span class="acc-pill" style="background:#ef444422;color:#ef4444;flex-shrink:0;">Macro</span>
+              <span class="tl-title">Décision taux BoJ</span>
+            </div>
+            
+            <div class="agenda-event-row" style="--cat-couleur:#10b981">
+              <span class="acc-region" title="USA">🇺🇸</span>
+              <span class="acc-pill" style="background:#10b98122;color:#10b981;flex-shrink:0;">Corporate</span>
+              <span class="tl-title">Résultats Coinbase Global</span>
+            </div>
+            
+            <div class="agenda-event-row" style="--cat-couleur:#10b981">
+              <span class="acc-region" title="USA">🇺🇸</span>
+              <span class="acc-pill" style="background:#10b98122;color:#10b981;flex-shrink:0;">Corporate</span>
+              <span class="tl-title">Résultats EchoStar Corporation</span>
+            </div>
+            
+            <div class="agenda-event-row" style="--cat-couleur:#10b981">
+              <span class="acc-region" title="USA">🇺🇸</span>
+              <span class="acc-pill" style="background:#10b98122;color:#10b981;flex-shrink:0;">Corporate</span>
+              <span class="tl-title">Résultats Cloudflare</span>
+            </div>
+            
+            <div class="agenda-event-row" style="--cat-couleur:#10b981">
+              <span class="acc-region" title="USA">🇺🇸</span>
+              <span class="acc-pill" style="background:#10b98122;color:#10b981;flex-shrink:0;">Corporate</span>
+              <span class="tl-title">Résultats AXT</span>
+            </div>
+            
+            <div class="agenda-event-row" style="--cat-couleur:#10b981">
+              <span class="acc-region" title="USA">🇺🇸</span>
+              <span class="acc-pill" style="background:#10b98122;color:#10b981;flex-shrink:0;">Corporate</span>
+              <span class="tl-title">Résultats Amazon.com</span>
+            </div>
+            
+            <div class="agenda-event-row" style="--cat-couleur:#10b981">
+              <span class="acc-region" title="Global">🌐</span>
+              <span class="acc-pill" style="background:#10b98122;color:#10b981;flex-shrink:0;">Corporate</span>
+              <span class="tl-title">Résultats VALE S.A.</span>
+            </div>
+            
           </div>
         </details>
         
         <details class="agenda-date-group" >
           <summary class="agenda-date-summary">
             <span class="agenda-date-badge">🗓️ 31/07</span>
-            <span class="agenda-date-count">28 événements</span>
+            <span class="agenda-date-count">30 événements</span>
             <span class="agenda-date-chevron">▾</span>
           </summary>
           <div class="agenda-date-content">
@@ -3718,6 +3930,18 @@
               <span class="tl-title">Décision taux BoJ et Perspectives</span>
             </div>
             
+            <div class="agenda-event-row" style="--cat-couleur:#ef4444">
+              <span class="acc-region" title="USA">🇺🇸</span>
+              <span class="acc-pill" style="background:#ef444422;color:#ef4444;flex-shrink:0;">Macro</span>
+              <span class="tl-title">Publication Employment Cost Index</span>
+            </div>
+            
+            <div class="agenda-event-row" style="--cat-couleur:#10b981">
+              <span class="acc-region" title="USA">🇺🇸</span>
+              <span class="acc-pill" style="background:#10b98122;color:#10b981;flex-shrink:0;">Corporate</span>
+              <span class="tl-title">Résultats Eaton Corporation</span>
+            </div>
+            
           </div>
         </details>
         
@@ -3770,7 +3994,7 @@
         <details class="agenda-date-group" >
           <summary class="agenda-date-summary">
             <span class="agenda-date-badge">🗓️ 03/08</span>
-            <span class="agenda-date-count">4 événements</span>
+            <span class="agenda-date-count">8 événements</span>
             <span class="agenda-date-chevron">▾</span>
           </summary>
           <div class="agenda-date-content">
@@ -3799,13 +4023,37 @@
               <span class="tl-title">Publication ISM PMI USA</span>
             </div>
             
+            <div class="agenda-event-row" style="--cat-couleur:#10b981">
+              <span class="acc-region" title="USA">🇺🇸</span>
+              <span class="acc-pill" style="background:#10b98122;color:#10b981;flex-shrink:0;">Corporate</span>
+              <span class="tl-title">Résultats Snap Inc.</span>
+            </div>
+            
+            <div class="agenda-event-row" style="--cat-couleur:#10b981">
+              <span class="acc-region" title="USA">🇺🇸</span>
+              <span class="acc-pill" style="background:#10b98122;color:#10b981;flex-shrink:0;">Corporate</span>
+              <span class="tl-title">Résultats ON Semiconductor</span>
+            </div>
+            
+            <div class="agenda-event-row" style="--cat-couleur:#10b981">
+              <span class="acc-region" title="Asie">🌏</span>
+              <span class="acc-pill" style="background:#10b98122;color:#10b981;flex-shrink:0;">Corporate</span>
+              <span class="tl-title">Résultats Grab Holdings</span>
+            </div>
+            
+            <div class="agenda-event-row" style="--cat-couleur:#10b981">
+              <span class="acc-region" title="USA">🇺🇸</span>
+              <span class="acc-pill" style="background:#10b98122;color:#10b981;flex-shrink:0;">Corporate</span>
+              <span class="tl-title">Résultats Palantir Technologies</span>
+            </div>
+            
           </div>
         </details>
         
         <details class="agenda-date-group" >
           <summary class="agenda-date-summary">
             <span class="agenda-date-badge">🗓️ 04/08</span>
-            <span class="agenda-date-count">5 événements</span>
+            <span class="agenda-date-count">7 événements</span>
             <span class="agenda-date-chevron">▾</span>
           </summary>
           <div class="agenda-date-content">
@@ -3840,13 +4088,25 @@
               <span class="tl-title">Commerce International Juin</span>
             </div>
             
+            <div class="agenda-event-row" style="--cat-couleur:#ef4444">
+              <span class="acc-region" title="USA">🇺🇸</span>
+              <span class="acc-pill" style="background:#ef444422;color:#ef4444;flex-shrink:0;">Macro</span>
+              <span class="tl-title">Publication JOLTS Juin</span>
+            </div>
+            
+            <div class="agenda-event-row" style="--cat-couleur:#10b981">
+              <span class="acc-region" title="USA">🇺🇸</span>
+              <span class="acc-pill" style="background:#10b98122;color:#10b981;flex-shrink:0;">Corporate</span>
+              <span class="tl-title">Résultats Spotify Technology</span>
+            </div>
+            
           </div>
         </details>
         
         <details class="agenda-date-group" >
           <summary class="agenda-date-summary">
             <span class="agenda-date-badge">🗓️ 05/08</span>
-            <span class="agenda-date-count">2 événements</span>
+            <span class="agenda-date-count">3 événements</span>
             <span class="agenda-date-chevron">▾</span>
           </summary>
           <div class="agenda-date-content">
@@ -3861,6 +4121,29 @@
               <span class="acc-region" title="Europe">🇪🇺</span>
               <span class="acc-pill" style="background:#ef444422;color:#ef4444;flex-shrink:0;">Macro</span>
               <span class="tl-title">PMI services final Zone Euro (Juillet)</span>
+            </div>
+            
+            <div class="agenda-event-row" style="--cat-couleur:#8b5cf6">
+              <span class="acc-region" title="Europe">🇪🇺</span>
+              <span class="acc-pill" style="background:#8b5cf622;color:#8b5cf6;flex-shrink:0;">Tech</span>
+              <span class="tl-title">Versement dividende intérimaire ASML</span>
+            </div>
+            
+          </div>
+        </details>
+        
+        <details class="agenda-date-group" >
+          <summary class="agenda-date-summary">
+            <span class="agenda-date-badge">🗓️ 06/08</span>
+            <span class="agenda-date-count">1 événement</span>
+            <span class="agenda-date-chevron">▾</span>
+          </summary>
+          <div class="agenda-date-content">
+            
+            <div class="agenda-event-row" style="--cat-couleur:#ef4444">
+              <span class="acc-region" title="USA">🇺🇸</span>
+              <span class="acc-pill" style="background:#ef444422;color:#ef4444;flex-shrink:0;">Macro</span>
+              <span class="tl-title">Publication Productivité et Coûts T2</span>
             </div>
             
           </div>
@@ -3981,7 +4264,7 @@
         <details class="agenda-date-group" >
           <summary class="agenda-date-summary">
             <span class="agenda-date-badge">🗓️ 12/08</span>
-            <span class="agenda-date-count">6 événements</span>
+            <span class="agenda-date-count">7 événements</span>
             <span class="agenda-date-chevron">▾</span>
           </summary>
           <div class="agenda-date-content">
@@ -4022,13 +4305,19 @@
               <span class="tl-title">IPC Juillet</span>
             </div>
             
+            <div class="agenda-event-row" style="--cat-couleur:#ef4444">
+              <span class="acc-region" title="USA">🇺🇸</span>
+              <span class="acc-pill" style="background:#ef444422;color:#ef4444;flex-shrink:0;">Macro</span>
+              <span class="tl-title">Publication IPC US Juillet</span>
+            </div>
+            
           </div>
         </details>
         
         <details class="agenda-date-group" >
           <summary class="agenda-date-summary">
             <span class="agenda-date-badge">🗓️ 13/08</span>
-            <span class="agenda-date-count">1 événement</span>
+            <span class="agenda-date-count">2 événements</span>
             <span class="agenda-date-chevron">▾</span>
           </summary>
           <div class="agenda-date-content">
@@ -4037,6 +4326,12 @@
               <span class="acc-region" title="Europe">🇪🇺</span>
               <span class="acc-pill" style="background:#3b82f622;color:#3b82f6;flex-shrink:0;">Marchés</span>
               <span class="tl-title">Décision Taux Norges Bank</span>
+            </div>
+            
+            <div class="agenda-event-row" style="--cat-couleur:#ef4444">
+              <span class="acc-region" title="USA">🇺🇸</span>
+              <span class="acc-pill" style="background:#ef444422;color:#ef4444;flex-shrink:0;">Macro</span>
+              <span class="tl-title">Publication IPP US Juillet</span>
             </div>
             
           </div>
