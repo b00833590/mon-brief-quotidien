@@ -841,9 +841,6 @@
     border-left-color: var(--accent);
   }
   /* Priorite : les deux premieres breves du Flash (deja classees par Gemini) */
-  .acc-item--top {
-    box-shadow: inset 3px 0 0 0 var(--cat-couleur, var(--accent));
-  }
   .acc-item--top .acc-rank {
     background: var(--accent);
     color: #FFFFFF;
@@ -1771,11 +1768,9 @@ document.querySelectorAll('#navTabs button[data-tab]').forEach(btn => {
     });
 })();
 
-// --- Meta a droite des titres de section : heure pour Flash, nombre d'articles pour le reste ---
+// --- Meta a droite des titres de section : nombre d'articles (sauf agenda/indices) ---
 (function() {
-    // "flash" volontairement exclu : pas de mention d'heure de synthese dans le
-    // contenu (deviation assumee par rapport a la maquette de reference).
-    const SANS_META = ['agenda', 'indices-entreprises', 'flash'];
+    const SANS_META = ['agenda', 'indices-entreprises'];
     document.querySelectorAll('.tab-panel').forEach(panel => {
         const h2 = panel.querySelector('h2.tab-title');
         if (!h2) return;
