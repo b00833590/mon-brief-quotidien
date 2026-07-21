@@ -123,9 +123,9 @@
     position: relative;
     background: var(--card-bg);
     color: var(--text);
-    padding: 20px 40px 0;
+    padding: 0;
     border-bottom: 1px solid var(--border);
-    box-shadow: var(--shadow-sm);
+    box-shadow: none;
     z-index: 10;
   }
   header .top {
@@ -133,29 +133,90 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 22px;
-    padding-bottom: 18px;
+    height: 56px;
+    gap: 16px;
+  }
+  header .brand {
+    display: flex;
+    align-items: stretch;
+    height: 100%;
+    flex-shrink: 0;
+  }
+  header .brand-bar {
+    width: 4px;
+    flex-shrink: 0;
+    background: var(--accent);
+  }
+  header .brand-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2px 14px;
+  }
+  header .brand-wordmark {
+    display: flex;
+    align-items: baseline;
+    gap: 5px;
+    line-height: 1;
+    white-space: nowrap;
+  }
+  header .brand-bold {
+    font-family: var(--sans);
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 0.05em;
+    color: var(--text);
+  }
+  header .brand-light {
+    font-family: var(--sans);
+    font-weight: 400;
+    font-size: 18px;
+    letter-spacing: 0.05em;
+    color: var(--text);
+  }
+  header .eyebrow {
+    font-family: var(--mono);
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-top: 3px;
+  }
+  header .brand-divider {
+    width: 1px;
+    height: 32px;
+    align-self: center;
+    background: var(--border);
+    margin-left: 2px;
+    flex-shrink: 0;
   }
   header .header-search {
-    flex: 1 1 320px;
-    max-width: 420px;
+    flex: 1 1 420px;
+    max-width: 480px;
     display: flex;
     align-items: center;
-    gap: 10px;
-    background: var(--input-bg);
-    border: 1px solid var(--border);
-    border-radius: var(--radius-md);
-    padding: 8px 14px;
-    transition: border-color .2s, box-shadow .2s;
+    gap: 8px;
+    height: 34px;
+    background: rgba(0, 0, 0, 0.05);
+    border: 1px solid transparent;
+    border-radius: var(--radius-sm);
+    padding: 0 12px;
+    transition: border-color .2s;
+  }
+  [data-theme="dark"] header .header-search {
+    background: rgba(255, 255, 255, 0.05);
   }
   header .header-search:focus-within {
     border-color: var(--accent);
-    box-shadow: 0 0 0 3px var(--accent-light);
   }
   header .header-search .search-icon {
     display: flex;
-    color: var(--text-muted);
+    align-items: center;
+    color: var(--text);
+    opacity: 0.7;
+    font-family: var(--mono);
+    font-weight: 700;
+    font-size: 13px;
     flex-shrink: 0;
   }
   header .header-search input {
@@ -163,8 +224,9 @@
     border: none;
     outline: none;
     background: none;
-    font-family: var(--sans);
-    font-size: 13.5px;
+    font-family: var(--mono);
+    font-size: 12px;
+    text-transform: uppercase;
     color: var(--text);
     min-width: 0;
   }
@@ -186,89 +248,56 @@
     color: var(--text);
     background-color: var(--card-bg-soft);
   }
-  header .brand {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-  }
-  header .brand-glyph {
-    flex-shrink: 0;
-    width: 38px;
-    height: 38px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: var(--accent-light);
-    border-radius: var(--radius-md);
-    padding: 6px;
-  }
-  header .brand-glyph svg {
-    width: 100%;
-    height: 100%;
-  }
-  header .brand-text {
-    display: flex;
-    flex-direction: column;
-    gap: 1px;
-  }
-  header .eyebrow {
-    font-family: var(--mono);
-    font-size: 9px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: var(--accent);
-    font-weight: 700;
-  }
-  header h1 {
-    font-family: var(--serif);
-    font-size: 26px;
-    font-weight: 700;
-    letter-spacing: -0.3px;
-    color: var(--text);
-  }
   header .right {
     display: flex;
     align-items: center;
-    gap: 20px;
-  }
-  header .date-block {
-    text-align: right;
-  }
-  header .date {
+    gap: 14px;
+    padding-right: 16px;
+    flex-shrink: 0;
     font-family: var(--mono);
     font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.02em;
+    color: var(--text-muted);
     text-transform: uppercase;
-    color: var(--text);
   }
-  header .date-sub {
-    font-family: var(--sans);
-    color: var(--text-soft);
-    font-size: 11px;
-    margin-top: 2px;
-    font-weight: 500;
+  header .date-block {
+    white-space: nowrap;
+  }
+  header .date-block .date-sep {
+    margin: 0 6px;
+    opacity: 0.5;
+  }
+  header .right-divider {
+    width: 1px;
+    height: 20px;
+    background: var(--border);
+    flex-shrink: 0;
   }
   .theme-toggle {
-    background: var(--card-bg);
-    border: 1px solid var(--border);
-    color: var(--text-soft);
-    width: 36px;
-    height: 36px;
-    border-radius: var(--radius-md);
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    padding: 0;
     cursor: pointer;
-    font-size: 16px;
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
     display: flex;
     align-items: center;
-    justify-content: center;
-    box-shadow: var(--shadow-sm);
-    transition: border-color .2s, background-color .2s, color .2s, transform 0.2s;
+    gap: 4px;
+    transition: color .15s;
   }
   .theme-toggle:hover {
-    border-color: var(--accent);
-    color: var(--accent);
-    transform: scale(1.03);
-    background-color: var(--card-bg-soft);
+    color: var(--text);
+  }
+  .theme-toggle .tt-sep {
+    opacity: 0.5;
+  }
+  .theme-toggle .tt-active {
+    color: var(--text);
+    text-decoration: underline;
+    text-underline-offset: 2px;
   }
 
   /* ── TICKER (bandeau de défilement) ── */
@@ -509,37 +538,65 @@
     background: linear-gradient(180deg, transparent 0%, rgba(var(--accent-rgb), 0.02) 100%);
   }
   .nav-summary-title {
+    display: flex;
+    align-items: center;
+    gap: 7px;
     font-family: var(--mono);
-    font-size: 9px;
-    letter-spacing: 1px;
+    font-size: 10px;
+    letter-spacing: 0.14em;
     text-transform: uppercase;
-    color: var(--text-muted);
-    margin-bottom: 12px;
+    color: var(--text);
+    margin-bottom: 14px;
     font-weight: 700;
   }
+  .nav-summary-live-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #CC0000;
+    flex-shrink: 0;
+    animation: nav-live-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+  @keyframes nav-live-pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .nav-summary-live-dot { animation: none; }
+  }
+  /* Bloc "tendance globale" : coloration reelle selon le sentiment (pas toujours rouge) */
   .nav-summary-sentiment {
     font-family: var(--sans);
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 0.5px;
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: 0.02em;
     text-transform: uppercase;
-    margin-bottom: 16px;
-    padding: 6px 10px;
+    margin-bottom: 18px;
+    padding: 10px 10px 12px;
     border-radius: var(--radius-sm);
     display: none;
     text-align: center;
+    color: #FFFFFF;
+  }
+  .nav-summary-sentiment::before {
+    content: 'Tendance globale';
+    display: block;
+    font-family: var(--mono);
+    font-size: 8.5px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.75);
+    margin-bottom: 4px;
   }
   .nav-summary-sentiment.sent-up {
-    color: var(--green);
-    background-color: var(--green-light);
+    background-color: var(--green);
   }
   .nav-summary-sentiment.sent-down {
-    color: var(--red);
-    background-color: var(--red-light);
+    background-color: var(--red);
   }
   .nav-summary-sentiment.sent-neutral {
-    color: var(--text-soft);
-    background-color: var(--card-bg-soft);
+    background-color: #4A4A44;
   }
 
   .nav-bar-row {
@@ -1368,12 +1425,7 @@
       color: var(--card-bg);
     }
     .nav-summary { display: none; }
-    header { padding: 16px 20px 0; }
-    header .top { flex-direction: column; align-items: stretch; gap: 14px; }
-    header .header-search { flex: 0 0 auto; max-width: none; width: 100%; }
-    header .right { justify-content: space-between; width: 100%; }
-    header .date-block { text-align: left; }
-    header h1 { font-size: 22px; }
+    header .header-search { max-width: 300px; }
     main { padding: 20px 16px 50px; }
     
     .acc-summary {
@@ -1408,25 +1460,25 @@
   /* Header : compact sur mobile */
   header {
     flex-shrink: 0;
-    padding: 12px 16px 0;
+    padding: 0;
     width: 100%;
   }
   header .top {
     flex-wrap: nowrap;
     gap: 10px;
     justify-content: space-between;
-    padding-bottom: 12px;
+    height: 48px;
   }
-  header .brand-glyph { width: 30px; height: 30px; }
-  header h1 { font-size: 18px; }
-  header .eyebrow { font-size: 8px; letter-spacing: 1.5px; }
+  header .brand-text { padding: 2px 10px; }
+  header .brand-bold,
+  header .brand-light { font-size: 14px; }
+  header .eyebrow { font-size: 8px; letter-spacing: 0.15em; }
+  header .brand-divider { display: none; }
   /* Cacher la barre de recherche dans le header (trop encombrante) */
   header .header-search { display: none !important; }
   /* Garder date + bouton thème */
-  header .right { gap: 12px; }
-  header .date { font-size: 10px; }
-  header .date-sub { font-size: 10px; }
-  .theme-toggle { width: 32px; height: 32px; font-size: 14px; }
+  header .right { gap: 8px; font-size: 9.5px; padding-right: 12px; }
+  .theme-toggle { font-size: 10px; }
 
   /* Ticker : scrollable horizontalement */
   .ticker-viewport {
@@ -1526,28 +1578,22 @@
 <header>
   <div class="top">
     <div class="brand">
-      <div class="brand-glyph">
-        <svg viewBox="0 0 24 24">
-          <path d="M2 17 L8 11 L11.5 14.5 L18 8" stroke="var(--text)" stroke-width="2.4" stroke-linecap="square" stroke-linejoin="miter" fill="none"/>
-          <path fill="var(--text)" d="M21,5 L14.44,7.44 L18.56,11.56 Z"/>
-        </svg>
-      </div>
+      <div class="brand-bar"></div>
       <div class="brand-text">
+        <div class="brand-wordmark"><span class="brand-bold">MON BRIEF</span><span class="brand-light">QUOTIDIEN</span></div>
         <div class="eyebrow">Synthèse des marchés</div>
-        <h1>Mon Brief Quotidien</h1>
       </div>
+      <div class="brand-divider"></div>
     </div>
     <div class="header-search">
-      <span class="search-icon"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
-      <input type="text" id="searchInput" placeholder="Rechercher (Ctrl+K)..." autocomplete="off">
+      <span class="search-icon">&rsaquo;</span>
+      <input type="text" id="searchInput" placeholder="RECHERCHER (CTRL+K)..." autocomplete="off">
       <button id="searchClear" class="search-clear" style="display:none" aria-label="Effacer la recherche">✕</button>
     </div>
     <div class="right">
-      <div class="date-block">
-        <div class="date">Mardi 21 juillet 2026</div>
-        <div class="date-sub">Générée à 13h02</div>
-      </div>
-      <button class="theme-toggle" onclick="toggleTheme()" id="themeBtn" aria-label="Changer le theme clair/sombre"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg></button>
+      <div class="date-block">Mardi 21 juillet 2026<span class="date-sep">/</span>GÉNÉRÉ À 13h15</div>
+      <span class="right-divider"></span>
+      <button class="theme-toggle" onclick="toggleTheme()" id="themeBtn" aria-label="Changer le theme clair/sombre"><span class="tt-sombre">DARK</span><span class="tt-sep">/</span><span class="tt-clair tt-active">LIGHT</span></button>
     </div>
   </div>
   <div class="ticker-bar" id="tickerBar">
@@ -1581,7 +1627,7 @@
     <button data-tab="indices-entreprises">Indices &amp; Entreprises</button>
   </div>
   <div class="nav-summary" id="navSummary">
-    <div class="nav-summary-title">Résumé en direct</div>
+    <div class="nav-summary-title"><span class="nav-summary-live-dot"></span>Live marchés</div>
     <div class="nav-summary-sentiment" id="navSummarySentiment"></div>
     <div class="nav-summary-bars" id="navSummaryBars"></div>
   </div>
@@ -1599,7 +1645,7 @@
       
 <div class="sentiment-box">
   <span class="sentiment-badge sent-neutral">Neutre</span>
-  <span class="sentiment-raison">L'escalade des tensions géopolitiques au Moyen-Orient et les nouvelles menaces de guerre commerciale créent de l'incertitude. Cependant, les marchés des semi-conducteurs montrent une résilience, malgré les inquiétudes sur la dette cachée des géants de la tech.</span>
+  <span class="sentiment-raison">Les marchés montrent une résilience malgré l'escalade des tensions géopolitiques au Moyen-Orient et des craintes inflationnistes. Cependant, des inquiétudes pèsent sur les dettes hors bilan des géants de la tech et les politiques fiscales au Royaume-Uni.</span>
 </div>
 
       <div class="acc-list">
@@ -1608,10 +1654,10 @@
             <span class="acc-rank">1</span>
             <span class="acc-region" title="Global">GLOBAL</span>
             <span class="acc-pill" style="background:#6E6C6322;color:#6E6C63">Géopolitique</span>
-            <span class="acc-title">Conflit USA-Iran s'intensifie, impact sur l'énergie</span>
+            <span class="acc-title">Escalade du conflit US-Iran et impact global sur l'énergie</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">Les tensions au Moyen-Orient ont atteint leur <strong class="highlight-phrase">dixième jour d'attaques aériennes</strong> entre les États-Unis et l'Iran, entraînant une intensification significative du conflit. Ces affrontements ont gravement perturbé le trafic maritime, avec seulement <strong class="highlight-figure">53 navires</strong> traversant le détroit d'Ormuz la semaine dernière, soit une <strong class="highlight-figure">baisse de 66%</strong>. Le coût humain s'alourdit pour les États-Unis avec près de <strong class="highlight-figure">100 soldats blessés</strong> et <strong class="highlight-phrase">quatre militaires tués</strong> en Jordanie et en Irak. Conséquence directe, les prix de l'énergie flambent, le pétrole Brent ayant <strong class="highlight-figure">dépassé les 90 dollars le baril</strong>, et l'essence aux États-Unis atteignant à nouveau <strong class="highlight-figure">plus de 4 dollars le gallon</strong>. Goldman Sachs anticipe des prix du gaz européens élevés <strong class="highlight-figure">jusqu'en 2027/28</strong>.</div>
+          <div class="acc-body">Le conflit entre les États-Unis et l'Iran s'intensifie, marquant le <strong class="highlight-phrase">dixième jour consécutif de frappes aériennes</strong> américaines. Cette escalade a <strong class="highlight-phrase">étranglé le trafic maritime dans le détroit d'Ormuz</strong>, avec une <strong class="highlight-figure">chute de 66% du nombre de navires</strong> la semaine dernière, et a propulsé le <strong class="highlight-figure">prix du pétrole Brent au-delà de 90 dollars le baril</strong>, son plus haut niveau depuis un mois. Les prix de l'essence aux États-Unis ont repassé les <strong class="highlight-figure">4 dollars le gallon</strong>, et des prévisions de Goldman Sachs anticipent des prix du gaz européens élevés jusqu'en <strong class="highlight-figure">2027/28</strong>, ravivant les craintes d'une inflation mondiale accélérée. Le président libanais Joseph Aoun rencontre d'ailleurs Donald Trump à la Maison Blanche pour discuter de la situation.</div>
         </details>
         
         <details class="acc-item" style="--cat-couleur:#6E6C63">
@@ -1619,54 +1665,54 @@
             <span class="acc-rank">2</span>
             <span class="acc-region" title="USA">US</span>
             <span class="acc-pill" style="background:#6E6C6322;color:#6E6C63">Géopolitique</span>
-            <span class="acc-title">USA imposent des droits de douane de 50% au Canada</span>
+            <span class="acc-title">Les États-Unis imposent des droits de douane de 50% sur des produits canadiens</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">L'administration Trump a annoncé l'imposition de <strong class="highlight-figure">droits de douane de 50%</strong> sur une gamme de produits canadiens, notamment le vin, les produits laitiers et les articles de sport, prenant effet dans <strong class="highlight-figure">30 jours</strong>. Cette décision, qualifiée de réponse aux pratiques « discriminatoires » du Canada, risque de <strong class="highlight-phrase">compliquer les pourparlers commerciaux</strong> de l'accord USMCA au Mexique. La ministre canadienne des Finances, Chrystia Freeland, a affirmé que « se défendre fonctionne » dans une guerre commerciale, soulignant la riposte potentielle du Canada.</div>
+          <div class="acc-body">Le président Trump a annoncé de <strong class="highlight-figure">nouveaux tarifs douaniers de 50% sur diverses importations canadiennes</strong>, incluant le vin et les produits laitiers, entrant en vigueur dans <strong class="highlight-figure">30 jours</strong>. Cette mesure, officiellement une riposte aux pratiques « discriminatoires » du Canada, pourrait <strong class="highlight-phrase">dérailler les négociations sur l'accord de libre-échange US-Mexique-Canada (AEUMC)</strong> que l'administration Trump souhaite revoir. L'application de la section 338 de la loi tarifaire pour cette initiative est <strong class="highlight-phrase">sans précédent</strong> et pourrait faire l'objet de contestations juridiques, marquant une nouvelle phase de tensions commerciales.</div>
         </details>
         
-        <details class="acc-item" style="--cat-couleur:#3E5C76">
+        <details class="acc-item" style="--cat-couleur:#9C5B45">
           <summary class="acc-summary">
             <span class="acc-rank">3</span>
-            <span class="acc-region" title="Asie">ASIA</span>
-            <span class="acc-pill" style="background:#3E5C7622;color:#3E5C76">Macro</span>
-            <span class="acc-title">Fuite de capitaux en Chine malgré l'excédent commercial record</span>
+            <span class="acc-region" title="Global">GLOBAL</span>
+            <span class="acc-pill" style="background:#9C5B4522;color:#9C5B45">Tech</span>
+            <span class="acc-title">Dette hors bilan des géants technologiques sur l'IA inquiète les marchés</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">Malgré un <strong class="highlight-figure">excédent commercial record de 125 milliards de dollars en juin</strong>, la Chine fait face à une <strong class="highlight-phrase">fuite massive de capitaux</strong>, estimée à <strong class="highlight-figure">jusqu'à 1 000 milliards de dollars</strong> l'année dernière. Pékin intensifie ses contrôles pour empêcher l'appréciation du renminbi et la fuite d'argent, ciblant notamment les courtiers de Hong Kong. Cette situation révèle une <strong class="highlight-phrase">faiblesse interne</strong> de l'économie chinoise, occultée par sa force exportatrice, et vise potentiellement à freiner l'investissement des citoyens chinois sur les marchés boursiers étrangers comme le Nasdaq.</div>
+          <div class="acc-body">Alors que les actions des fabricants de puces comme Samsung et TSMC rebondissent, des alarmes retentissent concernant la <strong class="highlight-phrase">dette hors bilan colossale des géants de la technologie</strong> tels qu'Alphabet, Amazon, Meta, Microsoft et Oracle. Leurs bilans cacheraient une <strong class="highlight-figure">dette de 1 650 milliards de dollars</strong>, un chiffre qui a <strong class="highlight-figure">augmenté de 800% en seulement quatre ans</strong>, alimenté par la course frénétique à la construction de centres de données pour l'IA. Bien que les entreprises prévoient des bénéfices futurs pour couvrir ces engagements, le marché <strong class="highlight-phrase">« commence à s'inquiéter » de l'ampleur et de l'impact potentiel de ces passifs cachés</strong>.</div>
         </details>
         
         <details class="acc-item" style="--cat-couleur:#3E5C76">
           <summary class="acc-summary">
             <span class="acc-rank">4</span>
-            <span class="acc-region" title="Europe">EU</span>
+            <span class="acc-region" title="Asie">ASIA</span>
             <span class="acc-pill" style="background:#3E5C7622;color:#3E5C76">Macro</span>
-            <span class="acc-title">Nouveau Chancelier au Royaume-Uni soulève des craintes fiscales</span>
+            <span class="acc-title">La Chine face au paradoxe de ses excédents commerciaux et fuites de capitaux</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">Le nouveau Premier ministre britannique, Andy Burnham, a nommé John Healey au poste de Chancelier de l'Échiquier, une décision qui a <strong class="highlight-phrase">surpris de nombreux alliés</strong> et députés travaillistes. L'arrivée de Healey, connu pour ses positions en faveur de <strong class="highlight-phrase">dépenses de défense accrues</strong>, suscite des inquiétudes sur les marchés obligataires concernant la « flexibilité » des règles budgétaires et son penchant pour les obligations de guerre. Le marché des Gilts a d'ailleurs <strong class="highlight-phrase">sous-performé</strong> après l'annonce, signalant des craintes d'une augmentation de la dette et des dépenses publiques que le FMI avait déjà jugées inabordables pour le Royaume-Uni.</div>
+          <div class="acc-body">La Chine affiche un <strong class="highlight-figure">excédent commercial record de 125 milliards de dollars en juin</strong>, dopé par les exportations de véhicules électriques, panneaux solaires et matériel d'IA. Paradoxalement, Pékin intensifie ses efforts pour <strong class="highlight-figure">endiguer des fuites de capitaux massives, estimées à 1 000 milliards de dollars l'an dernier</strong>, qui affaiblissent le renminbi. Les autorités <strong class="highlight-phrase">resserrent les contrôles sur les maisons de courtage de Hong Kong</strong> et les banques pour éviter une sortie d'argent qui pourrait déstabiliser la monnaie et le marché, notamment vers les investissements en IA étrangers.</div>
         </details>
         
-        <details class="acc-item" style="--cat-couleur:#9C5B45">
+        <details class="acc-item" style="--cat-couleur:#3E5C76">
           <summary class="acc-summary">
             <span class="acc-rank">5</span>
-            <span class="acc-region" title="Global">GLOBAL</span>
-            <span class="acc-pill" style="background:#9C5B4522;color:#9C5B45">Tech</span>
-            <span class="acc-title">Dette cachée des géants de la tech et risques géopolitiques de l'IA</span>
+            <span class="acc-region" title="Europe">EU</span>
+            <span class="acc-pill" style="background:#3E5C7622;color:#3E5C76">Macro</span>
+            <span class="acc-title">Le nouveau Chancelier britannique suscite des craintes fiscales sur les marchés</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">Alors que les actions technologiques rebondissent, des inquiétudes croissent concernant la <strong class="highlight-phrase">dette hors bilan</strong> des géants du secteur tels qu'Alphabet, Amazon, Meta, Microsoft et Oracle, totalisant <strong class="highlight-figure">1 650 milliards de dollars</strong>, soit une multiplication par huit en quatre ans, pour financer la construction de leurs centres de données. Parallèlement, l'intelligence artificielle est désormais considérée comme un <strong class="highlight-phrase">moteur d'instabilité géopolitique</strong>. L'émergence d'un nouveau modèle d'IA chinois puissant, Kimi K3, exacerbe les préoccupations américaines, incitant les dirigeants d'Anthropic et OpenAI à demander des restrictions sur son utilisation. L'Europe craint de devenir dépendante des superpuissances de l'IA, qu'elle perçoit comme des « actifs stratégiques ».</div>
+          <div class="acc-body">La nomination de <strong class="highlight-phrase">John Healey au poste de Chancelier de l'Échiquier britannique</strong> par le Premier ministre Andy Burnham a surpris les marchés, entraînant une <strong class="highlight-phrase">sous-performance des Gilts</strong> et ravivant les craintes fiscales. Healey hérite d'un <strong class="highlight-phrase">contexte budgétaire difficile</strong> et devra financer des augmentations de dépenses de défense et le soutien aux ménages, alors que le <strong class="highlight-phrase">FMI a récemment déconseillé toute augmentation des dépenses publiques</strong>. Les commentaires de Burnham sur la « flexibilité » des règles fiscales ajoutent à l'incertitude.</div>
         </details>
         
-        <details class="acc-item" style="--cat-couleur:#5B7553">
+        <details class="acc-item" style="--cat-couleur:#8C6A2C">
           <summary class="acc-summary">
             <span class="acc-rank">6</span>
             <span class="acc-region" title="USA">US</span>
-            <span class="acc-pill" style="background:#5B755322;color:#5B7553">Corporate</span>
-            <span class="acc-title">Enquête sur l'empire assurantiel de Mark Walter pour manque de divulgation</span>
+            <span class="acc-pill" style="background:#8C6A2C22;color:#8C6A2C">Marchés</span>
+            <span class="acc-title">Divergence record entre volatilité de l'indice et des actions individuelles</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">Les procureurs américains, notamment ceux du district sud de New York, ont ouvert une enquête sur deux compagnies d'assurance dirigées par le milliardaire Mark Walter, fondateur de Guggenheim Partners et de TWG Global. L'investigation porte sur d'éventuels manquements à la divulgation concernant des <strong class="highlight-phrase">investissements liés à d'autres entités</strong> de son vaste empire. Mark Walter est un pionnier de la convergence entre le capital privé et l'assurance, un modèle qui est devenu un pilier de l'industrie du capital privé, pesant <strong class="highlight-figure">22 000 milliards de dollars</strong>.</div>
+          <div class="acc-body">Le marché boursier américain présente une <strong class="highlight-figure">divergence sans précédent entre la volatilité de l'indice S&P 500 et celle de ses actions individuelles</strong>. Alors que le <strong class="highlight-figure">VIX se maintient à 17,5</strong>, sous sa moyenne à long terme, le <strong class="highlight-figure">VIXEQ (volatilité des actions individuelles) dépasse les 50</strong>, marquant un écart historique. Cette situation révèle une <strong class="highlight-phrase">inquiétude particulière pour des actions ou secteurs spécifiques</strong>, comme les fabricants de puces liés à l'IA, plutôt qu'une crainte de secousse macroéconomique généralisée, et a vu <strong class="highlight-figure">52 jours cette année où l'indice et la majorité des actions ont évolué en sens inverse</strong>.</div>
         </details>
         </div>
     </div>
@@ -1676,7 +1722,7 @@
       
 <div class="sentiment-box">
   <span class="sentiment-badge sent-neutral">Neutre</span>
-  <span class="sentiment-raison">L'escalade des tensions géopolitiques au Moyen-Orient et les nouvelles menaces de guerre commerciale créent de l'incertitude. Cependant, les marchés des semi-conducteurs montrent une résilience, malgré les inquiétudes sur la dette cachée des géants de la tech.</span>
+  <span class="sentiment-raison">Les marchés montrent une résilience malgré l'escalade des tensions géopolitiques au Moyen-Orient et des craintes inflationnistes. Cependant, des inquiétudes pèsent sur les dettes hors bilan des géants de la tech et les politiques fiscales au Royaume-Uni.</span>
 </div>
 
       <div class="acc-list">
@@ -1685,21 +1731,10 @@
             
             <span class="acc-region" title="Global">GLOBAL</span>
             <span class="acc-pill" style="background:#8C6A2C22;color:#8C6A2C">Marchés</span>
-            <span class="acc-title">Marchés résilients malgré tensions géopolitiques</span>
+            <span class="acc-title">Le prix du pétrole Brent dépasse les 90 dollars</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">Les marchés démarrent positivement, portés par le <strong class="highlight-phrase">rebond du secteur des semi-conducteurs</strong>, mais les tensions géopolitiques au Moyen-Orient et les risques sur les taux d'intérêt restent élevés. L'ampleur des mouvements sur les différents marchés demeure <strong class="highlight-phrase">très limitée</strong> au regard des risques fondamentaux sur l'énergie.</div>
-        </details>
-        
-        <details class="acc-item" style="--cat-couleur:#8C6A2C">
-          <summary class="acc-summary">
-            
-            <span class="acc-region" title="Global">GLOBAL</span>
-            <span class="acc-pill" style="background:#8C6A2C22;color:#8C6A2C">Marchés</span>
-            <span class="acc-title">Prix du pétrole Brent dépasse 90 dollars</span>
-            <span class="acc-chevron">▾</span>
-          </summary>
-          <div class="acc-body">Le pétrole Brent a <strong class="highlight-figure">dépassé les 90 dollars le baril</strong>, atteignant son plus haut niveau depuis <strong class="highlight-phrase">un mois</strong>, en raison de l'intensification des tensions au Moyen-Orient. La perturbation du trafic maritime dans le détroit d'Ormuz, en baisse de <strong class="highlight-figure">66%</strong>, contribue à cette hausse.</div>
+          <div class="acc-body">Le <strong class="highlight-figure">Brent a dépassé les 90 dollars le baril</strong>, atteignant son <strong class="highlight-phrase">plus haut niveau depuis un mois</strong>. Cette hausse est principalement due aux <strong class="highlight-phrase">tensions croissantes au Moyen-Orient</strong>, malgré des marchés actions globalement stables ou en légère hausse, ce qui contribue aux <strong class="highlight-phrase">pressions inflationnistes mondiales</strong>.</div>
         </details>
         
         <details class="acc-item" style="--cat-couleur:#8C6A2C">
@@ -1707,43 +1742,10 @@
             
             <span class="acc-region" title="USA">US</span>
             <span class="acc-pill" style="background:#8C6A2C22;color:#8C6A2C">Marchés</span>
-            <span class="acc-title">Volatilité des actions individuelles atteint un record</span>
+            <span class="acc-title">Mesures de valorisation du S&P 500 signalent un marché cher</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">Le marché boursier américain montre une divergence record entre la volatilité de l'indice S&P 500 (VIX à <strong class="highlight-figure">17,5</strong>) et celle des actions individuelles (VIXEQ au-dessus de <strong class="highlight-figure">50</strong>). Les investisseurs s'inquiètent de certains secteurs spécifiques, notamment les actions de croissance liées à l'IA.</div>
-        </details>
-        
-        <details class="acc-item" style="--cat-couleur:#8C6A2C">
-          <summary class="acc-summary">
-            
-            <span class="acc-region" title="Europe">EU</span>
-            <span class="acc-pill" style="background:#8C6A2C22;color:#8C6A2C">Marchés</span>
-            <span class="acc-title">Marché des Gilts britannique sous-performe</span>
-            <span class="acc-chevron">▾</span>
-          </summary>
-          <div class="acc-body">Le marché des Gilts britanniques a <strong class="highlight-phrase">sous-performé</strong> après l'annonce du nouveau Chancelier, John Healey, et les discours d'Andy Burnham. Cette réaction est tirée par la partie longue des courbes, avec un <strong class="highlight-figure">2s10s à 34 points de base (+6)</strong>.</div>
-        </details>
-        
-        <details class="acc-item" style="--cat-couleur:#8C6A2C">
-          <summary class="acc-summary">
-            
-            <span class="acc-region" title="USA">US</span>
-            <span class="acc-pill" style="background:#8C6A2C22;color:#8C6A2C">Marchés</span>
-            <span class="acc-title">Taux des Treasuries américains en hausse</span>
-            <span class="acc-chevron">▾</span>
-          </summary>
-          <div class="acc-body">Le rendement des Treasuries américains à <strong class="highlight-figure">10 ans a augmenté de 4 points de base à 4,59%</strong>. Le rendement du TIPS à 30 ans a atteint son <strong class="highlight-figure">plus haut niveau depuis 18 mois</strong>, signalant un régime de taux durablement plus élevé.</div>
-        </details>
-        
-        <details class="acc-item" style="--cat-couleur:#8C6A2C">
-          <summary class="acc-summary">
-            
-            <span class="acc-region" title="Europe">EU</span>
-            <span class="acc-pill" style="background:#8C6A2C22;color:#8C6A2C">Marchés</span>
-            <span class="acc-title">Rendements des Bunds allemands augmentent</span>
-            <span class="acc-chevron">▾</span>
-          </summary>
-          <div class="acc-body">Le rendement du Bund allemand à <strong class="highlight-figure">10 ans a augmenté de 2 points de base à 3,15%</strong>, s'inscrivant dans la tendance générale de tension sur les taux en Europe.</div>
+          <div class="acc-body">Les ratios de valorisation de Robert Shiller, comme le <strong class="highlight-figure">CAPE à 41</strong> et le rendement excédentaire CAPE à <strong class="highlight-figure">1,4%</strong>, indiquent que le marché boursier américain est « très cher ». Ces chiffres suggèrent que les <strong class="highlight-phrase">rendements futurs à long terme seront probablement bien inférieurs à la moyenne</strong>, bien que l'applicabilité de ces métriques aux entreprises à forte croissance soit débattue.</div>
         </details>
         
         <details class="acc-item" style="--cat-couleur:#8C6A2C">
@@ -1751,10 +1753,10 @@
             
             <span class="acc-region" title="Global">GLOBAL</span>
             <span class="acc-pill" style="background:#8C6A2C22;color:#8C6A2C">Marchés</span>
-            <span class="acc-title">Dollar américain progresse sur l'aversion au risque</span>
+            <span class="acc-title">Marchés résilients face au risque pétrolier et tensions géopolitiques</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">L'indice dollar DXY a progressé de <strong class="highlight-figure">+0,2% à 100,97</strong>, porté par l'aversion au risque liée au conflit américano-iranien et au blocus naval des Houthis. L'EURUSD a reculé de <strong class="highlight-figure">-0,23% à 1,1413</strong>.</div>
+          <div class="acc-body">Les marchés ont démarré la journée positivement, portés par le <strong class="highlight-phrase">rebond du secteur des semi-conducteurs</strong>, mais les tensions restent fortes. Le <strong class="highlight-figure">pétrole est volatile, franchissant les 90$/baril</strong>, et le marché des taux s'installe dans un régime <strong class="highlight-phrase">durablement plus élevé</strong>, avec les <strong class="highlight-figure">rendements des TIPS 30 ans américains au plus haut depuis 18 mois</strong>.</div>
         </details>
         
         <details class="acc-item" style="--cat-couleur:#8C6A2C">
@@ -1762,10 +1764,65 @@
             
             <span class="acc-region" title="Europe">EU</span>
             <span class="acc-pill" style="background:#8C6A2C22;color:#8C6A2C">Marchés</span>
-            <span class="acc-title">LSE prévoit un trading 24h/24 et 7j/7</span>
+            <span class="acc-title">La Bourse de Londres prévoit une négociation 24h/24</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">La Bourse de Londres (LSE) a annoncé son intention de lancer un <strong class="highlight-figure">trading 24h/24 et 7j/7 l'année prochaine</strong>, dans le but de reconquérir les investisseurs de détail et de s'adapter aux évolutions du marché.</div>
+          <div class="acc-body">La <strong class="highlight-phrase">Bourse de Londres (LSE)</strong> a annoncé son intention de lancer la <strong class="highlight-figure">négociation 24h/24</strong> à partir de l'année prochaine. Cette initiative vise à <strong class="highlight-phrase">attirer les investisseurs de détail</strong> et à moderniser les opérations pour rester compétitive sur le marché mondial.</div>
+        </details>
+        
+        <details class="acc-item" style="--cat-couleur:#8C6A2C">
+          <summary class="acc-summary">
+            
+            <span class="acc-region" title="Global">GLOBAL</span>
+            <span class="acc-pill" style="background:#8C6A2C22;color:#8C6A2C">Marchés</span>
+            <span class="acc-title">Les rendements des obligations mondiales continuent de se tendre</span>
+            <span class="acc-chevron">▾</span>
+          </summary>
+          <div class="acc-body">Les rendements obligataires mondiaux continuent de se tendre, avec le <strong class="highlight-figure">Bund allemand à 10 ans en hausse de 2 points de base à 3,15%</strong> et les <strong class="highlight-figure">Treasuries américains à 10 ans augmentant de 4 points de base à 4,59%</strong>. Les taux réels aux États-Unis, notamment le <strong class="highlight-figure">rendement du TIPS 30 ans, ont atteint leur plus haut niveau en 18 mois</strong>, reflétant des attentes d'inflation ou de politique monétaire plus stricte.</div>
+        </details>
+        
+        <details class="acc-item" style="--cat-couleur:#8C6A2C">
+          <summary class="acc-summary">
+            
+            <span class="acc-region" title="Global">GLOBAL</span>
+            <span class="acc-pill" style="background:#8C6A2C22;color:#8C6A2C">Marchés</span>
+            <span class="acc-title">Mouvements des devises en réaction aux risques géopolitiques et fiscaux</span>
+            <span class="acc-chevron">▾</span>
+          </summary>
+          <div class="acc-body">L'<strong class="highlight-figure">indice dollar DXY a progressé de 0,2% à 100,97</strong>, porté par l'aversion au risque liée au conflit américano-iranien. L'<strong class="highlight-figure">EURUSD a reculé de 0,23% à 1,1413</strong>, tandis que l'<strong class="highlight-figure">EURGBP a progressé de 0,2% à 0,8504</strong>, les investisseurs restant prudents face à la politique britannique. Les couronnes scandinaves ont également subi la pression de l'aversion au risque.</div>
+        </details>
+        
+        <details class="acc-item" style="--cat-couleur:#8C6A2C">
+          <summary class="acc-summary">
+            
+            <span class="acc-region" title="Global">GLOBAL</span>
+            <span class="acc-pill" style="background:#8C6A2C22;color:#8C6A2C">Marchés</span>
+            <span class="acc-title">Performance des marchés actions européens et américains</span>
+            <span class="acc-chevron">▾</span>
+          </summary>
+          <div class="acc-body">Le <strong class="highlight-figure">Stoxx 600 a reculé de 0,3%</strong>, avec le secteur de l'énergie comme unique progression notable. Le <strong class="highlight-figure">FTSE 100 a sous-performé (-0,5%)</strong>, pénalisé par l'évolution de la GBP et sa composition en matières premières. La séance américaine a été en <strong class="highlight-phrase">légère baisse globalement</strong>, mais le <strong class="highlight-phrase">secteur des semi-conducteurs a montré un léger rebond</strong>.</div>
+        </details>
+        
+        <details class="acc-item" style="--cat-couleur:#8C6A2C">
+          <summary class="acc-summary">
+            
+            <span class="acc-region" title="Global">GLOBAL</span>
+            <span class="acc-pill" style="background:#8C6A2C22;color:#8C6A2C">Marchés</span>
+            <span class="acc-title">Léger resserrement des spreads de crédit</span>
+            <span class="acc-chevron">▾</span>
+          </summary>
+          <div class="acc-body">Les indices iTraxx ont connu un <strong class="highlight-phrase">léger resserrement</strong>, et les spreads sur le marché cash se sont globalement bien tenus. Ceci indique une <strong class="highlight-phrase">certaine résilience sur les marchés du crédit</strong>, malgré le contexte macroéconomique et géopolitique tendu.</div>
+        </details>
+        
+        <details class="acc-item" style="--cat-couleur:#8C6A2C">
+          <summary class="acc-summary">
+            
+            <span class="acc-region" title="Asie">ASIA</span>
+            <span class="acc-pill" style="background:#8C6A2C22;color:#8C6A2C">Marchés</span>
+            <span class="acc-title">La Chine tente de soutenir les actions IA sans créer de bulle</span>
+            <span class="acc-chevron">▾</span>
+          </summary>
+          <div class="acc-body">Les autorités chinoises intensifient leurs efforts pour <strong class="highlight-phrase">redresser le marché boursier</strong> et soutenir les actions liées à l'IA, tout en cherchant à éviter la formation d'une bulle spéculative. Les actions chinoises ont progressé après des signes d'achats par des fonds publics, reflétant l'équilibre délicat entre la stimulation du secteur et le <strong class="highlight-phrase">contrôle des risques financiers</strong>.</div>
         </details>
         </div>
     </div>
@@ -1777,34 +1834,12 @@
         <details class="acc-item" style="--cat-couleur:#3E5C76">
           <summary class="acc-summary">
             
-            <span class="acc-region" title="Asie">ASIA</span>
+            <span class="acc-region" title="USA">US</span>
             <span class="acc-pill" style="background:#3E5C7622;color:#3E5C76">Macro</span>
-            <span class="acc-title">Chine : Excédent commercial record et fuite de capitaux</span>
+            <span class="acc-title">Le nouveau patron de la Fed réticent à signaler ses intentions monétaires</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">La Chine a enregistré un <strong class="highlight-figure">excédent commercial record de 125 milliards de dollars en juin</strong>, mais est confrontée à une fuite de capitaux estimée à <strong class="highlight-figure">jusqu'à 1 000 milliards de dollars</strong> l'année dernière. Pékin tente de contrer cette tendance pour éviter l'appréciation du renminbi et les sorties de fonds.</div>
-        </details>
-        
-        <details class="acc-item" style="--cat-couleur:#3E5C76">
-          <summary class="acc-summary">
-            
-            <span class="acc-region" title="Asie">ASIA</span>
-            <span class="acc-pill" style="background:#3E5C7622;color:#3E5C76">Macro</span>
-            <span class="acc-title">Économie chinoise face à l'austérité budgétaire</span>
-            <span class="acc-chevron">▾</span>
-          </summary>
-          <div class="acc-body">L'économie chinoise, deuxième plus grande du monde, est confrontée à une <strong class="highlight-phrase">austérité budgétaire</strong>, alors que Pékin cherche à consolider ses finances et gérer ses inquiétudes internes. Cela se manifeste par des tentatives de freiner la spéculation et l'investissement à l'étranger.</div>
-        </details>
-        
-        <details class="acc-item" style="--cat-couleur:#3E5C76">
-          <summary class="acc-summary">
-            
-            <span class="acc-region" title="Europe">EU</span>
-            <span class="acc-pill" style="background:#3E5C7622;color:#3E5C76">Macro</span>
-            <span class="acc-title">Nouveau Chancelier britannique face à des défis budgétaires</span>
-            <span class="acc-chevron">▾</span>
-          </summary>
-          <div class="acc-body">John Healey, le nouveau Chancelier de l'Échiquier britannique, hérite d'une situation budgétaire complexe. Il devra trouver des fonds pour les <strong class="highlight-phrase">dépenses de défense accrues</strong> et le soutien au coût de la vie promis par Andy Burnham, alors que le FMI avait averti que le Royaume-Uni ne pouvait pas se permettre d'augmenter ses dépenses publiques.</div>
+          <div class="acc-body">Le nouveau président de la Réserve fédérale, Kevin Warsh, est <strong class="highlight-phrase">réticent à signaler ses futurs mouvements de taux d'intérêt</strong>, ce qui pourrait inquiéter les marchés et les hedge funds habitués à plus de transparence. Cette approche marque un <strong class="highlight-phrase">changement par rapport aux pratiques antérieures</strong> et soulève des questions sur la manière dont la Fed gérera la communication de sa politique monétaire à l'avenir.</div>
         </details>
         
         <details class="acc-item" style="--cat-couleur:#3E5C76">
@@ -1812,21 +1847,32 @@
             
             <span class="acc-region" title="USA">US</span>
             <span class="acc-pill" style="background:#3E5C7622;color:#3E5C76">Macro</span>
-            <span class="acc-title">Le nouveau président de la Fed face au bilan de 7 000 milliards de dollars</span>
+            <span class="acc-title">Comment réduire le bilan de 7 000 milliards de dollars de la Fed</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">Kevin Warsh, le nouveau président de la Réserve fédérale, sera confronté à la tâche ardue de <strong class="highlight-figure">réduire le bilan de 7 000 milliards de dollars</strong> de la Fed. Il est considéré comme réticent à signaler les futurs mouvements de taux d'intérêt, ce qui pourrait dérouter les marchés.</div>
+          <div class="acc-body">Le nouveau président de la Fed, Kevin Warsh, sera confronté au défi de <strong class="highlight-figure">réduire le bilan de la Réserve fédérale, qui s'élève à 7 000 milliards de dollars</strong>. Inverser les effets des achats d'obligations sera une tâche complexe, soulignant les <strong class="highlight-phrase">pressions structurelles sur la politique monétaire</strong> post-crise et les défis à venir pour la normalisation monétaire.</div>
         </details>
         
         <details class="acc-item" style="--cat-couleur:#3E5C76">
           <summary class="acc-summary">
             
-            <span class="acc-region" title="USA">US</span>
+            <span class="acc-region" title="Asie">ASIA</span>
             <span class="acc-pill" style="background:#3E5C7622;color:#3E5C76">Macro</span>
-            <span class="acc-title">Prix de l'essence aux États-Unis repassent la barre des 4 dollars</span>
+            <span class="acc-title">Le déficit commercial chinois se réduit, vers une austérité fiscale</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">Les prix moyens de l'essence aux États-Unis ont repassé la barre des <strong class="highlight-figure">4 dollars le gallon</strong>, une première depuis le <strong class="highlight-figure">17 juin</strong>, en raison de l'intensification du conflit au Moyen-Orient et des perturbations de l'approvisionnement énergétique.</div>
+          <div class="acc-body">Le <strong class="highlight-phrase">déficit commercial de la Chine se réduit</strong>, et la deuxième économie mondiale s'oriente vers une <strong class="highlight-phrase">austérité fiscale</strong>. Ces évolutions soulignent les <strong class="highlight-phrase">faiblesses internes du modèle de croissance chinois</strong>, malgré les excédents commerciaux record, et pourraient avoir des implications sur la politique économique future de Pékin.</div>
+        </details>
+        
+        <details class="acc-item" style="--cat-couleur:#3E5C76">
+          <summary class="acc-summary">
+            
+            <span class="acc-region" title="Afrique">AFR</span>
+            <span class="acc-pill" style="background:#3E5C7622;color:#3E5C76">Macro</span>
+            <span class="acc-title">Les gouvernements africains échouent à promouvoir le libre-échange</span>
+            <span class="acc-chevron">▾</span>
+          </summary>
+          <div class="acc-body">Bright Simons critique les gouvernements africains pour leur <strong class="highlight-phrase">échec à promouvoir le libre-échange</strong>, tout en blâmant les puissances coloniales pour leurs problèmes économiques. Il souligne que les gouvernements africains n'ont pas réussi à comprendre que <strong class="highlight-phrase">« vous ne pouvez pas extraire de la valeur d'un continent dont les artères internes sont bloquées »</strong>, entravant ainsi le développement économique et la création de valeur interne.</div>
         </details>
         </div>
     </div>
@@ -1840,10 +1886,10 @@
             
             <span class="acc-region" title="USA">US</span>
             <span class="acc-pill" style="background:#5B755322;color:#5B7553">Corporate</span>
-            <span class="acc-title">Enquête sur l'empire assurantiel de Mark Walter pour manque de divulgation</span>
+            <span class="acc-title">Acquisition de Warner Bros Discovery par Paramount Skydance suspendue</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">Les procureurs américains enquêtent sur deux compagnies d'assurance liées à Mark Walter, le fondateur de Guggenheim Partners et de TWG Global, pour des manquements présumés à la divulgation d'investissements interconnectés. Walter est une figure clé du secteur de la convergence entre le capital privé et l'assurance, une industrie de <strong class="highlight-figure">22 000 milliards de dollars</strong>.</div>
+          <div class="acc-body">Un juge fédéral américain a <strong class="highlight-phrase">temporairement suspendu l'acquisition de Warner Bros Discovery par Paramount Skydance</strong>, d'une valeur de <strong class="highlight-figure">110 milliards de dollars</strong>. Cette décision fait suite à une plainte d'une douzaine d'États démocrates arguant que l'accord <strong class="highlight-phrase">étoufferait la concurrence à Hollywood</strong>, ce qui pourrait entraîner des retards significatifs ou une annulation de la transaction.</div>
         </details>
         
         <details class="acc-item" style="--cat-couleur:#5B7553">
@@ -1851,21 +1897,10 @@
             
             <span class="acc-region" title="USA">US</span>
             <span class="acc-pill" style="background:#5B755322;color:#5B7553">Corporate</span>
-            <span class="acc-title">Acquisition de Warner Bros Discovery par Paramount Skydance suspendue</span>
+            <span class="acc-title">Empire d'assurance de Mark Walter sous enquête aux États-Unis</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">Un juge fédéral américain a temporairement suspendu l'acquisition de Warner Bros Discovery par Paramount Skydance, un accord de <strong class="highlight-figure">110 milliards de dollars</strong>, donnant raison aux États démocrates qui craignent une atteinte à la concurrence à Hollywood.</div>
-        </details>
-        
-        <details class="acc-item" style="--cat-couleur:#5B7553">
-          <summary class="acc-summary">
-            
-            <span class="acc-region" title="Europe">EU</span>
-            <span class="acc-pill" style="background:#5B755322;color:#5B7553">Corporate</span>
-            <span class="acc-title">Jamie Dimon met en garde le Royaume-Uni contre des taxes bancaires</span>
-            <span class="acc-chevron">▾</span>
-          </summary>
-          <div class="acc-body">Jamie Dimon, PDG de JPMorgan Chase, a averti le nouveau gouvernement britannique contre toute hausse d'impôts ciblant les banques, affirmant que cela menacerait son projet de <strong class="highlight-figure">bureau de 3 milliards de livres sterling à Londres</strong> et nuirait à l'investissement dans le pays.</div>
+          <div class="acc-body">Des procureurs américains, dont le Southern District of New York, enquêtent sur <strong class="highlight-phrase">deux compagnies d'assurance gérées par le milliardaire Mark Walter</strong>, Delaware Life Insurance Company et Clear Spring Life and Annuity Company. L'enquête porte sur la question de savoir si elles ont <strong class="highlight-phrase">insuffisamment divulgué que certains de leurs investissements étaient liés à d'autres parties de son empire commercial</strong> tentaculaire, soulevant des questions sur la transparence et les conflits d'intérêts potentiels.</div>
         </details>
         
         <details class="acc-item" style="--cat-couleur:#5B7553">
@@ -1876,18 +1911,18 @@
             <span class="acc-title">Diageo prévoit un remaniement de son conseil d'administration</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">Le président de Diageo prévoit un remaniement de son conseil d'administration pour y intégrer des experts de l'industrie. Cette initiative survient alors que le géant des boissons fait face à un <strong class="highlight-phrase">recul historique de la demande</strong> de spiritueux.</div>
+          <div class="acc-body">Le président de Diageo, le géant des boissons, prévoit un <strong class="highlight-phrase">remaniement de son conseil d'administration</strong> afin d'y apporter une expérience industrielle « poids lourd ». Cette initiative survient alors que le groupe est confronté à un <strong class="highlight-phrase">ralentissement historique de la demande de spiritueux</strong>, nécessitant une nouvelle orientation stratégique pour naviguer dans ce contexte difficile.</div>
         </details>
         
         <details class="acc-item" style="--cat-couleur:#5B7553">
           <summary class="acc-summary">
             
-            <span class="acc-region" title="Asie">ASIA</span>
+            <span class="acc-region" title="Europe">EU</span>
             <span class="acc-pill" style="background:#5B755322;color:#5B7553">Corporate</span>
-            <span class="acc-title">Alibaba sanctionné par la Commission européenne</span>
+            <span class="acc-title">Réorganisation du département du Commerce britannique avec la science et l'innovation</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">Alibaba a été <strong class="highlight-phrase">sanctionné par la Commission européenne</strong>, bien que les détails spécifiques de cette sanction ne soient pas explicités. Cela souligne une pression réglementaire croissante sur les géants technologiques chinois en Europe.</div>
+          <div class="acc-body">Jonathan Reynolds a été confirmé comme <strong class="highlight-phrase">secrétaire au Commerce d'un département renforcé</strong>, intégrant désormais la <strong class="highlight-phrase">supervision de la science et de l'innovation</strong>. Le Département de la Science, de l'Innovation et de la Technologie est démantelé, suscitant l'inquiétude de la communauté technologique et soulevant des questions sur l'efficacité de cette nouvelle structure.</div>
         </details>
         </div>
     </div>
@@ -1900,22 +1935,11 @@
           <summary class="acc-summary">
             
             <span class="acc-region" title="Global">GLOBAL</span>
-            <span class="acc-pill" style="background:#9C5B4522;color:#9C5B45">Tech</span>
-            <span class="acc-title">Inquiétudes sur la dette hors bilan des géants de la tech</span>
-            <span class="acc-chevron">▾</span>
-          </summary>
-          <div class="acc-body">Les géants technologiques tels qu'Alphabet, Amazon, Meta, Microsoft et Oracle accumulent <strong class="highlight-figure">1 650 milliards de dollars de dette cachée</strong> (multipliée par <strong class="highlight-phrase">huit en quatre ans</strong>) pour construire des centres de données. Les marchés commencent à s'en inquiéter, soulignant les risques financiers associés à la course à l'IA.</div>
-        </details>
-        
-        <details class="acc-item" style="--cat-couleur:#9C5B45">
-          <summary class="acc-summary">
-            
-            <span class="acc-region" title="Global">GLOBAL</span>
             <span class="acc-pill" style="background:#9C5B4522;color:#9C5B45">IA</span>
-            <span class="acc-title">L'IA devient un facteur d'instabilité géopolitique</span>
+            <span class="acc-title">L'IA, moteur d'instabilité géopolitique et de compétition mondiale</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">L'intelligence artificielle est de plus en plus perçue comme un <strong class="highlight-phrase">moteur d'instabilité géopolitique</strong>. L'émergence de nouveaux modèles chinois d'IA, comme Kimi K3, accentue les craintes américaines et européennes de dépendance et de concurrence stratégique.</div>
+          <div class="acc-body">L'IA devient un <strong class="highlight-phrase">facteur majeur d'instabilité géopolitique et de compétition</strong> entre les puissances mondiales. L'annonce d'un <strong class="highlight-phrase">puissant modèle d'IA chinois open-source</strong> a cristallisé les craintes américaines concernant les capacités croissantes de Pékin. Des dirigeants d'Anthropic et OpenAI ont demandé des restrictions sur l'usage de ces modèles chinois, tandis que l'Europe, craignant de dépendre des superpuissances, voit les <strong class="highlight-phrase">capacités d'IA comme des « actifs vraiment stratégiques »</strong>.</div>
         </details>
         
         <details class="acc-item" style="--cat-couleur:#9C5B45">
@@ -1923,32 +1947,10 @@
             
             <span class="acc-region" title="Asie">ASIA</span>
             <span class="acc-pill" style="background:#9C5B4522;color:#9C5B45">IA</span>
-            <span class="acc-title">La Chine développe un puissant modèle d'IA, Kimi K3</span>
+            <span class="acc-title">Ambitions d'IA chinoises et restrictions d'investissement</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">Un nouveau modèle d'IA chinois, <strong class="highlight-figure">Kimi K3</strong>, est jugé suffisamment puissant pour préoccuper les États-Unis et faire trembler les géants technologiques américains. Des chercheurs chinois craignent que l'IA n'accélère les cycles de décision, <strong class="highlight-phrase">réduisant la marge de manœuvre diplomatique</strong>.</div>
-        </details>
-        
-        <details class="acc-item" style="--cat-couleur:#9C5B45">
-          <summary class="acc-summary">
-            
-            <span class="acc-region" title="Global">GLOBAL</span>
-            <span class="acc-pill" style="background:#9C5B4522;color:#9C5B45">IA</span>
-            <span class="acc-title">Les capacités d'IA considérées comme des actifs stratégiques</span>
-            <span class="acc-chevron">▾</span>
-          </summary>
-          <div class="acc-body">Le commissaire européen aux technologies numériques a déclaré que les capacités d'IA sont désormais de « <strong class="highlight-phrase">véritables actifs stratégiques</strong> », soulignant la course mondiale entre les superpuissances technologiques et la crainte de l'Europe d'être laissée pour compte.</div>
-        </details>
-        
-        <details class="acc-item" style="--cat-couleur:#9C5B45">
-          <summary class="acc-summary">
-            
-            <span class="acc-region" title="Global">GLOBAL</span>
-            <span class="acc-pill" style="background:#9C5B4522;color:#9C5B45">Tech</span>
-            <span class="acc-title">Rebond du secteur des semi-conducteurs malgré les inquiétudes</span>
-            <span class="acc-chevron">▾</span>
-          </summary>
-          <div class="acc-body">Les actions des fabricants de puces, notamment Samsung et TSMC, ont enregistré des <strong class="highlight-phrase">gains importants</strong>, après une période de baisse due aux craintes d'une bulle de l'IA. Les investisseurs parient sur une demande continue pour les semi-conducteurs, notamment en lien avec l'IA.</div>
+          <div class="acc-body">Le dirigeant chinois Xi Jinping a présenté son pays comme le <strong class="highlight-phrase">vanguard de la nouvelle ère de l'IA</strong>. Pourtant, son administration <strong class="highlight-phrase">empêche ses citoyens de participer au boom mondial de l'investissement en IA</strong>, perçu comme l'une des plus grandes augmentations d'actifs de l'histoire. Certains analystes estiment que le <strong class="highlight-phrase">resserrement des contrôles de capitaux</strong> vise à éviter une ruée des investisseurs chinois vers le Nasdaq, tout en consolidant le contrôle étatique sur le développement de l'IA.</div>
         </details>
         </div>
     </div>
@@ -1962,10 +1964,10 @@
             
             <span class="acc-region" title="Global">GLOBAL</span>
             <span class="acc-pill" style="background:#6E6C6322;color:#6E6C63">Géopolitique</span>
-            <span class="acc-title">Conflit USA-Iran s'intensifie, impact sur l'énergie</span>
+            <span class="acc-title">Escalade du conflit US-Iran et impact global sur l'énergie</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">Le conflit entre les États-Unis et l'Iran s'est intensifié, marquant le <strong class="highlight-phrase">dixième jour d'attaques aériennes</strong> mutuelles et transformant le Moyen-Orient en un véritable « bourbier » pour l'administration Trump. Cette escalade a eu un impact immédiat et sévère sur le commerce mondial de l'énergie, avec seulement <strong class="highlight-figure">53 navires</strong> traversant le détroit d'Ormuz la semaine dernière, soit une <strong class="highlight-figure">chute drastique de 66%</strong> par rapport à la période précédente. Les menaces des Houthis en mer Rouge limitent également la capacité de l'Arabie Saoudite à réacheminer ses exportations de pétrole. Les conséquences économiques se traduisent par une flambée des prix : le pétrole Brent a <strong class="highlight-figure">dépassé les 90 dollars le baril</strong>, atteignant son plus haut niveau en un mois, et le prix moyen de l'essence aux États-Unis a dépassé les <strong class="highlight-figure">4 dollars le gallon</strong>. Goldman Sachs anticipe que les prix du gaz européen resteront élevés <strong class="highlight-figure">jusqu'en 2027/28</strong>, signalant une crise énergétique mondiale prolongée. Sur le plan humain, les États-Unis ont subi de lourdes pertes avec près de <strong class="highlight-figure">100 soldats blessés</strong> depuis la reprise des frappes le <strong class="highlight-figure">7 juillet</strong>, et <strong class="highlight-phrase">quatre militaires tués</strong> en Jordanie et en Irak, dont Tyler James Feehan et Isabella Gonzales, soulignant les risques croissants pour les troupes américaines. La diplomatie tente de reprendre, mais les faucons de l'administration américaine semblent privilégier le renversement de régime, ce qui, selon les analystes, pourrait enfoncer l'Amérique plus profondément dans un nouveau bourbier au Moyen-Orient.</div>
+          <div class="acc-body">Le conflit entre les États-Unis et l'Iran connaît une <strong class="highlight-phrase">escalade significative, marquant le dixième jour consécutif de frappes aériennes</strong> américaines. Cette intensité a des conséquences directes sur les marchés énergétiques mondiaux, avec une <strong class="highlight-figure">chute drastique de 66% du trafic maritime dans le détroit d'Ormuz</strong> la semaine dernière, une artère vitale pour le commerce pétrolier. En conséquence, le <strong class="highlight-figure">prix du pétrole Brent a dépassé les 90 dollars le baril</strong>, atteignant son plus haut niveau en un mois, et les prix de l'essence aux États-Unis ont repassé la barre des <strong class="highlight-figure">4 dollars le gallon</strong>. Des analystes prévoient que les prix du gaz européen resteront élevés jusqu'en <strong class="highlight-figure">2027/28</strong>, ce qui ravive les craintes d'une inflation mondiale durable et met la pression sur les banques centrales. Le président libanais Joseph Aoun rencontre d'ailleurs Donald Trump à la Maison Blanche pour discuter de la désescalade et des « zones pilotes » sécuritaires.</div>
         </details>
         
         <details class="acc-item" style="--cat-couleur:#6E6C63">
@@ -1973,32 +1975,10 @@
             
             <span class="acc-region" title="USA">US</span>
             <span class="acc-pill" style="background:#6E6C6322;color:#6E6C63">Géopolitique</span>
-            <span class="acc-title">USA imposent des droits de douane de 50% au Canada</span>
+            <span class="acc-title">Les États-Unis imposent des droits de douane de 50% sur des produits canadiens</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">L'administration du président Donald Trump a annoncé l'imposition de <strong class="highlight-figure">droits de douane supplémentaires de 50%</strong> sur une vaste gamme de produits canadiens, incluant le vin, les produits laitiers, les vêtements et les meubles. Ces tarifs, qui entreront en vigueur dans <strong class="highlight-figure">30 jours</strong>, sont présentés comme une réponse aux pratiques commerciales jugées « discriminatoires » du Canada. Cette décision intervient juste avant des pourparlers prévus à Mexico sur l'accord de libre-échange USMCA, que Trump a déjà menacé de quitter, ce qui pourrait sérieusement <strong class="highlight-phrase">compliquer les négociations commerciales</strong> et potentiellement déclencher une nouvelle guerre commerciale. Des républicains au Capitole sont divisés, certains voyant les prélèvements comme une tactique de négociation, tandis que d'autres s'opposent aux tarifs. Le président a invoqué la Section 338 de la loi sur les tarifs douaniers, une disposition <strong class="highlight-phrase">jamais utilisée à cette fin auparavant</strong>. La ministre canadienne des Finances, Chrystia Freeland, a réagi en affirmant que « se défendre fonctionne » dans une guerre commerciale, suggérant que le Canada ne reculera pas face à ces nouvelles pressions.</div>
-        </details>
-        
-        <details class="acc-item" style="--cat-couleur:#3E5C76">
-          <summary class="acc-summary">
-            
-            <span class="acc-region" title="Asie">ASIA</span>
-            <span class="acc-pill" style="background:#3E5C7622;color:#3E5C76">Macro</span>
-            <span class="acc-title">Fuite de capitaux en Chine malgré l'excédent commercial record</span>
-            <span class="acc-chevron">▾</span>
-          </summary>
-          <div class="acc-body">L'économie chinoise présente un paradoxe frappant : malgré un <strong class="highlight-figure">excédent commercial record de 125 milliards de dollars en juin</strong>, une quantité massive de capitaux, estimée à <strong class="highlight-figure">jusqu'à 1 000 milliards de dollars</strong>, aurait quitté le pays l'année dernière. Les autorités de Pékin mettent en œuvre des mesures strictes pour contrer cette fuite et éviter une appréciation du renminbi, qui pourrait nuire à la compétitivité de ses exportations. Les régulateurs boursiers ciblent spécifiquement les courtiers de Hong Kong, utilisés comme conduits par de riches particuliers pour transférer des fonds à l'étranger, et les grandes banques vérifient plus attentivement leurs clients du continent. Cette divergence entre une force exportatrice externe et une faiblesse économique interne, caractérisée par une baisse des investissements et une consommation en berne, reflète une profonde tension au cœur du modèle de croissance chinois. Des analystes suggèrent que le resserrement des contrôles des capitaux vise en partie à éviter une ruée des investisseurs chinois vers des marchés étrangers plus lucratifs comme le Nasdaq, laissant les épargnants chinois potentiellement doublement perdants.</div>
-        </details>
-        
-        <details class="acc-item" style="--cat-couleur:#3E5C76">
-          <summary class="acc-summary">
-            
-            <span class="acc-region" title="Europe">EU</span>
-            <span class="acc-pill" style="background:#3E5C7622;color:#3E5C76">Macro</span>
-            <span class="acc-title">Nouveau Chancelier au Royaume-Uni soulève des craintes fiscales</span>
-            <span class="acc-chevron">▾</span>
-          </summary>
-          <div class="acc-body">La nomination de John Healey au poste de Chancelier de l'Échiquier par le nouveau Premier ministre britannique, Andy Burnham, a créé la surprise et soulevé des inquiétudes importantes sur les marchés. Healey, ancien secrétaire à la Défense et critique des « règles budgétaires » du Trésor, est connu pour son engagement en faveur de <strong class="highlight-phrase">dépenses de défense accrues</strong> et son intérêt pour les obligations de guerre. Cette nomination, faite après la clôture des marchés obligataires hier, a immédiatement entraîné une <strong class="highlight-phrase">sous-performance du marché des Gilts</strong>, ravivant les craintes fiscales. Les analystes craignent que les commentaires de Burnham sur la « flexibilité » des règles budgétaires, combinés aux positions de Healey, n'entraînent une augmentation significative de la dette publique et des dépenses. Cette situation est d'autant plus préoccupante que le FMI avait récemment averti que le Royaume-Uni ne pouvait pas se permettre d'augmenter ses dépenses publiques. Healey aura la lourde tâche de concilier ces promesses de dépenses avec une situation budgétaire déjà tendue, tandis que Rachel Reeves, pressentie pour le poste, a quitté le cabinet.</div>
+          <div class="acc-body">Le président Donald Trump a annoncé l'imposition de <strong class="highlight-figure">tarifs additionnels de 50% sur une large gamme de produits canadiens</strong>, notamment le vin, les produits laitiers, les vêtements et les meubles. Ces droits de douane, qui prendront effet dans <strong class="highlight-figure">30 jours</strong>, sont présentés comme une réponse aux pratiques commerciales jugées « discriminatoires » du Canada. Cette décision intervient juste avant des négociations cruciales sur l'accord de libre-échange US-Mexique-Canada (AEUMC) et pourrait <strong class="highlight-phrase">sérieusement compliquer les discussions, voire entraîner le retrait des États-Unis</strong> comme Trump l'a laissé entendre. L'utilisation d'une section de la loi tarifaire pour cette mesure est <strong class="highlight-phrase">inhabituelle et susceptible de contestations juridiques</strong>, marquant une résurgence des tensions commerciales.</div>
         </details>
         
         <details class="acc-item" style="--cat-couleur:#9C5B45">
@@ -2006,10 +1986,54 @@
             
             <span class="acc-region" title="Global">GLOBAL</span>
             <span class="acc-pill" style="background:#9C5B4522;color:#9C5B45">Tech</span>
-            <span class="acc-title">Dette cachée des géants de la tech et risques géopolitiques de l'IA</span>
+            <span class="acc-title">Dette hors bilan des géants technologiques sur l'IA inquiète les marchés</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">Le secteur technologique, bien que connaissant un rebond récent des actions (notamment les fabricants de puces Samsung et TSMC), est confronté à une préoccupation croissante concernant la <strong class="highlight-phrase">dette hors bilan</strong> de ses géants. Alphabet, Amazon, Meta, Microsoft et Oracle ont accumulé <strong class="highlight-figure">1 650 milliards de dollars</strong> de dette « cachée » sur leurs bilans, soit une augmentation de <strong class="highlight-phrase">huit fois en quatre ans</strong>, principalement pour financer la construction massive de centres de données essentiels à l'expansion de l'IA. Cette pratique commence à susciter des inquiétudes sur les marchés et auprès d'institutions comme Morgan Stanley et Moody's. Parallèlement, l'intelligence artificielle est devenue un <strong class="highlight-phrase">moteur majeur d'instabilité et de compétition géopolitique</strong>. L'émergence d'un puissant modèle d'IA chinois, <strong class="highlight-figure">Kimi K3</strong>, a cristallisé les craintes américaines concernant les capacités croissantes de Pékin, conduisant les dirigeants d'Anthropic et OpenAI à exhorter Washington à restreindre l'utilisation de ces modèles. Des chercheurs chinois avertissent que l'usage accru de l'IA accélère les cycles de décision, <strong class="highlight-phrase">réduisant la marge de manœuvre diplomatique</strong>. L'Europe, quant à elle, s'inquiète de sa dépendance envers les deux superpuissances de l'IA, considérant ces capacités comme des « actifs stratégiques » essentiels à la souveraineté.</div>
+          <div class="acc-body">Une préoccupation majeure émerge concernant la <strong class="highlight-phrase">dette hors bilan considérable accumulée par les géants technologiques</strong> tels qu'Alphabet, Amazon, Meta, Microsoft et Oracle. Leurs états financiers révèlent une <strong class="highlight-figure">dette cachée de 1 650 milliards de dollars</strong>, un montant qui a été <strong class="highlight-phrase">multiplié par huit en seulement quatre ans</strong>, principalement due à leurs investissements massifs dans les centres de données nécessaires au développement de l'IA. Bien que ces entreprises expriment leur confiance que les bénéfices futurs dépasseront ces engagements, le marché <strong class="highlight-phrase">« commence à s'inquiéter » de l'impact potentiel de ces passifs non consolidés</strong> sur leur stabilité financière et les valorisations boursières, comme l'ont souligné des rapports de Morgan Stanley et Moody's.</div>
+        </details>
+        
+        <details class="acc-item" style="--cat-couleur:#3E5C76">
+          <summary class="acc-summary">
+            
+            <span class="acc-region" title="Asie">ASIA</span>
+            <span class="acc-pill" style="background:#3E5C7622;color:#3E5C76">Macro</span>
+            <span class="acc-title">La Chine face au paradoxe de ses excédents commerciaux et fuites de capitaux</span>
+            <span class="acc-chevron">▾</span>
+          </summary>
+          <div class="acc-body">La Chine est confrontée à un paradoxe économique : malgré un <strong class="highlight-figure">excédent commercial record de 125 milliards de dollars en juin</strong>, tiré par les exportations de haute technologie comme les véhicules électriques et les panneaux solaires, le pays lutte contre d'importantes fuites de capitaux. On estime que <strong class="highlight-figure">jusqu'à 1 000 milliards de dollars ont quitté le pays l'année dernière</strong>, ce qui met le renminbi sous pression. Pékin a réagi en <strong class="highlight-phrase">renforçant les contrôles de capitaux</strong>, ciblant notamment les maisons de courtage de Hong Kong utilisées par les individus fortunés pour transférer des fonds offshore. Cette dissonance souligne une <strong class="highlight-phrase">faiblesse interne malgré une force externe</strong> apparente, reflétée dans la baisse des investissements et une consommation intérieure en berne.</div>
+        </details>
+        
+        <details class="acc-item" style="--cat-couleur:#3E5C76">
+          <summary class="acc-summary">
+            
+            <span class="acc-region" title="Europe">EU</span>
+            <span class="acc-pill" style="background:#3E5C7622;color:#3E5C76">Macro</span>
+            <span class="acc-title">Le nouveau Chancelier britannique suscite des craintes fiscales sur les marchés</span>
+            <span class="acc-chevron">▾</span>
+          </summary>
+          <div class="acc-body">La nomination de <strong class="highlight-phrase">John Healey au poste de Chancelier de l'Échiquier</strong> par le nouveau Premier ministre Andy Burnham a été une surprise et a immédiatement <strong class="highlight-phrase">mis sous pression les marchés des Gilts britanniques</strong>, qui ont sous-performé. Healey, connu pour avoir milité pour une augmentation des dépenses de défense, hérite d'un <strong class="highlight-phrase">contexte budgétaire national des plus difficiles</strong>. Il devra trouver les moyens de financer non seulement les dépenses de défense, mais aussi les promesses de Burnham en matière de soutien au coût de la vie, tout en gérant l'érosion des marges budgétaires due à la crise énergétique. Le <strong class="highlight-phrase">FMI a récemment averti le Royaume-Uni contre toute augmentation des dépenses publiques</strong>, et Jamie Dimon de JPMorgan Chase a mis en garde contre des <strong class="highlight-phrase">taxes punitives sur les banques</strong> qui pourraient compromettre des investissements majeurs comme leur projet de bureau à Londres de <strong class="highlight-figure">3 milliards de livres sterling</strong>.</div>
+        </details>
+        
+        <details class="acc-item" style="--cat-couleur:#8C6A2C">
+          <summary class="acc-summary">
+            
+            <span class="acc-region" title="USA">US</span>
+            <span class="acc-pill" style="background:#8C6A2C22;color:#8C6A2C">Marchés</span>
+            <span class="acc-title">Divergence record entre la volatilité du marché global et des actions individuelles</span>
+            <span class="acc-chevron">▾</span>
+          </summary>
+          <div class="acc-body">Le marché boursier américain est actuellement caractérisé par une <strong class="highlight-figure">divergence frappante entre la volatilité de l'indice S&P 500 et celle de ses composantes individuelles</strong>. L'indice de volatilité <strong class="highlight-figure">VIX se situe à 17,5</strong>, en dessous de sa moyenne à long terme, suggérant une apparente tranquillité pour l'ensemble du marché. Cependant, le <strong class="highlight-figure">VIXEQ, qui mesure la volatilité moyenne des actions individuelles, dépasse les 50</strong>, créant un <strong class="highlight-phrase">écart historique</strong> entre ces deux indicateurs. Cette anomalie révèle que les investisseurs ne se préparent pas à un choc systémique, mais sont <strong class="highlight-phrase">« exceptionnellement préoccupés par certaines actions et certains secteurs spécifiques »</strong>, notamment les valeurs de croissance et de semi-conducteurs fortement liées à l'enthousiasme pour l'IA. Cette année, il y a déjà eu <strong class="highlight-figure">52 jours de bourse où l'indice et la majorité des actions ont évolué en sens inverse</strong>, un chiffre qui pourrait battre le record de l'année 2000.</div>
+        </details>
+        
+        <details class="acc-item" style="--cat-couleur:#9C5B45">
+          <summary class="acc-summary">
+            
+            <span class="acc-region" title="Global">GLOBAL</span>
+            <span class="acc-pill" style="background:#9C5B4522;color:#9C5B45">IA</span>
+            <span class="acc-title">L'IA, moteur d'instabilité géopolitique et de compétition mondiale</span>
+            <span class="acc-chevron">▾</span>
+          </summary>
+          <div class="acc-body">L'intelligence artificielle est en train de devenir un <strong class="highlight-phrase">catalyseur majeur d'instabilité géopolitique et de compétition acharnée</strong> entre les principales puissances mondiales. L'annonce récente d'un <strong class="highlight-phrase">modèle d'IA chinois puissant et open-source</strong> a considérablement accru les inquiétudes américaines concernant les capacités croissantes de Pékin dans ce domaine. Des figures de proue de l'IA comme les dirigeants d'Anthropic et d'OpenAI ont directement sollicité Washington pour <strong class="highlight-phrase">restreindre l'utilisation de ces nouveaux modèles chinois</strong> sur le territoire américain. Parallèlement, des chercheurs chinois eux-mêmes ont averti que l'adoption croissante de l'IA <strong class="highlight-phrase">« réduit la marge de manœuvre diplomatique »</strong> en accélérant les cycles de prise de décision. L'Europe, quant à elle, s'inquiète de sa dépendance potentielle envers les deux superpuissances, son commissaire au numérique qualifiant les <strong class="highlight-phrase">capacités d'IA d'« actifs vraiment stratégiques »</strong> à l'heure actuelle, soulignant l'urgence d'une souveraineté technologique.</div>
         </details>
         
         <details class="acc-item" style="--cat-couleur:#5B7553">
@@ -2017,32 +2041,76 @@
             
             <span class="acc-region" title="USA">US</span>
             <span class="acc-pill" style="background:#5B755322;color:#5B7553">Corporate</span>
-            <span class="acc-title">Enquête sur l'empire assurantiel de Mark Walter pour manque de divulgation</span>
+            <span class="acc-title">Acquisition de Warner Bros Discovery par Paramount Skydance suspendue</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">Les procureurs américains, notamment ceux du district sud de New York, ont lancé une enquête approfondie sur deux compagnies d'assurance, Delaware Life Insurance et Clear Spring Life et Annuity Company, toutes deux dirigées par le milliardaire Mark Walter. L'investigation porte sur des allégations selon lesquelles ces entités n'auraient pas adéquatement divulgué que certains de leurs investissements étaient liés à d'autres parties du vaste empire commercial de Walter, TWG Global, qui inclut également Guggenheim Partners, une entreprise d'investissement et d'assurance. Mark Walter est reconnu comme un pionnier de la convergence entre le capital privé et l'assurance, un modèle qui est devenu la pierre angulaire de l'industrie du capital privé, pesant <strong class="highlight-figure">22 000 milliards de dollars</strong>. Son ascension discrète à Wall Street a été saluée et critiquée, et cette enquête marque le plus proche examen réglementaire de ses pratiques depuis des décennies. Les procureurs ont déjà signifié des assignations à comparaître aux compagnies, signalant une intensification de la surveillance des liens complexes entre le capital privé et le secteur des assurances.</div>
+          <div class="acc-body">Une transaction majeure dans le secteur des médias, l'<strong class="highlight-figure">acquisition de Warner Bros Discovery par Paramount Skydance pour 110 milliards de dollars</strong>, a été <strong class="highlight-phrase">temporairement suspendue</strong> par un juge fédéral américain. Cette décision fait suite à une plainte déposée par une douzaine d'États dirigés par des démocrates, qui ont argué que cet accord colossal <strong class="highlight-phrase">« étoufferait la concurrence à Hollywood »</strong>. L'intervention judiciaire met en péril cette fusion ambitieuse, signalant une surveillance accrue des autorités antitrust sur les méga-fusions, en particulier celles qui pourraient affecter la diversité et l'accès au contenu sur le marché du divertissement. Les implications de cette suspension pourraient être un retard significatif, une renégociation ou même une annulation de l'accord.</div>
+        </details>
+        
+        <details class="acc-item" style="--cat-couleur:#5B7553">
+          <summary class="acc-summary">
+            
+            <span class="acc-region" title="USA">US</span>
+            <span class="acc-pill" style="background:#5B755322;color:#5B7553">Corporate</span>
+            <span class="acc-title">Empire d'assurance de Mark Walter sous enquête aux États-Unis</span>
+            <span class="acc-chevron">▾</span>
+          </summary>
+          <div class="acc-body">L'empire financier du milliardaire discret Mark Walter, bâtisseur de Guggenheim Partners et propriétaire de participations dans les Lakers et les Dodgers, est désormais sous la loupe des autorités américaines. Des procureurs, notamment du Southern District of New York, ont ouvert une enquête sur <strong class="highlight-phrase">deux de ses compagnies d'assurance, Delaware Life Insurance Company et Clear Spring Life and Annuity Company</strong>. Le cœur de l'enquête porte sur la question de savoir si ces entités ont <strong class="highlight-phrase">« insuffisamment divulgué que certains de leurs investissements étaient liés à d'autres parties de son empire commercial »</strong> tentaculaire. Cette investigation soulève des questions importantes sur la transparence, la gouvernance d'entreprise et les potentiels conflits d'intérêts au sein des structures complexes qui lient le capital privé et l'assurance, un modèle dont Walter a été un pionnier au cours des vingt-cinq dernières années.</div>
         </details>
         
         <details class="acc-item" style="--cat-couleur:#8C6A2C">
           <summary class="acc-summary">
             
-            <span class="acc-region" title="USA">US</span>
+            <span class="acc-region" title="Global">GLOBAL</span>
             <span class="acc-pill" style="background:#8C6A2C22;color:#8C6A2C">Marchés</span>
-            <span class="acc-title">Volatilité des actions individuelles atteint un record historique</span>
+            <span class="acc-title">Le prix du pétrole Brent dépasse les 90 dollars</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">Le marché boursier américain présente un tableau trompeur : si l'indice de volatilité Cboe (VIX), souvent qualifié de « jauge de la peur », se maintient à un niveau relativement bas de <strong class="highlight-figure">17,5</strong>, la volatilité des actions individuelles, mesurée par l'indice VIXEQ, dépasse <strong class="highlight-figure">50</strong>, créant un écart record entre les deux mesures. Cette divergence suggère que les investisseurs ne se préparent pas à un effondrement général du marché, mais sont exceptionnellement préoccupés par des actions et des secteurs spécifiques, en particulier les <strong class="highlight-phrase">actions de croissance et de « momentum »</strong> comme les fabricants de puces, dont les performances ont fluctué au gré de l'optimisme lié à l'IA. Un indicateur plus simple, l'écart entre le prix du marché et l'élargissement, n'a jamais été aussi élevé. Jonathan Krinsky, analyste technique chez BTIG, note qu'il y a eu <strong class="highlight-figure">52 jours de trading</strong> cette année où l'indice S&P 500 a évolué dans une direction, mais la majorité des actions du S&P 500 dans l'autre, égalant ainsi le record de l'année tumultueuse <strong class="highlight-figure">2000</strong>. Cette situation devrait s'aggraver d'ici la fin juillet 2026, brisant probablement le record et indiquant des doutes sérieux sur de nombreuses valeurs établies, rappelant le pic de la bulle technologique.</div>
+          <div class="acc-body">Le marché du pétrole est de nouveau sous tension, avec le prix du <strong class="highlight-figure">Brent, la référence mondiale, dépassant les 90 dollars le baril</strong>. Il s'agit de son <strong class="highlight-phrase">plus haut niveau depuis un mois</strong>, une flambée directement attribuable à l'intensification des <strong class="highlight-phrase">tensions géopolitiques au Moyen-Orient</strong>, notamment le conflit américano-iranien. Cette hausse des prix de l'énergie alimente les <strong class="highlight-phrase">craintes d'une résurgence de l'inflation mondiale</strong>, mettant la pression sur les économies déjà fragiles et les banques centrales qui luttent pour maîtriser les hausses de prix. Les interruptions du trafic maritime dans des zones clés comme le détroit d'Ormuz contribuent également à cette dynamique haussière, créant un risque significatif pour la stabilité économique globale.</div>
         </details>
         
-        <details class="acc-item" style="--cat-couleur:#6E6C63">
+        <details class="acc-item" style="--cat-couleur:#3E5C76">
           <summary class="acc-summary">
             
             <span class="acc-region" title="USA">US</span>
-            <span class="acc-pill" style="background:#6E6C6322;color:#6E6C63">Géopolitique</span>
-            <span class="acc-title">Le Président du Liban rencontre Trump pour un plan de désarmement du Hezbollah</span>
+            <span class="acc-pill" style="background:#3E5C7622;color:#3E5C76">Macro</span>
+            <span class="acc-title">Le nouveau patron de la Fed réticent à signaler ses intentions monétaires</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">Le président libanais, Joseph Aoun, est attendu à la Maison Blanche aujourd'hui pour sa première rencontre avec Donald Trump depuis son accession au pouvoir en <strong class="highlight-figure">2025</strong>, marquant la première visite d'un chef d'État libanais en près de <strong class="highlight-phrase">deux décennies</strong>. Cette visite intervient à un moment critique, alors que les troupes israéliennes ont saisi <strong class="highlight-figure">plus de 10 kilomètres</strong> à l'intérieur du territoire libanais et que le conflit a fait <strong class="highlight-figure">plus de 4 300 morts</strong> et déplacé <strong class="highlight-phrase">plus d'un million de personnes</strong> au Liban. Les deux dirigeants devraient discuter de l'établissement de « zones pilotes » dans les villages du sud du Liban (Froun, Srifa, West Zawtar), impliquant les forces armées libanaises en coopération avec l'armée américaine, dans des zones précédemment contrôlées par le groupe militant Hezbollah. Le président Aoun devrait également présenter un <strong class="highlight-phrase">plan détaillé pour le désarmement du Hezbollah</strong>, et demander à Trump d'exercer des pressions sur Israël pour la mise en œuvre d'un accord signé entre le Liban et Israël le <strong class="highlight-figure">26 juin</strong>.</div>
+          <div class="acc-body">Kevin Warsh, le nouveau président de la Réserve fédérale, adopte une approche de communication notablement différente de ses prédécesseurs, se montrant <strong class="highlight-phrase">« réticent à signaler ses futurs mouvements de taux d'intérêt »</strong>. Cette posture pourrait créer de l'incertitude sur les marchés financiers, notamment auprès des hedge funds et des investisseurs habitués à des indications claires sur la direction de la politique monétaire. Certains analystes y voient une tentative de réimaginer l'élaboration de la politique monétaire, mais elle soulève des questions sur la transparence et la manière dont la Fed gérera les attentes du marché à l'avenir. Cela contraste avec l'ère précédente où la forward guidance était un outil central de communication.</div>
+        </details>
+        
+        <details class="acc-item" style="--cat-couleur:#3E5C76">
+          <summary class="acc-summary">
+            
+            <span class="acc-region" title="USA">US</span>
+            <span class="acc-pill" style="background:#3E5C7622;color:#3E5C76">Macro</span>
+            <span class="acc-title">Comment réduire le bilan de 7 000 milliards de dollars de la Fed</span>
+            <span class="acc-chevron">▾</span>
+          </summary>
+          <div class="acc-body">L'un des défis majeurs qui attend Kevin Warsh, le nouveau président de la Réserve fédérale, est la gestion de l'immense <strong class="highlight-figure">bilan de la Fed, qui s'élève à 7 000 milliards de dollars</strong>. La tâche de réduire cette quantité massive d'actifs accumulés par des années d'achats d'obligations, notamment dans le cadre de l'assouplissement quantitatif, s'annonce complexe. Les efforts pour <strong class="highlight-phrase">« inverser les effets des achats d'obligations »</strong> pourraient avoir des répercussions significatives sur les marchés financiers et l'économie en général, soulignant les pressions structurelles et les dilemmes auxquels la politique monétaire est confrontée après des périodes de mesures extraordinaires.</div>
+        </details>
+        
+        <details class="acc-item" style="--cat-couleur:#3E5C76">
+          <summary class="acc-summary">
+            
+            <span class="acc-region" title="Asie">ASIA</span>
+            <span class="acc-pill" style="background:#3E5C7622;color:#3E5C76">Macro</span>
+            <span class="acc-title">Le déficit commercial chinois se réduit, vers une austérité fiscale</span>
+            <span class="acc-chevron">▾</span>
+          </summary>
+          <div class="acc-body">La Chine, la deuxième économie mondiale, montre des signes d'évolution avec un <strong class="highlight-phrase">« déficit commercial qui se réduit »</strong>, et une tendance vers une <strong class="highlight-phrase">austérité fiscale</strong>. Ces développements sont perçus comme des surprises et signalent des <strong class="highlight-phrase">« faiblesses internes »</strong> du modèle de croissance chinois, en dépit de ses excédents commerciaux externes massifs. Cette réorientation potentielle vers une politique fiscale plus stricte pourrait avoir des implications importantes sur la croissance future du pays, ses relations commerciales internationales et la manière dont Pékin gérera les déséquilibres économiques structurels.</div>
+        </details>
+        
+        <details class="acc-item" style="--cat-couleur:#3E5C76">
+          <summary class="acc-summary">
+            
+            <span class="acc-region" title="Afrique">AFR</span>
+            <span class="acc-pill" style="background:#3E5C7622;color:#3E5C76">Macro</span>
+            <span class="acc-title">Les gouvernements africains échouent à promouvoir le libre-échange</span>
+            <span class="acc-chevron">▾</span>
+          </summary>
+          <div class="acc-body">Bright Simons, un commentateur économique, formule une critique acerbe des gouvernements africains, les accusant de <strong class="highlight-phrase">« ne pas promouvoir le libre-échange »</strong> au sein du continent tout en attribuant leurs difficultés économiques aux puissances coloniales. Il met en lumière l'échec de la classe dirigeante africaine à comprendre une leçon fondamentale : <strong class="highlight-phrase">« vous ne pouvez pas extraire de la valeur d'un continent dont les artères internes sont bloquées »</strong>. Selon lui, cette inertie entrave le développement économique interne et la capacité du continent à générer sa propre richesse, soulignant la nécessité urgente d'une réforme des politiques commerciales intra-africaines.</div>
         </details>
         
         <details class="acc-item" style="--cat-couleur:#8C6A2C">
@@ -2050,10 +2118,54 @@
             
             <span class="acc-region" title="Europe">EU</span>
             <span class="acc-pill" style="background:#8C6A2C22;color:#8C6A2C">Marchés</span>
-            <span class="acc-title">LSE prévoit un trading 24h/24 et 7j/7 pour regagner le commerce de détail</span>
+            <span class="acc-title">Les Gilts britanniques sous-performent après le discours de Burnham</span>
             <span class="acc-chevron">▾</span>
           </summary>
-          <div class="acc-body">La Bourse de Londres (LSE) a annoncé des plans ambitieux pour lancer un <strong class="highlight-figure">trading continu 24 heures sur 24 et 7 jours sur 7 à partir de l'année prochaine</strong>. Cette initiative est la dernière en date des bourses traditionnelles visant à regagner le terrain perdu auprès des investisseurs de détail, qui se tournent de plus en plus vers des plateformes de trading numérique et des actifs non traditionnels comme les cryptomonnaies, disponibles à tout moment. En élargissant considérablement ses heures de négociation, le LSE espère offrir une flexibilité et une accessibilité accrues aux investisseurs, s'alignant sur les tendances mondiales des marchés financiers et la demande pour une liquidité constante. Cette mesure pourrait transformer la dynamique du marché britannique, en attirant un volume de transactions plus important et en renforçant la position de Londres en tant que centre financier mondial. Les détails spécifiques de la mise en œuvre et les régulations associées sont attendus prochainement.</div>
+          <div class="acc-body">Le marché des Gilts (obligations d'État britanniques) a <strong class="highlight-phrase">sous-performé de manière notable</strong> suite au discours d'investiture d'Andy Burnham, le nouveau Premier ministre. Cette réaction est due à la <strong class="highlight-phrase">« réactivation des craintes fiscales »</strong> parmi les investisseurs, craignant une augmentation des dépenses publiques sans financement clair. Les rendements sur la partie longue des courbes obligataires ont augmenté significativement, avec le <strong class="highlight-figure">2s10s atteignant 34 points de base</strong>, ce qui reflète une méfiance accrue quant à la gestion budgétaire future du Royaume-Uni et un ajustement des attentes de risque.</div>
+        </details>
+        
+        <details class="acc-item" style="--cat-couleur:#8C6A2C">
+          <summary class="acc-summary">
+            
+            <span class="acc-region" title="Global">GLOBAL</span>
+            <span class="acc-pill" style="background:#8C6A2C22;color:#8C6A2C">Marchés</span>
+            <span class="acc-title">Les rendements des obligations mondiales continuent de se tendre</span>
+            <span class="acc-chevron">▾</span>
+          </summary>
+          <div class="acc-body">Une tendance générale à la hausse des rendements obligataires est observée à l'échelle mondiale. Le <strong class="highlight-figure">Bund allemand à 10 ans a augmenté de 2 points de base pour atteindre 3,15%</strong>, tandis que les <strong class="highlight-figure">Treasuries américains à 10 ans ont progressé de 4 points de base à 4,59%</strong>. Plus particulièrement, les taux réels aux États-Unis, mesurés par le <strong class="highlight-figure">rendement du TIPS 30 ans, ont atteint leur « plus haut niveau depuis 18 mois »</strong>. Cette tension sur les taux reflète des attentes persistantes d'inflation, la perspective d'une politique monétaire durablement plus restrictive et une prime de risque accrue sur les marchés financiers internationaux.</div>
+        </details>
+        
+        <details class="acc-item" style="--cat-couleur:#8C6A2C">
+          <summary class="acc-summary">
+            
+            <span class="acc-region" title="Global">GLOBAL</span>
+            <span class="acc-pill" style="background:#8C6A2C22;color:#8C6A2C">Marchés</span>
+            <span class="acc-title">Mouvements des devises en réaction aux risques géopolitiques et fiscaux</span>
+            <span class="acc-chevron">▾</span>
+          </summary>
+          <div class="acc-body">Le marché des changes a été marqué par plusieurs mouvements clés en réponse aux incertitudes géopolitiques et fiscales. L'<strong class="highlight-figure">indice dollar DXY a enregistré une progression de 0,2% pour atteindre 100,97</strong>, bénéficiant d'un rôle de valeur refuge face à l'intensification du conflit américano-iranien et au blocus naval des Houthis. L'<strong class="highlight-figure">EURUSD a, quant à lui, reculé de 0,23% à 1,1413</strong>. L'<strong class="highlight-figure">EURGBP a progressé de 0,2% à 0,8504</strong>, les investisseurs adoptant une posture prudente concernant la future politique économique du Royaume-Uni. Les couronnes scandinaves, l'USDNOK et l'USDSEK, ont également subi des pressions, augmentant respectivement de <strong class="highlight-figure">0,48% et 0,64%</strong>, en raison du regain d'aversion au risque lié au Moyen-Orient.</div>
+        </details>
+        
+        <details class="acc-item" style="--cat-couleur:#8C6A2C">
+          <summary class="acc-summary">
+            
+            <span class="acc-region" title="Global">GLOBAL</span>
+            <span class="acc-pill" style="background:#8C6A2C22;color:#8C6A2C">Marchés</span>
+            <span class="acc-title">Performance des marchés actions européens et américains</span>
+            <span class="acc-chevron">▾</span>
+          </summary>
+          <div class="acc-body">Les marchés actions ont montré des performances contrastées. En Europe, le <strong class="highlight-figure">Stoxx 600 a enregistré un léger recul de 0,3%</strong>, avec le secteur de l'énergie étant le seul à afficher une progression. Le <strong class="highlight-figure">FTSE 100 a sous-performé (-0,5%)</strong>, impacté par la volatilité de la livre sterling et sa forte pondération en matières premières. La séance américaine a été en <strong class="highlight-phrase">légère baisse généralisée</strong>, bien qu'un <strong class="highlight-phrase">« léger rebond du secteur des semi-conducteurs »</strong> ait été observé. Cette dynamique souligne la persistance des tensions macroéconomiques et géopolitiques qui pèsent sur la confiance des investisseurs, malgré un optimisme sélectif sur certains secteurs.</div>
+        </details>
+        
+        <details class="acc-item" style="--cat-couleur:#8C6A2C">
+          <summary class="acc-summary">
+            
+            <span class="acc-region" title="Global">GLOBAL</span>
+            <span class="acc-pill" style="background:#8C6A2C22;color:#8C6A2C">Marchés</span>
+            <span class="acc-title">Léger resserrement des spreads de crédit</span>
+            <span class="acc-chevron">▾</span>
+          </summary>
+          <div class="acc-body">Les marchés du crédit ont montré une <strong class="highlight-phrase">« certaine résilience »</strong>, avec un <strong class="highlight-phrase">léger resserrement des indices iTraxx</strong> et une bonne tenue des spreads sur le marché cash. Cette évolution indique que, malgré le contexte incertain marqué par des risques géopolitiques et des pressions sur les taux, la perception du risque de crédit ne s'est pas significativement détériorée. Cela peut être interprété comme un signe de confiance sous-jacente ou d'un afflux de liquidités cherchant des opportunités, permettant aux entreprises de se financer à des conditions relativement stables.</div>
         </details>
         </div>
     </div>
@@ -2065,7 +2177,7 @@
         <details class="agenda-date-group" open>
           <summary class="agenda-date-summary">
             <span class="agenda-date-badge">21/07</span>
-            <span class="agenda-date-count">56 événements</span>
+            <span class="agenda-date-count">58 événements</span>
             <span class="agenda-date-chevron">▾</span>
           </summary>
           <div class="agenda-date-content">
@@ -2406,13 +2518,25 @@
               <span class="tl-title">Résultats Capital One Financial T2</span>
             </div>
             
+            <div class="agenda-event-row" style="--cat-couleur:#6E6C63">
+              <span class="acc-region" title="Asie">ASIA</span>
+              <span class="acc-pill" style="background:#6E6C6322;color:#6E6C63;flex-shrink:0;">Géopolitique</span>
+              <span class="tl-title">Réunion ministres Affaires étrangères ASEAN</span>
+            </div>
+            
+            <div class="agenda-event-row" style="--cat-couleur:#5B7553">
+              <span class="acc-region" title="USA">US</span>
+              <span class="acc-pill" style="background:#5B755322;color:#5B7553;flex-shrink:0;">Corporate</span>
+              <span class="tl-title">Résultats trimestriels Alphabet Inc.</span>
+            </div>
+            
           </div>
         </details>
         
         <details class="agenda-date-group" >
           <summary class="agenda-date-summary">
             <span class="agenda-date-badge">22/07</span>
-            <span class="agenda-date-count">67 événements</span>
+            <span class="agenda-date-count">69 événements</span>
             <span class="agenda-date-chevron">▾</span>
           </summary>
           <div class="agenda-date-content">
@@ -2817,6 +2941,18 @@
               <span class="acc-region" title="USA">US</span>
               <span class="acc-pill" style="background:#5B755322;color:#5B7553;flex-shrink:0;">Corporate</span>
               <span class="tl-title">Résultats Tesla Inc T2</span>
+            </div>
+            
+            <div class="agenda-event-row" style="--cat-couleur:#3E5C76">
+              <span class="acc-region" title="Europe">EU</span>
+              <span class="acc-pill" style="background:#3E5C7622;color:#3E5C76;flex-shrink:0;">Macro</span>
+              <span class="tl-title">Début réunion BCE politique monétaire</span>
+            </div>
+            
+            <div class="agenda-event-row" style="--cat-couleur:#5B7553">
+              <span class="acc-region" title="USA">US</span>
+              <span class="acc-pill" style="background:#5B755322;color:#5B7553;flex-shrink:0;">Corporate</span>
+              <span class="tl-title">Résultats trimestriels Tesla, Inc.</span>
             </div>
             
           </div>
@@ -3298,7 +3434,7 @@
         <details class="agenda-date-group" >
           <summary class="agenda-date-summary">
             <span class="agenda-date-badge">24/07</span>
-            <span class="agenda-date-count">29 événements</span>
+            <span class="agenda-date-count">30 événements</span>
             <span class="agenda-date-chevron">▾</span>
           </summary>
           <div class="agenda-date-content">
@@ -3475,6 +3611,12 @@
               <span class="acc-region" title="USA">US</span>
               <span class="acc-pill" style="background:#3E5C7622;color:#3E5C76;flex-shrink:0;">Macro</span>
               <span class="tl-title">Ventes maisons neuves US</span>
+            </div>
+            
+            <div class="agenda-event-row" style="--cat-couleur:#3E5C76">
+              <span class="acc-region" title="Europe">EU</span>
+              <span class="acc-pill" style="background:#3E5C7622;color:#3E5C76;flex-shrink:0;">Macro</span>
+              <span class="tl-title">Décision taux d'intérêt BCE</span>
             </div>
             
           </div>
@@ -3750,7 +3892,7 @@
         <details class="agenda-date-group" >
           <summary class="agenda-date-summary">
             <span class="agenda-date-badge">29/07</span>
-            <span class="agenda-date-count">78 événements</span>
+            <span class="agenda-date-count">80 événements</span>
             <span class="agenda-date-chevron">▾</span>
           </summary>
           <div class="agenda-date-content">
@@ -4223,13 +4365,25 @@
               <span class="tl-title">Résultats Financiers Meta Platforms</span>
             </div>
             
+            <div class="agenda-event-row" style="--cat-couleur:#3E5C76">
+              <span class="acc-region" title="USA">US</span>
+              <span class="acc-pill" style="background:#3E5C7622;color:#3E5C76;flex-shrink:0;">Macro</span>
+              <span class="tl-title">Décision taux d'intérêt FOMC</span>
+            </div>
+            
+            <div class="agenda-event-row" style="--cat-couleur:#5B7553">
+              <span class="acc-region" title="USA">US</span>
+              <span class="acc-pill" style="background:#5B755322;color:#5B7553;flex-shrink:0;">Corporate</span>
+              <span class="tl-title">Résultats trimestriels Meta Platforms Inc.</span>
+            </div>
+            
           </div>
         </details>
         
         <details class="agenda-date-group" >
           <summary class="agenda-date-summary">
             <span class="agenda-date-badge">30/07</span>
-            <span class="agenda-date-count">97 événements</span>
+            <span class="agenda-date-count">100 événements</span>
             <span class="agenda-date-chevron">▾</span>
           </summary>
           <div class="agenda-date-content">
@@ -4816,6 +4970,24 @@
               <span class="tl-title">Résultats Financiers Amazon</span>
             </div>
             
+            <div class="agenda-event-row" style="--cat-couleur:#3E5C76">
+              <span class="acc-region" title="Europe">EU</span>
+              <span class="acc-pill" style="background:#3E5C7622;color:#3E5C76;flex-shrink:0;">Macro</span>
+              <span class="tl-title">Décision taux d'intérêt BoE</span>
+            </div>
+            
+            <div class="agenda-event-row" style="--cat-couleur:#3E5C76">
+              <span class="acc-region" title="Asie">ASIA</span>
+              <span class="acc-pill" style="background:#3E5C7622;color:#3E5C76;flex-shrink:0;">Macro</span>
+              <span class="tl-title">Décision politique monétaire BoJ</span>
+            </div>
+            
+            <div class="agenda-event-row" style="--cat-couleur:#5B7553">
+              <span class="acc-region" title="USA">US</span>
+              <span class="acc-pill" style="background:#5B755322;color:#5B7553;flex-shrink:0;">Corporate</span>
+              <span class="tl-title">Résultats trimestriels Amazon.com Inc.</span>
+            </div>
+            
           </div>
         </details>
         
@@ -5119,7 +5291,7 @@
         <details class="agenda-date-group" >
           <summary class="agenda-date-summary">
             <span class="agenda-date-badge">03/08</span>
-            <span class="agenda-date-count">17 événements</span>
+            <span class="agenda-date-count">19 événements</span>
             <span class="agenda-date-chevron">▾</span>
           </summary>
           <div class="agenda-date-content">
@@ -5224,6 +5396,18 @@
               <span class="acc-region" title="USA">US</span>
               <span class="acc-pill" style="background:#3E5C7622;color:#3E5C76;flex-shrink:0;">Macro</span>
               <span class="tl-title">Indice ISM Manufacturier Prix US</span>
+            </div>
+            
+            <div class="agenda-event-row" style="--cat-couleur:#5B7553">
+              <span class="acc-region" title="USA">US</span>
+              <span class="acc-pill" style="background:#5B755322;color:#5B7553;flex-shrink:0;">Corporate</span>
+              <span class="tl-title">Résultats trimestriels Berkshire Hathaway</span>
+            </div>
+            
+            <div class="agenda-event-row" style="--cat-couleur:#5B7553">
+              <span class="acc-region" title="USA">US</span>
+              <span class="acc-pill" style="background:#5B755322;color:#5B7553;flex-shrink:0;">Corporate</span>
+              <span class="tl-title">Résultats trimestriels Snap Inc.</span>
             </div>
             
           </div>
@@ -5373,7 +5557,7 @@
         <details class="agenda-date-group" >
           <summary class="agenda-date-summary">
             <span class="agenda-date-badge">07/08</span>
-            <span class="agenda-date-count">17 événements</span>
+            <span class="agenda-date-count">18 événements</span>
             <span class="agenda-date-chevron">▾</span>
           </summary>
           <div class="agenda-date-content">
@@ -5480,6 +5664,12 @@
               <span class="tl-title">Rapport Emploi Non-Agricole (NFP)</span>
             </div>
             
+            <div class="agenda-event-row" style="--cat-couleur:#3E5C76">
+              <span class="acc-region" title="USA">US</span>
+              <span class="acc-pill" style="background:#3E5C7622;color:#3E5C76;flex-shrink:0;">Macro</span>
+              <span class="tl-title">Publication rapport emploi NFP</span>
+            </div>
+            
           </div>
         </details>
         
@@ -5515,7 +5705,7 @@
         <details class="agenda-date-group" >
           <summary class="agenda-date-summary">
             <span class="agenda-date-badge">12/08</span>
-            <span class="agenda-date-count">12 événements</span>
+            <span class="agenda-date-count">13 événements</span>
             <span class="agenda-date-chevron">▾</span>
           </summary>
           <div class="agenda-date-content">
@@ -5590,6 +5780,12 @@
               <span class="acc-region" title="USA">US</span>
               <span class="acc-pill" style="background:#3E5C7622;color:#3E5C76;flex-shrink:0;">Macro</span>
               <span class="tl-title">Indice Prix Consommation (CPI)</span>
+            </div>
+            
+            <div class="agenda-event-row" style="--cat-couleur:#3E5C76">
+              <span class="acc-region" title="USA">US</span>
+              <span class="acc-pill" style="background:#3E5C7622;color:#3E5C76;flex-shrink:0;">Macro</span>
+              <span class="tl-title">Publication IPC (inflation) USA</span>
             </div>
             
           </div>
@@ -5695,23 +5891,22 @@
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
 <script>
-const ICONE_LUNE = '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5Z"/></svg>';
-const ICONE_SOLEIL = '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>';
-
+function contenuThemeBtn(theme) {
+  return `<span class="tt-sombre${theme === 'dark' ? ' tt-active' : ''}">DARK</span><span class="tt-sep">/</span><span class="tt-clair${theme === 'light' ? ' tt-active' : ''}">LIGHT</span>`;
+}
 function toggleTheme() {
   const body = document.body;
   const current = body.getAttribute('data-theme');
   const next = current === 'dark' ? 'light' : 'dark';
   body.setAttribute('data-theme', next);
-  document.getElementById('themeBtn').innerHTML = next === 'dark' ? ICONE_SOLEIL : ICONE_LUNE;
+  document.getElementById('themeBtn').innerHTML = contenuThemeBtn(next);
   localStorage.setItem('theme', next);
 }
 (function() {
   const saved = localStorage.getItem('theme');
-  if (saved === 'dark') {
-    document.body.setAttribute('data-theme', 'dark');
-    document.getElementById('themeBtn').innerHTML = ICONE_SOLEIL;
-  }
+  const initial = saved === 'dark' ? 'dark' : 'light';
+  if (initial === 'dark') document.body.setAttribute('data-theme', 'dark');
+  document.getElementById('themeBtn').innerHTML = contenuThemeBtn(initial);
 })();
 
 // --- Gestion des onglets ---
