@@ -6,12 +6,24 @@ name: Brief quotidien automatique
 # "gate" verifie l'heure locale Paris reelle pour n'executer le pipeline que
 # si on est bien a 8h ou 13h heure de Paris — les 2 autres declenchements
 # du jour sont annules sans rien faire (gratuit sur un depot public).
+#
+# Le 22/07/2026, le creneau de 13h (11h UTC) ne s'est jamais declenche du
+# tout : GitHub documente que les schedules peuvent etre retardes ou perdus
+# en cas de forte charge, precisement aux heures rondes. Deux mesures en
+# consequence : (1) les horaires sont decales de :00 a :05, (2) un second
+# jeu de creneaux 30 min plus tard sert de filet de secours, neutralise par
+# une verification anti-doublon dans le job "brief" (voir plus bas) s'il se
+# trouve que le premier creneau a bien fonctionne.
 on:
   schedule:
-    - cron: '0 6 * * *'   # 08h Paris en ete (UTC+2)
-    - cron: '0 7 * * *'   # 08h Paris en hiver (UTC+1)
-    - cron: '0 11 * * *'  # 13h Paris en ete (UTC+2)
-    - cron: '0 12 * * *'  # 13h Paris en hiver (UTC+1)
+    - cron: '5 6 * * *'    # ~08h05 Paris en ete (UTC+2)
+    - cron: '5 7 * * *'    # ~08h05 Paris en hiver (UTC+1)
+    - cron: '5 11 * * *'   # ~13h05 Paris en ete (UTC+2)
+    - cron: '5 12 * * *'   # ~13h05 Paris en hiver (UTC+1)
+    - cron: '35 6 * * *'   # filet de secours ~08h35 (ete)
+    - cron: '35 7 * * *'   # filet de secours ~08h35 (hiver)
+    - cron: '35 11 * * *'  # filet de secours ~13h35 (ete)
+    - cron: '35 12 * * *'  # filet de secours ~13h35 (hiver)
   workflow_dispatch: {}   # permet de lancer manuellement depuis l'onglet Actions
 
 # Empeche deux executions de se chevaucher (declenchement manuel pile au
@@ -54,25 +66,46 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Verifier qu'un cycle n'a pas deja tourne dans ce creneau
+        id: idempotence
+        if: github.event_name == 'schedule'
+        run: |
+          DERNIER_MSG=$(git log -1 --format=%s)
+          DERNIER_EPOCH=$(git log -1 --format=%ct)
+          ECART_MIN=$(( ($(date +%s) - DERNIER_EPOCH) / 60 ))
+          echo "Dernier commit il y a ${ECART_MIN} min : ${DERNIER_MSG}"
+          if [[ "$DERNIER_MSG" == "Mise a jour automatique du"* ]] && [ "$ECART_MIN" -lt 50 ]; then
+            echo "Cycle deja effectue recemment (creneau de secours) — on saute ce run."
+            echo "deja_fait=oui" >> "$GITHUB_OUTPUT"
+          else
+            echo "deja_fait=non" >> "$GITHUB_OUTPUT"
+          fi
+
       - uses: actions/setup-python@v5
+        if: steps.idempotence.outputs.deja_fait != 'oui'
         with:
           python-version: '3.12'
 
       - name: Installer les dependances Python
+        if: steps.idempotence.outputs.deja_fait != 'oui'
         run: pip install -r requirements.txt
 
       - name: Installer Playwright (Chromium headless, pour le scraping Natixis)
+        if: steps.idempotence.outputs.deja_fait != 'oui'
         run: playwright install --with-deps chromium
 
       - name: Restaurer le token Gmail depuis le secret GitHub
+        if: steps.idempotence.outputs.deja_fait != 'oui'
         run: printf '%s' '${{ secrets.GMAIL_TOKEN_JSON }}' > token.json
 
       - name: Configurer l'identite git pour le commit automatique
+        if: steps.idempotence.outputs.deja_fait != 'oui'
         run: |
           git config user.name "mon-brief-quotidien-bot"
           git config user.email "actions@users.noreply.github.com"
 
       - name: Lancer le pipeline (scraping, Gemini, rendu HTML, push)
+        if: steps.idempotence.outputs.deja_fait != 'oui'
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: python gmail_test.py
