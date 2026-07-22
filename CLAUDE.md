@@ -122,6 +122,18 @@ Structure du dossier parent `Newsletters/` (hors Git, sans rapport avec ce dép�
   → premier appel lent ou échec transitoire au réveil du service, visible côté utilisateur comme un
   ticker figé ou vide.
 - **Cron GitHub Actions et changement d'heure** : le job `gate` du workflow compare l'heure locale
-  Paris réelle (`TZ=Europe/Paris`) à 4 déclenchements UTC candidats pour absorber le décalage
-  été/hiver — les 2 exécutions "hors créneau" par jour se terminent normalement après le seul job
-  `gate` (quelques secondes, gratuit), ce n'est pas un dysfonctionnement.
+  Paris réelle (`TZ=Europe/Paris`) à 8 déclenchements UTC candidats (4 horaires × 2, voir point
+  suivant) pour absorber le décalage été/hiver — les exécutions "hors créneau" se terminent
+  normalement après le seul job `gate` (quelques secondes, gratuit), ce n'est pas un
+  dysfonctionnement.
+- **Incident du 22/07/2026 : le créneau de 13h ne s'était jamais déclenché.** Aucune trace du run
+  planifié de 11h UTC dans l'historique Actions alors que le workflow était actif depuis 08h03
+  UTC ce jour-là. GitHub documente que les déclenchements `schedule` peuvent être retardés ou
+  perdus en cas de forte charge, précisément aux heures rondes — les 4 cron d'origine tombaient
+  tous à `:00`. Corrigé : horaires décalés à `:05`, plus un second jeu de créneaux à `:35` en
+  filet de secours (neutralisé par une vérification anti-doublon dans le job `brief` — si le
+  dernier commit `"Mise a jour automatique"` date de moins de 50 min, le run de secours saute
+  toutes ses étapes sans rien exécuter). Point de vigilance résiduel : GitHub ne garantit toujours
+  aucune heure exacte pour un `schedule`, ce correctif réduit la probabilité de perte sans
+  l'éliminer — si un créneau venait à manquer à nouveau malgré ça, vérifier l'onglet Actions
+  directement plutôt que de supposer un bug côté pipeline.
