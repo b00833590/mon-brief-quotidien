@@ -1,0 +1,69 @@
+name: Brief quotidien automatique
+
+# Le planificateur de taches GitHub Actions (cron) est toujours en UTC et ne
+# gere pas le changement d'heure. On declenche donc a 4 heures UTC candidates
+# (couvrant 8h/13h heure de Paris en ete ET en hiver), et un premier job
+# "gate" verifie l'heure locale Paris reelle pour n'executer le pipeline que
+# si on est bien a 8h ou 13h heure de Paris — les 2 autres declenchements
+# du jour sont annules sans rien faire (gratuit sur un depot public).
+on:
+  schedule:
+    - cron: '0 6 * * *'   # 08h Paris en ete (UTC+2)
+    - cron: '0 7 * * *'   # 08h Paris en hiver (UTC+1)
+    - cron: '0 11 * * *'  # 13h Paris en ete (UTC+2)
+    - cron: '0 12 * * *'  # 13h Paris en hiver (UTC+1)
+  workflow_dispatch: {}   # permet de lancer manuellement depuis l'onglet Actions
+
+jobs:
+  gate:
+    runs-on: ubuntu-latest
+    outputs:
+      executer: ${{ steps.check.outputs.executer }}
+    steps:
+      - id: check
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "Declenchement manuel : execution forcee."
+            echo "executer=oui" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          HEURE_PARIS=$(TZ='Europe/Paris' date +%H)
+          echo "Heure locale Paris actuelle : ${HEURE_PARIS}h"
+          if [ "$HEURE_PARIS" = "08" ] || [ "$HEURE_PARIS" = "13" ]; then
+            echo "executer=oui" >> "$GITHUB_OUTPUT"
+          else
+            echo "Hors creneau (doublon saisonnier attendu) : on annule proprement."
+            echo "executer=non" >> "$GITHUB_OUTPUT"
+          fi
+
+  brief:
+    needs: gate
+    if: needs.gate.outputs.executer == 'oui'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Installer les dependances Python
+        run: pip install -r requirements.txt
+
+      - name: Installer Playwright (Chromium headless, pour le scraping Natixis)
+        run: playwright install --with-deps chromium
+
+      - name: Restaurer le token Gmail depuis le secret GitHub
+        run: printf '%s' '${{ secrets.GMAIL_TOKEN_JSON }}' > token.json
+
+      - name: Configurer l'identite git pour le commit automatique
+        run: |
+          git config user.name "mon-brief-quotidien-bot"
+          git config user.email "actions@users.noreply.github.com"
+
+      - name: Lancer le pipeline (scraping, Gemini, rendu HTML, push)
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python gmail_test.py

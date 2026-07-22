@@ -1,0 +1,10 @@
+.superpowers/
+
+# Secrets/identifiants locaux du pipeline (gmail_test.py) — ne jamais committer,
+# ce depot est PUBLIC. Le token Gmail vit en cloud dans le secret GitHub Actions
+# GMAIL_TOKEN_JSON ; ces fichiers ne servent qu'aux executions manuelles locales.
+.env
+credentials.json
+token.json
+__pycache__/
+*.pyc
