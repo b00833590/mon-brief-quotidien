@@ -592,6 +592,14 @@
     "premiere_apparition": "2026-07-22"
   },
   {
+    "point": "31/07 :: usa :: corp :: Résultats Exxon",
+    "premiere_apparition": "2026-07-22"
+  },
+  {
+    "point": "31/07 :: usa :: corp :: Résultats Moderna",
+    "premiere_apparition": "2026-07-22"
+  },
+  {
     "point": "01/08 :: europe :: macro :: Publication Flash HICP Eurozone juillet 2026",
     "premiere_apparition": "2026-07-11"
   },
@@ -605,6 +613,10 @@
   },
   {
     "point": "01/08 :: afrique :: geo :: Sommet Investissement Horticulture Tanzanie",
+    "premiere_apparition": "2026-07-22"
+  },
+  {
+    "point": "01/08 :: usa :: corp :: Résultats Berkshire Hathaway (estimé)",
     "premiere_apparition": "2026-07-22"
   },
   {
@@ -768,6 +780,14 @@
     "premiere_apparition": "2026-07-21"
   },
   {
+    "point": "04/08 :: usa :: corp :: Résultats AMD",
+    "premiere_apparition": "2026-07-22"
+  },
+  {
+    "point": "04/08 :: europe :: corp :: Résultats BP",
+    "premiere_apparition": "2026-07-22"
+  },
+  {
     "point": "12/08 :: usa :: macro :: IPC US Juillet",
     "premiere_apparition": "2026-07-14"
   },
@@ -912,6 +932,18 @@
     "premiere_apparition": "2026-07-20"
   },
   {
+    "point": "05/08 :: usa :: corp :: Résultats Uber",
+    "premiere_apparition": "2026-07-22"
+  },
+  {
+    "point": "05/08 :: usa :: corp :: Résultats Disney",
+    "premiere_apparition": "2026-07-22"
+  },
+  {
+    "point": "05/08 :: usa :: corp :: Résultats Eli Lilly",
+    "premiere_apparition": "2026-07-22"
+  },
+  {
     "point": "Début Août :: usa :: corp :: Résultats Block",
     "premiere_apparition": "2026-07-17"
   },
@@ -942,6 +974,10 @@
   {
     "point": "06/08 :: europe :: macro :: Réunion MPC BoE",
     "premiere_apparition": "2026-07-21"
+  },
+  {
+    "point": "06/08 :: usa :: corp :: Résultats Airbnb",
+    "premiere_apparition": "2026-07-22"
   },
   {
     "point": "26-28/07 :: europe :: macro :: Réunion Comité politique monétaire BoE",
