@@ -432,6 +432,10 @@
     "premiere_apparition": "2026-07-22"
   },
   {
+    "point": "29/07 :: usa :: macro :: Statistiques emploi Business Dynamics Q4 2025",
+    "premiere_apparition": "2026-07-22"
+  },
+  {
     "point": "30/07 :: asie :: mkt-n :: Décision taux BoJ",
     "premiere_apparition": "2026-07-11"
   },
@@ -530,6 +534,10 @@
   {
     "point": "30/07 :: usa :: tech :: Résultats T2 Avery Dennison",
     "premiere_apparition": "2026-07-21"
+  },
+  {
+    "point": "30/07 :: usa :: macro :: PIB T2 2026 (estimation avancée)",
+    "premiere_apparition": "2026-07-22"
   },
   {
     "point": "31/07 :: asie :: mkt-n :: Publication perspectives économiques BoJ",
@@ -776,6 +784,14 @@
     "premiere_apparition": "2026-07-21"
   },
   {
+    "point": "12/08 :: usa :: macro :: Salaires réels Juillet 2026",
+    "premiere_apparition": "2026-07-22"
+  },
+  {
+    "point": "12/08 :: global :: mkt-n :: Rapport mensuel OPEC",
+    "premiere_apparition": "2026-07-22"
+  },
+  {
     "point": "13/08 :: europe :: mkt-n :: Décision Taux Norges Bank",
     "premiere_apparition": "2026-07-14"
   },
@@ -902,6 +918,10 @@
   {
     "point": "02/08 :: usa :: macro :: Rapport Emploi US Juillet",
     "premiere_apparition": "2026-07-19"
+  },
+  {
+    "point": "02/08 :: global :: mkt-n :: Réunion ministérielle OPEC+",
+    "premiere_apparition": "2026-07-22"
   },
   {
     "point": "31/08 :: global :: mkt-n :: Réunion Ministres Finances G20",
