@@ -50,6 +50,8 @@ Structure du dossier parent `Newsletters/` (hors Git, sans rapport avec ce dép�
   le fichier, y compris le `<head>`).
 - **Auth/prefs utilisateur** : Supabase (`supabaseClient`, clé publique en dur dans `index.html`) —
   login/signup email+mdp, table `preferences_utilisateur` pour la sélection et la vitesse du ticker.
+  RLS vérifiée manuellement le 22/07/2026 : activée, une seule policy (`cmd: ALL`,
+  `auth.uid() = id`) — un utilisateur ne peut lire/modifier que ses propres préférences.
 - **Cours live** : bandeau ticker qui interroge `https://ticker-relay.onrender.com` (`/latest`,
   `/latest-custom`, `/search`) — service séparé (`../ticker-relay/server.py`, aiohttp, poll Yahoo
   Finance non-officiel toutes les 3s).
@@ -139,10 +141,6 @@ Structure du dossier parent `Newsletters/` (hors Git, sans rapport avec ce dép�
   Finance) qui injectaient du texte non échappé, y compris en contexte attribut
   (`data-nom="${r.nom}"`, exploitable si un nom contenait un `"`). Testé avec une charge XSS réelle
   et une recherche légitime contenant un `&` ("AT&T") pour confirmer l'absence de régression.
-- **Policies RLS de la table `preferences_utilisateur` (Supabase) jamais vérifiées depuis le
-  code** — illisible sans accès au dashboard Supabase. Sans RLS stricte (`auth.uid() = id`), un
-  utilisateur connecté pourrait potentiellement lire/modifier les préférences d'un autre. Signalé
-  le 22/07/2026, à vérifier manuellement — aucun suivi effectué depuis côté code.
 - **Cron GitHub Actions et changement d'heure** : le job `gate` du workflow compare l'heure locale
   Paris réelle (`TZ=Europe/Paris`) à 8 déclenchements UTC candidats (4 horaires × 2, voir point
   suivant) pour absorber le décalage été/hiver — les exécutions "hors créneau" se terminent
