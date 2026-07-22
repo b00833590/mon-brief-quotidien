@@ -234,6 +234,44 @@ avant déploiement (voir §6).
    via le serveur HTTP local (jamais `file://`), mode sombre et ouverture d'accordéon testés —
    aucune régression fonctionnelle.
 
+10. **Retrait du liseré coloré des 2 premières brèves du Flash + restauration du compteur
+    d'articles.** `.acc-item--top` (priorisation visuelle ajoutée au point 2) affichait un
+    `box-shadow` coloré à gauche des 2 premières brèves du Flash — retiré à la demande explicite
+    de l'utilisateur (règle `.acc-item--top { box-shadow: ... }` supprimée ; le badge de rang
+    accentué de `.acc-item--top .acc-rank` n'a pas été touché, non concerné par la demande). Par
+    ailleurs, le retrait de "Synthèse du HH:mm" au point 9 avait eu un effet de bord non voulu :
+    `flash` avait été ajouté à `SANS_META`, ce qui supprimait aussi le compteur "N articles" du
+    titre Flash (alors que tous les autres onglets l'ont). Corrigé en retirant `flash` de
+    `SANS_META` — Flash affiche maintenant son compteur d'articles comme les autres onglets, sans
+    réintroduire la mention d'heure.
+
+11. **Optimisation de l'affichage mobile.** Testé à largeur réelle de téléphone (390px) via une
+    iframe de test dédiée (la fenêtre du navigateur de l'outil ne descend pas sous ~784px dans cet
+    environnement — technique de contournement à réutiliser si besoin : `<iframe style="width:
+    390px; height:844px">` pointant vers le fichier de prévisualisation, qui a son propre contexte
+    de viewport indépendant de la fenêtre). 4 problèmes trouvés et corrigés dans
+    `@media (max-width: 768px)` :
+    - **Bug critique — bouton de thème inaccessible** : le bloc date/heure + `DARK`/`LIGHT`
+      débordaient de 142px hors du viewport (mesuré via `getBoundingClientRect()`), invisibles à
+      cause de `overflow-x: hidden` sur `body`. Corrigé en passant `header .top` en
+      `flex-wrap: wrap` (`height: auto` au lieu de `48px` fixe) : le header s'affiche désormais sur
+      2 lignes sur mobile (logo + icône recherche en haut, date/thème alignés à droite en dessous).
+    - **Recherche rendue accessible sur mobile** : `header .header-search` était masquée
+      (`display: none`) sans aucune alternative. Ajout d'un bouton loupe `#mobileSearchToggle`
+      (visible uniquement ≤768px) qui bascule la classe `mobile-search-active` sur `body` : la
+      barre de recherche apparaît alors en pleine largeur sur sa propre ligne, avec focus
+      automatique sur `#searchInput`.
+    - **Bloc "Tendance du jour" empilé verticalement** (`.sentiment-box { flex-direction: column }`
+      sur mobile) — la largeur minimale du panneau navy (`clamp(180px, 30%, 260px)` en desktop)
+      forçait ce panneau à occuper environ la moitié de la largeur sur un écran de téléphone,
+      écrasant le paragraphe de résumé à côté.
+    - **Catégorie de l'agenda non tronquée** : `.agenda-event-row .acc-pill` avait une largeur fixe
+      de 90px en desktop, tronquant "GÉOPOLITIQUE" en "GÉOPOLITIQU…" sur mobile. Passé à
+      `width: auto` dans le bloc mobile.
+    Vérifié après coup : JS extrait valide, balises équilibrées, testé Flash/Agenda/Indices &
+    Entreprises/mode sombre à 390px réels (pas juste en forçant les media queries sur une fenêtre
+    large, qui aurait masqué les problèmes de débordement).
+
 ### Bug réel trouvé et corrigé pendant cette session
 
 Le bouton de repli du rail (`#navCollapseToggle`, point 1 ci-dessus) n'a pas de `data-tab`. Le
