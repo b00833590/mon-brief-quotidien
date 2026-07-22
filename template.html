@@ -190,6 +190,19 @@
     margin-left: 2px;
     flex-shrink: 0;
   }
+  /* Bouton recherche mobile : masque sur desktop, la barre de recherche etant
+     deja visible et accessible directement. Voir @media (max-width: 768px). */
+  .mobile-search-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--text);
+    padding: 8px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
   header .header-search {
     flex: 1 1 420px;
     max-width: 520px;
@@ -1491,21 +1504,35 @@
     padding: 0;
     width: 100%;
   }
+  /* flex-wrap: la ligne date/theme (.right) ne tient pas a cote du logo sur un
+     ecran de telephone — passe systematiquement a la ligne plutot que de
+     deborder hors du viewport (bouton theme sinon totalement inaccessible). */
   header .top {
-    flex-wrap: nowrap;
-    gap: 10px;
+    flex-wrap: wrap;
+    gap: 4px 10px;
     justify-content: space-between;
-    height: 48px;
+    height: auto;
+    min-height: 48px;
+    padding: 6px 0;
   }
   header .brand-text { padding: 2px 10px; }
   header .brand-bold,
   header .brand-light { font-size: 14px; }
   header .eyebrow { font-size: 8px; letter-spacing: 0.15em; }
   header .brand-divider { display: none; }
-  /* Cacher la barre de recherche dans le header (trop encombrante) */
-  header .header-search { display: none !important; }
-  /* Garder date + bouton thème */
-  header .right { gap: 8px; font-size: 9.5px; padding-right: 12px; }
+  /* Recherche masquee par defaut (trop encombrante en permanence) : accessible
+     via le bouton loupe .mobile-search-toggle, qui la fait apparaitre en
+     pleine largeur sur sa propre ligne. */
+  header .header-search { display: none; }
+  body.mobile-search-active header .header-search {
+    display: flex !important;
+    flex: 1 1 100%;
+    width: 100%;
+    margin-top: 2px;
+  }
+  .mobile-search-toggle { display: flex; }
+  /* Date + bouton theme : sur leur propre ligne, alignes a droite */
+  header .right { flex: 1 1 100%; justify-content: flex-end; gap: 8px; font-size: 9.5px; padding-right: 12px; }
   .theme-toggle { font-size: 10px; }
 
   /* Ticker : scrollable horizontalement */
@@ -1540,6 +1567,11 @@
   /* Titres d'onglets */
   .tab-panel h2.tab-title { font-size: 20px; }
 
+  /* Tendance du jour : empile verticalement — cote a cote, le panneau navy
+     (largeur minimale forcee par le clamp() desktop) ecrase le resume. */
+  .sentiment-box { flex-direction: column; }
+  .sentiment-badge { flex: 1 1 auto; width: 100%; }
+
   /* Cards / accordéons */
   .acc-title { font-size: 13.5px; }
   .acc-body { padding: 12px 14px 16px; font-size: 13px; }
@@ -1548,6 +1580,9 @@
   .agenda-date-group { width: 100%; }
   .agenda-event-row { flex-wrap: wrap; }
   .agenda-event-row .tl-title { flex-basis: 100%; }
+  /* Categorie en texte complet plutot que tronque (ex. "GÉOPOLITIQUE" coupe
+     en "GÉOPOLITIQU…" avec la largeur fixe de 90px du desktop) */
+  .agenda-event-row .acc-pill { width: auto; max-width: none; overflow: visible; text-overflow: clip; }
   .agenda-date-summary {
     min-height: 44px;
     padding: 12px;
@@ -1613,6 +1648,9 @@
       </div>
       <div class="brand-divider"></div>
     </div>
+    <button type="button" class="mobile-search-toggle" id="mobileSearchToggle" aria-label="Rechercher">
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+    </button>
     <div class="header-search">
       <span class="search-icon">&rsaquo;</span>
       <input type="text" id="searchInput" placeholder="RECHERCHER SYMBOLE OU MOT-CLÉ..." autocomplete="off">
@@ -1971,6 +2009,17 @@ const searchInput = document.getElementById('searchInput');
 const searchResults = document.getElementById('searchResults');
 const searchClear = document.getElementById('searchClear');
 const tabPanelsContainer = document.getElementById('tabPanels');
+
+// --- Bouton loupe mobile : la barre de recherche est masquee par defaut sur
+// telephone (pas de place dans le header), ce bouton la fait apparaitre ---
+(function() {
+    const toggle = document.getElementById('mobileSearchToggle');
+    if (!toggle) return;
+    toggle.addEventListener('click', () => {
+        const actif = document.body.classList.toggle('mobile-search-active');
+        if (actif) setTimeout(() => searchInput.focus(), 50);
+    });
+})();
 
 function normaliser(texte) {
     return texte.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
