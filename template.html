@@ -3,7 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mon Brief Quotidien</title>
+<title>Mon Brief Quotidien — {{DATE}}</title>
+<meta name="description" content="Brief financier quotidien : marchés, macro, corporate, tech &amp; IA et agenda, synthétisés chaque jour depuis Gmail, RSS et la recherche Natixis.">
+<meta name="theme-color" content="#1A3A6B">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Mon Brief Quotidien">
+<meta property="og:title" content="Mon Brief Quotidien — {{DATE}}">
+<meta property="og:description" content="Brief financier quotidien : marchés, macro, corporate, tech &amp; IA et agenda, synthétisés chaque jour.">
+<meta property="og:url" content="https://mon-brief-quotidien.vercel.app">
+<meta name="twitter:card" content="summary">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='16' fill='%231A3A6B'/%3E%3Ctext x='50' y='70' font-family='Georgia,serif' font-size='60' font-weight='700' fill='%23F8F6F1' text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500;1,600&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -1927,7 +1936,7 @@ function afficherTicker(data) {
         const fleche = variation >= 0 ? "▲" : "▼";
 
         html += `<div class="ticker-item">
-            <span class="name">${indice.nom}</span>
+            <span class="name">${echapperHtml(indice.nom)}</span>
             <span class="ticker-dash">—</span>
             <span class="value">${indice.valeur.toFixed(2)}</span>
             <span class="variation ${sens}">${fleche} ${signe}${variation.toFixed(2)}%</span>
@@ -1988,7 +1997,7 @@ function afficherResumeBarres(data) {
 
         html += `<div class="nav-bar-row">
             <div class="nav-bar-top">
-                <span class="nav-bar-name">${indice.nom}</span>
+                <span class="nav-bar-name">${echapperHtml(indice.nom)}</span>
                 <span class="nav-bar-val ${sens}">${fleche} ${signe}${variation.toFixed(2)}%</span>
             </div>
             <div class="nav-bar-bottom">
@@ -2020,6 +2029,19 @@ const tabPanelsContainer = document.getElementById('tabPanels');
         if (actif) setTimeout(() => searchInput.focus(), 50);
     });
 })();
+
+// Echappement HTML : toute donnee externe (saisie utilisateur, resultats de
+// recherche Yahoo Finance relayes par ticker-relay) doit passer par ici avant
+// d'etre injectee via innerHTML — y compris en contexte attribut (data-*),
+// d'ou l'echappement des guillemets en plus de &/</>.
+function echapperHtml(texte) {
+    return String(texte ?? '')
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+}
 
 function normaliser(texte) {
     return texte.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
@@ -2061,7 +2083,7 @@ const tousLesItems = document.querySelectorAll('.acc-item');
     });
 
     if (correspondances.length === 0) {
-        searchResults.innerHTML = '<div class="search-no-results">Aucun resultat pour "' + requete + '"</div>';
+        searchResults.innerHTML = '<div class="search-no-results">Aucun resultat pour "' + echapperHtml(requete) + '"</div>';
     } else {
         searchResults.innerHTML = '';
         correspondances.forEach(({ item, nomSection }) => {
@@ -2213,8 +2235,8 @@ function rendreSelectionPerso() {
 
     conteneur.innerHTML = selection.map(item => `
         <div class="perso-chip">
-            <span><span class="perso-nom">${item.nom}</span><span class="perso-symbole">${item.symbole}</span></span>
-            <button class="perso-btn-retirer" data-symbole="${item.symbole}">Retirer</button>
+            <span><span class="perso-nom">${echapperHtml(item.nom)}</span><span class="perso-symbole">${echapperHtml(item.symbole)}</span></span>
+            <button class="perso-btn-retirer" data-symbole="${echapperHtml(item.symbole)}">Retirer</button>
         </div>
     `).join('');
 
@@ -2258,8 +2280,8 @@ async function rechercherSymbolesPerso(q) {
 
         persoSearchResults.innerHTML = resultats.map(r => `
             <div class="perso-result-row">
-                <span><span class="perso-nom">${r.nom}</span><span class="perso-symbole">${r.symbole} · ${r.bourse}</span></span>
-                <button class="perso-btn-ajouter" data-symbole="${r.symbole}" data-nom="${r.nom}" ${selectionActuelle.includes(r.symbole) ? 'disabled' : ''}>
+                <span><span class="perso-nom">${echapperHtml(r.nom)}</span><span class="perso-symbole">${echapperHtml(r.symbole)} · ${echapperHtml(r.bourse)}</span></span>
+                <button class="perso-btn-ajouter" data-symbole="${echapperHtml(r.symbole)}" data-nom="${echapperHtml(r.nom)}" ${selectionActuelle.includes(r.symbole) ? 'disabled' : ''}>
                     ${selectionActuelle.includes(r.symbole) ? 'Ajoute' : 'Ajouter'}
                 </button>
             </div>

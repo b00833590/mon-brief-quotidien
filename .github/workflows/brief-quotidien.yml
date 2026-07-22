@@ -14,9 +14,17 @@ on:
     - cron: '0 12 * * *'  # 13h Paris en hiver (UTC+1)
   workflow_dispatch: {}   # permet de lancer manuellement depuis l'onglet Actions
 
+# Empeche deux executions de se chevaucher (declenchement manuel pile au
+# moment d'un creneau planifie) : la plus recente annule celle en cours
+# plutot que de risquer deux push Git concurrents.
+concurrency:
+  group: brief-quotidien
+  cancel-in-progress: false
+
 jobs:
   gate:
     runs-on: ubuntu-latest
+    timeout-minutes: 3
     outputs:
       executer: ${{ steps.check.outputs.executer }}
     steps:
@@ -40,6 +48,7 @@ jobs:
     needs: gate
     if: needs.gate.outputs.executer == 'oui'
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     permissions:
       contents: write
     steps:

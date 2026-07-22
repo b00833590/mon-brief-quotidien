@@ -272,6 +272,45 @@ avant déploiement (voir §6).
     Entreprises/mode sombre à 390px réels (pas juste en forçant les media queries sur une fenêtre
     large, qui aurait masqué les problèmes de débordement).
 
+12. **Audit complet (produit/design/frontend/backend/sécurité/infra) et exécution des quick wins.**
+    Demande explicite d'auditer le projet dans son ensemble avec une casquette Staff
+    Engineer/CTO. Findings les plus significatifs et corrections appliquées (voir aussi le
+    message d'audit complet dans la conversation pour le détail des catégories non retenues à
+    ce stade — graphiques/historique de prix, alerting, mode condensé) :
+    - **🔴 Vraie faille XSS trouvée et corrigée** : plusieurs endroits de `template.html`
+      injectaient des données externes (saisie utilisateur dans la recherche, résultats de
+      `ticker-relay`/Yahoo Finance) directement dans `innerHTML` sans échappement — y compris
+      en contexte attribut (`data-nom="${r.nom}"`), ce qui aurait permis une injection HTML/JS
+      si un nom de résultat contenait un `"`. Corrigé par une fonction `echapperHtml()` unique
+      appliquée aux 6 points concernés (ticker principal, mini-ticker sidebar, sélection
+      personnalisée, résultats de recherche de tickers, message "aucun résultat" de la
+      recherche globale). Testé avec `<img src=x onerror=alert(1)>` dans la recherche : plus
+      d'exécution, texte affiché littéralement. Testé aussi avec une vraie recherche ("apple")
+      pour confirmer qu'aucune régression visuelle n'a été introduite.
+    - **Favicon + meta description + Open Graph + titre dynamique**, absents jusqu'ici (aucun
+      favicon du tout, `<title>` statique sans date). Favicon en SVG inline (carré marine,
+      "M" en serif blanc) — pas de nouvel asset externe. `<title>{{DATE}}</title>` fonctionne
+      sans aucun changement Python : le `.replace("{{DATE}}", ...)` déjà présent dans
+      `gmail_test.py` s'applique sur tout le fichier, y compris le `<head>`.
+    - **`.github/workflows/brief-quotidien.yml`** : ajout de `timeout-minutes` (3 sur `gate`, 15
+      sur `brief` — les runs observés prennent ~4min) pour éviter qu'un Playwright bloqué ne
+      consomme des heures de runner, et d'un groupe `concurrency` (`cancel-in-progress: false`)
+      pour qu'un déclenchement manuel pile sur un créneau planifié mette en file plutôt que de
+      risquer deux push Git simultanés.
+    - **`vercel.json` créé** (n'existait pas du tout) avec uniquement des en-têtes de sécurité
+      (`X-Content-Type-Options`, `X-Frame-Options`, `Referrer-Policy`, `Permissions-Policy`,
+      `Strict-Transport-Security`) — délibérément **pas** de Content-Security-Policy : le site
+      charge du JS inline partout et un CDN (Supabase), une CSP mal calibrée aurait cassé le
+      site plutôt que de le sécuriser. À oser seulement avec un vrai audit de toutes les
+      sources chargées.
+    - **Badge de statut GitHub Actions ajouté au `README.md`.**
+    Délibérément non fait sans confirmation explicite : vérification des policies RLS Supabase
+    (illisible depuis le code, à faire toi-même dans le dashboard), tout système de graphiques
+    ou d'historique de prix (refonte majeure), tout alerting proactif (nécessite un nouveau
+    secret/service externe), toute piste de monétisation (le produit est mono-utilisateur
+    aujourd'hui, la question n'a de sens que si l'intention est d'ouvrir l'outil à d'autres
+    personnes).
+
 ### Bug réel trouvé et corrigé pendant cette session
 
 Le bouton de repli du rail (`#navCollapseToggle`, point 1 ci-dessus) n'a pas de `data-tab`. Le
