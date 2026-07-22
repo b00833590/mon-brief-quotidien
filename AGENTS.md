@@ -3,14 +3,6 @@
 Brief financier quotidien automatisé, agrégé depuis Gmail (newsletters), RSS, et le PDF de recherche
 Natixis, résumé par Gemini, rendu en une page HTML statique et déployé sur Vercel.
 
-## Refonte visuelle "Ledger" en cours
-
-Un travail de refonte de l'identité visuelle (crédibilité financière, suppression des emojis,
-design system cohérent) est en cours sur ce dépôt. **Avant toute intervention sur
-`template.html` ou sur l'apparence du produit, lire `REFONTE_LEDGER.md`** : il documente les
-décisions déjà prises, les valeurs de design system réellement implémentées, ce qui a été fait
-session par session, et les pièges déjà rencontrés (pour ne pas les redécouvrir).
-
 ## Portée de ce dépôt — important
 
 **Mise à jour du 22/07/2026 : le pipeline vit maintenant dans ce dépôt et tourne dans le cloud.**
