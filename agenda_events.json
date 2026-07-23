@@ -1,117 +1,5 @@
 [
   {
-    "point": "22/07 :: europe :: macro :: Publication UK CPI juin 2026",
-    "premiere_apparition": "2026-07-11"
-  },
-  {
-    "point": "22/07 :: europe :: mkt-n :: Réunion politique monétaire BCE (Jour 1)",
-    "premiere_apparition": "2026-07-11"
-  },
-  {
-    "point": "22/07 :: usa :: corp :: Résultats Alphabet Q2",
-    "premiere_apparition": "2026-07-11"
-  },
-  {
-    "point": "22/07 :: usa :: corp :: Résultats Tesla",
-    "premiere_apparition": "2026-07-11"
-  },
-  {
-    "point": "22/07 :: europe :: macro :: Réunion Conseil des Gouverneurs BCE Jour 1",
-    "premiere_apparition": "2026-07-12"
-  },
-  {
-    "point": "22/07 :: global :: geo :: Lancement Global Peace Index",
-    "premiere_apparition": "2026-07-16"
-  },
-  {
-    "point": "22/07 :: asie :: macro :: Balance Commerciale Japon",
-    "premiere_apparition": "2026-07-17"
-  },
-  {
-    "point": "22/07 :: europe :: macro :: Indice Prix Consommation UK",
-    "premiere_apparition": "2026-07-17"
-  },
-  {
-    "point": "22/07 :: europe :: macro :: Indice Final CPI Zone Euro",
-    "premiere_apparition": "2026-07-17"
-  },
-  {
-    "point": "22/07 :: usa :: macro :: Prix Importations US",
-    "premiere_apparition": "2026-07-17"
-  },
-  {
-    "point": "22/07 :: usa :: macro :: Mises en Chantier Logements US",
-    "premiere_apparition": "2026-07-17"
-  },
-  {
-    "point": "22/07 :: usa :: macro :: Production Industrielle US",
-    "premiere_apparition": "2026-07-17"
-  },
-  {
-    "point": "22/07 :: usa :: macro :: Sentiment Consommateurs Michigan (Préliminaire)",
-    "premiere_apparition": "2026-07-17"
-  },
-  {
-    "point": "22/07 :: europe :: macro :: Indice prix production UK juin",
-    "premiere_apparition": "2026-07-17"
-  },
-  {
-    "point": "22/07 :: usa :: corp :: Résultats trimestriels AT&T Inc.",
-    "premiere_apparition": "2026-07-20"
-  },
-  {
-    "point": "22/07 :: usa :: corp :: Résultats trimestriels CME Group",
-    "premiere_apparition": "2026-07-20"
-  },
-  {
-    "point": "22/07 :: usa :: corp :: Résultats trimestriels GE Vernova",
-    "premiere_apparition": "2026-07-20"
-  },
-  {
-    "point": "22/07 :: usa :: corp :: Résultats trimestriels Philip Morris Intl",
-    "premiere_apparition": "2026-07-20"
-  },
-  {
-    "point": "22/07 :: europe :: corp :: Date limite offre Prologis/Segro",
-    "premiere_apparition": "2026-07-20"
-  },
-  {
-    "point": "22/07 :: usa :: corp :: Résultats Freeport-McMoRan",
-    "premiere_apparition": "2026-07-20"
-  },
-  {
-    "point": "22/07 :: asie :: corp :: Résultats SK Hynix",
-    "premiere_apparition": "2026-07-20"
-  },
-  {
-    "point": "22/07 :: usa :: corp :: Résultats TEConnectivity",
-    "premiere_apparition": "2026-07-20"
-  },
-  {
-    "point": "22/07 :: europe :: macro :: Décision taux BCE",
-    "premiere_apparition": "2026-07-20"
-  },
-  {
-    "point": "22/07 :: usa :: tech :: Résultats T2 IBM",
-    "premiere_apparition": "2026-07-21"
-  },
-  {
-    "point": "22/07 :: europe :: macro :: Taux Inflation Base Annuel Royaume-Uni",
-    "premiere_apparition": "2026-07-21"
-  },
-  {
-    "point": "22/07 :: europe :: corp :: Résultats Alstom T1",
-    "premiere_apparition": "2026-07-21"
-  },
-  {
-    "point": "22/07 :: usa :: geo :: Sénat nominations ambassadeurs",
-    "premiere_apparition": "2026-07-22"
-  },
-  {
-    "point": "22/07 :: europe :: macro :: Indice moral investisseurs Allemagne (Juillet)",
-    "premiere_apparition": "2026-07-22"
-  },
-  {
     "point": "23/07 :: europe :: mkt-n :: Décision taux BCE",
     "premiere_apparition": "2026-07-11"
   },
@@ -720,6 +608,10 @@
     "premiere_apparition": "2026-07-21"
   },
   {
+    "point": "07/08 :: usa :: macro :: Rapport NFP US (juillet)",
+    "premiere_apparition": "2026-07-23"
+  },
+  {
     "point": "Semaine du 13/07 :: usa :: corp :: Début saison résultats T2 US",
     "premiere_apparition": "2026-07-11"
   },
@@ -994,5 +886,53 @@
   {
     "point": "19/08 :: uk :: macro :: Publication inflation UK (Juillet)",
     "premiere_apparition": "2026-07-22"
+  },
+  {
+    "point": "14/08 :: europe :: macro :: Mise à jour PIB Zone Euro T2",
+    "premiere_apparition": "2026-07-23"
+  },
+  {
+    "point": "29/08 :: global :: geo :: Réunion Secrétaires Finances & Gouv. BC G20",
+    "premiere_apparition": "2026-07-23"
+  },
+  {
+    "point": "29/08 :: global :: geo :: Réunion Délégués Banques Centrales G20",
+    "premiere_apparition": "2026-07-23"
+  },
+  {
+    "point": "01/09 :: global :: geo :: Réunion Ministérielle G20 Innovation",
+    "premiere_apparition": "2026-07-23"
+  },
+  {
+    "point": "04/09 :: usa :: macro :: Rapport NFP US (août)",
+    "premiere_apparition": "2026-07-23"
+  },
+  {
+    "point": "07/09 :: europe :: macro :: Estimations régulières PIB & Emploi Zone Euro",
+    "premiere_apparition": "2026-07-23"
+  },
+  {
+    "point": "10/09 :: europe :: macro :: Décision de politique monétaire BCE",
+    "premiere_apparition": "2026-07-23"
+  },
+  {
+    "point": "11/09 :: usa :: macro :: Publication IPC US (août)",
+    "premiere_apparition": "2026-07-23"
+  },
+  {
+    "point": "15/09 :: usa :: macro :: Réunion FOMC",
+    "premiere_apparition": "2026-07-23"
+  },
+  {
+    "point": "16/09 :: europe :: macro :: Publication IPC UK (août)",
+    "premiere_apparition": "2026-07-23"
+  },
+  {
+    "point": "17/09 :: asie :: macro :: Décision de politique monétaire BoJ",
+    "premiere_apparition": "2026-07-23"
+  },
+  {
+    "point": "17/09 :: europe :: macro :: Résumé & Procès-verbaux BoE MPC",
+    "premiere_apparition": "2026-07-23"
   }
 ]
