@@ -1,145 +1,5 @@
 [
   {
-    "point": "23/07 :: europe :: mkt-n :: Décision taux BCE",
-    "premiere_apparition": "2026-07-11"
-  },
-  {
-    "point": "23/07 :: afrique :: corp :: Résultats trimestriels Airtel Africa",
-    "premiere_apparition": "2026-07-15"
-  },
-  {
-    "point": "23/07 :: usa :: corp :: Alphabet earnings report",
-    "premiere_apparition": "2026-07-16"
-  },
-  {
-    "point": "23/07 :: usa :: corp :: Honeywell International earnings",
-    "premiere_apparition": "2026-07-16"
-  },
-  {
-    "point": "23/07 :: usa :: corp :: RTX Corporation earnings",
-    "premiere_apparition": "2026-07-16"
-  },
-  {
-    "point": "23/07 :: usa :: corp :: Résultats Intel (INTC)",
-    "premiere_apparition": "2026-07-17"
-  },
-  {
-    "point": "23/07 :: europe :: macro :: Conférence Presse Christine Lagarde (BCE)",
-    "premiere_apparition": "2026-07-17"
-  },
-  {
-    "point": "23/07 :: europe :: macro :: Climat des Affaires Zone Euro",
-    "premiere_apparition": "2026-07-17"
-  },
-  {
-    "point": "23/07 :: usa :: macro :: Nouvelles Demandes Allocations Chômage US",
-    "premiere_apparition": "2026-07-17"
-  },
-  {
-    "point": "23/07 :: usa :: macro :: Indice Manufacturier Fed Kansas City",
-    "premiere_apparition": "2026-07-17"
-  },
-  {
-    "point": "23/07 :: europe :: corp :: Résultats Semestriels Dassault Systemes",
-    "premiere_apparition": "2026-07-17"
-  },
-  {
-    "point": "23/07 :: europe :: corp :: Résultats Semestriels TotalEnergies",
-    "premiere_apparition": "2026-07-17"
-  },
-  {
-    "point": "23/07 :: europe :: corp :: Résultats Semestriels STMicroelectronics",
-    "premiere_apparition": "2026-07-17"
-  },
-  {
-    "point": "23/07 :: europe :: corp :: Publication Rapport Semestriel Nokia",
-    "premiere_apparition": "2026-07-17"
-  },
-  {
-    "point": "23/07 :: europe :: macro :: Climat des affaires France juillet",
-    "premiere_apparition": "2026-07-17"
-  },
-  {
-    "point": "23/07 :: europe :: macro :: Indice confiance consommateurs Zone Euro",
-    "premiere_apparition": "2026-07-17"
-  },
-  {
-    "point": "23/07 :: europe :: corp :: Chiffre affaires T3 Pierre & Vacances",
-    "premiere_apparition": "2026-07-17"
-  },
-  {
-    "point": "23/07 :: europe :: corp :: Résultats semestriels Getlink SE",
-    "premiere_apparition": "2026-07-17"
-  },
-  {
-    "point": "23/07 :: europe :: corp :: Chiffre affaires T3 Aramis Group",
-    "premiere_apparition": "2026-07-17"
-  },
-  {
-    "point": "23/07 :: europe :: corp :: Résultats S1 Patrimoine Commerce",
-    "premiere_apparition": "2026-07-19"
-  },
-  {
-    "point": "23/07 :: europe :: corp :: Résultats S1 Burelle",
-    "premiere_apparition": "2026-07-19"
-  },
-  {
-    "point": "23/07 :: europe :: corp :: Résultats S1 74Software",
-    "premiere_apparition": "2026-07-19"
-  },
-  {
-    "point": "23/07 :: europe :: corp :: CA T3 Pierre & Vacances",
-    "premiere_apparition": "2026-07-19"
-  },
-  {
-    "point": "23/07 :: europe :: corp :: CA T3 Aramis Group",
-    "premiere_apparition": "2026-07-19"
-  },
-  {
-    "point": "23/07 :: europe :: corp :: CA S1 Akwel",
-    "premiere_apparition": "2026-07-19"
-  },
-  {
-    "point": "23/07 :: europe :: corp :: CA S1 Assystem",
-    "premiere_apparition": "2026-07-19"
-  },
-  {
-    "point": "23/07 :: europe :: corp :: CA S1 Adocia",
-    "premiere_apparition": "2026-07-19"
-  },
-  {
-    "point": "23/07 :: usa :: corp :: Résultats American Airlines Group",
-    "premiere_apparition": "2026-07-20"
-  },
-  {
-    "point": "23/07 :: usa :: corp :: Résultats Newmont Corporation",
-    "premiere_apparition": "2026-07-20"
-  },
-  {
-    "point": "23/07 :: usa :: macro :: Inscriptions hebdomadaires chômage USA",
-    "premiere_apparition": "2026-07-21"
-  },
-  {
-    "point": "23/07 :: europe :: macro :: Confiance entreprises France",
-    "premiere_apparition": "2026-07-21"
-  },
-  {
-    "point": "23/07 :: usa :: macro :: Indice activité nationale Fed Chicago",
-    "premiere_apparition": "2026-07-21"
-  },
-  {
-    "point": "23/07 :: europe :: macro :: Confiance consommateurs Flash Eurozone",
-    "premiere_apparition": "2026-07-21"
-  },
-  {
-    "point": "23/07 :: asie :: macro :: CPI (Inflation) Japon",
-    "premiere_apparition": "2026-07-21"
-  },
-  {
-    "point": "23/07 :: asie :: macro :: Chiffres Emploi Australie",
-    "premiere_apparition": "2026-07-21"
-  },
-  {
     "point": "28/07 :: usa :: mkt-n :: Début réunion FOMC",
     "premiere_apparition": "2026-07-11"
   },
@@ -520,58 +380,6 @@
     "premiere_apparition": "2026-07-22"
   },
   {
-    "point": "24/07 :: usa :: corp :: Résultats RTX Q2",
-    "premiere_apparition": "2026-07-11"
-  },
-  {
-    "point": "24/07 :: europe :: corp :: Résultats Volkswagen Q2",
-    "premiere_apparition": "2026-07-11"
-  },
-  {
-    "point": "24/07 :: europe :: macro :: Indices PMI Flash Zone Euro",
-    "premiere_apparition": "2026-07-12"
-  },
-  {
-    "point": "24/07 :: global :: macro :: PMI Flash S&P Global Juillet",
-    "premiere_apparition": "2026-07-14"
-  },
-  {
-    "point": "24/07 :: usa :: corp :: Résultats American Express Company",
-    "premiere_apparition": "2026-07-20"
-  },
-  {
-    "point": "24/07 :: asia :: macro :: Taux d'Inflation (Annuel) Japon",
-    "premiere_apparition": "2026-07-21"
-  },
-  {
-    "point": "24/07 :: asia :: macro :: PMI Manufacturier Flash Japon",
-    "premiere_apparition": "2026-07-21"
-  },
-  {
-    "point": "24/07 :: europe :: macro :: PMI Services Flash France",
-    "premiere_apparition": "2026-07-21"
-  },
-  {
-    "point": "24/07 :: europe :: macro :: Confiance consommateurs Gfk Royaume-Uni",
-    "premiere_apparition": "2026-07-21"
-  },
-  {
-    "point": "24/07 :: europe :: macro :: Ventes au Détail Annuel Royaume-Uni",
-    "premiere_apparition": "2026-07-21"
-  },
-  {
-    "point": "24/07 :: europe :: macro :: Indice PMI Composite Flash Allemagne",
-    "premiere_apparition": "2026-07-21"
-  },
-  {
-    "point": "24/07 :: usa :: macro :: Ventes maisons neuves US",
-    "premiere_apparition": "2026-07-21"
-  },
-  {
-    "point": "24/07 :: europe :: macro :: Décision taux d'intérêt BCE",
-    "premiere_apparition": "2026-07-21"
-  },
-  {
     "point": "27/07 :: europe :: corp :: Résultats AstraZeneca, Vodafone",
     "premiere_apparition": "2026-07-11"
   },
@@ -860,6 +668,10 @@
     "premiere_apparition": "2026-07-21"
   },
   {
+    "point": "10/08 :: asie :: mkt-n :: BoJ Synthèse Opinions (réunion juillet)",
+    "premiere_apparition": "2026-07-25"
+  },
+  {
     "point": "06/08 :: usa :: macro :: Publication Productivité et Coûts T2",
     "premiere_apparition": "2026-07-20"
   },
@@ -870,6 +682,10 @@
   {
     "point": "06/08 :: usa :: corp :: Résultats Airbnb",
     "premiere_apparition": "2026-07-22"
+  },
+  {
+    "point": "06/08 :: usa :: corp :: CPI Résultats T2 2026",
+    "premiere_apparition": "2026-07-25"
   },
   {
     "point": "26-28/07 :: europe :: macro :: Réunion Comité politique monétaire BoE",
@@ -890,6 +706,10 @@
   {
     "point": "14/08 :: europe :: macro :: Mise à jour PIB Zone Euro T2",
     "premiere_apparition": "2026-07-23"
+  },
+  {
+    "point": "14/08 :: europe :: macro :: Zone Euro PIB Seconde Est. T2 2026",
+    "premiere_apparition": "2026-07-25"
   },
   {
     "point": "29/08 :: global :: geo :: Réunion Secrétaires Finances & Gouv. BC G20",
