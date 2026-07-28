@@ -53,22 +53,30 @@ personnel) — ça supprime l'expiration à 7 jours des refresh tokens.
 - Onglet **Actions** du dépôt GitHub : historique des runs, avec le détail de chaque
   étape (utile pour voir à quelle étape ça a échoué : dépendances, token, scraping,
   Gemini, push...).
-- Le workflow a 8 déclenchements planifiés par jour (4 horaires été/hiver × 2 : un
-  principal à `:05`, un filet de secours à `:35` — voir le commentaire dans le fichier
-  de workflow). La plupart apparaissent comme des runs très courts avec uniquement le
-  job `gate` exécuté et `brief` annulé (`skipped`) — c'est normal, pas une erreur.
-- Le créneau de secours (`:35`) peut aussi se déclencher pour de vrai (job `gate` à
-  "oui") mais sauter toutes ses étapes via la vérification anti-doublon si le créneau
-  principal (`:05`) a déjà réussi — visible dans les logs de l'étape "Verifier qu'un
-  cycle n'a pas deja tourne dans ce creneau" (`deja_fait=oui`) et les étapes suivantes
-  marquées `skipped`. C'est le comportement voulu, pas une erreur.
+- Depuis le 28/07/2026, le workflow se déclenche toutes les 30 min entre 6h et 21h UTC
+  (voir le commentaire dans le fichier de workflow) — plus de fenêtre stricte "8h ou
+  13h Paris pile". L'étape "Verifier si un cycle a deja tourne pour ce creneau
+  aujourd'hui" décide si un cycle est encore nécessaire aujourd'hui en comparant la
+  date + le créneau (matin avant 12h / après-midi à partir de 12h, heure Paris) du
+  dernier commit `"Mise a jour automatique"` à l'heure actuelle. La plupart des runs
+  sont donc des runs très courts qui s'arrêtent juste après cette étape
+  (`deja_fait=oui`, étapes suivantes marquées `skipped`) — c'est normal, pas une
+  erreur : ça veut dire que le cycle du créneau en cours a déjà réussi.
 - Un commit `"Mise a jour automatique du JJ/MM/AAAA HH:MM"` dans l'historique Git
   confirme qu'un cycle complet (scraping → Gemini → rendu → push) a réussi.
 - **Incident connu (22/07/2026)** : un créneau planifié peut ne se déclencher ni à
-  `:05` ni à `:35` — GitHub ne garantit aucune heure exacte pour un `schedule`. Si ça
-  se reproduit plusieurs jours de suite, lancer manuellement via `gh workflow run` (voir
-  ci-dessous) et considérer resserrer l'écart entre les deux créneaux, ou ajouter un
-  troisième créneau de secours.
+  `:05` ni à `:35` — GitHub ne garantit aucune heure exacte pour un `schedule`.
+- **Incident connu (26-28/07/2026)** : constaté que des runs `schedule` s'exécutent
+  parfois avec plusieurs **heures** de retard (pas juste quelques minutes), ce qui
+  faisait rater systématiquement l'ancienne fenêtre stricte "heure Paris == 8 ou 13"
+  et a laissé le site sans contenu frais pendant ~2 jours sans qu'aucune erreur
+  n'apparaisse dans les logs (les runs "en retard" se terminaient en succès après
+  avoir simplement décidé de ne rien faire). Corrigé par le passage à un
+  déclenchement toutes les 30 min + une vérification d'idempotence par
+  date/créneau plutôt que par heure exacte (voir plus haut) — le pipeline se
+  rattrape maintenant tout seul dans la journée même en cas de gros retard GitHub.
+  Si un créneau (matin ou après-midi) venait quand même à manquer un jour entier,
+  lancer manuellement via `gh workflow run` (voir ci-dessous).
 
 ## Lancer un cycle manuellement (sans attendre 8h/13h)
 

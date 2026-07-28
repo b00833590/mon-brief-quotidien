@@ -21,9 +21,12 @@ automatisé (secrets, ré-autorisation Gmail si besoin, déclenchement manuel).
 
 - `gmail_test.py` (~1000 lignes) : scraping Gmail + RSS + Natixis + Les Echos, appel Gemini,
   génération HTML, push Git.
-- `.github/workflows/brief-quotidien.yml` — exécute le pipeline automatiquement à 8h et 13h heure
-  de Paris, dans le cloud (GitHub Actions), indépendamment de toute machine locale allumée. Un job
-  `gate` gère le décalage été/hiver (cron GitHub Actions toujours en UTC).
+- `.github/workflows/brief-quotidien.yml` — exécute le pipeline automatiquement dans le cloud
+  (GitHub Actions), indépendamment de toute machine locale allumée, en visant deux cycles par jour
+  (matin / après-midi heure de Paris). Depuis le 28/07/2026 : déclenchement `schedule` toutes les
+  30 min entre 6h et 21h UTC (au lieu de créneaux fixes à 8h/13h) avec une vérification
+  d'idempotence par date+créneau (pas par heure exacte) — voir "Incident du 26-28/07/2026" plus bas
+  et `RUNBOOK.md` pour le détail du mécanisme.
 - `agenda_events.json` — mémoire persistante des événements d'agenda (dédoublonnage + expiration
   entre exécutions), re-committée à chaque run pour survivre aux runners GitHub Actions éphémères.
 - `credentials.json`, `token.json`, `.env` — **non versionnés** (`.gitignore`, ce dépôt est
@@ -157,3 +160,17 @@ Structure du dossier parent `Newsletters/` (hors Git, sans rapport avec ce dép�
   aucune heure exacte pour un `schedule`, ce correctif réduit la probabilité de perte sans
   l'éliminer — si un créneau venait à manquer à nouveau malgré ça, vérifier l'onglet Actions
   directement plutôt que de supposer un bug côté pipeline.
+- **Incident du 26-28/07/2026 : site resté sans contenu frais ~2 jours sans aucune erreur
+  visible.** Le correctif du 22/07 supposait des retards de l'ordre de quelques dizaines de
+  minutes ; en pratique, les runs `schedule` de ce dépôt se sont déclenchés avec **plusieurs
+  heures** de retard sur plusieurs jours d'affilée (ex. un cron visant ~8h Paris exécuté à 19h56
+  Paris) — l'ancien job `gate`, qui n'autorisait le pipeline que si l'heure Paris réelle était
+  *exactement* 8 ou 13, rejetait alors systématiquement ces runs retardés (`executer=non`,
+  `success` malgré tout car "hors créneau" n'est pas une erreur), donc rien n'apparaissait comme
+  cassé dans les logs. Corrigé : suppression du job `gate` et de la fenêtre stricte par heure —
+  le workflow se déclenche maintenant toutes les 30 min entre 6h et 21h UTC, et la vérification
+  d'idempotence (déplacée dans le job `brief`) compare la date + le créneau (matin avant 12h /
+  après-midi à partir de 12h, heure Paris) du dernier commit `"Mise a jour automatique"` à
+  l'heure actuelle au lieu de compter des minutes depuis le dernier commit — un cycle qui n'a pas
+  eu lieu ce matin se rattrape automatiquement dès le prochain run planifié dans la journée, quel
+  que soit le retard GitHub. Voir `RUNBOOK.md` pour le détail.

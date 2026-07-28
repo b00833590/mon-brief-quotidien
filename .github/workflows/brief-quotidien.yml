@@ -1,29 +1,21 @@
 name: Brief quotidien automatique
 
-# Le planificateur de taches GitHub Actions (cron) est toujours en UTC et ne
-# gere pas le changement d'heure. On declenche donc a 4 heures UTC candidates
-# (couvrant 8h/13h heure de Paris en ete ET en hiver), et un premier job
-# "gate" verifie l'heure locale Paris reelle pour n'executer le pipeline que
-# si on est bien a 8h ou 13h heure de Paris — les 2 autres declenchements
-# du jour sont annules sans rien faire (gratuit sur un depot public).
+# GitHub ne garantit pas l'heure exacte d'un declenchement `schedule` — des
+# retards de plusieurs heures sont possibles (constate le 26-28/07/2026 : des
+# cron programmes vers 8h/13h Paris se sont executes jusqu'a 10h plus tard,
+# ratant systematiquement la fenetre stricte "il est exactement 8h ou 13h").
 #
-# Le 22/07/2026, le creneau de 13h (11h UTC) ne s'est jamais declenche du
-# tout : GitHub documente que les schedules peuvent etre retardes ou perdus
-# en cas de forte charge, precisement aux heures rondes. Deux mesures en
-# consequence : (1) les horaires sont decales de :00 a :05, (2) un second
-# jeu de creneaux 30 min plus tard sert de filet de secours, neutralise par
-# une verification anti-doublon dans le job "brief" (voir plus bas) s'il se
-# trouve que le premier creneau a bien fonctionne.
+# Plutot que de viser une heure precise et rater le cycle du jour en cas de
+# retard, le workflow se declenche toutes les 30 min sur une large plage
+# (6h-20h59 UTC, couvre 7h/8h a 21h/22h Paris ete/hiver). La verification
+# d'idempotence ne se base plus sur "combien de minutes depuis le dernier
+# commit" mais sur "un cycle a-t-il deja tourne aujourd'hui (heure Paris)
+# pour ce creneau (matin = avant 12h, apres-midi = a partir de 12h) ?" —
+# robuste a un retard de plusieurs heures, se rattrape tout seul dans la
+# journee au lieu de rester silencieusement en panne jusqu'au lendemain.
 on:
   schedule:
-    - cron: '5 6 * * *'    # ~08h05 Paris en ete (UTC+2)
-    - cron: '5 7 * * *'    # ~08h05 Paris en hiver (UTC+1)
-    - cron: '5 11 * * *'   # ~13h05 Paris en ete (UTC+2)
-    - cron: '5 12 * * *'   # ~13h05 Paris en hiver (UTC+1)
-    - cron: '35 6 * * *'   # filet de secours ~08h35 (ete)
-    - cron: '35 7 * * *'   # filet de secours ~08h35 (hiver)
-    - cron: '35 11 * * *'  # filet de secours ~13h35 (ete)
-    - cron: '35 12 * * *'  # filet de secours ~13h35 (hiver)
+    - cron: '*/30 6-20 * * *'
   workflow_dispatch: {}   # permet de lancer manuellement depuis l'onglet Actions
 
 # Empeche deux executions de se chevaucher (declenchement manuel pile au
@@ -34,31 +26,7 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  gate:
-    runs-on: ubuntu-latest
-    timeout-minutes: 3
-    outputs:
-      executer: ${{ steps.check.outputs.executer }}
-    steps:
-      - id: check
-        run: |
-          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
-            echo "Declenchement manuel : execution forcee."
-            echo "executer=oui" >> "$GITHUB_OUTPUT"
-            exit 0
-          fi
-          HEURE_PARIS=$(TZ='Europe/Paris' date +%H)
-          echo "Heure locale Paris actuelle : ${HEURE_PARIS}h"
-          if [ "$HEURE_PARIS" = "08" ] || [ "$HEURE_PARIS" = "13" ]; then
-            echo "executer=oui" >> "$GITHUB_OUTPUT"
-          else
-            echo "Hors creneau (doublon saisonnier attendu) : on annule proprement."
-            echo "executer=non" >> "$GITHUB_OUTPUT"
-          fi
-
   brief:
-    needs: gate
-    if: needs.gate.outputs.executer == 'oui'
     runs-on: ubuntu-latest
     timeout-minutes: 15
     permissions:
@@ -66,20 +34,44 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Verifier qu'un cycle n'a pas deja tourne dans ce creneau
+      - name: Verifier si un cycle a deja tourne pour ce creneau aujourd'hui
         id: idempotence
-        if: github.event_name == 'schedule'
         run: |
-          DERNIER_MSG=$(git log -1 --format=%s)
-          DERNIER_EPOCH=$(git log -1 --format=%ct)
-          ECART_MIN=$(( ($(date +%s) - DERNIER_EPOCH) / 60 ))
-          echo "Dernier commit il y a ${ECART_MIN} min : ${DERNIER_MSG}"
-          if [[ "$DERNIER_MSG" == "Mise a jour automatique du"* ]] && [ "$ECART_MIN" -lt 50 ]; then
-            echo "Cycle deja effectue recemment (creneau de secours) — on saute ce run."
-            echo "deja_fait=oui" >> "$GITHUB_OUTPUT"
-          else
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "Declenchement manuel : execution forcee."
             echo "deja_fait=non" >> "$GITHUB_OUTPUT"
+            exit 0
           fi
+
+          DATE_PARIS=$(TZ='Europe/Paris' date +%d/%m/%Y)
+          HEURE_PARIS=$(TZ='Europe/Paris' date +%H)
+          if [ "$HEURE_PARIS" -lt 12 ]; then
+            CRENEAU="matin"
+          else
+            CRENEAU="apres-midi"
+          fi
+          echo "Aujourd'hui (Paris) : ${DATE_PARIS}, creneau ${CRENEAU} (${HEURE_PARIS}h locales)"
+
+          DERNIER_MSG=$(git log -1 --format=%s)
+          echo "Dernier commit : ${DERNIER_MSG}"
+
+          if [[ "$DERNIER_MSG" =~ ^Mise\ a\ jour\ automatique\ du\ ([0-9]{2}/[0-9]{2}/[0-9]{4})\ ([0-9]{2}): ]]; then
+            DERNIER_DATE="${BASH_REMATCH[1]}"
+            DERNIER_HEURE="${BASH_REMATCH[2]}"
+            if [ "$DERNIER_HEURE" -lt 12 ]; then
+              DERNIER_CRENEAU="matin"
+            else
+              DERNIER_CRENEAU="apres-midi"
+            fi
+            if [ "$DERNIER_DATE" = "$DATE_PARIS" ] && [ "$DERNIER_CRENEAU" = "$CRENEAU" ]; then
+              echo "Cycle deja effectue aujourd'hui pour le creneau ${CRENEAU} — on saute ce run."
+              echo "deja_fait=oui" >> "$GITHUB_OUTPUT"
+              exit 0
+            fi
+          fi
+
+          echo "Aucun cycle ${CRENEAU} encore effectue aujourd'hui — on lance le pipeline."
+          echo "deja_fait=non" >> "$GITHUB_OUTPUT"
 
       - uses: actions/setup-python@v5
         if: steps.idempotence.outputs.deja_fait != 'oui'
