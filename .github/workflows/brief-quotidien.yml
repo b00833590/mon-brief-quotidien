@@ -37,11 +37,14 @@ jobs:
       - name: Verifier si un cycle a deja tourne pour ce creneau aujourd'hui
         id: idempotence
         run: |
-          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
-            echo "Declenchement manuel : execution forcee."
-            echo "deja_fait=non" >> "$GITHUB_OUTPUT"
-            exit 0
-          fi
+          # TEST TEMPORAIRE (a retirer juste apres) : le contournement manuel
+          # ci-dessous est desactive pour un run afin d'observer la vraie
+          # decision matin/apres-midi sur le runner ubuntu-latest reel.
+          # if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+          #   echo "Declenchement manuel : execution forcee."
+          #   echo "deja_fait=non" >> "$GITHUB_OUTPUT"
+          #   exit 0
+          # fi
 
           DATE_PARIS=$(TZ='Europe/Paris' date +%d/%m/%Y)
           HEURE_PARIS=$(TZ='Europe/Paris' date +%H)
