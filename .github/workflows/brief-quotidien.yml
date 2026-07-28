@@ -55,14 +55,21 @@ jobs:
           DERNIER_MSG=$(git log -1 --format=%s)
           echo "Dernier commit : ${DERNIER_MSG}"
 
-          if [[ "$DERNIER_MSG" =~ ^Mise\ a\ jour\ automatique\ du\ ([0-9]{2}/[0-9]{2}/[0-9]{4})\ ([0-9]{2}): ]]; then
-            DERNIER_DATE="${BASH_REMATCH[1]}"
-            DERNIER_HEURE="${BASH_REMATCH[2]}"
+          # On lit la date/heure du dernier commit via le timestamp Git (epoch +
+          # offset), converti en heure Paris avec --date=format-local, plutot que
+          # de parser l'heure ecrite dans le message. Le message est produit par
+          # `datetime.now()` sans fuseau dans gmail_test.py, donc en heure UTC du
+          # runner — un parsing textuel aurait donc mal classe matin/apres-midi
+          # pres de la frontiere (ex. "10:46" dans le message = 12:46 Paris l'ete).
+          if [[ "$DERNIER_MSG" == "Mise a jour automatique du"* ]]; then
+            DERNIER_DATE=$(TZ='Europe/Paris' git log -1 --date='format-local:%d/%m/%Y' --format=%cd)
+            DERNIER_HEURE=$(TZ='Europe/Paris' git log -1 --date='format-local:%H' --format=%cd)
             if [ "$DERNIER_HEURE" -lt 12 ]; then
               DERNIER_CRENEAU="matin"
             else
               DERNIER_CRENEAU="apres-midi"
             fi
+            echo "Dernier commit (converti heure Paris) : ${DERNIER_DATE} ${DERNIER_HEURE}h, creneau ${DERNIER_CRENEAU}"
             if [ "$DERNIER_DATE" = "$DATE_PARIS" ] && [ "$DERNIER_CRENEAU" = "$CRENEAU" ]; then
               echo "Cycle deja effectue aujourd'hui pour le creneau ${CRENEAU} — on saute ce run."
               echo "deja_fait=oui" >> "$GITHUB_OUTPUT"

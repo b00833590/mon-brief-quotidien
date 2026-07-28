@@ -4,6 +4,7 @@ from google.genai import types
 from bs4 import BeautifulSoup
 import json
 from datetime import datetime
+from zoneinfo import ZoneInfo
 from playwright.sync_api import sync_playwright
 import base64
 import requests
@@ -963,7 +964,10 @@ JOURS_FR = ["lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi", "dimanc
 MOIS_FR = ["janvier", "fevrier", "mars", "avril", "mai", "juin", "juillet", "aout",
            "septembre", "octobre", "novembre", "decembre"]
 
-maintenant = datetime.now()
+# En heure Paris explicitement : sur le runner GitHub Actions (UTC), un
+# datetime.now() nu afficherait un horaire "Mise a jour" fige en UTC sur le
+# site (jusqu'a 2h en retard sur l'heure reelle Paris en ete).
+maintenant = datetime.now(ZoneInfo("Europe/Paris"))
 date_str = f"{JOURS_FR[maintenant.weekday()]} {maintenant.day:02d} {MOIS_FR[maintenant.month - 1]} {maintenant.year}".capitalize()
 heure_str = maintenant.strftime("%Hh%M")
 
@@ -991,7 +995,7 @@ def pousser_vers_git():
         # c'est le seul moyen pour la memoire de dedoublonnage/expiration de
         # l'agenda de survivre d'une execution a l'autre.
         subprocess.run(["git", "add", "index.html", "agenda_events.json"], check=True)
-        message_commit = f"Mise a jour automatique du {datetime.now().strftime('%d/%m/%Y %H:%M')}"
+        message_commit = f"Mise a jour automatique du {datetime.now(ZoneInfo('Europe/Paris')).strftime('%d/%m/%Y %H:%M')}"
         resultat_commit = subprocess.run(
             ["git", "commit", "-m", message_commit],
             capture_output=True, text=True
