@@ -68,6 +68,18 @@
     "premiere_apparition": "2026-07-21"
   },
   {
+    "point": "28/07 :: europe :: corp :: Résultats Orange",
+    "premiere_apparition": "2026-07-28"
+  },
+  {
+    "point": "28/07 :: europe :: corp :: Résultats Safran",
+    "premiere_apparition": "2026-07-28"
+  },
+  {
+    "point": "28/07 :: europe :: corp :: Résultats Air Liquide",
+    "premiere_apparition": "2026-07-28"
+  },
+  {
     "point": "29/07 :: usa :: mkt-n :: Décision taux FOMC",
     "premiere_apparition": "2026-07-11"
   },
@@ -512,6 +524,10 @@
     "premiere_apparition": "2026-07-22"
   },
   {
+    "point": "13/08 :: europe :: macro :: PIB, Production Industrielle UK",
+    "premiere_apparition": "2026-07-28"
+  },
+  {
     "point": "16/08 :: asie :: macro :: Publication PIB Japon",
     "premiere_apparition": "2026-07-14"
   },
@@ -596,6 +612,10 @@
     "premiere_apparition": "2026-07-22"
   },
   {
+    "point": "03/08 :: europe :: corp :: Résultats Bonduelle",
+    "premiere_apparition": "2026-07-28"
+  },
+  {
     "point": "31/07-02/08 :: global :: mkt-n :: Conférence Mondiale Management/Économie",
     "premiere_apparition": "2026-07-16"
   },
@@ -668,6 +688,10 @@
     "premiere_apparition": "2026-07-25"
   },
   {
+    "point": "06/08 :: europe :: macro :: Ventes au détail Zone Euro",
+    "premiere_apparition": "2026-07-28"
+  },
+  {
     "point": "26-28/07 :: europe :: macro :: Réunion Comité politique monétaire BoE",
     "premiere_apparition": "2026-07-21"
   },
@@ -682,6 +706,10 @@
   {
     "point": "19/08 :: uk :: macro :: Publication inflation UK (Juillet)",
     "premiere_apparition": "2026-07-22"
+  },
+  {
+    "point": "19/08 :: usa :: mkt-n :: Minutes réunion FOMC",
+    "premiere_apparition": "2026-07-28"
   },
   {
     "point": "14/08 :: europe :: macro :: Mise à jour PIB Zone Euro T2",
@@ -734,5 +762,9 @@
   {
     "point": "17/09 :: europe :: macro :: Résumé & Procès-verbaux BoE MPC",
     "premiere_apparition": "2026-07-23"
+  },
+  {
+    "point": "20/08 :: europe :: mkt-n :: Décision taux Riksbank Suède",
+    "premiere_apparition": "2026-07-28"
   }
 ]
