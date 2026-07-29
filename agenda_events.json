@@ -1,85 +1,5 @@
 [
   {
-    "point": "28/07 :: usa :: mkt-n :: Début réunion FOMC",
-    "premiere_apparition": "2026-07-11"
-  },
-  {
-    "point": "28/07 :: usa :: corp :: Résultats S&P Global",
-    "premiere_apparition": "2026-07-11"
-  },
-  {
-    "point": "28/07 :: europe :: mkt-n :: Fin réunion BoE MPC",
-    "premiere_apparition": "2026-07-14"
-  },
-  {
-    "point": "28/07 :: usa :: corp :: United Parcel Service earnings",
-    "premiere_apparition": "2026-07-16"
-  },
-  {
-    "point": "28/07 :: usa :: corp :: PayPal Holdings earnings",
-    "premiere_apparition": "2026-07-16"
-  },
-  {
-    "point": "28/07 :: usa :: corp :: Boeing Company earnings",
-    "premiere_apparition": "2026-07-16"
-  },
-  {
-    "point": "28/07 :: usa :: corp :: NXP Semiconductors earnings",
-    "premiere_apparition": "2026-07-16"
-  },
-  {
-    "point": "28/07 :: usa :: corp :: KLA Corporation earnings",
-    "premiere_apparition": "2026-07-16"
-  },
-  {
-    "point": "28/07 :: usa :: corp :: Centene Corporation earnings",
-    "premiere_apparition": "2026-07-16"
-  },
-  {
-    "point": "28/07 :: usa :: corp :: Résultats Corning Incorporated",
-    "premiere_apparition": "2026-07-20"
-  },
-  {
-    "point": "28/07 :: usa :: corp :: Résultats Bloom Energy",
-    "premiere_apparition": "2026-07-20"
-  },
-  {
-    "point": "28/07 :: usa :: corp :: Résultats Teradyne",
-    "premiere_apparition": "2026-07-20"
-  },
-  {
-    "point": "28/07 :: usa :: corp :: Résultats Seagate Technology Holdings",
-    "premiere_apparition": "2026-07-20"
-  },
-  {
-    "point": "28/07 :: usa :: macro :: Inventaires de gros US (Prél.)",
-    "premiere_apparition": "2026-07-21"
-  },
-  {
-    "point": "28/07 :: usa :: macro :: Indice S&P/Case-Shiller Prix Immobiliers US",
-    "premiere_apparition": "2026-07-21"
-  },
-  {
-    "point": "28/07 :: usa :: macro :: Indice manufacturier Richmond Fed",
-    "premiere_apparition": "2026-07-21"
-  },
-  {
-    "point": "28/07 :: usa :: macro :: Confiance consommateurs US",
-    "premiere_apparition": "2026-07-21"
-  },
-  {
-    "point": "28/07 :: europe :: corp :: Résultats Orange",
-    "premiere_apparition": "2026-07-28"
-  },
-  {
-    "point": "28/07 :: europe :: corp :: Résultats Safran",
-    "premiere_apparition": "2026-07-28"
-  },
-  {
-    "point": "28/07 :: europe :: corp :: Résultats Air Liquide",
-    "premiere_apparition": "2026-07-28"
-  },
-  {
     "point": "29/07 :: usa :: mkt-n :: Décision taux FOMC",
     "premiere_apparition": "2026-07-11"
   },
@@ -482,6 +402,10 @@
   {
     "point": "04/08 :: europe :: corp :: Résultats BP",
     "premiere_apparition": "2026-07-22"
+  },
+  {
+    "point": "04/08 :: usa :: corp :: Résultats financiers Amgen T2 2026",
+    "premiere_apparition": "2026-07-29"
   },
   {
     "point": "12/08 :: usa :: macro :: IPC US Juillet",
