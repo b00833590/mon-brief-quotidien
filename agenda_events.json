@@ -452,6 +452,10 @@
     "premiere_apparition": "2026-07-28"
   },
   {
+    "point": "13/08 :: usa :: macro :: Inflation PPI US juillet",
+    "premiere_apparition": "2026-07-29"
+  },
+  {
     "point": "16/08 :: asie :: macro :: Publication PIB Japon",
     "premiere_apparition": "2026-07-14"
   },
@@ -644,6 +648,10 @@
     "premiere_apparition": "2026-07-25"
   },
   {
+    "point": "14/08 :: europe :: macro :: PIB T2 Eurozone (2ème estim)",
+    "premiere_apparition": "2026-07-29"
+  },
+  {
     "point": "29/08 :: global :: geo :: Réunion Secrétaires Finances & Gouv. BC G20",
     "premiere_apparition": "2026-07-23"
   },
@@ -690,5 +698,13 @@
   {
     "point": "20/08 :: europe :: mkt-n :: Décision taux Riksbank Suède",
     "premiere_apparition": "2026-07-28"
+  },
+  {
+    "point": "11/08 :: europe :: corp :: Résultats On T2",
+    "premiere_apparition": "2026-07-29"
+  },
+  {
+    "point": "18/08 :: usa :: macro :: Indices Prix Import/Export US juillet",
+    "premiere_apparition": "2026-07-29"
   }
 ]
