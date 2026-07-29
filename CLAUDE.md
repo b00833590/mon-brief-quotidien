@@ -174,3 +174,13 @@ Structure du dossier parent `Newsletters/` (hors Git, sans rapport avec ce dép�
   l'heure actuelle au lieu de compter des minutes depuis le dernier commit — un cycle qui n'a pas
   eu lieu ce matin se rattrape automatiquement dès le prochain run planifié dans la journée, quel
   que soit le retard GitHub. Voir `RUNBOOK.md` pour le détail.
+- **Incident du 29/07/2026 : `schedule` ne s'est déclenché aucune fois pendant ~10h** (pas juste
+  en retard cette fois — zéro run entre 21h43 UTC le 28/07 et 08h12 UTC le 29/07, alors que 5
+  créneaux auraient dû partir). Le correctif du 26-28/07 (idempotence par créneau) ne couvre que
+  les retards, pas l'absence totale de déclenchement — limite de `schedule` non garantie par
+  GitHub. Palliatif : un cron externe (cron-job.org, horloge indépendante de GitHub) appelle
+  `workflow_dispatch` toutes les 30 min sur la même plage. Ce changement a nécessité de rendre
+  `workflow_dispatch` idempotent par défaut lui aussi (sinon chaque appel du cron externe aurait
+  forcé une exécution complète, ~30/jour au lieu de 2) — un input `force` permet toujours de
+  déclencher manuellement en bypassant l'idempotence. Voir `RUNBOOK.md` section "Cron externe"
+  pour la configuration complète (PAT, en-têtes, planification).
