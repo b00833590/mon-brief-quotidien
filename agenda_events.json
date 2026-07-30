@@ -1,121 +1,5 @@
 [
   {
-    "point": "29/07 :: usa :: mkt-n :: Décision taux FOMC",
-    "premiere_apparition": "2026-07-11"
-  },
-  {
-    "point": "29/07 :: asie :: mkt-n :: Début réunion BoJ",
-    "premiere_apparition": "2026-07-11"
-  },
-  {
-    "point": "29/07 :: usa :: mkt-n :: Décision de taux Fed & conférence presse",
-    "premiere_apparition": "2026-07-11"
-  },
-  {
-    "point": "29/07 :: usa :: corp :: Résultats Microsoft Q2",
-    "premiere_apparition": "2026-07-11"
-  },
-  {
-    "point": "29/07 :: usa :: corp :: Résultats Meta Platforms Q2",
-    "premiere_apparition": "2026-07-11"
-  },
-  {
-    "point": "29/07 :: europe :: macro :: PIB Zone Euro T2 (estimation flash)",
-    "premiere_apparition": "2026-07-11"
-  },
-  {
-    "point": "29/07 :: europe :: macro :: Estimation flash PIB Eurozone Q2",
-    "premiere_apparition": "2026-07-11"
-  },
-  {
-    "point": "29/07 :: usa :: macro :: Indices Emploi Chômage Métropoles US Juin",
-    "premiere_apparition": "2026-07-11"
-  },
-  {
-    "point": "29/07 :: europe :: macro :: Indices Prix Agricoles Zone Euro 2025",
-    "premiere_apparition": "2026-07-11"
-  },
-  {
-    "point": "29/07 :: europe :: macro :: Taux chômage Zone Euro Juin",
-    "premiere_apparition": "2026-07-15"
-  },
-  {
-    "point": "29/07 :: usa :: macro :: US Emploi Zones Métro Juin 2026",
-    "premiere_apparition": "2026-07-15"
-  },
-  {
-    "point": "29/07 :: usa :: macro :: US Dynamique Emploi T4 2025",
-    "premiere_apparition": "2026-07-15"
-  },
-  {
-    "point": "29/07 :: usa :: corp :: Chipotle Mexican Grill earnings",
-    "premiere_apparition": "2026-07-16"
-  },
-  {
-    "point": "29/07 :: usa :: corp :: Arm Holdings earnings",
-    "premiere_apparition": "2026-07-16"
-  },
-  {
-    "point": "29/07 :: usa :: corp :: Robinhood Markets earnings",
-    "premiere_apparition": "2026-07-16"
-  },
-  {
-    "point": "29/07 :: europe :: macro :: Chômage Eurozone Juin",
-    "premiere_apparition": "2026-07-17"
-  },
-  {
-    "point": "29/07 :: asie :: macro :: Début Réunion Banque du Japon",
-    "premiere_apparition": "2026-07-17"
-  },
-  {
-    "point": "29/07 :: usa :: macro :: Publication PCE (inflation) USA",
-    "premiere_apparition": "2026-07-17"
-  },
-  {
-    "point": "29/07 :: europe :: macro :: Indicateur Sentiment Eco UE",
-    "premiere_apparition": "2026-07-19"
-  },
-  {
-    "point": "29/07 :: global :: macro :: Publication Business Employment Dynamics",
-    "premiere_apparition": "2026-07-20"
-  },
-  {
-    "point": "29/07 :: usa :: corp :: Résultats Starbucks Corporation",
-    "premiere_apparition": "2026-07-20"
-  },
-  {
-    "point": "29/07 :: usa :: corp :: Résultats Amphenol Corporation",
-    "premiere_apparition": "2026-07-20"
-  },
-  {
-    "point": "29/07 :: usa :: corp :: Résultats FormFactor",
-    "premiere_apparition": "2026-07-20"
-  },
-  {
-    "point": "29/07 :: usa :: corp :: Résultats O'Reilly Automotive",
-    "premiere_apparition": "2026-07-20"
-  },
-  {
-    "point": "29/07 :: usa :: tech :: Résultats T3 QUALCOMM",
-    "premiere_apparition": "2026-07-21"
-  },
-  {
-    "point": "29/07 :: canada :: macro :: Résumé délibérations BoC",
-    "premiere_apparition": "2026-07-21"
-  },
-  {
-    "point": "29/07 :: asie :: mkt-n :: Réunion BoJ politique monétaire (jour 1)",
-    "premiere_apparition": "2026-07-21"
-  },
-  {
-    "point": "29/07 :: usa :: macro :: Dépenses de consommation personnelle (PCE)",
-    "premiere_apparition": "2026-07-22"
-  },
-  {
-    "point": "29/07 :: usa :: macro :: Statistiques emploi Business Dynamics Q4 2025",
-    "premiere_apparition": "2026-07-22"
-  },
-  {
     "point": "30/07 :: asie :: mkt-n :: Décision taux BoJ",
     "premiere_apparition": "2026-07-11"
   },
@@ -220,6 +104,14 @@
     "premiere_apparition": "2026-07-22"
   },
   {
+    "point": "30/07 :: europe :: macro :: BoE Monetary Policy Summary & Report",
+    "premiere_apparition": "2026-07-30"
+  },
+  {
+    "point": "30/07 :: usa :: macro :: US GDP Advance Estimate Q2",
+    "premiere_apparition": "2026-07-30"
+  },
+  {
     "point": "31/07 :: asie :: mkt-n :: Publication perspectives économiques BoJ",
     "premiere_apparition": "2026-07-11"
   },
@@ -280,6 +172,10 @@
     "premiere_apparition": "2026-07-22"
   },
   {
+    "point": "31/07 :: global :: mkt-n :: Bitcoin & Ether Options Expiry",
+    "premiere_apparition": "2026-07-30"
+  },
+  {
     "point": "01/08 :: europe :: macro :: Publication Flash HICP Eurozone juillet 2026",
     "premiere_apparition": "2026-07-11"
   },
@@ -334,6 +230,10 @@
   {
     "point": "07/08 :: usa :: macro :: Rapport NFP US (juillet)",
     "premiere_apparition": "2026-07-23"
+  },
+  {
+    "point": "07/08 :: usa :: macro :: US Jobs Report July",
+    "premiere_apparition": "2026-07-30"
   },
   {
     "point": "Semaine du 13/07 :: usa :: corp :: Début saison résultats T2 US",
@@ -406,6 +306,10 @@
   {
     "point": "04/08 :: usa :: corp :: Résultats financiers Amgen T2 2026",
     "premiere_apparition": "2026-07-29"
+  },
+  {
+    "point": "04/08 :: usa :: corp :: Caterpillar Inc. Earnings",
+    "premiere_apparition": "2026-07-30"
   },
   {
     "point": "12/08 :: usa :: macro :: IPC US Juillet",
@@ -544,6 +448,10 @@
     "premiere_apparition": "2026-07-28"
   },
   {
+    "point": "03/08 :: usa :: corp :: Eaton Corporation Earnings",
+    "premiere_apparition": "2026-07-30"
+  },
+  {
     "point": "31/07-02/08 :: global :: mkt-n :: Conférence Mondiale Management/Économie",
     "premiere_apparition": "2026-07-16"
   },
@@ -652,6 +560,10 @@
     "premiere_apparition": "2026-07-29"
   },
   {
+    "point": "14/08 :: usa :: corp :: Starbucks Dividend Record Date",
+    "premiere_apparition": "2026-07-30"
+  },
+  {
     "point": "29/08 :: global :: geo :: Réunion Secrétaires Finances & Gouv. BC G20",
     "premiere_apparition": "2026-07-23"
   },
@@ -700,8 +612,24 @@
     "premiere_apparition": "2026-07-28"
   },
   {
+    "point": "20/08 :: europe :: macro :: Swedish Riksbank Rate Decision",
+    "premiere_apparition": "2026-07-30"
+  },
+  {
+    "point": "20/08 :: usa :: corp :: Kinross Dividend Record Date",
+    "premiere_apparition": "2026-07-30"
+  },
+  {
     "point": "11/08 :: europe :: corp :: Résultats On T2",
     "premiere_apparition": "2026-07-29"
+  },
+  {
+    "point": "11/08 :: global :: geo :: Global Business Summit Quebec",
+    "premiere_apparition": "2026-07-30"
+  },
+  {
+    "point": "11/08 :: usa :: geo :: Global Research Conference Harvard",
+    "premiere_apparition": "2026-07-30"
   },
   {
     "point": "18/08 :: usa :: macro :: Indices Prix Import/Export US juillet",
