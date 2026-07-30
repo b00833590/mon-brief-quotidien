@@ -176,6 +176,10 @@
     "premiere_apparition": "2026-07-30"
   },
   {
+    "point": "31/07 :: europe :: macro :: HICP Zone Euro Estimation Flash (Juillet)",
+    "premiere_apparition": "2026-07-30"
+  },
+  {
     "point": "01/08 :: europe :: macro :: Publication Flash HICP Eurozone juillet 2026",
     "premiere_apparition": "2026-07-11"
   },
@@ -480,6 +484,14 @@
     "premiere_apparition": "2026-07-22"
   },
   {
+    "point": "05/08 :: usa :: corp :: Energy Fuels Résultats",
+    "premiere_apparition": "2026-07-30"
+  },
+  {
+    "point": "05/08 :: usa :: corp :: GlobalFoundries Résultats",
+    "premiere_apparition": "2026-07-30"
+  },
+  {
     "point": "Début Août :: usa :: corp :: Résultats Block",
     "premiere_apparition": "2026-07-17"
   },
@@ -508,6 +520,10 @@
     "premiere_apparition": "2026-07-25"
   },
   {
+    "point": "10/08 :: usa :: corp :: Airbnb Résultats",
+    "premiere_apparition": "2026-07-30"
+  },
+  {
     "point": "06/08 :: usa :: macro :: Publication Productivité et Coûts T2",
     "premiere_apparition": "2026-07-20"
   },
@@ -528,6 +544,10 @@
     "premiere_apparition": "2026-07-28"
   },
   {
+    "point": "06/08 :: global :: corp :: Petrobras Résultats",
+    "premiere_apparition": "2026-07-30"
+  },
+  {
     "point": "26-28/07 :: europe :: macro :: Réunion Comité politique monétaire BoE",
     "premiere_apparition": "2026-07-21"
   },
@@ -546,6 +566,14 @@
   {
     "point": "19/08 :: usa :: mkt-n :: Minutes réunion FOMC",
     "premiere_apparition": "2026-07-28"
+  },
+  {
+    "point": "19/08 :: europe :: macro :: HICP Zone Euro Données Finales (Juillet)",
+    "premiere_apparition": "2026-07-30"
+  },
+  {
+    "point": "19/08 :: asie :: tech :: Baidu Résultats",
+    "premiere_apparition": "2026-07-30"
   },
   {
     "point": "14/08 :: europe :: macro :: Mise à jour PIB Zone Euro T2",
@@ -634,5 +662,13 @@
   {
     "point": "18/08 :: usa :: macro :: Indices Prix Import/Export US juillet",
     "premiere_apparition": "2026-07-29"
+  },
+  {
+    "point": "18/08 :: usa :: tech :: Palo Alto Networks Résultats",
+    "premiere_apparition": "2026-07-30"
+  },
+  {
+    "point": "17/08-18/08 :: global :: geo :: Sommet Jeunesse Énergie BRICS",
+    "premiere_apparition": "2026-07-30"
   }
 ]
