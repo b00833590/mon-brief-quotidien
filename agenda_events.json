@@ -1,117 +1,5 @@
 [
   {
-    "point": "30/07 :: asie :: mkt-n :: Décision taux BoJ",
-    "premiere_apparition": "2026-07-11"
-  },
-  {
-    "point": "30/07 :: europe :: mkt-n :: Décision taux BoE",
-    "premiere_apparition": "2026-07-11"
-  },
-  {
-    "point": "30/07 :: usa :: macro :: PIB US T2 (1ère estimation)",
-    "premiere_apparition": "2026-07-11"
-  },
-  {
-    "point": "30/07 :: asie :: mkt-n :: Réunion politique monétaire BoJ (Jour 1)",
-    "premiere_apparition": "2026-07-11"
-  },
-  {
-    "point": "30/07 :: europe :: macro :: Flash inflation Zone Euro (Juillet)",
-    "premiere_apparition": "2026-07-11"
-  },
-  {
-    "point": "30/07 :: asie :: mkt-n :: Début réunion BoJ",
-    "premiere_apparition": "2026-07-11"
-  },
-  {
-    "point": "30/07 :: usa :: corp :: Résultats Apple Q2",
-    "premiere_apparition": "2026-07-11"
-  },
-  {
-    "point": "30/07 :: usa :: corp :: Résultats Amazon Q2",
-    "premiere_apparition": "2026-07-11"
-  },
-  {
-    "point": "30/07 :: uk :: mkt-n :: Décision de taux Banque d'Angleterre",
-    "premiere_apparition": "2026-07-11"
-  },
-  {
-    "point": "30/07 :: europe :: macro :: Estimation flash IPC Eurozone (Juillet)",
-    "premiere_apparition": "2026-07-11"
-  },
-  {
-    "point": "30/07 :: europe :: macro :: Résumé Politique Monétaire BoE",
-    "premiere_apparition": "2026-07-11"
-  },
-  {
-    "point": "30/07 :: usa :: macro :: PIB US T2 2026 1ère est.",
-    "premiere_apparition": "2026-07-14"
-  },
-  {
-    "point": "30/07 :: europe :: corp :: Résultats semestriels CAC 40",
-    "premiere_apparition": "2026-07-14"
-  },
-  {
-    "point": "30/07 :: usa :: macro :: Publication PCE Prix USA",
-    "premiere_apparition": "2026-07-15"
-  },
-  {
-    "point": "30/07 :: usa :: corp :: Cloudflare earnings",
-    "premiere_apparition": "2026-07-16"
-  },
-  {
-    "point": "30/07 :: usa :: corp :: Coinbase Global earnings",
-    "premiere_apparition": "2026-07-16"
-  },
-  {
-    "point": "30/07 :: europe :: macro :: PIB Flash Eurozone Q2",
-    "premiere_apparition": "2026-07-17"
-  },
-  {
-    "point": "30/07 :: usa :: corp :: Résultats MicroStrategy (MSTR)",
-    "premiere_apparition": "2026-07-17"
-  },
-  {
-    "point": "30/07 :: usa :: macro :: Publication PIB préliminaire USA",
-    "premiere_apparition": "2026-07-17"
-  },
-  {
-    "point": "30/07 :: usa :: macro :: PIB Avance T2",
-    "premiere_apparition": "2026-07-18"
-  },
-  {
-    "point": "30/07 :: usa :: corp :: Résultats EchoStar Corporation",
-    "premiere_apparition": "2026-07-20"
-  },
-  {
-    "point": "30/07 :: usa :: corp :: Résultats AXT",
-    "premiere_apparition": "2026-07-20"
-  },
-  {
-    "point": "30/07 :: global :: corp :: Résultats VALE S.A.",
-    "premiere_apparition": "2026-07-20"
-  },
-  {
-    "point": "30/07 :: usa :: macro :: Dépenses personnelles US Juin",
-    "premiere_apparition": "2026-07-20"
-  },
-  {
-    "point": "30/07 :: usa :: tech :: Résultats T2 Avery Dennison",
-    "premiere_apparition": "2026-07-21"
-  },
-  {
-    "point": "30/07 :: usa :: macro :: PIB T2 2026 (estimation avancée)",
-    "premiere_apparition": "2026-07-22"
-  },
-  {
-    "point": "30/07 :: europe :: macro :: BoE Monetary Policy Summary & Report",
-    "premiere_apparition": "2026-07-30"
-  },
-  {
-    "point": "30/07 :: usa :: macro :: US GDP Advance Estimate Q2",
-    "premiere_apparition": "2026-07-30"
-  },
-  {
     "point": "31/07 :: asie :: mkt-n :: Publication perspectives économiques BoJ",
     "premiere_apparition": "2026-07-11"
   },
@@ -180,6 +68,18 @@
     "premiere_apparition": "2026-07-30"
   },
   {
+    "point": "31/07 :: europe :: macro :: Discours BoE Huw Pill/Fergal Shortall",
+    "premiere_apparition": "2026-07-31"
+  },
+  {
+    "point": "31/07 :: europe :: macro :: Résultats sondage participants marché BoE",
+    "premiere_apparition": "2026-07-31"
+  },
+  {
+    "point": "31/07 :: asie :: macro :: Statistiques paiements et règlements Japon",
+    "premiere_apparition": "2026-07-31"
+  },
+  {
     "point": "01/08 :: europe :: macro :: Publication Flash HICP Eurozone juillet 2026",
     "premiere_apparition": "2026-07-11"
   },
@@ -238,6 +138,26 @@
   {
     "point": "07/08 :: usa :: macro :: US Jobs Report July",
     "premiere_apparition": "2026-07-30"
+  },
+  {
+    "point": "07/08 :: asie :: macro :: Opérations de marché Banque du Japon",
+    "premiere_apparition": "2026-07-31"
+  },
+  {
+    "point": "07/08 :: asie :: macro :: Transactions BoJ avec gouvernement",
+    "premiere_apparition": "2026-07-31"
+  },
+  {
+    "point": "07/08 :: asie :: macro :: Base monétaire et transactions BoJ",
+    "premiere_apparition": "2026-07-31"
+  },
+  {
+    "point": "07/08 :: asie :: macro :: Indice activité consommation Japon",
+    "premiere_apparition": "2026-07-31"
+  },
+  {
+    "point": "07/08 :: asie :: macro :: Encours marché monétaire Japon",
+    "premiere_apparition": "2026-07-31"
   },
   {
     "point": "Semaine du 13/07 :: usa :: corp :: Début saison résultats T2 US",
@@ -316,6 +236,30 @@
     "premiere_apparition": "2026-07-30"
   },
   {
+    "point": "04/08 :: europe :: macro :: Rapport trimestriel facilité achat actifs BoE",
+    "premiere_apparition": "2026-07-31"
+  },
+  {
+    "point": "04/08 :: asie :: macro :: Base monétaire Japon",
+    "premiere_apparition": "2026-07-31"
+  },
+  {
+    "point": "04/08 :: asie :: macro :: Comptes Banque du Japon",
+    "premiere_apparition": "2026-07-31"
+  },
+  {
+    "point": "04/08 :: asie :: macro :: Obligations d'État détenues par BoJ",
+    "premiere_apparition": "2026-07-31"
+  },
+  {
+    "point": "04/08 :: asie :: macro :: Bons du Trésor achetés par BoJ",
+    "premiere_apparition": "2026-07-31"
+  },
+  {
+    "point": "04/08 :: asie :: macro :: Collatéraux acceptés par BoJ",
+    "premiere_apparition": "2026-07-31"
+  },
+  {
     "point": "12/08 :: usa :: macro :: IPC US Juillet",
     "premiere_apparition": "2026-07-14"
   },
@@ -340,6 +284,18 @@
     "premiere_apparition": "2026-07-22"
   },
   {
+    "point": "12/08 :: usa :: corp :: Résultats trimestriels Denison Mines Corp.",
+    "premiere_apparition": "2026-07-31"
+  },
+  {
+    "point": "12/08 :: usa :: corp :: Résultats trimestriels Cerebras Systems",
+    "premiere_apparition": "2026-07-31"
+  },
+  {
+    "point": "12/08 :: asie :: macro :: Masse monétaire Japon",
+    "premiere_apparition": "2026-07-31"
+  },
+  {
     "point": "13/08 :: europe :: mkt-n :: Décision Taux Norges Bank",
     "premiere_apparition": "2026-07-14"
   },
@@ -362,6 +318,42 @@
   {
     "point": "13/08 :: usa :: macro :: Inflation PPI US juillet",
     "premiere_apparition": "2026-07-29"
+  },
+  {
+    "point": "13/08 :: usa :: corp :: Résultats trimestriels Coherent Corp.",
+    "premiere_apparition": "2026-07-31"
+  },
+  {
+    "point": "13/08 :: usa :: corp :: Résultats trimestriels Nu Holdings",
+    "premiere_apparition": "2026-07-31"
+  },
+  {
+    "point": "13/08 :: usa :: corp :: Résultats trimestriels Applied Materials",
+    "premiere_apparition": "2026-07-31"
+  },
+  {
+    "point": "13/08 :: usa :: corp :: Résultats trimestriels Gemini Space Station",
+    "premiere_apparition": "2026-07-31"
+  },
+  {
+    "point": "13/08 :: asie :: macro :: Indice Prix Biens Corporate Japon",
+    "premiere_apparition": "2026-07-31"
+  },
+  {
+    "point": "13/08 :: asie :: macro :: Comptes Banque du Japon",
+    "premiere_apparition": "2026-07-31"
+  },
+  {
+    "point": "13/08 :: asie :: macro :: Chiffres de base sur les échecs BoJ",
+    "premiere_apparition": "2026-07-31"
+  },
+  {
+    "point": "13/08 :: asie :: macro :: Obligations d'État détenues par BoJ",
+    "premiere_apparition": "2026-07-31"
+  },
+  {
+    "point": "13/08 :: asie :: macro :: Bons du Trésor achetés par BoJ",
+    "premiere_apparition": "2026-07-31"
   },
   {
     "point": "16/08 :: asie :: macro :: Publication PIB Japon",
@@ -456,6 +448,18 @@
     "premiere_apparition": "2026-07-30"
   },
   {
+    "point": "03/08 :: usa :: corp :: Résultats trimestriels EchoStar Corporation",
+    "premiere_apparition": "2026-07-31"
+  },
+  {
+    "point": "03/08 :: asie :: macro :: Balance courante et opérations marché BoJ",
+    "premiere_apparition": "2026-07-31"
+  },
+  {
+    "point": "03/08 :: asie :: macro :: Perspectives Économiques BoJ (texte intégral)",
+    "premiere_apparition": "2026-07-31"
+  },
+  {
     "point": "31/07-02/08 :: global :: mkt-n :: Conférence Mondiale Management/Économie",
     "premiere_apparition": "2026-07-16"
   },
@@ -492,6 +496,30 @@
     "premiere_apparition": "2026-07-30"
   },
   {
+    "point": "05/08 :: usa :: corp :: Résultats trimestriels Thomson Reuters (TRI)",
+    "premiere_apparition": "2026-07-31"
+  },
+  {
+    "point": "05/08 :: usa :: corp :: Résultats trimestriels Galaxy Digital",
+    "premiere_apparition": "2026-07-31"
+  },
+  {
+    "point": "05/08 :: usa :: corp :: Résultats trimestriels SanDisk",
+    "premiere_apparition": "2026-07-31"
+  },
+  {
+    "point": "05/08 :: europe :: macro :: Réserves Internationales UK",
+    "premiere_apparition": "2026-07-31"
+  },
+  {
+    "point": "05/08 :: asie :: macro :: Minutes réunion politique monétaire BoJ (Juin)",
+    "premiere_apparition": "2026-07-31"
+  },
+  {
+    "point": "05/08 :: asie :: macro :: Projections changements comptes courants BoJ",
+    "premiere_apparition": "2026-07-31"
+  },
+  {
     "point": "Début Août :: usa :: corp :: Résultats Block",
     "premiere_apparition": "2026-07-17"
   },
@@ -524,6 +552,26 @@
     "premiere_apparition": "2026-07-30"
   },
   {
+    "point": "10/08 :: usa :: corp :: Résultats trimestriels BigBear.ai",
+    "premiere_apparition": "2026-07-31"
+  },
+  {
+    "point": "10/08 :: usa :: corp :: Résultats trimestriels Plug Power, Inc.",
+    "premiere_apparition": "2026-07-31"
+  },
+  {
+    "point": "10/08 :: usa :: corp :: Résultats trimestriels USA Rare Earth",
+    "premiere_apparition": "2026-07-31"
+  },
+  {
+    "point": "10/08 :: asie :: macro :: Sommaire Opinions réunion politique monétaire BoJ",
+    "premiere_apparition": "2026-07-31"
+  },
+  {
+    "point": "10/08 :: asie :: macro :: Chiffres principaux institutions financières BoJ",
+    "premiere_apparition": "2026-07-31"
+  },
+  {
     "point": "06/08 :: usa :: macro :: Publication Productivité et Coûts T2",
     "premiere_apparition": "2026-07-20"
   },
@@ -546,6 +594,42 @@
   {
     "point": "06/08 :: global :: corp :: Petrobras Résultats",
     "premiere_apparition": "2026-07-30"
+  },
+  {
+    "point": "06/08 :: usa :: corp :: Résultats trimestriels Viavi Solutions",
+    "premiere_apparition": "2026-07-31"
+  },
+  {
+    "point": "06/08 :: usa :: corp :: Résultats trimestriels MACOM Technology",
+    "premiere_apparition": "2026-07-31"
+  },
+  {
+    "point": "06/08 :: usa :: corp :: Résultats trimestriels Oscar Health",
+    "premiere_apparition": "2026-07-31"
+  },
+  {
+    "point": "06/08 :: usa :: corp :: Résultats trimestriels MP Materials Corp",
+    "premiere_apparition": "2026-07-31"
+  },
+  {
+    "point": "06/08 :: usa :: corp :: Résultats trimestriels Petróleo Brasileiro S.A.",
+    "premiere_apparition": "2026-07-31"
+  },
+  {
+    "point": "06/08 :: usa :: corp :: Résultats trimestriels Nebius Group N.V.",
+    "premiere_apparition": "2026-07-31"
+  },
+  {
+    "point": "06/08 :: usa :: corp :: Résultats trimestriels Microchip Technology",
+    "premiere_apparition": "2026-07-31"
+  },
+  {
+    "point": "06/08 :: usa :: corp :: Résultats trimestriels Applied Optoelectronics",
+    "premiere_apparition": "2026-07-31"
+  },
+  {
+    "point": "06/08 :: europe :: mkt-n :: Panel Citoyen Banque d'Angleterre",
+    "premiere_apparition": "2026-07-31"
   },
   {
     "point": "26-28/07 :: europe :: macro :: Réunion Comité politique monétaire BoE",
@@ -574,6 +658,14 @@
   {
     "point": "19/08 :: asie :: tech :: Baidu Résultats",
     "premiere_apparition": "2026-07-30"
+  },
+  {
+    "point": "19/08 :: asie :: corp :: Résultats trimestriels XPeng Inc.",
+    "premiere_apparition": "2026-07-31"
+  },
+  {
+    "point": "19/08 :: usa :: corp :: Résultats trimestriels Analog Devices",
+    "premiere_apparition": "2026-07-31"
   },
   {
     "point": "14/08 :: europe :: macro :: Mise à jour PIB Zone Euro T2",
@@ -660,6 +752,18 @@
     "premiere_apparition": "2026-07-30"
   },
   {
+    "point": "11/08 :: usa :: corp :: Résultats trimestriels AST SpaceMobile",
+    "premiere_apparition": "2026-07-31"
+  },
+  {
+    "point": "11/08 :: usa :: corp :: Résultats trimestriels Ondas Inc.",
+    "premiere_apparition": "2026-07-31"
+  },
+  {
+    "point": "11/08 :: usa :: corp :: Résultats trimestriels CoreWeave",
+    "premiere_apparition": "2026-07-31"
+  },
+  {
     "point": "18/08 :: usa :: macro :: Indices Prix Import/Export US juillet",
     "premiere_apparition": "2026-07-29"
   },
@@ -668,7 +772,27 @@
     "premiere_apparition": "2026-07-30"
   },
   {
+    "point": "18/08 :: usa :: corp :: Résultats trimestriels Keysight Technologies",
+    "premiere_apparition": "2026-07-31"
+  },
+  {
     "point": "17/08-18/08 :: global :: geo :: Sommet Jeunesse Énergie BRICS",
     "premiere_apparition": "2026-07-30"
+  },
+  {
+    "point": "17/08 :: usa :: corp :: Résultats trimestriels Bullish",
+    "premiere_apparition": "2026-07-31"
+  },
+  {
+    "point": "17/08 :: usa :: corp :: Résultats trimestriels Fabrinet",
+    "premiere_apparition": "2026-07-31"
+  },
+  {
+    "point": "17/08 :: global :: mkt-n :: Sommet Jeunesse Énergie BRICS (Virtuel)",
+    "premiere_apparition": "2026-07-31"
+  },
+  {
+    "point": "17/08 :: asie :: macro :: Balances comptes courants BoJ par secteur",
+    "premiere_apparition": "2026-07-31"
   }
 ]
