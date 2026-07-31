@@ -160,6 +160,10 @@
     "premiere_apparition": "2026-07-31"
   },
   {
+    "point": "07/08 :: asie :: macro :: Indicateurs Avance Japon Juin",
+    "premiere_apparition": "2026-07-31"
+  },
+  {
     "point": "Semaine du 13/07 :: usa :: corp :: Début saison résultats T2 US",
     "premiere_apparition": "2026-07-11"
   },
@@ -460,6 +464,10 @@
     "premiere_apparition": "2026-07-31"
   },
   {
+    "point": "03/08 :: europe :: corp :: Résultats CRCAM Touraine Poitou S1",
+    "premiere_apparition": "2026-07-31"
+  },
+  {
     "point": "31/07-02/08 :: global :: mkt-n :: Conférence Mondiale Management/Économie",
     "premiere_apparition": "2026-07-16"
   },
@@ -520,6 +528,14 @@
     "premiere_apparition": "2026-07-31"
   },
   {
+    "point": "05/08 :: usa :: macro :: Rapport Emploi ADP Juillet",
+    "premiere_apparition": "2026-07-31"
+  },
+  {
+    "point": "05/08 :: usa :: macro :: ISM Indice Non-Manufacturier Juillet",
+    "premiere_apparition": "2026-07-31"
+  },
+  {
     "point": "Début Août :: usa :: corp :: Résultats Block",
     "premiere_apparition": "2026-07-17"
   },
@@ -534,6 +550,10 @@
   {
     "point": "31/08 :: global :: mkt-n :: Réunion Ministres Finances G20",
     "premiere_apparition": "2026-07-19"
+  },
+  {
+    "point": "31/08 :: europe :: macro :: Réunion BoE Décision Taux",
+    "premiere_apparition": "2026-07-31"
   },
   {
     "point": "10/08 :: asie :: mkt-n :: Résumé opinions réunion BoJ",
@@ -632,6 +652,18 @@
     "premiere_apparition": "2026-07-31"
   },
   {
+    "point": "06/08 :: europe :: corp :: Résultats IT Link S1",
+    "premiere_apparition": "2026-07-31"
+  },
+  {
+    "point": "06/08 :: europe :: corp :: Résultats Maurel et Prom S1",
+    "premiere_apparition": "2026-07-31"
+  },
+  {
+    "point": "06/08 :: europe :: macro :: Ventes Détail Eurozone Juin",
+    "premiere_apparition": "2026-07-31"
+  },
+  {
     "point": "26-28/07 :: europe :: macro :: Réunion Comité politique monétaire BoE",
     "premiere_apparition": "2026-07-21"
   },
@@ -682,6 +714,14 @@
   {
     "point": "14/08 :: usa :: corp :: Starbucks Dividend Record Date",
     "premiere_apparition": "2026-07-30"
+  },
+  {
+    "point": "14/08 :: usa :: macro :: Ventes Détail US Juillet",
+    "premiere_apparition": "2026-07-31"
+  },
+  {
+    "point": "14/08 :: usa :: macro :: Sentiment Consommateur Michigan Août",
+    "premiere_apparition": "2026-07-31"
   },
   {
     "point": "29/08 :: global :: geo :: Réunion Secrétaires Finances & Gouv. BC G20",
