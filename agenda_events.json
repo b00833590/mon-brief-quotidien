@@ -1,85 +1,5 @@
 [
   {
-    "point": "31/07 :: asie :: mkt-n :: Publication perspectives économiques BoJ",
-    "premiere_apparition": "2026-07-11"
-  },
-  {
-    "point": "31/07 :: asie :: mkt-n :: Décision de taux BoJ",
-    "premiere_apparition": "2026-07-11"
-  },
-  {
-    "point": "31/07 :: usa :: macro :: Inflation PCE Core US (Juin)",
-    "premiere_apparition": "2026-07-11"
-  },
-  {
-    "point": "31/07 :: europe :: macro :: Flash Inflation Zone Euro Juillet",
-    "premiere_apparition": "2026-07-11"
-  },
-  {
-    "point": "31/07 :: usa :: macro :: Indice du Coût de l'Emploi US T2",
-    "premiere_apparition": "2026-07-11"
-  },
-  {
-    "point": "31/07 :: europe :: macro :: Estimation flash HICP Eurozone (Juillet)",
-    "premiere_apparition": "2026-07-11"
-  },
-  {
-    "point": "31/07 :: asie :: mkt-n :: BoJ publication Outlook Report",
-    "premiere_apparition": "2026-07-16"
-  },
-  {
-    "point": "31/07 :: usa :: macro :: Publication Employment Cost Index",
-    "premiere_apparition": "2026-07-20"
-  },
-  {
-    "point": "31/07 :: usa :: corp :: Résultats Eaton Corporation",
-    "premiere_apparition": "2026-07-20"
-  },
-  {
-    "point": "31/07 :: asie :: macro :: Déclaration politique monétaire BoJ",
-    "premiere_apparition": "2026-07-20"
-  },
-  {
-    "point": "31/07 :: europe :: macro :: Inflation flash Eurozone Juillet",
-    "premiere_apparition": "2026-07-20"
-  },
-  {
-    "point": "31/07 :: usa :: macro :: Nombre plateformes forage Baker Hughes",
-    "premiere_apparition": "2026-07-21"
-  },
-  {
-    "point": "31/07 :: asie :: mkt-n :: Décision de taux Banque du Japon",
-    "premiere_apparition": "2026-07-22"
-  },
-  {
-    "point": "31/07 :: usa :: corp :: Résultats Exxon",
-    "premiere_apparition": "2026-07-22"
-  },
-  {
-    "point": "31/07 :: usa :: corp :: Résultats Moderna",
-    "premiere_apparition": "2026-07-22"
-  },
-  {
-    "point": "31/07 :: global :: mkt-n :: Bitcoin & Ether Options Expiry",
-    "premiere_apparition": "2026-07-30"
-  },
-  {
-    "point": "31/07 :: europe :: macro :: HICP Zone Euro Estimation Flash (Juillet)",
-    "premiere_apparition": "2026-07-30"
-  },
-  {
-    "point": "31/07 :: europe :: macro :: Discours BoE Huw Pill/Fergal Shortall",
-    "premiere_apparition": "2026-07-31"
-  },
-  {
-    "point": "31/07 :: europe :: macro :: Résultats sondage participants marché BoE",
-    "premiere_apparition": "2026-07-31"
-  },
-  {
-    "point": "31/07 :: asie :: macro :: Statistiques paiements et règlements Japon",
-    "premiere_apparition": "2026-07-31"
-  },
-  {
     "point": "01/08 :: europe :: macro :: Publication Flash HICP Eurozone juillet 2026",
     "premiere_apparition": "2026-07-11"
   },
@@ -276,6 +196,10 @@
     "premiere_apparition": "2026-07-31"
   },
   {
+    "point": "04/08 :: usa :: corp :: Résultats d'entreprises majeures (AMD, Spotify)",
+    "premiere_apparition": "2026-08-01"
+  },
+  {
     "point": "12/08 :: usa :: macro :: IPC US Juillet",
     "premiere_apparition": "2026-07-14"
   },
@@ -310,6 +234,10 @@
   {
     "point": "12/08 :: asie :: macro :: Masse monétaire Japon",
     "premiere_apparition": "2026-07-31"
+  },
+  {
+    "point": "12/08 :: usa :: macro :: Publication Revenus Réels US",
+    "premiere_apparition": "2026-08-01"
   },
   {
     "point": "13/08 :: europe :: mkt-n :: Décision Taux Norges Bank",
@@ -548,6 +476,14 @@
     "premiere_apparition": "2026-07-31"
   },
   {
+    "point": "05/08 :: asie :: mkt-n :: RBI Décision Politique Monétaire",
+    "premiere_apparition": "2026-08-01"
+  },
+  {
+    "point": "05/08 :: usa :: corp :: Résultats d'entreprises majeures (Cloudflare, Duolingo)",
+    "premiere_apparition": "2026-08-01"
+  },
+  {
     "point": "Début Août :: usa :: corp :: Résultats Block",
     "premiere_apparition": "2026-07-17"
   },
@@ -676,6 +612,10 @@
     "premiere_apparition": "2026-07-31"
   },
   {
+    "point": "06/08 :: usa :: corp :: Résultats d'entreprises majeures (Airbnb, Microchip)",
+    "premiere_apparition": "2026-08-01"
+  },
+  {
     "point": "26-28/07 :: europe :: macro :: Réunion Comité politique monétaire BoE",
     "premiere_apparition": "2026-07-21"
   },
@@ -716,6 +656,14 @@
     "premiere_apparition": "2026-07-31"
   },
   {
+    "point": "19/08 :: europe :: macro :: Publication PPI UK",
+    "premiere_apparition": "2026-08-01"
+  },
+  {
+    "point": "19/08 :: europe :: macro :: Prix immobiliers et Loyers UK",
+    "premiere_apparition": "2026-08-01"
+  },
+  {
     "point": "14/08 :: europe :: macro :: Mise à jour PIB Zone Euro T2",
     "premiere_apparition": "2026-07-23"
   },
@@ -738,6 +686,10 @@
   {
     "point": "14/08 :: usa :: macro :: Sentiment Consommateur Michigan Août",
     "premiere_apparition": "2026-07-31"
+  },
+  {
+    "point": "14/08 :: europe :: macro :: Publication CPI Final France",
+    "premiere_apparition": "2026-08-01"
   },
   {
     "point": "29/08 :: global :: geo :: Réunion Secrétaires Finances & Gouv. BC G20",
@@ -820,6 +772,10 @@
     "premiere_apparition": "2026-07-31"
   },
   {
+    "point": "11/08 :: usa :: macro :: Rapport ADP Emploi US (préliminaire)",
+    "premiere_apparition": "2026-08-01"
+  },
+  {
     "point": "18/08 :: usa :: macro :: Indices Prix Import/Export US juillet",
     "premiere_apparition": "2026-07-29"
   },
@@ -850,5 +806,17 @@
   {
     "point": "17/08 :: asie :: macro :: Balances comptes courants BoJ par secteur",
     "premiere_apparition": "2026-07-31"
+  },
+  {
+    "point": "21/08 :: usa :: macro :: Données Emploi Jeunesse US",
+    "premiere_apparition": "2026-08-01"
+  },
+  {
+    "point": "26/08 :: usa :: macro :: Seconde Estimation PIB US T2",
+    "premiere_apparition": "2026-08-01"
+  },
+  {
+    "point": "28/08 :: europe :: macro :: Publication CPI Provisoire France Août",
+    "premiere_apparition": "2026-08-01"
   }
 ]
