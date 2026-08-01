@@ -200,6 +200,10 @@
     "premiere_apparition": "2026-08-01"
   },
   {
+    "point": "04/08 :: usa :: corp :: Ball Corp Q2 Résultats",
+    "premiere_apparition": "2026-08-01"
+  },
+  {
     "point": "12/08 :: usa :: macro :: IPC US Juillet",
     "premiere_apparition": "2026-07-14"
   },
@@ -298,6 +302,14 @@
   {
     "point": "13/08 :: asie :: macro :: Bons du Trésor achetés par BoJ",
     "premiere_apparition": "2026-07-31"
+  },
+  {
+    "point": "13/08 :: uk :: macro :: PIB Q2 préliminaire",
+    "premiere_apparition": "2026-08-01"
+  },
+  {
+    "point": "13/08 :: usa :: macro :: PPI (Juillet)",
+    "premiere_apparition": "2026-08-01"
   },
   {
     "point": "16/08 :: asie :: macro :: Publication PIB Japon",
@@ -408,6 +420,14 @@
     "premiere_apparition": "2026-07-31"
   },
   {
+    "point": "03/08 :: usa :: corp :: Vertex Pharma Q2 Résultats",
+    "premiere_apparition": "2026-08-01"
+  },
+  {
+    "point": "03/08 :: usa :: macro :: ISM Manufacturing Index (Juillet)",
+    "premiere_apparition": "2026-08-01"
+  },
+  {
     "point": "31/07-02/08 :: global :: mkt-n :: Conférence Mondiale Management/Économie",
     "premiere_apparition": "2026-07-16"
   },
@@ -481,6 +501,10 @@
   },
   {
     "point": "05/08 :: usa :: corp :: Résultats d'entreprises majeures (Cloudflare, Duolingo)",
+    "premiere_apparition": "2026-08-01"
+  },
+  {
+    "point": "05/08 :: usa :: macro :: ISM Services Business Activity (Juillet)",
     "premiere_apparition": "2026-08-01"
   },
   {
