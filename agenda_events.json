@@ -1,29 +1,5 @@
 [
   {
-    "point": "01/08 :: europe :: macro :: Publication Flash HICP Eurozone juillet 2026",
-    "premiere_apparition": "2026-07-11"
-  },
-  {
-    "point": "01/08 :: usa :: macro :: Publication NFP US (juillet)",
-    "premiere_apparition": "2026-07-15"
-  },
-  {
-    "point": "01/08 :: europe :: macro :: Estimation flash inflation Eurozone",
-    "premiere_apparition": "2026-07-15"
-  },
-  {
-    "point": "01/08 :: afrique :: geo :: Sommet Investissement Horticulture Tanzanie",
-    "premiere_apparition": "2026-07-22"
-  },
-  {
-    "point": "01/08 :: usa :: corp :: Résultats Berkshire Hathaway (estimé)",
-    "premiere_apparition": "2026-07-22"
-  },
-  {
-    "point": "Cette semaine :: europe :: geo :: Irlande préside l'UE",
-    "premiere_apparition": "2026-07-11"
-  },
-  {
     "point": "Cette semaine :: global :: geo :: Aspen Security Forum",
     "premiere_apparition": "2026-07-17"
   },
@@ -82,10 +58,6 @@
   {
     "point": "07/08 :: asie :: macro :: Indicateurs Avance Japon Juin",
     "premiere_apparition": "2026-07-31"
-  },
-  {
-    "point": "Semaine du 13/07 :: usa :: corp :: Début saison résultats T2 US",
-    "premiere_apparition": "2026-07-11"
   },
   {
     "point": "28-29/07 :: usa :: macro :: Réunion FOMC (Fed)",
@@ -204,6 +176,18 @@
     "premiere_apparition": "2026-08-01"
   },
   {
+    "point": "04/08 :: usa :: macro :: Rapport ouvertures d'emplois JOLTs",
+    "premiere_apparition": "2026-08-02"
+  },
+  {
+    "point": "04/08 :: usa :: corp :: Résultats : SpaceX, AMD, Caterpillar, McDonald's",
+    "premiere_apparition": "2026-08-02"
+  },
+  {
+    "point": "04/08 :: global :: corp :: Résultats : Toyota Motor, HSBC, Merck & Co, Amgen",
+    "premiere_apparition": "2026-08-02"
+  },
+  {
     "point": "12/08 :: usa :: macro :: IPC US Juillet",
     "premiere_apparition": "2026-07-14"
   },
@@ -242,6 +226,10 @@
   {
     "point": "12/08 :: usa :: macro :: Publication Revenus Réels US",
     "premiere_apparition": "2026-08-01"
+  },
+  {
+    "point": "12/08 :: usa :: macro :: Gains Réels USA",
+    "premiere_apparition": "2026-08-02"
   },
   {
     "point": "13/08 :: europe :: mkt-n :: Décision Taux Norges Bank",
@@ -310,6 +298,14 @@
   {
     "point": "13/08 :: usa :: macro :: PPI (Juillet)",
     "premiere_apparition": "2026-08-01"
+  },
+  {
+    "point": "13/08 :: europe :: macro :: Flash Est. PIB Eurozone T2",
+    "premiere_apparition": "2026-08-02"
+  },
+  {
+    "point": "13/08 :: usa :: corp :: Résultats : Coherent Corp, Nu Holdings, Applied Materials",
+    "premiere_apparition": "2026-08-02"
   },
   {
     "point": "16/08 :: asie :: macro :: Publication PIB Japon",
@@ -428,6 +424,10 @@
     "premiere_apparition": "2026-08-01"
   },
   {
+    "point": "03/08 :: global :: corp :: Résultats : WuXi AppTec, Palantir, Mitsubishi UFJ",
+    "premiere_apparition": "2026-08-02"
+  },
+  {
     "point": "31/07-02/08 :: global :: mkt-n :: Conférence Mondiale Management/Économie",
     "premiere_apparition": "2026-07-16"
   },
@@ -508,6 +508,14 @@
     "premiere_apparition": "2026-08-01"
   },
   {
+    "point": "05/08 :: usa :: corp :: Résultats : Eli Lilly, Walt Disney, SanDisk",
+    "premiere_apparition": "2026-08-02"
+  },
+  {
+    "point": "05/08 :: global :: corp :: Résultats : Novo Nordisk, Galaxy Digital, GlobalFoundries",
+    "premiere_apparition": "2026-08-02"
+  },
+  {
     "point": "Début Août :: usa :: corp :: Résultats Block",
     "premiere_apparition": "2026-07-17"
   },
@@ -562,6 +570,10 @@
   {
     "point": "10/08 :: asie :: macro :: Chiffres principaux institutions financières BoJ",
     "premiere_apparition": "2026-07-31"
+  },
+  {
+    "point": "10/08 :: usa :: corp :: Résultats : Airbnb, BigBear.ai, Plug Power",
+    "premiere_apparition": "2026-08-02"
   },
   {
     "point": "06/08 :: usa :: macro :: Publication Productivité et Coûts T2",
@@ -640,6 +652,14 @@
     "premiere_apparition": "2026-08-01"
   },
   {
+    "point": "06/08 :: usa :: corp :: Résultats : Viavi Solutions, Oscar Health, Microchip Tech",
+    "premiere_apparition": "2026-08-02"
+  },
+  {
+    "point": "06/08 :: global :: corp :: Résultats : MP Materials, Petróleo Brasileiro, Nebius Group",
+    "premiere_apparition": "2026-08-02"
+  },
+  {
     "point": "26-28/07 :: europe :: macro :: Réunion Comité politique monétaire BoE",
     "premiere_apparition": "2026-07-21"
   },
@@ -686,6 +706,10 @@
   {
     "point": "19/08 :: europe :: macro :: Prix immobiliers et Loyers UK",
     "premiere_apparition": "2026-08-01"
+  },
+  {
+    "point": "19/08 :: europe :: macro :: IPC Eurozone Complet Juillet",
+    "premiere_apparition": "2026-08-02"
   },
   {
     "point": "14/08 :: europe :: macro :: Mise à jour PIB Zone Euro T2",
