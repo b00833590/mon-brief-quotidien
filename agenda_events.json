@@ -92,6 +92,34 @@
     "premiere_apparition": "2026-08-03"
   },
   {
+    "point": "07/08 :: europe :: corp :: easyJet Takeover Panel deadline",
+    "premiere_apparition": "2026-08-03"
+  },
+  {
+    "point": "07/08 :: usa :: macro :: US Non-farm Payrolls (Jul)",
+    "premiere_apparition": "2026-08-03"
+  },
+  {
+    "point": "07/08 :: usa :: macro :: US Unemployment Rate (Jul)",
+    "premiere_apparition": "2026-08-03"
+  },
+  {
+    "point": "07/08 :: usa :: macro :: Average Hourly Earnings (Jul)",
+    "premiere_apparition": "2026-08-03"
+  },
+  {
+    "point": "07/08 :: asie :: macro :: China Trade Balance (Jul)",
+    "premiere_apparition": "2026-08-03"
+  },
+  {
+    "point": "07/08 :: asie :: macro :: China Exports YoY (Jul)",
+    "premiere_apparition": "2026-08-03"
+  },
+  {
+    "point": "07/08 :: asie :: macro :: BoJ Market Operations (Jul)",
+    "premiere_apparition": "2026-08-03"
+  },
+  {
     "point": "28-29/07 :: usa :: mkt-n :: FOMC Décision Taux",
     "premiere_apparition": "2026-07-22"
   },
@@ -240,6 +268,22 @@
     "premiere_apparition": "2026-08-03"
   },
   {
+    "point": "04/08 :: europe :: macro :: BoE Asset Purchase Facility Report",
+    "premiere_apparition": "2026-08-03"
+  },
+  {
+    "point": "04/08 :: usa :: macro :: US JOLTs Job Openings (Jun)",
+    "premiere_apparition": "2026-08-03"
+  },
+  {
+    "point": "04/08 :: asie :: macro :: BoJ Monetary Base (Jul)",
+    "premiere_apparition": "2026-08-03"
+  },
+  {
+    "point": "04/08 :: asie :: macro :: BoJ Bank of Japan Accounts (Jul 31)",
+    "premiere_apparition": "2026-08-03"
+  },
+  {
     "point": "12/08 :: usa :: macro :: IPC US Juillet",
     "premiere_apparition": "2026-07-14"
   },
@@ -282,6 +326,14 @@
   {
     "point": "12/08 :: usa :: macro :: Gains Réels USA",
     "premiere_apparition": "2026-08-02"
+  },
+  {
+    "point": "12/08 :: usa :: macro :: US Budget Balance (Jul)",
+    "premiere_apparition": "2026-08-03"
+  },
+  {
+    "point": "12/08 :: asie :: macro :: BoJ Money Stock (Jul)",
+    "premiere_apparition": "2026-08-03"
   },
   {
     "point": "13/08 :: europe :: mkt-n :: Décision Taux Norges Bank",
@@ -361,6 +413,10 @@
   },
   {
     "point": "13/08 :: usa :: macro :: Inscriptions hebdomadaires chômage",
+    "premiere_apparition": "2026-08-03"
+  },
+  {
+    "point": "13/08 :: asie :: macro :: BoJ Corporate Goods Price Index (Jul)",
     "premiere_apparition": "2026-08-03"
   },
   {
@@ -489,6 +545,30 @@
   },
   {
     "point": "03/08 :: usa :: corp :: Résultats Vertex Pharmaceuticals",
+    "premiere_apparition": "2026-08-03"
+  },
+  {
+    "point": "03/08 :: europe :: corp :: AstraZeneca Bristol Myers Squibb discussions",
+    "premiere_apparition": "2026-08-03"
+  },
+  {
+    "point": "03/08 :: asie :: macro :: China Manufacturing PMI (Jul)",
+    "premiere_apparition": "2026-08-03"
+  },
+  {
+    "point": "03/08 :: europe :: macro :: ECB TARGET balances statistics",
+    "premiere_apparition": "2026-08-03"
+  },
+  {
+    "point": "03/08 :: europe :: macro :: ECB Economic Bulletin pre-release",
+    "premiere_apparition": "2026-08-03"
+  },
+  {
+    "point": "03/08 :: usa :: macro :: Construction Spending (Jun)",
+    "premiere_apparition": "2026-08-03"
+  },
+  {
+    "point": "03/08 :: usa :: macro :: Senior Loan Officer Opinion Survey",
     "premiere_apparition": "2026-08-03"
   },
   {
@@ -621,6 +701,18 @@
   },
   {
     "point": "05/08 :: usa :: corp :: Résultats Shopify Inc.",
+    "premiere_apparition": "2026-08-03"
+  },
+  {
+    "point": "05/08 :: usa :: macro :: ADP Nonfarm Employment Change (Jul)",
+    "premiere_apparition": "2026-08-03"
+  },
+  {
+    "point": "05/08 :: asie :: macro :: BoJ MPM Minutes (June)",
+    "premiere_apparition": "2026-08-03"
+  },
+  {
+    "point": "05/08 :: asie :: macro :: BoJ Current Account Balances Projections (Aug)",
     "premiere_apparition": "2026-08-03"
   },
   {
@@ -816,6 +908,10 @@
     "premiere_apparition": "2026-08-03"
   },
   {
+    "point": "06/08 :: usa :: macro :: Initial Jobless Claims (Weekly)",
+    "premiere_apparition": "2026-08-03"
+  },
+  {
     "point": "26-28/07 :: europe :: macro :: Réunion Comité politique monétaire BoE",
     "premiere_apparition": "2026-07-21"
   },
@@ -866,6 +962,10 @@
   {
     "point": "19/08 :: europe :: macro :: IPC Eurozone Complet Juillet",
     "premiere_apparition": "2026-08-02"
+  },
+  {
+    "point": "19/08 :: usa :: corp :: Raymond James Operating Data (Jul)",
+    "premiere_apparition": "2026-08-03"
   },
   {
     "point": "14/08 :: europe :: macro :: Mise à jour PIB Zone Euro T2",
@@ -988,6 +1088,14 @@
     "premiere_apparition": "2026-08-01"
   },
   {
+    "point": "11/08 :: global :: ai :: AI Controls Financial Reporting Intro",
+    "premiere_apparition": "2026-08-03"
+  },
+  {
+    "point": "11/08 :: global :: ai :: Protiviti Tech Session AI in Finance",
+    "premiere_apparition": "2026-08-03"
+  },
+  {
     "point": "18/08 :: usa :: macro :: Indices Prix Import/Export US juillet",
     "premiere_apparition": "2026-07-29"
   },
@@ -998,6 +1106,10 @@
   {
     "point": "18/08 :: usa :: corp :: Résultats trimestriels Keysight Technologies",
     "premiere_apparition": "2026-07-31"
+  },
+  {
+    "point": "18/08 :: usa :: macro :: US Building Permits (Jul)",
+    "premiere_apparition": "2026-08-03"
   },
   {
     "point": "17/08-18/08 :: global :: geo :: Sommet Jeunesse Énergie BRICS",
@@ -1020,8 +1132,16 @@
     "premiere_apparition": "2026-07-31"
   },
   {
+    "point": "17/08 :: asie :: macro :: BoJ Current Account Balances by Sector (Jul)",
+    "premiere_apparition": "2026-08-03"
+  },
+  {
     "point": "21/08 :: usa :: macro :: Données Emploi Jeunesse US",
     "premiere_apparition": "2026-08-01"
+  },
+  {
+    "point": "21/08 :: asie :: macro :: BoJ Real Exports and Imports Developments",
+    "premiere_apparition": "2026-08-03"
   },
   {
     "point": "26/08 :: usa :: macro :: Seconde Estimation PIB US T2",
@@ -1030,5 +1150,13 @@
   {
     "point": "28/08 :: europe :: macro :: Publication CPI Provisoire France Août",
     "premiere_apparition": "2026-08-01"
+  },
+  {
+    "point": "24/08 :: asie :: macro :: BoJ Statistics on Securities Financing",
+    "premiere_apparition": "2026-08-03"
+  },
+  {
+    "point": "24/08 :: asie :: corp :: Figma Inc. Earnings (Q2)",
+    "premiere_apparition": "2026-08-03"
   }
 ]
