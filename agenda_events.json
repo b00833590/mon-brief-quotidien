@@ -60,8 +60,36 @@
     "premiere_apparition": "2026-07-31"
   },
   {
-    "point": "28-29/07 :: usa :: macro :: Réunion FOMC (Fed)",
-    "premiere_apparition": "2026-07-12"
+    "point": "07/08 :: france :: macro :: Taux de Chômage T2",
+    "premiere_apparition": "2026-08-03"
+  },
+  {
+    "point": "07/08 :: europe :: macro :: Production Industrielle Allemagne",
+    "premiere_apparition": "2026-08-03"
+  },
+  {
+    "point": "07/08 :: europe :: macro :: Balance Commerciale Allemagne",
+    "premiere_apparition": "2026-08-03"
+  },
+  {
+    "point": "07/08 :: france :: corp :: Résultats Eutelsat Communications",
+    "premiere_apparition": "2026-08-03"
+  },
+  {
+    "point": "07/08 :: france :: corp :: Résultats Archos",
+    "premiere_apparition": "2026-08-03"
+  },
+  {
+    "point": "07/08 :: europe :: corp :: Résultats Allianz SE",
+    "premiere_apparition": "2026-08-03"
+  },
+  {
+    "point": "07/08 :: europe :: corp :: Résultats Munich Re",
+    "premiere_apparition": "2026-08-03"
+  },
+  {
+    "point": "07/08 :: europe :: corp :: Résultats Daimler Truck Holding",
+    "premiere_apparition": "2026-08-03"
   },
   {
     "point": "28-29/07 :: usa :: mkt-n :: FOMC Décision Taux",
@@ -188,6 +216,30 @@
     "premiere_apparition": "2026-08-02"
   },
   {
+    "point": "04/08 :: europe :: corp :: Résultats HSBC Holdings",
+    "premiere_apparition": "2026-08-03"
+  },
+  {
+    "point": "04/08 :: europe :: corp :: Résultats Bayer AG",
+    "premiere_apparition": "2026-08-03"
+  },
+  {
+    "point": "04/08 :: usa :: corp :: Résultats Merck & Co.",
+    "premiere_apparition": "2026-08-03"
+  },
+  {
+    "point": "04/08 :: usa :: corp :: Résultats Amgen Inc.",
+    "premiere_apparition": "2026-08-03"
+  },
+  {
+    "point": "04/08 :: usa :: corp :: Résultats McDonald's Corporation",
+    "premiere_apparition": "2026-08-03"
+  },
+  {
+    "point": "04/08 :: usa :: corp :: Résultats Pfizer Inc.",
+    "premiere_apparition": "2026-08-03"
+  },
+  {
     "point": "12/08 :: usa :: macro :: IPC US Juillet",
     "premiere_apparition": "2026-07-14"
   },
@@ -306,6 +358,10 @@
   {
     "point": "13/08 :: usa :: corp :: Résultats : Coherent Corp, Nu Holdings, Applied Materials",
     "premiere_apparition": "2026-08-02"
+  },
+  {
+    "point": "13/08 :: usa :: macro :: Inscriptions hebdomadaires chômage",
+    "premiere_apparition": "2026-08-03"
   },
   {
     "point": "16/08 :: asie :: macro :: Publication PIB Japon",
@@ -428,6 +484,14 @@
     "premiere_apparition": "2026-08-02"
   },
   {
+    "point": "03/08 :: europe :: macro :: Ventes au détail Allemagne",
+    "premiere_apparition": "2026-08-03"
+  },
+  {
+    "point": "03/08 :: usa :: corp :: Résultats Vertex Pharmaceuticals",
+    "premiere_apparition": "2026-08-03"
+  },
+  {
     "point": "31/07-02/08 :: global :: mkt-n :: Conférence Mondiale Management/Économie",
     "premiere_apparition": "2026-07-16"
   },
@@ -516,16 +580,52 @@
     "premiere_apparition": "2026-08-02"
   },
   {
+    "point": "05/08 :: france :: macro :: Production Industrielle",
+    "premiere_apparition": "2026-08-03"
+  },
+  {
+    "point": "05/08 :: usa :: macro :: Créations d'emplois ADP",
+    "premiere_apparition": "2026-08-03"
+  },
+  {
+    "point": "05/08 :: europe :: corp :: Résultats Novo Nordisk",
+    "premiere_apparition": "2026-08-03"
+  },
+  {
+    "point": "05/08 :: europe :: corp :: Résultats Siemens Energy",
+    "premiere_apparition": "2026-08-03"
+  },
+  {
+    "point": "05/08 :: europe :: corp :: Résultats Infineon Technologies",
+    "premiere_apparition": "2026-08-03"
+  },
+  {
+    "point": "05/08 :: europe :: corp :: Résultats Glencore plc.",
+    "premiere_apparition": "2026-08-03"
+  },
+  {
+    "point": "05/08 :: europe :: corp :: Résultats DHL Group",
+    "premiere_apparition": "2026-08-03"
+  },
+  {
+    "point": "05/08 :: europe :: corp :: Résultats Heineken N.V.",
+    "premiere_apparition": "2026-08-03"
+  },
+  {
+    "point": "05/08 :: usa :: corp :: Résultats Costco Wholesale",
+    "premiere_apparition": "2026-08-03"
+  },
+  {
+    "point": "05/08 :: usa :: corp :: Résultats Walt Disney Company",
+    "premiere_apparition": "2026-08-03"
+  },
+  {
+    "point": "05/08 :: usa :: corp :: Résultats Shopify Inc.",
+    "premiere_apparition": "2026-08-03"
+  },
+  {
     "point": "Début Août :: usa :: corp :: Résultats Block",
     "premiere_apparition": "2026-07-17"
-  },
-  {
-    "point": "02/08 :: usa :: macro :: Rapport Emploi US Juillet",
-    "premiere_apparition": "2026-07-19"
-  },
-  {
-    "point": "02/08 :: global :: mkt-n :: Réunion ministérielle OPEC+",
-    "premiere_apparition": "2026-07-22"
   },
   {
     "point": "31/08 :: global :: mkt-n :: Réunion Ministres Finances G20",
@@ -660,6 +760,62 @@
     "premiere_apparition": "2026-08-02"
   },
   {
+    "point": "06/08 :: usa :: macro :: Inscriptions hebdomadaires chômage",
+    "premiere_apparition": "2026-08-03"
+  },
+  {
+    "point": "06/08 :: europe :: corp :: Résultats Siemens AG",
+    "premiere_apparition": "2026-08-03"
+  },
+  {
+    "point": "06/08 :: europe :: corp :: Résultats Deutsche Telekom",
+    "premiere_apparition": "2026-08-03"
+  },
+  {
+    "point": "06/08 :: europe :: corp :: Résultats Zurich Insurance Group",
+    "premiere_apparition": "2026-08-03"
+  },
+  {
+    "point": "06/08 :: europe :: corp :: Résultats Generali",
+    "premiere_apparition": "2026-08-03"
+  },
+  {
+    "point": "06/08 :: europe :: corp :: Résultats Merck KGaA",
+    "premiere_apparition": "2026-08-03"
+  },
+  {
+    "point": "06/08 :: europe :: corp :: Résultats Rheinmetall AG",
+    "premiere_apparition": "2026-08-03"
+  },
+  {
+    "point": "06/08 :: europe :: corp :: Résultats KBC Groupe NV",
+    "premiere_apparition": "2026-08-03"
+  },
+  {
+    "point": "06/08 :: europe :: corp :: Résultats Diageo plc.",
+    "premiere_apparition": "2026-08-03"
+  },
+  {
+    "point": "06/08 :: europe :: corp :: Résultats Swiss Re Ltd",
+    "premiere_apparition": "2026-08-03"
+  },
+  {
+    "point": "06/08 :: europe :: corp :: Résultats Commerzbank AG",
+    "premiere_apparition": "2026-08-03"
+  },
+  {
+    "point": "06/08 :: usa :: corp :: Résultats ConocoPhillips",
+    "premiere_apparition": "2026-08-03"
+  },
+  {
+    "point": "06/08 :: usa :: corp :: Résultats Parker-Hannifin",
+    "premiere_apparition": "2026-08-03"
+  },
+  {
+    "point": "06/08 :: usa :: corp :: Résultats Cloudflare, Inc.",
+    "premiere_apparition": "2026-08-03"
+  },
+  {
     "point": "26-28/07 :: europe :: macro :: Réunion Comité politique monétaire BoE",
     "premiere_apparition": "2026-07-21"
   },
@@ -740,6 +896,10 @@
     "premiere_apparition": "2026-08-01"
   },
   {
+    "point": "14/08 :: france :: macro :: Inflation IPC Définitive Juillet",
+    "premiere_apparition": "2026-08-03"
+  },
+  {
     "point": "29/08 :: global :: geo :: Réunion Secrétaires Finances & Gouv. BC G20",
     "premiere_apparition": "2026-07-23"
   },
@@ -794,6 +954,10 @@
   {
     "point": "20/08 :: usa :: corp :: Kinross Dividend Record Date",
     "premiere_apparition": "2026-07-30"
+  },
+  {
+    "point": "20/08 :: usa :: macro :: Inscriptions hebdomadaires chômage",
+    "premiere_apparition": "2026-08-03"
   },
   {
     "point": "11/08 :: europe :: corp :: Résultats On T2",
