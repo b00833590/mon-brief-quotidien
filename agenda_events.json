@@ -336,6 +336,10 @@
     "premiere_apparition": "2026-08-03"
   },
   {
+    "point": "12/08 :: europe :: macro :: Eurostat Production Industrielle Zone Euro",
+    "premiere_apparition": "2026-08-04"
+  },
+  {
     "point": "13/08 :: europe :: mkt-n :: Décision Taux Norges Bank",
     "premiere_apparition": "2026-07-14"
   },
@@ -421,6 +425,18 @@
   },
   {
     "point": "13/08 :: europe :: mkt-n :: Réunion Banque de Norvège",
+    "premiere_apparition": "2026-08-04"
+  },
+  {
+    "point": "13/08 :: europe :: macro :: Eurostat PIB Flash Estimation UE/Eurozone",
+    "premiere_apparition": "2026-08-04"
+  },
+  {
+    "point": "13/08 :: europe :: macro :: UK PIB Première Estimation T2",
+    "premiere_apparition": "2026-08-04"
+  },
+  {
+    "point": "13/08 :: europe :: macro :: UK Indice des Services Juin",
     "premiere_apparition": "2026-08-04"
   },
   {
@@ -609,6 +625,14 @@
   },
   {
     "point": "05/08 :: europe :: mkt-n :: Réunion BoE MPC",
+    "premiere_apparition": "2026-08-04"
+  },
+  {
+    "point": "05/08 :: usa :: corp :: Résultats d'entreprises : Disney, Uber",
+    "premiere_apparition": "2026-08-04"
+  },
+  {
+    "point": "05/08 :: global :: corp :: Résultats d'entreprises : GlobalFoundries, SanDisk",
     "premiere_apparition": "2026-08-04"
   },
   {
@@ -812,6 +836,10 @@
     "premiere_apparition": "2026-08-03"
   },
   {
+    "point": "06/08 :: usa :: corp :: Résultats d'entreprises : Airbnb, Palantir",
+    "premiere_apparition": "2026-08-04"
+  },
+  {
     "point": "26-28/07 :: europe :: macro :: Réunion Comité politique monétaire BoE",
     "premiere_apparition": "2026-07-21"
   },
@@ -866,6 +894,22 @@
   {
     "point": "19/08 :: usa :: corp :: Raymond James Operating Data (Jul)",
     "premiere_apparition": "2026-08-03"
+  },
+  {
+    "point": "19/08 :: europe :: macro :: UK Inflation Prix Consommation Juillet",
+    "premiere_apparition": "2026-08-04"
+  },
+  {
+    "point": "19/08 :: europe :: macro :: Zone Euro Inflation HICP Finale Juillet",
+    "premiere_apparition": "2026-08-04"
+  },
+  {
+    "point": "19/08 :: europe :: macro :: Prévisions Économiques Trésor Britannique",
+    "premiere_apparition": "2026-08-04"
+  },
+  {
+    "point": "19/08 :: asie :: corp :: Résultats d'entreprises : Baidu, XPeng",
+    "premiere_apparition": "2026-08-04"
   },
   {
     "point": "14/08 :: europe :: macro :: Mise à jour PIB Zone Euro T2",
@@ -960,6 +1004,10 @@
     "premiere_apparition": "2026-08-03"
   },
   {
+    "point": "20/08 :: europe :: macro :: UK Blue Book 2026 Impact PIB",
+    "premiere_apparition": "2026-08-04"
+  },
+  {
     "point": "11/08 :: europe :: corp :: Résultats On T2",
     "premiere_apparition": "2026-07-29"
   },
@@ -1010,6 +1058,10 @@
   {
     "point": "18/08 :: usa :: macro :: US Building Permits (Jul)",
     "premiere_apparition": "2026-08-03"
+  },
+  {
+    "point": "18/08 :: europe :: macro :: UK Productivité Estimation Flash",
+    "premiere_apparition": "2026-08-04"
   },
   {
     "point": "17/08-18/08 :: global :: geo :: Sommet Jeunesse Énergie BRICS",
@@ -1070,5 +1122,13 @@
   {
     "point": "24/08 :: asie :: corp :: Figma Inc. Earnings (Q2)",
     "premiere_apparition": "2026-08-03"
+  },
+  {
+    "point": "24/08 :: europe :: mkt-n :: Conférences Macroéconomie Rome",
+    "premiere_apparition": "2026-08-04"
+  },
+  {
+    "point": "25/08 :: global :: corp :: Résultats d'entreprises : Semtech Corporation",
+    "premiere_apparition": "2026-08-04"
   }
 ]
