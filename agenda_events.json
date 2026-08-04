@@ -420,8 +420,16 @@
     "premiere_apparition": "2026-08-03"
   },
   {
+    "point": "13/08 :: europe :: mkt-n :: Réunion Banque de Norvège",
+    "premiere_apparition": "2026-08-04"
+  },
+  {
     "point": "16/08 :: asie :: macro :: Publication PIB Japon",
     "premiere_apparition": "2026-07-14"
+  },
+  {
+    "point": "16/08 :: asie :: macro :: PIB Japonais",
+    "premiere_apparition": "2026-08-04"
   },
   {
     "point": "Fin juillet/Août :: europe :: corp :: IPO Airtel Money Londres",
@@ -454,122 +462,6 @@
   {
     "point": "Semaine du 03/08 :: usa :: corp :: Block earnings report",
     "premiere_apparition": "2026-07-16"
-  },
-  {
-    "point": "03/08 :: usa :: corp :: Snap Inc. earnings",
-    "premiere_apparition": "2026-07-16"
-  },
-  {
-    "point": "03/08 :: usa :: corp :: ON Semiconductor earnings",
-    "premiere_apparition": "2026-07-16"
-  },
-  {
-    "point": "03/08 :: europe :: macro :: PMI manufacturier final Zone Euro (Juillet)",
-    "premiere_apparition": "2026-07-17"
-  },
-  {
-    "point": "03/08 :: usa :: macro :: Publication ISM PMI USA",
-    "premiere_apparition": "2026-07-17"
-  },
-  {
-    "point": "03/08 :: asie :: corp :: Résultats Grab Holdings",
-    "premiere_apparition": "2026-07-20"
-  },
-  {
-    "point": "03/08 :: usa :: corp :: Résultats Palantir Technologies",
-    "premiere_apparition": "2026-07-20"
-  },
-  {
-    "point": "03/08 :: usa :: macro :: Indice ISM manufacturier US Juillet",
-    "premiere_apparition": "2026-07-20"
-  },
-  {
-    "point": "03/08 :: usa :: corp :: Résultats T2 Paymentus",
-    "premiere_apparition": "2026-07-21"
-  },
-  {
-    "point": "03/08 :: usa :: corp :: Résultats Berkshire Hathaway",
-    "premiere_apparition": "2026-07-21"
-  },
-  {
-    "point": "03/08 :: usa :: macro :: Dépenses de construction US (Mensuel)",
-    "premiere_apparition": "2026-07-21"
-  },
-  {
-    "point": "03/08 :: usa :: macro :: Indice des directeurs d'achat (ISM) PMI",
-    "premiere_apparition": "2026-07-22"
-  },
-  {
-    "point": "03/08 :: usa :: corp :: Résultats Block (SQ)",
-    "premiere_apparition": "2026-07-22"
-  },
-  {
-    "point": "03/08 :: europe :: corp :: Résultats Bonduelle",
-    "premiere_apparition": "2026-07-28"
-  },
-  {
-    "point": "03/08 :: usa :: corp :: Eaton Corporation Earnings",
-    "premiere_apparition": "2026-07-30"
-  },
-  {
-    "point": "03/08 :: usa :: corp :: Résultats trimestriels EchoStar Corporation",
-    "premiere_apparition": "2026-07-31"
-  },
-  {
-    "point": "03/08 :: asie :: macro :: Balance courante et opérations marché BoJ",
-    "premiere_apparition": "2026-07-31"
-  },
-  {
-    "point": "03/08 :: asie :: macro :: Perspectives Économiques BoJ (texte intégral)",
-    "premiere_apparition": "2026-07-31"
-  },
-  {
-    "point": "03/08 :: europe :: corp :: Résultats CRCAM Touraine Poitou S1",
-    "premiere_apparition": "2026-07-31"
-  },
-  {
-    "point": "03/08 :: usa :: corp :: Vertex Pharma Q2 Résultats",
-    "premiere_apparition": "2026-08-01"
-  },
-  {
-    "point": "03/08 :: usa :: macro :: ISM Manufacturing Index (Juillet)",
-    "premiere_apparition": "2026-08-01"
-  },
-  {
-    "point": "03/08 :: global :: corp :: Résultats : WuXi AppTec, Palantir, Mitsubishi UFJ",
-    "premiere_apparition": "2026-08-02"
-  },
-  {
-    "point": "03/08 :: europe :: macro :: Ventes au détail Allemagne",
-    "premiere_apparition": "2026-08-03"
-  },
-  {
-    "point": "03/08 :: usa :: corp :: Résultats Vertex Pharmaceuticals",
-    "premiere_apparition": "2026-08-03"
-  },
-  {
-    "point": "03/08 :: europe :: corp :: AstraZeneca Bristol Myers Squibb discussions",
-    "premiere_apparition": "2026-08-03"
-  },
-  {
-    "point": "03/08 :: asie :: macro :: China Manufacturing PMI (Jul)",
-    "premiere_apparition": "2026-08-03"
-  },
-  {
-    "point": "03/08 :: europe :: macro :: ECB TARGET balances statistics",
-    "premiere_apparition": "2026-08-03"
-  },
-  {
-    "point": "03/08 :: europe :: macro :: ECB Economic Bulletin pre-release",
-    "premiere_apparition": "2026-08-03"
-  },
-  {
-    "point": "03/08 :: usa :: macro :: Construction Spending (Jun)",
-    "premiere_apparition": "2026-08-03"
-  },
-  {
-    "point": "03/08 :: usa :: macro :: Senior Loan Officer Opinion Survey",
-    "premiere_apparition": "2026-08-03"
   },
   {
     "point": "31/07-02/08 :: global :: mkt-n :: Conférence Mondiale Management/Économie",
@@ -716,6 +608,10 @@
     "premiere_apparition": "2026-08-03"
   },
   {
+    "point": "05/08 :: europe :: mkt-n :: Réunion BoE MPC",
+    "premiere_apparition": "2026-08-04"
+  },
+  {
     "point": "Début Août :: usa :: corp :: Résultats Block",
     "premiere_apparition": "2026-07-17"
   },
@@ -766,6 +662,10 @@
   {
     "point": "10/08 :: usa :: corp :: Résultats : Airbnb, BigBear.ai, Plug Power",
     "premiere_apparition": "2026-08-02"
+  },
+  {
+    "point": "10/08 :: europe :: macro :: Indice Sentix Zone Euro",
+    "premiere_apparition": "2026-08-04"
   },
   {
     "point": "06/08 :: usa :: macro :: Publication Productivité et Coûts T2",
@@ -1136,6 +1036,14 @@
     "premiere_apparition": "2026-08-03"
   },
   {
+    "point": "17/08 :: afrique :: geo :: Sommet SADC",
+    "premiere_apparition": "2026-08-04"
+  },
+  {
+    "point": "17/08 :: global :: geo :: COP17 Désertification ONU",
+    "premiere_apparition": "2026-08-04"
+  },
+  {
     "point": "21/08 :: usa :: macro :: Données Emploi Jeunesse US",
     "premiere_apparition": "2026-08-01"
   },
@@ -1146,6 +1054,10 @@
   {
     "point": "26/08 :: usa :: macro :: Seconde Estimation PIB US T2",
     "premiere_apparition": "2026-08-01"
+  },
+  {
+    "point": "26/08 :: usa :: macro :: Inflation PCE US (Juillet)",
+    "premiere_apparition": "2026-08-04"
   },
   {
     "point": "28/08 :: europe :: macro :: Publication CPI Provisoire France Août",
