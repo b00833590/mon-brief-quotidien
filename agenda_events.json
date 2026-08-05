@@ -124,166 +124,6 @@
     "premiere_apparition": "2026-07-22"
   },
   {
-    "point": "04/08 :: global :: mkt-n :: Décision Politique Monétaire RBA",
-    "premiere_apparition": "2026-07-14"
-  },
-  {
-    "point": "04/08 :: usa :: macro :: US Enquêtes Offres d'Emploi Juin 2026",
-    "premiere_apparition": "2026-07-15"
-  },
-  {
-    "point": "04/08 :: europe :: macro :: Publication inflation HICP Eurozone",
-    "premiere_apparition": "2026-07-15"
-  },
-  {
-    "point": "04/08 :: usa :: macro :: Commerce International Juin",
-    "premiere_apparition": "2026-07-18"
-  },
-  {
-    "point": "04/08 :: usa :: macro :: Publication JOLTS Juin",
-    "premiere_apparition": "2026-07-20"
-  },
-  {
-    "point": "04/08 :: usa :: corp :: Résultats Spotify Technology",
-    "premiere_apparition": "2026-07-20"
-  },
-  {
-    "point": "04/08 :: usa :: macro :: Indice LMI Responsables Logistiques US",
-    "premiere_apparition": "2026-07-21"
-  },
-  {
-    "point": "04/08 :: usa :: macro :: Balance Commerciale US",
-    "premiere_apparition": "2026-07-21"
-  },
-  {
-    "point": "04/08 :: usa :: macro :: JOLTs Offres d'emploi US",
-    "premiere_apparition": "2026-07-21"
-  },
-  {
-    "point": "04/08 :: usa :: macro :: Commandes à l'industrie US (Mensuel)",
-    "premiere_apparition": "2026-07-21"
-  },
-  {
-    "point": "04/08 :: usa :: corp :: SpaceX Résultats Trimestriels",
-    "premiere_apparition": "2026-07-21"
-  },
-  {
-    "point": "04/08 :: global :: macro :: Publication Prix Consommation OCDE",
-    "premiere_apparition": "2026-07-21"
-  },
-  {
-    "point": "04/08 :: usa :: corp :: Résultats AMD",
-    "premiere_apparition": "2026-07-22"
-  },
-  {
-    "point": "04/08 :: europe :: corp :: Résultats BP",
-    "premiere_apparition": "2026-07-22"
-  },
-  {
-    "point": "04/08 :: usa :: corp :: Résultats financiers Amgen T2 2026",
-    "premiere_apparition": "2026-07-29"
-  },
-  {
-    "point": "04/08 :: usa :: corp :: Caterpillar Inc. Earnings",
-    "premiere_apparition": "2026-07-30"
-  },
-  {
-    "point": "04/08 :: europe :: macro :: Rapport trimestriel facilité achat actifs BoE",
-    "premiere_apparition": "2026-07-31"
-  },
-  {
-    "point": "04/08 :: asie :: macro :: Base monétaire Japon",
-    "premiere_apparition": "2026-07-31"
-  },
-  {
-    "point": "04/08 :: asie :: macro :: Comptes Banque du Japon",
-    "premiere_apparition": "2026-07-31"
-  },
-  {
-    "point": "04/08 :: asie :: macro :: Obligations d'État détenues par BoJ",
-    "premiere_apparition": "2026-07-31"
-  },
-  {
-    "point": "04/08 :: asie :: macro :: Bons du Trésor achetés par BoJ",
-    "premiere_apparition": "2026-07-31"
-  },
-  {
-    "point": "04/08 :: asie :: macro :: Collatéraux acceptés par BoJ",
-    "premiere_apparition": "2026-07-31"
-  },
-  {
-    "point": "04/08 :: usa :: corp :: Hut 8 Corp. Résultats",
-    "premiere_apparition": "2026-07-31"
-  },
-  {
-    "point": "04/08 :: usa :: corp :: Cipher Digital Résultats",
-    "premiere_apparition": "2026-07-31"
-  },
-  {
-    "point": "04/08 :: usa :: corp :: Entegris Résultats",
-    "premiere_apparition": "2026-07-31"
-  },
-  {
-    "point": "04/08 :: usa :: corp :: Résultats d'entreprises majeures (AMD, Spotify)",
-    "premiere_apparition": "2026-08-01"
-  },
-  {
-    "point": "04/08 :: usa :: corp :: Ball Corp Q2 Résultats",
-    "premiere_apparition": "2026-08-01"
-  },
-  {
-    "point": "04/08 :: usa :: macro :: Rapport ouvertures d'emplois JOLTs",
-    "premiere_apparition": "2026-08-02"
-  },
-  {
-    "point": "04/08 :: usa :: corp :: Résultats : SpaceX, AMD, Caterpillar, McDonald's",
-    "premiere_apparition": "2026-08-02"
-  },
-  {
-    "point": "04/08 :: global :: corp :: Résultats : Toyota Motor, HSBC, Merck & Co, Amgen",
-    "premiere_apparition": "2026-08-02"
-  },
-  {
-    "point": "04/08 :: europe :: corp :: Résultats HSBC Holdings",
-    "premiere_apparition": "2026-08-03"
-  },
-  {
-    "point": "04/08 :: europe :: corp :: Résultats Bayer AG",
-    "premiere_apparition": "2026-08-03"
-  },
-  {
-    "point": "04/08 :: usa :: corp :: Résultats Merck & Co.",
-    "premiere_apparition": "2026-08-03"
-  },
-  {
-    "point": "04/08 :: usa :: corp :: Résultats Amgen Inc.",
-    "premiere_apparition": "2026-08-03"
-  },
-  {
-    "point": "04/08 :: usa :: corp :: Résultats McDonald's Corporation",
-    "premiere_apparition": "2026-08-03"
-  },
-  {
-    "point": "04/08 :: usa :: corp :: Résultats Pfizer Inc.",
-    "premiere_apparition": "2026-08-03"
-  },
-  {
-    "point": "04/08 :: europe :: macro :: BoE Asset Purchase Facility Report",
-    "premiere_apparition": "2026-08-03"
-  },
-  {
-    "point": "04/08 :: usa :: macro :: US JOLTs Job Openings (Jun)",
-    "premiere_apparition": "2026-08-03"
-  },
-  {
-    "point": "04/08 :: asie :: macro :: BoJ Monetary Base (Jul)",
-    "premiere_apparition": "2026-08-03"
-  },
-  {
-    "point": "04/08 :: asie :: macro :: BoJ Bank of Japan Accounts (Jul 31)",
-    "premiere_apparition": "2026-08-03"
-  },
-  {
     "point": "12/08 :: usa :: macro :: IPC US Juillet",
     "premiere_apparition": "2026-07-14"
   },
@@ -636,6 +476,14 @@
     "premiere_apparition": "2026-08-04"
   },
   {
+    "point": "05/08 :: asie :: geo :: BRICS Culture Working Group",
+    "premiere_apparition": "2026-08-05"
+  },
+  {
+    "point": "05/08 :: asie :: geo :: BRICS Anti-Corruption Meeting",
+    "premiere_apparition": "2026-08-05"
+  },
+  {
     "point": "Début Août :: usa :: corp :: Résultats Block",
     "premiere_apparition": "2026-07-17"
   },
@@ -840,6 +688,10 @@
     "premiere_apparition": "2026-08-04"
   },
   {
+    "point": "06/08 :: usa :: mkt-n :: Audition Sénat Accès Capital",
+    "premiere_apparition": "2026-08-05"
+  },
+  {
     "point": "26-28/07 :: europe :: macro :: Réunion Comité politique monétaire BoE",
     "premiere_apparition": "2026-07-21"
   },
@@ -950,6 +802,10 @@
   {
     "point": "29/08 :: global :: geo :: Réunion Délégués Banques Centrales G20",
     "premiere_apparition": "2026-07-23"
+  },
+  {
+    "point": "29/08 :: global :: geo :: G20 Finance Ministres Début",
+    "premiere_apparition": "2026-08-05"
   },
   {
     "point": "01/09 :: global :: geo :: Réunion Ministérielle G20 Innovation",
@@ -1112,6 +968,10 @@
     "premiere_apparition": "2026-08-04"
   },
   {
+    "point": "26/08 :: usa :: corp :: Okta Résultats T2",
+    "premiere_apparition": "2026-08-05"
+  },
+  {
     "point": "28/08 :: europe :: macro :: Publication CPI Provisoire France Août",
     "premiere_apparition": "2026-08-01"
   },
@@ -1130,5 +990,9 @@
   {
     "point": "25/08 :: global :: corp :: Résultats d'entreprises : Semtech Corporation",
     "premiere_apparition": "2026-08-04"
+  },
+  {
+    "point": "27/08 :: usa :: macro :: Jackson Hole Symposium Début",
+    "premiere_apparition": "2026-08-05"
   }
 ]
