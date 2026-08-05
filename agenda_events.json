@@ -484,6 +484,18 @@
     "premiere_apparition": "2026-08-05"
   },
   {
+    "point": "05/08 :: global :: geo :: Accord Détroit d'Ormuz",
+    "premiere_apparition": "2026-08-05"
+  },
+  {
+    "point": "05/08 :: usa :: corp :: Résultats AppLovin, Western Digital",
+    "premiere_apparition": "2026-08-05"
+  },
+  {
+    "point": "05/08 :: usa :: corp :: Résultats Berkshire Hathaway",
+    "premiere_apparition": "2026-08-05"
+  },
+  {
     "point": "Début Août :: usa :: corp :: Résultats Block",
     "premiere_apparition": "2026-07-17"
   },
@@ -689,6 +701,14 @@
   },
   {
     "point": "06/08 :: usa :: mkt-n :: Audition Sénat Accès Capital",
+    "premiere_apparition": "2026-08-05"
+  },
+  {
+    "point": "06/08 :: usa :: macro :: Demandes de chômage initiales (US)",
+    "premiere_apparition": "2026-08-05"
+  },
+  {
+    "point": "06/08 :: usa :: mkt-n :: Audition Sénat USA (Capital)",
     "premiere_apparition": "2026-08-05"
   },
   {
@@ -969,6 +989,10 @@
   },
   {
     "point": "26/08 :: usa :: corp :: Okta Résultats T2",
+    "premiere_apparition": "2026-08-05"
+  },
+  {
+    "point": "26/08 :: usa :: macro :: Publication PCE (US)",
     "premiere_apparition": "2026-08-05"
   },
   {
