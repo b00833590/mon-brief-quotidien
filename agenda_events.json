@@ -120,6 +120,14 @@
     "premiere_apparition": "2026-08-03"
   },
   {
+    "point": "07/08 :: europe :: corp :: Résultats d'entreprises européennes majeures",
+    "premiere_apparition": "2026-08-06"
+  },
+  {
+    "point": "07/08 :: usa :: macro :: Rapport mensuel emploi (Juillet)",
+    "premiere_apparition": "2026-08-06"
+  },
+  {
     "point": "28-29/07 :: usa :: mkt-n :: FOMC Décision Taux",
     "premiere_apparition": "2026-07-22"
   },
@@ -178,6 +186,10 @@
   {
     "point": "12/08 :: europe :: macro :: Eurostat Production Industrielle Zone Euro",
     "premiere_apparition": "2026-08-04"
+  },
+  {
+    "point": "12/08 :: europe :: macro :: Allemagne: Indice harmonisé prix consommation HICP",
+    "premiere_apparition": "2026-08-06"
   },
   {
     "point": "13/08 :: europe :: mkt-n :: Décision Taux Norges Bank",
@@ -288,32 +300,8 @@
     "premiere_apparition": "2026-08-04"
   },
   {
-    "point": "Fin juillet/Août :: europe :: corp :: IPO Airtel Money Londres",
-    "premiere_apparition": "2026-07-15"
-  },
-  {
-    "point": "30-31/07 :: asie :: mkt-n :: Réunion politique monétaire BoJ",
-    "premiere_apparition": "2026-07-15"
-  },
-  {
-    "point": "Fin juillet :: africa :: corp :: Airtel Africa Introduction en Bourse Londres",
-    "premiere_apparition": "2026-07-15"
-  },
-  {
     "point": "Fin juillet :: europe :: macro :: Inflation flash Eurozone juillet",
     "premiere_apparition": "2026-07-20"
-  },
-  {
-    "point": "Semaine du 20/07 :: europe :: geo :: Nomination nouveau Chancelier UK",
-    "premiere_apparition": "2026-07-15"
-  },
-  {
-    "point": "Prochaines semaines :: europe :: corp :: Introduction en bourse Airtel Money",
-    "premiere_apparition": "2026-07-15"
-  },
-  {
-    "point": "Semaines à venir :: usa :: corp :: Saison résultats T2",
-    "premiere_apparition": "2026-07-15"
   },
   {
     "point": "Semaine du 03/08 :: usa :: corp :: Block earnings report",
@@ -326,174 +314,6 @@
   {
     "point": "Fin juillet-début août :: global :: corp :: Pic saison résultats T2",
     "premiere_apparition": "2026-07-16"
-  },
-  {
-    "point": "05/08 :: europe :: macro :: PMI composite final Zone Euro (Juillet)",
-    "premiere_apparition": "2026-07-17"
-  },
-  {
-    "point": "05/08 :: europe :: tech :: Versement dividende intérimaire ASML",
-    "premiere_apparition": "2026-07-20"
-  },
-  {
-    "point": "05/08 :: usa :: corp :: Résultats Uber",
-    "premiere_apparition": "2026-07-22"
-  },
-  {
-    "point": "05/08 :: usa :: corp :: Résultats Disney",
-    "premiere_apparition": "2026-07-22"
-  },
-  {
-    "point": "05/08 :: usa :: corp :: Résultats Eli Lilly",
-    "premiere_apparition": "2026-07-22"
-  },
-  {
-    "point": "05/08 :: usa :: corp :: Energy Fuels Résultats",
-    "premiere_apparition": "2026-07-30"
-  },
-  {
-    "point": "05/08 :: usa :: corp :: GlobalFoundries Résultats",
-    "premiere_apparition": "2026-07-30"
-  },
-  {
-    "point": "05/08 :: usa :: corp :: Résultats trimestriels Thomson Reuters (TRI)",
-    "premiere_apparition": "2026-07-31"
-  },
-  {
-    "point": "05/08 :: usa :: corp :: Résultats trimestriels Galaxy Digital",
-    "premiere_apparition": "2026-07-31"
-  },
-  {
-    "point": "05/08 :: usa :: corp :: Résultats trimestriels SanDisk",
-    "premiere_apparition": "2026-07-31"
-  },
-  {
-    "point": "05/08 :: europe :: macro :: Réserves Internationales UK",
-    "premiere_apparition": "2026-07-31"
-  },
-  {
-    "point": "05/08 :: asie :: macro :: Minutes réunion politique monétaire BoJ (Juin)",
-    "premiere_apparition": "2026-07-31"
-  },
-  {
-    "point": "05/08 :: asie :: macro :: Projections changements comptes courants BoJ",
-    "premiere_apparition": "2026-07-31"
-  },
-  {
-    "point": "05/08 :: usa :: macro :: Rapport Emploi ADP Juillet",
-    "premiere_apparition": "2026-07-31"
-  },
-  {
-    "point": "05/08 :: usa :: macro :: ISM Indice Non-Manufacturier Juillet",
-    "premiere_apparition": "2026-07-31"
-  },
-  {
-    "point": "05/08 :: asie :: mkt-n :: RBI Décision Politique Monétaire",
-    "premiere_apparition": "2026-08-01"
-  },
-  {
-    "point": "05/08 :: usa :: corp :: Résultats d'entreprises majeures (Cloudflare, Duolingo)",
-    "premiere_apparition": "2026-08-01"
-  },
-  {
-    "point": "05/08 :: usa :: macro :: ISM Services Business Activity (Juillet)",
-    "premiere_apparition": "2026-08-01"
-  },
-  {
-    "point": "05/08 :: usa :: corp :: Résultats : Eli Lilly, Walt Disney, SanDisk",
-    "premiere_apparition": "2026-08-02"
-  },
-  {
-    "point": "05/08 :: global :: corp :: Résultats : Novo Nordisk, Galaxy Digital, GlobalFoundries",
-    "premiere_apparition": "2026-08-02"
-  },
-  {
-    "point": "05/08 :: france :: macro :: Production Industrielle",
-    "premiere_apparition": "2026-08-03"
-  },
-  {
-    "point": "05/08 :: usa :: macro :: Créations d'emplois ADP",
-    "premiere_apparition": "2026-08-03"
-  },
-  {
-    "point": "05/08 :: europe :: corp :: Résultats Novo Nordisk",
-    "premiere_apparition": "2026-08-03"
-  },
-  {
-    "point": "05/08 :: europe :: corp :: Résultats Siemens Energy",
-    "premiere_apparition": "2026-08-03"
-  },
-  {
-    "point": "05/08 :: europe :: corp :: Résultats Infineon Technologies",
-    "premiere_apparition": "2026-08-03"
-  },
-  {
-    "point": "05/08 :: europe :: corp :: Résultats Glencore plc.",
-    "premiere_apparition": "2026-08-03"
-  },
-  {
-    "point": "05/08 :: europe :: corp :: Résultats DHL Group",
-    "premiere_apparition": "2026-08-03"
-  },
-  {
-    "point": "05/08 :: europe :: corp :: Résultats Heineken N.V.",
-    "premiere_apparition": "2026-08-03"
-  },
-  {
-    "point": "05/08 :: usa :: corp :: Résultats Costco Wholesale",
-    "premiere_apparition": "2026-08-03"
-  },
-  {
-    "point": "05/08 :: usa :: corp :: Résultats Walt Disney Company",
-    "premiere_apparition": "2026-08-03"
-  },
-  {
-    "point": "05/08 :: usa :: corp :: Résultats Shopify Inc.",
-    "premiere_apparition": "2026-08-03"
-  },
-  {
-    "point": "05/08 :: usa :: macro :: ADP Nonfarm Employment Change (Jul)",
-    "premiere_apparition": "2026-08-03"
-  },
-  {
-    "point": "05/08 :: asie :: macro :: BoJ MPM Minutes (June)",
-    "premiere_apparition": "2026-08-03"
-  },
-  {
-    "point": "05/08 :: asie :: macro :: BoJ Current Account Balances Projections (Aug)",
-    "premiere_apparition": "2026-08-03"
-  },
-  {
-    "point": "05/08 :: europe :: mkt-n :: Réunion BoE MPC",
-    "premiere_apparition": "2026-08-04"
-  },
-  {
-    "point": "05/08 :: usa :: corp :: Résultats d'entreprises : Disney, Uber",
-    "premiere_apparition": "2026-08-04"
-  },
-  {
-    "point": "05/08 :: global :: corp :: Résultats d'entreprises : GlobalFoundries, SanDisk",
-    "premiere_apparition": "2026-08-04"
-  },
-  {
-    "point": "05/08 :: asie :: geo :: BRICS Culture Working Group",
-    "premiere_apparition": "2026-08-05"
-  },
-  {
-    "point": "05/08 :: asie :: geo :: BRICS Anti-Corruption Meeting",
-    "premiere_apparition": "2026-08-05"
-  },
-  {
-    "point": "05/08 :: global :: geo :: Accord Détroit d'Ormuz",
-    "premiere_apparition": "2026-08-05"
-  },
-  {
-    "point": "05/08 :: usa :: corp :: Résultats AppLovin, Western Digital",
-    "premiere_apparition": "2026-08-05"
-  },
-  {
-    "point": "05/08 :: usa :: corp :: Résultats Berkshire Hathaway",
-    "premiere_apparition": "2026-08-05"
   },
   {
     "point": "Début Août :: usa :: corp :: Résultats Block",
@@ -918,6 +738,14 @@
   {
     "point": "11/08 :: global :: ai :: Protiviti Tech Session AI in Finance",
     "premiere_apparition": "2026-08-03"
+  },
+  {
+    "point": "11/08 :: asie :: macro :: RBA: Décision taux d'intérêt",
+    "premiere_apparition": "2026-08-06"
+  },
+  {
+    "point": "11/08 :: europe :: corp :: Chiffre d'affaires sociétés européennes",
+    "premiere_apparition": "2026-08-06"
   },
   {
     "point": "18/08 :: usa :: macro :: Indices Prix Import/Export US juillet",
