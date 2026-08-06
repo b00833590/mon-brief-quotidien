@@ -532,6 +532,10 @@
     "premiere_apparition": "2026-08-05"
   },
   {
+    "point": "06/08 :: global :: geo :: Négociations accord Iran",
+    "premiere_apparition": "2026-08-06"
+  },
+  {
     "point": "26-28/07 :: europe :: macro :: Réunion Comité politique monétaire BoE",
     "premiere_apparition": "2026-07-21"
   },
@@ -650,6 +654,10 @@
   {
     "point": "01/09 :: global :: geo :: Réunion Ministérielle G20 Innovation",
     "premiere_apparition": "2026-07-23"
+  },
+  {
+    "point": "01/09 :: usa :: macro :: Publication JOLTS US (Juillet)",
+    "premiere_apparition": "2026-08-06"
   },
   {
     "point": "04/09 :: usa :: macro :: Rapport NFP US (août)",
@@ -846,5 +854,17 @@
   {
     "point": "27/08 :: usa :: macro :: Jackson Hole Symposium Début",
     "premiere_apparition": "2026-08-05"
+  },
+  {
+    "point": "10-12/08 :: usa :: global :: SIEPR Sommet Économique",
+    "premiere_apparition": "2026-08-06"
+  },
+  {
+    "point": "18-20/08 :: usa :: tech :: Texas Sommet Énergie Propre",
+    "premiere_apparition": "2026-08-06"
+  },
+  {
+    "point": "02/09 :: usa :: macro :: Rapport Emploi Privé ADP (Août)",
+    "premiere_apparition": "2026-08-06"
   }
 ]
