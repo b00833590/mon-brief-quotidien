@@ -192,6 +192,10 @@
     "premiere_apparition": "2026-08-06"
   },
   {
+    "point": "12/08 :: europe :: macro :: Inflation Allemagne (HICP Finale)",
+    "premiere_apparition": "2026-08-07"
+  },
+  {
     "point": "13/08 :: europe :: mkt-n :: Décision Taux Norges Bank",
     "premiere_apparition": "2026-07-14"
   },
@@ -304,18 +308,6 @@
     "premiere_apparition": "2026-07-20"
   },
   {
-    "point": "Semaine du 03/08 :: usa :: corp :: Block earnings report",
-    "premiere_apparition": "2026-07-16"
-  },
-  {
-    "point": "31/07-02/08 :: global :: mkt-n :: Conférence Mondiale Management/Économie",
-    "premiere_apparition": "2026-07-16"
-  },
-  {
-    "point": "Fin juillet-début août :: global :: corp :: Pic saison résultats T2",
-    "premiere_apparition": "2026-07-16"
-  },
-  {
     "point": "Début Août :: usa :: corp :: Résultats Block",
     "premiere_apparition": "2026-07-17"
   },
@@ -370,170 +362,6 @@
   {
     "point": "10/08 :: europe :: macro :: Indice Sentix Zone Euro",
     "premiere_apparition": "2026-08-04"
-  },
-  {
-    "point": "06/08 :: usa :: macro :: Publication Productivité et Coûts T2",
-    "premiere_apparition": "2026-07-20"
-  },
-  {
-    "point": "06/08 :: europe :: macro :: Réunion MPC BoE",
-    "premiere_apparition": "2026-07-21"
-  },
-  {
-    "point": "06/08 :: usa :: corp :: Résultats Airbnb",
-    "premiere_apparition": "2026-07-22"
-  },
-  {
-    "point": "06/08 :: usa :: corp :: CPI Résultats T2 2026",
-    "premiere_apparition": "2026-07-25"
-  },
-  {
-    "point": "06/08 :: europe :: macro :: Ventes au détail Zone Euro",
-    "premiere_apparition": "2026-07-28"
-  },
-  {
-    "point": "06/08 :: global :: corp :: Petrobras Résultats",
-    "premiere_apparition": "2026-07-30"
-  },
-  {
-    "point": "06/08 :: usa :: corp :: Résultats trimestriels Viavi Solutions",
-    "premiere_apparition": "2026-07-31"
-  },
-  {
-    "point": "06/08 :: usa :: corp :: Résultats trimestriels MACOM Technology",
-    "premiere_apparition": "2026-07-31"
-  },
-  {
-    "point": "06/08 :: usa :: corp :: Résultats trimestriels Oscar Health",
-    "premiere_apparition": "2026-07-31"
-  },
-  {
-    "point": "06/08 :: usa :: corp :: Résultats trimestriels MP Materials Corp",
-    "premiere_apparition": "2026-07-31"
-  },
-  {
-    "point": "06/08 :: usa :: corp :: Résultats trimestriels Petróleo Brasileiro S.A.",
-    "premiere_apparition": "2026-07-31"
-  },
-  {
-    "point": "06/08 :: usa :: corp :: Résultats trimestriels Nebius Group N.V.",
-    "premiere_apparition": "2026-07-31"
-  },
-  {
-    "point": "06/08 :: usa :: corp :: Résultats trimestriels Microchip Technology",
-    "premiere_apparition": "2026-07-31"
-  },
-  {
-    "point": "06/08 :: usa :: corp :: Résultats trimestriels Applied Optoelectronics",
-    "premiere_apparition": "2026-07-31"
-  },
-  {
-    "point": "06/08 :: europe :: mkt-n :: Panel Citoyen Banque d'Angleterre",
-    "premiere_apparition": "2026-07-31"
-  },
-  {
-    "point": "06/08 :: europe :: corp :: Résultats IT Link S1",
-    "premiere_apparition": "2026-07-31"
-  },
-  {
-    "point": "06/08 :: europe :: corp :: Résultats Maurel et Prom S1",
-    "premiere_apparition": "2026-07-31"
-  },
-  {
-    "point": "06/08 :: europe :: macro :: Ventes Détail Eurozone Juin",
-    "premiere_apparition": "2026-07-31"
-  },
-  {
-    "point": "06/08 :: usa :: corp :: Résultats d'entreprises majeures (Airbnb, Microchip)",
-    "premiere_apparition": "2026-08-01"
-  },
-  {
-    "point": "06/08 :: usa :: corp :: Résultats : Viavi Solutions, Oscar Health, Microchip Tech",
-    "premiere_apparition": "2026-08-02"
-  },
-  {
-    "point": "06/08 :: global :: corp :: Résultats : MP Materials, Petróleo Brasileiro, Nebius Group",
-    "premiere_apparition": "2026-08-02"
-  },
-  {
-    "point": "06/08 :: usa :: macro :: Inscriptions hebdomadaires chômage",
-    "premiere_apparition": "2026-08-03"
-  },
-  {
-    "point": "06/08 :: europe :: corp :: Résultats Siemens AG",
-    "premiere_apparition": "2026-08-03"
-  },
-  {
-    "point": "06/08 :: europe :: corp :: Résultats Deutsche Telekom",
-    "premiere_apparition": "2026-08-03"
-  },
-  {
-    "point": "06/08 :: europe :: corp :: Résultats Zurich Insurance Group",
-    "premiere_apparition": "2026-08-03"
-  },
-  {
-    "point": "06/08 :: europe :: corp :: Résultats Generali",
-    "premiere_apparition": "2026-08-03"
-  },
-  {
-    "point": "06/08 :: europe :: corp :: Résultats Merck KGaA",
-    "premiere_apparition": "2026-08-03"
-  },
-  {
-    "point": "06/08 :: europe :: corp :: Résultats Rheinmetall AG",
-    "premiere_apparition": "2026-08-03"
-  },
-  {
-    "point": "06/08 :: europe :: corp :: Résultats KBC Groupe NV",
-    "premiere_apparition": "2026-08-03"
-  },
-  {
-    "point": "06/08 :: europe :: corp :: Résultats Diageo plc.",
-    "premiere_apparition": "2026-08-03"
-  },
-  {
-    "point": "06/08 :: europe :: corp :: Résultats Swiss Re Ltd",
-    "premiere_apparition": "2026-08-03"
-  },
-  {
-    "point": "06/08 :: europe :: corp :: Résultats Commerzbank AG",
-    "premiere_apparition": "2026-08-03"
-  },
-  {
-    "point": "06/08 :: usa :: corp :: Résultats ConocoPhillips",
-    "premiere_apparition": "2026-08-03"
-  },
-  {
-    "point": "06/08 :: usa :: corp :: Résultats Parker-Hannifin",
-    "premiere_apparition": "2026-08-03"
-  },
-  {
-    "point": "06/08 :: usa :: corp :: Résultats Cloudflare, Inc.",
-    "premiere_apparition": "2026-08-03"
-  },
-  {
-    "point": "06/08 :: usa :: macro :: Initial Jobless Claims (Weekly)",
-    "premiere_apparition": "2026-08-03"
-  },
-  {
-    "point": "06/08 :: usa :: corp :: Résultats d'entreprises : Airbnb, Palantir",
-    "premiere_apparition": "2026-08-04"
-  },
-  {
-    "point": "06/08 :: usa :: mkt-n :: Audition Sénat Accès Capital",
-    "premiere_apparition": "2026-08-05"
-  },
-  {
-    "point": "06/08 :: usa :: macro :: Demandes de chômage initiales (US)",
-    "premiere_apparition": "2026-08-05"
-  },
-  {
-    "point": "06/08 :: usa :: mkt-n :: Audition Sénat USA (Capital)",
-    "premiere_apparition": "2026-08-05"
-  },
-  {
-    "point": "06/08 :: global :: geo :: Négociations accord Iran",
-    "premiere_apparition": "2026-08-06"
   },
   {
     "point": "26-28/07 :: europe :: macro :: Réunion Comité politique monétaire BoE",
@@ -830,6 +658,10 @@
   {
     "point": "26/08 :: usa :: macro :: Publication PCE (US)",
     "premiere_apparition": "2026-08-05"
+  },
+  {
+    "point": "26/08 :: usa :: macro :: PIB US (2ème estimation) T2 2026",
+    "premiere_apparition": "2026-08-07"
   },
   {
     "point": "28/08 :: europe :: macro :: Publication CPI Provisoire France Août",
