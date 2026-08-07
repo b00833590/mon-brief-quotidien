@@ -196,6 +196,18 @@
     "premiere_apparition": "2026-08-07"
   },
   {
+    "point": "12/08 :: europe :: macro :: Production Industrielle Eurozone Juin",
+    "premiere_apparition": "2026-08-07"
+  },
+  {
+    "point": "12/08 :: europe :: macro :: Taux d'Intérêt (3 mois) Eurozone Juillet",
+    "premiere_apparition": "2026-08-07"
+  },
+  {
+    "point": "12/08 :: europe :: macro :: Rendement Obligations Long Terme Eurozone Juillet",
+    "premiere_apparition": "2026-08-07"
+  },
+  {
     "point": "13/08 :: europe :: mkt-n :: Décision Taux Norges Bank",
     "premiere_apparition": "2026-07-14"
   },
@@ -296,6 +308,14 @@
     "premiere_apparition": "2026-08-04"
   },
   {
+    "point": "13/08 :: europe :: macro :: Emploi Flash T2 Eurozone",
+    "premiere_apparition": "2026-08-07"
+  },
+  {
+    "point": "13/08 :: europe :: macro :: Balance Commerciale Eurozone Juin",
+    "premiere_apparition": "2026-08-07"
+  },
+  {
     "point": "16/08 :: asie :: macro :: Publication PIB Japon",
     "premiere_apparition": "2026-07-14"
   },
@@ -362,6 +382,14 @@
   {
     "point": "10/08 :: europe :: macro :: Indice Sentix Zone Euro",
     "premiere_apparition": "2026-08-04"
+  },
+  {
+    "point": "10/08 :: europe :: macro :: Indice Sentix Confiance Investisseurs Eurozone",
+    "premiere_apparition": "2026-08-07"
+  },
+  {
+    "point": "10/08 :: usa :: corp :: Publication Activité Mediatek Inc.",
+    "premiere_apparition": "2026-08-07"
   },
   {
     "point": "26-28/07 :: europe :: macro :: Réunion Comité politique monétaire BoE",
@@ -584,6 +612,10 @@
     "premiere_apparition": "2026-08-06"
   },
   {
+    "point": "11/08 :: usa :: macro :: Reventes Logements Existants Juillet",
+    "premiere_apparition": "2026-08-07"
+  },
+  {
     "point": "18/08 :: usa :: macro :: Indices Prix Import/Export US juillet",
     "premiere_apparition": "2026-07-29"
   },
@@ -602,6 +634,14 @@
   {
     "point": "18/08 :: europe :: macro :: UK Productivité Estimation Flash",
     "premiere_apparition": "2026-08-04"
+  },
+  {
+    "point": "18/08 :: europe :: macro :: Indice ZEW Sentiment Économique Allemagne Août",
+    "premiere_apparition": "2026-08-07"
+  },
+  {
+    "point": "18/08 :: europe :: macro :: Indice ZEW Conditions Actuelles Allemagne Août",
+    "premiere_apparition": "2026-08-07"
   },
   {
     "point": "17/08-18/08 :: global :: geo :: Sommet Jeunesse Énergie BRICS",
@@ -634,6 +674,10 @@
   {
     "point": "17/08 :: global :: geo :: COP17 Désertification ONU",
     "premiere_apparition": "2026-08-04"
+  },
+  {
+    "point": "17/08 :: asie :: macro :: PIB Préliminaire T2 Japon",
+    "premiere_apparition": "2026-08-07"
   },
   {
     "point": "21/08 :: usa :: macro :: Données Emploi Jeunesse US",
@@ -688,6 +732,10 @@
     "premiere_apparition": "2026-08-05"
   },
   {
+    "point": "27/08 :: asie :: mkt-n :: Discours Sous-Gouverneur BoJ Himino",
+    "premiere_apparition": "2026-08-07"
+  },
+  {
     "point": "10-12/08 :: usa :: global :: SIEPR Sommet Économique",
     "premiere_apparition": "2026-08-06"
   },
@@ -698,5 +746,21 @@
   {
     "point": "02/09 :: usa :: macro :: Rapport Emploi Privé ADP (Août)",
     "premiere_apparition": "2026-08-06"
+  },
+  {
+    "point": "08/08 :: global :: corp :: Résultats T2 Gedeon Richter",
+    "premiere_apparition": "2026-08-07"
+  },
+  {
+    "point": "08/08 :: global :: corp :: Résultats T2 Berkshire Hathaway",
+    "premiere_apparition": "2026-08-07"
+  },
+  {
+    "point": "08/08 :: asie :: corp :: Résultats T2 Cambricon Tech",
+    "premiere_apparition": "2026-08-07"
+  },
+  {
+    "point": "Fin août :: global :: geo :: Réunion Ministres Finances G20",
+    "premiere_apparition": "2026-08-07"
   }
 ]
