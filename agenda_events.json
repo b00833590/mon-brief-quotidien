@@ -620,11 +620,19 @@
     "premiere_apparition": "2026-08-08"
   },
   {
+    "point": "26/08 :: usa :: macro :: Publication PIB (2e estim. T2 2026)",
+    "premiere_apparition": "2026-08-08"
+  },
+  {
     "point": "28/08 :: europe :: macro :: Publication CPI Provisoire France Août",
     "premiere_apparition": "2026-08-01"
   },
   {
     "point": "28/08 :: europe :: macro :: Indicateur Sentiment Économique Août",
+    "premiere_apparition": "2026-08-08"
+  },
+  {
+    "point": "28/08 :: europe :: mkt-n :: BoE Publication Stats Coopératives Crédit (T1 2026)",
     "premiere_apparition": "2026-08-08"
   },
   {
@@ -650,6 +658,10 @@
   {
     "point": "27/08 :: asie :: mkt-n :: Discours Sous-Gouverneur BoJ Himino",
     "premiere_apparition": "2026-08-07"
+  },
+  {
+    "point": "27/08 :: europe :: mkt-n :: BoE Publication Émission de Capital (Juillet 2026)",
+    "premiere_apparition": "2026-08-08"
   },
   {
     "point": "10-12/08 :: usa :: global :: SIEPR Sommet Économique",
