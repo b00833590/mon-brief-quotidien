@@ -88,6 +88,14 @@
     "premiere_apparition": "2026-08-09"
   },
   {
+    "point": "12/08 :: global :: corp :: Nebius Group N.V. Earnings",
+    "premiere_apparition": "2026-08-09"
+  },
+  {
+    "point": "12/08 :: global :: corp :: Coherent Corp Earnings",
+    "premiere_apparition": "2026-08-09"
+  },
+  {
     "point": "13/08 :: europe :: mkt-n :: Décision Taux Norges Bank",
     "premiere_apparition": "2026-07-14"
   },
@@ -208,12 +216,24 @@
     "premiere_apparition": "2026-08-09"
   },
   {
+    "point": "13/08 :: global :: corp :: Bullish Earnings",
+    "premiere_apparition": "2026-08-09"
+  },
+  {
+    "point": "13/08 :: global :: corp :: Ondas Inc. Earnings",
+    "premiere_apparition": "2026-08-09"
+  },
+  {
     "point": "16/08 :: asie :: macro :: Publication PIB Japon",
     "premiere_apparition": "2026-07-14"
   },
   {
     "point": "16/08 :: asie :: macro :: PIB Japonais",
     "premiere_apparition": "2026-08-04"
+  },
+  {
+    "point": "16/08 :: global :: geo :: Conférence Développement Économique Durable",
+    "premiere_apparition": "2026-08-09"
   },
   {
     "point": "Fin juillet :: europe :: macro :: Inflation flash Eurozone juillet",
@@ -296,6 +316,14 @@
     "premiere_apparition": "2026-08-09"
   },
   {
+    "point": "10/08 :: global :: corp :: AST SpaceMobile Earnings",
+    "premiere_apparition": "2026-08-09"
+  },
+  {
+    "point": "10/08 :: europe :: geo :: Conférence Économie & Management Amsterdam",
+    "premiere_apparition": "2026-08-09"
+  },
+  {
     "point": "26-28/07 :: europe :: macro :: Réunion Comité politique monétaire BoE",
     "premiere_apparition": "2026-07-21"
   },
@@ -368,6 +396,10 @@
     "premiere_apparition": "2026-08-04"
   },
   {
+    "point": "19/08 :: global :: corp :: Figma Inc. Earnings",
+    "premiere_apparition": "2026-08-09"
+  },
+  {
     "point": "14/08 :: europe :: macro :: Mise à jour PIB Zone Euro T2",
     "premiere_apparition": "2026-07-23"
   },
@@ -402,6 +434,14 @@
   {
     "point": "14/08 :: europe :: macro :: PIB et Emploi Flash T2",
     "premiere_apparition": "2026-08-08"
+  },
+  {
+    "point": "14/08 :: usa :: macro :: Données ventes au détail USA",
+    "premiere_apparition": "2026-08-09"
+  },
+  {
+    "point": "14/08 :: europe :: geo :: Conférence Internationale Économie Berlin",
+    "premiere_apparition": "2026-08-09"
   },
   {
     "point": "29/08 :: global :: geo :: Réunion Secrétaires Finances & Gouv. BC G20",
@@ -500,6 +540,14 @@
     "premiere_apparition": "2026-08-04"
   },
   {
+    "point": "20/08 :: usa :: macro :: Indice manufacturier Philly Fed",
+    "premiere_apparition": "2026-08-09"
+  },
+  {
+    "point": "20/08 :: usa :: macro :: Indice avancé USA",
+    "premiere_apparition": "2026-08-09"
+  },
+  {
     "point": "11/08 :: europe :: corp :: Résultats On T2",
     "premiere_apparition": "2026-07-29"
   },
@@ -556,6 +604,10 @@
     "premiere_apparition": "2026-08-08"
   },
   {
+    "point": "11/08 :: usa :: corp :: Super Micro Computer Earnings",
+    "premiere_apparition": "2026-08-09"
+  },
+  {
     "point": "18/08 :: usa :: macro :: Indices Prix Import/Export US juillet",
     "premiere_apparition": "2026-07-29"
   },
@@ -582,6 +634,10 @@
   {
     "point": "18/08 :: europe :: macro :: Indice ZEW Conditions Actuelles Allemagne Août",
     "premiere_apparition": "2026-08-07"
+  },
+  {
+    "point": "18/08 :: asie :: corp :: Baidu Earnings",
+    "premiere_apparition": "2026-08-09"
   },
   {
     "point": "17/08-18/08 :: global :: geo :: Sommet Jeunesse Énergie BRICS",
@@ -660,6 +716,22 @@
     "premiere_apparition": "2026-08-09"
   },
   {
+    "point": "26/08 :: usa :: corp :: HP Inc. Q3 Earnings",
+    "premiere_apparition": "2026-08-09"
+  },
+  {
+    "point": "26/08 :: usa :: macro :: Commandes biens durables USA",
+    "premiere_apparition": "2026-08-09"
+  },
+  {
+    "point": "26/08 :: usa :: macro :: Dépenses consommation personnelle USA",
+    "premiere_apparition": "2026-08-09"
+  },
+  {
+    "point": "26/08 :: global :: corp :: NVIDIA Corporation Earnings",
+    "premiere_apparition": "2026-08-09"
+  },
+  {
     "point": "28/08 :: europe :: macro :: Publication CPI Provisoire France Août",
     "premiere_apparition": "2026-08-01"
   },
@@ -684,6 +756,14 @@
     "premiere_apparition": "2026-08-04"
   },
   {
+    "point": "24/08 :: asie :: corp :: XPeng Inc. Earnings",
+    "premiere_apparition": "2026-08-09"
+  },
+  {
+    "point": "24/08 :: global :: corp :: Semtech Corporation Earnings",
+    "premiere_apparition": "2026-08-09"
+  },
+  {
     "point": "25/08 :: global :: corp :: Résultats d'entreprises : Semtech Corporation",
     "premiere_apparition": "2026-08-04"
   },
@@ -698,6 +778,14 @@
   {
     "point": "27/08 :: europe :: mkt-n :: BoE Publication Émission de Capital (Juillet 2026)",
     "premiere_apparition": "2026-08-08"
+  },
+  {
+    "point": "27/08 :: global :: corp :: Webull Corp Earnings",
+    "premiere_apparition": "2026-08-09"
+  },
+  {
+    "point": "27/08 :: global :: corp :: IREN Limited Earnings",
+    "premiere_apparition": "2026-08-09"
   },
   {
     "point": "10-12/08 :: usa :: global :: SIEPR Sommet Économique",
