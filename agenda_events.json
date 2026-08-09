@@ -84,6 +84,10 @@
     "premiere_apparition": "2026-08-07"
   },
   {
+    "point": "12/08 :: japon :: macro :: BoJ Masse monétaire juillet",
+    "premiere_apparition": "2026-08-09"
+  },
+  {
     "point": "13/08 :: europe :: mkt-n :: Décision Taux Norges Bank",
     "premiere_apparition": "2026-07-14"
   },
@@ -200,6 +204,10 @@
     "premiere_apparition": "2026-08-08"
   },
   {
+    "point": "13/08 :: japon :: macro :: BoJ Indice prix biens d'entreprise juillet",
+    "premiere_apparition": "2026-08-09"
+  },
+  {
     "point": "16/08 :: asie :: macro :: Publication PIB Japon",
     "premiere_apparition": "2026-07-14"
   },
@@ -218,6 +226,10 @@
   {
     "point": "31/08 :: europe :: macro :: Réunion BoE Décision Taux",
     "premiere_apparition": "2026-07-31"
+  },
+  {
+    "point": "31/08 :: global :: geo :: Sommet Leaders Finances G20 (début)",
+    "premiere_apparition": "2026-08-09"
   },
   {
     "point": "10/08 :: asie :: mkt-n :: Résumé opinions réunion BoJ",
@@ -278,6 +290,10 @@
   {
     "point": "10/08 :: usa :: corp :: Lumentum Résultats T2",
     "premiere_apparition": "2026-08-08"
+  },
+  {
+    "point": "10/08 :: japon :: macro :: BoJ Compte-rendu réunion juillet",
+    "premiere_apparition": "2026-08-09"
   },
   {
     "point": "26-28/07 :: europe :: macro :: Réunion Comité politique monétaire BoE",
@@ -408,12 +424,24 @@
     "premiere_apparition": "2026-08-06"
   },
   {
+    "point": "01/09 :: global :: geo :: Sommet Leaders Finances G20 (fin)",
+    "premiere_apparition": "2026-08-09"
+  },
+  {
+    "point": "01/09 :: europe :: macro :: Publication HICP Flash Zone Euro août",
+    "premiere_apparition": "2026-08-09"
+  },
+  {
     "point": "04/09 :: usa :: macro :: Rapport NFP US (août)",
     "premiere_apparition": "2026-07-23"
   },
   {
     "point": "04/09 :: usa :: macro :: Emploi Non-Agricole Août",
     "premiere_apparition": "2026-08-08"
+  },
+  {
+    "point": "04/09 :: usa :: macro :: Rapport Situation Emploi US août",
+    "premiere_apparition": "2026-08-09"
   },
   {
     "point": "07/09 :: europe :: macro :: Estimations régulières PIB & Emploi Zone Euro",
@@ -426,6 +454,10 @@
   {
     "point": "10/09 :: europe :: mkt-n :: BCE Conseil des Gouverneurs",
     "premiere_apparition": "2026-08-08"
+  },
+  {
+    "point": "10/09 :: japon :: mkt-n :: Discours membre Conseil BoJ Masu",
+    "premiere_apparition": "2026-08-09"
   },
   {
     "point": "11/09 :: usa :: macro :: Publication IPC US (août)",
@@ -624,6 +656,10 @@
     "premiere_apparition": "2026-08-08"
   },
   {
+    "point": "26/08 :: usa :: macro :: Publication PIB US 2ème estim. T2",
+    "premiere_apparition": "2026-08-09"
+  },
+  {
     "point": "28/08 :: europe :: macro :: Publication CPI Provisoire France Août",
     "premiere_apparition": "2026-08-01"
   },
@@ -676,23 +712,15 @@
     "premiere_apparition": "2026-08-06"
   },
   {
-    "point": "08/08 :: global :: corp :: Résultats T2 Gedeon Richter",
-    "premiere_apparition": "2026-08-07"
-  },
-  {
-    "point": "08/08 :: global :: corp :: Résultats T2 Berkshire Hathaway",
-    "premiere_apparition": "2026-08-07"
-  },
-  {
-    "point": "08/08 :: asie :: corp :: Résultats T2 Cambricon Tech",
-    "premiere_apparition": "2026-08-07"
-  },
-  {
     "point": "Fin août :: global :: geo :: Réunion Ministres Finances G20",
     "premiere_apparition": "2026-08-07"
   },
   {
     "point": "09/09 :: global :: mkt-n :: Banque du Canada Décision Taux",
     "premiere_apparition": "2026-08-08"
+  },
+  {
+    "point": "09/09 :: europe :: mkt-n :: Réunion Politique Monétaire BCE J1",
+    "premiere_apparition": "2026-08-09"
   }
 ]
