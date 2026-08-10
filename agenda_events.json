@@ -112,6 +112,18 @@
     "premiere_apparition": "2026-08-10"
   },
   {
+    "point": "12/08 :: europe :: corp :: Résultats ABN AMRO Bank N.V.",
+    "premiere_apparition": "2026-08-10"
+  },
+  {
+    "point": "12/08 :: europe :: corp :: Résultats EON SE",
+    "premiere_apparition": "2026-08-10"
+  },
+  {
+    "point": "12/08 :: europe :: corp :: Résultats Hannover Re",
+    "premiere_apparition": "2026-08-10"
+  },
+  {
     "point": "13/08 :: europe :: mkt-n :: Décision Taux Norges Bank",
     "premiere_apparition": "2026-07-14"
   },
@@ -241,6 +253,50 @@
   },
   {
     "point": "13/08 :: asia :: corp :: JD.com Earnings",
+    "premiere_apparition": "2026-08-10"
+  },
+  {
+    "point": "13/08 :: europe :: corp :: Détachement acompte dividendes APERAM",
+    "premiere_apparition": "2026-08-10"
+  },
+  {
+    "point": "13/08 :: europe :: corp :: Résultats Adyen N.V.",
+    "premiere_apparition": "2026-08-10"
+  },
+  {
+    "point": "13/08 :: europe :: corp :: Résultats Antofagasta plc",
+    "premiere_apparition": "2026-08-10"
+  },
+  {
+    "point": "13/08 :: europe :: corp :: Résultats AP Moller Maersk",
+    "premiere_apparition": "2026-08-10"
+  },
+  {
+    "point": "13/08 :: usa :: corp :: Résultats Brookfield Corporation",
+    "premiere_apparition": "2026-08-10"
+  },
+  {
+    "point": "13/08 :: europe :: corp :: Résultats EDAP TMS S.A.",
+    "premiere_apparition": "2026-08-10"
+  },
+  {
+    "point": "13/08 :: europe :: corp :: Chiffre d'affaires INNELEC MULTIMEDIA (T1)",
+    "premiere_apparition": "2026-08-10"
+  },
+  {
+    "point": "13/08 :: europe :: corp :: Résultats PKO Bank Polski S.A.",
+    "premiere_apparition": "2026-08-10"
+  },
+  {
+    "point": "13/08 :: europe :: macro :: Production industrielle Zone Euro (Juin)",
+    "premiere_apparition": "2026-08-10"
+  },
+  {
+    "point": "13/08 :: europe :: corp :: Résultats RWE AG",
+    "premiere_apparition": "2026-08-10"
+  },
+  {
+    "point": "13/08 :: europe :: corp :: Résultats VALNEVA SE (S1)",
     "premiere_apparition": "2026-08-10"
   },
   {
@@ -428,6 +484,10 @@
     "premiere_apparition": "2026-08-10"
   },
   {
+    "point": "19/08 :: europe :: macro :: Inflation IPC Harmonisé Zone Euro (Juillet)",
+    "premiere_apparition": "2026-08-10"
+  },
+  {
     "point": "14/08 :: europe :: macro :: Mise à jour PIB Zone Euro T2",
     "premiere_apparition": "2026-07-23"
   },
@@ -470,6 +530,10 @@
   {
     "point": "14/08 :: europe :: geo :: Conférence Internationale Économie Berlin",
     "premiere_apparition": "2026-08-09"
+  },
+  {
+    "point": "14/08 :: europe :: corp :: Résultats Talanx AG",
+    "premiere_apparition": "2026-08-10"
   },
   {
     "point": "29/08 :: global :: geo :: Réunion Secrétaires Finances & Gouv. BC G20",
@@ -540,6 +604,10 @@
     "premiere_apparition": "2026-08-09"
   },
   {
+    "point": "10/09 :: europe :: mkt-n :: Réunion BCE & Décision Taux",
+    "premiere_apparition": "2026-08-10"
+  },
+  {
     "point": "11/09 :: usa :: macro :: Publication IPC US (août)",
     "premiere_apparition": "2026-07-23"
   },
@@ -558,6 +626,10 @@
   {
     "point": "17/09 :: europe :: macro :: Résumé & Procès-verbaux BoE MPC",
     "premiere_apparition": "2026-07-23"
+  },
+  {
+    "point": "17/09 :: asie :: mkt-n :: Réunion BoJ & Décision Taux",
+    "premiere_apparition": "2026-08-10"
   },
   {
     "point": "20/08 :: europe :: mkt-n :: Décision taux Riksbank Suède",
@@ -656,6 +728,14 @@
     "premiere_apparition": "2026-08-10"
   },
   {
+    "point": "11/08 :: europe :: corp :: Résultats Alcon Inc.",
+    "premiere_apparition": "2026-08-10"
+  },
+  {
+    "point": "11/08 :: europe :: corp :: Résultats Vallourec",
+    "premiere_apparition": "2026-08-10"
+  },
+  {
     "point": "18/08 :: usa :: macro :: Indices Prix Import/Export US juillet",
     "premiere_apparition": "2026-07-29"
   },
@@ -730,6 +810,10 @@
   {
     "point": "21/08 :: asie :: macro :: BoJ Real Exports and Imports Developments",
     "premiere_apparition": "2026-08-03"
+  },
+  {
+    "point": "21/08 :: europe :: macro :: PMI Flash S&P Global Zone Euro (Août)",
+    "premiere_apparition": "2026-08-10"
   },
   {
     "point": "26/08 :: usa :: macro :: Seconde Estimation PIB US T2",
@@ -816,6 +900,10 @@
     "premiere_apparition": "2026-08-04"
   },
   {
+    "point": "25/08 :: europe :: macro :: Indice IFO Allemagne (Août)",
+    "premiere_apparition": "2026-08-10"
+  },
+  {
     "point": "27/08 :: usa :: macro :: Jackson Hole Symposium Début",
     "premiere_apparition": "2026-08-05"
   },
@@ -877,6 +965,18 @@
   },
   {
     "point": "03/09 :: usa :: corp :: lululemon athletica Earnings",
+    "premiere_apparition": "2026-08-10"
+  },
+  {
+    "point": "22/08 :: france :: macro :: Critère environnemental obligatoire Marchés Publics",
+    "premiere_apparition": "2026-08-10"
+  },
+  {
+    "point": "12/09 :: global :: geo :: Début Sommet BRICS New Delhi",
+    "premiere_apparition": "2026-08-10"
+  },
+  {
+    "point": "13/09 :: global :: geo :: Clôture Sommet BRICS New Delhi",
     "premiere_apparition": "2026-08-10"
   }
 ]
