@@ -312,10 +312,6 @@
     "premiere_apparition": "2026-08-09"
   },
   {
-    "point": "Fin juillet :: europe :: macro :: Inflation flash Eurozone juillet",
-    "premiere_apparition": "2026-07-20"
-  },
-  {
     "point": "31/08 :: global :: mkt-n :: Réunion Ministres Finances G20",
     "premiere_apparition": "2026-07-19"
   },
@@ -332,76 +328,8 @@
     "premiere_apparition": "2026-08-10"
   },
   {
-    "point": "10/08 :: asie :: mkt-n :: Résumé opinions réunion BoJ",
-    "premiere_apparition": "2026-07-20"
-  },
-  {
-    "point": "10/08 :: asie :: mkt-n :: BoJ Publication Vues Principales",
-    "premiere_apparition": "2026-07-21"
-  },
-  {
-    "point": "10/08 :: asie :: mkt-n :: BoJ Synthèse Opinions (réunion juillet)",
-    "premiere_apparition": "2026-07-25"
-  },
-  {
-    "point": "10/08 :: usa :: corp :: Airbnb Résultats",
-    "premiere_apparition": "2026-07-30"
-  },
-  {
-    "point": "10/08 :: usa :: corp :: Résultats trimestriels BigBear.ai",
-    "premiere_apparition": "2026-07-31"
-  },
-  {
-    "point": "10/08 :: usa :: corp :: Résultats trimestriels Plug Power, Inc.",
-    "premiere_apparition": "2026-07-31"
-  },
-  {
-    "point": "10/08 :: usa :: corp :: Résultats trimestriels USA Rare Earth",
-    "premiere_apparition": "2026-07-31"
-  },
-  {
-    "point": "10/08 :: asie :: macro :: Sommaire Opinions réunion politique monétaire BoJ",
-    "premiere_apparition": "2026-07-31"
-  },
-  {
-    "point": "10/08 :: asie :: macro :: Chiffres principaux institutions financières BoJ",
-    "premiere_apparition": "2026-07-31"
-  },
-  {
-    "point": "10/08 :: usa :: corp :: Résultats : Airbnb, BigBear.ai, Plug Power",
-    "premiere_apparition": "2026-08-02"
-  },
-  {
-    "point": "10/08 :: europe :: macro :: Indice Sentix Zone Euro",
-    "premiere_apparition": "2026-08-04"
-  },
-  {
-    "point": "10/08 :: europe :: macro :: Indice Sentix Confiance Investisseurs Eurozone",
-    "premiere_apparition": "2026-08-07"
-  },
-  {
-    "point": "10/08 :: usa :: corp :: Publication Activité Mediatek Inc.",
-    "premiere_apparition": "2026-08-07"
-  },
-  {
-    "point": "10/08 :: europe :: corp :: HYDRO-REF-SOLUT AG Annuelle",
-    "premiere_apparition": "2026-08-08"
-  },
-  {
-    "point": "10/08 :: usa :: corp :: Lumentum Résultats T2",
-    "premiere_apparition": "2026-08-08"
-  },
-  {
-    "point": "10/08 :: japon :: macro :: BoJ Compte-rendu réunion juillet",
-    "premiere_apparition": "2026-08-09"
-  },
-  {
-    "point": "10/08 :: global :: corp :: AST SpaceMobile Earnings",
-    "premiere_apparition": "2026-08-09"
-  },
-  {
-    "point": "10/08 :: europe :: geo :: Conférence Économie & Management Amsterdam",
-    "premiere_apparition": "2026-08-09"
+    "point": "31/08 :: global :: geo :: G20 Reunion Min. Finances Banques Centrales",
+    "premiere_apparition": "2026-08-11"
   },
   {
     "point": "26-28/07 :: europe :: macro :: Réunion Comité politique monétaire BoE",
@@ -766,6 +694,10 @@
   {
     "point": "18/08 :: asie :: corp :: Baidu Earnings",
     "premiere_apparition": "2026-08-09"
+  },
+  {
+    "point": "18/08 :: usa :: corp :: Earnings Baidu, Keysight Tech",
+    "premiere_apparition": "2026-08-11"
   },
   {
     "point": "17/08-18/08 :: global :: geo :: Sommet Jeunesse Énergie BRICS",
