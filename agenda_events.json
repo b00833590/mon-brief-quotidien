@@ -124,6 +124,38 @@
     "premiere_apparition": "2026-08-10"
   },
   {
+    "point": "12/08 :: usa :: macro :: Ventes constructions anciennes US (juillet)",
+    "premiere_apparition": "2026-08-12"
+  },
+  {
+    "point": "12/08 :: asie :: corp :: Résultats T2 Tencent Holdings",
+    "premiere_apparition": "2026-08-12"
+  },
+  {
+    "point": "12/08 :: asie :: corp :: Résultats annuels Commonwealth Bank Australia",
+    "premiere_apparition": "2026-08-12"
+  },
+  {
+    "point": "12/08 :: europe :: corp :: Résultats T2 DPC Holdings PLC",
+    "premiere_apparition": "2026-08-12"
+  },
+  {
+    "point": "12/08 :: europe :: corp :: Résultats T2 Lion Finance Group PLC",
+    "premiere_apparition": "2026-08-12"
+  },
+  {
+    "point": "12/08 :: europe :: corp :: Résultats T2 ISS A/S",
+    "premiere_apparition": "2026-08-12"
+  },
+  {
+    "point": "12/08 :: europe :: corp :: Résultats T2 Wallenius Wilhelmsen ASA",
+    "premiere_apparition": "2026-08-12"
+  },
+  {
+    "point": "12/08 :: europe :: corp :: Résultats T2 RTL Group S.A.",
+    "premiere_apparition": "2026-08-12"
+  },
+  {
     "point": "13/08 :: europe :: mkt-n :: Décision Taux Norges Bank",
     "premiere_apparition": "2026-07-14"
   },
@@ -300,6 +332,30 @@
     "premiere_apparition": "2026-08-10"
   },
   {
+    "point": "13/08 :: europe :: corp :: AG Annuelle Avenir Telecom",
+    "premiere_apparition": "2026-08-12"
+  },
+  {
+    "point": "13/08 :: europe :: corp :: CA T1 Innelec Multimedia",
+    "premiere_apparition": "2026-08-12"
+  },
+  {
+    "point": "13/08 :: asie :: corp :: Résultats T2 China Mobile",
+    "premiere_apparition": "2026-08-12"
+  },
+  {
+    "point": "13/08 :: asie :: corp :: Résultats T2 SMIC",
+    "premiere_apparition": "2026-08-12"
+  },
+  {
+    "point": "13/08 :: asie :: corp :: Activité T3 ANZ Group Holdings",
+    "premiere_apparition": "2026-08-12"
+  },
+  {
+    "point": "13/08 :: asie :: corp :: Résultats T1 Lenovo Group",
+    "premiere_apparition": "2026-08-12"
+  },
+  {
     "point": "16/08 :: asie :: macro :: Publication PIB Japon",
     "premiere_apparition": "2026-07-14"
   },
@@ -330,14 +386,6 @@
   {
     "point": "31/08 :: global :: geo :: G20 Reunion Min. Finances Banques Centrales",
     "premiere_apparition": "2026-08-11"
-  },
-  {
-    "point": "26-28/07 :: europe :: macro :: Réunion Comité politique monétaire BoE",
-    "premiere_apparition": "2026-07-21"
-  },
-  {
-    "point": "Début août :: usa :: corp :: Résultats Block, Inc. (SQ)",
-    "premiere_apparition": "2026-07-21"
   },
   {
     "point": "29-30/07 :: asie :: mkt-n :: BoJ Décision Taux",
@@ -548,6 +596,10 @@
     "premiere_apparition": "2026-07-23"
   },
   {
+    "point": "16/09 :: usa :: macro :: Décision de taux FOMC Fed",
+    "premiere_apparition": "2026-08-12"
+  },
+  {
     "point": "17/09 :: asie :: macro :: Décision de politique monétaire BoJ",
     "premiere_apparition": "2026-07-23"
   },
@@ -558,6 +610,10 @@
   {
     "point": "17/09 :: asie :: mkt-n :: Réunion BoJ & Décision Taux",
     "premiere_apparition": "2026-08-10"
+  },
+  {
+    "point": "17/09 :: uk :: macro :: Décision de taux BoE",
+    "premiere_apparition": "2026-08-12"
   },
   {
     "point": "20/08 :: europe :: mkt-n :: Décision taux Riksbank Suède",
@@ -586,82 +642,6 @@
   {
     "point": "20/08 :: usa :: macro :: Indice avancé USA",
     "premiere_apparition": "2026-08-09"
-  },
-  {
-    "point": "11/08 :: europe :: corp :: Résultats On T2",
-    "premiere_apparition": "2026-07-29"
-  },
-  {
-    "point": "11/08 :: global :: geo :: Global Business Summit Quebec",
-    "premiere_apparition": "2026-07-30"
-  },
-  {
-    "point": "11/08 :: usa :: geo :: Global Research Conference Harvard",
-    "premiere_apparition": "2026-07-30"
-  },
-  {
-    "point": "11/08 :: usa :: corp :: Résultats trimestriels AST SpaceMobile",
-    "premiere_apparition": "2026-07-31"
-  },
-  {
-    "point": "11/08 :: usa :: corp :: Résultats trimestriels Ondas Inc.",
-    "premiere_apparition": "2026-07-31"
-  },
-  {
-    "point": "11/08 :: usa :: corp :: Résultats trimestriels CoreWeave",
-    "premiere_apparition": "2026-07-31"
-  },
-  {
-    "point": "11/08 :: usa :: macro :: Rapport ADP Emploi US (préliminaire)",
-    "premiere_apparition": "2026-08-01"
-  },
-  {
-    "point": "11/08 :: global :: ai :: AI Controls Financial Reporting Intro",
-    "premiere_apparition": "2026-08-03"
-  },
-  {
-    "point": "11/08 :: global :: ai :: Protiviti Tech Session AI in Finance",
-    "premiere_apparition": "2026-08-03"
-  },
-  {
-    "point": "11/08 :: asie :: macro :: RBA: Décision taux d'intérêt",
-    "premiere_apparition": "2026-08-06"
-  },
-  {
-    "point": "11/08 :: europe :: corp :: Chiffre d'affaires sociétés européennes",
-    "premiere_apparition": "2026-08-06"
-  },
-  {
-    "point": "11/08 :: usa :: macro :: Reventes Logements Existants Juillet",
-    "premiere_apparition": "2026-08-07"
-  },
-  {
-    "point": "11/08 :: europe :: corp :: VIEL & CIE Chiffre d'affaires T2",
-    "premiere_apparition": "2026-08-08"
-  },
-  {
-    "point": "11/08 :: europe :: corp :: HEXAOM Chiffre d'affaires S1",
-    "premiere_apparition": "2026-08-08"
-  },
-  {
-    "point": "11/08 :: usa :: corp :: Super Micro Computer Earnings",
-    "premiere_apparition": "2026-08-09"
-  },
-  {
-    "point": "11/08 :: global :: corp :: Sea Limited Earnings",
-    "premiere_apparition": "2026-08-10"
-  },
-  {
-    "point": "11/08 :: usa :: corp :: SMCI Earnings",
-    "premiere_apparition": "2026-08-10"
-  },
-  {
-    "point": "11/08 :: europe :: corp :: Résultats Alcon Inc.",
-    "premiere_apparition": "2026-08-10"
-  },
-  {
-    "point": "11/08 :: europe :: corp :: Résultats Vallourec",
-    "premiere_apparition": "2026-08-10"
   },
   {
     "point": "18/08 :: usa :: macro :: Indices Prix Import/Export US juillet",
@@ -700,6 +680,10 @@
     "premiere_apparition": "2026-08-11"
   },
   {
+    "point": "18/08 :: usa :: macro :: Prix importation/exportation US (juillet)",
+    "premiere_apparition": "2026-08-12"
+  },
+  {
     "point": "17/08-18/08 :: global :: geo :: Sommet Jeunesse Énergie BRICS",
     "premiere_apparition": "2026-07-30"
   },
@@ -734,6 +718,26 @@
   {
     "point": "17/08 :: asie :: macro :: PIB Préliminaire T2 Japon",
     "premiere_apparition": "2026-08-07"
+  },
+  {
+    "point": "17/08 :: usa :: macro :: Indice manufacturier Empire State Fed NY (août)",
+    "premiere_apparition": "2026-08-12"
+  },
+  {
+    "point": "17/08 :: usa :: macro :: Indice NAHB marché immobilier US (août)",
+    "premiere_apparition": "2026-08-12"
+  },
+  {
+    "point": "17/08 :: asie :: macro :: Production industrielle Chine (juillet)",
+    "premiere_apparition": "2026-08-12"
+  },
+  {
+    "point": "17/08 :: asie :: macro :: Ventes de détail Chine (juillet)",
+    "premiere_apparition": "2026-08-12"
+  },
+  {
+    "point": "17/08 :: europe :: corp :: AG Annuelle Mastrad",
+    "premiere_apparition": "2026-08-12"
   },
   {
     "point": "21/08 :: usa :: macro :: Données Emploi Jeunesse US",
@@ -910,5 +914,9 @@
   {
     "point": "13/09 :: global :: geo :: Clôture Sommet BRICS New Delhi",
     "premiere_apparition": "2026-08-10"
+  },
+  {
+    "point": "15/08 :: europe :: corp :: CA S1 Prologue",
+    "premiere_apparition": "2026-08-12"
   }
 ]
