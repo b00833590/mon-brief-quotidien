@@ -156,6 +156,10 @@
     "premiere_apparition": "2026-08-12"
   },
   {
+    "point": "12/08 :: europe :: corp :: Résultats EON SE, ABN AMRO",
+    "premiere_apparition": "2026-08-12"
+  },
+  {
     "point": "13/08 :: europe :: mkt-n :: Décision Taux Norges Bank",
     "premiere_apparition": "2026-07-14"
   },
@@ -353,6 +357,10 @@
   },
   {
     "point": "13/08 :: asie :: corp :: Résultats T1 Lenovo Group",
+    "premiere_apparition": "2026-08-12"
+  },
+  {
+    "point": "13/08 :: europe :: corp :: Résultats Valneva, RWE, Adyen",
     "premiere_apparition": "2026-08-12"
   },
   {
@@ -917,6 +925,14 @@
   },
   {
     "point": "15/08 :: europe :: corp :: CA S1 Prologue",
+    "premiere_apparition": "2026-08-12"
+  },
+  {
+    "point": "27/08-29/08 :: usa :: macro :: Jackson Hole Symposium Annuel",
+    "premiere_apparition": "2026-08-12"
+  },
+  {
+    "point": "15/09-16/09 :: usa :: macro :: Réunion FOMC Fed",
     "premiere_apparition": "2026-08-12"
   }
 ]
