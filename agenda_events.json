@@ -204,6 +204,14 @@
     "premiere_apparition": "2026-08-12"
   },
   {
+    "point": "13/08 :: europe :: macro :: Pic 5ème canicule européenne",
+    "premiere_apparition": "2026-08-13"
+  },
+  {
+    "point": "13/08 :: europe :: macro :: Estimation flash PIB et Emploi Zone Euro",
+    "premiere_apparition": "2026-08-13"
+  },
+  {
     "point": "16/08 :: asie :: macro :: Publication PIB Japon",
     "premiere_apparition": "2026-07-14"
   },
@@ -360,6 +368,10 @@
     "premiere_apparition": "2026-08-13"
   },
   {
+    "point": "14/08 :: usa :: macro :: Confiance Consommateurs US (Michigan)",
+    "premiere_apparition": "2026-08-13"
+  },
+  {
     "point": "29/08 :: global :: geo :: Réunion Secrétaires Finances & Gouv. BC G20",
     "premiere_apparition": "2026-07-23"
   },
@@ -444,6 +456,10 @@
     "premiere_apparition": "2026-07-23"
   },
   {
+    "point": "11/09 :: usa :: macro :: Indice Prix Consommation (CPI) US",
+    "premiere_apparition": "2026-08-13"
+  },
+  {
     "point": "15/09 :: usa :: macro :: Réunion FOMC",
     "premiere_apparition": "2026-07-23"
   },
@@ -508,6 +524,14 @@
     "premiere_apparition": "2026-08-13"
   },
   {
+    "point": "20/08 :: usa :: macro :: Indice manufacturier Fed Philadelphie US",
+    "premiere_apparition": "2026-08-13"
+  },
+  {
+    "point": "20/08 :: asie :: macro :: Indice Prix Consommation (CPI) Japon",
+    "premiere_apparition": "2026-08-13"
+  },
+  {
     "point": "18/08 :: usa :: macro :: Indices Prix Import/Export US juillet",
     "premiere_apparition": "2026-07-29"
   },
@@ -557,6 +581,10 @@
   },
   {
     "point": "18/08 :: uk :: macro :: Taux de chômage (Juillet)",
+    "premiere_apparition": "2026-08-13"
+  },
+  {
+    "point": "18/08 :: usa :: macro :: Indices Prix Commerce, Logements US",
     "premiere_apparition": "2026-08-13"
   },
   {
@@ -620,6 +648,10 @@
     "premiere_apparition": "2026-08-13"
   },
   {
+    "point": "17/08 :: global :: macro :: Indice Prix Consommation (CPI) Canada",
+    "premiere_apparition": "2026-08-13"
+  },
+  {
     "point": "21/08 :: usa :: macro :: Données Emploi Jeunesse US",
     "premiere_apparition": "2026-08-01"
   },
@@ -630,6 +662,10 @@
   {
     "point": "21/08 :: europe :: macro :: PMI Flash S&P Global Zone Euro (Août)",
     "premiere_apparition": "2026-08-10"
+  },
+  {
+    "point": "21/08 :: global :: macro :: Ventes au détail Canada",
+    "premiere_apparition": "2026-08-13"
   },
   {
     "point": "26/08 :: usa :: macro :: Seconde Estimation PIB US T2",
@@ -825,6 +861,30 @@
   },
   {
     "point": "17/09 - 18/09 :: japon :: macro :: Réunion de politique monétaire BOJ",
+    "premiere_apparition": "2026-08-13"
+  },
+  {
+    "point": "29-30/08 :: usa :: geo :: Réunion Adjoints Finance & Banques Centrales G20",
+    "premiere_apparition": "2026-08-13"
+  },
+  {
+    "point": "31/08-01/09 :: usa :: geo :: Réunion Ministres Finances & Gouverneurs BC G20",
+    "premiere_apparition": "2026-08-13"
+  },
+  {
+    "point": "08/09 :: global :: macro :: Publication Prix Consommation OCDE",
+    "premiere_apparition": "2026-08-13"
+  },
+  {
+    "point": "15-16/09 :: usa :: mkt-n :: Réunion FOMC (Fed)",
+    "premiere_apparition": "2026-08-13"
+  },
+  {
+    "point": "17-18/09 :: asie :: mkt-n :: Réunion Politique Monétaire BOJ",
+    "premiere_apparition": "2026-08-13"
+  },
+  {
+    "point": "Septembre :: usa :: tech :: IPO Anthropic (AI)",
     "premiere_apparition": "2026-08-13"
   }
 ]
