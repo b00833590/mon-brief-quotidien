@@ -1,217 +1,5 @@
 [
   {
-    "point": "13/08 :: europe :: mkt-n :: Décision Taux Norges Bank",
-    "premiere_apparition": "2026-07-14"
-  },
-  {
-    "point": "13/08 :: usa :: macro :: Publication IPP US Juillet",
-    "premiere_apparition": "2026-07-20"
-  },
-  {
-    "point": "13/08 :: usa :: macro :: Indice des prix à la production (PPI)",
-    "premiere_apparition": "2026-07-22"
-  },
-  {
-    "point": "13/08 :: afrique :: geo :: Élections générales Zambie",
-    "premiere_apparition": "2026-07-22"
-  },
-  {
-    "point": "13/08 :: europe :: macro :: PIB, Production Industrielle UK",
-    "premiere_apparition": "2026-07-28"
-  },
-  {
-    "point": "13/08 :: usa :: macro :: Inflation PPI US juillet",
-    "premiere_apparition": "2026-07-29"
-  },
-  {
-    "point": "13/08 :: usa :: corp :: Résultats trimestriels Coherent Corp.",
-    "premiere_apparition": "2026-07-31"
-  },
-  {
-    "point": "13/08 :: usa :: corp :: Résultats trimestriels Nu Holdings",
-    "premiere_apparition": "2026-07-31"
-  },
-  {
-    "point": "13/08 :: usa :: corp :: Résultats trimestriels Applied Materials",
-    "premiere_apparition": "2026-07-31"
-  },
-  {
-    "point": "13/08 :: usa :: corp :: Résultats trimestriels Gemini Space Station",
-    "premiere_apparition": "2026-07-31"
-  },
-  {
-    "point": "13/08 :: asie :: macro :: Indice Prix Biens Corporate Japon",
-    "premiere_apparition": "2026-07-31"
-  },
-  {
-    "point": "13/08 :: asie :: macro :: Comptes Banque du Japon",
-    "premiere_apparition": "2026-07-31"
-  },
-  {
-    "point": "13/08 :: asie :: macro :: Chiffres de base sur les échecs BoJ",
-    "premiere_apparition": "2026-07-31"
-  },
-  {
-    "point": "13/08 :: asie :: macro :: Obligations d'État détenues par BoJ",
-    "premiere_apparition": "2026-07-31"
-  },
-  {
-    "point": "13/08 :: asie :: macro :: Bons du Trésor achetés par BoJ",
-    "premiere_apparition": "2026-07-31"
-  },
-  {
-    "point": "13/08 :: uk :: macro :: PIB Q2 préliminaire",
-    "premiere_apparition": "2026-08-01"
-  },
-  {
-    "point": "13/08 :: usa :: macro :: PPI (Juillet)",
-    "premiere_apparition": "2026-08-01"
-  },
-  {
-    "point": "13/08 :: europe :: macro :: Flash Est. PIB Eurozone T2",
-    "premiere_apparition": "2026-08-02"
-  },
-  {
-    "point": "13/08 :: usa :: corp :: Résultats : Coherent Corp, Nu Holdings, Applied Materials",
-    "premiere_apparition": "2026-08-02"
-  },
-  {
-    "point": "13/08 :: usa :: macro :: Inscriptions hebdomadaires chômage",
-    "premiere_apparition": "2026-08-03"
-  },
-  {
-    "point": "13/08 :: asie :: macro :: BoJ Corporate Goods Price Index (Jul)",
-    "premiere_apparition": "2026-08-03"
-  },
-  {
-    "point": "13/08 :: europe :: mkt-n :: Réunion Banque de Norvège",
-    "premiere_apparition": "2026-08-04"
-  },
-  {
-    "point": "13/08 :: europe :: macro :: Eurostat PIB Flash Estimation UE/Eurozone",
-    "premiere_apparition": "2026-08-04"
-  },
-  {
-    "point": "13/08 :: europe :: macro :: UK PIB Première Estimation T2",
-    "premiere_apparition": "2026-08-04"
-  },
-  {
-    "point": "13/08 :: europe :: macro :: UK Indice des Services Juin",
-    "premiere_apparition": "2026-08-04"
-  },
-  {
-    "point": "13/08 :: europe :: macro :: Emploi Flash T2 Eurozone",
-    "premiere_apparition": "2026-08-07"
-  },
-  {
-    "point": "13/08 :: europe :: macro :: Balance Commerciale Eurozone Juin",
-    "premiere_apparition": "2026-08-07"
-  },
-  {
-    "point": "13/08 :: europe :: macro :: Production Industrielle Juin",
-    "premiere_apparition": "2026-08-08"
-  },
-  {
-    "point": "13/08 :: europe :: macro :: Commerce International Biens Juin",
-    "premiere_apparition": "2026-08-08"
-  },
-  {
-    "point": "13/08 :: japon :: macro :: BoJ Indice prix biens d'entreprise juillet",
-    "premiere_apparition": "2026-08-09"
-  },
-  {
-    "point": "13/08 :: global :: corp :: Bullish Earnings",
-    "premiere_apparition": "2026-08-09"
-  },
-  {
-    "point": "13/08 :: global :: corp :: Ondas Inc. Earnings",
-    "premiere_apparition": "2026-08-09"
-  },
-  {
-    "point": "13/08 :: asia :: corp :: JD.com Earnings",
-    "premiere_apparition": "2026-08-10"
-  },
-  {
-    "point": "13/08 :: europe :: corp :: Détachement acompte dividendes APERAM",
-    "premiere_apparition": "2026-08-10"
-  },
-  {
-    "point": "13/08 :: europe :: corp :: Résultats Adyen N.V.",
-    "premiere_apparition": "2026-08-10"
-  },
-  {
-    "point": "13/08 :: europe :: corp :: Résultats Antofagasta plc",
-    "premiere_apparition": "2026-08-10"
-  },
-  {
-    "point": "13/08 :: europe :: corp :: Résultats AP Moller Maersk",
-    "premiere_apparition": "2026-08-10"
-  },
-  {
-    "point": "13/08 :: usa :: corp :: Résultats Brookfield Corporation",
-    "premiere_apparition": "2026-08-10"
-  },
-  {
-    "point": "13/08 :: europe :: corp :: Résultats EDAP TMS S.A.",
-    "premiere_apparition": "2026-08-10"
-  },
-  {
-    "point": "13/08 :: europe :: corp :: Chiffre d'affaires INNELEC MULTIMEDIA (T1)",
-    "premiere_apparition": "2026-08-10"
-  },
-  {
-    "point": "13/08 :: europe :: corp :: Résultats PKO Bank Polski S.A.",
-    "premiere_apparition": "2026-08-10"
-  },
-  {
-    "point": "13/08 :: europe :: macro :: Production industrielle Zone Euro (Juin)",
-    "premiere_apparition": "2026-08-10"
-  },
-  {
-    "point": "13/08 :: europe :: corp :: Résultats RWE AG",
-    "premiere_apparition": "2026-08-10"
-  },
-  {
-    "point": "13/08 :: europe :: corp :: Résultats VALNEVA SE (S1)",
-    "premiere_apparition": "2026-08-10"
-  },
-  {
-    "point": "13/08 :: europe :: corp :: AG Annuelle Avenir Telecom",
-    "premiere_apparition": "2026-08-12"
-  },
-  {
-    "point": "13/08 :: europe :: corp :: CA T1 Innelec Multimedia",
-    "premiere_apparition": "2026-08-12"
-  },
-  {
-    "point": "13/08 :: asie :: corp :: Résultats T2 China Mobile",
-    "premiere_apparition": "2026-08-12"
-  },
-  {
-    "point": "13/08 :: asie :: corp :: Résultats T2 SMIC",
-    "premiere_apparition": "2026-08-12"
-  },
-  {
-    "point": "13/08 :: asie :: corp :: Activité T3 ANZ Group Holdings",
-    "premiere_apparition": "2026-08-12"
-  },
-  {
-    "point": "13/08 :: asie :: corp :: Résultats T1 Lenovo Group",
-    "premiere_apparition": "2026-08-12"
-  },
-  {
-    "point": "13/08 :: europe :: corp :: Résultats Valneva, RWE, Adyen",
-    "premiere_apparition": "2026-08-12"
-  },
-  {
-    "point": "13/08 :: europe :: macro :: Pic 5ème canicule européenne",
-    "premiere_apparition": "2026-08-13"
-  },
-  {
-    "point": "13/08 :: europe :: macro :: Estimation flash PIB et Emploi Zone Euro",
-    "premiere_apparition": "2026-08-13"
-  },
-  {
     "point": "16/08 :: asie :: macro :: Publication PIB Japon",
     "premiere_apparition": "2026-07-14"
   },
@@ -316,6 +104,10 @@
     "premiere_apparition": "2026-08-10"
   },
   {
+    "point": "19/08 :: usa :: mkt-n :: FOMC Minutes July Meeting",
+    "premiere_apparition": "2026-08-14"
+  },
+  {
     "point": "14/08 :: europe :: macro :: Mise à jour PIB Zone Euro T2",
     "premiere_apparition": "2026-07-23"
   },
@@ -370,6 +162,10 @@
   {
     "point": "14/08 :: usa :: macro :: Confiance Consommateurs US (Michigan)",
     "premiere_apparition": "2026-08-13"
+  },
+  {
+    "point": "14/08 :: usa :: macro :: US Retail Sales July",
+    "premiere_apparition": "2026-08-14"
   },
   {
     "point": "29/08 :: global :: geo :: Réunion Secrétaires Finances & Gouv. BC G20",
@@ -714,6 +510,10 @@
   {
     "point": "26/08 :: global :: corp :: NVIDIA Corporation Earnings",
     "premiere_apparition": "2026-08-09"
+  },
+  {
+    "point": "26/08 :: usa :: macro :: US Q2 GDP Second Estimate",
+    "premiere_apparition": "2026-08-14"
   },
   {
     "point": "28/08 :: europe :: macro :: Publication CPI Provisoire France Août",
