@@ -248,6 +248,10 @@
     "premiere_apparition": "2026-08-10"
   },
   {
+    "point": "10/09 :: usa :: macro :: Publication IPP US",
+    "premiere_apparition": "2026-08-14"
+  },
+  {
     "point": "11/09 :: usa :: macro :: Publication IPC US (août)",
     "premiere_apparition": "2026-07-23"
   },
@@ -676,6 +680,10 @@
     "premiere_apparition": "2026-08-13"
   },
   {
+    "point": "08/09 :: usa :: corp :: Résultats trimestriels Oracle",
+    "premiere_apparition": "2026-08-14"
+  },
+  {
     "point": "15-16/09 :: usa :: mkt-n :: Réunion FOMC (Fed)",
     "premiere_apparition": "2026-08-13"
   },
@@ -686,5 +694,17 @@
   {
     "point": "Septembre :: usa :: tech :: IPO Anthropic (AI)",
     "premiere_apparition": "2026-08-13"
+  },
+  {
+    "point": "Semaine du 17/08 :: usa :: geo :: Nouvelles sanctions US Iran",
+    "premiere_apparition": "2026-08-14"
+  },
+  {
+    "point": "18/09 :: asie :: mkt-n :: Réunion BoJ / Décision taux",
+    "premiere_apparition": "2026-08-14"
+  },
+  {
+    "point": "24/09 :: global :: geo :: Sommet dirigeants US-Chine",
+    "premiere_apparition": "2026-08-14"
   }
 ]
