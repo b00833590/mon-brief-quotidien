@@ -32,6 +32,10 @@
     "premiere_apparition": "2026-08-11"
   },
   {
+    "point": "31/08 :: chine :: macro :: PMI Manufacturier NBS",
+    "premiere_apparition": "2026-08-15"
+  },
+  {
     "point": "19/08 :: uk :: macro :: Publication inflation UK (Juillet)",
     "premiere_apparition": "2026-07-22"
   },
@@ -108,6 +112,10 @@
     "premiere_apparition": "2026-08-14"
   },
   {
+    "point": "19/08 :: usa :: corp :: Résultats Estee Lauder",
+    "premiere_apparition": "2026-08-15"
+  },
+  {
     "point": "29/08 :: global :: geo :: Réunion Secrétaires Finances & Gouv. BC G20",
     "premiere_apparition": "2026-07-23"
   },
@@ -156,6 +164,10 @@
     "premiere_apparition": "2026-08-13"
   },
   {
+    "point": "01/09 :: usa :: geo :: Réunion Ministres Finances G20",
+    "premiere_apparition": "2026-08-15"
+  },
+  {
     "point": "04/09 :: usa :: macro :: Rapport NFP US (août)",
     "premiere_apparition": "2026-07-23"
   },
@@ -166,6 +178,10 @@
   {
     "point": "04/09 :: usa :: macro :: Rapport Situation Emploi US août",
     "premiere_apparition": "2026-08-09"
+  },
+  {
+    "point": "04/09 :: usa :: macro :: Rapport Emploi (NFP)",
+    "premiere_apparition": "2026-08-15"
   },
   {
     "point": "07/09 :: europe :: macro :: Estimations régulières PIB & Emploi Zone Euro",
@@ -404,6 +420,14 @@
     "premiere_apparition": "2026-08-15"
   },
   {
+    "point": "17/08 :: usa :: corp :: Résultats d'entreprises (HTHT, FUFU, NS)",
+    "premiere_apparition": "2026-08-15"
+  },
+  {
+    "point": "17/08 :: usa :: corp :: Résultats Baidu, Home Depot",
+    "premiere_apparition": "2026-08-15"
+  },
+  {
     "point": "21/08 :: usa :: macro :: Données Emploi Jeunesse US",
     "premiere_apparition": "2026-08-01"
   },
@@ -576,6 +600,10 @@
     "premiere_apparition": "2026-08-13"
   },
   {
+    "point": "02/09 :: usa :: geo :: Réunion Ministres Innovation G20",
+    "premiere_apparition": "2026-08-15"
+  },
+  {
     "point": "Fin août :: global :: geo :: Réunion Ministres Finances G20",
     "premiere_apparition": "2026-08-07"
   },
@@ -670,5 +698,17 @@
   {
     "point": "24/09 :: global :: geo :: Sommet dirigeants US-Chine",
     "premiere_apparition": "2026-08-14"
+  },
+  {
+    "point": "Semaine du 24/08 :: usa :: corp :: Résultats Utilities & Communication Services",
+    "premiere_apparition": "2026-08-15"
+  },
+  {
+    "point": "30/08 :: usa :: geo :: Réunion G20 Délégués Banques Centrales",
+    "premiere_apparition": "2026-08-15"
+  },
+  {
+    "point": "Semaine du 31/08 :: usa :: corp :: Résultats Tech, Santé, Finance",
+    "premiere_apparition": "2026-08-15"
   }
 ]
