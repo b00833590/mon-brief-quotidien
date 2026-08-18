@@ -108,6 +108,10 @@
     "premiere_apparition": "2026-08-17"
   },
   {
+    "point": "19/08 :: europe :: corp :: Coty Résultats annuels",
+    "premiere_apparition": "2026-08-18"
+  },
+  {
     "point": "29/08 :: global :: geo :: Réunion Secrétaires Finances & Gouv. BC G20",
     "premiere_apparition": "2026-07-23"
   },
@@ -126,6 +130,10 @@
   {
     "point": "29/08 :: global :: geo :: G20 Réunion Ministres Finances Adjoints",
     "premiere_apparition": "2026-08-15"
+  },
+  {
+    "point": "29/08 :: usa :: mkt-n :: Symposium de Jackson Hole Fin",
+    "premiere_apparition": "2026-08-18"
   },
   {
     "point": "01/09 :: global :: geo :: Réunion Ministérielle G20 Innovation",
@@ -162,6 +170,14 @@
   {
     "point": "01/09 :: usa :: geo :: G20 Ministres Innovation",
     "premiere_apparition": "2026-08-17"
+  },
+  {
+    "point": "01/09 :: usa :: macro :: US PMI Manufacturier Final AUG",
+    "premiere_apparition": "2026-08-18"
+  },
+  {
+    "point": "01/09 :: usa :: macro :: US JOLTs Offres d'Emploi JUL",
+    "premiere_apparition": "2026-08-18"
   },
   {
     "point": "04/09 :: usa :: macro :: Rapport NFP US (août)",
@@ -260,6 +276,10 @@
     "premiere_apparition": "2026-08-17"
   },
   {
+    "point": "16/09 :: asie :: mkt-n :: BoJ Réunion Début",
+    "premiere_apparition": "2026-08-18"
+  },
+  {
     "point": "17/09 :: asie :: macro :: Décision de politique monétaire BoJ",
     "premiere_apparition": "2026-07-23"
   },
@@ -328,6 +348,14 @@
     "premiere_apparition": "2026-08-17"
   },
   {
+    "point": "20/08 :: europe :: corp :: Montea SICAFI NV Résultats S1",
+    "premiere_apparition": "2026-08-18"
+  },
+  {
+    "point": "20/08 :: europe :: macro :: Allemagne Prix Production JUL",
+    "premiere_apparition": "2026-08-18"
+  },
+  {
     "point": "18/08 :: usa :: macro :: Indices Prix Import/Export US juillet",
     "premiere_apparition": "2026-07-29"
   },
@@ -392,6 +420,22 @@
     "premiere_apparition": "2026-08-17"
   },
   {
+    "point": "18/08 :: usa :: macro :: US E-Commerce Retail Sales",
+    "premiere_apparition": "2026-08-18"
+  },
+  {
+    "point": "18/08 :: usa :: macro :: US Housing Starts and Permits",
+    "premiere_apparition": "2026-08-18"
+  },
+  {
+    "point": "18/08 :: usa :: macro :: US Import and Export Prices",
+    "premiere_apparition": "2026-08-18"
+  },
+  {
+    "point": "18/08 :: usa :: macro :: US Industrial Production",
+    "premiere_apparition": "2026-08-18"
+  },
+  {
     "point": "17/08-18/08 :: global :: geo :: Sommet Jeunesse Énergie BRICS",
     "premiere_apparition": "2026-07-30"
   },
@@ -418,6 +462,18 @@
   {
     "point": "21/08 :: global :: tech :: BRICS Ministres Science, Tech & Innovation",
     "premiere_apparition": "2026-08-17"
+  },
+  {
+    "point": "21/08 :: europe :: macro :: France Indicateurs Climat Affaires",
+    "premiere_apparition": "2026-08-18"
+  },
+  {
+    "point": "21/08 :: europe :: macro :: France PMI Flash AUG",
+    "premiere_apparition": "2026-08-18"
+  },
+  {
+    "point": "21/08 :: europe :: macro :: Allemagne PMI Manufacturier Flash AUG",
+    "premiere_apparition": "2026-08-18"
   },
   {
     "point": "26/08 :: usa :: macro :: Seconde Estimation PIB US T2",
@@ -476,6 +532,14 @@
     "premiere_apparition": "2026-08-15"
   },
   {
+    "point": "26/08 :: europe :: corp :: Eiffage Résultats S1",
+    "premiere_apparition": "2026-08-18"
+  },
+  {
+    "point": "26/08 :: europe :: macro :: France Créations d'entreprises JUL",
+    "premiere_apparition": "2026-08-18"
+  },
+  {
     "point": "28/08 :: europe :: macro :: Publication CPI Provisoire France Août",
     "premiere_apparition": "2026-08-01"
   },
@@ -486,6 +550,14 @@
   {
     "point": "28/08 :: europe :: mkt-n :: BoE Publication Stats Coopératives Crédit (T1 2026)",
     "premiere_apparition": "2026-08-08"
+  },
+  {
+    "point": "28/08 :: europe :: macro :: Allemagne Taux de chômage AUG",
+    "premiere_apparition": "2026-08-18"
+  },
+  {
+    "point": "28/08 :: usa :: mkt-n :: Symposium de Jackson Hole Début",
+    "premiere_apparition": "2026-08-18"
   },
   {
     "point": "24/08 :: asie :: macro :: BoJ Statistics on Securities Financing",
@@ -520,6 +592,18 @@
     "premiere_apparition": "2026-08-10"
   },
   {
+    "point": "25/08 :: europe :: macro :: France Moral des ménages AUG",
+    "premiere_apparition": "2026-08-18"
+  },
+  {
+    "point": "25/08 :: europe :: macro :: Allemagne Croissance PIB Q2 Final",
+    "premiere_apparition": "2026-08-18"
+  },
+  {
+    "point": "25/08 :: europe :: macro :: Allemagne Ifo Climat Affaires AUG",
+    "premiere_apparition": "2026-08-18"
+  },
+  {
     "point": "27/08 :: usa :: macro :: Jackson Hole Symposium Début",
     "premiere_apparition": "2026-08-05"
   },
@@ -546,6 +630,10 @@
   {
     "point": "27/08 :: usa :: corp :: Résultats Marvell Tech",
     "premiere_apparition": "2026-08-16"
+  },
+  {
+    "point": "27/08 :: europe :: macro :: Allemagne Gfk Confiance Consommateurs SEP",
+    "premiere_apparition": "2026-08-18"
   },
   {
     "point": "10-12/08 :: usa :: global :: SIEPR Sommet Économique",
@@ -598,6 +686,10 @@
   {
     "point": "09/09 :: canada :: mkt-n :: Bank of Canada Rate Decision",
     "premiere_apparition": "2026-08-17"
+  },
+  {
+    "point": "09/09 :: europe :: macro :: France Production industrielle JUL",
+    "premiere_apparition": "2026-08-18"
   },
   {
     "point": "03/09 :: usa :: corp :: Broadcom Earnings",
@@ -662,6 +754,14 @@
   {
     "point": "08/09 :: usa :: corp :: Résultats trimestriels Oracle",
     "premiere_apparition": "2026-08-14"
+  },
+  {
+    "point": "08/09 :: europe :: macro :: France Balance Commerciale JUL",
+    "premiere_apparition": "2026-08-18"
+  },
+  {
+    "point": "08/09 :: europe :: macro :: France Compte Courant JUL",
+    "premiere_apparition": "2026-08-18"
   },
   {
     "point": "15-16/09 :: usa :: mkt-n :: Réunion FOMC (Fed)",
