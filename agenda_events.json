@@ -180,6 +180,10 @@
     "premiere_apparition": "2026-08-18"
   },
   {
+    "point": "01/09 :: europe :: macro :: HICP Flash Est. Eurozone Août",
+    "premiere_apparition": "2026-08-19"
+  },
+  {
     "point": "04/09 :: usa :: macro :: Rapport NFP US (août)",
     "premiere_apparition": "2026-07-23"
   },
@@ -353,86 +357,6 @@
   },
   {
     "point": "20/08 :: europe :: macro :: Allemagne Prix Production JUL",
-    "premiere_apparition": "2026-08-18"
-  },
-  {
-    "point": "18/08 :: usa :: macro :: Indices Prix Import/Export US juillet",
-    "premiere_apparition": "2026-07-29"
-  },
-  {
-    "point": "18/08 :: usa :: tech :: Palo Alto Networks Résultats",
-    "premiere_apparition": "2026-07-30"
-  },
-  {
-    "point": "18/08 :: usa :: corp :: Résultats trimestriels Keysight Technologies",
-    "premiere_apparition": "2026-07-31"
-  },
-  {
-    "point": "18/08 :: usa :: macro :: US Building Permits (Jul)",
-    "premiere_apparition": "2026-08-03"
-  },
-  {
-    "point": "18/08 :: europe :: macro :: UK Productivité Estimation Flash",
-    "premiere_apparition": "2026-08-04"
-  },
-  {
-    "point": "18/08 :: europe :: macro :: Indice ZEW Sentiment Économique Allemagne Août",
-    "premiere_apparition": "2026-08-07"
-  },
-  {
-    "point": "18/08 :: europe :: macro :: Indice ZEW Conditions Actuelles Allemagne Août",
-    "premiere_apparition": "2026-08-07"
-  },
-  {
-    "point": "18/08 :: asie :: corp :: Baidu Earnings",
-    "premiere_apparition": "2026-08-09"
-  },
-  {
-    "point": "18/08 :: usa :: corp :: Earnings Baidu, Keysight Tech",
-    "premiere_apparition": "2026-08-11"
-  },
-  {
-    "point": "18/08 :: usa :: macro :: Prix importation/exportation US (juillet)",
-    "premiere_apparition": "2026-08-12"
-  },
-  {
-    "point": "18/08 :: usa :: macro :: Mises en chantier et permis de construire (Juillet)",
-    "premiere_apparition": "2026-08-13"
-  },
-  {
-    "point": "18/08 :: usa :: macro :: Production industrielle et utilisation des capacités (Juillet)",
-    "premiere_apparition": "2026-08-13"
-  },
-  {
-    "point": "18/08 :: uk :: macro :: Taux de chômage (Juillet)",
-    "premiere_apparition": "2026-08-13"
-  },
-  {
-    "point": "18/08 :: usa :: macro :: Indices Prix Commerce, Logements US",
-    "premiere_apparition": "2026-08-13"
-  },
-  {
-    "point": "18/08 :: global :: geo :: BRICS Ministres Environnement",
-    "premiere_apparition": "2026-08-17"
-  },
-  {
-    "point": "18/08 :: europe :: macro :: Germany ZEW Economic Sentiment August",
-    "premiere_apparition": "2026-08-17"
-  },
-  {
-    "point": "18/08 :: usa :: macro :: US E-Commerce Retail Sales",
-    "premiere_apparition": "2026-08-18"
-  },
-  {
-    "point": "18/08 :: usa :: macro :: US Housing Starts and Permits",
-    "premiere_apparition": "2026-08-18"
-  },
-  {
-    "point": "18/08 :: usa :: macro :: US Import and Export Prices",
-    "premiere_apparition": "2026-08-18"
-  },
-  {
-    "point": "18/08 :: usa :: macro :: US Industrial Production",
     "premiere_apparition": "2026-08-18"
   },
   {
@@ -802,5 +726,13 @@
   {
     "point": "Semaine du 31/08 :: usa :: corp :: Résultats Tech, Santé, Finance",
     "premiere_apparition": "2026-08-15"
+  },
+  {
+    "point": "29/08 - 30/08 :: usa :: geo :: G20 Réunion Délégués Banques Centrales",
+    "premiere_apparition": "2026-08-19"
+  },
+  {
+    "point": "12/09 - 13/09 :: global :: geo :: Sommet BRICS",
+    "premiere_apparition": "2026-08-19"
   }
 ]
