@@ -24,98 +24,6 @@
     "premiere_apparition": "2026-08-15"
   },
   {
-    "point": "19/08 :: uk :: macro :: Publication inflation UK (Juillet)",
-    "premiere_apparition": "2026-07-22"
-  },
-  {
-    "point": "19/08 :: usa :: mkt-n :: Minutes réunion FOMC",
-    "premiere_apparition": "2026-07-28"
-  },
-  {
-    "point": "19/08 :: europe :: macro :: HICP Zone Euro Données Finales (Juillet)",
-    "premiere_apparition": "2026-07-30"
-  },
-  {
-    "point": "19/08 :: asie :: tech :: Baidu Résultats",
-    "premiere_apparition": "2026-07-30"
-  },
-  {
-    "point": "19/08 :: asie :: corp :: Résultats trimestriels XPeng Inc.",
-    "premiere_apparition": "2026-07-31"
-  },
-  {
-    "point": "19/08 :: usa :: corp :: Résultats trimestriels Analog Devices",
-    "premiere_apparition": "2026-07-31"
-  },
-  {
-    "point": "19/08 :: europe :: macro :: Inflation HICP Eurozone (Juillet)",
-    "premiere_apparition": "2026-07-31"
-  },
-  {
-    "point": "19/08 :: europe :: macro :: Publication PPI UK",
-    "premiere_apparition": "2026-08-01"
-  },
-  {
-    "point": "19/08 :: europe :: macro :: Prix immobiliers et Loyers UK",
-    "premiere_apparition": "2026-08-01"
-  },
-  {
-    "point": "19/08 :: europe :: macro :: IPC Eurozone Complet Juillet",
-    "premiere_apparition": "2026-08-02"
-  },
-  {
-    "point": "19/08 :: usa :: corp :: Raymond James Operating Data (Jul)",
-    "premiere_apparition": "2026-08-03"
-  },
-  {
-    "point": "19/08 :: europe :: macro :: UK Inflation Prix Consommation Juillet",
-    "premiere_apparition": "2026-08-04"
-  },
-  {
-    "point": "19/08 :: europe :: macro :: Zone Euro Inflation HICP Finale Juillet",
-    "premiere_apparition": "2026-08-04"
-  },
-  {
-    "point": "19/08 :: europe :: macro :: Prévisions Économiques Trésor Britannique",
-    "premiere_apparition": "2026-08-04"
-  },
-  {
-    "point": "19/08 :: asie :: corp :: Résultats d'entreprises : Baidu, XPeng",
-    "premiere_apparition": "2026-08-04"
-  },
-  {
-    "point": "19/08 :: global :: corp :: Figma Inc. Earnings",
-    "premiere_apparition": "2026-08-09"
-  },
-  {
-    "point": "19/08 :: europe :: macro :: Eurozone HICP July Final",
-    "premiere_apparition": "2026-08-10"
-  },
-  {
-    "point": "19/08 :: europe :: macro :: Inflation IPC Harmonisé Zone Euro (Juillet)",
-    "premiere_apparition": "2026-08-10"
-  },
-  {
-    "point": "19/08 :: usa :: mkt-n :: FOMC Minutes July Meeting",
-    "premiere_apparition": "2026-08-14"
-  },
-  {
-    "point": "19/08 :: usa :: corp :: Résultats Estee Lauder",
-    "premiere_apparition": "2026-08-15"
-  },
-  {
-    "point": "19/08 :: global :: geo :: BRICS Sommet Jeunesse",
-    "premiere_apparition": "2026-08-17"
-  },
-  {
-    "point": "19/08 :: europe :: corp :: Coty Résultats annuels",
-    "premiere_apparition": "2026-08-18"
-  },
-  {
-    "point": "19/08 :: asie :: corp :: Unitree IPO STAR Market",
-    "premiere_apparition": "2026-08-19"
-  },
-  {
     "point": "29/08 :: global :: geo :: Réunion Secrétaires Finances & Gouv. BC G20",
     "premiere_apparition": "2026-07-23"
   },
@@ -638,6 +546,10 @@
   {
     "point": "03/09 :: usa :: corp :: lululemon athletica Earnings",
     "premiere_apparition": "2026-08-10"
+  },
+  {
+    "point": "03/09 :: usa :: corp :: Résultats Genesco T2 2027",
+    "premiere_apparition": "2026-08-20"
   },
   {
     "point": "22/08 :: france :: macro :: Critère environnemental obligatoire Marchés Publics",
