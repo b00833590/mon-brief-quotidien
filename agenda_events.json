@@ -444,6 +444,14 @@
     "premiere_apparition": "2026-08-18"
   },
   {
+    "point": "25/08 :: asie :: macro :: BoJ Indicateurs IPC Core",
+    "premiere_apparition": "2026-08-20"
+  },
+  {
+    "point": "25/08 :: usa :: geo :: Election partielle Georgie",
+    "premiere_apparition": "2026-08-20"
+  },
+  {
     "point": "27/08 :: usa :: macro :: Jackson Hole Symposium Début",
     "premiere_apparition": "2026-08-05"
   },
@@ -474,6 +482,10 @@
   {
     "point": "27/08 :: europe :: macro :: Allemagne Gfk Confiance Consommateurs SEP",
     "premiere_apparition": "2026-08-18"
+  },
+  {
+    "point": "27/08 :: europe :: macro :: Indicateurs sentiment eco Eurozone",
+    "premiere_apparition": "2026-08-20"
   },
   {
     "point": "10-12/08 :: usa :: global :: SIEPR Sommet Économique",
@@ -642,6 +654,10 @@
   {
     "point": "18/09 :: asie :: mkt-n :: Bank of Japan Rate Decision",
     "premiere_apparition": "2026-08-17"
+  },
+  {
+    "point": "18/09 :: asie :: macro :: Décision politique monétaire BoJ",
+    "premiere_apparition": "2026-08-20"
   },
   {
     "point": "24/09 :: global :: geo :: Sommet dirigeants US-Chine",
