@@ -24,6 +24,10 @@
     "premiere_apparition": "2026-08-15"
   },
   {
+    "point": "31/08 :: europe :: mkt-n :: Jour férié bancaire UK",
+    "premiere_apparition": "2026-08-21"
+  },
+  {
     "point": "29/08 :: global :: geo :: Réunion Secrétaires Finances & Gouv. BC G20",
     "premiere_apparition": "2026-07-23"
   },
@@ -222,62 +226,6 @@
   {
     "point": "17/09 :: europe :: mkt-n :: Bank of England Rate Decision",
     "premiere_apparition": "2026-08-17"
-  },
-  {
-    "point": "20/08 :: europe :: mkt-n :: Décision taux Riksbank Suède",
-    "premiere_apparition": "2026-07-28"
-  },
-  {
-    "point": "20/08 :: europe :: macro :: Swedish Riksbank Rate Decision",
-    "premiere_apparition": "2026-07-30"
-  },
-  {
-    "point": "20/08 :: usa :: corp :: Kinross Dividend Record Date",
-    "premiere_apparition": "2026-07-30"
-  },
-  {
-    "point": "20/08 :: usa :: macro :: Inscriptions hebdomadaires chômage",
-    "premiere_apparition": "2026-08-03"
-  },
-  {
-    "point": "20/08 :: europe :: macro :: UK Blue Book 2026 Impact PIB",
-    "premiere_apparition": "2026-08-04"
-  },
-  {
-    "point": "20/08 :: usa :: macro :: Indice manufacturier Philly Fed",
-    "premiere_apparition": "2026-08-09"
-  },
-  {
-    "point": "20/08 :: usa :: macro :: Indice avancé USA",
-    "premiere_apparition": "2026-08-09"
-  },
-  {
-    "point": "20/08 :: usa :: macro :: Indicateurs avancés (Juillet)",
-    "premiere_apparition": "2026-08-13"
-  },
-  {
-    "point": "20/08 :: usa :: macro :: Indice manufacturier Fed Philadelphie US",
-    "premiere_apparition": "2026-08-13"
-  },
-  {
-    "point": "20/08 :: asie :: macro :: Indice Prix Consommation (CPI) Japon",
-    "premiere_apparition": "2026-08-13"
-  },
-  {
-    "point": "20/08 :: global :: geo :: BRICS Ministres Communication",
-    "premiere_apparition": "2026-08-17"
-  },
-  {
-    "point": "20/08 :: europe :: corp :: Montea SICAFI NV Résultats S1",
-    "premiere_apparition": "2026-08-18"
-  },
-  {
-    "point": "20/08 :: europe :: macro :: Allemagne Prix Production JUL",
-    "premiere_apparition": "2026-08-18"
-  },
-  {
-    "point": "17/08-18/08 :: global :: geo :: Sommet Jeunesse Énergie BRICS",
-    "premiere_apparition": "2026-07-30"
   },
   {
     "point": "21/08 :: usa :: macro :: Données Emploi Jeunesse US",
@@ -676,11 +624,27 @@
     "premiere_apparition": "2026-08-15"
   },
   {
+    "point": "Semaine du 31/08 :: europe :: geo :: Commission Investissement ONU (CNUCED)",
+    "premiere_apparition": "2026-08-21"
+  },
+  {
     "point": "29/08 - 30/08 :: usa :: geo :: G20 Réunion Délégués Banques Centrales",
     "premiere_apparition": "2026-08-19"
   },
   {
     "point": "12/09 - 13/09 :: global :: geo :: Sommet BRICS",
     "premiere_apparition": "2026-08-19"
+  },
+  {
+    "point": "01/09-02/09 :: europe :: geo :: Sommet Mondial de l'Investissement",
+    "premiere_apparition": "2026-08-21"
+  },
+  {
+    "point": "08/09-22/09 :: global :: geo :: Assemblée générale ONU",
+    "premiere_apparition": "2026-08-21"
+  },
+  {
+    "point": "17/09-18/09 :: europe :: geo :: Forum Business Droits Humains Europe",
+    "premiere_apparition": "2026-08-21"
   }
 ]
