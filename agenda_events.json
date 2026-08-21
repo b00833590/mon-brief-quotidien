@@ -168,6 +168,10 @@
     "premiere_apparition": "2026-08-13"
   },
   {
+    "point": "11/09 :: usa :: macro :: Publication Salaires Réels US (Août)",
+    "premiere_apparition": "2026-08-21"
+  },
+  {
     "point": "15/09 :: usa :: macro :: Réunion FOMC",
     "premiere_apparition": "2026-07-23"
   },
@@ -372,6 +376,10 @@
     "premiere_apparition": "2026-08-15"
   },
   {
+    "point": "24/08 :: usa :: geo :: Nouvelles sanctions US Iran",
+    "premiere_apparition": "2026-08-21"
+  },
+  {
     "point": "25/08 :: global :: corp :: Résultats d'entreprises : Semtech Corporation",
     "premiere_apparition": "2026-08-04"
   },
@@ -498,6 +506,10 @@
   {
     "point": "09/09 :: global :: mkt-n :: Décision taux BoC",
     "premiere_apparition": "2026-08-19"
+  },
+  {
+    "point": "09/09 :: europe :: mkt-n :: Décision taux BCE",
+    "premiere_apparition": "2026-08-21"
   },
   {
     "point": "03/09 :: usa :: corp :: Broadcom Earnings",
