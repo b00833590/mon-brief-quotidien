@@ -100,6 +100,18 @@
     "premiere_apparition": "2026-08-19"
   },
   {
+    "point": "01/09 :: usa :: macro :: Indice ISM Manufacturier août",
+    "premiere_apparition": "2026-08-22"
+  },
+  {
+    "point": "01/09 :: usa :: macro :: Rapport JOLTS août",
+    "premiere_apparition": "2026-08-22"
+  },
+  {
+    "point": "01/09 :: europe :: macro :: Inflation Allemagne août (estimation)",
+    "premiere_apparition": "2026-08-22"
+  },
+  {
     "point": "04/09 :: usa :: macro :: Rapport NFP US (août)",
     "premiere_apparition": "2026-07-23"
   },
@@ -320,6 +332,14 @@
     "premiere_apparition": "2026-08-18"
   },
   {
+    "point": "26/08 :: europe :: corp :: Résultats S1 ID Logistics",
+    "premiere_apparition": "2026-08-22"
+  },
+  {
+    "point": "26/08 :: europe :: corp :: CA S1 Alan Allman Associates",
+    "premiere_apparition": "2026-08-22"
+  },
+  {
     "point": "28/08 :: europe :: macro :: Publication CPI Provisoire France Août",
     "premiere_apparition": "2026-08-01"
   },
@@ -432,6 +452,22 @@
     "premiere_apparition": "2026-08-20"
   },
   {
+    "point": "27/08 :: europe :: corp :: Résultats annuels Pernod Ricard",
+    "premiere_apparition": "2026-08-22"
+  },
+  {
+    "point": "27/08 :: europe :: corp :: Résultats S1 Totalenergies EP Gabon",
+    "premiere_apparition": "2026-08-22"
+  },
+  {
+    "point": "27/08 :: europe :: corp :: CA S1 Abionyx Pharma",
+    "premiere_apparition": "2026-08-22"
+  },
+  {
+    "point": "27/08 :: europe :: corp :: CA T3 Plastiques du Val de Loire",
+    "premiere_apparition": "2026-08-22"
+  },
+  {
     "point": "10-12/08 :: usa :: global :: SIEPR Sommet Économique",
     "premiere_apparition": "2026-08-06"
   },
@@ -466,6 +502,10 @@
   {
     "point": "02/09 :: usa :: corp :: Résultats Broadcom",
     "premiere_apparition": "2026-08-16"
+  },
+  {
+    "point": "02/09 :: usa :: macro :: Livre Beige de la Fed",
+    "premiere_apparition": "2026-08-22"
   },
   {
     "point": "Fin août :: global :: geo :: Réunion Ministres Finances G20",
