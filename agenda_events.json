@@ -160,6 +160,10 @@
     "premiere_apparition": "2026-08-19"
   },
   {
+    "point": "10/09 :: usa :: macro :: Indice Prix Prod. US Août 2026",
+    "premiere_apparition": "2026-08-22"
+  },
+  {
     "point": "11/09 :: usa :: macro :: Publication IPC US (août)",
     "premiere_apparition": "2026-07-23"
   },
@@ -170,6 +174,14 @@
   {
     "point": "11/09 :: usa :: macro :: Publication Salaires Réels US (Août)",
     "premiere_apparition": "2026-08-21"
+  },
+  {
+    "point": "11/09 :: usa :: macro :: Indice Prix Conso US Août 2026",
+    "premiere_apparition": "2026-08-22"
+  },
+  {
+    "point": "11/09 :: usa :: macro :: Revenus Réels US Août 2026",
+    "premiere_apparition": "2026-08-22"
   },
   {
     "point": "15/09 :: usa :: macro :: Réunion FOMC",
@@ -208,6 +220,14 @@
     "premiere_apparition": "2026-08-18"
   },
   {
+    "point": "16/09 :: uk :: geo :: Parlement UK en Recess (Conférences)",
+    "premiere_apparition": "2026-08-22"
+  },
+  {
+    "point": "16/09 :: usa :: macro :: Indice Prix Import/Export US Août 2026",
+    "premiere_apparition": "2026-08-22"
+  },
+  {
     "point": "17/09 :: asie :: macro :: Décision de politique monétaire BoJ",
     "premiere_apparition": "2026-07-23"
   },
@@ -232,40 +252,8 @@
     "premiere_apparition": "2026-08-17"
   },
   {
-    "point": "21/08 :: usa :: macro :: Données Emploi Jeunesse US",
-    "premiere_apparition": "2026-08-01"
-  },
-  {
-    "point": "21/08 :: asie :: macro :: BoJ Real Exports and Imports Developments",
-    "premiere_apparition": "2026-08-03"
-  },
-  {
-    "point": "21/08 :: europe :: macro :: PMI Flash S&P Global Zone Euro (Août)",
-    "premiere_apparition": "2026-08-10"
-  },
-  {
-    "point": "21/08 :: global :: macro :: Ventes au détail Canada",
-    "premiere_apparition": "2026-08-13"
-  },
-  {
-    "point": "21/08 :: asie :: macro :: BOJ Evolutions Exportations/Importations Réelles",
-    "premiere_apparition": "2026-08-15"
-  },
-  {
-    "point": "21/08 :: global :: tech :: BRICS Ministres Science, Tech & Innovation",
-    "premiere_apparition": "2026-08-17"
-  },
-  {
-    "point": "21/08 :: europe :: macro :: France Indicateurs Climat Affaires",
-    "premiere_apparition": "2026-08-18"
-  },
-  {
-    "point": "21/08 :: europe :: macro :: France PMI Flash AUG",
-    "premiere_apparition": "2026-08-18"
-  },
-  {
-    "point": "21/08 :: europe :: macro :: Allemagne PMI Manufacturier Flash AUG",
-    "premiere_apparition": "2026-08-18"
+    "point": "17/09 :: europe :: macro :: Décision Taux Banque d'Angleterre",
+    "premiere_apparition": "2026-08-22"
   },
   {
     "point": "26/08 :: usa :: macro :: Seconde Estimation PIB US T2",
@@ -510,6 +498,10 @@
   {
     "point": "09/09 :: europe :: mkt-n :: Décision taux BCE",
     "premiere_apparition": "2026-08-21"
+  },
+  {
+    "point": "09/09 :: uk :: mkt-n :: Clôture Représentations Budget UK",
+    "premiere_apparition": "2026-08-22"
   },
   {
     "point": "03/09 :: usa :: corp :: Broadcom Earnings",
