@@ -388,6 +388,10 @@
     "premiere_apparition": "2026-08-21"
   },
   {
+    "point": "24/08 :: asie :: corp :: PDD Holdings Résultats T2",
+    "premiere_apparition": "2026-08-23"
+  },
+  {
     "point": "25/08 :: global :: corp :: Résultats d'entreprises : Semtech Corporation",
     "premiere_apparition": "2026-08-04"
   },
@@ -414,6 +418,14 @@
   {
     "point": "25/08 :: usa :: geo :: Election partielle Georgie",
     "premiere_apparition": "2026-08-20"
+  },
+  {
+    "point": "25/08 :: europe :: macro :: Confiance Consommateurs France Août",
+    "premiere_apparition": "2026-08-23"
+  },
+  {
+    "point": "25/08 :: europe :: corp :: Qwamplify Chiffre d'affaires S1",
+    "premiere_apparition": "2026-08-23"
   },
   {
     "point": "27/08 :: usa :: macro :: Jackson Hole Symposium Début",
@@ -466,6 +478,18 @@
   {
     "point": "27/08 :: europe :: corp :: CA T3 Plastiques du Val de Loire",
     "premiere_apparition": "2026-08-22"
+  },
+  {
+    "point": "27/08 :: europe :: macro :: Indice prix production France Juillet",
+    "premiere_apparition": "2026-08-23"
+  },
+  {
+    "point": "27/08 :: europe :: corp :: Abionyx Pharma Chiffre d'affaires S1",
+    "premiere_apparition": "2026-08-23"
+  },
+  {
+    "point": "27/08 :: europe :: corp :: Plast. Val de Loire Chiffre d'affaires T3",
+    "premiere_apparition": "2026-08-23"
   },
   {
     "point": "10-12/08 :: usa :: global :: SIEPR Sommet Économique",
@@ -556,14 +580,6 @@
     "premiere_apparition": "2026-08-20"
   },
   {
-    "point": "22/08 :: france :: macro :: Critère environnemental obligatoire Marchés Publics",
-    "premiere_apparition": "2026-08-10"
-  },
-  {
-    "point": "22/08 :: global :: geo :: BRICS Ministres Sports",
-    "premiere_apparition": "2026-08-17"
-  },
-  {
     "point": "12/09 :: global :: geo :: Début Sommet BRICS New Delhi",
     "premiere_apparition": "2026-08-10"
   },
@@ -622,6 +638,10 @@
   {
     "point": "08/09 :: europe :: geo :: Forum Économique de Karpacz",
     "premiere_apparition": "2026-08-19"
+  },
+  {
+    "point": "08/09 :: usa/canada :: geo :: Tarifs douaniens Canada/US",
+    "premiere_apparition": "2026-08-23"
   },
   {
     "point": "15-16/09 :: usa :: mkt-n :: Réunion FOMC (Fed)",
@@ -690,5 +710,9 @@
   {
     "point": "17/09-18/09 :: europe :: geo :: Forum Business Droits Humains Europe",
     "premiere_apparition": "2026-08-21"
+  },
+  {
+    "point": "23/08 :: europe :: macro :: PMI Zone Euro",
+    "premiere_apparition": "2026-08-23"
   }
 ]
