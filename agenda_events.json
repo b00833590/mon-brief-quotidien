@@ -132,6 +132,10 @@
     "premiere_apparition": "2026-08-17"
   },
   {
+    "point": "04/09 :: usa :: macro :: US Jobs Report (Aug 2026)",
+    "premiere_apparition": "2026-08-24"
+  },
+  {
     "point": "07/09 :: europe :: macro :: Estimations régulières PIB & Emploi Zone Euro",
     "premiere_apparition": "2026-07-23"
   },
@@ -376,6 +380,10 @@
     "premiere_apparition": "2026-08-18"
   },
   {
+    "point": "28/08 :: global :: geo :: Summer School Young Diplomats",
+    "premiere_apparition": "2026-08-24"
+  },
+  {
     "point": "24/08 :: asie :: macro :: BoJ Statistics on Securities Financing",
     "premiere_apparition": "2026-08-03"
   },
@@ -409,6 +417,18 @@
   },
   {
     "point": "24/08 :: europe :: corp :: Publication rapport annuel EDILIZIACROB P N",
+    "premiere_apparition": "2026-08-24"
+  },
+  {
+    "point": "24/08 :: global :: geo :: US Treasury Iran measures",
+    "premiere_apparition": "2026-08-24"
+  },
+  {
+    "point": "24/08 :: global :: geo :: Pakistan leader visits Iran",
+    "premiere_apparition": "2026-08-24"
+  },
+  {
+    "point": "24/08 :: usa :: corp :: NSSC Earnings",
     "premiere_apparition": "2026-08-24"
   },
   {
@@ -457,6 +477,14 @@
   },
   {
     "point": "25/08 :: europe :: corp :: AG INTEXA",
+    "premiere_apparition": "2026-08-24"
+  },
+  {
+    "point": "25/08 :: global :: geo :: Oman foreign minister visits Iran",
+    "premiere_apparition": "2026-08-24"
+  },
+  {
+    "point": "25/08 :: asie :: global :: AVPN Conference 2026 Asia",
     "premiere_apparition": "2026-08-24"
   },
   {
@@ -610,6 +638,22 @@
   {
     "point": "03/09 :: usa :: corp :: Résultats Genesco T2 2027",
     "premiere_apparition": "2026-08-20"
+  },
+  {
+    "point": "03/09 :: usa :: mkt-n :: ICABE 2026 Accounting Conference",
+    "premiere_apparition": "2026-08-24"
+  },
+  {
+    "point": "03/09 :: usa :: mkt-n :: ICEAAS 2026 Economic Sciences Conf",
+    "premiere_apparition": "2026-08-24"
+  },
+  {
+    "point": "03/09 :: usa :: mkt-n :: ICEAFS 2026 Financial Sciences Conf",
+    "premiere_apparition": "2026-08-24"
+  },
+  {
+    "point": "03/09 :: usa :: mkt-n :: ICEMM 2026 Economy, Mgmt, Marketing Conf",
+    "premiere_apparition": "2026-08-24"
   },
   {
     "point": "12/09 :: global :: geo :: Début Sommet BRICS New Delhi",
