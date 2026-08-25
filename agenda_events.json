@@ -384,54 +384,6 @@
     "premiere_apparition": "2026-08-24"
   },
   {
-    "point": "24/08 :: asie :: macro :: BoJ Statistics on Securities Financing",
-    "premiere_apparition": "2026-08-03"
-  },
-  {
-    "point": "24/08 :: asie :: corp :: Figma Inc. Earnings (Q2)",
-    "premiere_apparition": "2026-08-03"
-  },
-  {
-    "point": "24/08 :: europe :: mkt-n :: Conférences Macroéconomie Rome",
-    "premiere_apparition": "2026-08-04"
-  },
-  {
-    "point": "24/08 :: asie :: corp :: XPeng Inc. Earnings",
-    "premiere_apparition": "2026-08-09"
-  },
-  {
-    "point": "24/08 :: global :: corp :: Semtech Corporation Earnings",
-    "premiere_apparition": "2026-08-09"
-  },
-  {
-    "point": "24/08 :: asie :: macro :: BOJ Statistiques Transactions Titres (Juillet)",
-    "premiere_apparition": "2026-08-15"
-  },
-  {
-    "point": "24/08 :: usa :: geo :: Nouvelles sanctions US Iran",
-    "premiere_apparition": "2026-08-21"
-  },
-  {
-    "point": "24/08 :: asie :: corp :: PDD Holdings Résultats T2",
-    "premiere_apparition": "2026-08-23"
-  },
-  {
-    "point": "24/08 :: europe :: corp :: Publication rapport annuel EDILIZIACROB P N",
-    "premiere_apparition": "2026-08-24"
-  },
-  {
-    "point": "24/08 :: global :: geo :: US Treasury Iran measures",
-    "premiere_apparition": "2026-08-24"
-  },
-  {
-    "point": "24/08 :: global :: geo :: Pakistan leader visits Iran",
-    "premiere_apparition": "2026-08-24"
-  },
-  {
-    "point": "24/08 :: usa :: corp :: NSSC Earnings",
-    "premiere_apparition": "2026-08-24"
-  },
-  {
     "point": "25/08 :: global :: corp :: Résultats d'entreprises : Semtech Corporation",
     "premiere_apparition": "2026-08-04"
   },
@@ -486,6 +438,22 @@
   {
     "point": "25/08 :: asie :: global :: AVPN Conference 2026 Asia",
     "premiere_apparition": "2026-08-24"
+  },
+  {
+    "point": "25/08 :: global :: corp :: Fubon Financial Résultats Q2",
+    "premiere_apparition": "2026-08-25"
+  },
+  {
+    "point": "25/08 :: usa :: corp :: Bank of Montreal Résultats Q3",
+    "premiere_apparition": "2026-08-25"
+  },
+  {
+    "point": "25/08 :: usa :: corp :: Bank of Nova Scotia Résultats Q3",
+    "premiere_apparition": "2026-08-25"
+  },
+  {
+    "point": "25/08 :: usa :: corp :: Intuit Inc. Résultats Q4",
+    "premiere_apparition": "2026-08-25"
   },
   {
     "point": "27/08 :: usa :: macro :: Jackson Hole Symposium Début",
@@ -550,6 +518,10 @@
   {
     "point": "27/08 :: europe :: corp :: Plast. Val de Loire Chiffre d'affaires T3",
     "premiere_apparition": "2026-08-23"
+  },
+  {
+    "point": "27/08 :: europe :: macro :: Publication Comptes rendus réunion BCE",
+    "premiere_apparition": "2026-08-25"
   },
   {
     "point": "10-12/08 :: usa :: global :: SIEPR Sommet Économique",
@@ -810,5 +782,9 @@
   {
     "point": "14/09 :: usa :: geo :: G20 Réunion Ministérielle Commerce (Milwaukee)",
     "premiere_apparition": "2026-08-23"
+  },
+  {
+    "point": "14/09 :: europe :: corp :: Ipsos Adresse aux marchés",
+    "premiere_apparition": "2026-08-25"
   }
 ]
