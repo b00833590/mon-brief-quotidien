@@ -112,6 +112,10 @@
     "premiere_apparition": "2026-08-22"
   },
   {
+    "point": "01/09 :: usa :: corp :: Résultats Medtronic (MDT)",
+    "premiere_apparition": "2026-08-25"
+  },
+  {
     "point": "04/09 :: usa :: macro :: Rapport NFP US (août)",
     "premiere_apparition": "2026-07-23"
   },
@@ -360,6 +364,10 @@
     "premiere_apparition": "2026-08-24"
   },
   {
+    "point": "26/08 :: usa :: tech :: Résultats Synopsys (SNPS)",
+    "premiere_apparition": "2026-08-25"
+  },
+  {
     "point": "28/08 :: europe :: macro :: Publication CPI Provisoire France Août",
     "premiere_apparition": "2026-08-01"
   },
@@ -524,6 +532,10 @@
     "premiere_apparition": "2026-08-25"
   },
   {
+    "point": "27/08 :: usa :: tech :: Résultats Marvell Technology (MRVL)",
+    "premiere_apparition": "2026-08-25"
+  },
+  {
     "point": "10-12/08 :: usa :: global :: SIEPR Sommet Économique",
     "premiere_apparition": "2026-08-06"
   },
@@ -562,6 +574,10 @@
   {
     "point": "02/09 :: usa :: macro :: Livre Beige de la Fed",
     "premiere_apparition": "2026-08-22"
+  },
+  {
+    "point": "02/09 :: usa :: tech :: Résultats Snowflake (SNOW)",
+    "premiere_apparition": "2026-08-25"
   },
   {
     "point": "Fin août :: global :: geo :: Réunion Ministres Finances G20",
@@ -626,6 +642,14 @@
   {
     "point": "03/09 :: usa :: mkt-n :: ICEMM 2026 Economy, Mgmt, Marketing Conf",
     "premiere_apparition": "2026-08-24"
+  },
+  {
+    "point": "03/09 :: usa :: tech :: Résultats Docusign (DOCU)",
+    "premiere_apparition": "2026-08-25"
+  },
+  {
+    "point": "03/09 :: usa :: ai :: Résultats UiPath (PATH)",
+    "premiere_apparition": "2026-08-25"
   },
   {
     "point": "12/09 :: global :: geo :: Début Sommet BRICS New Delhi",
