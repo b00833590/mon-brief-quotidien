@@ -28,6 +28,10 @@
     "premiere_apparition": "2026-08-21"
   },
   {
+    "point": "31/08 :: asie :: corp :: Shein annonce prix IPO Hong Kong",
+    "premiere_apparition": "2026-08-26"
+  },
+  {
     "point": "29/08 :: global :: geo :: Réunion Secrétaires Finances & Gouv. BC G20",
     "premiere_apparition": "2026-07-23"
   },
@@ -50,6 +54,10 @@
   {
     "point": "29/08 :: usa :: mkt-n :: Symposium de Jackson Hole Fin",
     "premiere_apparition": "2026-08-18"
+  },
+  {
+    "point": "29/08 :: europe :: corp :: OnlyFans dépôt comptes annuels",
+    "premiere_apparition": "2026-08-26"
   },
   {
     "point": "01/09 :: global :: geo :: Réunion Ministérielle G20 Innovation",
@@ -114,6 +122,10 @@
   {
     "point": "01/09 :: usa :: corp :: Résultats Medtronic (MDT)",
     "premiere_apparition": "2026-08-25"
+  },
+  {
+    "point": "01/09 :: asie :: corp :: Shein début cotation Hong Kong",
+    "premiere_apparition": "2026-08-26"
   },
   {
     "point": "04/09 :: usa :: macro :: Rapport NFP US (août)",
@@ -390,78 +402,6 @@
   {
     "point": "28/08 :: global :: geo :: Summer School Young Diplomats",
     "premiere_apparition": "2026-08-24"
-  },
-  {
-    "point": "25/08 :: global :: corp :: Résultats d'entreprises : Semtech Corporation",
-    "premiere_apparition": "2026-08-04"
-  },
-  {
-    "point": "25/08 :: europe :: macro :: Indice IFO Allemagne (Août)",
-    "premiere_apparition": "2026-08-10"
-  },
-  {
-    "point": "25/08 :: europe :: macro :: France Moral des ménages AUG",
-    "premiere_apparition": "2026-08-18"
-  },
-  {
-    "point": "25/08 :: europe :: macro :: Allemagne Croissance PIB Q2 Final",
-    "premiere_apparition": "2026-08-18"
-  },
-  {
-    "point": "25/08 :: europe :: macro :: Allemagne Ifo Climat Affaires AUG",
-    "premiere_apparition": "2026-08-18"
-  },
-  {
-    "point": "25/08 :: asie :: macro :: BoJ Indicateurs IPC Core",
-    "premiere_apparition": "2026-08-20"
-  },
-  {
-    "point": "25/08 :: usa :: geo :: Election partielle Georgie",
-    "premiere_apparition": "2026-08-20"
-  },
-  {
-    "point": "25/08 :: europe :: macro :: Confiance Consommateurs France Août",
-    "premiere_apparition": "2026-08-23"
-  },
-  {
-    "point": "25/08 :: europe :: corp :: Qwamplify Chiffre d'affaires S1",
-    "premiere_apparition": "2026-08-23"
-  },
-  {
-    "point": "25/08 :: europe :: corp :: CA S1 QWAMPLIFY",
-    "premiere_apparition": "2026-08-24"
-  },
-  {
-    "point": "25/08 :: europe :: corp :: AG VIALIFE SA",
-    "premiere_apparition": "2026-08-24"
-  },
-  {
-    "point": "25/08 :: europe :: corp :: AG INTEXA",
-    "premiere_apparition": "2026-08-24"
-  },
-  {
-    "point": "25/08 :: global :: geo :: Oman foreign minister visits Iran",
-    "premiere_apparition": "2026-08-24"
-  },
-  {
-    "point": "25/08 :: asie :: global :: AVPN Conference 2026 Asia",
-    "premiere_apparition": "2026-08-24"
-  },
-  {
-    "point": "25/08 :: global :: corp :: Fubon Financial Résultats Q2",
-    "premiere_apparition": "2026-08-25"
-  },
-  {
-    "point": "25/08 :: usa :: corp :: Bank of Montreal Résultats Q3",
-    "premiere_apparition": "2026-08-25"
-  },
-  {
-    "point": "25/08 :: usa :: corp :: Bank of Nova Scotia Résultats Q3",
-    "premiere_apparition": "2026-08-25"
-  },
-  {
-    "point": "25/08 :: usa :: corp :: Intuit Inc. Résultats Q4",
-    "premiere_apparition": "2026-08-25"
   },
   {
     "point": "27/08 :: usa :: macro :: Jackson Hole Symposium Début",
