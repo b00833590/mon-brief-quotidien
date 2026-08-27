@@ -128,6 +128,10 @@
     "premiere_apparition": "2026-08-26"
   },
   {
+    "point": "01/09 :: usa :: corp :: Dell Technologies Résultats T2",
+    "premiere_apparition": "2026-08-27"
+  },
+  {
     "point": "04/09 :: usa :: macro :: Rapport NFP US (août)",
     "premiere_apparition": "2026-07-23"
   },
@@ -150,6 +154,10 @@
   {
     "point": "04/09 :: usa :: macro :: US Jobs Report (Aug 2026)",
     "premiere_apparition": "2026-08-24"
+  },
+  {
+    "point": "04/09 :: usa :: macro :: US Créations d'emplois Août",
+    "premiere_apparition": "2026-08-27"
   },
   {
     "point": "07/09 :: europe :: macro :: Estimations régulières PIB & Emploi Zone Euro",
@@ -296,92 +304,8 @@
     "premiere_apparition": "2026-08-22"
   },
   {
-    "point": "26/08 :: usa :: macro :: Seconde Estimation PIB US T2",
-    "premiere_apparition": "2026-08-01"
-  },
-  {
-    "point": "26/08 :: usa :: macro :: Inflation PCE US (Juillet)",
-    "premiere_apparition": "2026-08-04"
-  },
-  {
-    "point": "26/08 :: usa :: corp :: Okta Résultats T2",
-    "premiere_apparition": "2026-08-05"
-  },
-  {
-    "point": "26/08 :: usa :: macro :: Publication PCE (US)",
-    "premiere_apparition": "2026-08-05"
-  },
-  {
-    "point": "26/08 :: usa :: macro :: PIB US (2ème estimation) T2 2026",
-    "premiere_apparition": "2026-08-07"
-  },
-  {
-    "point": "26/08 :: usa :: macro :: PIB T2 Deuxième Estimation",
-    "premiere_apparition": "2026-08-08"
-  },
-  {
-    "point": "26/08 :: usa :: macro :: Publication PIB (2e estim. T2 2026)",
-    "premiere_apparition": "2026-08-08"
-  },
-  {
-    "point": "26/08 :: usa :: macro :: Publication PIB US 2ème estim. T2",
-    "premiere_apparition": "2026-08-09"
-  },
-  {
-    "point": "26/08 :: usa :: corp :: HP Inc. Q3 Earnings",
-    "premiere_apparition": "2026-08-09"
-  },
-  {
-    "point": "26/08 :: usa :: macro :: Commandes biens durables USA",
-    "premiere_apparition": "2026-08-09"
-  },
-  {
-    "point": "26/08 :: usa :: macro :: Dépenses consommation personnelle USA",
-    "premiere_apparition": "2026-08-09"
-  },
-  {
-    "point": "26/08 :: global :: corp :: NVIDIA Corporation Earnings",
-    "premiere_apparition": "2026-08-09"
-  },
-  {
-    "point": "26/08 :: usa :: macro :: US Q2 GDP Second Estimate",
-    "premiere_apparition": "2026-08-14"
-  },
-  {
-    "point": "26/08 :: asie :: macro :: BOJ Indice Prix Services Producteurs (Juillet)",
-    "premiere_apparition": "2026-08-15"
-  },
-  {
-    "point": "26/08 :: europe :: corp :: Eiffage Résultats S1",
-    "premiere_apparition": "2026-08-18"
-  },
-  {
-    "point": "26/08 :: europe :: macro :: France Créations d'entreprises JUL",
-    "premiere_apparition": "2026-08-18"
-  },
-  {
-    "point": "26/08 :: europe :: corp :: Résultats S1 ID Logistics",
-    "premiere_apparition": "2026-08-22"
-  },
-  {
-    "point": "26/08 :: europe :: corp :: CA S1 Alan Allman Associates",
-    "premiere_apparition": "2026-08-22"
-  },
-  {
-    "point": "26/08 :: europe :: corp :: Réunion analystes EIFFAGE",
-    "premiere_apparition": "2026-08-24"
-  },
-  {
-    "point": "26/08 :: usa :: corp :: Résultats CrowdStrike Holdings, Inc.",
-    "premiere_apparition": "2026-08-24"
-  },
-  {
-    "point": "26/08 :: usa :: corp :: Résultats Salesforce, Inc.",
-    "premiere_apparition": "2026-08-24"
-  },
-  {
-    "point": "26/08 :: usa :: tech :: Résultats Synopsys (SNPS)",
-    "premiere_apparition": "2026-08-25"
+    "point": "17/09 :: europe :: macro :: Eurozone HICP Final Juillet",
+    "premiere_apparition": "2026-08-27"
   },
   {
     "point": "28/08 :: europe :: macro :: Publication CPI Provisoire France Août",
@@ -560,6 +484,10 @@
     "premiere_apparition": "2026-08-22"
   },
   {
+    "point": "09/09 :: usa :: corp :: Navan Résultats Financiers T2",
+    "premiere_apparition": "2026-08-27"
+  },
+  {
     "point": "03/09 :: usa :: corp :: Broadcom Earnings",
     "premiere_apparition": "2026-08-10"
   },
@@ -606,6 +534,10 @@
   {
     "point": "13/09 :: global :: geo :: Clôture Sommet BRICS New Delhi",
     "premiere_apparition": "2026-08-10"
+  },
+  {
+    "point": "13/09 :: global :: geo :: Sommet BRICS",
+    "premiere_apparition": "2026-08-27"
   },
   {
     "point": "27/08-29/08 :: usa :: macro :: Jackson Hole Symposium Annuel",
