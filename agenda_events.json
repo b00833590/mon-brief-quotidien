@@ -60,6 +60,10 @@
     "premiere_apparition": "2026-08-26"
   },
   {
+    "point": "29/08 :: usa :: geo :: G20 Finance & Central Bank Deputies",
+    "premiere_apparition": "2026-08-27"
+  },
+  {
     "point": "01/09 :: global :: geo :: Réunion Ministérielle G20 Innovation",
     "premiere_apparition": "2026-07-23"
   },
@@ -308,6 +312,10 @@
     "premiere_apparition": "2026-08-27"
   },
   {
+    "point": "17/09 :: usa :: mkt-n :: Sommet Leaders Développement Économique",
+    "premiere_apparition": "2026-08-27"
+  },
+  {
     "point": "28/08 :: europe :: macro :: Publication CPI Provisoire France Août",
     "premiere_apparition": "2026-08-01"
   },
@@ -446,6 +454,10 @@
   {
     "point": "02/09 :: usa :: tech :: Résultats Snowflake (SNOW)",
     "premiere_apparition": "2026-08-25"
+  },
+  {
+    "point": "02/09 :: europe :: mkt-n :: Conférence Économie Expérimentale",
+    "premiere_apparition": "2026-08-27"
   },
   {
     "point": "Fin août :: global :: geo :: Réunion Ministres Finances G20",
@@ -686,5 +698,21 @@
   {
     "point": "14/09 :: europe :: corp :: Ipsos Adresse aux marchés",
     "premiere_apparition": "2026-08-25"
+  },
+  {
+    "point": "21/09 :: global :: mkt-n :: WEF Sustainable Development Impact",
+    "premiere_apparition": "2026-08-27"
+  },
+  {
+    "point": "22/09 :: global :: mkt-n :: UN Global Compact Leaders Summit",
+    "premiere_apparition": "2026-08-27"
+  },
+  {
+    "point": "30/09 :: usa :: macro :: Publication Indice Prix PCE US",
+    "premiere_apparition": "2026-08-27"
+  },
+  {
+    "point": "30/09 :: usa :: geo :: G20 Trade Ministerial",
+    "premiere_apparition": "2026-08-27"
   }
 ]
