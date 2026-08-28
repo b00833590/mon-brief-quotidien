@@ -140,6 +140,14 @@
     "premiere_apparition": "2026-08-28"
   },
   {
+    "point": "01/09 :: global :: geo :: Sommet Mondial Investissement Paris",
+    "premiere_apparition": "2026-08-28"
+  },
+  {
+    "point": "01/09 :: europe :: macro :: PMI Manufacturier France final août",
+    "premiere_apparition": "2026-08-28"
+  },
+  {
     "point": "04/09 :: usa :: macro :: Rapport NFP US (août)",
     "premiere_apparition": "2026-07-23"
   },
@@ -320,6 +328,10 @@
     "premiere_apparition": "2026-08-27"
   },
   {
+    "point": "17/09 :: europe :: geo :: Forum Business Droits Humains Strasbourg",
+    "premiere_apparition": "2026-08-28"
+  },
+  {
     "point": "28/08 :: europe :: macro :: Publication CPI Provisoire France Août",
     "premiere_apparition": "2026-08-01"
   },
@@ -345,6 +357,10 @@
   },
   {
     "point": "28/08 :: usa :: mkt-n :: Discours Fed Chair Jackson Hole",
+    "premiere_apparition": "2026-08-28"
+  },
+  {
+    "point": "28/08 :: usa :: macro :: Discours Kevin Warsh Fed",
     "premiere_apparition": "2026-08-28"
   },
   {
@@ -468,6 +484,10 @@
     "premiere_apparition": "2026-08-25"
   },
   {
+    "point": "03/09 :: usa :: macro :: PMI Services US final août",
+    "premiere_apparition": "2026-08-28"
+  },
+  {
     "point": "12/09 :: global :: geo :: Début Sommet BRICS New Delhi",
     "premiere_apparition": "2026-08-10"
   },
@@ -538,6 +558,10 @@
   {
     "point": "08/09 :: global :: mkt-n :: Nvidia Tarifs/Hausses de prix",
     "premiere_apparition": "2026-08-23"
+  },
+  {
+    "point": "08/09 :: global :: geo :: 81e Assemblée Générale Nations Unies",
+    "premiere_apparition": "2026-08-28"
   },
   {
     "point": "15-16/09 :: usa :: mkt-n :: Réunion FOMC (Fed)",
