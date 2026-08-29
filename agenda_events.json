@@ -156,6 +156,10 @@
     "premiere_apparition": "2026-08-29"
   },
   {
+    "point": "01/09 :: global :: macro :: PMI Manufacturier mondiaux (Août)",
+    "premiere_apparition": "2026-08-29"
+  },
+  {
     "point": "04/09 :: usa :: macro :: Rapport NFP US (août)",
     "premiere_apparition": "2026-07-23"
   },
@@ -464,6 +468,10 @@
     "premiere_apparition": "2026-08-28"
   },
   {
+    "point": "03/09 :: europe :: macro :: Publication Services PMI Eurozone (Août)",
+    "premiere_apparition": "2026-08-29"
+  },
+  {
     "point": "12/09 :: global :: geo :: Début Sommet BRICS New Delhi",
     "premiere_apparition": "2026-08-10"
   },
@@ -538,6 +546,10 @@
   {
     "point": "08/09 :: global :: geo :: 81e Assemblée Générale Nations Unies",
     "premiere_apparition": "2026-08-28"
+  },
+  {
+    "point": "08/09 :: usa :: macro :: Rapport Emploi National ADP (Août)",
+    "premiere_apparition": "2026-08-29"
   },
   {
     "point": "15-16/09 :: usa :: mkt-n :: Réunion FOMC (Fed)",
@@ -650,5 +662,9 @@
   {
     "point": "30/09 :: usa :: geo :: G20 Trade Ministerial",
     "premiere_apparition": "2026-08-27"
+  },
+  {
+    "point": "Sept. 2026 :: usa :: geo :: Réunion Ministérielle G20 Innovation",
+    "premiere_apparition": "2026-08-29"
   }
 ]
