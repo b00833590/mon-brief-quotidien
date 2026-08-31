@@ -144,6 +144,18 @@
     "premiere_apparition": "2026-08-30"
   },
   {
+    "point": "01/09 :: global :: geo :: Shanghai Cooperation Organization Summit",
+    "premiere_apparition": "2026-08-31"
+  },
+  {
+    "point": "01/09 :: europe :: corp :: X-FAB SILICON FOUNDRIES: Rapport semestriel",
+    "premiere_apparition": "2026-08-31"
+  },
+  {
+    "point": "01/09 :: europe :: corp :: MAGILLEM DESIGN SERVICES: Paiement dividendes",
+    "premiere_apparition": "2026-08-31"
+  },
+  {
     "point": "04/09 :: usa :: macro :: Rapport NFP US (août)",
     "premiere_apparition": "2026-07-23"
   },
@@ -186,6 +198,10 @@
   {
     "point": "07/09 :: europe :: macro :: 3ème estimation PIB Zone Euro T2",
     "premiere_apparition": "2026-08-24"
+  },
+  {
+    "point": "07/09 :: usa :: macro :: Jour Férié (Labor Day)",
+    "premiere_apparition": "2026-08-31"
   },
   {
     "point": "10/09 :: europe :: macro :: Décision de politique monétaire BCE",
@@ -472,6 +488,14 @@
     "premiere_apparition": "2026-08-29"
   },
   {
+    "point": "03/09 :: usa :: macro :: Indice ISM services",
+    "premiere_apparition": "2026-08-31"
+  },
+  {
+    "point": "03/09 :: usa :: macro :: Commerce International US",
+    "premiere_apparition": "2026-08-31"
+  },
+  {
     "point": "12/09 :: global :: geo :: Début Sommet BRICS New Delhi",
     "premiere_apparition": "2026-08-10"
   },
@@ -646,6 +670,10 @@
   {
     "point": "22/09 :: global :: mkt-n :: UN Global Compact Leaders Summit",
     "premiere_apparition": "2026-08-27"
+  },
+  {
+    "point": "22/09 :: europe :: corp :: Sidetrade: Résultats S1 2026",
+    "premiere_apparition": "2026-08-31"
   },
   {
     "point": "30/09 :: usa :: macro :: Publication Indice Prix PCE US",
