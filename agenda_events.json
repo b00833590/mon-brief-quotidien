@@ -112,6 +112,10 @@
     "premiere_apparition": "2026-08-31"
   },
   {
+    "point": "01/09 :: usa :: macro :: Publication JOLTS (Offres d'emploi) Juillet",
+    "premiere_apparition": "2026-09-01"
+  },
+  {
     "point": "04/09 :: usa :: macro :: Rapport NFP US (août)",
     "premiere_apparition": "2026-07-23"
   },
@@ -320,6 +324,22 @@
     "premiere_apparition": "2026-09-01"
   },
   {
+    "point": "17/09 :: europe :: macro :: Publication complète inflation zone euro (Août)",
+    "premiere_apparition": "2026-09-01"
+  },
+  {
+    "point": "17/09 :: usa :: corp :: Résultats Darden Restaurants",
+    "premiere_apparition": "2026-09-01"
+  },
+  {
+    "point": "17/09 :: usa :: corp :: Résultats Lennar Corporation",
+    "premiere_apparition": "2026-09-01"
+  },
+  {
+    "point": "17/09 :: asie :: mkt-n :: Début réunion Banque du Japon",
+    "premiere_apparition": "2026-09-01"
+  },
+  {
     "point": "02/09 :: usa :: macro :: Rapport Emploi Privé ADP (Août)",
     "premiere_apparition": "2026-08-06"
   },
@@ -372,6 +392,10 @@
     "premiere_apparition": "2026-09-01"
   },
   {
+    "point": "02/09 :: global :: mkt-n :: Décision de taux RBNZ",
+    "premiere_apparition": "2026-09-01"
+  },
+  {
     "point": "Fin août :: usa :: corp :: Résultats trimestriels NVIDIA",
     "premiere_apparition": "2026-08-19"
   },
@@ -410,6 +434,10 @@
   {
     "point": "09/09 :: asia :: mkt-n :: Astana Finance Days début",
     "premiere_apparition": "2026-08-30"
+  },
+  {
+    "point": "09/09 :: usa :: corp :: Résultats Caleres (T2)",
+    "premiere_apparition": "2026-09-01"
   },
   {
     "point": "03/09 :: usa :: corp :: Broadcom Earnings",
@@ -584,6 +612,10 @@
     "premiere_apparition": "2026-08-31"
   },
   {
+    "point": "18/09 :: asie :: mkt-n :: Décision de taux Banque du Japon",
+    "premiere_apparition": "2026-09-01"
+  },
+  {
     "point": "24/09 :: global :: geo :: Sommet dirigeants US-Chine",
     "premiere_apparition": "2026-08-14"
   },
@@ -677,6 +709,14 @@
   },
   {
     "point": "23/09 :: asie :: macro :: Inflation CPI Singapour (Août)",
+    "premiere_apparition": "2026-09-01"
+  },
+  {
+    "point": "23/09 :: usa :: corp :: Résultats Cintas Corporation",
+    "premiere_apparition": "2026-09-01"
+  },
+  {
+    "point": "23/09 :: usa :: corp :: Résultats Thor Industries",
     "premiere_apparition": "2026-09-01"
   }
 ]
