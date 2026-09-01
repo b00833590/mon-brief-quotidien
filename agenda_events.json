@@ -1,49 +1,5 @@
 [
   {
-    "point": "31/08 :: global :: mkt-n :: Réunion Ministres Finances G20",
-    "premiere_apparition": "2026-07-19"
-  },
-  {
-    "point": "31/08 :: europe :: macro :: Réunion BoE Décision Taux",
-    "premiere_apparition": "2026-07-31"
-  },
-  {
-    "point": "31/08 :: global :: geo :: Sommet Leaders Finances G20 (début)",
-    "premiere_apparition": "2026-08-09"
-  },
-  {
-    "point": "31/08 :: usa :: global :: G20 Finance Ministers Meeting",
-    "premiere_apparition": "2026-08-10"
-  },
-  {
-    "point": "31/08 :: global :: geo :: G20 Reunion Min. Finances Banques Centrales",
-    "premiere_apparition": "2026-08-11"
-  },
-  {
-    "point": "31/08 :: chine :: macro :: PMI Manufacturier NBS",
-    "premiere_apparition": "2026-08-15"
-  },
-  {
-    "point": "31/08 :: europe :: mkt-n :: Jour férié bancaire UK",
-    "premiere_apparition": "2026-08-21"
-  },
-  {
-    "point": "31/08 :: asie :: corp :: Shein annonce prix IPO Hong Kong",
-    "premiere_apparition": "2026-08-26"
-  },
-  {
-    "point": "31/08 :: europe :: macro :: Inflation préliminaire Allemagne (août)",
-    "premiere_apparition": "2026-08-30"
-  },
-  {
-    "point": "31/08 :: usa :: macro :: Indice manufacturier Fed de Dallas (août)",
-    "premiere_apparition": "2026-08-30"
-  },
-  {
-    "point": "31/08 :: asie :: geo :: Shanghai Cooperation Org. Summit",
-    "premiere_apparition": "2026-08-31"
-  },
-  {
     "point": "01/09 :: global :: geo :: Réunion Ministérielle G20 Innovation",
     "premiere_apparition": "2026-07-23"
   },
@@ -312,6 +268,10 @@
     "premiere_apparition": "2026-08-22"
   },
   {
+    "point": "16/09 :: usa :: macro :: Ventes au Détail (Août)",
+    "premiere_apparition": "2026-09-01"
+  },
+  {
     "point": "17/09 :: asie :: macro :: Décision de politique monétaire BoJ",
     "premiere_apparition": "2026-07-23"
   },
@@ -354,6 +314,10 @@
   {
     "point": "17/09 :: europe :: macro :: Eurozone Inflation Finale (Août)",
     "premiere_apparition": "2026-08-29"
+  },
+  {
+    "point": "17/09 :: asie :: macro :: Inflation CPI Malaisie (Août)",
+    "premiere_apparition": "2026-09-01"
   },
   {
     "point": "02/09 :: usa :: macro :: Rapport Emploi Privé ADP (Août)",
@@ -402,6 +366,10 @@
   {
     "point": "02/09 :: usa :: mkt-n :: Décision monétaire Banque du Canada",
     "premiere_apparition": "2026-08-30"
+  },
+  {
+    "point": "02/09 :: canada :: macro :: Réunion Banque du Canada",
+    "premiere_apparition": "2026-09-01"
   },
   {
     "point": "Fin août :: usa :: corp :: Résultats trimestriels NVIDIA",
@@ -576,6 +544,10 @@
     "premiere_apparition": "2026-08-29"
   },
   {
+    "point": "08/09 :: asie :: macro :: Inflation CPI & PPI Chine (Août)",
+    "premiere_apparition": "2026-09-01"
+  },
+  {
     "point": "15-16/09 :: usa :: mkt-n :: Réunion FOMC (Fed)",
     "premiere_apparition": "2026-08-13"
   },
@@ -614,6 +586,10 @@
   {
     "point": "24/09 :: global :: geo :: Sommet dirigeants US-Chine",
     "premiere_apparition": "2026-08-14"
+  },
+  {
+    "point": "24/09 :: europe :: macro :: Décision Taux Intérêt Riksbank (Suède)",
+    "premiere_apparition": "2026-09-01"
   },
   {
     "point": "Semaine du 24/08 :: usa :: corp :: Résultats Utilities & Communication Services",
@@ -664,6 +640,10 @@
     "premiere_apparition": "2026-08-25"
   },
   {
+    "point": "14/09 :: canada :: macro :: Indice des Prix à la Consommation (Août)",
+    "premiere_apparition": "2026-09-01"
+  },
+  {
     "point": "21/09 :: global :: mkt-n :: WEF Sustainable Development Impact",
     "premiere_apparition": "2026-08-27"
   },
@@ -684,7 +664,19 @@
     "premiere_apparition": "2026-08-27"
   },
   {
+    "point": "30/09 :: usa :: macro :: PIB US (3e estimation) T2 2026",
+    "premiere_apparition": "2026-09-01"
+  },
+  {
+    "point": "30/09 :: usa :: macro :: Revenus et Dépenses Personnelles (Août)",
+    "premiere_apparition": "2026-09-01"
+  },
+  {
     "point": "Sept. 2026 :: usa :: geo :: Réunion Ministérielle G20 Innovation",
     "premiere_apparition": "2026-08-29"
+  },
+  {
+    "point": "23/09 :: asie :: macro :: Inflation CPI Singapour (Août)",
+    "premiere_apparition": "2026-09-01"
   }
 ]
