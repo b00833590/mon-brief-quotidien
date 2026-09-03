@@ -224,62 +224,6 @@
     "premiere_apparition": "2026-09-01"
   },
   {
-    "point": "02/09 :: usa :: macro :: Rapport Emploi Privé ADP (Août)",
-    "premiere_apparition": "2026-08-06"
-  },
-  {
-    "point": "02/09 :: usa :: macro :: US ADP Jobs Report August",
-    "premiere_apparition": "2026-08-10"
-  },
-  {
-    "point": "02/09 :: usa :: corp :: Hewlett Packard Earnings",
-    "premiere_apparition": "2026-08-10"
-  },
-  {
-    "point": "02/09 :: usa :: corp :: Salesforce Earnings",
-    "premiere_apparition": "2026-08-10"
-  },
-  {
-    "point": "02/09 :: japon :: mkt-n :: Discours membre BOJ Takata",
-    "premiere_apparition": "2026-08-13"
-  },
-  {
-    "point": "02/09 :: usa :: geo :: Réunion Ministres Innovation G20",
-    "premiere_apparition": "2026-08-15"
-  },
-  {
-    "point": "02/09 :: usa :: corp :: Résultats Broadcom",
-    "premiere_apparition": "2026-08-16"
-  },
-  {
-    "point": "02/09 :: usa :: macro :: Livre Beige de la Fed",
-    "premiere_apparition": "2026-08-22"
-  },
-  {
-    "point": "02/09 :: usa :: tech :: Résultats Snowflake (SNOW)",
-    "premiere_apparition": "2026-08-25"
-  },
-  {
-    "point": "02/09 :: europe :: mkt-n :: Conférence Économie Expérimentale",
-    "premiere_apparition": "2026-08-27"
-  },
-  {
-    "point": "02/09 :: global :: tech :: G20 Innovation Ministerial",
-    "premiere_apparition": "2026-08-28"
-  },
-  {
-    "point": "02/09 :: usa :: mkt-n :: Décision monétaire Banque du Canada",
-    "premiere_apparition": "2026-08-30"
-  },
-  {
-    "point": "02/09 :: canada :: macro :: Réunion Banque du Canada",
-    "premiere_apparition": "2026-09-01"
-  },
-  {
-    "point": "02/09 :: global :: mkt-n :: Décision de taux RBNZ",
-    "premiere_apparition": "2026-09-01"
-  },
-  {
     "point": "Fin août :: usa :: corp :: Résultats trimestriels NVIDIA",
     "premiere_apparition": "2026-08-19"
   },
@@ -390,14 +334,6 @@
   {
     "point": "13/09 :: global :: geo :: Sommet BRICS",
     "premiere_apparition": "2026-08-27"
-  },
-  {
-    "point": "27/08-29/08 :: usa :: macro :: Jackson Hole Symposium Annuel",
-    "premiere_apparition": "2026-08-12"
-  },
-  {
-    "point": "15/09-16/09 :: usa :: macro :: Réunion FOMC Fed",
-    "premiere_apparition": "2026-08-12"
   },
   {
     "point": "31/08 - 01/09 :: global :: geo :: Réunion ministres finances G20",
@@ -588,6 +524,18 @@
     "premiere_apparition": "2026-09-01"
   },
   {
+    "point": "30/09 :: usa :: macro :: Rapport National Emploi ADP (Sept)",
+    "premiere_apparition": "2026-09-03"
+  },
+  {
+    "point": "30/09 :: usa :: macro :: PIB US (T2 2026) Estimation Finale",
+    "premiere_apparition": "2026-09-03"
+  },
+  {
+    "point": "30/09 :: usa :: macro :: Dépenses Consommation Personnelle (PCE) US (Août)",
+    "premiere_apparition": "2026-09-03"
+  },
+  {
     "point": "Sept. 2026 :: usa :: geo :: Réunion Ministérielle G20 Innovation",
     "premiere_apparition": "2026-08-29"
   },
@@ -602,5 +550,9 @@
   {
     "point": "23/09 :: usa :: corp :: Résultats Thor Industries",
     "premiere_apparition": "2026-09-01"
+  },
+  {
+    "point": "23/09 :: usa :: corp :: Résultats KB Home",
+    "premiere_apparition": "2026-09-03"
   }
 ]
