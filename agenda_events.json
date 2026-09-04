@@ -88,6 +88,10 @@
     "premiere_apparition": "2026-09-04"
   },
   {
+    "point": "10/09 :: usa :: macro :: Publication PPI US",
+    "premiere_apparition": "2026-09-04"
+  },
+  {
     "point": "11/09 :: usa :: macro :: Publication IPC US (août)",
     "premiere_apparition": "2026-07-23"
   },
@@ -129,6 +133,10 @@
   },
   {
     "point": "15/09 :: global :: geo :: Sommet Investissement Canada (Jour 2)",
+    "premiere_apparition": "2026-09-04"
+  },
+  {
+    "point": "15/09 :: afrique :: corp :: Dangote Refinery IPO Nigeria",
     "premiere_apparition": "2026-09-04"
   },
   {
@@ -237,6 +245,10 @@
   },
   {
     "point": "17/09 :: usa :: mkt-n :: Sommet NY Eco & Développement Emploi",
+    "premiere_apparition": "2026-09-04"
+  },
+  {
+    "point": "17/09 :: usa :: geo :: Sommet Leaders Economiques US",
     "premiere_apparition": "2026-09-04"
   },
   {
@@ -444,6 +456,10 @@
     "premiere_apparition": "2026-09-04"
   },
   {
+    "point": "21/09 :: global :: geo :: Sommet Leaders UN Global Compact",
+    "premiere_apparition": "2026-09-04"
+  },
+  {
     "point": "22/09 :: global :: mkt-n :: UN Global Compact Leaders Summit",
     "premiere_apparition": "2026-08-27"
   },
@@ -484,6 +500,10 @@
     "premiere_apparition": "2026-09-04"
   },
   {
+    "point": "30/09 :: afrique :: corp :: Lancement Raffinerie Dangote Kenya",
+    "premiere_apparition": "2026-09-04"
+  },
+  {
     "point": "Sept. 2026 :: usa :: geo :: Réunion Ministérielle G20 Innovation",
     "premiere_apparition": "2026-08-29"
   },
@@ -505,6 +525,10 @@
   },
   {
     "point": "20/09 :: global :: geo :: Début Semaine AG ONU Global Compact",
+    "premiere_apparition": "2026-09-04"
+  },
+  {
+    "point": "29/09 :: usa :: macro :: Publication JOLTS US",
     "premiere_apparition": "2026-09-04"
   }
 ]
