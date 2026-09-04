@@ -84,6 +84,10 @@
     "premiere_apparition": "2026-08-26"
   },
   {
+    "point": "10/09 :: global :: mkt-n :: Conférence Firms, Trade, Development",
+    "premiere_apparition": "2026-09-04"
+  },
+  {
     "point": "11/09 :: usa :: macro :: Publication IPC US (août)",
     "premiere_apparition": "2026-07-23"
   },
@@ -122,6 +126,10 @@
   {
     "point": "15/09 :: europe :: corp :: Regards croisés Entreprises et investisseurs",
     "premiere_apparition": "2026-08-30"
+  },
+  {
+    "point": "15/09 :: global :: geo :: Sommet Investissement Canada (Jour 2)",
+    "premiere_apparition": "2026-09-04"
   },
   {
     "point": "16/09 :: europe :: macro :: Publication IPC UK (août)",
@@ -224,6 +232,14 @@
     "premiere_apparition": "2026-09-01"
   },
   {
+    "point": "17/09 :: europe :: macro :: HICP Zone Euro Août (Données Complètes)",
+    "premiere_apparition": "2026-09-04"
+  },
+  {
+    "point": "17/09 :: usa :: mkt-n :: Sommet NY Eco & Développement Emploi",
+    "premiere_apparition": "2026-09-04"
+  },
+  {
     "point": "Fin août :: usa :: corp :: Résultats trimestriels NVIDIA",
     "premiere_apparition": "2026-08-19"
   },
@@ -268,58 +284,6 @@
     "premiere_apparition": "2026-09-01"
   },
   {
-    "point": "03/09 :: usa :: corp :: Broadcom Earnings",
-    "premiere_apparition": "2026-08-10"
-  },
-  {
-    "point": "03/09 :: usa :: corp :: lululemon athletica Earnings",
-    "premiere_apparition": "2026-08-10"
-  },
-  {
-    "point": "03/09 :: usa :: corp :: Résultats Genesco T2 2027",
-    "premiere_apparition": "2026-08-20"
-  },
-  {
-    "point": "03/09 :: usa :: mkt-n :: ICABE 2026 Accounting Conference",
-    "premiere_apparition": "2026-08-24"
-  },
-  {
-    "point": "03/09 :: usa :: mkt-n :: ICEAAS 2026 Economic Sciences Conf",
-    "premiere_apparition": "2026-08-24"
-  },
-  {
-    "point": "03/09 :: usa :: mkt-n :: ICEAFS 2026 Financial Sciences Conf",
-    "premiere_apparition": "2026-08-24"
-  },
-  {
-    "point": "03/09 :: usa :: mkt-n :: ICEMM 2026 Economy, Mgmt, Marketing Conf",
-    "premiere_apparition": "2026-08-24"
-  },
-  {
-    "point": "03/09 :: usa :: tech :: Résultats Docusign (DOCU)",
-    "premiere_apparition": "2026-08-25"
-  },
-  {
-    "point": "03/09 :: usa :: ai :: Résultats UiPath (PATH)",
-    "premiere_apparition": "2026-08-25"
-  },
-  {
-    "point": "03/09 :: usa :: macro :: PMI Services US final août",
-    "premiere_apparition": "2026-08-28"
-  },
-  {
-    "point": "03/09 :: europe :: macro :: Publication Services PMI Eurozone (Août)",
-    "premiere_apparition": "2026-08-29"
-  },
-  {
-    "point": "03/09 :: usa :: macro :: Indice ISM services",
-    "premiere_apparition": "2026-08-31"
-  },
-  {
-    "point": "03/09 :: usa :: macro :: Commerce International US",
-    "premiere_apparition": "2026-08-31"
-  },
-  {
     "point": "12/09 :: global :: geo :: Début Sommet BRICS New Delhi",
     "premiere_apparition": "2026-08-10"
   },
@@ -334,26 +298,6 @@
   {
     "point": "13/09 :: global :: geo :: Sommet BRICS",
     "premiere_apparition": "2026-08-27"
-  },
-  {
-    "point": "31/08 - 01/09 :: global :: geo :: Réunion ministres finances G20",
-    "premiere_apparition": "2026-08-13"
-  },
-  {
-    "point": "15/09 - 16/09 :: usa :: macro :: Réunion FOMC / Décision de taux Fed",
-    "premiere_apparition": "2026-08-13"
-  },
-  {
-    "point": "17/09 - 18/09 :: japon :: macro :: Réunion de politique monétaire BOJ",
-    "premiere_apparition": "2026-08-13"
-  },
-  {
-    "point": "29-30/08 :: usa :: geo :: Réunion Adjoints Finance & Banques Centrales G20",
-    "premiere_apparition": "2026-08-13"
-  },
-  {
-    "point": "31/08-01/09 :: usa :: geo :: Réunion Ministres Finances & Gouverneurs BC G20",
-    "premiere_apparition": "2026-08-13"
   },
   {
     "point": "08/09 :: global :: macro :: Publication Prix Consommation OCDE",
@@ -396,18 +340,6 @@
     "premiere_apparition": "2026-09-01"
   },
   {
-    "point": "15-16/09 :: usa :: mkt-n :: Réunion FOMC (Fed)",
-    "premiere_apparition": "2026-08-13"
-  },
-  {
-    "point": "17-18/09 :: asie :: mkt-n :: Réunion Politique Monétaire BOJ",
-    "premiere_apparition": "2026-08-13"
-  },
-  {
-    "point": "Septembre :: usa :: tech :: IPO Anthropic (AI)",
-    "premiere_apparition": "2026-08-13"
-  },
-  {
     "point": "Septembre :: usa :: geo :: G20 Réunion Ministérielle Innovation (Raleigh-Durham)",
     "premiere_apparition": "2026-08-23"
   },
@@ -442,6 +374,10 @@
   {
     "point": "24/09 :: europe :: macro :: Décision Taux Intérêt Riksbank (Suède)",
     "premiere_apparition": "2026-09-01"
+  },
+  {
+    "point": "24/09 :: europe :: macro :: Norges Bank Décision Taux Intérêt",
+    "premiere_apparition": "2026-09-04"
   },
   {
     "point": "Semaine du 24/08 :: usa :: corp :: Résultats Utilities & Communication Services",
@@ -496,8 +432,16 @@
     "premiere_apparition": "2026-09-01"
   },
   {
+    "point": "14/09 :: global :: geo :: Sommet Investissement Canada (Jour 1)",
+    "premiere_apparition": "2026-09-04"
+  },
+  {
     "point": "21/09 :: global :: mkt-n :: WEF Sustainable Development Impact",
     "premiere_apparition": "2026-08-27"
+  },
+  {
+    "point": "21/09 :: usa :: corp :: Broadcom Date Record Dividende",
+    "premiere_apparition": "2026-09-04"
   },
   {
     "point": "22/09 :: global :: mkt-n :: UN Global Compact Leaders Summit",
@@ -536,6 +480,10 @@
     "premiere_apparition": "2026-09-03"
   },
   {
+    "point": "30/09 :: usa :: macro :: Inflation PCE US Août",
+    "premiere_apparition": "2026-09-04"
+  },
+  {
     "point": "Sept. 2026 :: usa :: geo :: Réunion Ministérielle G20 Innovation",
     "premiere_apparition": "2026-08-29"
   },
@@ -554,5 +502,9 @@
   {
     "point": "23/09 :: usa :: corp :: Résultats KB Home",
     "premiere_apparition": "2026-09-03"
+  },
+  {
+    "point": "20/09 :: global :: geo :: Début Semaine AG ONU Global Compact",
+    "premiere_apparition": "2026-09-04"
   }
 ]
