@@ -160,6 +160,10 @@
     "premiere_apparition": "2026-09-05"
   },
   {
+    "point": "16/09 :: europe :: macro :: Publication PPI UK (Août)",
+    "premiere_apparition": "2026-09-05"
+  },
+  {
     "point": "17/09 :: asie :: macro :: Décision de politique monétaire BoJ",
     "premiere_apparition": "2026-07-23"
   },
@@ -284,6 +288,14 @@
     "premiere_apparition": "2026-09-05"
   },
   {
+    "point": "09/09 :: europe :: mkt-n :: Début Conseil des Gouverneurs BCE",
+    "premiere_apparition": "2026-09-05"
+  },
+  {
+    "point": "09/09 :: usa :: corp :: Résultats Chewy",
+    "premiere_apparition": "2026-09-05"
+  },
+  {
     "point": "12/09 :: global :: geo :: Début Sommet BRICS New Delhi",
     "premiere_apparition": "2026-08-10"
   },
@@ -344,6 +356,14 @@
     "premiere_apparition": "2026-09-01"
   },
   {
+    "point": "08/09 :: usa :: corp :: Résultats ABM Industries",
+    "premiere_apparition": "2026-09-05"
+  },
+  {
+    "point": "08/09 :: usa :: corp :: Résultats United Natural Foods",
+    "premiere_apparition": "2026-09-05"
+  },
+  {
     "point": "Septembre :: usa :: geo :: G20 Réunion Ministérielle Innovation (Raleigh-Durham)",
     "premiere_apparition": "2026-08-23"
   },
@@ -381,6 +401,10 @@
   },
   {
     "point": "24/09 :: europe :: mkt-n :: Conférence Business Economics et Finance (Marseille)",
+    "premiere_apparition": "2026-09-05"
+  },
+  {
+    "point": "24/09 :: europe :: mkt-n :: Décision taux Banque Nationale Suisse",
     "premiere_apparition": "2026-09-05"
   },
   {
@@ -466,6 +490,10 @@
   {
     "point": "22/09 :: europe :: corp :: Sidetrade: Résultats S1 2026",
     "premiere_apparition": "2026-08-31"
+  },
+  {
+    "point": "22/09 :: usa :: corp :: Résultats Micron Technology",
+    "premiere_apparition": "2026-09-05"
   },
   {
     "point": "30/09 :: usa :: macro :: Publication Indice Prix PCE US",
