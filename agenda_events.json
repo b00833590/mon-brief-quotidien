@@ -1,33 +1,5 @@
 [
   {
-    "point": "04/09 :: usa :: macro :: Rapport NFP US (août)",
-    "premiere_apparition": "2026-07-23"
-  },
-  {
-    "point": "04/09 :: usa :: macro :: Emploi Non-Agricole Août",
-    "premiere_apparition": "2026-08-08"
-  },
-  {
-    "point": "04/09 :: usa :: macro :: Rapport Situation Emploi US août",
-    "premiere_apparition": "2026-08-09"
-  },
-  {
-    "point": "04/09 :: usa :: macro :: Rapport Emploi (NFP)",
-    "premiere_apparition": "2026-08-15"
-  },
-  {
-    "point": "04/09 :: usa :: macro :: Publication Emplois Non-Agricoles US",
-    "premiere_apparition": "2026-08-17"
-  },
-  {
-    "point": "04/09 :: usa :: macro :: US Jobs Report (Aug 2026)",
-    "premiere_apparition": "2026-08-24"
-  },
-  {
-    "point": "04/09 :: usa :: macro :: US Créations d'emplois Août",
-    "premiere_apparition": "2026-08-27"
-  },
-  {
     "point": "07/09 :: europe :: macro :: Estimations régulières PIB & Emploi Zone Euro",
     "premiere_apparition": "2026-07-23"
   },
@@ -92,6 +64,10 @@
     "premiere_apparition": "2026-09-04"
   },
   {
+    "point": "10/09 :: usa :: corp :: Résultats Oracle Corporation",
+    "premiere_apparition": "2026-09-05"
+  },
+  {
     "point": "11/09 :: usa :: macro :: Publication IPC US (août)",
     "premiere_apparition": "2026-07-23"
   },
@@ -140,6 +116,10 @@
     "premiere_apparition": "2026-09-04"
   },
   {
+    "point": "15/09 :: canada :: ai :: Conférence IA en Finance Montréal",
+    "premiere_apparition": "2026-09-05"
+  },
+  {
     "point": "16/09 :: europe :: macro :: Publication IPC UK (août)",
     "premiere_apparition": "2026-07-23"
   },
@@ -174,6 +154,10 @@
   {
     "point": "16/09 :: usa :: macro :: Ventes au Détail (Août)",
     "premiere_apparition": "2026-09-01"
+  },
+  {
+    "point": "16/09 :: europe :: mkt-n :: Conférence Finance et Business Economics (Marseille)",
+    "premiere_apparition": "2026-09-05"
   },
   {
     "point": "17/09 :: asie :: macro :: Décision de politique monétaire BoJ",
@@ -296,6 +280,10 @@
     "premiere_apparition": "2026-09-01"
   },
   {
+    "point": "09/09 :: europe :: corp :: Résultats Inditex",
+    "premiere_apparition": "2026-09-05"
+  },
+  {
     "point": "12/09 :: global :: geo :: Début Sommet BRICS New Delhi",
     "premiere_apparition": "2026-08-10"
   },
@@ -310,6 +298,10 @@
   {
     "point": "13/09 :: global :: geo :: Sommet BRICS",
     "premiere_apparition": "2026-08-27"
+  },
+  {
+    "point": "13/09 :: europe :: mkt-n :: Conférence Économie et Finance (Cannes)",
+    "premiere_apparition": "2026-09-05"
   },
   {
     "point": "08/09 :: global :: macro :: Publication Prix Consommation OCDE",
@@ -356,10 +348,6 @@
     "premiere_apparition": "2026-08-23"
   },
   {
-    "point": "Semaine du 17/08 :: usa :: geo :: Nouvelles sanctions US Iran",
-    "premiere_apparition": "2026-08-14"
-  },
-  {
     "point": "18/09 :: asie :: mkt-n :: Réunion BoJ / Décision taux",
     "premiere_apparition": "2026-08-14"
   },
@@ -390,6 +378,10 @@
   {
     "point": "24/09 :: europe :: macro :: Norges Bank Décision Taux Intérêt",
     "premiere_apparition": "2026-09-04"
+  },
+  {
+    "point": "24/09 :: europe :: mkt-n :: Conférence Business Economics et Finance (Marseille)",
+    "premiere_apparition": "2026-09-05"
   },
   {
     "point": "Semaine du 24/08 :: usa :: corp :: Résultats Utilities & Communication Services",
@@ -448,6 +440,10 @@
     "premiere_apparition": "2026-09-04"
   },
   {
+    "point": "14/09 :: canada :: tech :: Forum Fintech Canada (Jour 1)",
+    "premiere_apparition": "2026-09-05"
+  },
+  {
     "point": "21/09 :: global :: mkt-n :: WEF Sustainable Development Impact",
     "premiere_apparition": "2026-08-27"
   },
@@ -458,6 +454,10 @@
   {
     "point": "21/09 :: global :: geo :: Sommet Leaders UN Global Compact",
     "premiere_apparition": "2026-09-04"
+  },
+  {
+    "point": "21/09 :: europe :: mkt-n :: Conférence Finance et Comptabilité (Paris) (Jour 1)",
+    "premiere_apparition": "2026-09-05"
   },
   {
     "point": "22/09 :: global :: mkt-n :: UN Global Compact Leaders Summit",
@@ -524,11 +524,19 @@
     "premiere_apparition": "2026-09-03"
   },
   {
+    "point": "23/09 :: global :: mkt-n :: Focus sur la Finance d'Entreprise",
+    "premiere_apparition": "2026-09-05"
+  },
+  {
     "point": "20/09 :: global :: geo :: Début Semaine AG ONU Global Compact",
     "premiere_apparition": "2026-09-04"
   },
   {
     "point": "29/09 :: usa :: macro :: Publication JOLTS US",
     "premiere_apparition": "2026-09-04"
+  },
+  {
+    "point": "25/09 :: europe :: mkt-n :: Conférence Recherche Économie et Finance (Paris)",
+    "premiere_apparition": "2026-09-05"
   }
 ]
